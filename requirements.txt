@@ -1,0 +1,7 @@
+# Pinned versions — verified working 2026-07-04 on Python 3.12.10 (Windows).
+# Evaluators: python -m venv .venv && pip install -r requirements.txt
+duckdb==1.5.4
+ijson==3.5.0
+# spaCy is only needed for the press-text enrichment step (not the loader);
+# pin when that script lands. Model: python -m spacy download en_core_web_sm
+spacy

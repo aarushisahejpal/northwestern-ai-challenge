@@ -1,0 +1,587 @@
+#!/usr/bin/env python3
+"""Build the GAIN investigation database from the raw challenge corpus.
+
+Parses three datasets (layout per the challenge data manual) into one DuckDB file:
+
+  <data-root>/congress_press/   JSONL press releases (year dirs + 2026 files at root)
+  <data-root>/senate/           Senate LDA filings + contributions (JSON arrays, streamed)
+  <data-root>/house/            House LDA registrations + quarterlies (one XML per filing)
+
+Guarantees:
+  * Every row carries a raw-record pointer (src_file + src_line/src_index, or the XML
+    path) so any query result resolves to a citable raw record in one step
+    (see show_record.py).
+  * A sanity report reconciles row counts against the data manual's published 2025
+    scale before the database is trusted. Written next to the DB as sanity_report.md.
+
+Usage:
+  python build_db.py --data-root data/                       # everything present
+  python build_db.py --data-root data/ --years 2025 2026     # pilot slice
+  python build_db.py --data-root data/ --sample 2025-Q1      # smoke mode (minutes)
+
+Caveat: Senate JSON key names and House XML tag names were drafted from the data
+manual before the raw data landed and are coded defensively (multiple candidate
+keys/tags, strip everything). The sanity report is the tripwire for mismatches —
+verify against real data before trusting downstream queries.
+"""
+
+import argparse
+import json
+import re
+import sys
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import duckdb
+import ijson
+
+BATCH = 50000
+
+# Sanity report contains non-ASCII; Windows pipes default to cp1252.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+# Data manual's published 2025 scale, used by the sanity report.
+MANUAL_2025 = {
+    "press_releases": 48000,        # "~48K releases in 2025"
+    "senate_filings": 108225,
+    "senate_contributions": 39438,
+    "house_filings": 108522,        # ~7,762 registrations + ~100,760 quarterlies
+}
+
+# Bill citations: longest alternatives first so "H.J.Res." doesn't match as "H.R.".
+BILL_RE = re.compile(
+    r"\b("
+    r"H\.?\s*J\.?\s*RES\.?|S\.?\s*J\.?\s*RES\.?|"
+    r"H\.?\s*CON\.?\s*RES\.?|S\.?\s*CON\.?\s*RES\.?|"
+    r"H\.?\s*RES\.?|S\.?\s*RES\.?|"
+    r"H\.?\s*R\.?|S\.?"
+    r")\s*(\d{1,5})\b",
+    re.IGNORECASE,
+)
+
+
+def norm_bill(prefix: str, number: str) -> str:
+    return re.sub(r"[^A-Z]", "", prefix.upper()) + number
+
+
+def extract_bills(text):
+    if not text:
+        return
+    for m in BILL_RE.finditer(text):
+        yield norm_bill(m.group(1), m.group(2)), m.group(0)
+
+
+def get_any(d, *keys, default=None):
+    """First non-empty value among candidate keys (Senate JSON field names vary)."""
+    if not isinstance(d, dict):
+        return default
+    for k in keys:
+        v = d.get(k)
+        if v not in (None, "", [], {}):
+            return v
+    return default
+
+
+def to_num(v):
+    if v in (None, ""):
+        return None
+    try:
+        return float(str(v).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def strip_or_none(v):
+    if v is None:
+        return None
+    s = str(v).strip()
+    return s or None
+
+
+# ---------------------------------------------------------------- schema
+
+DDL = """
+CREATE TABLE IF NOT EXISTS press_releases (
+  pr_id BIGINT, url TEXT, title TEXT, date TEXT, date_source TEXT, source TEXT,
+  domain TEXT, scraper TEXT, bioguide_id TEXT, member_name TEXT, party TEXT,
+  state TEXT, chamber TEXT, text TEXT, src_file TEXT, src_line INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_filings (
+  filing_uuid TEXT, filing_type TEXT, filing_period TEXT, filing_year INTEGER,
+  income DOUBLE, expenses DOUBLE, registrant_id TEXT, registrant_name TEXT,
+  house_registrant_id TEXT, client_id TEXT, client_name TEXT, client_state TEXT,
+  client_description TEXT, posted TEXT, src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_activities (
+  filing_uuid TEXT, activity_index INTEGER, general_issue_code TEXT,
+  description TEXT, src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_lobbyists (
+  filing_uuid TEXT, activity_index INTEGER, first_name TEXT, last_name TEXT,
+  covered_position TEXT, is_new BOOLEAN, src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_gov_entities (
+  filing_uuid TEXT, activity_index INTEGER, entity_name TEXT,
+  src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_foreign_entities (
+  filing_uuid TEXT, name TEXT, country TEXT, src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_contributions (
+  filing_uuid TEXT, filer_type TEXT, filing_year INTEGER, registrant_name TEXT,
+  lobbyist_name TEXT, pacs TEXT, src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS senate_contribution_items (
+  filing_uuid TEXT, item_index INTEGER, contribution_type TEXT, amount DOUBLE,
+  payee TEXT, honoree TEXT, contributor_name TEXT, date TEXT,
+  src_file TEXT, src_index INTEGER);
+
+CREATE TABLE IF NOT EXISTS house_filings (
+  filing_id TEXT, form TEXT, organization_name TEXT, client_name TEXT,
+  senate_reg_id TEXT, house_reg_id TEXT, report_year INTEGER, report_period TEXT,
+  income DOUBLE, expenses DOUBLE, specific_issues TEXT, src_path TEXT);
+
+CREATE TABLE IF NOT EXISTS house_lobbyists (
+  filing_id TEXT, ali_index INTEGER, first_name TEXT, last_name TEXT,
+  covered_position TEXT, lobbyist_new TEXT, src_path TEXT);
+
+-- One row per <alis><ali_info> block (real quarterly schema, verified 2026-07-04).
+-- federal_agencies is the raw comma-separated string. Splitting it into clean
+-- entities is entity-resolver work, not loader work.
+CREATE TABLE IF NOT EXISTS house_alis (
+  filing_id TEXT, ali_index INTEGER, issue_code TEXT, specific_issues TEXT,
+  federal_agencies TEXT, src_path TEXT);
+
+CREATE TABLE IF NOT EXISTS bill_mentions (
+  dataset TEXT, record_key TEXT, bill TEXT, raw_match TEXT, src TEXT);
+"""
+
+VIEWS = """
+CREATE OR REPLACE VIEW members AS
+  SELECT bioguide_id, any_value(member_name) AS name, any_value(party) AS party,
+         any_value(state) AS state, any_value(chamber) AS chamber,
+         count(*) AS n_releases
+  FROM press_releases WHERE bioguide_id IS NOT NULL GROUP BY bioguide_id;
+
+CREATE OR REPLACE VIEW v_spend_by_client_quarter AS
+  SELECT client_name, filing_year, filing_period,
+         sum(income) AS total_income, count(*) AS n_filings
+  FROM senate_filings GROUP BY 1, 2, 3;
+
+-- Income is filing-level. Attributing it to each activity's issue code
+-- overstates multi-issue filings. Use for ranking/trend, not for exact dollars.
+CREATE OR REPLACE VIEW v_spend_by_issue_quarter AS
+  SELECT a.general_issue_code, f.filing_year, f.filing_period,
+         sum(f.income) AS attributed_income, count(DISTINCT f.filing_uuid) AS n_filings
+  FROM senate_activities a JOIN senate_filings f USING (filing_uuid)
+  GROUP BY 1, 2, 3;
+
+CREATE OR REPLACE VIEW v_releases_by_member_month AS
+  SELECT bioguide_id, any_value(member_name) AS name, substr(date, 1, 7) AS month,
+         count(*) AS n_releases
+  FROM press_releases GROUP BY bioguide_id, substr(date, 1, 7);
+
+CREATE OR REPLACE VIEW v_covered_positions AS
+  SELECT 'senate' AS dataset, filing_uuid AS record_key, first_name, last_name,
+         covered_position FROM senate_lobbyists
+  WHERE covered_position IS NOT NULL
+  UNION ALL
+  SELECT 'house', filing_id, first_name, last_name, covered_position
+  FROM house_lobbyists WHERE covered_position IS NOT NULL;
+"""
+
+
+class Sink:
+    """Batched inserts per table, staged through temp NDJSON files and COPY.
+
+    duckdb's executemany runs row-by-row (~100x slower). NDJSON staging is
+    immune to the CSV-dialect ambiguity that multi-line press text triggers:
+    json.dumps escapes every field onto one line.
+    """
+
+    def __init__(self, con):
+        self.con = con
+        self.buf = {}
+        self.counts = {}
+        self.cols = {}
+
+    def _columns(self, table):
+        if table not in self.cols:
+            self.cols[table] = [r[1] for r in self.con.execute(
+                f"PRAGMA table_info('{table}')").fetchall()]
+        return self.cols[table]
+
+    def add(self, table, row):
+        self.buf.setdefault(table, []).append(row)
+        self.counts[table] = self.counts.get(table, 0) + 1
+        if len(self.buf[table]) >= BATCH:
+            self.flush(table)
+
+    def flush(self, table=None):
+        import os
+        import tempfile
+        for t in [table] if table else list(self.buf):
+            rows = self.buf.get(t) or []
+            if not rows:
+                continue
+            cols = self._columns(t)
+            fd, tmp = tempfile.mkstemp(suffix=".ndjson")
+            os.close(fd)
+            try:
+                with open(tmp, "w", encoding="utf-8") as f:
+                    for row in rows:
+                        f.write(json.dumps(dict(zip(cols, row)),
+                                           ensure_ascii=False, default=str))
+                        f.write("\n")
+                self.con.execute(
+                    f"COPY {t} FROM '{tmp.replace(chr(92), '/')}' (FORMAT json)")
+            finally:
+                os.unlink(tmp)
+            self.buf[t] = []
+
+
+# ---------------------------------------------------------------- press
+
+def load_press(sink, data_root, years, months=None, max_records=None):
+    root = data_root / "congress_press"
+    files = sorted(root.glob("*.jsonl")) + sorted(root.glob("*/*.jsonl"))
+    n = 0
+    for path in files:
+        m = re.match(r"(\d{4})-(\d{2})", path.stem)
+        if not m or int(m.group(1)) not in years:
+            continue
+        if months and (int(m.group(1)), int(m.group(2))) not in months:
+            continue
+        rel = path.relative_to(data_root).as_posix()
+        with open(path, encoding="utf-8") as f:
+            for line_no, line in enumerate(f, 1):
+                line = line.strip()
+                if not line:
+                    continue
+                rec = json.loads(line)
+                mem = rec.get("member") or {}
+                n += 1
+                key = f"{rel}:{line_no}"
+                sink.add("press_releases", (
+                    n, rec.get("url"), rec.get("title"), rec.get("date"),
+                    rec.get("date_source"), rec.get("source"), rec.get("domain"),
+                    rec.get("scraper"), get_any(mem, "bioguide_id"),
+                    get_any(mem, "name"), get_any(mem, "party"),
+                    get_any(mem, "state"), get_any(mem, "chamber"),
+                    rec.get("text"), rel, line_no))
+                for bill, raw in extract_bills(rec.get("text") or ""):
+                    sink.add("bill_mentions", ("press", key, bill, raw, rel))
+                if max_records and n >= max_records:
+                    sink.flush()
+                    return n
+    sink.flush()
+    return n
+
+
+# ---------------------------------------------------------------- senate
+
+def load_senate(sink, data_root, years, max_records=None):
+    done = {"filings": 0, "contributions": 0}
+    for year in sorted(years):
+        for kind in ("filings", "contributions"):
+            if max_records and done[kind] >= max_records:
+                continue
+            path = data_root / "senate" / str(year) / kind / f"{kind}_{year}.json"
+            if not path.exists():
+                continue
+            rel = path.relative_to(data_root).as_posix()
+            with open(path, "rb") as f:
+                for idx, rec in enumerate(ijson.items(f, "item")):
+                    if kind == "filings":
+                        _senate_filing(sink, rec, rel, idx)
+                    else:
+                        _senate_contribution(sink, rec, rel, idx)
+                    done[kind] += 1
+                    if max_records and done[kind] >= max_records:
+                        break
+    sink.flush()
+    return done["filings"]
+
+
+def _senate_filing(sink, rec, rel, idx):
+    uuid = get_any(rec, "filing_uuid", "uuid")
+    reg = rec.get("registrant") or {}
+    cli = rec.get("client") or {}
+    sink.add("senate_filings", (
+        uuid, get_any(rec, "filing_type"), get_any(rec, "filing_period"),
+        rec.get("filing_year"), to_num(get_any(rec, "income")),
+        to_num(get_any(rec, "expenses")), strip_or_none(get_any(reg, "id")),
+        strip_or_none(get_any(reg, "name")),
+        strip_or_none(get_any(reg, "house_registrant_id")),
+        strip_or_none(get_any(cli, "id", "client_id")),
+        strip_or_none(get_any(cli, "name")), strip_or_none(get_any(cli, "state")),
+        strip_or_none(get_any(cli, "general_description")),
+        get_any(rec, "dt_posted", "posted"), rel, idx))
+    for ai, act in enumerate(rec.get("lobbying_activities") or []):
+        desc = strip_or_none(get_any(act, "description"))
+        sink.add("senate_activities", (
+            uuid, ai, get_any(act, "general_issue_code"), desc, rel, idx))
+        for bill, raw in extract_bills(desc or ""):
+            sink.add("bill_mentions", ("senate", uuid, bill, raw, rel))
+        for lob in act.get("lobbyists") or []:
+            person = lob.get("lobbyist") or lob
+            sink.add("senate_lobbyists", (
+                uuid, ai, strip_or_none(get_any(person, "first_name")),
+                strip_or_none(get_any(person, "last_name")),
+                strip_or_none(get_any(lob, "covered_position")),
+                bool(get_any(lob, "new", "is_new", default=False)), rel, idx))
+        for ge in act.get("government_entities") or []:
+            name = ge.get("name") if isinstance(ge, dict) else ge
+            sink.add("senate_gov_entities", (uuid, ai, strip_or_none(name), rel, idx))
+    for fe in rec.get("foreign_entities") or []:
+        if isinstance(fe, dict):
+            sink.add("senate_foreign_entities", (
+                uuid, strip_or_none(get_any(fe, "name")),
+                strip_or_none(get_any(fe, "country")), rel, idx))
+
+
+def _senate_contribution(sink, rec, rel, idx):
+    uuid = get_any(rec, "filing_uuid", "uuid")
+    reg = rec.get("registrant") or {}
+    lob = rec.get("lobbyist") or {}
+    lob_name = " ".join(x for x in (get_any(lob, "first_name"),
+                                    get_any(lob, "last_name")) if x) or None
+    pacs = rec.get("pacs") or []
+    pacs_txt = "; ".join(p if isinstance(p, str) else str(get_any(p, "name", default=p))
+                         for p in pacs) or None
+    sink.add("senate_contributions", (
+        uuid, get_any(rec, "filer_type"), rec.get("filing_year"),
+        strip_or_none(get_any(reg, "name")), lob_name, pacs_txt, rel, idx))
+    for ii, item in enumerate(rec.get("contribution_items") or []):
+        sink.add("senate_contribution_items", (
+            uuid, ii, get_any(item, "contribution_type", "type"),
+            to_num(get_any(item, "amount")),
+            strip_or_none(get_any(item, "payee_name", "payee")),
+            strip_or_none(get_any(item, "honoree_name", "honoree")),
+            strip_or_none(get_any(item, "contributor_name", "contributor")),
+            get_any(item, "date", "contribution_date"), rel, idx))
+
+
+# ---------------------------------------------------------------- house
+
+DIR_RE = re.compile(r"^(\d{4})_(Registrations|1stQuarter|2ndQuarter|3rdQuarter|4thQuarter)_XML$")
+PERIOD = {"Registrations": "RR", "1stQuarter": "Q1", "2ndQuarter": "Q2",
+          "3rdQuarter": "Q3", "4thQuarter": "Q4"}
+
+
+def _strip_ns(root):
+    for el in root.iter():
+        if "}" in el.tag:
+            el.tag = el.tag.split("}", 1)[1]
+
+
+def _ft(root, *names):
+    """First non-blank text among candidate tag names, searched anywhere."""
+    for name in names:
+        for el in root.iter(name):
+            if el.text and el.text.strip():
+                return el.text.strip()
+    return None
+
+
+def load_house(sink, data_root, years, periods=None, max_records=None):
+    house = data_root / "house"
+    n, errors = 0, []
+    if not house.exists():
+        return n, errors
+    for d in sorted(house.iterdir()):
+        m = DIR_RE.match(d.name) if d.is_dir() else None
+        if not m or int(m.group(1)) not in years:
+            continue
+        year, period = int(m.group(1)), PERIOD[m.group(2)]
+        if periods and period not in periods:
+            continue
+        for xml_path in sorted(d.glob("*.xml")):
+            try:
+                tree = ET.parse(xml_path)
+            except ET.ParseError as e:
+                errors.append(f"{xml_path.name}: {e}")
+                continue
+            root = tree.getroot()
+            _strip_ns(root)
+            fid = xml_path.stem
+            rel = xml_path.relative_to(data_root).as_posix()
+            form = "LD1" if root.tag.endswith("1") else "LD2"
+
+            def add_lobbyists(parent, ali_index):
+                for lob in parent.iter("lobbyist"):
+                    first = _ft(lob, "lobbyistFirstName", "firstName", "first_name")
+                    last = _ft(lob, "lobbyistLastName", "lastName", "last_name")
+                    if not (first or last):
+                        continue  # forms pad with empty <lobbyist> slots
+                    sink.add("house_lobbyists", (
+                        fid, ali_index, first, last,
+                        _ft(lob, "coveredPosition", "covered_position"),
+                        _ft(lob, "lobbyistNew", "new"), rel))
+
+            all_desc = []
+            ali_infos = root.findall(".//alis/ali_info")
+            if ali_infos:
+                # Quarterly (LD2) schema, verified against real 2026-Q1 files.
+                for ai, ali in enumerate(ali_infos):
+                    descs = [d.text.strip() for d in ali.iter("description")
+                             if d.text and d.text.strip()]
+                    desc = "\n".join(descs) or None
+                    if desc:
+                        all_desc.append(desc)
+                    sink.add("house_alis", (
+                        fid, ai, _ft(ali, "issueAreaCode", "ali_Code"), desc,
+                        _ft(ali, "federal_agencies", "federalAgencies"), rel))
+                    add_lobbyists(ali, ai)
+            else:
+                # Registration (LD1) / older layout per the data manual: flat
+                # ali_Code list, lobbyists at document level. Verify when a
+                # Registrations_XML directory lands.
+                for ai, ali in enumerate(root.iter("ali_Code")):
+                    if ali.text and ali.text.strip():
+                        sink.add("house_alis", (fid, ai, ali.text.strip(),
+                                                None, None, rel))
+                descs = [d.text.strip() for d in root.findall(".//specific_issues//description")
+                         if d.text and d.text.strip()]
+                descs += [el.text.strip() for el in root.findall(".//specific_issues")
+                          if el.text and el.text.strip()]
+                all_desc.extend(descs)
+                add_lobbyists(root, None)
+
+            spec = "\n".join(all_desc) or None
+            sink.add("house_filings", (
+                fid, form, _ft(root, "organizationName", "organizationname"),
+                _ft(root, "clientName", "clientname"),
+                _ft(root, "senateID", "senateId", "senateid"),
+                _ft(root, "houseID", "houseId", "houseid"),
+                year, period, to_num(_ft(root, "income")),
+                to_num(_ft(root, "expenses")), spec, rel))
+            for bill, raw in extract_bills(spec or ""):
+                sink.add("bill_mentions", ("house", fid, bill, raw, rel))
+            n += 1
+            if max_records and n >= max_records:
+                sink.flush()
+                return n, errors
+    sink.flush()
+    return n, errors
+
+
+# ---------------------------------------------------------------- sanity
+
+def sanity_report(con, db_path, years, house_errors):
+    lines = ["# Sanity report", ""]
+    tables = [r[0] for r in con.execute(
+        "SELECT table_name FROM information_schema.tables "
+        "WHERE table_type='BASE TABLE' ORDER BY 1").fetchall()]
+    lines.append("| table | rows |")
+    lines.append("|---|---|")
+    counts = {}
+    for t in tables:
+        c = con.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
+        counts[t] = c
+        lines.append(f"| {t} | {c:,} |")
+    lines.append("")
+    if 2025 in years:
+        lines.append("## 2025 vs data manual")
+        lines.append("")
+        lines.append("| dataset | loaded (2025) | manual says | delta |")
+        lines.append("|---|---|---|---|")
+        loaded = {
+            "press_releases": con.execute(
+                "SELECT count(*) FROM press_releases WHERE src_file LIKE '%2025-%'"
+            ).fetchone()[0],
+            "senate_filings": con.execute(
+                "SELECT count(*) FROM senate_filings WHERE filing_year=2025"
+            ).fetchone()[0],
+            "senate_contributions": con.execute(
+                "SELECT count(*) FROM senate_contributions WHERE filing_year=2025"
+            ).fetchone()[0],
+            "house_filings": con.execute(
+                "SELECT count(*) FROM house_filings WHERE report_year=2025"
+            ).fetchone()[0],
+        }
+        for k, ref in MANUAL_2025.items():
+            got = loaded[k]
+            delta = (got - ref) / ref * 100 if ref else 0
+            flag = "" if abs(delta) < 10 else "  ⚠️"
+            lines.append(f"| {k} | {got:,} | ~{ref:,} | {delta:+.1f}%{flag} |")
+        lines.append("")
+        lines.append("Deltas beyond ±10% mean either a partial download or a parser "
+                     "mismatch — investigate before trusting downstream queries.")
+    if house_errors:
+        lines.append("")
+        lines.append(f"## House XML parse errors: {len(house_errors)}")
+        lines.extend(f"- {e}" for e in house_errors[:20])
+    report = "\n".join(lines) + "\n"
+    out = db_path.parent / "sanity_report.md"
+    out.write_text(report, encoding="utf-8")
+    print(report)
+    print(f"Sanity report written to {out}")
+
+
+# ---------------------------------------------------------------- main
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__,
+                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--data-root", required=True, type=Path)
+    ap.add_argument("--db", type=Path, default=Path("db/lda.duckdb"))
+    ap.add_argument("--years", nargs="*", type=int,
+                    help="Years to load (default: everything present)")
+    ap.add_argument("--sample", metavar="YYYY-QN",
+                    help="Smoke mode: one quarter of press+house, capped Senate records")
+    ap.add_argument("--max-records", type=int,
+                    help="Cap per-dataset primary records (smoke/testing)")
+    args = ap.parse_args()
+
+    data_root = args.data_root
+    if not data_root.exists():
+        sys.exit(f"data root not found: {data_root}")
+
+    years = set(args.years or range(2022, 2027))
+    months = periods = None
+    max_records = args.max_records
+    if args.sample:
+        m = re.match(r"^(\d{4})-Q([1-4])$", args.sample)
+        if not m:
+            sys.exit("--sample must look like 2025-Q1")
+        y, q = int(m.group(1)), int(m.group(2))
+        years = {y}
+        months = {(y, mm) for mm in range(3 * q - 2, 3 * q + 1)}
+        periods = {"RR", f"Q{q}"}
+        max_records = max_records or 5000
+
+    args.db.parent.mkdir(parents=True, exist_ok=True)
+    con = duckdb.connect(str(args.db))
+    for stmt in DDL.split(";"):
+        if stmt.strip():
+            con.execute(stmt)
+
+    import time as _time
+    sink = Sink(con)
+    t0 = _time.time()
+    print(f"Loading press releases ({sorted(years)}) ...")
+    n_press = load_press(sink, data_root, years, months, max_records)
+    t1 = _time.time()
+    print(f"  {n_press:,} releases in {t1 - t0:.1f}s")
+    print("Loading Senate LDA ...")
+    n_sen = load_senate(sink, data_root, years, max_records)
+    t2 = _time.time()
+    print(f"  {n_sen:,} filings in {t2 - t1:.1f}s")
+    print("Loading House LDA ...")
+    n_house, house_errors = load_house(sink, data_root, years, periods, max_records)
+    t3 = _time.time()
+    print(f"  {n_house:,} filings ({len(house_errors)} parse errors) in {t3 - t2:.1f}s")
+
+    for stmt in VIEWS.split(";"):
+        if stmt.strip():
+            con.execute(stmt)
+
+    sanity_report(con, args.db, years, house_errors)
+    con.close()
+    print(f"Done: {args.db}")
+
+
+if __name__ == "__main__":
+    main()
