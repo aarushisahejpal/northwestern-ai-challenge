@@ -1,6 +1,6 @@
 # Finding: The pipe-materials war — DIPRA's Q1 2026 spending spike
 
-**Status:** revised after first verification FAIL (2026-07-06); re-verification pending before lock
+**Status:** independently verified, PASS (2026-07-06, second fresh-agent pass) — awaiting human lock decision (not yet logged in DECISIONS.md)
 **Lead:** L010 (descends from L004)
 **Legal flag:** none
 **Date drafted:** 2026-07-05
@@ -292,3 +292,54 @@ text), and two new caveats added covering both issues. Because these edits were 
 the drafting session, not a fresh one, they do NOT themselves constitute the independent
 re-verification the protocol requires — a second fresh-agent pass is dispatched to
 confirm the fixes actually resolve the FAIL before this finding can lock.
+
+## Re-verification (fix check)
+
+_Run 2026-07-06 by a fresh agent, checking only the 4 required fixes from the FAIL
+verdict above (not re-deriving C1/C3/C4/C6 or re-running SQL, per instructions). Data
+root: `../data/data` (the `data/` folder in this working copy was empty of corpus files;
+resolved the real root by locating `senate/2026/filings/filings_2026.json` on disk). DB:
+`db/lda_pilot.duckdb`. Every record below was pulled directly via `show_record.py`._
+
+1. **Headline no longer implies McWane joined/co-escalated — yes.** Current text reads
+   "...while McWane Inc., a fellow ductile-iron-pipe manufacturer, showed no comparable
+   increase in its own separate lobbying spend that quarter," and separately hedges the
+   2.7x figure ("though only Copper Development Association's share of that total shows
+   a clear textual connection to the same fight"). No "joined"/"member" language remains.
+
+2. **C2 no longer asserts DIPRA membership as fact — yes.** C2 now reads "this corpus
+   does not document a formal DIPRA-McWane membership relationship" and cites the empty
+   `affiliated_organizations` field plus no shared topic in McWane's activity text.
+   Independently re-pulled all five DIPRA filings (`4c7a4352…`, `aef5c0b9…`, `d7728fe3…`,
+   `5adf05eb…`, `7e61b5d2…`) — every one shows `"affiliated_organizations": []`.
+   Independently pulled McWane's 2026-Q1 Balch (`6817ab80…`) and Wessel (`fc5d7964…`)
+   filings — activity text covers Buy America/domestic-procurement, Fighting Trade
+   Cheats Act, PFAS/Clean-Air-Water, and infrastructure-manufacturing policy; no mention
+   of DIPRA, ductile iron, TSCA, the NDAA, or any of DIPRA's five named appropriations
+   bills. Text is accurate, not just present.
+
+3. **C5 no longer presents $250K/2.7x as undifferentiated fact — yes.** Independently
+   pulled all three PIA filings counted in the $250K (Venture `8b821804…` $20K, ACG
+   `c7c2091b…` $40K, Vogel `590f0248…` $40K = $100K) — none mention pipe, materials
+   provisions, TSCA, the NDAA, or any DIPRA bill; text is general plastics-industry,
+   recycling, trade, and tax advocacy, confirming C5's "no demonstrated textual nexus"
+   claim. Pulled Copper Development (`a5ed3b1c…`, $110K) — activity text includes "Copper
+   pipe and tube advocacy" and "Innovative materials and material selection," supporting
+   the "clear textual connection" claim. Pulled Diamond Plastic (`fa4e3cf3…`) and Hobas
+   (`a8b88b9d…`, $20K each) — text is "modern pipe construction methods, standards, and
+   projects" plus generic appropriations-tracking, matching the "adjacent but generic"
+   characterization. Pulled the excluded self-filed PIA registration (`2e31d978…`) —
+   `income` is null but `expenses` is `"150000.00"`, and its activity text (H.R.1 tax
+   reconciliation, CIRCLE Act, GRAS regulation, recycling bills) has no pipe mention,
+   confirming C5's revised claim that it was excluded on substance, not on a null-income
+   technicality.
+
+4. **Caveats disclose both issues — yes.** The two new caveats ("McWane is not documented
+   in this corpus as a DIPRA member..." and "Most of the counted 'opposition' total is not
+   shown to be about this specific fight...") are present, and both match the
+   independently-verified record facts above (empty `affiliated_organizations`; PIA's
+   $100K lacking topical connection).
+
+**Overall: PASS.** All four required fixes were made, and each was independently
+re-derived from the underlying filing records (not just checked for presence of the
+right words) and confirmed accurate.
