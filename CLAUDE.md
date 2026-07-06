@@ -94,6 +94,13 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
 - **Press and filings name bills differently.** Members write "the Farm Bill" / "NDAA"; filings
   cite H.R./S. numbers. Number-only matching fabricates "lobbied but publicly silent" bills
   (killed L004 that way). Say-vs-pay comparisons need alias matching or provision-level framing.
+- **The Senate↔House join key is house `<senateID>` = `"<senate_registrant_id>-<senate_client_id>"`**
+  (compound, engagement-level; verified 2026-07-06). Do NOT join senate `house_registrant_id`
+  to house `<houseID>` — formats don't overlap (zero matches). Use `registrant_crosswalk`
+  (entity-resolver) or the split_part pattern in `queries/sweep_2026.sql#H1c`.
+- **Senate `client_id` is registrant-scoped, not global** — Comcast alone has 10+ client ids.
+  Group clients by resolved entity (`entities`/`entity_aliases`, norm-key based), never by
+  client_id. Registrant ids ARE global.
 - Everything self-reported: strip whitespace everywhere, expect missing income/expenses, and
   treat gaps as potentially reportable rather than as noise.
 - Windows: scripts force UTF-8 stdout (press text has curly quotes; pipes default to cp1252).

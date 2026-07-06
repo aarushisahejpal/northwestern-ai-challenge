@@ -110,6 +110,78 @@ FROM s JOIN h USING (org, client)
 WHERE s.income IS NOT NULL AND h.income IS NOT NULL AND abs(s.income - h.income) > 5000
 ORDER BY abs(s.income - h.income) DESC LIMIT 20;
 
+-- ==== H1c: reconciliation joined on registrant+client IDs (supersedes H1b's name join) ====
+-- Verified 2026-07-06: house <senateID> is the compound key
+-- "<senate_registrant_id>-<senate_client_id>" (55,627 house rows match a senate pair
+-- exactly; sampled pairs agree on names). Joining on IDs instead of upper(trim(name))
+-- catches engagements the name join missed (casing/punctuation/dba variants) and
+-- can't false-match distinct same-named orgs. Dedup per H1b on both sides. Senate
+-- filing_period is spelled out ("first_quarter"); filing_type carries Q1..Q4 codes.
+WITH s AS (
+  SELECT registrant_id, client_id, filing_year, filing_type AS q, income,
+         registrant_name, client_name, filing_uuid
+  FROM senate_filings
+  WHERE filing_type LIKE 'Q%'
+  QUALIFY row_number() OVER (PARTITION BY registrant_id, client_id, filing_year,
+    filing_type ORDER BY posted DESC) = 1),
+h AS (
+  SELECT split_part(senate_reg_id, '-', 1) AS registrant_id,
+         split_part(senate_reg_id, '-', 2) AS client_id,
+         report_year AS filing_year,
+         'Q' || substr(report_period, 2, 1) AS q, income, filing_id
+  FROM house_filings
+  WHERE senate_reg_id LIKE '%-%' AND report_period LIKE 'Q%'
+  QUALIFY row_number() OVER (PARTITION BY senate_reg_id, report_year, report_period
+    ORDER BY CAST(filing_id AS BIGINT) DESC) = 1)
+SELECT s.registrant_name, s.client_name, s.filing_year, s.q,
+       s.income::BIGINT AS senate_income, h.income::BIGINT AS house_income,
+       (s.income - h.income)::BIGINT AS delta, s.filing_uuid, h.filing_id
+FROM s JOIN h USING (registrant_id, client_id, filing_year, q)
+WHERE s.income IS NOT NULL AND h.income IS NOT NULL
+  AND abs(s.income - h.income) > 5000
+ORDER BY abs(s.income - h.income) DESC LIMIT 25;
+
+-- ==== H1d: chronic cross-chamber mis-reporters (L001 revisit; needs H1c's ID join) ====
+-- Aggregates H1c's engagement-quarter deltas by registrant. exact_10x counts
+-- quarters where one side is exactly 10x the other (missing/extra-zero data entry).
+WITH s AS (
+  SELECT registrant_id, client_id, filing_year, filing_type AS q, income,
+         registrant_name
+  FROM senate_filings WHERE filing_type LIKE 'Q%'
+  QUALIFY row_number() OVER (PARTITION BY registrant_id, client_id, filing_year,
+    filing_type ORDER BY posted DESC) = 1),
+h AS (
+  SELECT split_part(senate_reg_id, '-', 1) AS registrant_id,
+         split_part(senate_reg_id, '-', 2) AS client_id,
+         report_year AS filing_year, 'Q' || substr(report_period, 2, 1) AS q, income
+  FROM house_filings
+  WHERE senate_reg_id LIKE '%-%' AND report_period LIKE 'Q%'
+  QUALIFY row_number() OVER (PARTITION BY senate_reg_id, report_year, report_period
+    ORDER BY CAST(filing_id AS BIGINT) DESC) = 1),
+j AS (
+  SELECT s.registrant_name, s.income AS si, h.income AS hi
+  FROM s JOIN h USING (registrant_id, client_id, filing_year, q)
+  WHERE s.income IS NOT NULL AND h.income IS NOT NULL)
+SELECT registrant_name,
+       count(*) AS matched_qtrs,
+       sum(CASE WHEN abs(si - hi) > 5000 THEN 1 ELSE 0 END) AS mismatched,
+       sum(CASE WHEN si = 10 * hi OR hi = 10 * si THEN 1 ELSE 0 END) AS exact_10x,
+       sum(abs(si - hi))::BIGINT AS total_abs_delta
+FROM j GROUP BY 1
+HAVING sum(CASE WHEN abs(si - hi) > 5000 THEN 1 ELSE 0 END) >= 3
+ORDER BY mismatched DESC, total_abs_delta DESC LIMIT 20;
+
+-- ==== S1d: top spenders by RESOLVED client entity (needs entity tables) ====
+-- Raw S1a fragments clients across name variants; this groups by norm_key.
+SELECT e.canonical_name, sum(f.income)::BIGINT AS total_income,
+       count(*) AS filings, count(DISTINCT f.client_name) AS name_variants
+FROM senate_filings f
+JOIN entity_aliases ea ON ea.kind = 'client' AND ea.dataset = 'senate'
+                       AND ea.raw_name = f.client_name
+JOIN entities e ON e.entity_id = ea.entity_id
+WHERE f.income IS NOT NULL
+GROUP BY 1 ORDER BY 2 DESC LIMIT 15;
+
 -- ==== C1b: say-vs-pay weighted by dollars (supersedes mention counts) ====
 -- Caveat: income is filing-level; a filing naming several bills attributes its
 -- full income to each. Use for ranking, not exact dollars.
