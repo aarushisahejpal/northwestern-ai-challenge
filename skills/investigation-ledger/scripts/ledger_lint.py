@@ -23,8 +23,12 @@ STATUSES = {"open", "triaged", "investigating", "verified", "dead", "parked"}
 
 
 def table_rows(text, heading):
-    """Rows of the first pipe table after `heading`: list of cell lists."""
-    m = re.search(re.escape(heading) + r".*?\n((?:\|.*\n)+)", text)
+    """Rows of the first pipe table after `heading` (prose between heading and
+    table is allowed), up to the next heading."""
+    section = re.search(re.escape(heading) + r"([\s\S]*?)(?:\n## |\Z)", text)
+    if not section:
+        return None, []
+    m = re.search(r"((?:^\|[^\n]*\n?)+)", section.group(1), re.MULTILINE)
     if not m:
         return None, []
     lines = [l for l in m.group(1).strip().splitlines() if l.strip().startswith("|")]
@@ -46,7 +50,7 @@ def main():
             problems.append(f"missing section: {s}")
 
     header, leads = table_rows(text, "## Leads")
-    if header is not None and [h.lower() for h in header] != LEAD_COLUMNS:
+    if header is not None and [h.lower() for h in header] != [c.lower() for c in LEAD_COLUMNS]:
         problems.append(f"Leads columns are {header!r}, expected {LEAD_COLUMNS!r}")
 
     ids = []
