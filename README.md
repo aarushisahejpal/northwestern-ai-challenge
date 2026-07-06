@@ -53,8 +53,8 @@ FARA (foreign agents), Federal Register._
 
 | Source | Used for | Where cited |
 |---|---|---|
-| FARA bulk data — `FARA_All_ForeignPrincipals.csv` (efile.fara.gov/bulk, fetched 2026-07-06, updated daily by DOJ) | L006 (UAE sovereign wealth): confirming zero FARA registrations for the Mubadala family and that ADIA's six historical registrations all terminated by 2022 | LEDGER.md L006 row; `queries/l006_mubadala.sql` header |
-| SEC Litigation Release 26458 + complaint PDF; Tracxn team profile; innovairrs.com | L003 (Innovairrs identity link) — lead work, parked; allegations-only framing mandatory | LEDGER.md L003 row + Cold threads |
+| FARA bulk data — `FARA_All_ForeignPrincipals.csv` (efile.fara.gov/bulk, fetched 2026-07-06, updated daily by DOJ) | L006 (UAE sovereign wealth): confirming zero FARA registrations for the Mubadala family and that ADIA's six historical registrations all terminated by 2022 | `archive/LEDGER_pilot-triage_2026-07-06.md` L006 row (pilot-scale ledger, archived 2026-07-06 — see CLAUDE.md); `queries/l006_mubadala.sql` header |
+| SEC Litigation Release 26458 + complaint PDF; Tracxn team profile; innovairrs.com | L003 (Innovairrs identity link) — lead work, parked; allegations-only framing mandatory | `archive/LEDGER_pilot-triage_2026-07-06.md` L003 row + Cold threads (pilot-scale ledger, archived 2026-07-06 — see CLAUDE.md) |
 
 ## 5. Conflicts of interest
 

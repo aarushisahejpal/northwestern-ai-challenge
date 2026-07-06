@@ -13,6 +13,7 @@ gain-investigation/
 ├── CLAUDE.md            ← this file
 ├── LEDGER.md            ← investigation state: leads / entities checked / queries run / cold threads
 ├── DECISIONS.md         ← human-judgment log (required by the traces deliverable)
+├── archive/             ← reset snapshots of LEDGER.md/DECISIONS.md (see note below); not submitted
 ├── skills/              ← the submitted Agent Skills, each self-contained (SKILL.md + scripts/)
 │   ├── lda-corpus-loader/     build_db.py (raw corpus → DuckDB) + show_record.py (citation → raw record)
 │   ├── lda-entity-resolver/   cross-dataset entity table (Senate↔House crosswalk)
@@ -153,3 +154,12 @@ from the source systems, valid regardless of which DB below they were queried th
 
 Internal planning context (not part of the submission, not for citation in submitted artifacts):
 `../_Plan.md` in the parent folder holds the phased plan and decision register.
+
+**2026-07-06 reset:** `LEDGER.md`/`DECISIONS.md` were emptied and the prior pilot-scale content
+moved to `archive/*_pilot-triage_2026-07-06.md`, so a session working the newly-built full corpus
+(`db/lda_full.duckdb`) starts with a clean, unbiased view rather than inheriting pilot-era lead
+framing. This was a deliberate one-time QA reset, not a standing practice — don't repeat it on a
+future corpus rebuild without being asked. The archived files are historical reference only; do
+not read them into context unless specifically asked to reconcile or restore something from them
+(e.g. `findings/L010_pipe_materials_war.md` is untouched and still a real, independently-verified
+finding regardless of this reset — it just isn't re-listed as a lead in the fresh ledger).
