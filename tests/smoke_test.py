@@ -38,13 +38,21 @@ def main():
     counts = {t: con.execute(f"SELECT count(*) FROM {t}").fetchone()[0]
               for t in ["press_releases", "senate_filings", "senate_activities",
                         "senate_lobbyists", "senate_contributions",
-                        "house_filings", "house_alis", "house_lobbyists"]}
+                        "house_filings", "house_alis", "house_lobbyists",
+                        "press_issue_mentions"]}
     print("counts:", counts)
     assert counts["press_releases"] == 3, counts
     assert counts["senate_filings"] == 2, counts
     assert counts["house_filings"] == 2, counts
     assert counts["senate_activities"] >= 1, counts
     assert counts["house_alis"] >= 1, counts
+    # The 3 fixture releases are about health care / ACA tax credits / USPS, so the
+    # ISSUE_KEYWORDS tagger must fire (HCR + TAX + POS at least). Guards the mapping.
+    assert counts["press_issue_mentions"] >= 3, counts
+    tagged = dict(con.execute(
+        "SELECT issue_code, count(DISTINCT pr_id) FROM press_issue_mentions "
+        "GROUP BY 1").fetchall())
+    assert {"HCR", "TAX", "POS"} <= set(tagged), tagged
 
     uuid = con.execute("SELECT filing_uuid FROM senate_filings LIMIT 1").fetchone()[0]
     fid = con.execute("SELECT filing_id FROM house_filings LIMIT 1").fetchone()[0]

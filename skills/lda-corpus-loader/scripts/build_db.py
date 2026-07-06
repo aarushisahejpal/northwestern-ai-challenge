@@ -72,6 +72,186 @@ def extract_bills(text):
         yield norm_bill(m.group(1), m.group(2)), m.group(0)
 
 
+# ---------------------------------------------------------- press issue tagging
+#
+# Tags press-release text with ALI issue codes (data/senate/constants/
+# lobbying_activity_issues.json) using a curated keyword vocabulary, so press
+# volume on an issue can be compared to lobbying spend on the same code
+# (v_spend_by_issue_quarter). This is the press-side analogue of extract_bills:
+# one raw-record-pointer'd row per (issue_code, keyword) that appears in a release.
+#
+# DESIGN / PROVENANCE OF THE MAPPING (read before trusting any downstream count):
+#   * Precision over recall. Keywords are distinctive phrases, not bare topic words
+#     ("border security" not "border"; "national defense" not "defense"), matched
+#     on whole-word boundaries, case-insensitively, with flexible interior
+#     whitespace (so "health\ncare" across a line break still matches "health care").
+#   * Each keyword string maps to exactly ONE code (asserted at build time), so a
+#     hit is unambiguously attributable. Where a concept could belong to two codes,
+#     it is assigned to the closest ALI code and flagged in SHAKY_MAPPINGS below.
+#   * NOT exhaustive over the ~79 ALI codes. It covers the codes congressional
+#     press releases actually discuss, with vocabulary specific enough to trust.
+#   * A "mention" is deduped per release: one row per (pr_id, issue_code, keyword),
+#     never one-per-occurrence, so a release repeating "health care" ten times does
+#     not outweigh ten releases mentioning it once. Volume metrics downstream should
+#     COUNT(DISTINCT pr_id).
+#
+# Known ambiguities are recorded here (not hidden) and in the coupling write-up:
+SHAKY_MAPPINGS = """
+  tariff/tariffs -> TRD (Trade), NOT TAR: ALI's TAR code is narrowly "miscellaneous
+    tariff bills"; LDA filers file broad tariff/trade-war policy under TRD, so press
+    "tariffs" is mapped to TRD to keep the say-vs-pay join meaningful. Watch this one.
+  health cluster HCR/MED/MMM/PHA/ALC bleeds: ACA "tax credits" tag BOTH HCR and TAX;
+    "prescription drug" -> PHA but reads as HCR; medicare/medicaid -> MMM; opioid/
+    fentanyl -> ALC though often framed as LAW or HCR.
+  tech cluster CPI/SCI/TEC: "artificial intelligence" -> SCI, "semiconductor" -> CPI,
+    "broadband/spectrum" -> TEC. Real releases blur these; treat the three as one
+    loose "tech" bucket when reading trends.
+  social security -> RET (no dedicated SS code exists; RET=Retirement is closest;
+    it is arguably WEL). federal reserve -> BAN (could be MON). background check ->
+    FIR (assumes firearms context; could be employment). insurance premiums are NOT
+    mapped to INS (they are overwhelmingly health-context) -> INS is flood/auto/
+    property only and is a weak, low-volume code. COM/SPO/GAM/ANI are low-precision
+    breadth codes, included but noisy.
+"""
+
+# code -> list of distinctive keyword phrases (lowercase, single-spaced).
+ISSUE_KEYWORDS = {
+    "HCR": ["health care", "healthcare", "affordable care act", "obamacare",
+            "health insurance", "health coverage", "health care costs",
+            "health care system", "public health", "health care coverage"],
+    "MMM": ["medicare", "medicaid", "medicare advantage", "dual eligible"],
+    "PHA": ["prescription drug", "prescription drugs", "drug prices", "drug pricing",
+            "pharmacy", "pharmacist", "pharmacy benefit", "insulin"],
+    "MED": ["medical research", "clinical trial", "clinical trials",
+            "disease research", "national institutes of health", "biomedical research"],
+    "TAX": ["tax credit", "tax credits", "tax cut", "tax cuts", "tax reform",
+            "tax code", "taxation", "internal revenue service", "income tax",
+            "corporate tax", "child tax credit", "estate tax"],
+    "BUD": ["appropriations", "government shutdown", "debt ceiling", "federal budget",
+            "budget deficit", "continuing resolution", "national debt", "debt limit",
+            "discretionary spending"],
+    "IMM": ["immigration", "immigrant", "immigrants", "border security",
+            "southern border", "undocumented", "asylum seekers", "daca",
+            "deportation", "border crossing", "illegal immigration"],
+    "DEF": ["national defense", "defense department", "department of defense",
+            "pentagon", "ndaa", "national defense authorization", "armed forces",
+            "military readiness", "defense spending", "servicemembers"],
+    "FIR": ["gun violence", "gun control", "gun safety", "firearm", "firearms",
+            "second amendment", "assault weapons", "background check",
+            "background checks", "ghost guns"],
+    "ENG": ["clean energy", "renewable energy", "nuclear power", "energy policy",
+            "energy prices", "power grid", "electric grid", "solar energy",
+            "wind energy", "energy independence", "energy costs"],
+    "ENV": ["climate change", "environmental protection", "greenhouse gas",
+            "greenhouse gases", "carbon emissions", "superfund", "air pollution",
+            "climate crisis", "environmental protection agency"],
+    "CAW": ["clean water", "clean air", "drinking water", "air quality",
+            "water quality", "pfas", "safe drinking water"],
+    "FUE": ["gas prices", "gasoline prices", "oil and gas", "crude oil",
+            "offshore drilling", "natural gas", "fossil fuels"],
+    "AGR": ["farm bill", "farmers", "agriculture", "agricultural", "crop insurance",
+            "department of agriculture", "livestock"],
+    "VET": ["veterans", "veteran", "veterans affairs", "department of veterans affairs",
+            "gi bill", "va health care", "veterans benefits"],
+    "EDU": ["student loan", "student loans", "student debt", "public schools",
+            "higher education", "department of education", "pell grant",
+            "pell grants", "k-12", "school funding", "college affordability", "teachers"],
+    "LBR": ["labor union", "labor unions", "minimum wage", "workers rights",
+            "collective bargaining", "overtime pay", "workplace safety",
+            "right to work", "project labor agreement", "antitrust", "unionize"],
+    "HOU": ["affordable housing", "homelessness", "public housing", "housing costs",
+            "housing affordability", "homeless", "section 8"],
+    "RET": ["social security", "retirement savings", "pension", "pensions", "401(k)",
+            "retirement security"],
+    "CIV": ["civil rights", "voting rights", "civil liberties", "voter suppression",
+            "lgbtq", "discrimination"],
+    "FAM": ["abortion", "reproductive rights", "pro-life", "pro-choice",
+            "paid family leave", "planned parenthood"],
+    "POS": ["postal service", "usps", "post office", "postal facilities",
+            "letter carriers"],
+    "FIN": ["wall street", "securities and exchange", "cryptocurrency", "crypto",
+            "stablecoin", "digital assets", "private equity", "hedge fund",
+            "stock market", "sec regulation"],
+    "BAN": ["banking", "banks", "community banks", "credit union", "credit unions",
+            "federal reserve", "bank regulation"],
+    "INS": ["flood insurance", "auto insurance", "insurance market", "property insurance"],
+    "TEC": ["broadband", "telecommunications", "spectrum", "net neutrality", "5g",
+            "rural broadband"],
+    "COM": ["broadcasting", "local news", "television stations", "radio stations",
+            "cable television"],
+    "CPI": ["semiconductor", "semiconductors", "chips act", "data center",
+            "data centers", "cloud computing"],
+    "SCI": ["artificial intelligence", "ai regulation", "scientific research",
+            "research and development", "national science foundation",
+            "quantum computing", "stem education"],
+    "TRD": ["trade agreement", "free trade", "trade deal", "trade war", "tariff",
+            "tariffs", "exports", "imports", "world trade organization",
+            "trade policy", "section 301", "trade deficit"],
+    "LAW": ["law enforcement", "criminal justice", "violent crime", "police officers",
+            "public safety", "sentencing reform", "mass incarceration"],
+    "ALC": ["opioid", "opioids", "fentanyl", "drug abuse", "substance abuse",
+            "overdose", "opioid crisis", "addiction"],
+    "HOM": ["homeland security", "department of homeland security", "tsa",
+            "cybersecurity", "cyberattack"],
+    "FOR": ["foreign policy", "foreign relations", "foreign aid", "state department",
+            "economic sanctions", "human rights abuses"],
+    "AVI": ["airline", "airlines", "airport", "airports", "aviation", "faa",
+            "air travel"],
+    "RRR": ["railroad", "railroads", "freight rail", "passenger rail", "amtrak",
+            "rail safety"],
+    "TRA": ["public transit", "mass transit", "transportation infrastructure",
+            "surface transportation"],
+    "ROD": ["highway", "highways", "road construction"],
+    "SMB": ["small business", "small businesses", "small business administration",
+            "main street businesses"],
+    "GAM": ["casino", "gambling", "sports betting", "online gambling"],
+    "SPO": ["youth sports", "professional sports", "college athletics",
+            "name image likeness"],
+    "TOB": ["tobacco", "vaping", "e-cigarettes", "cigarettes"],
+    "ANI": ["animal welfare", "animal cruelty", "endangered species",
+            "wildlife protection"],
+    "NAT": ["public lands", "national parks", "natural resources", "mining"],
+}
+
+
+def _build_issue_matcher(mapping):
+    """One alternation regex over all keywords + a lowercase keyword->code lookup.
+
+    Single pass per document (like BILL_RE). Longest keywords first so, e.g.,
+    'health care costs' wins over 'health care' at the same position. Boundaries
+    use \\w lookarounds (not \\b) so punctuated phrases like 'k-12' / '401(k)'
+    and phrase edges behave.
+    """
+    kw_to_code = {}
+    for code, kws in mapping.items():
+        for kw in kws:
+            canon = " ".join(kw.lower().split())
+            if canon in kw_to_code and kw_to_code[canon] != code:
+                raise ValueError(f"keyword {canon!r} maps to both "
+                                 f"{kw_to_code[canon]} and {code}")
+            kw_to_code[canon] = code
+    alts = sorted(kw_to_code, key=len, reverse=True)
+    body = "|".join(r"\s+".join(re.escape(t) for t in kw.split()) for kw in alts)
+    pattern = re.compile(r"(?<![\w])(?:" + body + r")(?![\w])", re.I)
+    return pattern, kw_to_code
+
+
+ISSUE_RE, KEYWORD_TO_CODE = _build_issue_matcher(ISSUE_KEYWORDS)
+
+
+def extract_issues(text):
+    """Yield (issue_code, keyword) once per distinct keyword found in text."""
+    if not text:
+        return
+    seen = set()
+    for m in ISSUE_RE.finditer(text):
+        canon = " ".join(m.group(0).lower().split())
+        code = KEYWORD_TO_CODE.get(canon)
+        if code and (code, canon) not in seen:
+            seen.add((code, canon))
+            yield code, canon
+
+
 def get_any(d, *keys, default=None):
     """First non-empty value among candidate keys (Senate JSON field names vary)."""
     if not isinstance(d, dict):
@@ -155,6 +335,12 @@ CREATE TABLE IF NOT EXISTS house_alis (
 
 CREATE TABLE IF NOT EXISTS bill_mentions (
   dataset TEXT, record_key TEXT, bill TEXT, raw_match TEXT, src TEXT);
+
+-- Press releases tagged with ALI issue codes via ISSUE_KEYWORDS. One row per
+-- release/issue_code/keyword. pr_id + src_file:src_line is the raw-record
+-- pointer (resolvable with show_record.py). See extract_issues / SHAKY_MAPPINGS.
+CREATE TABLE IF NOT EXISTS press_issue_mentions (
+  pr_id BIGINT, issue_code TEXT, keyword TEXT, src_file TEXT, src_line INTEGER);
 """
 
 VIEWS = """
@@ -175,6 +361,25 @@ CREATE OR REPLACE VIEW v_spend_by_issue_quarter AS
   SELECT a.general_issue_code, f.filing_year, f.filing_period,
          sum(f.income) AS attributed_income, count(DISTINCT f.filing_uuid) AS n_filings
   FROM senate_activities a JOIN senate_filings f USING (filing_uuid)
+  GROUP BY 1, 2, 3;
+
+-- Press-side analogue of v_spend_by_issue_quarter, on the SAME (filing_year,
+-- filing_period) grain so the two join directly. n_releases = distinct releases
+-- mentioning the code that quarter (the volume metric). n_keyword_hits is the
+-- looser total. Press month -> Senate quarter label. See queries/press_issue_coupling.sql.
+CREATE OR REPLACE VIEW v_press_issue_quarter AS
+  SELECT m.issue_code,
+         CAST(substr(p.date, 1, 4) AS INTEGER) AS filing_year,
+         CASE
+           WHEN CAST(substr(p.date, 6, 2) AS INTEGER) BETWEEN 1 AND 3 THEN 'first_quarter'
+           WHEN CAST(substr(p.date, 6, 2) AS INTEGER) BETWEEN 4 AND 6 THEN 'second_quarter'
+           WHEN CAST(substr(p.date, 6, 2) AS INTEGER) BETWEEN 7 AND 9 THEN 'third_quarter'
+           ELSE 'fourth_quarter'
+         END AS filing_period,
+         count(DISTINCT m.pr_id) AS n_releases,
+         count(*) AS n_keyword_hits
+  FROM press_issue_mentions m JOIN press_releases p ON p.pr_id = m.pr_id
+  WHERE p.date IS NOT NULL AND length(p.date) >= 7
   GROUP BY 1, 2, 3;
 
 CREATE OR REPLACE VIEW v_releases_by_member_month AS
@@ -272,6 +477,8 @@ def load_press(sink, data_root, years, months=None, max_records=None):
                     rec.get("text"), rel, line_no))
                 for bill, raw in extract_bills(rec.get("text") or ""):
                     sink.add("bill_mentions", ("press", key, bill, raw, rel))
+                for code, kw in extract_issues(rec.get("text") or ""):
+                    sink.add("press_issue_mentions", (n, code, kw, rel, line_no))
                 if max_records and n >= max_records:
                     sink.flush()
                     return n
