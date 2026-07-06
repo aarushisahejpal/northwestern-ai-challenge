@@ -29,6 +29,13 @@ House XML `<senateID>` is the compound string `"<senate_registrant_id>-<senate_c
 senate `house_registrant_id` to house `<houseID>`: the formats don't overlap (5-digit
 vs 9-digit; zero matches in the pilot corpus).
 
+`<houseID>` is a persistent House-Clerk identifier for the registrant-client
+relationship (verified 2026-07-06 as what the House disclosure portal's own search
+returns) — it is NOT a `filing_id`/filename, and can numerically collide with an
+unrelated document: one filing's `<houseID>` matched a real filing_id in this corpus
+belonging to a completely different registrant/client pair. Never treat a `<houseID>`
+value as a citation key.
+
 ## Data facts that bite
 
 - **Senate `client_id` is registrant-scoped, not global.** Comcast alone carries 10+

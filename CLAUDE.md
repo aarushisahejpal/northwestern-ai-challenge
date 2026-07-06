@@ -98,6 +98,16 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
   (compound, engagement-level; verified 2026-07-06). Do NOT join senate `house_registrant_id`
   to house `<houseID>` — formats don't overlap (zero matches). Use `registrant_crosswalk`
   (entity-resolver) or the split_part pattern in `queries/sweep_2026.sql#H1c`.
+- **`<houseID>` is NOT a resolvable filing_id/filename, and can collide with an unrelated
+  one.** Verified 2026-07-06: a Mercury/PRVO Plinarsko Društvo quarterly filing carries
+  `<houseID>301740622</houseID>`, but filing `301740622.xml` in this corpus is a completely
+  different, unrelated registration (Cornerstone Government Affairs / National Association
+  of Home Builders). `<houseID>` appears to be a persistent House-Clerk identifier for the
+  registrant-client relationship (what the House disclosure portal's own search surfaces) —
+  a different ID namespace from `filing_id` (the numeric filename), even though both are
+  9-digit numbers that can coincidentally match an unrelated document. Never cite a
+  `<houseID>` value as a `show_record.py` key; only the filename (`filing_id`) is a valid
+  citation key on the House side.
 - **Senate `client_id` is registrant-scoped, not global** — Comcast alone has 10+ client ids.
   Group clients by resolved entity (`entities`/`entity_aliases`, norm-key based), never by
   client_id. Registrant ids ARE global.
