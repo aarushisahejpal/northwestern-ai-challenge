@@ -84,6 +84,16 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
   under new filing_ids). Any per-period aggregate keeps only the latest filing per
   registrant+client+period on both sides — see `queries/sweep_2026.sql#H1b` for the pattern.
   Verified 2026-07-04; the un-deduped version fabricated a "House reports 2× Senate" pattern.
+- **Never sum senate + house datasets.** LD-2 quarterlies are filed with both chambers, so the
+  two datasets are largely copies of the same filings. Dollar attribution is senate-primary
+  (richer metadata); use house only to reconcile or fill gaps. Verified 2026-07-05 — the
+  cross-dataset version (sweep#C1b) inflated per-bill totals ~40%.
+- **House XML dumps are partial snapshots.** House 2026-Q1 holds 12,656 filings vs 21,145
+  senate Q1s (the deadline-week flood is missing). Senate is the completeness reference for
+  recent quarters; a filing absent house-side is expected noise, not a story.
+- **Press and filings name bills differently.** Members write "the Farm Bill" / "NDAA"; filings
+  cite H.R./S. numbers. Number-only matching fabricates "lobbied but publicly silent" bills
+  (killed L004 that way). Say-vs-pay comparisons need alias matching or provision-level framing.
 - Everything self-reported: strip whitespace everywhere, expect missing income/expenses, and
   treat gaps as potentially reportable rather than as noise.
 - Windows: scripts force UTF-8 stdout (press text has curly quotes; pipes default to cp1252).

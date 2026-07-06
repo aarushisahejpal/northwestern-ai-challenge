@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Run every labeled block in queries/sweep_2026.sql against a DB and print
+"""Run every labeled block in a queries/*.sql file against a DB and print
 results as compact tables. Blocks are delimited by '-- ==== LABEL ===='.
 
-Usage: python queries/run_sweep.py db/lda_2026.duckdb [BLOCK-PREFIX]
+Usage: python queries/run_sweep.py db/lda_2026.duckdb [BLOCK-PREFIX] [SQL-FILE]
 Optional BLOCK-PREFIX runs only blocks whose label starts with it (e.g. S2).
+Optional SQL-FILE (path) defaults to queries/sweep_2026.sql.
 """
 
 import re
@@ -19,7 +20,8 @@ if hasattr(sys.stdout, "reconfigure"):
 def main():
     db = sys.argv[1] if len(sys.argv) > 1 else "db/lda_2026.duckdb"
     only = sys.argv[2] if len(sys.argv) > 2 else None
-    sql = (Path(__file__).parent / "sweep_2026.sql").read_text(encoding="utf-8")
+    sql_file = Path(sys.argv[3]) if len(sys.argv) > 3 else Path(__file__).parent / "sweep_2026.sql"
+    sql = sql_file.read_text(encoding="utf-8")
     blocks = re.split(r"-- ==== (.+?) ====", sql)[1:]  # label, body, label, body...
     con = duckdb.connect(db, read_only=True)
     for label, body in zip(blocks[::2], blocks[1::2]):
