@@ -11,3 +11,4 @@ rows referenced below now live in `archive/DECISIONS_pilot-triage_2026-07-06.md`
 |---|---|---|---|
 | (setup, no finding) | lda-corpus-loader build + smoke test | 2026-07-04_phase0-setup.jsonl | archive: 2026-07-04 rows 1–5 |
 | L004 kill + L010/L003 leads (pre-finding) | lead-scanner queries (l004/l010/l003 SQL) + show_record deep reads + ledger updates | 2026-07-05_deep-dive_L004-L003.jsonl | archive: 2026-07-05 triage row |
+| Full-corpus sweep → L001–L003 (fresh ledger, pre-finding) | smoke_test + lead-scanner full sweep (run_sweep.py, all blocks) + show_record verify (LOC NATION) + ledger/lint | 2026-07-06_full-corpus-sweep_L001-L003.jsonl | DECISIONS.md 2026-07-06 rows 1–5 |
