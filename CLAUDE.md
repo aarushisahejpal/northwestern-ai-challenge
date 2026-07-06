@@ -79,11 +79,21 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
 - House forms pad with empty `<lobbyist>` slots — skip rows with no first and no last name.
 - Senate registrant objects carry `house_registrant_id` — the clean Senate↔House crosswalk key.
 - Senate LD-203 contributions are semiannual; early-year files are legitimately tiny.
-- **Never sum filings without deduping.** Registrants file duplicates (identical Senate Q1s
-  posted 22 seconds apart) and amendments (Senate `filing_type` codes like `1A`; House refilings
-  under new filing_ids). Any per-period aggregate keeps only the latest filing per
-  registrant+client+period on both sides — see `queries/sweep_2026.sql#H1b` for the pattern.
-  Verified 2026-07-04; the un-deduped version fabricated a "House reports 2× Senate" pattern.
+- **Never sum filings without deduping — and the dedup key must be the period-invariant
+  field, not the type code, applied identically on both chambers.** Registrants file
+  duplicates (identical Senate Q1s posted 22 seconds apart) and amendments (Senate
+  `filing_type` codes like `1A`/`2A`/`3A`/`4A`; House refilings under new filing_ids).
+  Filtering senate to `filing_type LIKE 'Q%'` SILENTLY DROPS amendments — this bit twice:
+  2026-07-04's un-deduped version fabricated a "House reports 2× Senate" pattern, and
+  2026-07-06's H1c/H1d v1 (which filtered/partitioned by `filing_type`) fabricated a
+  "chronic 10x cross-chamber mis-reporter" pattern that was actually senate's
+  PRE-amendment figure vs house's POST-amendment figure (house wasn't affected because its
+  directory-based period bucketing already folds originals+amendments together). Caught
+  by a human cross-checking the live House portal, not by any internal check — a reminder
+  that "the query ran and produced clean-looking numbers" is not verification. The correct
+  pattern: dedup keyed on `filing_period` (constant across original+amendment, e.g.
+  "second_quarter" for both `Q2` and `2A`), NOT `filing_type`, picking latest by `posted`/
+  `filing_id` — see `queries/sweep_2026.sql#H1c` (current, fixed version) for the pattern.
 - **Never sum senate + house datasets.** LD-2 quarterlies are filed with both chambers, so the
   two datasets are largely copies of the same filings. Dollar attribution is senate-primary
   (richer metadata); use house only to reconcile or fill gaps. Verified 2026-07-05 — the

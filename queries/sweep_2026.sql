@@ -111,29 +111,38 @@ WHERE s.income IS NOT NULL AND h.income IS NOT NULL AND abs(s.income - h.income)
 ORDER BY abs(s.income - h.income) DESC LIMIT 20;
 
 -- ==== H1c: reconciliation joined on registrant+client IDs (supersedes H1b's name join) ====
--- Verified 2026-07-06: house <senateID> is the compound key
--- "<senate_registrant_id>-<senate_client_id>" (55,627 house rows match a senate pair
--- exactly; sampled pairs agree on names). Joining on IDs instead of upper(trim(name))
--- catches engagements the name join missed (casing/punctuation/dba variants) and
--- can't false-match distinct same-named orgs. Dedup per H1b on both sides. Senate
--- filing_period is spelled out ("first_quarter"); filing_type carries Q1..Q4 codes.
+-- FIXED 2026-07-06 (was a real bug, caught by user cross-checking the live House
+-- portal): the original version filtered senate to filing_type LIKE 'Q%', which
+-- SILENTLY EXCLUDES amendment codes (1A/2A/3A/4A/...). House-side dedup (latest
+-- filing_id within the SAME directory-period bucket, since house doesn't split
+-- amendments into a separate period) correctly picked up amendments; senate-side
+-- didn't, so the join compared senate's PRE-amendment figure against house's
+-- POST-amendment figure. All 4 manually-verified "10x mismatches" from the buggy
+-- version turned out to be false positives this way (e.g. Mercury/PRVO: senate Q2
+-- $1.2M + senate 2A $120K on 2025-07-23 == house's $120K exactly; the buggy query
+-- silently dropped the 2A row and compared $1.2M vs $120K instead). Fix: key
+-- dedup on filing_period (constant across original+amendment, e.g. "second_quarter"
+-- for both Q2 and 2A), not filing_type, and don't filter out amendment types --
+-- only exclude registrations (RR/RA), which aren't quarter reports.
 WITH s AS (
-  SELECT registrant_id, client_id, filing_year, filing_type AS q, income,
-         registrant_name, client_name, filing_uuid
+  SELECT registrant_id, client_id, filing_year,
+         CASE filing_period WHEN 'first_quarter' THEN 'Q1' WHEN 'second_quarter' THEN 'Q2'
+              WHEN 'third_quarter' THEN 'Q3' WHEN 'fourth_quarter' THEN 'Q4' END AS q,
+         income, registrant_name, client_name, filing_uuid, filing_type
   FROM senate_filings
-  WHERE filing_type LIKE 'Q%'
+  WHERE filing_type NOT IN ('RR', 'RA')
+    AND filing_period IN ('first_quarter','second_quarter','third_quarter','fourth_quarter')
   QUALIFY row_number() OVER (PARTITION BY registrant_id, client_id, filing_year,
-    filing_type ORDER BY posted DESC) = 1),
+    filing_period ORDER BY posted DESC) = 1),
 h AS (
   SELECT split_part(senate_reg_id, '-', 1) AS registrant_id,
          split_part(senate_reg_id, '-', 2) AS client_id,
-         report_year AS filing_year,
-         'Q' || substr(report_period, 2, 1) AS q, income, filing_id
+         report_year AS filing_year, report_period AS q, income, filing_id
   FROM house_filings
   WHERE senate_reg_id LIKE '%-%' AND report_period LIKE 'Q%'
   QUALIFY row_number() OVER (PARTITION BY senate_reg_id, report_year, report_period
     ORDER BY CAST(filing_id AS BIGINT) DESC) = 1)
-SELECT s.registrant_name, s.client_name, s.filing_year, s.q,
+SELECT s.registrant_name, s.client_name, s.filing_year, s.q, s.filing_type AS senate_latest_type,
        s.income::BIGINT AS senate_income, h.income::BIGINT AS house_income,
        (s.income - h.income)::BIGINT AS delta, s.filing_uuid, h.filing_id
 FROM s JOIN h USING (registrant_id, client_id, filing_year, q)
@@ -144,16 +153,21 @@ ORDER BY abs(s.income - h.income) DESC LIMIT 25;
 -- ==== H1d: chronic cross-chamber mis-reporters (L001 revisit; needs H1c's ID join) ====
 -- Aggregates H1c's engagement-quarter deltas by registrant. exact_10x counts
 -- quarters where one side is exactly 10x the other (missing/extra-zero data entry).
+-- Uses the SAME fixed dedup as H1c (filing_period-keyed, amendments included).
 WITH s AS (
-  SELECT registrant_id, client_id, filing_year, filing_type AS q, income,
-         registrant_name
-  FROM senate_filings WHERE filing_type LIKE 'Q%'
+  SELECT registrant_id, client_id, filing_year,
+         CASE filing_period WHEN 'first_quarter' THEN 'Q1' WHEN 'second_quarter' THEN 'Q2'
+              WHEN 'third_quarter' THEN 'Q3' WHEN 'fourth_quarter' THEN 'Q4' END AS q,
+         income, registrant_name
+  FROM senate_filings
+  WHERE filing_type NOT IN ('RR', 'RA')
+    AND filing_period IN ('first_quarter','second_quarter','third_quarter','fourth_quarter')
   QUALIFY row_number() OVER (PARTITION BY registrant_id, client_id, filing_year,
-    filing_type ORDER BY posted DESC) = 1),
+    filing_period ORDER BY posted DESC) = 1),
 h AS (
   SELECT split_part(senate_reg_id, '-', 1) AS registrant_id,
          split_part(senate_reg_id, '-', 2) AS client_id,
-         report_year AS filing_year, 'Q' || substr(report_period, 2, 1) AS q, income
+         report_year AS filing_year, report_period AS q, income
   FROM house_filings
   WHERE senate_reg_id LIKE '%-%' AND report_period LIKE 'Q%'
   QUALIFY row_number() OVER (PARTITION BY senate_reg_id, report_year, report_period
