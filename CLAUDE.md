@@ -18,7 +18,8 @@ gain-investigation/
 │   ├── lda-entity-resolver/   cross-dataset entity table (Senate↔House crosswalk)
 │   ├── investigation-ledger/  ledger templates + ledger_lint.py
 │   ├── lead-scanner/          lens SQL library + scanning discipline
-│   └── finding-verifier/      pre-lock claim re-derivation protocol
+│   ├── finding-verifier/      pre-lock claim re-derivation protocol
+│   └── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
 ├── queries/             ← lens SQL (sweep_2026.sql + run_sweep.py); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)
 ├── traces/              ← session JSONL exports + INDEX.md + rendered/ HTML
@@ -77,11 +78,14 @@ from the source systems, valid regardless of which DB below they were queried th
 - **Model/budget tiers.** Extraction and filtering stay in Python/SQL. Cheap models scan and rank
   (returning record IDs + one-line hypotheses, never quoted record text). Frontier models
   deep-read lead-attached records (cap ~30 records/session) and verify findings.
-- **Outside-data checks (novelty/news-landscape) follow a fixed protocol** — anchor the
-  search window to the actual event date (not "today"), run novelty and landscape checks
-  as separate bounded passes (~3 queries each), distill to a conclusion before it reaches
-  the ledger. Full protocol in `skills/finding-verifier/SKILL.md`. Established 2026-07-06
-  after searching "GlobalFoundries news 2026" for a 2024 event.
+- **Exploratory outside-data checks (novelty/news-landscape) follow a fixed protocol,
+  separate from finding-verifier's rigor** — anchor the search window to the actual event
+  date (not "today"), run novelty and landscape checks as separate bounded passes (~3
+  queries each), distill to a conclusion before it reaches the ledger. Full protocol in
+  `skills/outside-context-scan/SKILL.md`. Established 2026-07-06 after searching
+  "GlobalFoundries news 2026" for a 2024 event; deliberately kept out of
+  `skills/finding-verifier/SKILL.md` since "verifier" implies a rigor this exploratory
+  research doesn't have and shouldn't claim.
 - **Self-contained language.** Submitted artifacts (SKILL.md files, findings, README) must stand
   alone — no references to internal planning docs or prior processes.
 

@@ -25,10 +25,11 @@ Data layout under `data/` follows the challenge's data manual (`congress_press/`
 | Skill | What it does | How to run |
 |---|---|---|
 | `skills/lda-corpus-loader/` | Parses all three raw datasets into a queryable DB; every row keeps a raw-record pointer; includes `show_record.py` | `python skills/lda-corpus-loader/scripts/build_db.py --data-root data/ --db db/lda.duckdb [--years YYYY ...]` |
-| `skills/lda-entity-resolver/` | Cross-dataset entity table + alias map (Senate↔House crosswalk) | STATUS: skeleton — SKILL.md only, not yet implemented |
+| `skills/lda-entity-resolver/` | Cross-dataset entity table + alias map (Senate↔House crosswalk); resolves the `<senateID>` compound key, groups clients by normalized name (Senate `client_id` is registrant-scoped, not global) | `python skills/lda-entity-resolver/scripts/resolve_entities.py --db db/lda.duckdb [--report]` |
 | `skills/investigation-ledger/` | Lead/entity/thread tracking templates + schema lint | `python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md` |
 | `skills/lead-scanner/` | Lens library: SQL-first anomaly scans that emit candidate leads | `python queries/run_sweep.py db/lda.duckdb [BLOCK-PREFIX] [queries/<file>.sql]` (lens SQL lives in `queries/`; formal skill packaging still TBD) |
-| `skills/finding-verifier/` | Fresh-agent re-derivation of every claim in a finding before it locks | Protocol in `SKILL.md`, not yet automated end-to-end; `scripts/ocr_pdf.py` supports outside-data verification against external PDFs |
+| `skills/finding-verifier/` | Fresh-agent re-derivation of every claim in a finding before it locks | Protocol in `SKILL.md`, not yet automated end-to-end; `scripts/ocr_pdf.py` supports claim verification against outside-source PDFs |
+| `skills/outside-context-scan/` | Exploratory web research (novelty/prior-art + news-landscape checks) to triage a lead before drafting — distinct from finding-verifier's claim-locking rigor | Protocol in `SKILL.md`; uses WebSearch/WebFetch directly, no custom script |
 
 ## 2. Which findings each skill supports
 
