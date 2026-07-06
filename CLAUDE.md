@@ -79,6 +79,11 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
 - House forms pad with empty `<lobbyist>` slots — skip rows with no first and no last name.
 - Senate registrant objects carry `house_registrant_id` — the clean Senate↔House crosswalk key.
 - Senate LD-203 contributions are semiannual; early-year files are legitimately tiny.
+- **Never sum filings without deduping.** Registrants file duplicates (identical Senate Q1s
+  posted 22 seconds apart) and amendments (Senate `filing_type` codes like `1A`; House refilings
+  under new filing_ids). Any per-period aggregate keeps only the latest filing per
+  registrant+client+period on both sides — see `queries/sweep_2026.sql#H1b` for the pattern.
+  Verified 2026-07-04; the un-deduped version fabricated a "House reports 2× Senate" pattern.
 - Everything self-reported: strip whitespace everywhere, expect missing income/expenses, and
   treat gaps as potentially reportable rather than as noise.
 - Windows: scripts force UTF-8 stdout (press text has curly quotes; pipes default to cp1252).

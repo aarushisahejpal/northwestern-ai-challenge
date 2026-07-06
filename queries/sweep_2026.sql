@@ -87,3 +87,42 @@ ORDER BY lobby_mentions * press_mentions DESC LIMIT 20;
 SELECT bioguide_id, name, month, n_releases
 FROM v_releases_by_member_month
 WHERE n_releases > 40 ORDER BY n_releases DESC LIMIT 15;
+
+-- ==== H1b: reconciliation with amendment/duplicate dedup (supersedes H1) ====
+-- L001 artifact check (2026-07-04) proved raw sums double-count: registrants file
+-- duplicates (S-3 Group filed identical Senate Q1s 22s apart) and amendments
+-- (Senate filing_type '1A'; House refilings under new filing_ids). Keep only the
+-- latest filing per org+client+period on BOTH sides.
+WITH s AS (
+  SELECT upper(trim(registrant_name)) AS org, upper(trim(client_name)) AS client, income
+  FROM senate_filings
+  WHERE filing_year = 2026 AND (filing_type LIKE 'Q1%' OR filing_type = '1A')
+  QUALIFY row_number() OVER (PARTITION BY upper(trim(registrant_name)),
+    upper(trim(client_name)), filing_period ORDER BY posted DESC) = 1),
+h AS (
+  SELECT upper(trim(organization_name)) AS org, upper(trim(client_name)) AS client, income
+  FROM house_filings WHERE report_period = 'Q1'
+  QUALIFY row_number() OVER (PARTITION BY upper(trim(organization_name)),
+    upper(trim(client_name)), report_period ORDER BY CAST(filing_id AS BIGINT) DESC) = 1)
+SELECT s.org, s.client, s.income::BIGINT AS senate_income, h.income::BIGINT AS house_income,
+       (s.income - h.income)::BIGINT AS delta
+FROM s JOIN h USING (org, client)
+WHERE s.income IS NOT NULL AND h.income IS NOT NULL AND abs(s.income - h.income) > 5000
+ORDER BY abs(s.income - h.income) DESC LIMIT 20;
+
+-- ==== C1b: say-vs-pay weighted by dollars (supersedes mention counts) ====
+-- Caveat: income is filing-level; a filing naming several bills attributes its
+-- full income to each. Use for ranking, not exact dollars.
+WITH m AS (SELECT DISTINCT bill, dataset, record_key FROM bill_mentions
+           WHERE dataset IN ('senate', 'house')),
+lob AS (
+  SELECT m.bill, count(*) AS n_filings,
+         sum(coalesce(sf.income, hf.income, 0))::BIGINT AS attributed_dollars
+  FROM m LEFT JOIN senate_filings sf ON m.dataset = 'senate' AND m.record_key = sf.filing_uuid
+         LEFT JOIN house_filings hf ON m.dataset = 'house' AND m.record_key = hf.filing_id
+  GROUP BY 1),
+p AS (SELECT bill, count(*) AS press_mentions FROM bill_mentions
+      WHERE dataset = 'press' GROUP BY 1)
+SELECT lob.bill, n_filings, attributed_dollars, coalesce(press_mentions, 0) AS press_mentions
+FROM lob LEFT JOIN p ON lob.bill = p.bill
+ORDER BY attributed_dollars DESC LIMIT 25;
