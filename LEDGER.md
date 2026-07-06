@@ -16,7 +16,19 @@ triage checkpoint.
 ## Leads
 
 All L001–L009 sourced from the 2026-Q1 sweep (queries/sweep_2026.sql, run 2026-07-04 against
-db/lda_2026.duckdb; DB rebuild: build_db.py --data-root <data> --years 2026).
+db/lda_2026.duckdb; DB rebuild: build_db.py --data-root <data> --years 2026). L010/L011 added
+2026-07-05/06 from pilot-scale work (2025 + 2026-Q1, db/lda_pilot.duckdb).
+
+**Corpus-scale note (2026-07-06): every lead below was triaged at Q1-2026 or pilot scale.
+`db/lda_full.duckdb` (2022-2026, all years) is now built, validated, and canonical — see
+DECISIONS.md 2026-07-06. A fresh full-corpus sweep has not yet been run.** Before treating any
+OPEN lead's framing below as current, re-derive it against a fresh full-corpus sweep
+(`run_sweep.py db/lda_full.duckdb`) rather than assuming pilot-scale numbers still hold — L002's
+"top-6 client" framing and L006's "migrated from FARA" framing both changed materially once more
+history was available, and this is expected to keep happening at full scale. Two exceptions —
+**closed, no re-triage needed:** L001 (dead, refuted twice, re-confirmed at full-corpus scale) and
+L010 (independently verified PASS, awaiting only a human lock decision). L003 stays parked per its
+own revisit triggers regardless of scale.
 
 | id | hypothesis (one line) | lens | named actors | status | owner | evidence so far (record IDs) | next action | updated |
 |---|---|---|---|---|---|---|---|---|
@@ -51,6 +63,14 @@ Muhammad Arham Shoukat (external, not in LDA corpus) | hot — Innovairrs' named
 | Mubadala family (foreign_entity, no LDA id) | hot — 3 resolved threads (Caturus 24%, Commonwealth LNG via Caturus, GlobalFoundries 82% combined); zero FARA registrations ever (bulk CSV checked 2026-07-06); ADIA's decades of FARA agents all terminated by 2022 | l006_mubadala.sql#L006a-c; FARA bulk CSV | 2026-07-06 |
 
 ## Queries run
+
+Most rows below ran against db/lda_2026.duckdb or db/lda_pilot.duckdb — see each row's
+DB reference. A few targeted 2026-07-06 checks ran against db/lda_full.duckdb (the
+build itself, entity-resolver, L001's final H1d confirmation, an ad hoc GlobalFoundries
+history pull) but the FULL sweep_2026.sql lens file (all blocks: S1a-S1d, S2a-S2b, S3-S5,
+H2/C1/C1b) has NOT yet been re-run against the full corpus — that's the natural next
+entry, and should be logged as its own dated row(s) rather than assumed from the
+pilot-scale S1a-S5 rows above.
 
 | date | SQL (file in queries/) | one-line result |
 |---|---|---|

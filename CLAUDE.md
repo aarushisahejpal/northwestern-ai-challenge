@@ -35,12 +35,22 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-corpus-loader/scripts/build_db.py \
     --data-root data/ --db db/lda.duckdb [--years 2025 2026] [--sample 2025-Q1]
 .venv/Scripts/python skills/lda-corpus-loader/scripts/show_record.py <citation-key>
-.venv/Scripts/python queries/run_sweep.py db/lda_2026.duckdb [BLOCK-PREFIX]
+.venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
 .venv/Scripts/python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md
 ```
 
 Citation keys: Senate `filing_uuid` · House numeric XML filename (e.g. `301817772`) ·
-press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
+press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`) — all stable identifiers
+from the source systems, valid regardless of which DB below they were queried through.
+
+**Corpus versions** (all built the same way, differing only by `--years`; see
+`skills/lda-corpus-loader/scripts/build_db.py`):
+- `db/lda_full.duckdb` — 2022–2026, all years. **Canonical/primary as of 2026-07-06.**
+  Start new investigative work here.
+- `db/lda_pilot.duckdb` — 2025 + 2026-Q1 only. Kept solely to reproduce
+  `findings/L010_pipe_materials_war.md`'s citations exactly as verified; not for new work.
+- `db/lda_2026.duckdb` — 2026-Q1 only. Superseded by both of the above; safe to delete
+  locally, nothing cites it that the other two can't also resolve.
 
 ## Load-bearing conventions
 
@@ -67,6 +77,11 @@ press `src_file:src_line` (e.g. `congress_press/2026-01.jsonl:12`).
 - **Model/budget tiers.** Extraction and filtering stay in Python/SQL. Cheap models scan and rank
   (returning record IDs + one-line hypotheses, never quoted record text). Frontier models
   deep-read lead-attached records (cap ~30 records/session) and verify findings.
+- **Outside-data checks (novelty/news-landscape) follow a fixed protocol** — anchor the
+  search window to the actual event date (not "today"), run novelty and landscape checks
+  as separate bounded passes (~3 queries each), distill to a conclusion before it reaches
+  the ledger. Full protocol in `skills/finding-verifier/SKILL.md`. Established 2026-07-06
+  after searching "GlobalFoundries news 2026" for a 2024 event.
 - **Self-contained language.** Submitted artifacts (SKILL.md files, findings, README) must stand
   alone — no references to internal planning docs or prior processes.
 
