@@ -1,17 +1,20 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. Use when generating or refreshing the lead pipeline, or to run a rapid bill-level "who's been quietly lobbying this?" check.
+description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. (3) An LD-203 giving map that, given a registrant entity or an industry roster, reports its disclosed political giving (totals, recipients, per-entity split) — the "who are they giving money to?" half of an industry map. Use when generating or refreshing the lead pipeline, running a rapid bill-level "who's been quietly lobbying this?" check, or mapping an industry's disclosed contributions.
 ---
 
 # Lead Scanner
 
-Two things live here:
+Three things live here:
 
 1. **A lens library** — SQL-first scans that turn the lobbying corpus into candidate lead
    rows (record IDs + one-line hypotheses).
 2. **A bill cross-check** (`scripts/bill_lookup.py`) — given a bill *number* or a *named
    alias*, list every Senate filing, House filing, and press release that touches it, each
    with a citation key resolvable by `lda-corpus-loader`'s `show_record.py`.
+3. **An LD-203 giving map** (`scripts/ld203_giving.py`) — given a registrant *entity* or an
+   *industry roster*, report its disclosed political giving (totals, top recipients, per-entity
+   split), each sample row carrying a `show_record.py` key.
 
 Requires `db/lda_full.duckdb` (built by `lda-corpus-loader`); cross-dataset lenses also use the
 resolver's entity tables. Raw records are only ever opened through `show_record.py` — never grep
@@ -82,6 +85,60 @@ precision-over-recall discipline as the loader's issue-keyword vocabulary:
   corpus-growth confound the press-issue-coupling work handles with shares, not raw counts.)
 - The citeable aggregate form of these counts is `queries/p2_bill_crosscheck.sql` (blocks `P2a`–
   `P2d`), for findings that must cite the exact SQL.
+
+## LD-203 giving map — `scripts/ld203_giving.py`
+
+**The problem it solves.** An industry map has two halves: *what does the industry spend to
+lobby* (answered by `lda-entity-resolver`'s `v_client_canonical_spend`) and *who does it give
+money to*. This tool answers the second from the Senate LD-203 contribution reports: resolve an
+entity (or a whole roster) to its LD-203 filer name(s), and report total disclosed giving,
+a breakdown by contribution type, top recipients, and a per-entity split — every sample row
+carrying a `show_record.py`-resolvable `filing_uuid`.
+
+### One-command demo
+
+```bash
+# one entity (substring match, entity-resolved)
+.venv/Scripts/python skills/lead-scanner/scripts/ld203_giving.py "coinbase"
+# a whole industry — one line per entity; each matched exactly (canonical name or alias)
+.venv/Scripts/python skills/lead-scanner/scripts/ld203_giving.py --names-file crypto_roster.txt
+# recall mode: catch resolver-split name variants (Payward/Kraken's three spellings)
+.venv/Scripts/python skills/lead-scanner/scripts/ld203_giving.py "payward" --loose
+```
+
+Useful flags: `--type feca,he,pic,ple,me` (subset by contribution kind — `pic`=presidential
+inaugural, `he`=honorary), `--since 2024`, `--exact`, `--top`/`--limit`, `--json`.
+
+### Reading the output — the load-bearing caveats
+
+- **Attribution boundary (do not overstate).** LD-203 reports are filed by *registrants* and
+  their lobbyists, never by clients. So this is the giving of an **in-house registrant, trade
+  association, or firm** — it is **not** attributable to an outside firm's individual clients. A
+  crypto client that lobbies only through a multi-client firm has no LD-203 giving of its own
+  here; the tool flags such a query as `client-only`.
+- **Scope is LD-203, not FEC.** It captures lobbyist/registrant-reported FECA contributions plus
+  honorary, presidential-inaugural (`pic`), and library (`ple`) payments — **not Super-PAC money**
+  (that lives in FEC data). For an industry whose headline election spending flows through Super
+  PACs (e.g. crypto's Fairshake), LD-203 is the disclosed lobbyist-side slice, a fraction of the
+  FEC total. Say "disclosed LD-203 giving," never "total political spending."
+- **Totals are amendment-de-duplicated** on the contribution identity (registrant+lobbyist+year+
+  type+amount+payee+honoree+date+contributor). The loader does not carry LD-203 `filing_type`
+  (the raw record has it — `"YY"`/Year-End, mid-year, amendments), so this DISTINCT is a
+  heuristic; the raw figure is shown alongside so the amendment delta is visible. Treat totals as
+  a **ranking signal** and verify specific items via `show_record.py`.
+- **Recipients are raw honoree/payee strings**, only lightly normalized for grouping — **not**
+  entity-resolved (candidates/PACs are a separate namespace; the same inaugural committee appears
+  as "TRUMP VANCE INAUGURAL COMMITTEE" and "DONALD TRUMP/ J.D. VANCE"). Read the top-recipients
+  list as an approximation; cite individual items by `filing_uuid`.
+- **Entity resolution is the ceiling.** The precise (default) mode inherits `lda-entity-resolver`'s
+  entity boundaries: where the resolver split one company's name variants into separate entities
+  (Payward/Kraken), precise mode under-counts. `--loose` matches filer names directly to recover
+  them, trading precision for recall — eyeball its matched-name list for conflation. Tightening
+  this is people/name-resolution work (roadmap cleanup C / P6).
+- The citeable aggregate form is `queries/ld203_giving.sql` (blocks `G1a`–`G1d`), for findings
+  that must cite the exact SQL. It complements `emergence_and_flows.sql#F1` (giver→one-honoree
+  concentration) and `sweep_2026.sql#S4` (recipients across all givers): this tool is
+  giver-centric and entity-resolved.
 
 ## Lenses — `queries/*.sql` run via `queries/run_sweep.py`
 
