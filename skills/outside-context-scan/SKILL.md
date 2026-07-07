@@ -50,12 +50,18 @@ Run two distinct check *types*, not one blended search:
 State the window (the actual event date plus the run-up/aftermath you care about) before
 searching, then *enforce* it — stating it is not enough:
 
-- **GDELT DOC 2.0 API via WebFetch is the reliable date filter** — it filters on *publish*
-  date, not page content. Fetch
+- **GDELT DOC 2.0 API is the reliable date filter** — it filters on *publish* date, not page
+  content. Fetch
   `https://api.gdeltproject.org/api/v2/doc/doc?query=<terms>&startdatetime=YYYYMMDDHHMMSS&enddatetime=YYYYMMDDHHMMSS&maxrecords=<=250>&sort=dateasc&mode=artlist&format=json`.
   `sort=dateasc` surfaces the first wave (run-up/passage); `mode=timelinevol` returns a
   volume-over-time curve — the honest way to read "how loud was this, and when." Caveat:
   GDELT indexes roughly 2017 to present; it is blind to older events.
+  - *Fetch mechanics (verified 2026-07-07):* WebFetch often returns **HTTP 429** on this
+    endpoint — GDELT rate-limits by IP and WebFetch shares one. Fall back to a **direct
+    `curl`** of the identical URL (public JSON, no auth) written to a file, then parse the
+    JSON yourself: cleaner than the WebFetch model layer for `timelinevol`/`artlist`, and it
+    dodges the rate limit. Quote the URL and pass a plain user-agent. This is still "the
+    GDELT fetch is the search," just via curl, not WebFetch.
 - **WebSearch date operators** (`after:YYYY-MM-DD before:YYYY-MM-DD`) bias toward the
   window but are a soft filter, not a hard cut — pair them with event verbs ("passes",
   "clears", "signs") and drop the bare year from the query string.
