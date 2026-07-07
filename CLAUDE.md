@@ -20,6 +20,7 @@ gain-investigation/
 │   ├── investigation-ledger/  ledger templates + ledger_lint.py
 │   ├── lead-scanner/          lens SQL library + scanning discipline
 │   ├── finding-verifier/      pre-lock claim re-derivation protocol
+│   ├── source-document-reader/ external primary-source PDF → page-anchored citable text (OCR) + external-doc citation convention
 │   └── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
 ├── queries/             ← lens SQL (sweep_2026.sql + run_sweep.py); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)

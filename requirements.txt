@@ -5,8 +5,8 @@ ijson==3.5.0
 # spaCy is only needed for the press-text enrichment step (not the loader);
 # pin when that script lands. Model: python -m spacy download en_core_web_sm
 spacy
-# Needed only by skills/finding-verifier/scripts/ocr_pdf.py, for outside-data
-# verification against external PDFs (never the LDA/press corpus itself).
+# Needed only by skills/source-document-reader/scripts/ocr_pdf.py, for reading
+# external PDFs (court filings, SEC complaints) — never the LDA/press corpus itself.
 # Also requires the Tesseract OCR engine on PATH:
 #   Windows: winget install --id UB-Mannheim.TesseractOCR
 #   macOS:   brew install tesseract

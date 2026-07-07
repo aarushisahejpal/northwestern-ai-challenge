@@ -26,6 +26,8 @@ that's a lighter-weight, earlier-stage discipline and shouldn't be confused with
 5. Headline check: does the headline claim more than the verified claims cumulatively show?
 6. Lock only on pass; log the lock in `DECISIONS.md`.
 
-`scripts/ocr_pdf.py` extends this same rigor to outside-source PDFs (e.g. court
-complaints) when a claim depends on a document outside the corpus — OCR it and check
-the specific claim against the specific text, same verdict discipline as above.
+When a claim depends on a document *outside* the corpus (e.g. a court complaint or SEC
+filing), use `skills/source-document-reader` to turn that PDF into page-anchored, citable
+text, then apply the exact verdict discipline above to the specific claim against the
+specific text. That skill owns the OCR mechanics and the external-document citation
+convention; this skill owns the verdict.
