@@ -22,7 +22,7 @@ gain-investigation/
 │   ├── finding-verifier/      pre-lock claim re-derivation protocol
 │   ├── source-document-reader/ external primary-source PDF → page-anchored citable text (OCR) + external-doc citation convention
 │   └── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
-├── queries/             ← lens SQL (sweep_2026.sql + run_sweep.py); cited by aggregate claims
+├── queries/             ← lens SQL + internal design notes (see "Query library & derived tables"); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)
 ├── traces/              ← session JSONL exports + INDEX.md + rendered/ HTML
 ├── tests/               ← smoke_test.py + fixtures/ (tiny excerpts of real public records)
@@ -38,6 +38,8 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-corpus-loader/scripts/build_db.py \
     --data-root data/ --db db/lda.duckdb [--years 2025 2026] [--sample 2025-Q1]
 .venv/Scripts/python skills/lda-corpus-loader/scripts/show_record.py <citation-key>
+.venv/Scripts/python skills/lda-entity-resolver/scripts/resolve_entities.py --db db/lda_full.duckdb  # entities/aliases/crosswalk (+ --report)
+.venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
 .venv/Scripts/python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md
 ```
@@ -54,6 +56,27 @@ from the source systems, valid regardless of which DB below they were queried th
   `findings/L010_pipe_materials_war.md`'s citations exactly as verified; not for new work.
 - `db/lda_2026.duckdb` — 2026-Q1 only. Superseded by both of the above; safe to delete
   locally, nothing cites it that the other two can't also resolve.
+
+## Query library & derived tables
+
+`queries/` holds the lens SQL (cited by aggregate claims) plus internal design notes:
+- `sweep_2026.sql` (+ `run_sweep.py`) — the point-in-time full-corpus sweep (say-vs-pay H-blocks,
+  contribution flows, gaps S5); `#H1c` is the canonical `filing_period`-deduped cross-chamber pattern.
+- `emergence_and_flows.sql` — **current primary generation lens** (rate-of-change / emergence /
+  fan-out / individual-as-client / LD-203 flows); produced leads **L020–L025**.
+- `press_issue_coupling.sql` (+ `.md`) — press issue-frequency & lobbying–messaging share-coupling;
+  produced **L026–L027**. **Lives on `feature/press-issue-frequency` only — see Branch state below.**
+- `l003/l004/l006/l010_*.sql` — per-lead deep-dive SQL, kept for reproducibility.
+- `corpus_additions_roadmap.md` — design notes for not-yet-built extensions (FTS/keyness term
+  discovery, Congress.gov bill-status & FEC joins, NER entity graph). **Internal; not a submission
+  artifact, not cited by any finding.**
+
+Key derived tables the loader materializes (both carry raw-record pointers; both resolvable via
+`show_record.py`):
+- `bill_mentions` — bill numbers (`H.R. 1234` / `S. 567`) regexed from House `specific_issues`,
+  Senate activity descriptions, AND press text — the highest-precision cross-dataset join key.
+- `press_issue_mentions` — press releases tagged to ALI issue codes via the curated `ISSUE_KEYWORDS`
+  dict in `build_db.py` (rebuilt in place by `backfill_press_issues.py`); ~80% of releases carry ≥1 tag.
 
 ## Load-bearing conventions
 
@@ -154,7 +177,15 @@ from the source systems, valid regardless of which DB below they were queried th
    `traces/INDEX.md`, commit.
 
 Internal planning context (not part of the submission, not for citation in submitted artifacts):
-`../_Plan.md` in the parent folder holds the phased plan and decision register.
+`../_Plan.md` in the parent folder holds the phased plan, decision register, and (§9, added
+2026-07-06) the story-bucket-driven tool roadmap with the P1–P7 priorities.
+
+**Branch state (2026-07-06):** `main` holds the corpus loader, entity resolver, emergence lenses,
+and leads L020–L025. The **press-issue-coupling work is on `feature/press-issue-frequency`, not yet
+merged** — that branch adds `queries/press_issue_coupling.sql`/`.md`,
+`skills/lda-corpus-loader/scripts/backfill_press_issues.py`, `queries/corpus_additions_roadmap.md`,
+and leads L026–L027. If you're not on that branch those files/leads won't be present; decide the
+merge before Phase 5 packaging so the submission is assembled from one tree.
 
 **2026-07-06 reset:** `LEDGER.md`/`DECISIONS.md` were emptied and the prior pilot-scale content
 moved to `archive/*_pilot-triage_2026-07-06.md`, so a session working the newly-built full corpus
