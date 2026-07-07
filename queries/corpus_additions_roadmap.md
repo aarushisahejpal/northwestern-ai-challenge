@@ -14,6 +14,16 @@ Sections:
 4. Comparative-messaging event clustering
 5. NER + entity graph
 
+**How these map to the tool roadmap (added 2026-07-06):** `../_Plan.md` §9 folds every section
+below into the story-bucket-driven P1–P7 priorities — these ideas are the *engine* layer (§1 → P4
+free-text clustering + P5 text-reuse; §2 → P2 bill cross-check + P7 outcome timeline; §3 → P7; §4
+stays parked; §5 stretch/amplifies P6). Two are also **partly solved already** by a teammate's
+public R repo (`github.com/ChrisCioffi/lobbyR_IRE`): `flag_client_registrant_conflict()` = the P1
+rollup double-count fix, `flag_dupes()` = an independent check on our existing `filing_period`
+dedup, and its "Taxation" issue-filter → text-analysis workflow is a reference for §1 / P4. Reuse
+the *logic* (R → our Python/DuckDB); disclose in README §4 with a COI note (the teammate is also the
+tool's author) and a license check before copying.
+
 ---
 
 ## 1. Press issue-tagging — scaling roadmap
