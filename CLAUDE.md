@@ -65,7 +65,7 @@ from the source systems, valid regardless of which DB below they were queried th
 - `emergence_and_flows.sql` — **current primary generation lens** (rate-of-change / emergence /
   fan-out / individual-as-client / LD-203 flows); produced leads **L020–L025**.
 - `press_issue_coupling.sql` (+ `.md`) — press issue-frequency & lobbying–messaging share-coupling;
-  produced **L026–L027**. **Lives on `feature/press-issue-frequency` only — see Branch state below.**
+  produced **L026–L027**.
 - `l003/l004/l006/l010_*.sql` — per-lead deep-dive SQL, kept for reproducibility.
 - `corpus_additions_roadmap.md` — design notes for not-yet-built extensions (FTS/keyness term
   discovery, Congress.gov bill-status & FEC joins, NER entity graph). **Internal; not a submission
@@ -180,12 +180,11 @@ Internal planning context (not part of the submission, not for citation in submi
 `../_Plan.md` in the parent folder holds the phased plan, decision register, and (§9, added
 2026-07-06) the story-bucket-driven tool roadmap with the P1–P7 priorities.
 
-**Branch state (2026-07-06):** `main` holds the corpus loader, entity resolver, emergence lenses,
-and leads L020–L025. The **press-issue-coupling work is on `feature/press-issue-frequency`, not yet
-merged** — that branch adds `queries/press_issue_coupling.sql`/`.md`,
-`skills/lda-corpus-loader/scripts/backfill_press_issues.py`, `queries/corpus_additions_roadmap.md`,
-and leads L026–L027. If you're not on that branch those files/leads won't be present; decide the
-merge before Phase 5 packaging so the submission is assembled from one tree.
+**Branch state (2026-07-06):** `main` is the single source of truth. The press-issue-coupling work
+(`queries/press_issue_coupling.sql`/`.md`, `skills/lda-corpus-loader/scripts/backfill_press_issues.py`,
+`queries/corpus_additions_roadmap.md`, leads L026–L027) and the `source-document-reader` skill split
+were both merged into `main` on 2026-07-06. New roadmap work (P1/P2 per `_Plan.md` §9) branches off
+`main`.
 
 **2026-07-06 reset:** `LEDGER.md`/`DECISIONS.md` were emptied and the prior pilot-scale content
 moved to `archive/*_pilot-triage_2026-07-06.md`, so a session working the newly-built full corpus
