@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build cross-dataset entity tables for the GAIN lobbying database.
 
-Creates three tables inside an existing loader-built DuckDB:
+Creates three tables and one view inside an existing loader-built DuckDB:
 
   entities           one row per resolved entity (registrant / client / foreign_entity)
   entity_aliases     every raw name variant -> entity, with a sample raw-record pointer
@@ -12,6 +12,10 @@ Creates three tables inside an existing loader-built DuckDB:
                      records 2026-07-06; sampled pairs agree on names). ID matches are
                      labeled confidence='id'; there is no fuzzy tier in this pass —
                      name-only candidates are reported, never silently merged.
+  v_client_canonical_spend (VIEW)
+                     per-client, per-quarter senate lobbying spend with the in-house
+                     rollup double-count removed (P1). See CANONICAL_SPEND_VIEW below
+                     for the rule; queries/p1_canonical_spend.sql for cited demos/QA.
 
 Normalization (deterministic, in `norm_name` below): uppercase, strip whitespace,
 drop parenthetical qualifiers ("MUBADALA INVESTMENT COMPANY (OWNS 24% OF CATURUS)"
@@ -105,6 +109,64 @@ SOURCES = {
 ALIAS_COLS = ["entity_id", "kind", "raw_name", "norm_key", "dataset",
               "senate_id", "n_records", "sample_record"]
 
+# P1 — canonical client spend (rollup-correctness). A client that self-files
+# (registrant norm_key == client norm_key, i.e. in-house lobbying) reports its TOTAL
+# lobbying under that filing, which already subsumes the income the outside firms it
+# hired report for the same client. Summing every filing for a client therefore
+# double-counts. Per (client, quarter): canonical = greatest(in-house amount, outside
+# amount) — NEVER their sum; both components + the naive sum-all + the delta are kept
+# so any figure is auditable. `amount` is the row's reported figure regardless of the
+# income/expenses field (some in-house filers report under `income`, not `expenses` —
+# keying on `expenses` alone zeroed out real spenders like AIPAC). Amendments are
+# deduped on filing_period (latest by `posted`), the same rule as sweep_2026.sql#H1c.
+# Senate-only (the completeness-primary dataset; never sum senate+house). Some clients
+# roll up and some don't — has_inhouse_filing + method make the branch explicit.
+# NOTE: keep this in sync with queries/p1_canonical_spend.sql's header/demos.
+CANONICAL_SPEND_VIEW = """
+CREATE OR REPLACE VIEW v_client_canonical_spend AS
+WITH rk AS (SELECT DISTINCT raw_name, norm_key FROM entity_aliases
+            WHERE kind='registrant' AND dataset='senate'),
+     ck AS (SELECT DISTINCT raw_name, norm_key FROM entity_aliases
+            WHERE kind='client' AND dataset='senate'),
+base AS (
+  SELECT f.registrant_id, f.client_id, f.filing_year, f.filing_period, f.posted,
+         greatest(coalesce(f.income, 0), coalesce(f.expenses, 0)) AS amount,
+         rk.norm_key AS reg_key, ck.norm_key AS cli_key
+  FROM senate_filings f
+  LEFT JOIN rk ON rk.raw_name = f.registrant_name
+  LEFT JOIN ck ON ck.raw_name = f.client_name
+  WHERE f.filing_period IS NOT NULL
+    AND (f.income IS NOT NULL OR f.expenses IS NOT NULL)
+    AND ck.norm_key IS NOT NULL),
+dedup AS (
+  SELECT * FROM base QUALIFY row_number() OVER (
+    PARTITION BY registrant_id, client_id, filing_year, filing_period
+    ORDER BY posted DESC) = 1),
+tagged AS (
+  SELECT *, (reg_key IS NOT NULL AND reg_key = cli_key) AS self_filed FROM dedup),
+agg AS (
+  SELECT cli_key, filing_year, filing_period,
+         bool_or(self_filed) AS has_inhouse_filing,
+         coalesce(sum(amount) FILTER (WHERE self_filed), 0) AS inhouse_amount,
+         coalesce(sum(amount) FILTER (WHERE NOT self_filed), 0) AS outside_amount,
+         count(*) AS n_filings
+  FROM tagged GROUP BY cli_key, filing_year, filing_period)
+SELECT e.entity_id AS client_entity_id,
+       coalesce(e.canonical_name, a.cli_key) AS client_name,
+       a.cli_key AS client_norm_key, a.filing_year, a.filing_period,
+       a.has_inhouse_filing, a.inhouse_amount, a.outside_amount,
+       greatest(a.inhouse_amount, a.outside_amount) AS canonical_spend,
+       a.inhouse_amount + a.outside_amount AS naive_sum_all,
+       least(a.inhouse_amount, a.outside_amount) AS double_count_delta,
+       CASE WHEN a.has_inhouse_filing AND a.inhouse_amount >= a.outside_amount
+              THEN 'in-house total (outside firms subsumed)'
+            WHEN a.has_inhouse_filing
+              THEN 'outside sum (in-house filing under-reported)'
+            ELSE 'outside sum (no in-house filing)' END AS method,
+       a.n_filings
+FROM agg a LEFT JOIN entities e ON e.kind = 'client' AND e.norm_key = a.cli_key
+"""
+
 
 def build(con):
     for stmt in DDL.split(";"):
@@ -173,6 +235,10 @@ def build(con):
              CASE WHEN h.registrant_id IS NOT NULL THEN 'id' END
       FROM s LEFT JOIN h USING (registrant_id, client_id)""")
 
+    # P1 canonical client spend (rollup-correctness). Depends on entities +
+    # entity_aliases above; see CANONICAL_SPEND_VIEW note for the rule.
+    con.execute(CANONICAL_SPEND_VIEW)
+
 
 def report(con):
     print("# Entity crosswalk QA report\n")
@@ -196,6 +262,25 @@ def report(con):
         print(f"  {r[0][:60]:60s} ids: {r[2][:80]}")
     if not rows:
         print("  none")
+
+    # P1 canonical-spend sanity: how much naive client-level summing overstates.
+    try:
+        yr = con.execute(
+            "SELECT max(filing_year) FROM v_client_canonical_spend").fetchone()[0]
+        naive, canon = con.execute(
+            "SELECT sum(naive_sum_all), sum(canonical_spend) "
+            "FROM v_client_canonical_spend WHERE filing_year = ?", [yr]).fetchone()
+        print(f"\nCanonical client spend (P1), {yr}: naive sum-all ${naive:,.0f} vs "
+              f"canonical ${canon:,.0f} ({(naive - canon) / naive:.1%} rollup "
+              f"double-count removed). Top in-house rollups by amount avoided:")
+        for name, d in con.execute(
+                "SELECT client_name, sum(double_count_delta) d "
+                "FROM v_client_canonical_spend WHERE filing_year = ? "
+                "AND has_inhouse_filing GROUP BY 1 HAVING d > 0 "
+                "ORDER BY d DESC LIMIT 5", [yr]).fetchall():
+            print(f"  {name[:48]:48s} ${d:,.0f}")
+    except duckdb.Error:
+        print("\n(v_client_canonical_spend not present — rebuild with build())")
 
 
 def main():

@@ -14,13 +14,30 @@ python scripts/resolve_entities.py --db db/lda_pilot.duckdb            # builds 
 python scripts/resolve_entities.py --db db/lda_pilot.duckdb --report   # QA report only
 ```
 
-Builds three tables inside the DB:
+Builds three tables and one view inside the DB:
 
 | table | grain | notes |
 |---|---|---|
 | `entities` | one row per resolved entity (kind = registrant / client / foreign_entity) | grouped by deterministic normalized-name key; `canonical_name` = most frequent raw variant |
 | `entity_aliases` | one row per raw name variant per dataset | keeps `norm_key`, per-variant senate id, and a sample raw-record pointer — every grouping decision is auditable in SQL |
 | `registrant_crosswalk` | one row per senate registrant+client engagement | matched to House filings via the compound key (below); `confidence='id'` on match, NULL otherwise |
+| `v_client_canonical_spend` (view) | one row per (client, year, quarter) | senate lobbying spend with the in-house rollup double-count removed (P1) — see below |
+
+## Canonical client spend (P1) — the rollup double-count
+
+A client that lobbies in-house files as its **own** registrant (registrant name ==
+client name) and reports its **total** spend; outside firms it hires also file,
+reporting income already inside that total. Summing every filing for a client therefore
+overstates it (corpus-wide ≈12% for 2025). `v_client_canonical_spend` fixes this: per
+(client, quarter), `canonical_spend = greatest(inhouse_amount, outside_amount)` — never
+their sum — with `has_inhouse_filing`, both components, `naive_sum_all`, `double_count_delta`,
+and a `method` label all exposed so any figure is auditable. `amount` uses the row's
+reported figure regardless of the income/expenses field (some in-house filers report
+under `income`). Amendments deduped on `filing_period` (latest `posted`), same as
+`sweep_2026.sql#H1c`; senate-only. **Always aggregate client spend from this view, never
+by summing `senate_filings` directly.** Cited demos + lead QA: `queries/p1_canonical_spend.sql`.
+Prior art / independent cross-check: the team's lobbyR `flag_client_registrant_conflict()`
+and `flag_dupes()` (disclose in README §4).
 
 ## The Senate↔House join key (verified against real records 2026-07-06)
 
