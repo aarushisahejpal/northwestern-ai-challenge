@@ -220,7 +220,7 @@ def press_side(con, bills, phrases, top, limit):
     all_keys = num_set | name_set
     if not all_keys:
         return {"n_number": 0, "n_name": 0, "n_name_only": 0, "n_total": 0,
-                "top_members": [], "sample": []}
+                "top_members": [], "years": [], "sample": []}
 
     con.execute("CREATE OR REPLACE TEMP TABLE _pk(k TEXT, via TEXT)")
     con.executemany("INSERT INTO _pk VALUES (?, ?)",
@@ -233,12 +233,14 @@ def press_side(con, bills, phrases, top, limit):
     top_members = q(con, "SELECT pr.member_name, pr.party, pr.state, "
                     "count(*) releases" + joined +
                     " GROUP BY 1,2,3 ORDER BY releases DESC NULLS LAST LIMIT ?", [top])
+    years = q(con, "SELECT substr(pr.date,1,4) yr, count(*) n" + joined +
+              " WHERE pr.date IS NOT NULL GROUP BY 1 ORDER BY 1")
     sample = q(con, "SELECT _pk.k record_key, _pk.via, pr.member_name, "
                "pr.party, pr.state, pr.date, pr.title" + joined +
                " ORDER BY pr.date DESC NULLS LAST LIMIT ?", [limit])
     return {"n_number": len(num_set), "n_name": len(name_set),
             "n_name_only": len(name_set - num_set), "n_total": len(all_keys),
-            "top_members": top_members, "sample": sample}
+            "top_members": top_members, "years": years, "sample": sample}
 
 
 def freetext_name(con, phrases, limit):
@@ -363,6 +365,10 @@ def render(res, r, datasets, meta, data_root, freetext, scanned_freetext):
                 L.append(f"  ⚡ SAY-vs-PAY: {p['n_name_only']} releases name this bill "
                          f"but never cite its number — invisible to number-only")
                 L.append("    matching (the L004 trap). Name matching recovers them.")
+            if p["years"]:
+                L.append("  by year: " + ", ".join(
+                    f"{y['yr']}:{y['n']}" for y in p["years"])
+                    + "   (see the vintage caveat below)")
             for m in p["top_members"][:8]:
                 L.append(f"    {(m['releases']):>5}×  {(m['member_name'] or '·')[:40]} "
                          f"({m['party'] or '?'}-{m['state'] or '?'})")
@@ -392,6 +398,12 @@ def render(res, r, datasets, meta, data_root, freetext, scanned_freetext):
     L.append("  dollars. Senate/House are reported separately (never summed: LD-2s "
              "are filed with both chambers). For exact client dollars feed the")
     L.append("  client into lda-entity-resolver's v_client_canonical_spend (P1).")
+    L.append("* Press counts are RAW and VINTAGE-SENSITIVE: the press corpus starts "
+             "2022-01-01 and grows ~4x by 2025 (19.7k→48.3k releases/yr), and a bill's")
+    L.append("  press attention concentrates in its brief legislative window. So an "
+             "early-vintage bill (window in the thin 2022 corpus, and any pre-2022")
+    L.append("  advocacy unseen) shows far fewer name-matches than a 2025-era one — use "
+             "the by-year facet to see WHO named it and WHEN, not to rank bills by loudness.")
     L.append(f"  Resolve any key:  python skills/lda-corpus-loader/scripts/show_record.py "
              f"<key> --data-root {data_root} --db db/lda_full.duckdb")
     L.append("  Citeable aggregate form: queries/p2_bill_crosscheck.sql")

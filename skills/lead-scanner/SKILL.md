@@ -73,6 +73,13 @@ precision-over-recall discipline as the loader's issue-keyword vocabulary:
   both chambers, so summing double-counts. House XML is a partial snapshot that under-counts
   recent quarters; treat it as reconcile/fill-gap, not a second independent total.
 - Senate filings are amendment/duplicate-deduped on `filing_period` (not `filing_type`).
+- **Press counts are raw and vintage-sensitive.** The press corpus starts 2022-01-01 and grows
+  ~4x by 2025 (≈19.7k→48.3k releases/yr), and a bill's press attention concentrates in its brief
+  legislative window. So an early-vintage bill (its window in the thin 2022 corpus, any pre-2022
+  advocacy unseen) shows far fewer name-matches than a 2025-era one — a 2022 bill's House-passage
+  spike is real but small against a thin year. Read the **by-year facet** (who named it and when),
+  and only compare press "loudness" across bills of the same vintage. (This is the same
+  corpus-growth confound the press-issue-coupling work handles with shares, not raw counts.)
 - The citeable aggregate form of these counts is `queries/p2_bill_crosscheck.sql` (blocks `P2a`–
   `P2d`), for findings that must cite the exact SQL.
 
