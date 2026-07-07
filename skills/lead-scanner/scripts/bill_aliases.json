@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "generated": "2026-07-07",
+    "purpose": "Curated named-bill -> H.R./S.-number crosswalk for the bill cross-check tool (bill_lookup.py). Fixes cleanup-note C (bill name inconsistency) and the exact gap that killed L004: press releases and members name bills ('the Farm Bill', 'NDAA', 'Inflation Reduction Act'); LDA filings cite H.R./S. numbers. Number-only matching therefore fabricates 'lobbied but publicly silent' bills. This table lets a query by name reach the number-cited filings, and a query by number surface the name-cited press.",
+    "discipline": [
+      "Precision over recall, same rule as build_db.py's ISSUE_KEYWORDS. Every 'phrases' string is a distinctive, whole-word-matchable name, never a bare topic word.",
+      "'names' are for display and reverse lookup (number -> which famous bill). 'phrases' are the ONLY strings used for free-text name matching. Ambiguous acronyms (e.g. 'IRA' = also individual retirement account) go in 'names' but NOT in 'phrases'.",
+      "'bills' are normalized numbers (build_db.py norm_bill(): prefix letters + digits, e.g. 'HR5376', 'S2938') joined against bill_mentions. bill_mentions has NO Congress dimension, so a low, reused number (H.R.1, H.R.2, S.1) refers to a different bill each Congress and is UNSAFE to list. Such bills are left phrase-primary (empty 'bills') on purpose; bill_lookup.py additionally warns whenever a matched number spans filings from more than one Congress cohort.",
+      "Every entry is cited to its congress.gov page. Enacted-law numbers are stable public record; recurring vehicles (NDAA) list one number per fiscal year with its Public Law."
+    ],
+    "congress_windows": {
+      "117": "2021-2022",
+      "118": "2023-2024",
+      "119": "2025-2026",
+      "note": "Corpus covers filings/press 2022-2026 Q1, i.e. the tail of the 117th through the start of the 119th. A single normalized number can therefore be ambiguous across three Congresses; see the H.R.1 warning behavior in bill_lookup.py."
+    }
+  },
+  "aliases": [
+    {
+      "id": "inflation-reduction-act",
+      "names": ["Inflation Reduction Act", "Inflation Reduction Act of 2022", "IRA"],
+      "phrases": ["inflation reduction act"],
+      "bills": ["HR5376"],
+      "congress": 117,
+      "enacted": "2022-08-16",
+      "public_law": "117-169",
+      "note": "Enacted as H.R.5376 (117th). 'IRA' is intentionally a display name only, not a match phrase (collides with 'individual retirement account'). H.R.5376 also began life as the Build Back Better vehicle.",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/5376"
+    },
+    {
+      "id": "chips-and-science-act",
+      "names": ["CHIPS and Science Act", "CHIPS Act", "CHIPS Act of 2022"],
+      "phrases": ["chips and science act", "chips act"],
+      "bills": ["HR4346"],
+      "congress": 117,
+      "enacted": "2022-08-09",
+      "public_law": "117-167",
+      "note": "Enacted as H.R.4346 (117th). CHIPS = Creating Helpful Incentives to Produce Semiconductors.",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/4346"
+    },
+    {
+      "id": "infrastructure-investment-and-jobs-act",
+      "names": ["Infrastructure Investment and Jobs Act", "IIJA", "Bipartisan Infrastructure Law", "BIL"],
+      "phrases": ["infrastructure investment and jobs act", "bipartisan infrastructure law"],
+      "bills": ["HR3684"],
+      "congress": 117,
+      "enacted": "2021-11-15",
+      "public_law": "117-58",
+      "note": "Enacted as H.R.3684 (117th). Marketed as the Bipartisan Infrastructure Law. 'IIJA'/'BIL' are display-only acronyms.",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/3684"
+    },
+    {
+      "id": "american-rescue-plan-act",
+      "names": ["American Rescue Plan Act", "American Rescue Plan", "ARPA", "ARP"],
+      "phrases": ["american rescue plan"],
+      "bills": ["HR1319"],
+      "congress": 117,
+      "enacted": "2021-03-11",
+      "public_law": "117-2",
+      "note": "Enacted as H.R.1319 (117th). 'ARPA' collides with the Advanced Research Projects Agency, so it is display-only.",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/1319"
+    },
+    {
+      "id": "cares-act",
+      "names": ["CARES Act", "Coronavirus Aid, Relief, and Economic Security Act"],
+      "phrases": ["cares act", "coronavirus aid, relief, and economic security"],
+      "bills": ["HR748"],
+      "congress": 116,
+      "enacted": "2020-03-27",
+      "public_law": "116-136",
+      "note": "Enacted as H.R.748 (116th). Predates the corpus window but its implementation is still lobbied/discussed 2022+.",
+      "source": "https://www.congress.gov/bill/116th-congress/house-bill/748"
+    },
+    {
+      "id": "bipartisan-safer-communities-act",
+      "names": ["Bipartisan Safer Communities Act", "BSCA"],
+      "phrases": ["bipartisan safer communities act"],
+      "bills": ["S2938"],
+      "congress": 117,
+      "enacted": "2022-06-25",
+      "public_law": "117-159",
+      "note": "Enacted as S.2938 (117th). The post-Uvalde gun-safety law.",
+      "source": "https://www.congress.gov/bill/117th-congress/senate-bill/2938"
+    },
+    {
+      "id": "respect-for-marriage-act",
+      "names": ["Respect for Marriage Act", "RFMA"],
+      "phrases": ["respect for marriage act"],
+      "bills": ["HR8404"],
+      "congress": 117,
+      "enacted": "2022-12-13",
+      "public_law": "117-228",
+      "note": "Enacted as H.R.8404 (117th).",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/8404"
+    },
+    {
+      "id": "fiscal-responsibility-act",
+      "names": ["Fiscal Responsibility Act", "Fiscal Responsibility Act of 2023", "FRA", "debt ceiling deal"],
+      "phrases": ["fiscal responsibility act"],
+      "bills": ["HR3746"],
+      "congress": 118,
+      "enacted": "2023-06-03",
+      "public_law": "118-5",
+      "note": "Enacted as H.R.3746 (118th). The 2023 debt-limit agreement. 'debt ceiling deal' is a display name only (too generic to match).",
+      "source": "https://www.congress.gov/bill/118th-congress/house-bill/3746"
+    },
+    {
+      "id": "honoring-our-pact-act",
+      "names": ["Honoring our PACT Act", "PACT Act", "Sergeant First Class Heath Robinson Honoring our Promise to Address Comprehensive Toxics Act"],
+      "phrases": ["honoring our pact act"],
+      "bills": ["S3373"],
+      "congress": 117,
+      "enacted": "2022-08-10",
+      "public_law": "117-168",
+      "note": "Enacted as S.3373 (117th), the veterans toxic-exposure (burn pits) law. Phrase deliberately restricted to 'honoring our pact act': bare 'PACT Act' also names the older Preventing Animal Cruelty and Torture Act (2019), so it is display-only.",
+      "source": "https://www.congress.gov/bill/117th-congress/senate-bill/3373"
+    },
+    {
+      "id": "secure-2-0-act",
+      "names": ["SECURE 2.0 Act", "SECURE 2.0", "Securing a Strong Retirement Act"],
+      "phrases": ["secure 2.0", "securing a strong retirement act"],
+      "bills": ["HR2617", "HR2954"],
+      "congress": 117,
+      "enacted": "2022-12-29",
+      "public_law": "117-328",
+      "note": "Enacted as Division T of the Consolidated Appropriations Act, 2023 (H.R.2617, 117th, P.L. 117-328). The House standalone vehicle was H.R.2954 (Securing a Strong Retirement Act of 2022). Because H.R.2617 is a broad omnibus, a number match on HR2617 is NOT specific to SECURE 2.0 retirement provisions; treat HR2617 hits as omnibus lobbying and lean on the name phrases. Medium confidence on completeness of vehicles.",
+      "source": "https://www.congress.gov/bill/117th-congress/house-bill/2617"
+    },
+    {
+      "id": "ndaa",
+      "names": ["National Defense Authorization Act", "NDAA"],
+      "phrases": ["national defense authorization", "ndaa"],
+      "bills": ["S1605", "HR7776", "HR2670", "HR5009"],
+      "congress": null,
+      "enacted": null,
+      "note": "Recurring annual vehicle -> a different number every fiscal year, so this entry lists one enacted number per recent FY and is phrase-first for cross-year work. FY2022 = S.1605 (117th, P.L. 117-81); FY2023 = H.R.7776 (117th, P.L. 117-263); FY2024 = H.R.2670 (118th, P.L. 118-31); FY2025 = H.R.5009 (118th, P.L. 118-159). A number match here mixes fiscal years; use the year facets in bill_lookup.py output to separate them.",
+      "source": "https://www.congress.gov/bill/117th-congress/senate-bill/1605"
+    },
+    {
+      "id": "farm-bill",
+      "names": ["Farm Bill", "Agriculture Improvement Act", "Agriculture Improvement Act of 2018"],
+      "phrases": ["farm bill", "agriculture improvement act"],
+      "bills": [],
+      "congress": null,
+      "enacted": "2018-12-20",
+      "public_law": "115-334",
+      "note": "PHRASE-PRIMARY BY DESIGN, no 'bills' listed. The standing law is the Agriculture Improvement Act of 2018 = H.R.2 of the 115th Congress, but 'H.R.2' is reassigned to an unrelated bill every Congress (H.R.2 in the 117th/118th/119th are NOT the Farm Bill), so listing HR2 as a match number would fabricate hits. This is the canonical L004 lesson: the Farm Bill is reliably found by NAME, never by number. bill_lookup.py name-matches these phrases against press text AND filing free-text (senate activity descriptions, house specific_issues).",
+      "source": "https://www.congress.gov/bill/115th-congress/house-bill/2"
+    }
+  ]
+}
