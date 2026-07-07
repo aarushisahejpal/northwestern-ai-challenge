@@ -103,12 +103,15 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
 - **Model/budget tiers.** Extraction and filtering stay in Python/SQL. Cheap models scan and rank
   (returning record IDs + one-line hypotheses, never quoted record text). Frontier models
   deep-read lead-attached records (cap ~30 records/session) and verify findings.
-- **Exploratory outside-data checks (novelty/news-landscape) follow a fixed protocol,
-  separate from finding-verifier's rigor** — anchor the search window to the actual event
-  date (not "today"), run novelty and landscape checks as separate bounded passes (~3
-  queries each), distill to a conclusion before it reaches the ledger. Full protocol in
-  `skills/outside-context-scan/SKILL.md`. Established 2026-07-06 after searching
-  "GlobalFoundries news 2026" for a 2024 event; deliberately kept out of
+- **Exploratory outside-data checks follow a fixed protocol in two modes, separate from
+  finding-verifier's rigor** — a *live scan* (novelty + news-landscape, recency welcome,
+  no date gate) and a *contemporaneous scan* (what the record looked like at a past event,
+  enforced via GDELT DOC 2.0 + WebSearch date operators), picked by which question the
+  lead asks. Run as separate bounded passes (~3 queries each), distilled to a conclusion
+  before it reaches the ledger. Full protocol in `skills/outside-context-scan/SKILL.md`.
+  The mode fork was added 2026-07-07 after a SECURE-2.0 salience read pulled present-day
+  retrospectives instead of Dec-2022 coverage; it generalizes the earlier 2026-07-06 fix
+  (searching "GlobalFoundries news 2026" for a 2024 event). Kept out of
   `skills/finding-verifier/SKILL.md` since "verifier" implies a rigor this exploratory
   research doesn't have and shouldn't claim.
 - **Self-contained language.** Submitted artifacts (SKILL.md files, findings, README) must stand
