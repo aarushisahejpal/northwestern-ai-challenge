@@ -1,6 +1,6 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. (3) An LD-203 giving map that, given a registrant entity or an industry roster, reports its disclosed political giving (totals, recipients, per-entity split) — the "who are they giving money to?" half of an industry map. Use when generating or refreshing the lead pipeline, running a rapid bill-level "who's been quietly lobbying this?" check, or mapping an industry's disclosed contributions.
+description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. (3) An LD-203 giving map that, given a registrant entity or an industry roster, reports its disclosed political giving (totals, recipients, per-entity split) — the "who are they giving money to?" half of an industry map. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories (crypto scattered under "taxation" etc.), tags it with a curated vocabulary, and emits an entity-resolved player list — clients and registrants — that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. Use when generating or refreshing the lead pipeline, running a rapid bill-level "who's been quietly lobbying this?" check, mapping an industry's disclosed contributions, or building the who/how-much/who-they-give-to map of an industry.
 ---
 
 # Lead Scanner
@@ -15,6 +15,10 @@ Three things live here:
 3. **An LD-203 giving map** (`scripts/ld203_giving.py`) — given a registrant *entity* or an
    *industry roster*, report its disclosed political giving (totals, top recipients, per-entity
    split), each sample row carrying a `show_record.py` key.
+4. **An industry map** (`scripts/industry_map.py` + `scripts/freetext_discovery.py`) — find an
+   industry hidden in the lobbying free-text, tag it deterministically, and emit an
+   entity-resolved player list that feeds tools (2 is bills, 3 is giving) and the resolver's
+   `v_client_canonical_spend` unchanged.
 
 Requires `db/lda_full.duckdb` (built by `lda-corpus-loader`); cross-dataset lenses also use the
 resolver's entity tables. Raw records are only ever opened through `show_record.py` — never grep
@@ -139,6 +143,93 @@ inaugural, `he`=honorary), `--since 2024`, `--exact`, `--top`/`--limit`, `--json
   that must cite the exact SQL. It complements `emergence_and_flows.sql#F1` (giver→one-honoree
   concentration) and `sweep_2026.sql#S4` (recipients across all givers): this tool is
   giver-centric and entity-resolved.
+
+## Industry map — `scripts/industry_map.py` + `scripts/freetext_discovery.py`
+
+**The problem it solves.** An industry map has two money halves (spend + giving, above), but both
+need the same thing first: the **comprehensive list of who the players are**. You cannot get that
+by guessing company names. An industry like crypto scatters across 15+ ALI issue codes
+(FIN/BAN/TAX/SCI/CPI/CDT/AGR/…, only ~44% under FIN), and diversified filers — Robinhood, PayPal,
+Fidelity, Visa, Mastercard, Citigroup — lobby on crypto without "crypto" in their name. So you
+map it by the **vocabulary the filers use** in the lobbying free-text (what they say they lobby
+on), not by issue code and not by name. The map's own output showed **493 of 535** crypto client
+players have no crypto term in their name — found only this way.
+
+Two stages, discovery split from serving (the roadmap principle: keep the *cited* layer
+deterministic; put the heavy machinery only in a *discovery* loop that feeds a human-approved
+vocabulary).
+
+### Serving + map — `scripts/industry_map.py`
+
+```bash
+# once (or after the lexicon changes): build the deterministic serving table
+.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py --build-tags
+# the map for a facet (default crypto); writes a roster the money tools consume
+.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py crypto --out crypto_roster.txt
+# prove recall: the players a name-LIKE '%crypto%' scan would MISS
+.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py crypto --recall-check
+```
+
+- `--build-tags` scans `lobbying_freetext` (built by `lda-corpus-loader`'s `add_lobbying_freetext.py`)
+  with the curated vocabulary in `scripts/industry_lexicon.json` and materializes
+  **`lobbying_issue_mentions`** — one row per (doc, tag, keyword) with the raw-record pointer
+  preserved. This is the mirror of the loader's `press_issue_mentions`, on the lobbying side, and
+  the deterministic tag→exact-word→record chain a finding cites.
+- The map resolves every tagged filing's registrant + client through `lda-entity-resolver`
+  (`entities`/`entity_aliases`) into a player list, and writes a roster of **client-side** player
+  names that feeds the two money tools **unchanged**:
+  `ld203_giving.py --names-file <roster>` (who they give to) and `v_client_canonical_spend`
+  (what they spend). Round-trip verified: Coinbase / Robinhood / Paradigm resolve straight through
+  both.
+
+Useful flags: `--min-docs N` (a player must appear in ≥N crypto free-text docs — raise it to drop
+incidental one-filing mentions), `--facet ID`, `--top`, `--json`.
+
+### The vocabulary — `scripts/industry_lexicon.json`
+
+A versioned, cited, per-facet dictionary of distinctive **`phrases`**, same precision-over-recall
+discipline as `bill_aliases.json`. The facet gets its **own tag** (`CRYPTO`), deliberately not
+folded into an ALI code (crypto is not one code). Ambiguous terms are recorded in `display_only`
+with the reason and **not** matched (bare `token`/`mining`/`wallet`/`coin`; bare `clarity act`,
+which matched an unrelated athletic-training filing — the distinctive `digital asset market
+clarity` is used instead). Add a term only after triaging it (below) and bump the version.
+
+### Discovery — `scripts/freetext_discovery.py`
+
+Proposes vocabulary; never tags a finding. Reads `lobbying_freetext` + its FTS index.
+
+```bash
+.venv/Scripts/python skills/lead-scanner/scripts/freetext_discovery.py            # keyness candidates
+.venv/Scripts/python skills/lead-scanner/scripts/freetext_discovery.py --emergence
+.venv/Scripts/python skills/lead-scanner/scripts/freetext_discovery.py --untagged 'fintech OR "digital dollar"'
+.venv/Scripts/python skills/lead-scanner/scripts/freetext_discovery.py --search 'stablecoin "market structure"'
+```
+
+- **keyness** (default): Monroe log-odds of uni/bi-grams in the facet-tagged docs vs a background
+  sample, hiding terms already in the lexicon → the candidate list (it surfaced the
+  Lummis-Gillibrand Responsible Financial Innovation Act, "payment stablecoins", "anti-money
+  laundering", "fintech"). **emergence**: per-year doc frequency of candidates. **--untagged**:
+  the recall gap — terms in docs that FTS-match a seed but carry no facet tag. **--search**: a
+  BM25 precision check of one candidate before you add it.
+- Discipline: a discovered term is a **candidate**, never auto-added. `--search` it, eyeball a few
+  raw docs via `show_record.py`, then a **human** adds it to `industry_lexicon.json` with a source
+  and bumps the version. Nothing in discovery writes to the DB or the lexicon.
+
+### Reading the output — the load-bearing caveats
+
+- **Recall-first, then triage.** With `--min-docs 1` the map includes any client whose filing
+  free-text names a crypto term once — so incidental mentions (AARP on crypto scams, AFL-CIO on a
+  pension aside) appear in the tail. That is by design (recall is the point); a human triages the
+  list, and a finding names *specific* players with evidence, never "the whole list." Raise
+  `--min-docs` for a higher-confidence core.
+- **Spend is all-issue.** The player list joins each client's **total** `v_client_canonical_spend`
+  (a size/ranking signal), not crypto-only dollars — filing-level issue attribution is imprecise.
+- **Entity resolution is the ceiling.** Where the resolver split a company's name variants
+  (a16z's several spellings, Payward/Kraken — cleanup C / P6), a player can appear twice or
+  under-count. A known, documented limitation, not a silent gap.
+- **Serving stays deterministic + cited.** FTS/keyness only *discover*; findings cite the
+  `lobbying_issue_mentions` keyword→exact-word→record chain. The citeable aggregate form is
+  `queries/p4_industry_map.sql` (`P4a`–`P4e`).
 
 ## Lenses — `queries/*.sql` run via `queries/run_sweep.py`
 

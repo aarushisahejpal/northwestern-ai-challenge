@@ -397,6 +397,61 @@ CREATE OR REPLACE VIEW v_covered_positions AS
 """
 
 
+# ------------------------------------------------ lobbying free-text search layer
+#
+# The lobbying free-text (senate activity descriptions + House specific_issues) is
+# where an industry actually describes what it lobbies on — and where an industry
+# hidden under many issue codes and vague categories ("taxation") has to be found
+# by VOCABULARY, not by issue-code filtering. This step builds the loader-owned,
+# vocabulary-free search layer for that text, in two parts:
+#
+#   lobbying_freetext  — one row per activity/ali, unioning both chambers into a
+#                        single doc surface with a stable doc_id AND a
+#                        show_record.py-resolvable record_key (senate filing_uuid /
+#                        House filing_id) + sub_index. This is the citation-keyed
+#                        surface every downstream free-text tool reads.
+#   FTS (BM25) index   — over lobbying_freetext.txt, so testing a candidate term is
+#                        a query, not a code edit + rebuild (roadmap §1a). Discovery
+#                        ONLY: the porter stemmer means BM25 'crypto' does NOT match
+#                        'cryptocurrency', so the cited SERVING layer stays the
+#                        deterministic whole-word keyword tagger (lobbying_issue_
+#                        mentions, built by lead-scanner from a versioned vocabulary).
+#
+# doc_id is a build-local surrogate (FTS requires a single unique id column;
+# senate_activities/house_alis are keyed by a composite). Citations never use
+# doc_id — they use record_key — so its instability across rebuilds is harmless.
+FREETEXT_TABLE = """
+CREATE OR REPLACE TABLE lobbying_freetext AS
+  SELECT row_number() OVER (ORDER BY dataset, record_key, sub_index) AS doc_id,
+         dataset, record_key, sub_index, issue_code, txt, src_file, src_index
+  FROM (
+    SELECT 'senate' AS dataset, filing_uuid AS record_key,
+           activity_index AS sub_index, general_issue_code AS issue_code,
+           description AS txt, src_file, src_index
+    FROM senate_activities
+    WHERE description IS NOT NULL AND length(trim(description)) > 0
+    UNION ALL
+    SELECT 'house', filing_id, ali_index, issue_code,
+           specific_issues, src_path, NULL
+    FROM house_alis
+    WHERE specific_issues IS NOT NULL AND length(trim(specific_issues)) > 0
+  );
+"""
+
+
+def build_freetext_search(con):
+    """Materialize lobbying_freetext + its FTS index. Idempotent (CREATE OR REPLACE
+    + overwrite=1); safe to re-run in place on an already-loaded DB."""
+    con.execute(FREETEXT_TABLE)
+    n = con.execute("SELECT count(*) FROM lobbying_freetext").fetchone()[0]
+    con.execute("INSTALL fts; LOAD fts;")
+    # stemmer='none' so BM25 tokens match the raw words the keyword vocabulary uses
+    # (we want 'stablecoin'/'defi' searchable verbatim, not porter-stemmed).
+    con.execute("PRAGMA create_fts_index('lobbying_freetext', 'doc_id', 'txt', "
+                "stemmer='none', overwrite=1)")
+    return n
+
+
 class Sink:
     """Batched inserts per table, staged through temp NDJSON files and COPY.
 
@@ -678,9 +733,11 @@ def load_house(sink, data_root, years, periods=None, max_records=None):
 
 def sanity_report(con, db_path, years, house_errors):
     lines = ["# Sanity report", ""]
+    # Scope to the main schema: the FTS index adds internal tables (dict/docs/
+    # terms/...) in its own fts_main_* schema that must not be counted here.
     tables = [r[0] for r in con.execute(
         "SELECT table_name FROM information_schema.tables "
-        "WHERE table_type='BASE TABLE' ORDER BY 1").fetchall()]
+        "WHERE table_type='BASE TABLE' AND table_schema='main' ORDER BY 1").fetchall()]
     lines.append("| table | rows |")
     lines.append("|---|---|")
     counts = {}
@@ -784,6 +841,10 @@ def main():
     for stmt in VIEWS.split(";"):
         if stmt.strip():
             con.execute(stmt)
+
+    print("Building lobbying free-text search layer (lobbying_freetext + FTS) ...")
+    n_ft = build_freetext_search(con)
+    print(f"  {n_ft:,} free-text docs indexed")
 
     sanity_report(con, args.db, years, house_errors)
     con.close()

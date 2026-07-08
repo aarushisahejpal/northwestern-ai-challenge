@@ -39,13 +39,21 @@ def main():
               for t in ["press_releases", "senate_filings", "senate_activities",
                         "senate_lobbyists", "senate_contributions",
                         "house_filings", "house_alis", "house_lobbyists",
-                        "press_issue_mentions"]}
+                        "press_issue_mentions", "lobbying_freetext"]}
     print("counts:", counts)
     assert counts["press_releases"] == 3, counts
     assert counts["senate_filings"] == 2, counts
     assert counts["house_filings"] == 2, counts
     assert counts["senate_activities"] >= 1, counts
     assert counts["house_alis"] >= 1, counts
+    # lobbying_freetext unions senate activity + house ali free-text; the FTS index
+    # (BM25) over it must answer a query — guards the P4 search layer.
+    assert counts["lobbying_freetext"] >= 2, counts
+    con.execute("LOAD fts;")
+    hits = con.execute(
+        "SELECT count(*) FROM (SELECT fts_main_lobbying_freetext.match_bm25("
+        "doc_id, 'health') s FROM lobbying_freetext) WHERE s IS NOT NULL").fetchone()[0]
+    assert hits >= 0, "FTS index missing on lobbying_freetext"
     # The 3 fixture releases are about health care / ACA tax credits / USPS, so the
     # ISSUE_KEYWORDS tagger must fire (HCR + TAX + POS at least). Guards the mapping.
     assert counts["press_issue_mentions"] >= 3, counts

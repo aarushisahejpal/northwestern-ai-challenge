@@ -40,6 +40,8 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-corpus-loader/scripts/show_record.py <citation-key>
 .venv/Scripts/python skills/lda-entity-resolver/scripts/resolve_entities.py --db db/lda_full.duckdb  # entities/aliases/crosswalk (+ --report)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
+.venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
+.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
 .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
 .venv/Scripts/python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md
 ```
@@ -77,6 +79,15 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
   Senate activity descriptions, AND press text — the highest-precision cross-dataset join key.
 - `press_issue_mentions` — press releases tagged to ALI issue codes via the curated `ISSUE_KEYWORDS`
   dict in `build_db.py` (rebuilt in place by `backfill_press_issues.py`); ~80% of releases carry ≥1 tag.
+- `lobbying_freetext` (+ FTS index) — Senate activity descriptions + House `specific_issues` unioned
+  into one BM25-searchable doc surface, each row keeping a `show_record.py` `record_key`. The
+  loader-owned, vocabulary-free **search/discovery** layer (P4); built in `build_db.py`'s index step,
+  rebuilt in place by `add_lobbying_freetext.py`. FTS uses `stemmer='none'` and is discovery-only.
+- `lobbying_issue_mentions` — lobbying free-text tagged to **industry facets** (e.g. `CRYPTO`) via the
+  curated `skills/lead-scanner/scripts/industry_lexicon.json`; the deterministic, cited **serving**
+  table (mirror of `press_issue_mentions`, on the lobbying side). Built by `industry_map.py --build-tags`;
+  feeds the entity-resolved industry player list (P4). Discovery (FTS/keyness) proposes vocabulary;
+  only curated keywords tag.
 
 ## Load-bearing conventions
 
