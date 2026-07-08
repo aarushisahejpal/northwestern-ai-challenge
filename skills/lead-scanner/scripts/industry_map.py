@@ -26,8 +26,8 @@ Two stages, discovery split from serving (see freetext_discovery.py for discover
 Usage:
   # once (or after the lexicon changes): build the serving table for all facets
   python industry_map.py --build-tags
-  # the map for a facet (default crypto); writes a roster for the money tools
-  python industry_map.py crypto --out crypto_roster.txt
+  # the map for a facet (default crypto); writes out/<facet>_roster.txt for the money tools
+  python industry_map.py crypto
   # prove recall: list players a name-LIKE '%crypto%' scan would MISS
   python industry_map.py crypto --recall-check
 
@@ -39,7 +39,10 @@ Usage:
     --build-tags     (re)materialize lobbying_issue_mentions, then continue
     --min-docs N     player must appear in >= N crypto free-text docs (default 1)
     --top N          players / keywords / recipients shown (default 40)
-    --out PATH       write the entity-resolved roster (canonical names) here
+    --out PATH       where to write the entity-resolved roster (default
+                     out/<facet>_roster.txt — a gitignored, disposable repo-root
+                     dir; never written into skills/). Pass a path to override.
+    --no-roster      don't write a roster file (just print the map)
     --recall-check   only report players whose NAME contains no facet phrase
                      (the diversified filers name-matching misses)
     --data-root PATH printed into the show_record.py hint (default ../data/data)
@@ -337,7 +340,9 @@ def write_roster(players, path, role="client"):
     Center) correctly appear on the client side and stay in."""
     names = sorted({p["player"] for p in players
                     if p["player"] and (role == "all" or p["role"] == role)})
-    Path(path).write_text("\n".join(names) + "\n", encoding="utf-8")
+    out = Path(path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("\n".join(names) + "\n", encoding="utf-8")
     return len(names)
 
 
@@ -352,7 +357,8 @@ def main():
     ap.add_argument("--build-tags", action="store_true")
     ap.add_argument("--min-docs", type=int, default=1)
     ap.add_argument("--top", type=int, default=40)
-    ap.add_argument("--out")
+    ap.add_argument("--out", help="roster path (default out/<facet>_roster.txt)")
+    ap.add_argument("--no-roster", action="store_true")
     ap.add_argument("--recall-check", action="store_true")
     ap.add_argument("--data-root", default="../data/data")
     ap.add_argument("--json", action="store_true")
@@ -385,9 +391,12 @@ def main():
     players = player_list(con, tag, args.min_docs, args.top)
     kw = top_keywords(con, tag, args.top)
 
-    if args.out:
-        n = write_roster(players, args.out)
-        print(f"Wrote {n} entity-resolved player names -> {args.out}  "
+    if not args.no_roster:
+        # Default to a gitignored, disposable repo-root out/ dir — never write a
+        # generated artifact into skills/. Override with --out; suppress with --no-roster.
+        out_path = args.out or f"out/{facet_id}_roster.txt"
+        n = write_roster(players, out_path)
+        print(f"Wrote {n} entity-resolved player names -> {out_path}  "
               f"(feed to ld203_giving.py --names-file)")
 
     if args.json:

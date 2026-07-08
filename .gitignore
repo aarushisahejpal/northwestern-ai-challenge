@@ -6,6 +6,10 @@
 *.duckdb.wal
 tests/tmp/
 
+# Generated intermediates (industry-map rosters, other tool outputs) — disposable,
+# rebuilt from the DB; written to a repo-root out/, never into skills/, never committed.
+/out/
+
 # Python
 __pycache__/
 *.pyc

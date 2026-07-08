@@ -164,8 +164,8 @@ vocabulary).
 ```bash
 # once (or after the lexicon changes): build the deterministic serving table
 .venv/Scripts/python skills/lead-scanner/scripts/industry_map.py --build-tags
-# the map for a facet (default crypto); writes a roster the money tools consume
-.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py crypto --out crypto_roster.txt
+# the map for a facet (default crypto); writes out/crypto_roster.txt (gitignored) for the money tools
+.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py crypto
 # prove recall: the players a name-LIKE '%crypto%' scan would MISS
 .venv/Scripts/python skills/lead-scanner/scripts/industry_map.py crypto --recall-check
 ```
@@ -230,6 +230,12 @@ Proposes vocabulary; never tags a finding. Reads `lobbying_freetext` + its FTS i
 - **Serving stays deterministic + cited.** FTS/keyness only *discover*; findings cite the
   `lobbying_issue_mentions` keyword→exact-word→record chain. The citeable aggregate form is
   `queries/p4_industry_map.sql` (`P4a`–`P4e`).
+- **Output convention.** Committed artifacts (the vocabulary `industry_lexicon.json`, the scripts,
+  the SQL) live in the skill. Generated intermediates — the roster, and any discovery dump you
+  redirect — go to the repo-root **`out/`** dir, which is gitignored and disposable, the same rule
+  `db/` and `data/` follow. Nothing is ever written into `skills/`. The serving table itself lives
+  in the (gitignored) DB. Discovery candidates print to stdout by design — they are for a human to
+  read and triage, not to persist.
 
 ## Lenses — `queries/*.sql` run via `queries/run_sweep.py`
 
