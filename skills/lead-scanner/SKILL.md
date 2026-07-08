@@ -1,6 +1,6 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. (3) An LD-203 giving map that, given a registrant entity or an industry roster, reports its disclosed political giving (totals, recipients, per-entity split) — the "who are they giving money to?" half of an industry map. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories (crypto scattered under "taxation" etc.), tags it with a curated vocabulary, and emits an entity-resolved player list — clients and registrants — that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. Use when generating or refreshing the lead pipeline, running a rapid bill-level "who's been quietly lobbying this?" check, mapping an industry's disclosed contributions, or building the who/how-much/who-they-give-to map of an industry.
+description: SQL-first tools for turning the lobbying database into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, Senate/House discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every Senate filing, House filing, and press release touching it, each with a show_record.py-resolvable citation key. (3) An LD-203 giving map that, given a registrant entity or an industry roster, reports its disclosed political giving (totals, recipients, per-entity split) — the "who are they giving money to?" half of an industry map. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories (crypto scattered under "taxation" etc.), tags it with a curated vocabulary, and emits an entity-resolved player list — clients and registrants — that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. (5) An FEC enrichment that takes that player roster and reports each player's contributions into the industry's Super-PAC network (openFEC), reconciled against the LD-203 giving map — the delta being the Super-PAC money LD-203 can't see (crypto's Fairshake). Use when generating or refreshing the lead pipeline, running a rapid bill-level "who's been quietly lobbying this?" check, mapping an industry's disclosed contributions and its Super-PAC money, or building the who/how-much/who-they-give-to map of an industry.
 ---
 
 # Lead Scanner
@@ -19,6 +19,9 @@ Three things live here:
    industry hidden in the lobbying free-text, tag it deterministically, and emit an
    entity-resolved player list that feeds tools (2 is bills, 3 is giving) and the resolver's
    `v_client_canonical_spend` unchanged.
+5. **An FEC enrichment** (`scripts/fec_enrich.py`) — take that roster and add the Super-PAC
+   money leg: each player's contributions into the industry's Super-PAC network (openFEC),
+   reconciled against the LD-203 giving map. The delta is the money LD-203 can't see.
 
 Requires `db/lda_full.duckdb` (built by `lda-corpus-loader`); cross-dataset lenses also use the
 resolver's entity tables. Raw records are only ever opened through `show_record.py` — never grep
@@ -236,6 +239,100 @@ Proposes vocabulary; never tags a finding. Reads `lobbying_freetext` + its FTS i
   `db/` and `data/` follow. Nothing is ever written into `skills/`. The serving table itself lives
   in the (gitignored) DB. Discovery candidates print to stdout by design — they are for a human to
   read and triage, not to persist.
+
+## FEC enrichment — `scripts/fec_enrich.py`
+
+**The problem it solves.** The LD-203 giving map (tool 3) is the *disclosed lobbyist-side*
+giving — but by law LD-203 does **not** capture Super-PAC money, which is exactly where an
+industry like crypto puts its headline political money (the **Fairshake** network, ~$100M+
+scale). So an industry map built on LD-203 alone understates the political spend by an order of
+magnitude. This closes the gap: it takes the industry roster and reports each player's FEC-
+disclosed contributions **into the industry's Super-PAC network**, reconciled against the LD-203
+map — the **delta** (the Super-PAC money LD-203 can't see) is the reportable surface.
+
+**Strategy — pull the PAC, then match the roster** (not one query per player). A crypto Super PAC
+has a bounded, itemized donor list, so this pulls every itemized receipt of each network committee
+once, caches it, aggregates by contributor, and matches roster names locally — cheap, complete,
+and it also surfaces network donors that weren't on the roster.
+
+### One-command demo
+
+```bash
+# the crypto Super-PAC network, reconciled against the crypto roster (industry_map.py output)
+.venv/Scripts/python skills/lead-scanner/scripts/fec_enrich.py --names-file out/crypto_roster.txt
+# add the published-total sanity gate; probe a single committee directly
+.venv/Scripts/python skills/lead-scanner/scripts/fec_enrich.py --names-file out/crypto_roster.txt --verify-totals
+.venv/Scripts/python skills/lead-scanner/scripts/fec_enrich.py --committee-id C00835959 --names-file out/crypto_roster.txt
+```
+
+Useful flags: `--cycle 2024 2026` (two-year transaction periods), `--committee-seed`/`--committee-id`,
+`--verify-totals`, `--min-match`, `--top`, `--refresh` (bypass cache), `--json`.
+
+### The API key — env or gitignored keyfile, never in the repo
+
+The api.data.gov key is resolved WITHOUT ever hardcoding, caching, or printing it, in order:
+env `DATA_GOV_API_KEY` (or `FEC_API_KEY`) → a gitignored one-line keyfile `out/.fec_api_key`
+(read internally, never echoed) → else the public `DEMO_KEY` (real data, shared-IP rate-limited).
+Only the source *label* is ever shown. Every cached request has the key stripped. README §4
+discloses the source + fetch date, not the key.
+
+### Reading the output — the load-bearing caveats
+
+- **Count LINE-11 contributions only — the crypto in-kind→liquidation double-count.** A crypto
+  gift is filed on Schedule A **line 11** (the real contribution, in-kind); when the PAC later
+  *sells* the donated coin, the sale proceeds are re-filed on **line 17** ("Other Federal
+  receipts") as a fresh non-memo row — Coinbase's $59.9M "COINBASE COMMERCE (EXCHANGE)" rows are
+  the same coins being liquidated, **not** a second donation. Summing line-11+line-17 credits the
+  donor twice (Coinbase $106.6M true → $166.5M inflated). The tool attributes donor money from
+  line-11 rows only and excludes line-12 (inter-committee transfers, the $113M Fairshake→sister
+  moves), line-15/16 (refunds received), and line-17 (sale proceeds + interest) — all shown in an
+  "excluded non-contribution receipts" block for transparency. This was found by an independent
+  review of FEC's transaction-code/Schedule-A-line docs, **not** by the tool's own sanity check
+  (which had passed against the wrong field — see the memo bullet).
+- **Reconcile to FEC `contributions`, not `receipts`.** The `--verify-totals` gate compares the
+  itemized line-11 non-memo sum to each committee's FEC-published **`contributions`** total and
+  matches to <0.01% on a closed cycle (Fairshake 2024: $217.42M vs $217.42M). Reconciling to
+  `receipts` (as a first version did — $260.07M) is false confidence: `receipts` *includes* the
+  line-17 sale proceeds and line-12 transfers, so matching it merely certifies you inherited FEC's
+  gross-up.
+- **Matches are CANDIDATES, never silent merges.** FEC contributor names don't align to LDA
+  names, so the norm-key/token match (shared with `ld203_giving.py`) is a *report to eyeball* —
+  the raw FEC contributor name is shown next to the roster player, with a confidence label
+  (`exact` vs `candidate`). E.g. "UNIVERSAL NAVIGATION INC." resolves to roster "Uniswap Labs" and
+  "MULTICOIN CAPITAL GP"/"…GROUP LLC" to "Multicoin Capital" — correct, but the name alone
+  wouldn't tell you, so a human confirms. (The line-11 rule above also removed an earlier
+  false positive — "THE GIVING BLOCK" name-matching "Block, Inc." — because it was a line-17
+  sale-proceeds row, not a contribution.) Tightening names is cleanup C / P6.
+- **Exclude FEC memo entries too.** On top of the line rule, openFEC Schedule A returns
+  LLC-attribution memos (`memo_code='X'`) as separate rows whose amount is already in another
+  line; summing them manufactures a phantom "individual giving" shadow equal to the corporate line
+  (a16z's $94.5M LLC gift re-attributed to Andreessen/Horowitz as memos, which without the drop
+  had also inflated Coinbase $166M→$299M). The tool drops `memo_code='X'` from every total.
+  (openFEC responses carry no `is_memo` field, so `memo_code` is the operative filter.)
+- **`is_individual` is NOT "a natural person."** openFEC flags many corporate Super-PAC receipts
+  `is_individual=True` (Ripple Labs Inc.'s $25M gifts come back `is_individual=True`,
+  `entity_type='ORG'`). The authoritative individual signal is `entity_type=='IND'`; the tool uses
+  that, and keeps genuine individual gifts in a **separate** section (a company's treasury money is
+  not its executives' personal gifts).
+- **Scope is FEC-disclosed + LD-203-disclosed — never "total political spending."** 501(c)(4) dark
+  money and state-level money are out of both. Same discipline as `ld203_giving.py`'s "LD-203 ≠ FEC".
+- **Itemized (>$200) floor, net amounts, amendments.** Figures are itemized electronic-filing
+  contributions (sub-$200 giving is aggregated + unattributable, so treat totals as a floor — here
+  the itemized line-11 sum ≈ FEC's published `contributions` because the checks are large). Amounts
+  sum as reported (nets any refund/redesignation negatives; none present in the Fairshake pull). The
+  openFEC API reflects the latest amendment (unlike the bulk data), verified by zero duplicate transaction_ids
+  and the `--verify-totals` reconciliation; a defensive transaction_id DISTINCT guards reuse on
+  other committees. These are the FEC-data traps enumerated in `reference/fec-campaign-finance.md` §3 — each was
+  stress-tested against the real Fairshake sample before the reconciliation was trusted (IND/ORG
+  split, memo double-count, amendments, negatives, conduit-memo donor-identity, itemization floor).
+- **The cache IS the evidence.** Every raw response is written to `out/fec_cache/` (gitignored)
+  with its endpoint, params (key stripped), and fetch timestamp. A finding cites the FEC
+  `transaction_id` + `committee_id` + the openFEC endpoint + the cache fetch date — the way scraped
+  press text is primary and the live URL secondary (FEC records can be amended). There is no
+  `queries/*.sql` citeable form here because FEC data is external, not in DuckDB; the cache plus the
+  live-resolved committee ids are the reproducible artifact.
+- **Pair with the other two legs:** `ld203_giving.py` (LD-203 giving) and `v_client_canonical_spend`
+  (P1 lobbying spend) — together the who / how-much / who-they-give-to industry money map.
 
 ## Lenses — `queries/*.sql` run via `queries/run_sweep.py`
 

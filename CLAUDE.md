@@ -21,7 +21,9 @@ gain-investigation/
 │   ├── lead-scanner/          lens SQL library + scanning discipline
 │   ├── finding-verifier/      pre-lock claim re-derivation protocol
 │   ├── source-document-reader/ external primary-source PDF → page-anchored citable text (OCR) + external-doc citation convention
-│   └── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
+│   ├── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
+│   └── dataset-primer/        orient on an unfamiliar dataset before building against it → a reference/ brief
+├── reference/           ← dataset orientation briefs (produced by dataset-primer; working aid, not a submission artifact)
 ├── queries/             ← lens SQL + internal design notes (see "Query library & derived tables"); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)
 ├── traces/              ← session JSONL exports + INDEX.md + rendered/ HTML
@@ -125,6 +127,13 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
   (searching "GlobalFoundries news 2026" for a 2024 event). Kept out of
   `skills/finding-verifier/SKILL.md` since "verifier" implies a rigor this exploratory
   research doesn't have and shouldn't claim.
+- **Onboarding an unfamiliar dataset follows `skills/dataset-primer`.** Before building against a
+  data source you haven't vetted (FEC, court, CMS, a state portal), run its five-axis scan against
+  the nine-category data-quality checklist and write a task-tailored brief to `reference/`. Check
+  `reference/` for an existing brief first and refresh it rather than re-researching. The brief's
+  traps are hypotheses to test against a real sample, not facts to trust — same bounded,
+  non-verification posture as `outside-context-scan`. Seed example: `reference/fec-campaign-finance.md`
+  (the FEC brief behind `skills/lead-scanner/scripts/fec_enrich.py`, L031).
 - **Self-contained language.** Submitted artifacts (SKILL.md files, findings, README) must stand
   alone — no references to internal planning docs or prior processes.
 
