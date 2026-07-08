@@ -151,6 +151,15 @@ Test each against a **small real Fairshake sample** first:
   `skills/`.
 - Raw API JSON → **`out/fec_cache/`** (gitignored), for reproducibility. The cache + committee/
   transaction IDs are the citeable form — FEC data is external, not in the DB.
-- API key from **env var only** — never committed, never traced, never logged.
+- API key from **env var `DATA_GOV_API_KEY`** (fallbacks: gitignored `out/.fec_api_key`, then the
+  shared `DEMO_KEY`) — never committed, traced, or logged. **Runtime gotcha on this Windows box:** the
+  real key is persisted at **User scope**, but a Claude tool shell runs in **Process scope that does NOT
+  inherit User-scope vars** — so inside a tool run `os.environ.get('DATA_GOV_API_KEY')` returns `None`
+  and `fec_enrich.py` silently falls back to the rate-limited (~30 req/hr, shared-IP) `DEMO_KEY`. That
+  reads like a missing/expired key but isn't. To use the real key in a tool run, surface it into the
+  process: PowerShell `$env:DATA_GOV_API_KEY=[Environment]::GetEnvironmentVariable('DATA_GOV_API_KEY','User')`
+  (then run the tool in that same call), pass it inline to the python invocation, or drop it once into
+  `out/.fec_api_key` (gitignored — read by every process regardless of scope). Don't conclude "no key /
+  key is stale" from a bare Process-scope check.
 - Log the work in `LEDGER.md` / `DECISIONS.md` per existing ledger conventions (done: L031).
 - FEC data-provenance + disclosure note lives in **README §4**.
