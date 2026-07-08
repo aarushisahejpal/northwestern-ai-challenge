@@ -62,6 +62,11 @@ not `indiv`.** If you filter Schedule A to individuals only, you will *silently 
 you care about.* Confirm this against the official file descriptions and pull a sample that includes
 ORG contributor rows before writing the loader.
 
+**And openFEC's `is_individual` flag is NOT "a natural person."** Many corporate Super-PAC receipts
+come back `is_individual=True` with `entity_type='ORG'` (verified on Ripple Labs' gifts to Fairshake).
+The authoritative individual signal is **`entity_type=='IND'`** — use that to split genuine individual
+gifts from a company's treasury money, not the `is_individual` boolean.
+
 ---
 
 ## 3. Data-quality issues to actively test (before trusting any rollup)
@@ -70,7 +75,9 @@ Test each against a **small real Fairshake sample** first:
 
 | Issue | Why it distorts the reconciliation | Reference |
 |---|---|---|
-| **Memo-code double-counting** (`memo_cd` = `X`) | Conduit/earmark pass-throughs (e.g. ActBlue) appear as memo rows. Drop them → you lose donor identity; keep them → you double-count topline totals. **Decide per question, document which.** | IRE PDF; FEC conduits page |
+| **Memo-code double-counting** (`memo_cd` = `X`) | Conduit/earmark pass-throughs (e.g. ActBlue) appear as memo rows. Drop them → you lose donor identity; keep them → you double-count topline totals. **Decide per question, document which.** (For a corporate-donor rollup, drop `memo_code='X'`: LLC-attribution memos re-attribute a company's line total to its principals and manufacture a phantom "individual giving" shadow equal to the corporate line.) | IRE PDF; FEC conduits page |
+| **Schedule A line semantics** (in-kind gift vs. its liquidation) | An in-kind contribution is filed on **line 11**; when the committee later *sells* the donated asset, the sale proceeds are re-filed on **line 17** ("Other Federal receipts") as a fresh non-memo row — the *same money*, not a second gift (verified: Coinbase's ~$59.9M "COINBASE COMMERCE" line-17 rows are donated coin being liquidated). Summing line 11 + line 17 credits the donor twice. **Attribute donor money from the contribution line (11) only**; exclude line 12 (inter-committee transfers), 15/16 (refunds), 17 (sale proceeds/interest). | FEC transaction-code / Schedule-A-line docs |
+| **Reconcile to `contributions`, not `receipts`** | A committee's `receipts` total *includes* the line-17 sale proceeds and line-12 transfers, so matching your itemized sum to `receipts` merely certifies you inherited FEC's gross-up. Reconcile the itemized contribution-line sum to the published **`contributions`** total (Fairshake 2024: itemized line-11 ≈ published `contributions` to <0.01%). | FEC `/committee/{id}/totals` |
 | **Amended filings / duplicate transactions** | Bulk data ships *every* amendment version; you must keep only the latest to avoid dup transactions. Confirm how the **API** handles this for your endpoints. | FEC "About data"; rebuilding-a-data-file |
 | **IND vs ORG split** | Corporate crypto money is in `oth`, not `indiv` — easy to miss entirely (see §2). | File descriptions |
 | **$200 itemization threshold** | Sub-threshold giving is aggregated and un-attributable to a named entity. Fine for Fairshake (large checks) but state it as a floor. | Individual-contributions file description |

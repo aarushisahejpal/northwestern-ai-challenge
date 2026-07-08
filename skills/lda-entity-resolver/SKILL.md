@@ -5,7 +5,8 @@ description: Build a cross-dataset entity table resolving lobbying registrants a
 
 # LDA Entity Resolver
 
-Requires: a DuckDB built by `lda-corpus-loader`.
+Requires: a DuckDB built by `lda-corpus-loader`. Corpus bindings (join keys, citation keys, and the
+facts this tool relies on) live in `reference/corpus-profile.md` (§2, §4) — the single source of truth.
 
 ## Usage
 
@@ -39,30 +40,22 @@ by summing `senate_filings` directly.** Cited demos + lead QA: `queries/p1_canon
 Prior art / independent cross-check: the team's lobbyR `flag_client_registrant_conflict()`
 and `flag_dupes()` (disclose in README §4).
 
-## The Senate↔House join key (verified against real records 2026-07-06)
+## Corpus facts this resolver relies on
 
-House XML `<senateID>` is the compound string `"<senate_registrant_id>-<senate_client_id>"`
-— an engagement-level key, not an org-level one. Join on both parts. Do NOT join
-senate `house_registrant_id` to house `<houseID>`: the formats don't overlap (5-digit
-vs 9-digit; zero matches in the pilot corpus).
+The join keys and id-namespace traps are the corpus's, not this tool's — full detail with
+verification dates in `reference/corpus-profile.md` (§2 citation keys, §4 entity resolution). The
+load-bearing ones here:
 
-`<houseID>` is a persistent House-Clerk identifier for the registrant-client
-relationship (verified 2026-07-06 as what the House disclosure portal's own search
-returns) — it is NOT a `filing_id`/filename, and can numerically collide with an
-unrelated document: one filing's `<houseID>` matched a real filing_id in this corpus
-belonging to a completely different registrant/client pair. Never treat a `<houseID>`
-value as a citation key.
+- **Join Senate↔House on the compound `<senateID>` = `"<senate_registrant_id>-<senate_client_id>"`**
+  (engagement-level, verified 2026-07-06), never senate `house_registrant_id` → house `<houseID>`
+  (formats don't overlap). `<houseID>` is a House-Clerk relationship id, **not** a citation key.
+- **`client_id` is registrant-scoped** (Comcast 10+) — group clients by normalized name/entity,
+  never by `client_id`; registrant ids ARE global.
+- House orgs have no UUIDs or standardized casing — they attach only through the compound-key
+  crosswalk, never fuzzy-merged (see Guarantees).
 
-## Data facts that bite
-
-- **Senate `client_id` is registrant-scoped, not global.** Comcast alone carries 10+
-  distinct client ids (one per registrant relationship). Grouping clients by id
-  fragments them; group by normalized name instead. Registrant ids ARE global.
-- House organizations have no UUIDs and no standardized casing; they attach to senate
-  entities only through the compound-key crosswalk and are never fuzzy-merged.
-- Pilot-scale match rate: 52.1% of senate engagements match ≥1 house filing —
-  the shortfall is mostly the known-partial House 2026 dump plus senate-only
-  engagement types, not resolver misses.
+Match-rate QA (how much of senate reconciles to house) is emitted by `--report`; the shortfall is
+mostly the known-partial House dump + senate-only engagement types, not resolver misses.
 
 ## Guarantees
 

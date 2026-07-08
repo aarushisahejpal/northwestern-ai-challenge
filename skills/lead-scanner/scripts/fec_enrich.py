@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """FEC enrichment: the Super-PAC money leg of an industry money map.
 
-The industry map has three legs. `industry_map.py` says WHO the players are; the
+Requires: the EXTERNAL openFEC API (api.data.gov key: env DATA_GOV_API_KEY or a
+gitignored out/.fec_api_key). Dataset traps: reference/fec-campaign-finance.md.
+Consumes the roster from lda_industry_map.py; reconciles vs lda_ld203_giving.py.
+
+The industry map has three legs. `lda_industry_map.py` says WHO the players are; the
 resolver's `v_client_canonical_spend` (P1) says what they SPEND to lobby; and
-`ld203_giving.py` says who they give to *within LD-203*. But LD-203 is
+`lda_ld203_giving.py` says who they give to *within LD-203*. But LD-203 is
 registrant-filed FECA/honorary/inaugural giving — by law it does NOT see
 Super-PAC money, which is exactly where an industry like crypto puts its headline
 political money (the Fairshake network, ~$100M+ scale). So an industry map built
@@ -20,7 +24,7 @@ ONCE (a couple of pages per cycle), caches it, aggregates by contributor, and
 matches roster names against that donor list locally. Cheap, complete, and it
 also surfaces network donors that weren't on the roster.
 
-SCOPE HONESTY — the mirror of ld203_giving's "LD-203 ≠ FEC". FEC + LD-203
+SCOPE HONESTY — the mirror of lda_ld203_giving's "LD-203 ≠ FEC". FEC + LD-203
 together are still NOT "total political spending": 501(c)(4) dark money and
 state-level money are out of both. Say "FEC-disclosed + LD-203-disclosed", never
 "total". And FEC name-matching is fuzzy: matches are reported as CANDIDATES with
@@ -47,7 +51,7 @@ Usage:
   python fec_enrich.py --names-file out/crypto_roster.txt
   # one committee explicitly (skip name resolution), one player probe:
   python fec_enrich.py --committee-id C00835959 --names-file out/crypto_roster.txt
-    --names-file PATH   entity roster (one name/line) — the industry_map.py output
+    --names-file PATH   entity roster (one name/line) — the lda_industry_map.py output
     --committee-seed S  committee search term(s) to resolve (default: the crypto
                         network — Fairshake / Defend American Jobs / Protect Progress)
     --committee-id ID   use these committee id(s) directly, skip name resolution
@@ -78,7 +82,7 @@ import duckdb
 # halves of the money map speak the same entity language (a drift here would
 # silently mis-reconcile). norm_name is kept in sync with the resolver.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ld203_giving import (  # noqa: E402
+from lda_ld203_giving import (  # noqa: E402
     norm_name, resolve_registrants, matched_registrant_names, giving,
 )
 
@@ -652,7 +656,7 @@ def render(committees, cycles, recon, indiv, unmatched, roster_n, key_src,
     L.append("  The API reflects the latest amendment, so no version double-counts.")
     L.append("* The cache IS the evidence: cite the FEC transaction_id + committee_id + endpoint +")
     L.append(f"  the cache fetch date. Raw responses: {cache_dir}")
-    L.append("* Pair with ld203_giving.py (LD-203 giving) and v_client_canonical_spend (P1 spend).")
+    L.append("* Pair with lda_ld203_giving.py (LD-203 giving) and v_client_canonical_spend (P1 spend).")
     return "\n".join(L)
 
 

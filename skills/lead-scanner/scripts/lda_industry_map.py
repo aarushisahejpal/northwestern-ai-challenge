@@ -2,6 +2,10 @@
 """Industry map (P4): find an industry hidden in the lobbying free-text, then emit
 an ENTITY-RESOLVED player list that plugs straight into the two money tools.
 
+Requires: the built DuckDB (lda-corpus-loader) + lda-entity-resolver tables. Corpus
+bindings — reference/corpus-profile.md: `freetext_surface`; `entity_tables`;
+`canonical_spend_view`; `attribution_grain`. Vocabulary: industry_lexicon.json.
+
 The problem. An industry like crypto can't be found by issue-code filtering: its
 free-text scatters across 15+ ALI codes (FIN/BAN/TAX/SCI/CPI/CDT/AGR/...), only
 ~40% under FIN, and diversified filers (Robinhood, PayPal, Fidelity, Stripe,
@@ -10,7 +14,7 @@ company names either. You map it by the VOCABULARY the filers use to describe wh
 they lobby on — the lobbying free-text (senate activity descriptions + House
 specific_issues), unified in lobbying_freetext.
 
-Two stages, discovery split from serving (see freetext_discovery.py for discovery):
+Two stages, discovery split from serving (see lda_freetext_discovery.py for discovery):
   build-tags : materialize lobbying_issue_mentions — a deterministic, cited serving
                table tagging lobbying_freetext with a facet's curated vocabulary
                (industry_lexicon.json), one row per (doc, tag, keyword) with the
@@ -20,16 +24,16 @@ Two stages, discovery split from serving (see freetext_discovery.py for discover
                registrant + client through lda-entity-resolver (entities/
                entity_aliases) into a player list, and write a roster file the money
                tools consume unchanged:
-                 ld203_giving.py --names-file <roster>   (who they give to)
+                 lda_ld203_giving.py --names-file <roster>   (who they give to)
                  v_client_canonical_spend                (what they spend)
 
 Usage:
   # once (or after the lexicon changes): build the serving table for all facets
-  python industry_map.py --build-tags
+  python lda_industry_map.py --build-tags
   # the map for a facet (default crypto); writes out/<facet>_roster.txt for the money tools
-  python industry_map.py crypto
+  python lda_industry_map.py crypto
   # prove recall: list players a name-LIKE '%crypto%' scan would MISS
-  python industry_map.py crypto --recall-check
+  python lda_industry_map.py crypto --recall-check
 
     --db PATH        DuckDB (default db/lda_full.duckdb); needs lobbying_freetext
                      (lda-corpus-loader add_lobbying_freetext.py) + entities/
@@ -57,7 +61,7 @@ Discipline (same as the rest of lead-scanner):
     documented limitation, not a silent gap.
   * "Crypto lobbying spend rose" is a dataset summary. The deliverable is NAMED
     players, each with sample record keys, whose spend (v_client_canonical_spend)
-    and disclosed giving (ld203_giving.py) are then pulled by the money tools.
+    and disclosed giving (lda_ld203_giving.py) are then pulled by the money tools.
 
 Citeable aggregate form: queries/p4_industry_map.sql (P4a-P4e).
 """
@@ -76,7 +80,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 # Kept in exact sync with lda-entity-resolver/scripts/resolve_entities.py:norm_name
-# (and ld203_giving.py). A drift here silently under-matches entities.
+# (and lda_ld203_giving.py). A drift here silently under-matches entities.
 LEGAL_SUFFIXES = {
     "LLC", "L L C", "INC", "INCORPORATED", "LTD", "LIMITED", "LLP", "L L P",
     "LP", "L P", "PLC", "CO", "CORP", "CORPORATION", "COMPANY", "PC", "PLLC",
@@ -99,7 +103,7 @@ def norm_name(raw):
 # --------------------------------------------------------------- keyword matcher
 # Same longest-match-wins, whole-word, single-pass matcher as build_db.py's
 # _build_issue_matcher (press_issue_mentions). Re-declared inline (not imported)
-# to keep this skill self-contained — the bill_lookup.py precedent. If build_db's
+# to keep this skill self-contained — the lda_bill_lookup.py precedent. If build_db's
 # matcher semantics change, mirror them here.
 
 def build_matcher(facets):
@@ -320,7 +324,7 @@ def render(meta, facet, players, kw, tag, data_root, min_docs, recall_only):
     L.append("")
     L.append("* Player list is ENTITY-RESOLVED (lda-entity-resolver). Feed the roster to")
     L.append("  the money tools unchanged:")
-    L.append("    ld203_giving.py --names-file <roster>     # who they give to (LD-203)")
+    L.append("    lda_ld203_giving.py --names-file <roster>     # who they give to (LD-203)")
     L.append("    v_client_canonical_spend (client name)    # what they spend (all issues)")
     L.append("* Tags are the deterministic keyword->exact-word->record chain in "
              "lobbying_issue_mentions; every player resolves to raw filings via")
@@ -397,7 +401,7 @@ def main():
         out_path = args.out or f"out/{facet_id}_roster.txt"
         n = write_roster(players, out_path)
         print(f"Wrote {n} entity-resolved player names -> {out_path}  "
-              f"(feed to ld203_giving.py --names-file)")
+              f"(feed to lda_ld203_giving.py --names-file)")
 
     if args.json:
         print(json.dumps({"facet": facet_id, "tag": tag,

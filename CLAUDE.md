@@ -15,14 +15,14 @@ gain-investigation/
 ├── DECISIONS.md         ← human-judgment log (required by the traces deliverable)
 ├── archive/             ← reset snapshots of LEDGER.md/DECISIONS.md (see note below); not submitted
 ├── skills/              ← the submitted Agent Skills, each self-contained (SKILL.md + scripts/)
-│   ├── lda-corpus-loader/     build_db.py (raw corpus → DuckDB) + show_record.py (citation → raw record)
-│   ├── lda-entity-resolver/   cross-dataset entity table (Senate↔House crosswalk)
-│   ├── investigation-ledger/  ledger templates + ledger_lint.py
-│   ├── lead-scanner/          lens SQL library + scanning discipline
-│   ├── finding-verifier/      pre-lock claim re-derivation protocol
-│   ├── source-document-reader/ external primary-source PDF → page-anchored citable text (OCR) + external-doc citation convention
-│   ├── outside-context-scan/  exploratory novelty/news-landscape research (not verification)
-│   └── dataset-primer/        orient on an unfamiliar dataset before building against it → a reference/ brief
+│   ├── lda-corpus-loader/     [build] raw corpus → DuckDB + show_record.py (citation → raw record)
+│   ├── lda-entity-resolver/   [build] adds entity tables + v_client_canonical_spend to the DB
+│   ├── lead-scanner/          [investigate] lens SQL + bill/giving/industry/FEC tools → leads
+│   ├── finding-verifier/      [investigate] pre-lock claim re-derivation protocol
+│   ├── source-document-reader/ [investigate] external primary-source PDF → page-anchored citable text
+│   ├── outside-context-scan/  [investigate] exploratory novelty / contemporaneous web research
+│   ├── investigation-ledger/  [any]  leads/decisions state; read at session start, commit at end
+│   └── dataset-primer/        [any]  orient on a NEW dataset before building against it → reference/ brief
 ├── reference/           ← dataset orientation briefs (produced by dataset-primer; working aid, not a submission artifact)
 ├── queries/             ← lens SQL + internal design notes (see "Query library & derived tables"); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)
@@ -31,6 +31,33 @@ gain-investigation/
 ├── data/                ← raw corpus (gitignored; layout per the challenge data manual)
 └── db/                  ← built DuckDB files (gitignored; rebuilt from raw via loader)
 ```
+
+## Skills — build the corpus, then investigate it
+
+Skills fall in two phases. The **`lda-*` prefix marks the build layer** — the only skills that MODIFY
+the DuckDB; everything else is read-only over it. (Script filenames carry the same signal: `lda_*`
+needs the built DB, `fec_*` needs the external openFEC API, untokened scripts are corpus-agnostic.)
+
+**Build the corpus** (run in order; re-run after a corpus rebuild):
+1. `lda-corpus-loader` — parse raw JSON/XML/JSONL → DuckDB; `show_record.py` resolves any citation key
+   back to its raw record. In-place table adds: `backfill_press_issues.py`, `add_lobbying_freetext.py`.
+2. `lda-entity-resolver` — add `entities` / `entity_aliases` / `registrant_crosswalk` +
+   `v_client_canonical_spend`.
+   - Then `lead-scanner`'s `lda_industry_map.py --build-tags` writes the `lobbying_issue_mentions`
+     serving table — a research-driven enrichment, so it runs here, after the two above.
+
+**Investigate the corpus** (read-only over the DB + outside sources; run anytime after the build):
+- `lead-scanner` — SQL-first lens library + bill cross-check / giving map / industry map / FEC
+  enrichment → candidate leads.
+- `finding-verifier` — independently re-derive every claim before a finding locks.
+- `outside-context-scan` — exploratory web research (novelty / contemporaneous), never a verifier.
+- `source-document-reader` — turn an external primary-source PDF into page-anchored, citable text.
+
+**Cross-cutting** (either phase): `investigation-ledger` (leads/decisions state — read at session
+start, commit at end) and `dataset-primer` (orient on a NEW external dataset before building against
+it → a `reference/` brief).
+
+The build layer's binding to *this* corpus is `reference/corpus-profile.md`.
 
 ## Commands (Windows dev box: `.venv/Scripts/python`; POSIX: `.venv/bin/python`)
 
@@ -43,7 +70,7 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-entity-resolver/scripts/resolve_entities.py --db db/lda_full.duckdb  # entities/aliases/crosswalk (+ --report)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
-.venv/Scripts/python skills/lead-scanner/scripts/industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
+.venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
 .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
 .venv/Scripts/python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md
 ```
@@ -87,7 +114,7 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
   rebuilt in place by `add_lobbying_freetext.py`. FTS uses `stemmer='none'` and is discovery-only.
 - `lobbying_issue_mentions` — lobbying free-text tagged to **industry facets** (e.g. `CRYPTO`) via the
   curated `skills/lead-scanner/scripts/industry_lexicon.json`; the deterministic, cited **serving**
-  table (mirror of `press_issue_mentions`, on the lobbying side). Built by `industry_map.py --build-tags`;
+  table (mirror of `press_issue_mentions`, on the lobbying side). Built by `lda_industry_map.py --build-tags`;
   feeds the entity-resolved industry player list (P4). Discovery (FTS/keyness) proposes vocabulary;
   only curated keywords tag.
 
@@ -137,60 +164,29 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
 - **Self-contained language.** Submitted artifacts (SKILL.md files, findings, README) must stand
   alone — no references to internal planning docs or prior processes.
 
-## Data facts that bite (verified against real records 2026-07-04)
+## Data facts that bite
 
-- House quarterly XML uses `<alis><ali_info>` with `<issueAreaCode>` — NOT the `ali_Code` flat
-  list the data manual describes (that may still apply to LD-1 registrations; unverified).
-- Agencies lobbied are one comma-separated `<federal_agencies>` string per ali_info; splitting
-  it is entity-resolver work.
-- House forms pad with empty `<lobbyist>` slots — skip rows with no first and no last name.
-- Senate registrant objects carry `house_registrant_id` — the clean Senate↔House crosswalk key.
-- Senate LD-203 contributions are semiannual; early-year files are legitimately tiny.
-- **Never sum filings without deduping — and the dedup key must be the period-invariant
-  field, not the type code, applied identically on both chambers.** Registrants file
-  duplicates (identical Senate Q1s posted 22 seconds apart) and amendments (Senate
-  `filing_type` codes like `1A`/`2A`/`3A`/`4A`; House refilings under new filing_ids).
-  Filtering senate to `filing_type LIKE 'Q%'` SILENTLY DROPS amendments — this bit twice:
-  2026-07-04's un-deduped version fabricated a "House reports 2× Senate" pattern, and
-  2026-07-06's H1c/H1d v1 (which filtered/partitioned by `filing_type`) fabricated a
-  "chronic 10x cross-chamber mis-reporter" pattern that was actually senate's
-  PRE-amendment figure vs house's POST-amendment figure (house wasn't affected because its
-  directory-based period bucketing already folds originals+amendments together). Caught
-  by a human cross-checking the live House portal, not by any internal check — a reminder
-  that "the query ran and produced clean-looking numbers" is not verification. The correct
-  pattern: dedup keyed on `filing_period` (constant across original+amendment, e.g.
-  "second_quarter" for both `Q2` and `2A`), NOT `filing_type`, picking latest by `posted`/
-  `filing_id` — see `queries/sweep_2026.sql#H1c` (current, fixed version) for the pattern.
-- **Never sum senate + house datasets.** LD-2 quarterlies are filed with both chambers, so the
-  two datasets are largely copies of the same filings. Dollar attribution is senate-primary
-  (richer metadata); use house only to reconcile or fill gaps. Verified 2026-07-05 — the
-  cross-dataset version (sweep#C1b) inflated per-bill totals ~40%.
-- **House XML dumps are partial snapshots.** House 2026-Q1 holds 12,656 filings vs 21,145
-  senate Q1s (the deadline-week flood is missing). Senate is the completeness reference for
-  recent quarters; a filing absent house-side is expected noise, not a story.
-- **Press and filings name bills differently.** Members write "the Farm Bill" / "NDAA"; filings
-  cite H.R./S. numbers. Number-only matching fabricates "lobbied but publicly silent" bills
-  (killed L004 that way). Say-vs-pay comparisons need alias matching or provision-level framing.
-- **The Senate↔House join key is house `<senateID>` = `"<senate_registrant_id>-<senate_client_id>"`**
-  (compound, engagement-level; verified 2026-07-06). Do NOT join senate `house_registrant_id`
-  to house `<houseID>` — formats don't overlap (zero matches). Use `registrant_crosswalk`
-  (entity-resolver) or the split_part pattern in `queries/sweep_2026.sql#H1c`.
-- **`<houseID>` is NOT a resolvable filing_id/filename, and can collide with an unrelated
-  one.** Verified 2026-07-06: a Mercury/PRVO Plinarsko Društvo quarterly filing carries
-  `<houseID>301740622</houseID>`, but filing `301740622.xml` in this corpus is a completely
-  different, unrelated registration (Cornerstone Government Affairs / National Association
-  of Home Builders). `<houseID>` appears to be a persistent House-Clerk identifier for the
-  registrant-client relationship (what the House disclosure portal's own search surfaces) —
-  a different ID namespace from `filing_id` (the numeric filename), even though both are
-  9-digit numbers that can coincidentally match an unrelated document. Never cite a
-  `<houseID>` value as a `show_record.py` key; only the filename (`filing_id`) is a valid
-  citation key on the House side.
-- **Senate `client_id` is registrant-scoped, not global** — Comcast alone has 10+ client ids.
-  Group clients by resolved entity (`entities`/`entity_aliases`, norm-key based), never by
-  client_id. Registrant ids ARE global.
-- Everything self-reported: strip whitespace everywhere, expect missing income/expenses, and
-  treat gaps as potentially reportable rather than as noise.
-- Windows: scripts force UTF-8 stdout (press text has curly quotes; pipes default to cp1252).
+**Single source of truth: [`reference/corpus-profile.md`](reference/corpus-profile.md)** — the corpus
+binding layer (sources & roles, citation keys, dedup key, mirror-source rules, entity join keys, and
+every verified gotcha with its date). Read it before writing a query or adding a table; update a corpus
+fact there, not here. The traps that have actually cost us a fabricated pattern, one line each (full
+fact + why + verification date in the profile):
+
+- **Never sum the two chambers** — the same quarterly is filed with both, so summing double-counts;
+  senate is primary, house is reconcile/fill-gap only (cross-dataset sums inflated per-bill ~40%).
+  Profile §1, §3.
+- **Never sum filings without deduping on `filing_period` — not the type code.** A `filing_type`
+  filter silently drops amendments and fabricated a cross-chamber "mis-reporter" pattern twice.
+  Profile §3; pattern in `queries/sweep_2026.sql#H1c`.
+- **`<houseID>` is NOT a citation key** — a different id namespace from `filing_id`, and can
+  numerically collide with an unrelated document. Only the XML filename is a valid House key. Profile §2.
+- **`client_id` is registrant-scoped, not global** (Comcast has 10+) — group clients by resolved
+  entity, never by `client_id`; registrant ids ARE global. Profile §4.
+- **Press and filings name bills differently** — number-only matching fabricates "lobbied but
+  publicly silent" bills (killed L004). Bridge via `bill_aliases.json`. Profile §8.
+
+Everything is self-reported: strip whitespace, expect missing income/expenses, treat gaps as
+potentially reportable. Windows: scripts force UTF-8 stdout. (Profile §8.)
 
 ## Session discipline for Claude sessions in this repo
 

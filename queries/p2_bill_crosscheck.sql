@@ -1,4 +1,4 @@
--- P2 bill cross-check — the citeable aggregate form of skills/lead-scanner/scripts/bill_lookup.py.
+-- P2 bill cross-check — the citeable aggregate form of skills/lead-scanner/scripts/lda_bill_lookup.py.
 -- The script is the ergonomic front door (number OR alias, all datasets, sample keys);
 -- these labeled blocks are what an aggregate claim cites, per CLAUDE.md's "aggregate
 -- claims cite the exact SQL block + the one-command rebuild + >=3 sampled records" rule.
@@ -62,7 +62,7 @@ SELECT (SELECT count(*) FROM num) AS cite_number,
 -- No reliable number (H.R.2 is reassigned each Congress), so the filing-side signal is the
 -- filers' own free-text (senate activity descriptions, house specific_issues). All rows keep
 -- a show_record.py-resolvable key (senate filing_uuid / house filing_id).
--- Phrase set mirrors bill_aliases.json farm-bill.phrases so counts match bill_lookup.py.
+-- Phrase set mirrors bill_aliases.json farm-bill.phrases so counts match lda_bill_lookup.py.
 SELECT 'senate: activity text names it' AS signal,
        count(DISTINCT filing_uuid) AS filings
 FROM senate_activities

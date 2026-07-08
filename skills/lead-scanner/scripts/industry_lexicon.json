@@ -2,13 +2,13 @@
   "_meta": {
     "version": "1.0",
     "generated": "2026-07-07",
-    "purpose": "Curated industry -> distinctive-phrase vocabulary for the lobbying free-text discovery/serving layer (industry_map.py). Fixes cleanup-note B: an industry hidden under many issue codes and vague categories ('lobbying related to taxation') can only be mapped by the VOCABULARY it uses in the free-text, not by issue-code filtering. Each facet's 'phrases' are matched, whole-word and case-insensitively, against lobbying_freetext (senate activity descriptions + house specific_issues) to build the deterministic, cited serving table lobbying_issue_mentions. Same precision-over-recall discipline as bill_aliases.json.",
+    "purpose": "Curated industry -> distinctive-phrase vocabulary for the lobbying free-text discovery/serving layer (lda_industry_map.py). Fixes cleanup-note B: an industry hidden under many issue codes and vague categories ('lobbying related to taxation') can only be mapped by the VOCABULARY it uses in the free-text, not by issue-code filtering. Each facet's 'phrases' are matched, whole-word and case-insensitively, against lobbying_freetext (senate activity descriptions + house specific_issues) to build the deterministic, cited serving table lobbying_issue_mentions. Same precision-over-recall discipline as bill_aliases.json.",
     "discipline": [
       "Precision over recall, same rule as build_db.py's ISSUE_KEYWORDS and bill_aliases.json. Every 'phrases' string is a distinctive, whole-word-matchable term, never a bare topic word.",
       "'phrases' are the ONLY strings used for tagging. 'display_only' terms are recorded (with the reason) but NOT matched: they are either ambiguous (bare 'token', 'mining', 'wallet', 'coin') or catch unrelated filings (bare 'clarity act' matched an athletic-training filing; the distinctive form 'digital asset market clarity' is used instead).",
       "A facet gets its OWN tag, deliberately NOT folded into an ALI issue code. Crypto scatters across 15+ issue codes (FIN/BAN/TAX/SCI/CPI/CDT/AGR/...), only ~40% under FIN, so the ALI code is not the industry. The tag namespace ('CRYPTO') is separate from the ~79 ALI codes.",
-      "The vocabulary is versioned and grows by human triage of the discovery loop (freetext_discovery.py: FTS + keyness + quarterly emergence + untagged mining). Never auto-commit a discovered term; a human adds it here with a source, and the serving table is rebuilt. Bump 'version' and note the change when phrases change so a tagged set stays reproducible.",
-      "The industry player list emitted from a facet is entity-resolved through lda-entity-resolver (entities/entity_aliases) so it plugs unchanged into ld203_giving.py --names-file (who they give to) and v_client_canonical_spend (what they spend)."
+      "The vocabulary is versioned and grows by human triage of the discovery loop (lda_freetext_discovery.py: FTS + keyness + quarterly emergence + untagged mining). Never auto-commit a discovered term; a human adds it here with a source, and the serving table is rebuilt. Bump 'version' and note the change when phrases change so a tagged set stays reproducible.",
+      "The industry player list emitted from a facet is entity-resolved through lda-entity-resolver (entities/entity_aliases) so it plugs unchanged into lda_ld203_giving.py --names-file (who they give to) and v_client_canonical_spend (what they spend)."
     ],
     "corpus_window": "Phrases are calibrated on filings/press 2022-2026 Q1. Bill-name phrases (GENIUS Act, FIT21) are 118th/119th-Congress crypto vehicles; verified distinctive in-window, but re-check when the corpus advances."
   },
@@ -49,7 +49,7 @@
       "sources": [
         "https://www.congress.gov/bill/119th-congress/senate-bill/1582 (GENIUS Act, stablecoins)",
         "https://www.congress.gov/bill/118th-congress/house-bill/4763 (FIT21, digital-asset market structure)",
-        "Vocabulary triaged from freetext_discovery.py keyness/emergence over lobbying_freetext, 2026-07-07"
+        "Vocabulary triaged from lda_freetext_discovery.py keyness/emergence over lobbying_freetext, 2026-07-07"
       ],
       "confidence": "high on the core terms (crypto/digital asset/stablecoin/blockchain); medium on bill-name phrases (window-specific)."
     }

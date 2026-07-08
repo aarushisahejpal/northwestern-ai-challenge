@@ -3,8 +3,12 @@
 mining the lobbying free-text, so a human can triage terms into
 industry_lexicon.json. This is the DISCOVERY half of the discovery/serving split
 (roadmap §1b): it never tags a finding — it only ranks candidate terms. The cited
-SERVING layer stays the deterministic keyword tagger (industry_map.py ->
+SERVING layer stays the deterministic keyword tagger (lda_industry_map.py ->
 lobbying_issue_mentions).
+
+Requires: the built DuckDB (lda-corpus-loader). Corpus binding —
+reference/corpus-profile.md: `freetext_surface` (+ FTS). Proposes vocabulary for
+industry_lexicon.json; never writes the DB or the lexicon.
 
 Reads lobbying_freetext (+ its FTS index) built by lda-corpus-loader's
 add_lobbying_freetext.py. Three complementary signals, each reproducible:
@@ -22,10 +26,10 @@ add_lobbying_freetext.py. Three complementary signals, each reproducible:
             (no rebuild) — verify a term's precision before adding it.
 
 Usage:
-  python freetext_discovery.py                       # crypto keyness candidates
-  python freetext_discovery.py --emergence
-  python freetext_discovery.py --untagged 'token OR wallet OR "digital dollar"'
-  python freetext_discovery.py --search 'stablecoin "market structure"'
+  python lda_freetext_discovery.py                       # crypto keyness candidates
+  python lda_freetext_discovery.py --emergence
+  python lda_freetext_discovery.py --untagged 'token OR wallet OR "digital dollar"'
+  python lda_freetext_discovery.py --search 'stablecoin "market structure"'
 
     --db PATH        DuckDB (default db/lda_full.duckdb)
     --lexicon PATH   industry_lexicon.json (default beside this script)

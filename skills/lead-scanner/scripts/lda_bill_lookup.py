@@ -3,6 +3,11 @@
 filing, House filing, and press release that touches it, each with a citation
 key resolvable by lda-corpus-loader/show_record.py.
 
+Requires: the built DuckDB (lda-corpus-loader). Corpus bindings — see
+reference/corpus-profile.md: `citation_keys`; `mirror_sources`/`primary_for_dollars`
+(never sum chambers); `attribution_grain` (per-bill dollars rank, not total);
+`period_invariant_key` (dedup). Vocabulary: bill_aliases.json.
+
 Why this exists (the L004 lesson). Press releases and members name bills ("the
 Farm Bill", "NDAA", "Inflation Reduction Act"); LDA filings cite H.R./S. numbers.
 Matching on numbers alone fabricates "lobbied but publicly silent" bills. This
@@ -14,7 +19,7 @@ the number-cited filings via the curated crosswalk in bill_aliases.json.
   Name side    -> whole-word regex on press text (+ filing free-text on request)
 
 Usage:
-  python bill_lookup.py <bill-or-alias> [options]
+  python lda_bill_lookup.py <bill-or-alias> [options]
     <bill-or-alias>   "HR5376" | "H.R. 5376" | "Inflation Reduction Act" | "Farm Bill"
   --db PATH           DuckDB (default db/lda_full.duckdb)
   --aliases PATH      alias table (default: bill_aliases.json beside this script)

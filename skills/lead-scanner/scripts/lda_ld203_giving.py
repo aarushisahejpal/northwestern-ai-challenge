@@ -8,6 +8,10 @@ Answers the "...and who are they giving money to?" half of an industry map. Pair
 it with lda-entity-resolver's v_client_canonical_spend (P1), which answers the
 "what do they spend to lobby?" half.
 
+Requires: the built DuckDB (lda-corpus-loader) + lda-entity-resolver tables. Corpus
+bindings — reference/corpus-profile.md: `external_money`=ld203 (registrant-filed;
+LD-203 ≠ FEC); `entity_tables`; `citation_keys`.
+
 WHAT IT MATCHES — and the attribution boundary you must not overstate.
 LD-203 reports are filed BY REGISTRANTS (and by their individual lobbyists),
 never by clients. So this tool resolves your query to a *registrant* entity and
@@ -27,8 +31,8 @@ whose headline election spending flows through Super PACs, LD-203 shows the
 disclosed lobbyist-side giving — real, citable, and a fraction of the FEC total.
 
 Usage:
-  python ld203_giving.py "coinbase"                    # one entity (substring match)
-  python ld203_giving.py --names-file crypto.txt       # a roster (exact match/line)
+  python lda_ld203_giving.py "coinbase"                    # one entity (substring match)
+  python lda_ld203_giving.py --names-file crypto.txt       # a roster (exact match/line)
     --db PATH          DuckDB (default db/lda_full.duckdb)
     --names-file PATH  newline-delimited entity names; each matched EXACTLY
                        (canonical name or a known alias) — the industry-map input

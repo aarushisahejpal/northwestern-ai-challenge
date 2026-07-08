@@ -1,4 +1,4 @@
--- P4 industry map — the citeable aggregate form of skills/lead-scanner/scripts/industry_map.py.
+-- P4 industry map — the citeable aggregate form of skills/lead-scanner/scripts/lda_industry_map.py.
 -- The script is the ergonomic front door (build the serving table, emit the entity-resolved
 -- player list + roster, recall-check); these labeled blocks are what an aggregate claim cites,
 -- per CLAUDE.md's "aggregate claims cite the exact SQL block + the one-command rebuild + >=3
@@ -6,7 +6,7 @@
 --
 -- Prereqs (one-command rebuilds):
 --   .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb
---   .venv/Scripts/python skills/lead-scanner/scripts/industry_map.py --build-tags
+--   .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags
 -- Run:  .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb P4 queries/p4_industry_map.sql
 --
 -- Demo facet = CRYPTO. lobbying_issue_mentions is the deterministic serving table (tag ->
