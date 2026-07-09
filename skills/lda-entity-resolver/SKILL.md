@@ -65,3 +65,40 @@ mostly the known-partial House dump + senate-only engagement types, not resolver
   silent fuzzy tier.
 - Ambiguous clusters (same normalized key, multiple senate ids) are reported by
   `--report`, not silently merged.
+
+## Member + political-committee layer (P6) — the people-name half
+
+Organizations resolve through `entities`/`entity_aliases`; **people and the committees that
+support them** resolve through a parallel layer built by `scripts/build_members.py` from two
+external sources (both public domain / official; orientation briefs in
+`reference/congress-legislators.md` and `reference/fec-campaign-finance.md`):
+
+```bash
+python scripts/build_members.py --db db/lda_full.duckdb [--offline] [--check]
+python scripts/member_resolve.py "Emmer for Congress" [--date 2023-05-01] [--json]
+```
+
+| table | grain | notes |
+|---|---|---|
+| `members_all` | one row per member serving in the corpus window (current AND departed), keyed on `bioguide_id` | name parts + nickname + aka spellings, latest chamber/state/party, FEC candidate ids |
+| `member_terms` | one row per (term × party-affiliation period) | party-as-of-date source: a mid-term switcher annotates correctly per item date |
+| `member_committees` | one row per (committee, supported member) | tier-labeled: `campaign-committee` (FEC designation A/P), `leadership-pac` (D, via openFEC sponsor ids), `jfc` (J — one row per participating member) |
+
+`scripts/member_resolve.py` (importable + CLI) is the shared resolver every tool uses —
+`lda_ld203_giving.py`'s member rollup imports it. `resolve(raw_string, when=date)` returns the
+member(s) a filed string names or supports, with `tier`, `confidence`, and `source` on every
+match. Curated nickname pairs / aliases live in `scripts/member_aliases.json` (versioned).
+
+Rules (each one bought by a real failure in the 2026-07-08 industry-package QA):
+
+- **Rollup, never conflation.** A committee MAPS to its member with a tier label; direct and
+  indirect support are reported per-tier and never silently summed. JFC and multi-honoree
+  dollars stay `shared, unallocated` (JFC participant lists may be partial — FEC candidate
+  linkage covers some JFCs; the rest are conservatively name-inferred and flagged `inferred`).
+- **Ambiguity is a report, not a merge.** Same-name pairs (Sen. Robert Menendez vs Rep. Robert
+  Menendez his son; Dan Bishop vs Sanford D. Bishop's middle initial) come back as multiple
+  matches; a `SEN.`/`REP.` title disambiguates by chamber, labeled `title-chamber`.
+- **Party committees (DSCC/NRSC/DCCC/NRCC/DNC/RNC) and caucus institutions are never
+  member-mapped** — they are their own recipients.
+- Acceptance/regression harness: `tests/p6_acceptance.py` (needs the real DB + the industry
+  packages' baseline CSVs).

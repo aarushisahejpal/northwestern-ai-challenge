@@ -51,6 +51,22 @@ LD-203 filing_type, so an amended report would otherwise double-count its items)
 the raw figure is shown alongside so the amendment delta is visible. Treat totals
 as a ranking signal and verify specific items via show_record.py.
 
+MEMBER ROLLUP (P6). When the lda-entity-resolver member layer is built
+(build_members.py -> members_all/member_terms/member_committees), recipients are
+additionally rolled up per MEMBER via member_resolve.py: filed name variants merge
+on bioguide_id ("Rep. French Hill"/"Rep. James French Hill" were separate rows and
+understated Emmer 35% before this); candidate-support committees map with a tier
+label (campaign-committee / leadership-pac / jfc). Rollup, never conflation:
+  - a member's total = direct + campaign-committee + leadership-pac;
+  - JFC and multi-honoree dollars are listed alongside flagged "shared/unallocated"
+    and are NEVER summed into the member (participant lists may be partial);
+  - party brackets are date-aware (a 2022-06 Sinema item is (D-AZ), a 2023 one
+    (I-AZ)); mixed windows render as e.g. (D>I-AZ);
+  - every merged row carries its variants + confidence, so any merge is auditable
+    back to the filed strings (--json exposes them). Ambiguous names never merge.
+The raw TOP RECIPIENTS section is unchanged — the rollup is an additional view.
+Disable with --no-member-rollup; without the member tables the tool runs as before.
+
 The citeable aggregate form of these numbers is queries/ld203_giving.sql (blocks
 G1a-G1d) — the labeled SQL a finding cites, per the aggregate-claim rule.
 """
@@ -213,7 +229,7 @@ BASE = """
 """
 
 
-def giving(con, reg_names, types, since, top, limit):
+def giving(con, reg_names, types, since, top, limit, resolver=None, rollup_top=15):
     con.execute("CREATE OR REPLACE TEMP TABLE _reg(name TEXT)")
     con.executemany("INSERT INTO _reg VALUES (?)", [(n,) for n in reg_names])
     conds, params = [], []
@@ -253,9 +269,89 @@ def giving(con, reg_names, types, since, top, limit):
              coalesce(nullif(honoree,''), payee) recipient, date
       FROM base WHERE amount IS NOT NULL
       ORDER BY amount DESC LIMIT ?""", params + [limit])
+    rollup = (member_rollup(con, base, params, resolver, rollup_top)
+              if resolver else None)
     return {"totals": totals, "by_type": by_type, "by_year": by_year,
             "by_filer": by_filer, "recipients": recipients,
-            "per_entity": per_entity, "sample": sample}
+            "per_entity": per_entity, "sample": sample,
+            "member_rollup": rollup}
+
+
+# -------------------------------------------------------------- member rollup
+
+def load_member_resolver(db):
+    """member_resolve.py lives in lda-entity-resolver (the shared people-name
+    layer, P6). Optional: without it — or without its tables — the tool behaves
+    exactly as before."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2]
+                               / "lda-entity-resolver" / "scripts"))
+        from member_resolve import MemberResolver
+        return MemberResolver(db)
+    except Exception as e:
+        print(f"  (member rollup skipped: {e})", file=sys.stderr)
+        return None
+
+
+ATTRIB_TIERS = ("direct", "campaign-committee", "leadership-pac")
+SHARED_TIERS = ("jfc-shared, unallocated", "multi-honoree, unallocated")
+
+
+def member_rollup(con, base, params, resolver, top):
+    """Per-member rollup of the de-duplicated items. Direct + tier-labeled
+    committee support sum into the member total; JFC / multi-honoree dollars are
+    carried alongside as shared-unallocated, never summed in. Ambiguous matches
+    are excluded from the rollup (reported as a count instead of merged)."""
+    items = q(con, "WITH " + base + """
+      SELECT recipient, date, amount FROM dd
+      WHERE recipient<>'' AND amount IS NOT NULL""", params)
+    cache, rows, n_ambiguous = {}, {}, 0
+    for it in items:
+        rep = cache.get(it["recipient"])
+        if rep is None:
+            rep = cache[it["recipient"]] = resolver.resolve(it["recipient"])
+        if rep["ambiguous"]:
+            n_ambiguous += 1
+            continue
+        for m in rep["matches"]:
+            tier = m["tier"]
+            bucket = tier if tier in ATTRIB_TIERS else \
+                ("jfc" if tier.startswith("jfc") else
+                 "multi" if tier.startswith("multi-honoree") else None)
+            if bucket is None:
+                continue
+            r = rows.setdefault(m["bioguide_id"], {
+                "bioguide_id": m["bioguide_id"], "name": m["name"],
+                "chamber": m["chamber"], "state": m["state"], "parties": [],
+                "direct": 0.0, "campaign-committee": 0.0, "leadership-pac": 0.0,
+                "jfc": 0.0, "multi": 0.0, "items": 0, "variants": {},
+                "inferred": False})
+            key = bucket if bucket in ATTRIB_TIERS else bucket
+            r[key] += it["amount"]
+            r["items"] += 1
+            pl, _src = resolver.party_at(m["bioguide_id"], it["date"] or None)
+            if pl not in r["parties"]:
+                r["parties"].append(pl)
+            v = r["variants"].setdefault(
+                (it["recipient"], tier, m["confidence"]), [0.0, 0])
+            v[0] += it["amount"]
+            v[1] += 1
+            if "inferred" in (m["confidence"] or "") or "prefix" in (m["confidence"] or ""):
+                r["inferred"] = True
+    out = []
+    for r in rows.values():
+        r["total_attributable"] = sum(r[t] for t in ATTRIB_TIERS)
+        r["party_bracket"] = f"({'>'.join(r['parties'])}-{r['state']})"
+        r["variants"] = [{"raw": k[0], "tier": k[1], "confidence": k[2],
+                          "total": v[0], "items": v[1]}
+                         for k, v in sorted(r["variants"].items(),
+                                            key=lambda kv: -kv[1][0])]
+        out.append(r)
+    # rank on the attributable total only — ordering by attributable+shared would
+    # implicitly sum unallocated money into the member (the conflation rule)
+    out.sort(key=lambda r: (-r["total_attributable"], -(r["jfc"] + r["multi"])))
+    return {"members": out[:top], "n_members": len(out),
+            "n_ambiguous_items": n_ambiguous}
 
 
 # ----------------------------------------------------------------- presentation
@@ -322,6 +418,33 @@ def render(res, ents, reg_names, label, data_root, types, since,
              "grouping — NOT entity-resolved; candidates/PACs are a separate namespace)")
     L.append("")
 
+    ru = res.get("member_rollup")
+    if ru:
+        L.append("── MEMBER ROLLUP (variants + support committees merged, per member) "
+                 + "─" * 11)
+        L.append("    member total = direct + campaign-cmte + leadership-PAC; "
+                 "JFC / multi-honoree shown alongside, shared & UNALLOCATED")
+        for r in ru["members"]:
+            title = "Sen." if r["chamber"] == "Senate" else "Rep."
+            parts = [f"direct {money(r['direct'])}"]
+            if r["campaign-committee"]:
+                parts.append(f"campaign {money(r['campaign-committee'])}")
+            if r["leadership-pac"]:
+                parts.append(f"ldpac {money(r['leadership-pac'])}")
+            shared = "".join(
+                f"  +{lbl} {money(r[k])} (unalloc)"
+                for k, lbl in (("jfc", "jfc-shared"), ("multi", "multi-honoree"))
+                if r[k])
+            flag = "  ⚠inferred" if r["inferred"] else ""
+            L.append(f"    {money(r['total_attributable']):>12}  "
+                     f"{title} {r['name']} {r['party_bracket']}  "
+                     f"[{' · '.join(parts)}]{shared}  "
+                     f"({len(r['variants'])} filed variants){flag}")
+        L.append(f"    ({ru['n_members']} members matched; "
+                 f"{ru['n_ambiguous_items']} items skipped as ambiguous names — "
+                 "reported, never merged; variants + confidence per row in --json)")
+        L.append("")
+
     if multi:
         L.append("── GIVING BY ENTITY " + "─" * 58)
         for r in res["per_entity"]:
@@ -365,6 +488,9 @@ def main():
     ap.add_argument("--limit", type=int, default=10)
     ap.add_argument("--data-root", default="../data/data")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--no-member-rollup", action="store_true",
+                    help="skip the per-member rollup (P6 member_resolve layer)")
+    ap.add_argument("--rollup-top", type=int, default=15)
     args = ap.parse_args()
 
     if args.names_file:
@@ -393,7 +519,9 @@ def main():
         reg_names = matched_registrant_names(con, keys) if keys else []
     # roster mode can also match many entities per line -> treat as multi
     multi = multi or len(ents) > 1 or (args.loose and len(reg_names) > 1)
-    res = giving(con, reg_names, types, args.since, args.top, args.limit) if reg_names else None
+    resolver = None if args.no_member_rollup else load_member_resolver(args.db)
+    res = giving(con, reg_names, types, args.since, args.top, args.limit,
+                 resolver=resolver, rollup_top=args.rollup_top) if reg_names else None
 
     if args.json:
         print(json.dumps({

@@ -42,7 +42,10 @@ needs the built DB, `fec_*` needs the external openFEC API, untokened scripts ar
 1. `lda-corpus-loader` — parse raw JSON/XML/JSONL → DuckDB; `show_record.py` resolves any citation key
    back to its raw record. In-place table adds: `backfill_press_issues.py`, `add_lobbying_freetext.py`.
 2. `lda-entity-resolver` — add `entities` / `entity_aliases` / `registrant_crosswalk` +
-   `v_client_canonical_spend`.
+   `v_client_canonical_spend`; its P6 member layer (`build_members.py`) adds `members_all` /
+   `member_terms` / `member_committees` from external sources (congress-legislators + FEC
+   committee files), and `member_resolve.py` is the shared person/committee resolver the
+   giving map's member rollup imports.
    - Then `lead-scanner`'s `lda_industry_map.py --build-tags` writes the `lobbying_issue_mentions`
      serving table — a research-driven enrichment, so it runs here, after the two above.
 
@@ -68,6 +71,8 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
     --data-root data/ --db db/lda.duckdb [--years 2025 2026] [--sample 2025-Q1]
 .venv/Scripts/python skills/lda-corpus-loader/scripts/show_record.py <citation-key>
 .venv/Scripts/python skills/lda-entity-resolver/scripts/resolve_entities.py --db db/lda_full.duckdb  # entities/aliases/crosswalk (+ --report)
+.venv/Scripts/python skills/lda-entity-resolver/scripts/build_members.py --db db/lda_full.duckdb  # members_all/member_terms/member_committees (P6; external sources, cached to out/)
+.venv/Scripts/python skills/lda-entity-resolver/scripts/member_resolve.py "Emmer for Congress"  # resolve a filed person/committee string (+ --date --json)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
 .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json

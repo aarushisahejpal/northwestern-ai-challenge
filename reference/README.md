@@ -23,3 +23,4 @@ existing brief rather than re-researching from zero.
 | Brief | Dataset | Informs |
 |---|---|---|
 | `fec-campaign-finance.md` | FEC campaign finance (openFEC API + bulk) | `skills/lead-scanner/scripts/fec_enrich.py`, LEDGER L031 |
+| `congress-legislators.md` | unitedstates/congress-legislators + FEC cm/ccl bulk | `skills/lda-entity-resolver/scripts/build_members.py` + `member_resolve.py` (P6) |

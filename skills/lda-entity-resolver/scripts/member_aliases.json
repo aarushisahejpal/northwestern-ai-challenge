@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "updated": "2026-07-09",
+  "note": "Curated additions for member/committee name resolution (P6). Same convention as bill_aliases.json / industry_lexicon.json: human-added entries with a source, versioned, precision over recall. nickname_pairs are GENERIC American first-name equivalences (promoted from the proven 2026-07-08 package matcher, out/packages/*/_build/enhance_giving.py); member_aliases maps a bioguide_id to extra full-name spellings seen in filings; committee_aliases maps a normalized recipient string (A-Z0-9 only) to an FEC committee_id when the filed string can't be matched mechanically.",
+  "nickname_pairs": [
+    ["TOM", "THOMAS"], ["CHUCK", "CHARLES"], ["JIM", "JAMES"], ["PAT", "PATRICK"],
+    ["MIKE", "MICHAEL"], ["BILL", "WILLIAM"], ["BOB", "ROBERT"], ["RICH", "RICHARD"],
+    ["RICK", "RICHARD"], ["DAN", "DANIEL"], ["JOE", "JOSEPH"], ["TONY", "ANTHONY"],
+    ["RANDY", "RANDALL"], ["KAT", "KATHERINE"], ["TED", "EDWARD"], ["STEVE", "STEVEN"],
+    ["STEVE", "STEPHEN"], ["DAVE", "DAVID"], ["GREG", "GREGORY"], ["RON", "RONALD"],
+    ["DON", "DONALD"], ["KEN", "KENNETH"], ["MITCH", "MITCHELL"], ["BEN", "BENJAMIN"],
+    ["SAM", "SAMUEL"], ["MARC", "MARCUS"], ["HANK", "HENRY"], ["TIM", "TIMOTHY"],
+    ["ROB", "ROBERT"],
+    ["ANDY", "ANDREW"], ["DEB", "DEBRA"], ["DEB", "DEBORAH"], ["DEBBIE", "DEBORAH"],
+    ["JON", "JONATHAN"], ["JERRY", "GERALD"], ["FRED", "FREDERICK"], ["NICK", "NICHOLAS"],
+    ["ED", "EDWARD"], ["ABE", "ABRAHAM"], ["GABE", "GABRIEL"], ["LIZ", "ELIZABETH"],
+    ["BETH", "ELIZABETH"], ["MAGGIE", "MARGARET"], ["BERNIE", "BERNARD"], ["JACK", "JOHN"],
+    ["JEFF", "JEFFREY"], ["JEFF", "JEFFERY"], ["MATT", "MATTHEW"], ["CHRIS", "CHRISTOPHER"],
+    ["ALEX", "ALEXANDER"], ["WILL", "WILLIAM"], ["RAY", "RAYMOND"], ["LOU", "LOUIS"],
+    ["VICKY", "VICTORIA"], ["CINDY", "CYNTHIA"]
+  ],
+  "member_aliases": {},
+  "committee_aliases": {}
+}

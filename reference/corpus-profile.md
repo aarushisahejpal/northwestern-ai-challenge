@@ -116,6 +116,30 @@ casing; they attach to senate entities only through the compound-key crosswalk, 
   several spellings), a player can under-count or appear twice. Documented limitation, not a silent
   gap (roadmap cleanup C / P6).
 
+### 4b. People + political committees (P6 member layer)
+
+Built by `lda-entity-resolver/scripts/build_members.py` from external sources (congress-legislators
++ FEC cm/ccl/cn bulk + one openFEC leadership-PAC sweep; briefs: `reference/congress-legislators.md`,
+`reference/fec-campaign-finance.md`). Resolved at query time by the shared
+`member_resolve.py` (imported by `lda_ld203_giving.py`'s member rollup).
+
+| Table | Grain |
+|---|---|
+| `members_all` | one member serving in the corpus window (current AND departed), keyed `bioguide_id` |
+| `member_terms` | one (term x party-affiliation period) — the party-as-of-date source |
+| `member_committees` | one (committee, supported member), tier = campaign-committee / leadership-pac / jfc |
+
+- **LD-203 recipient strings splinter per member** (five Emmer spellings understated him 35% until
+  member-keyed merging, 2026-07-08); merge on `bioguide_id` via `member_resolve.py`, never on the
+  raw string.
+- **Rollup, never conflation:** committee tiers report separately; JFC / multi-honoree dollars stay
+  `shared, unallocated`. Party committees + caucus institutions are never member-mapped.
+- **Ambiguity is a report, not a merge** — same-name pairs (the Menendezes; Dan vs Sanford D.
+  Bishop) return multiple matches; `SEN.`/`REP.` titles disambiguate by chamber (verified
+  2026-07-09; the old package matcher conflated both pairs).
+- These tables' raw-record pointer is the cached external download (`src_file` + fetch date in
+  `out/congress_legislators_cache/` / `out/fec_cache/`), not a corpus record.
+
 ## 5. Free-text / discovery surface
 
 - **`lobbying_freetext`** (+ FTS) — Senate activity descriptions + House `specific_issues` unioned into
