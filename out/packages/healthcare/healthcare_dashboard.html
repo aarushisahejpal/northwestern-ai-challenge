@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare Lobbying — State of the Industry</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  padding: 28px 20px 60px; line-height: 1.45;
+}
+.viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+  --seq-250: #86b6ef; --seq-400: #3987e5; --seq-550: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  .viz-root {
+    --page: #0d0d0d; --surface-1: #1a1a19;
+    --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+    --grid: #2c2c2a; --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+    --s5: #9085e9; --s6: #e66767;
+    --deemph: #4a4a46;
+  }
+}
+:root[data-theme="light"] .viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+}
+:root[data-theme="dark"] .viz-root {
+  --page: #0d0d0d; --surface-1: #1a1a19;
+  --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+  --grid: #2c2c2a; --baseline: #383835;
+  --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+  --s5: #9085e9; --s6: #e66767;
+  --deemph: #4a4a46;
+}
+:root[data-theme="light"] body, :root[data-theme="dark"] body { background: var(--page); }
+
+.wrap { max-width: 1060px; margin: 0 auto; }
+header.page { margin-bottom: 22px; }
+header.page h1 { font-size: 24px; font-weight: 650; letter-spacing: -0.01em; }
+header.page .sub { color: var(--ink-2); margin-top: 6px; max-width: 78ch; font-size: 14px; }
+header.page .meta { color: var(--ink-3); margin-top: 6px; font-size: 12px; }
+.theme-toggle {
+  float: right; font: inherit; font-size: 12px; color: var(--ink-2);
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 5px 10px; cursor: pointer;
+}
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.tile {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.tile .lbl { font-size: 12px; color: var(--ink-2); }
+.tile .val { font-size: 26px; font-weight: 600; margin-top: 3px; }
+.tile .note { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 18px 12px; margin: 16px 0;
+}
+.card h2 { font-size: 15.5px; font-weight: 650; }
+.card .sub { font-size: 12.5px; color: var(--ink-2); margin: 3px 0 4px; max-width: 90ch; }
+.card .foot { font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 2px; font-size: 12px; color: var(--ink-2); }
+.legend .key { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw-rect { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend .sw-line { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.chart-box { position: relative; }
+.chart-box svg { display: block; width: 100%; height: auto; }
+svg text { font-family: inherit; }
+.ax { font-size: 11px; fill: var(--ink-3); }
+.ax-tab { font-variant-numeric: tabular-nums; }
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.baseline { stroke: var(--baseline); stroke-width: 1; }
+.dlabel { font-size: 11px; fill: var(--ink-2); }
+.dlabel-strong { font-size: 11.5px; font-weight: 600; fill: var(--ink-1); }
+.blabel { font-size: 11px; pointer-events: none; }
+.crosshair { stroke: var(--baseline); stroke-width: 1; }
+.tt {
+  position: fixed; z-index: 40; pointer-events: none; display: none;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13); padding: 9px 11px; font-size: 12px;
+  max-width: 320px;
+}
+.tt .tt-title { color: var(--ink-3); font-size: 11px; margin-bottom: 5px; }
+.tt .row { display: flex; align-items: center; gap: 7px; margin-top: 3px; }
+.tt .k { width: 14px; height: 3px; border-radius: 2px; flex: none; }
+.tt .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tt .n { color: var(--ink-2); }
+details.tv { margin-top: 8px; }
+details.tv summary { font-size: 12px; color: var(--ink-2); cursor: pointer; }
+details.tv .scroll { overflow-x: auto; margin-top: 8px; }
+table.dt { border-collapse: collapse; font-size: 12px; min-width: 480px; }
+table.dt th, table.dt td { text-align: left; padding: 5px 12px 5px 0; border-bottom: 1px solid var(--grid); }
+table.dt td.num, table.dt th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.dt th { color: var(--ink-2); font-weight: 600; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+.caveats { font-size: 12.5px; color: var(--ink-2); }
+.caveats li { margin: 4px 0 4px 18px; }
+footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
+
+/* per-player raw-filings panel (crypto player map click-through) */
+.filings-panel {
+  font-size: 12.5px; color: var(--ink-2); margin: 10px 0 4px;
+  padding: 10px 12px; background: var(--page); border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.filings-panel strong { color: var(--ink-1); font-size: 13px; }
+.filings-scroll { max-height: 260px; overflow-y: auto; overflow-x: hidden; margin-top: 8px; }
+.filings-group { font-weight: 600; color: var(--ink-1); font-size: 12px; margin: 8px 0 2px; }
+.filings-group:first-child { margin-top: 0; }
+.filings-list { margin: 0; padding-left: 18px; }
+.filings-list li { margin: 1.5px 0; }
+.filings-list a { color: var(--ink-1); text-decoration: underline; text-underline-offset: 2px; }
+.filings-list a:hover { color: var(--ink-2); }
+.filings-panel .note { font-size: 11px; color: var(--ink-3); margin-top: 7px; }
+
+/* per-widget "more options" → query-info panel */
+.has-more { position: relative; }
+.more-btn {
+  position: absolute; top: 10px; right: 10px; width: 28px; height: 22px;
+  line-height: 1; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface-1); color: var(--ink-2); cursor: pointer;
+  opacity: 0; transition: opacity .12s; font-size: 14px; padding: 0; z-index: 20;
+}
+.has-more:hover .more-btn, .more-btn:focus-visible,
+.more-btn[aria-expanded="true"] { opacity: 1; }
+.more-menu {
+  position: absolute; top: 34px; right: 10px; z-index: 30;
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.14); padding: 4px;
+}
+.more-item {
+  display: block; width: 100%; text-align: left; background: none; border: none;
+  padding: 6px 12px; font-size: 12.5px; color: var(--ink-1); cursor: pointer;
+  border-radius: 5px; white-space: nowrap;
+}
+.more-item:hover { background: var(--page); }
+.qmodal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 100;
+  display: flex; align-items: center; justify-content: center; padding: 26px;
+}
+.qmodal {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  max-width: 940px; width: 100%; max-height: 86vh; display: flex; flex-direction: column;
+  box-shadow: 0 12px 44px rgba(0,0,0,.32); font-size: 12px; color: var(--ink-2);
+}
+.qmodal .qp-head { padding: 12px 16px; border-bottom: 1px solid var(--border); flex: none; }
+.qmodal-body { padding: 8px 16px 14px; overflow-y: auto; }
+.qmodal-foot {
+  padding: 9px 16px; border-top: 1px solid var(--border); flex: none;
+  font-size: 11.5px; color: var(--ink-3);
+}
+.qmodal-foot a { color: var(--ink-1); text-decoration: underline; text-underline-offset: 2px; }
+.qp-head { display: flex; justify-content: space-between; align-items: center; }
+.qp-head strong { color: var(--ink-1); font-size: 12.5px; }
+.qp-close { background: none; border: none; font-size: 17px; color: var(--ink-2); cursor: pointer; padding: 0 4px; }
+.qp-note { margin-top: 6px; font-size: 11.5px; color: var(--ink-3); }
+.qp-block-head {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  margin-top: 10px; font-weight: 600; font-size: 11.5px; color: var(--ink-1);
+}
+.qp-copy {
+  font-size: 11px; border: 1px solid var(--border); background: var(--surface-1);
+  border-radius: 5px; padding: 1px 8px; cursor: pointer; color: var(--ink-2); flex: none;
+}
+.qp-sql {
+  margin: 4px 0 0; padding: 8px 10px; background: var(--surface-1);
+  border: 1px solid var(--border); border-radius: 7px; max-height: 300px;
+  overflow-y: auto; white-space: pre-wrap; word-break: break-word;
+  font-size: 11px; line-height: 1.45; color: var(--ink-1);
+  font-family: ui-monospace, Consolas, monospace;
+}
+.kpis.has-more { padding-top: 2px; }
+
+/* quarter switcher (turnover beat report) */
+.seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 14px; }
+.seg button {
+  font: inherit; font-size: 12.5px; padding: 6px 16px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface-1);
+  color: var(--ink-2); cursor: pointer;
+}
+.seg button.active { color: var(--ink-1); border-color: var(--ink-3); font-weight: 650; }
+
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <button class="theme-toggle" id="themeToggle" type="button">Toggle light/dark</button>
+    <h1>Healthcare Lobbying — State of the Industry</h1>
+    <div class="sub">The largest standing lobbying operation in Washington: who the players are, what kind of health issues they file on, which bills they crowd onto, and who the industry gives money to.</div>
+    <div class="meta">Generated 2026-07-09 · Source: Senate LDA filings 2022–2026 Q1 (senate-primary, amendment-deduped), LD-203 contribution reports, congressional press releases. Unverified research output for team review — every table row traces to records via the CSVs in <code>data/</code>.</div>
+  </header>
+  <main id="app"></main>
+  <footer class="page">Built from db/lda_full.duckdb · See README.md in this package for method, caveats, and how to QA any number here.</footer>
+</div>
+<script>
+/* Tiny self-contained chart lib — SVG, theme-aware via CSS vars, hover layer + table views. */
+"use strict";
+const NS = "http://www.w3.org/2000/svg";
+const SLOT = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)"];
+// per-slot in-mark label ink (yellow/aqua too light for white text)
+const SLOT_LABEL = ["#ffffff", "#08351f", "#3a2800", "#ffffff", "#ffffff", "#ffffff"];
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function div(cls, parent, text) {
+  const d = document.createElement("div");
+  if (cls) d.className = cls;
+  if (text != null) d.textContent = text;
+  if (parent) parent.appendChild(d);
+  return d;
+}
+function fmtMoney(v) {
+  if (v == null || isNaN(v)) return "–";
+  const a = Math.abs(v), s = v < 0 ? "-" : "";
+  if (a >= 995e6) return s + "$" + (a / 1e9).toFixed(a >= 9.95e9 ? 0 : 1) + "B";
+  if (a >= 995e3) return s + "$" + (a / 1e6).toFixed(a >= 9.95e6 ? 0 : 1) + "M";
+  if (a >= 1e3) return s + "$" + Math.round(a / 1e3) + "K";
+  return s + "$" + Math.round(a);
+}
+function fmtNum(v) {
+  if (v == null || isNaN(v)) return "–";
+  return Number(v).toLocaleString("en-US");
+}
+function fmtPct(v) { return v == null ? "–" : v.toFixed(v < 10 ? 1 : 0) + "%"; }
+function niceTicks(max, n) {
+  if (max <= 0) return [0, 1];
+  const raw = max / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => max / s <= n) || 10 * mag;
+  const ticks = [];
+  for (let v = 0; v <= max * 1.0001 + step * 0.999; v += step) { ticks.push(v); if (v >= max) break; }
+  return ticks;
+}
+
+/* singleton tooltip */
+let TT = null;
+function tt() {
+  if (!TT) { TT = div("tt", document.body); }
+  return TT;
+}
+function ttShow(x, y, titleText, rows) {
+  const t = tt();
+  t.innerHTML = "";
+  if (titleText) div("tt-title", t, titleText);
+  for (const r of rows) {
+    const row = div("row", t);
+    if (r.color) { const k = div("k", row); k.style.background = r.color; }
+    const v = document.createElement("span"); v.className = "v"; v.textContent = r.value; row.appendChild(v);
+    const n = document.createElement("span"); n.className = "n"; n.textContent = r.name; row.appendChild(n);
+  }
+  t.style.display = "block";
+  const bw = t.offsetWidth, bh = t.offsetHeight;
+  let px = x + 14, py = y + 12;
+  if (px + bw > innerWidth - 8) px = x - bw - 14;
+  if (py + bh > innerHeight - 8) py = y - bh - 12;
+  t.style.left = px + "px"; t.style.top = py + "px";
+}
+function ttHide() { if (TT) TT.style.display = "none"; }
+
+function legend(parent, items, kind) {
+  const lg = div("legend", parent);
+  for (const it of items) {
+    const k = div("key", lg);
+    const sw = div(kind === "line" ? "sw-line" : "sw-rect", k);
+    sw.style.background = it.color;
+    k.appendChild(document.createTextNode(it.name));
+  }
+  return lg;
+}
+
+function tableView(parent, cols, rows, fmts) {
+  const det = document.createElement("details"); det.className = "tv"; parent.appendChild(det);
+  const sum = document.createElement("summary"); sum.textContent = "Table view"; det.appendChild(sum);
+  const scroll = div("scroll", det);
+  const tb = document.createElement("table"); tb.className = "dt"; scroll.appendChild(tb);
+  const trh = tb.insertRow();
+  cols.forEach((c, i) => {
+    const th = document.createElement("th"); th.textContent = c;
+    if (fmts && fmts[i] !== "s") th.className = "num";
+    trh.appendChild(th);
+  });
+  for (const r of rows) {
+    const tr = tb.insertRow();
+    r.forEach((v, i) => {
+      const td = tr.insertCell();
+      const f = fmts ? fmts[i] : "s";
+      td.textContent = f === "$" ? fmtMoney(v) : f === "#" ? fmtNum(v) : f === "%" ? (v == null ? "–" : v + "%") : (v == null ? "–" : v);
+      if (f !== "s") td.className = "num";
+    });
+  }
+}
+
+function card(root, title, sub, foot) {
+  const c = div("card", root);
+  const h = document.createElement("h2"); h.textContent = title; c.appendChild(h);
+  if (sub) div("sub", c, sub);
+  const box = div("chart-box", c);
+  if (foot) { const f = div("foot", c, foot); c.appendChild(f); }
+  return { cardEl: c, box: box };
+}
+
+function statTiles(root, tiles) {
+  const k = div("kpis", root);
+  for (const t of tiles) {
+    const tile = div("tile", k);
+    div("lbl", tile, t.label);
+    div("val", tile, t.value);
+    if (t.note) div("note", tile, t.note);
+  }
+  return k;
+}
+
+/* ---- per-widget "more options" → query-info panel (debugging aid) ----
+   info = { title, note, blocks: [{label, text}] } — text is the ACTUAL SQL /
+   pipeline the widget's numbers came from (extracted from the build scripts). */
+function moreOptions(host, info) {
+  if (!host || !info) return;
+  host.classList.add("has-more");
+  const btn = document.createElement("button");
+  btn.className = "more-btn"; btn.type = "button"; btn.textContent = "⋯";
+  btn.title = "More options";
+  btn.setAttribute("aria-label", "More options");
+  btn.setAttribute("aria-expanded", "false");
+  host.appendChild(btn);
+  const menu = div("more-menu", host);
+  menu.style.display = "none";
+  const item = document.createElement("button");
+  item.type = "button"; item.className = "more-item";
+  item.textContent = "View query info";
+  menu.appendChild(item);
+  btn.addEventListener("click", ev => {
+    ev.stopPropagation();
+    const open = menu.style.display !== "none";
+    menu.style.display = open ? "none" : "block";
+    btn.setAttribute("aria-expanded", String(!open));
+  });
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+  });
+  item.addEventListener("click", ev => {
+    ev.stopPropagation();
+    menu.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+    openQueryModal(info, btn);
+  });
+}
+
+function openQueryModal(info, returnFocus) {
+  const overlay = div("qmodal-overlay", document.body);
+  const modal = div("qmodal", overlay);
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", info.title || "Query info");
+  const head = div("qp-head", modal);
+  const t = document.createElement("strong");
+  t.textContent = info.title || "Query info"; head.appendChild(t);
+  const close = document.createElement("button");
+  close.type = "button"; close.className = "qp-close"; close.textContent = "×";
+  close.setAttribute("aria-label", "Close query info");
+  head.appendChild(close);
+  const body = div("qmodal-body", modal);
+  if (info.note) div("qp-note", body, info.note);
+  for (const b of (info.blocks || [])) {
+    const bh = div("qp-block-head", body);
+    const lbl = document.createElement("span");
+    lbl.textContent = b.label; bh.appendChild(lbl);
+    const pre = document.createElement("pre");
+    pre.className = "qp-sql"; pre.textContent = b.text;
+    const cp = document.createElement("button");
+    cp.type = "button"; cp.className = "qp-copy"; cp.textContent = "Copy";
+    cp.addEventListener("click", () => {
+      const done = () => { cp.textContent = "Copied"; setTimeout(() => { cp.textContent = "Copy"; }, 1200); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(b.text).then(done, () => {});
+      } else {
+        const r = document.createRange(); r.selectNodeContents(pre);
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+    });
+    bh.appendChild(cp);
+    body.appendChild(pre);
+  }
+  if (info.dict) {
+    const foot = div("qmodal-foot", modal);
+    foot.appendChild(document.createTextNode("Every table and column referenced here is defined in the data dictionary: "));
+    const a = document.createElement("a");
+    a.href = info.dict; a.textContent = info.dict;
+    foot.appendChild(a);
+    foot.appendChild(document.createTextNode(" (in this package, next to the dashboard)."));
+  }
+  const onKey = ev => { if (ev.key === "Escape") closeModal(); };
+  function closeModal() {
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+    if (returnFocus) returnFocus.focus();
+  }
+  close.addEventListener("click", closeModal);
+  overlay.addEventListener("click", ev => { if (ev.target === overlay) closeModal(); });
+  document.addEventListener("keydown", onKey);
+  close.focus();
+}
+
+/* ---- line panel: series share one x; crosshair + all-series tooltip ---- */
+function linePanel(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 240, mL = 46, mR = cfg.marginRight || 76, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const maxV = cfg.max || Math.max(...cfg.series.flatMap(s => s.values.filter(v => v != null))) * 1.08;
+  const ticks = niceTicks(maxV, 4);
+  const yMax = ticks[ticks.length - 1];
+  const X = i => mL + (n === 1 ? pw / 2 : (i * pw) / (n - 1));
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : cfg.fmt === "%" ? tv + "%" : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: X(i), y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  const placedLabels = [];
+  cfg.series.forEach((s, si) => {
+    const col = s.color || SLOT[si];
+    const pts = s.values.map((v, i) => (v == null ? null : [X(i), Y(v)]));
+    let d = "";
+    pts.forEach(p => { if (p) d += (d ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); });
+    const path = el("path", { d, fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    path.style.stroke = col;
+    const last = pts.map((p, i) => (p ? i : -1)).filter(i => i >= 0).pop();
+    if (last != null) {
+      const ring = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 6 }, svg);
+      ring.style.fill = "var(--surface-1)";
+      const dot = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 4 }, svg);
+      dot.style.fill = col;
+      const ly = pts[last][1] + 4;
+      // when end-labels collide, fall back to legend + tooltip (skip the label)
+      if (!placedLabels.some(p => Math.abs(p - ly) < 14)) {
+        const lb = el("text", { x: pts[last][0] + 10, y: ly, class: "dlabel-strong" }, svg);
+        lb.textContent = (cfg.endLabel === "name" ? s.name : (cfg.fmt === "$" ? fmtMoney(s.values[last]) : cfg.fmt === "%" ? s.values[last] + "%" : fmtNum(s.values[last])));
+        placedLabels.push(ly);
+      }
+    }
+  });
+  /* crosshair + tooltip (+ optional per-x click via cfg.onClick(i, xLabel)) */
+  const ch = el("line", { y1: mT, y2: mT + ph, class: "crosshair", visibility: "hidden" }, svg);
+  const hit = el("rect", { x: mL, y: mT, width: pw, height: ph, fill: "transparent" }, svg);
+  const idxAt = ev => {
+    const r = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - r.left) / r.width) * W;
+    let i = Math.round(((fx - mL) / pw) * (n - 1));
+    return Math.max(0, Math.min(n - 1, i));
+  };
+  hit.addEventListener("pointermove", ev => {
+    const i = idxAt(ev);
+    ch.setAttribute("x1", X(i)); ch.setAttribute("x2", X(i));
+    ch.setAttribute("visibility", "visible");
+    if (cfg.onClick) hit.style.cursor = "pointer";
+    ttShow(ev.clientX, ev.clientY, xs[i], cfg.series.map((s, si) => ({
+      color: s.color || SLOT[si],
+      value: s.values[i] == null ? "–" : cfg.fmt === "$" ? fmtMoney(s.values[i]) : cfg.fmt === "%" ? s.values[i] + "%" : fmtNum(s.values[i]),
+      name: s.name
+    })));
+  });
+  hit.addEventListener("pointerleave", () => { ch.setAttribute("visibility", "hidden"); ttHide(); });
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => cfg.onClick(idxAt(ev), xs[idxAt(ev)]));
+  }
+}
+
+/* ---- columns (single series or stacked) ---- */
+function columns(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 250, mL = 46, mR = 14, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const series = cfg.series; // [{name,color,values}]
+  const totals = xs.map((_, i) => series.reduce((a, s) => a + (s.values[i] || 0), 0));
+  const ticks = niceTicks(Math.max(...totals) * 1.05, 4);
+  const yMax = ticks[ticks.length - 1];
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const band = pw / n, bw = Math.min(24, band * 0.55);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: mL + band * i + band / 2, y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  xs.forEach((lab, i) => {
+    const cx = mL + band * i + band / 2;
+    let acc = 0;
+    series.forEach((s, si) => {
+      const v = s.values[i] || 0;
+      if (v <= 0) { return; }
+      const y1 = Y(acc + v), y0 = Y(acc);
+      const hpx = Math.max(0, y0 - y1 - (si < series.length - 1 && acc + v < totals[i] ? 2 : 0)); // 2px surface gap
+      const isTop = acc + v >= totals[i] - 1e-9;
+      const rTop = isTop ? 4 : 0;
+      const x0 = cx - bw / 2;
+      const p = el("path", {
+        d: `M${x0} ${y0} L${x0} ${y1 + rTop} Q${x0} ${y1} ${x0 + rTop} ${y1} L${x0 + bw - rTop} ${y1} Q${x0 + bw} ${y1} ${x0 + bw} ${y1 + rTop} L${x0 + bw} ${y0} Z`
+      }, svg);
+      p.style.fill = s.color || SLOT[si];
+      acc += v;
+    });
+    const hit = el("rect", { x: mL + band * i, y: mT, width: band, height: ph, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = series.map((s, si) => ({
+        color: s.color || SLOT[si],
+        value: cfg.fmt === "$" ? fmtMoney(s.values[i]) : fmtNum(s.values[i]),
+        name: s.name
+      }));
+      if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      ttShow(ev.clientX, ev.clientY, lab, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- horizontal bars ---- */
+function hbars(box, cfg) {
+  const items = cfg.items; // [{label, value, value2?, note?, color?}]
+  const W = cfg.width || 980, rowH = cfg.rowH || 30, mL = cfg.labelW || 300, mR = cfg.width ? 64 : 90, mT = 6, mB = 8;
+  const H = mT + rowH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.map(d => d.value)) * 1.02;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  items.forEach((d, i) => {
+    const y = mT + i * rowH + (rowH - Math.min(20, rowH - 8)) / 2;
+    const bh = Math.min(20, rowH - 8);
+    const w = Math.max(1.5, (d.value / maxV) * pw);
+    const p = el("path", {
+      d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z`
+    }, svg);
+    p.style.fill = d.color || cfg.color || SLOT[0];
+    const maxChars = Math.floor((mL - 14) / 6.4);
+    const lb = el("text", { x: mL - 10, y: y + bh / 2 + 4, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel-strong ax-tab" }, svg);
+    vl.textContent = cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value);
+    const hit = el("rect", { x: 0, y: mT + i * rowH, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [{ color: d.color || cfg.color || SLOT[0], value: cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value), name: cfg.valueName || "value" }];
+      if (d.note) rows.push({ color: null, value: "", name: d.note });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(d, i));
+  });
+}
+
+/* ---- grouped horizontal bars (2 series) ---- */
+function groupedHBars(box, cfg) {
+  const items = cfg.items; // [{label, a, b}]
+  const W = cfg.width || 980, groupH = 44, mL = cfg.labelW || 300, mR = cfg.width ? 66 : 96, mT = 6, mB = 8;
+  const H = mT + groupH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.flatMap(d => [d.a, d.b])) * 1.02;
+  const F = v => cfg.fmt === "#" ? fmtNum(v) : cfg.fmt === "%" ? fmtPct(v) : fmtMoney(v); // default "$" (existing pages unchanged)
+  const colA = cfg.aColor || SLOT[0], colB = cfg.bColor || SLOT[1];
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  const maxChars = Math.floor((mL - 14) / 6.4);
+  items.forEach((d, i) => {
+    const y0 = mT + i * groupH;
+    [["a", colA, cfg.aName, 4], ["b", colB, cfg.bName, 24]].forEach(([k, col, nm, dy]) => {
+      const v = d[k], bh = 14;
+      const w = Math.max(1.5, (v / maxV) * pw);
+      const y = y0 + dy;
+      const p = el("path", { d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z` }, svg);
+      p.style.fill = col;
+      const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel ax-tab" }, svg);
+      vl.textContent = F(v);
+    });
+    const lb = el("text", { x: mL - 10, y: y0 + groupH / 2 + 2, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const hit = el("rect", { x: 0, y: y0, width: W, height: groupH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [
+        { color: colA, value: F(d.a), name: cfg.aName },
+        { color: colB, value: F(d.b), name: cfg.bName }
+      ];
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(d, i));
+  });
+}
+
+/* ---- bubble pack (greedy spiral, collision-free) ---- */
+function bubblePack(box, cfg) {
+  const items = cfg.items.slice().sort((p, q) => q.r0 - p.r0); // r0 = raw size value
+  const W = 980, H = cfg.height || 430;
+  const maxV = Math.max(...items.map(d => d.r0));
+  const R = v => 6 + 52 * Math.sqrt(v / maxV);
+  const placed = [];
+  const cx0 = W / 2, cy0 = H / 2;
+  for (const d of items) {
+    const r = R(d.r0);
+    let ok = false, x = cx0, y = cy0;
+    for (let a = 0, sp = 0; sp < 5200; sp += 4) {
+      a = sp * 0.055;
+      const rad = sp * 0.115;
+      x = cx0 + rad * Math.cos(a) * 1.55;
+      y = cy0 + rad * Math.sin(a) * 0.8;
+      if (x - r < 6 || x + r > W - 6 || y - r < 6 || y + r > H - 6) continue;
+      ok = placed.every(p => {
+        const dx = p.x - x, dy = p.y - y;
+        return dx * dx + dy * dy >= (p.r + r + 2.5) * (p.r + r + 2.5);
+      });
+      if (ok) break;
+    }
+    if (ok) placed.push({ x, y, r, d });
+  }
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  const measure = el("text", { x: -1000, y: -1000, class: "blabel" }, svg);
+  for (const p of placed) {
+    const c = el("circle", { cx: p.x, cy: p.y, r: p.r }, svg);
+    c.style.fill = SLOT[p.d.slot];
+    c.style.stroke = "var(--surface-1)"; c.style.strokeWidth = "2";
+    // label only if it fits
+    measure.textContent = p.d.short || p.d.label;
+    const tw = measure.getComputedTextLength ? 0 : 0; // measured after attach below
+  }
+  // second pass for labels (needs layout)
+  requestAnimationFrame(() => {
+    for (const p of placed) {
+      const name = p.d.short || p.d.label;
+      measure.textContent = name;
+      let tw = 60;
+      try { tw = measure.getComputedTextLength(); } catch (e) {}
+      if (tw < p.r * 1.75 && p.r > 15) {
+        const t = el("text", { x: p.x, y: p.y + (p.r > 26 ? -2 : 4), "text-anchor": "middle", class: "blabel" }, svg);
+        t.textContent = name;
+        t.style.fill = SLOT_LABEL[p.d.slot];
+        if (p.r > 26) {
+          const t2 = el("text", { x: p.x, y: p.y + 13, "text-anchor": "middle", class: "blabel" }, svg);
+          t2.textContent = cfg.fmtSize === "$" ? fmtMoney(p.d.r0) : fmtNum(p.d.r0);
+          t2.style.fill = SLOT_LABEL[p.d.slot];
+          t2.style.opacity = "0.85";
+        }
+      }
+    }
+    measure.remove();
+  });
+  /* nearest-circle hover (+ optional click-through via cfg.onClick) */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  const nearest = ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    return bd < 14 ? best : null;
+  };
+  hit.addEventListener("pointermove", ev => {
+    const best = nearest(ev);
+    if (best) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+      if (cfg.onClick) hit.style.cursor = "pointer";
+    } else {
+      ttHide();
+      hit.style.cursor = "";
+    }
+  });
+  hit.addEventListener("pointerleave", ttHide);
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => {
+      const best = nearest(ev);
+      if (best) cfg.onClick(best.d);
+    });
+  }
+}
+
+</script>
+<script>
+const DATA = {"kpis": [{"label": "Health-coded filings per quarter", "value": "~4,000", "note": "stable 2022–24; 2025 peak 4,384 (+9%)"}, {"label": "Canonical spend of health-active clients, 2025", "value": "$1.69B", "note": "all-issue spend of clients filing on health that quarter"}, {"label": "Peak press share, 2025-Q4", "value": "28.8%", "note": "of ALL member releases — Medicaid + ACA-subsidy fight"}, {"label": "Disclosed LD-203 giving (top-150 orgs)", "value": "$107.8M", "note": "2022–25; AHA is the top giver at $9.7M"}], "players": [{"name": "Pharmaceutical Research and Manufacturers of America", "short": "PhRMA", "spend": 136490000.0, "share": 68.8, "filings": 458, "cls": 0}, {"name": "AMERICAN HOSPITAL ASSOCIATION", "short": "Am. Hospital Assn", "spend": 102940000.0, "share": 51.1, "filings": 100, "cls": 0}, {"name": "American Medical Association", "short": "AMA", "spend": 96520000.0, "share": 49.0, "filings": 85, "cls": 1}, {"name": "AARP", "short": "AARP", "spend": 77050000.0, "share": 23.4, "filings": 100, "cls": 1}, {"name": "America's Health Insurance Plans (AHIP)", "short": "AHIP", "spend": 60650000.0, "share": 71.6, "filings": 167, "cls": 0}, {"name": "Pharmaceutical Care Management Association", "short": "PCMA", "spend": 55697623.0, "share": 96.3, "filings": 94, "cls": 0}, {"name": "Boeing Company", "short": "Boeing", "spend": 53190000.0, "share": 7.2, "filings": 31, "cls": 2}, {"name": "Altria Client Services LLC", "short": "Altria Client", "spend": 52850000.0, "share": 7.6, "filings": 67, "cls": 2}, {"name": "Pfizer, Inc.", "short": "Pfizer", "spend": 51450000.0, "share": 43.4, "filings": 204, "cls": 1}, {"name": "Amgen Inc.", "short": "Amgen", "spend": 48910000.0, "share": 59.3, "filings": 364, "cls": 0}, {"name": "CVS Health", "short": "CVS Health", "spend": 44550000.0, "share": 59.6, "filings": 146, "cls": 0}, {"name": "Merck & Co., Inc.", "short": "Merck &", "spend": 42660000.0, "share": 61.6, "filings": 159, "cls": 0}, {"name": "Genentech, Inc.", "short": "Genentech", "spend": 41580000.0, "share": 59.0, "filings": 278, "cls": 0}, {"name": "Oracle Corporation", "short": "Oracle", "spend": 40060000.0, "share": 7.4, "filings": 58, "cls": 2}, {"name": "Apple Inc.", "short": "Apple", "spend": 39930000.0, "share": 6.1, "filings": 38, "cls": 2}, {"name": "The Cigna Group and subsidiaries (Formerly Cigna Corporation and subsidiaries)", "short": "The Cigna", "spend": 39140000.0, "share": 63.1, "filings": 52, "cls": 0}, {"name": "Eli Lilly and Company", "short": "Eli Lilly and", "spend": 36948210.0, "share": 57.3, "filings": 138, "cls": 0}, {"name": "Biotechnology Innovation Organization", "short": "BIO", "spend": 36180000.0, "share": 38.9, "filings": 153, "cls": 1}, {"name": "Gilead Sciences, Inc.", "short": "Gilead Sciences", "spend": 36144000.0, "share": 67.5, "filings": 202, "cls": 0}, {"name": "UnitedHealth Group, Inc.", "short": "UnitedHealth", "spend": 35700000.0, "share": 83.9, "filings": 163, "cls": 0}, {"name": "Johnson & Johnson Services, Inc.", "short": "Johnson &", "spend": 34240000.0, "share": 45.3, "filings": 209, "cls": 1}, {"name": "Bayer Corporation", "short": "Bayer", "spend": 33030000.0, "share": 19.7, "filings": 85, "cls": 2}, {"name": "American Cancer Society Cancer Action Network, Inc.", "short": "American Cancer", "spend": 31970000.0, "share": 39.2, "filings": 46, "cls": 1}, {"name": "Walmart Inc.", "short": "Walmart", "spend": 31210000.0, "share": 6.5, "filings": 51, "cls": 2}, {"name": "Bristol-Myers Squibb Company", "short": "Bristol-Myers", "spend": 30960000.0, "share": 64.6, "filings": 127, "cls": 0}, {"name": "Elevance Health, Inc.", "short": "Elevance Health", "spend": 29940000.0, "share": 71.3, "filings": 114, "cls": 0}, {"name": "Novartis", "short": "Novartis", "spend": 29088000.0, "share": 48.5, "filings": 164, "cls": 1}, {"name": "Aflac, Inc.", "short": "Aflac", "spend": 28900000.0, "share": 30.0, "filings": 81, "cls": 1}, {"name": "Fresenius Medical Care North America", "short": "Fresenius Medical", "spend": 26930000.0, "share": 83.6, "filings": 145, "cls": 0}, {"name": "National Association of Children's Hospitals", "short": "National", "spend": 26205000.0, "share": 57.7, "filings": 50, "cls": 0}, {"name": "Blue Cross and Blue Shield Association", "short": "BCBSA", "spend": 25720000.0, "share": 77.9, "filings": 51, "cls": 0}, {"name": "Sanofi US Services Inc.", "short": "Sanofi US", "spend": 24535000.0, "share": 40.4, "filings": 74, "cls": 1}, {"name": "AbbVie Inc.", "short": "AbbVie", "spend": 24070000.0, "share": 63.1, "filings": 135, "cls": 0}, {"name": "Novo Nordisk Inc.", "short": "Novo Nordisk", "spend": 22689615.0, "share": 62.7, "filings": 164, "cls": 0}, {"name": "Humana, Inc.", "short": "Humana", "spend": 22430000.0, "share": 73.2, "filings": 89, "cls": 0}, {"name": "American Association for Justice", "short": "American", "spend": 21830000.0, "share": 9.2, "filings": 36, "cls": 2}, {"name": "RAI Services Company", "short": "RAI Services", "spend": 20930040.0, "share": 5.2, "filings": 38, "cls": 2}, {"name": "KAISER FOUNDATION HEALTH PLAN INC", "short": "KAISER FOUNDATION", "spend": 20840000.0, "share": 46.9, "filings": 21, "cls": 1}, {"name": "GSK (FKA GLAXOSMITHKLINE INC.)", "short": "GSK", "spend": 20840000.0, "share": 45.7, "filings": 24, "cls": 1}, {"name": "Boehringer Ingelheim USA Corporation", "short": "Boehringer", "spend": 20620000.0, "share": 39.9, "filings": 59, "cls": 1}, {"name": "Centene Corporation", "short": "Centene", "spend": 19340000.0, "share": 85.0, "filings": 104, "cls": 0}, {"name": "Health Care Service Corporation, a Mutual Legal Reserve Company (HCSC)", "short": "Health Care", "spend": 19260000.0, "share": 72.3, "filings": 29, "cls": 0}, {"name": "AstraZeneca Pharmaceuticals LP", "short": "AstraZeneca", "spend": 19080000.0, "share": 62.0, "filings": 51, "cls": 0}, {"name": "DaVita Inc.", "short": "DaVita", "spend": 17810000.0, "share": 80.8, "filings": 140, "cls": 0}, {"name": "Takeda Pharmaceuticals America, Inc.", "short": "Takeda", "spend": 17770000.0, "share": 49.8, "filings": 94, "cls": 1}, {"name": "Abbott Laboratories", "short": "Abbott", "spend": 17492496.0, "share": 44.7, "filings": 116, "cls": 1}, {"name": "Biogen, Inc.", "short": "Biogen", "spend": 17410000.0, "share": 74.4, "filings": 94, "cls": 0}, {"name": "Medtronic, Inc.", "short": "Medtronic", "spend": 17409650.0, "share": 36.5, "filings": 92, "cls": 1}, {"name": "American Health Care Association", "short": "American Health", "spend": 16520000.0, "share": 67.0, "filings": 145, "cls": 0}, {"name": "HCA Healthcare", "short": "HCA Healthcare", "spend": 16370000.0, "share": 84.0, "filings": 46, "cls": 0}, {"name": "Vertex Pharmaceuticals Incorporated", "short": "Vertex", "spend": 15430000.0, "share": 69.7, "filings": 145, "cls": 0}, {"name": "Alzheimer's Association", "short": "Alzheimer's", "spend": 15043000.0, "share": 54.7, "filings": 50, "cls": 0}, {"name": "American Academy of Family Physicians", "short": "American Academy", "spend": 14712304.0, "share": 50.3, "filings": 43, "cls": 0}, {"name": "United Services Automobile Association", "short": "United Services", "spend": 14580000.0, "share": 7.5, "filings": 35, "cls": 2}, {"name": "SELECT MEDICAL HOLDINGS CORPORATION", "short": "SELECT MEDICAL", "spend": 14570000.0, "share": 100.0, "filings": 17, "cls": 0}], "trend": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "filings": [4104, 4138, 4096, 4013, 3919, 3962, 3998, 4028, 4044, 4029, 4025, 3986, 4067, 4314, 4384, 4363, 3852], "clients": [2985, 3013, 2972, 2907, 2854, 2889, 2916, 2941, 2967, 2978, 2966, 2926, 2966, 3163, 3193, 3202, 2825], "spend": [426470745.0, 383365764.0, 414788172.0, 411539586.0, 403320539.0, 359858508.0, 351678003.0, 382395579.0, 425593979.0, 387939137.0, 353700363.0, 372307899.0, 432913549.0, 434432970.0, 401867960.0, 415870889.0, 445072401.0]}, "codeTrend": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "HCR": [3375, 3396, 3355, 3294, 3195, 3228, 3266, 3285, 3302, 3282, 3275, 3264, 3273, 3441, 3484, 3484, 3083], "MMM": [1571, 1582, 1581, 1568, 1527, 1564, 1567, 1566, 1556, 1556, 1553, 1552, 1610, 1690, 1727, 1723, 1530], "PHA": [272, 279, 286, 269, 267, 271, 281, 282, 277, 283, 279, 277, 265, 298, 334, 322, 303], "MED": [318, 327, 324, 307, 285, 294, 288, 293, 298, 302, 286, 280, 273, 300, 308, 304, 280]}, "press": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "share": [18.31, 17.25, 22.21, 19.08, 18.15, 18.89, 19.07, 13.6, 17.46, 15.21, 15.74, 16.73, 21.57, 22.5, 24.93, 28.77, 20.43], "n": [923, 882, 1160, 825, 1434, 1514, 1313, 1013, 1532, 1441, 1244, 909, 2971, 2874, 2779, 3057, 2343], "all": [5041, 5114, 5223, 4324, 7899, 8015, 6885, 7450, 8772, 9476, 7902, 5433, 13772, 12775, 11147, 10624, 11466]}, "topBills": [{"bill": "HR1", "clients": 792, "filings": 2591, "hint": "2025 reconciliation (Medicaid changes)"}, {"bill": "HR5376", "clients": 598, "filings": 3182, "hint": "Inflation Reduction Act (drug pricing)"}, {"bill": "HR2617", "clients": 538, "filings": 919, "hint": ""}, {"bill": "HR2471", "clients": 352, "filings": 752, "hint": ""}, {"bill": "HR4366", "clients": 264, "filings": 584, "hint": ""}, {"bill": "HR5378", "clients": 257, "filings": 1611, "hint": ""}, {"bill": "HR10545", "clients": 255, "filings": 375, "hint": ""}, {"bill": "HR8295", "clients": 236, "filings": 578, "hint": ""}, {"bill": "HR1968", "clients": 235, "filings": 471, "hint": ""}, {"bill": "S3799", "clients": 225, "filings": 888, "hint": ""}, {"bill": "S2587", "clients": 220, "filings": 610, "hint": ""}, {"bill": "HR6833", "clients": 212, "filings": 523, "hint": ""}], "givingOrgs": [{"name": "American Hospital Association", "total": 9693241.0, "focused": true}, {"name": "AARP", "total": 7956043.0, "focused": false}, {"name": "Altria Client Services LLC", "total": 6520537.0, "focused": false}, {"name": "Elevance Health, Inc.", "total": 4968493.0, "focused": true}, {"name": "Johnson & Johnson Services, Inc.", "total": 3998775.0, "focused": false}, {"name": "American Optometric Association", "total": 3969350.0, "focused": true}, {"name": "American Dental Association", "total": 3924805.0, "focused": false}, {"name": "American Medical Association", "total": 3624768.0, "focused": false}, {"name": "Abbott Laboratories", "total": 3325735.0, "focused": false}, {"name": "Eli Lilly And Company", "total": 3198800.0, "focused": true}], "givingTop": [{"name": "Trump-Vance Inaugural / Trump (name variants combined)", "a": 2700000.0, "b": 2675000.0, "party": ""}, {"name": "Donation For The Construction Of The Capitol Visitor Center Tunnel In The Thomas Jefferson Building (Congressional Crossroads)", "a": 0, "b": 2500000.0, "party": ""}, {"name": "Members Of The Congressional Hispanic Caucus", "a": 0, "b": 2150000.0, "party": ""}, {"name": "Congressional Black Caucus Foundation", "a": 50000.0, "b": 1675000.0, "party": ""}, {"name": "DSCC", "a": 823960.0, "b": 483750.0, "party": ""}, {"name": "NRSC", "a": 802250.0, "b": 494714.0, "party": ""}, {"name": "DCCC", "a": 726965.0, "b": 413550.0, "party": ""}, {"name": "NRCC", "a": 682175.0, "b": 420499.0, "party": ""}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian National Museum Of American Latino. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "a": 0, "b": 1000000.0, "party": ""}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian American Women'S History Museum. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "a": 0, "b": 1000000.0, "party": ""}], "givingMembers": [{"name": "Rep. Jason Smith (R-MO)", "a": 519283.0, "b": 229900.0, "party": "(R-MO)"}, {"name": "Sen. Bob Casey (D-PA)", "a": 579000.0, "b": 67500.0, "party": "(D-PA)"}, {"name": "Rep. Kevin McCarthy (R-CA)", "a": 418750.0, "b": 224000.0, "party": "(R-CA)"}, {"name": "Rep. Brett Guthrie (R-KY)", "a": 482091.0, "b": 133800.0, "party": "(R-KY)"}, {"name": "Rep. Steve Scalise (R-LA)", "a": 329000.0, "b": 259430.0, "party": "(R-LA)"}, {"name": "Sen. Margaret Wood Hassan (D-NH)", "a": 569598.0, "b": 0, "party": "(D-NH)"}, {"name": "Sen. Lisa Murkowski (R-AK)", "a": 514732.0, "b": 0, "party": "(R-AK)"}, {"name": "Rep. Frank Pallone, Jr. (D-NJ)", "a": 383300.0, "b": 123500.0, "party": "(D-NJ)"}, {"name": "Rep. Richard E. Neal (D-MA)", "a": 320250.0, "b": 180000.0, "party": "(D-MA)"}, {"name": "Sen. John Thune (R-SD)", "a": 317300.0, "b": 173440.0, "party": "(R-SD)"}, {"name": "Sen. Bill Cassidy (R-LA)", "a": 357500.0, "b": 100500.0, "party": "(R-LA)"}, {"name": "Rep. Terri A. Sewell (D-AL)", "a": 384000.0, "b": 69000.0, "party": "(D-AL)"}], "givingTotal": 107769783, "caveats": ["Scope = filings whose activities carry ALI issue codes HCR (health), MMM (Medicare/Medicaid), PHA (pharmacy) or MED (medical research). Unlike crypto, healthcare is code-visible, so the issue-code lens is primary.", "Spend is each client's TOTAL canonical lobbying spend (all issues) in quarters where it filed on health — an upper-bound size signal, since filing-level disclosure cannot split dollars by issue.", "Health-activity share separates pure-plays from diversified giants: a self-filer's single quarterly filing lists dozens of issues, so shares are computed on activity rows, not filings.", "LD-203 giving is organization-level: solid for pure-play trade groups (AHA, AMA, ADA), inflated for diversified filers (AARP, Altria) whose giving is not health-specific.", "Senate-primary, amendment-deduplicated; registrations excluded from dollar work.", "Recipient names are lightly-normalized filing strings, not entity-resolved."]};
+</script>
+<script>
+(function () {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const r = document.documentElement;
+    const cur = r.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    r.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  });
+})();
+(function () {
+  const app = document.getElementById("app");
+  statTiles(app, DATA.kpis);
+
+  /* Player map */
+  {
+    const { box, cardEl } = card(app, "The player map — who lobbies on healthcare",
+      "Top " + DATA.players.length + " clients with health-coded filings, sized by total federal lobbying spend 2022–2026Q1 (all issues, canonical). Color = how much of the organization's lobbying activity is health-coded.",
+      "The biggest bubbles split into two species: health pure-plays (PhRMA, American Hospital Association, AHIP, AMA) whose activity is mostly health-coded, and diversified giants (U.S. Chamber, Amazon, AARP) for whom health is one desk among many. Hover for each player's health-activity share.");
+    const lg = legend(cardEl, [
+      { name: "Health-focused (≥50% of activities)", color: SLOT[0] },
+      { name: "Mixed (20–50%)", color: SLOT[1] },
+      { name: "Health is a side desk (<20%)", color: SLOT[2] }
+    ]);
+    cardEl.insertBefore(lg, box);
+    bubblePack(box, {
+      items: DATA.players.map(p => ({
+        label: p.name, short: p.short, r0: p.spend || 200000, slot: p.cls, extra: p
+      })),
+      height: 470, fmtSize: "$",
+      ttRows: d => [
+        { color: SLOT[d.slot], value: fmtMoney(d.extra.spend), name: "total lobbying spend (all issues)" },
+        { color: null, value: d.extra.share + "%", name: "share of activities that are health-coded" },
+        { color: null, value: fmtNum(d.extra.filings), name: "health-coded senate filings" }
+      ]
+    });
+    tableView(cardEl, ["Player", "Health filings", "Health share of activities %", "Total spend (all issues)"],
+      DATA.players.map(p => [p.name, p.filings, p.share, p.spend]), ["s", "#", "%", "$"]);
+  }
+
+  /* Trend */
+  {
+    const { box, cardEl } = card(app, "A massive, stable machine — with a 2025 uptick",
+      "Health-coded senate filings and distinct client organizations per quarter (amendment-deduped).",
+      "Healthcare lobbying is an installed base: ~4,000 filings and ~2,950 clients every quarter for three straight years, then a visible 2025 rise (+9%) during the reconciliation Medicaid fight. Compare crypto's +60% breakout: healthcare doesn't surge because it never left.");
+    const lg = legend(cardEl, [{ name: "Health-coded filings", color: SLOT[0] }, { name: "Distinct clients", color: SLOT[1] }], "line");
+    cardEl.insertBefore(lg, box);
+    linePanel(box, {
+      x: DATA.trend.q, fmt: "#",
+      series: [
+        { name: "Health-coded filings", values: DATA.trend.filings },
+        { name: "Distinct clients", values: DATA.trend.clients }
+      ]
+    });
+    tableView(cardEl, ["Quarter", "Filings", "Clients", "Canonical spend of active clients (all-issue)"],
+      DATA.trend.q.map((q, i) => [q, DATA.trend.filings[i], DATA.trend.clients[i], DATA.trend.spend[i]]),
+      ["s", "#", "#", "$"]);
+  }
+
+  /* Issue mix */
+  {
+    const { box, cardEl } = card(app, "What kind of healthcare lobbying",
+      "Health-coded filings per quarter by issue code (a filing can carry several codes).",
+      "General health issues (HCR) dominate; Medicare/Medicaid (MMM) is the second pillar; pharmacy (PHA) and medical research (MED) are steady specialist lanes.");
+    const lg = legend(cardEl, [
+      { name: "HCR — health issues", color: SLOT[0] },
+      { name: "MMM — Medicare/Medicaid", color: SLOT[1] },
+      { name: "PHA — pharmacy", color: SLOT[2] },
+      { name: "MED — medical research", color: SLOT[4] }
+    ], "line");
+    cardEl.insertBefore(lg, box);
+    linePanel(box, {
+      x: DATA.codeTrend.q, fmt: "#",
+      series: [
+        { name: "HCR — health issues", values: DATA.codeTrend.HCR, color: SLOT[0] },
+        { name: "MMM — Medicare/Medicaid", values: DATA.codeTrend.MMM, color: SLOT[1] },
+        { name: "PHA — pharmacy", values: DATA.codeTrend.PHA, color: SLOT[2] },
+        { name: "MED — medical research", values: DATA.codeTrend.MED, color: SLOT[4] }
+      ]
+    });
+    tableView(cardEl, ["Quarter", "HCR", "MMM", "PHA", "MED"],
+      DATA.codeTrend.q.map((q, i) => [q, DATA.codeTrend.HCR[i], DATA.codeTrend.MMM[i], DATA.codeTrend.PHA[i], DATA.codeTrend.MED[i]]),
+      ["s", "#", "#", "#", "#"]);
+  }
+
+  /* Press coupling */
+  {
+    const { box, cardEl } = card(app, "Congress talks healthcare constantly — and 2025 set records",
+      "Share of all member press releases tagged to a health issue code, by quarter.",
+      "Healthcare holds 14–22% of congressional messaging in a normal quarter — then climbs through 2025 to 28.8% in Q4 (reconciliation Medicaid cuts + ACA subsidy-cliff fight). Note the asymmetry with the money: press attention swings with the political calendar; the filing base barely moves. (Same divergence the ledger logged as L026.)");
+    linePanel(box, {
+      x: DATA.press.q, fmt: "%",
+      series: [{ name: "Health share of member press releases", values: DATA.press.share, color: SLOT[5] }],
+      height: 210
+    });
+    tableView(cardEl, ["Quarter", "Health-tagged releases", "All releases", "Share %"],
+      DATA.press.q.map((q, i) => [q, DATA.press.n[i], DATA.press.all[i], DATA.press.share[i]]),
+      ["s", "#", "#", "%"]);
+  }
+
+  /* Bills */
+  {
+    const { box, cardEl } = card(app, "The bills the industry crowds onto",
+      "Bills most-named in health-coded filings, ranked by distinct clients lobbying them.",
+      null);
+    hbars(box, {
+      items: DATA.topBills.map(d => ({ label: d.bill + (d.hint ? " — " + d.hint : ""), value: d.clients, note: fmtNum(d.filings) + " filings" })),
+      fmt: "#", labelW: 380, valueName: "distinct clients"
+    });
+    tableView(cardEl, ["Bill", "Distinct clients", "Filings"],
+      DATA.topBills.map(d => [d.bill, d.clients, d.filings]), ["s", "#", "#"]);
+  }
+
+  /* Giving */
+  {
+    const { box, cardEl } = card(app, "Who healthcare gives money to (disclosed LD-203) — health-focused vs mixed givers",
+      "Disclosed LD-203 giving by the top-150 health lobbying organizations: " + fmtMoney(DATA.givingTotal) + " total 2022–2025, split into HEALTH-FOCUSED givers (≥50% of their lobbying activity is health-coded: AHA, AMA, ADA, PhRMA…) vs MIXED/diversified givers (<50%: AARP, Altria, insurers with big non-health books…).",
+      "Organization-level attribution: the split shows WHO funds each recipient, not whether the motive was a health issue — a mixed org's giving is not health-specific. Party/state from the corpus members table; retired members hand-mapped and flagged. Raw variants in data/hc_ld203_recipients_split.csv. Election-year cadence: 2022 $28.3M · 2023 $23.8M · 2024 $32.4M · 2025 $23.3M.");
+    const lg = legend(cardEl, [
+      { name: "Health-focused giver (≥50% health activities)", color: SLOT[0] },
+      { name: "Mixed/diversified giver (<50%)", color: SLOT[2] }
+    ]);
+    cardEl.insertBefore(lg, box);
+    div("sub", box, "Top giving organizations (color = giver type)");
+    hbars(div(null, box), {
+      items: DATA.givingOrgs.map(d => ({ label: d.name, value: d.total, color: d.focused ? SLOT[0] : SLOT[2] })),
+      fmt: "$", labelW: 300, rowH: 27, valueName: "disclosed giving"
+    });
+    div("sub", box, "Top recipients overall — split by giver type");
+    groupedHBars(div(null, box), {
+      items: DATA.givingTop.map(d => ({ label: d.name, a: d.a, b: d.b })),
+      aName: "from health-focused orgs", bName: "from mixed/diversified orgs",
+      aColor: SLOT[0], bColor: SLOT[2], labelW: 330
+    });
+    div("sub", box, "Members of Congress — split by giver type");
+    groupedHBars(div(null, box), {
+      items: DATA.givingMembers.map(d => ({ label: d.name, a: d.a, b: d.b })),
+      aName: "from health-focused orgs", bName: "from mixed/diversified orgs",
+      aColor: SLOT[0], bColor: SLOT[2], labelW: 330
+    });
+    tableView(cardEl, ["Recipient", "From health-focused", "From mixed/diversified"],
+      DATA.givingTop.concat(DATA.givingMembers).map(d => [d.name, d.a, d.b]), ["s", "$", "$"]);
+  }
+
+  /* Caveats */
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2"); h.textContent = "How to read this (caveats that matter)"; c.appendChild(h);
+    const ul = document.createElement("ul"); ul.className = "caveats"; c.appendChild(ul);
+    DATA.caveats.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+  }
+})();
+
+</script>
+</body>
+</html>

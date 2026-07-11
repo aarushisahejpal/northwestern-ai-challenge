@@ -128,6 +128,17 @@ casing; they attach to senate entities only through the compound-key crosswalk, 
 - **Known ceiling:** where the resolver split one company's name variants (Payward/Kraken, a16z's
   several spellings), a player can under-count or appear twice. Documented limitation, not a silent
   gap (roadmap cleanup C / P6).
+- **`entity_aliases` carries ONE ROW PER registrant-scoped `senate_id` per `raw_name`**, on the
+  (kind='client', dataset='senate') slice — 41,532 rows vs 31,743 distinct name→entity pairs
+  (avg 1.31x; ACLU alone is 8 rows). No raw_name maps to more than one entity_id, so
+  `GROUP BY`/`count(DISTINCT ...)`/`QUALIFY` paths downstream of the join are safe — but any
+  **per-row join with a naked `count(*)` or `sum()` fans out** and silently inflates. Caught by the
+  pardons package's reconciliation checks (2026-07-10, player-filings index 198→360 rows) and again
+  in the healthcare package's activity-share `acts` CTE (2026-07-11, PhRMA's `all_activities` read
+  21,398 instead of 887 — a 24x inflation that also flipped 9 players across the 50%/20% share
+  boundaries). Fix: join through a deduped subquery, never the raw table —
+  `LEFT JOIN (SELECT DISTINCT raw_name, entity_id FROM entity_aliases WHERE kind='client' AND
+  dataset='senate') ea ON ea.raw_name=sf.client_name`.
 
 ### 4b. People + political committees (P6 member layer)
 

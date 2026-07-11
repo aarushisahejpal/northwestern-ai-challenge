@@ -1,0 +1,609 @@
+﻿member,giver_slice,raw_recipient_string_as_filed,tier,confidence,source,total,items
+Rep. A. Drew Ferguson IV (R-GA),health_focused,"THE HONORABLE RICK SCOTT, THE HONORABLE AMY KLOBUCHAR, THE HONORABLE DREW FERGUSON, THE HONORABLE RUBEN GALLEGO","multi-honoree, unallocated",compound:matched,person-name,65000.0,1
+Rep. A. Drew Ferguson IV (R-GA),health_focused,DREW FERGUSON,direct,matched,person-name,38000.0,19
+Rep. A. Drew Ferguson IV (R-GA),health_focused,"REP. A. DREW FERGUSON, IV",direct,matched,person-name,36000.0,17
+Rep. A. Drew Ferguson IV (R-GA),mixed_diversified,"REP. A. DREW FERGUSON, IV",direct,matched,person-name,30000.0,14
+Rep. A. Drew Ferguson IV (R-GA),mixed_diversified,THE HONORABLE DREW FERGUSON,direct,matched,person-name,23000.0,5
+Rep. Aaron Bean (R-FL),health_focused,AARON BEAN,direct,matched,person-name,65000.0,37
+Rep. Aaron Bean (R-FL),mixed_diversified,THE HONORABLE AARON BEAN,direct,matched,person-name,30000.0,8
+Rep. Adam Smith (D-WA),health_focused,REP. ADAM SMITH,direct,matched,person-name,44500.0,12
+Rep. Adrian Smith (R-NE),health_focused,REP. ADRIAN MICHAEL SMITH,direct,matched,person-name,58500.0,26
+Rep. Adrian Smith (R-NE),health_focused,ADRIAN SMITH,direct,matched,person-name,50500.0,33
+Rep. Adrian Smith (R-NE),mixed_diversified,REP. ADRIAN MICHAEL SMITH,direct,matched,person-name,41000.0,28
+Rep. Adrian Smith (R-NE),mixed_diversified,THE HONORABLE ADRIAN SMITH,direct,matched,person-name,25000.0,6
+Rep. Adrian Smith (R-NE),mixed_diversified,ADRIAN SMITH,direct,matched,person-name,22500.0,14
+Rep. Ami Bera (D-CA),health_focused,REP. AMERISH B. BERA,direct,title-initial,person-name,38000.0,18
+Rep. Ami Bera (D-CA),mixed_diversified,REP. AMERISH B. BERA,direct,title-initial,person-name,29000.0,13
+Rep. Ami Bera (D-CA),mixed_diversified,AMI BERA,direct,matched,person-name,25000.0,10
+Rep. Andrew R. Garbarino (R-NY),health_focused,ANDREW GARBARINO,direct,matched,person-name,47000.0,33
+Rep. Andrew R. Garbarino (R-NY),mixed_diversified,REP. ANDREW GARBARINO,direct,matched,person-name,67022.0,14
+Rep. Andrew R. Garbarino (R-NY),mixed_diversified,THE HONORABLE ANDREW GARBARINO,direct,matched,person-name,35000.0,8
+Rep. Angie Craig (D-MN),health_focused,REP. ANGELA DAWN CRAIG,direct,title-initial,person-name,72500.0,27
+Rep. Angie Craig (D-MN),health_focused,ANGIE CRAIG,direct,matched,person-name,51300.0,31
+Rep. Angie Craig (D-MN),mixed_diversified,REP. ANGELA DAWN CRAIG,direct,title-initial,person-name,53370.0,30
+Rep. Angie Craig (D-MN),mixed_diversified,ANGIE CRAIG,direct,matched,person-name,45000.0,17
+Rep. Angie Craig (D-MN),mixed_diversified,REP. ANGIE CRAIG,direct,matched,person-name,21510.0,13
+Rep. Ann M. Kuster (D-NH),health_focused,REP. ANN MCLANE KUSTER,direct,matched,person-name,109000.0,40
+Rep. Ann M. Kuster (D-NH),mixed_diversified,REP. ANN MCLANE KUSTER,direct,matched,person-name,35500.0,23
+Rep. Ann Wagner (R-MO),health_focused,REP. ANN LOUISE WAGNER,direct,matched,person-name,54000.0,19
+Rep. Ann Wagner (R-MO),mixed_diversified,THE HONORABLE ANN WAGNER,direct,matched,person-name,22500.0,5
+Rep. Anna G. Eshoo (D-CA),health_focused,ANNA ESHOO,direct,matched,person-name,38000.0,16
+Rep. Anna G. Eshoo (D-CA),mixed_diversified,REP. ANNA G. ESHOO,direct,matched,person-name,22000.0,10
+Rep. Ashley Hinson (R-IA),mixed_diversified,REP. ASHLEY HINSON,direct,matched,person-name,42000.0,19
+Rep. August Pfluger (R-TX),health_focused,AUGUST PFLUGER,direct,matched,person-name,37500.0,20
+Rep. August Pfluger (R-TX),mixed_diversified,REP. AUGUST PFLUGER,direct,matched,person-name,22600.0,6
+Rep. Ben Cline (R-VA),mixed_diversified,REP. BENJAMIN L. CLINE,direct,matched,person-name,28000.0,12
+Rep. Bennie G. Thompson (D-MS),mixed_diversified,REP. BENNIE G. THOMPSON,direct,matched,person-name,25500.0,13
+Rep. Beth Van Duyne (R-TX),health_focused,REP. ELIZABETH ANN VAN DUYNE,direct,matched,person-name,48000.0,22
+Rep. Blake D. Moore (R-UT),health_focused,BLAKE MOORE,direct,matched,person-name,83250.0,51
+Rep. Blake D. Moore (R-UT),health_focused,REP. BLAKE MOORE,direct,matched,person-name,40000.0,20
+Rep. Blake D. Moore (R-UT),mixed_diversified,REP. BLAKE MOORE,direct,matched,person-name,40000.0,17
+Rep. Blake D. Moore (R-UT),mixed_diversified,BLAKE MOORE,direct,matched,person-name,35500.0,15
+Rep. Bonnie Watson Coleman (D-NJ),health_focused,BONNIE WATSON COLEMAN,direct,matched,person-name,43000.0,18
+Rep. Bonnie Watson Coleman (D-NJ),mixed_diversified,REP. BONNIE WATSON COLEMAN,direct,matched,person-name,33000.0,21
+Rep. Brad R. Wenstrup (R-OH),health_focused,REP. BRAD R. WENSTRUP,direct,matched,person-name,38500.0,13
+Rep. Brad R. Wenstrup (R-OH),mixed_diversified,REP. BRAD R. WENSTRUP,direct,matched,person-name,40000.0,18
+Rep. Brad R. Wenstrup (R-OH),mixed_diversified,BRAD WENSTRUP,direct,matched,person-name,24500.0,14
+Rep. Bradley Scott Schneider (D-IL),health_focused,BRAD SCHNEIDER,direct,matched,person-name,76500.0,37
+Rep. Bradley Scott Schneider (D-IL),health_focused,REP. BRADLEY SCOTT SCHNEIDER,direct,matched,person-name,58000.0,25
+Rep. Bradley Scott Schneider (D-IL),health_focused,REP. BRAD SCHNEIDER,direct,matched,person-name,56000.0,29
+Rep. Bradley Scott Schneider (D-IL),mixed_diversified,REP. BRADLEY SCOTT SCHNEIDER,direct,matched,person-name,66000.0,28
+Rep. Bradley Scott Schneider (D-IL),mixed_diversified,BRAD SCHNEIDER,direct,matched,person-name,38500.0,23
+Rep. Brett Guthrie (R-KY),health_focused,BRETT GUTHRIE,direct,matched,person-name,211291.0,85
+Rep. Brett Guthrie (R-KY),health_focused,REP. BRETT GUTHRIE,direct,matched,person-name,174500.0,65
+Rep. Brett Guthrie (R-KY),health_focused,"GUTHRIE, BRETT",direct,inverted,person-name,80000.0,22
+Rep. Brett Guthrie (R-KY),health_focused,REP BRETT GUTHRIE,direct,matched,person-name,54800.0,19
+Rep. Brett Guthrie (R-KY),health_focused,CONGRESSMAN BRETT GUTHRIE,direct,matched,person-name,41500.0,14
+Rep. Brett Guthrie (R-KY),mixed_diversified,BRETT GUTHRIE,direct,matched,person-name,88300.0,31
+Rep. Brett Guthrie (R-KY),mixed_diversified,REP. BRETT GUTHRIE,direct,matched,person-name,45500.0,22
+Rep. Brett Guthrie (R-KY),mixed_diversified,THE HONORABLE BRETT GUTHRIE,direct,matched,person-name,35500.0,11
+Rep. Brian Babin (R-TX),mixed_diversified,THE HONORABLE BRIAN BABIN,direct,matched,person-name,40250.0,9
+Rep. Brian K. Fitzpatrick (R-PA),health_focused,BRIAN FITZPATRICK,direct,matched,person-name,66000.0,32
+Rep. Brian K. Fitzpatrick (R-PA),health_focused,REP. BRIAN FITZPATRICK,direct,matched,person-name,63500.0,39
+Rep. Brian K. Fitzpatrick (R-PA),health_focused,REP. BRIAN K. FITZPATRICK,direct,matched,person-name,47000.0,25
+Rep. Brian K. Fitzpatrick (R-PA),mixed_diversified,REP. BRIAN K. FITZPATRICK,direct,matched,person-name,46000.0,25
+Rep. Brian K. Fitzpatrick (R-PA),mixed_diversified,BRIAN FITZPATRICK,direct,matched,person-name,30500.0,11
+Rep. Brian K. Fitzpatrick (R-PA),mixed_diversified,REP. BRIAN FITZPATRICK,direct,matched,person-name,26500.0,9
+Rep. Brittany Pettersen (D-CO),mixed_diversified,BRITTANY PETTERSEN,direct,matched,person-name,25000.0,11
+Rep. Bryan Steil (R-WI),health_focused,BRYAN GEORGE STEIL,direct,matched,person-name,128671.0,13
+Rep. Bryan Steil (R-WI),health_focused,BRYAN STEIL,direct,matched,person-name,63250.0,12
+Rep. Carol D. Miller (R-WV),health_focused,CAROL MILLER,direct,matched,person-name,57000.0,25
+Rep. Carol D. Miller (R-WV),health_focused,REP. CAROL MILLER,direct,matched,person-name,46000.0,22
+Rep. Cathy McMorris Rodgers (R-WA),health_focused,REP. CATHY MCMORRIS RODGERS,direct,matched,person-name,160000.0,59
+Rep. Cathy McMorris Rodgers (R-WA),health_focused,CATHY MCMORRIS RODGERS,direct,matched,person-name,115700.0,46
+Rep. Cathy McMorris Rodgers (R-WA),health_focused,"MCMORRIS RODGERS, CATHY",direct,inverted,person-name,53000.0,14
+Rep. Cathy McMorris Rodgers (R-WA),mixed_diversified,REP. CATHY MCMORRIS RODGERS,direct,matched,person-name,102900.0,40
+Rep. Cathy McMorris Rodgers (R-WA),mixed_diversified,CATHY MCMORRIS RODGERS,direct,matched,person-name,49500.0,20
+Rep. Cathy McMorris Rodgers (R-WA),mixed_diversified,THE HONORABLE CATHY MCMORRIS RODGERS,direct,matched,person-name,22500.0,8
+Rep. Claudia Tenney (R-NY),health_focused,CLAUDIA TENNEY,direct,matched,person-name,89927.0,22
+Rep. Claudia Tenney (R-NY),health_focused,REP. CLAUDIA TENNEY,direct,matched,person-name,47000.0,26
+Rep. Daniel T. Kildee (D-MI),health_focused,DAN KILDEE,direct,matched,person-name,333132.0,17
+Rep. Darin LaHood (R-IL),health_focused,DARIN LAHOOD,direct,matched,person-name,98000.0,41
+Rep. Darin LaHood (R-IL),health_focused,REP. DARIN M. LAHOOD,direct,matched,person-name,58000.0,23
+Rep. Darin LaHood (R-IL),mixed_diversified,REP. DARIN M. LAHOOD,direct,matched,person-name,52000.0,24
+Rep. Darin LaHood (R-IL),mixed_diversified,THE HONORABLE DARIN LAHOOD,direct,matched,person-name,30000.0,7
+Rep. Darin LaHood (R-IL),mixed_diversified,DARIN LAHOOD,direct,matched,person-name,27000.0,9
+Rep. Darren Soto (D-FL),health_focused,REP. DARREN SOTO,direct,matched,person-name,119500.0,18
+Rep. Darren Soto (D-FL),health_focused,REP. DARREN MICHAEL SOTO,direct,matched,person-name,71500.0,32
+Rep. Darren Soto (D-FL),health_focused,DARREN SOTO,direct,matched,person-name,50500.0,33
+Rep. Darren Soto (D-FL),mixed_diversified,REP. DARREN MICHAEL SOTO,direct,matched,person-name,22000.0,14
+Rep. David G. Valadao (R-CA),health_focused,DAVID VALADAO,direct,matched,person-name,342398.0,22
+Rep. David G. Valadao (R-CA),mixed_diversified,DAVID VALADAO,direct,matched,person-name,34000.0,16
+Rep. David P. Joyce (R-OH),mixed_diversified,REP. DAVID PATRICK JOYCE,direct,matched,person-name,33500.0,20
+Rep. David Rouzer (R-NC),mixed_diversified,REP. DAVID CHESTON ROUZER,direct,matched,person-name,32500.0,15
+Rep. David Rouzer (R-NC),mixed_diversified,REP. DAVID ROUZER,direct,matched,person-name,26900.0,12
+Rep. David Schweikert (R-AZ),health_focused,REP. DAVID SCHWEIKERT,direct,matched,person-name,73000.0,40
+Rep. David Schweikert (R-AZ),health_focused,DAVID SCHWEIKERT,direct,matched,person-name,41500.0,32
+Rep. David Schweikert (R-AZ),mixed_diversified,REP. DAVID SCHWEIKERT,direct,matched,person-name,22000.0,16
+Rep. David Scott (D-GA),mixed_diversified,REP. DAVID ALBERT SCOTT,direct,matched,person-name,34240.0,17
+Rep. Debbie Dingell (D-MI),health_focused,"THE HONORABLE DEBBIE DINGELL, THE HONORABLE RICHARD HUDSON, THE HONORABLE CYNTHIA LUMMIS, THE HONORABLE RITCHIE TORRES, THE HONORABLE BEN RAY LUJAN","multi-honoree, unallocated",compound:matched,person-name,200000.0,3
+Rep. Debbie Dingell (D-MI),health_focused,DEBBIE DINGELL,direct,matched,person-name,49500.0,27
+Rep. Debbie Dingell (D-MI),mixed_diversified,"REP. VIRGINIA FOXX, SEN. BEN LUJAN, SEN. CYNTHIA LUMMIS, REP. RITCHIE TORRES, REP. DEBBIE DINGELL","multi-honoree, unallocated",compound:matched,person-name,75000.0,1
+Rep. Debbie Wasserman Schultz (D-FL),health_focused,REP. DEBBIE WASSERMAN SCHULTZ,direct,matched,person-name,43000.0,16
+Rep. Debbie Wasserman Schultz (D-FL),mixed_diversified,REP. DEBBIE WASSERMAN SCHULTZ,direct,matched,person-name,29000.0,12
+Rep. Deborah K. Ross (D-NC),mixed_diversified,DEBORAH ROSS,direct,matched,person-name,26000.0,18
+Rep. Deborah K. Ross (D-NC),mixed_diversified,REP. DEBORAH ROSS,direct,matched,person-name,22500.0,12
+Rep. Diana DeGette (D-CO),health_focused,REP. DIANA DEGETTE,direct,matched,person-name,55100.0,26
+Rep. Diana DeGette (D-CO),mixed_diversified,DIANA DEGETTE,direct,matched,person-name,52500.0,24
+Rep. Diana DeGette (D-CO),mixed_diversified,REP. DIANA L. DEGETTE,direct,matched,person-name,34500.0,13
+Rep. Diana Harshbarger (R-TN),health_focused,DIANA HARSHBARGER,direct,matched,person-name,43520.0,23
+Rep. Diana Harshbarger (R-TN),mixed_diversified,REP. DIANA LYNN HARSHBARGER,direct,matched,person-name,28500.0,17
+Rep. Don Bacon (R-NE),health_focused,DON BACON,direct,matched,person-name,323076.0,11
+Rep. Donald G. Davis (D-NC),health_focused,REP. DON DAVIS,direct,matched,person-name,46000.0,19
+Rep. Donald G. Davis (D-NC),health_focused,DON DAVIS,direct,matched,person-name,41250.0,27
+Rep. Donald G. Davis (D-NC),mixed_diversified,REP. DON DAVIS,direct,matched,person-name,45750.0,25
+Rep. Donald G. Davis (D-NC),mixed_diversified,DON DAVIS,direct,matched,person-name,37250.0,15
+Rep. Donald G. Davis (D-NC),mixed_diversified,REP. DONALD GENE DAVIS,direct,matched,person-name,26000.0,13
+Rep. Doris O. Matsui (D-CA),health_focused,REP. DORIS MATSUI,direct,matched,person-name,36000.0,16
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",health_focused,REP. BUDDY CARTER,direct,matched,person-name,72500.0,28
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",health_focused,BUDDY CARTER,direct,matched,person-name,47500.0,27
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",health_focused,REP. EARL L. B. CARTER,direct,matched,person-name,44500.0,21
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",health_focused,CONGRESSMAN BUDDY CARTER,direct,matched,person-name,39000.0,11
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",mixed_diversified,BUDDY CARTER,direct,matched,person-name,54000.0,22
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",mixed_diversified,REP. EARL L. B. CARTER,direct,matched,person-name,43500.0,19
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",mixed_diversified,THE HONORABLE BUDDY CARTER,direct,matched,person-name,23500.0,7
+Rep. Elise M. Stefanik (R-NY),health_focused,ELISE STEFANIK,direct,matched,person-name,48500.0,20
+Rep. Elise M. Stefanik (R-NY),mixed_diversified,REP. ELISE M. STEFANIK,direct,matched,person-name,43000.0,16
+Rep. Elise M. Stefanik (R-NY),mixed_diversified,THE HONORABLE ELISE STEFANIK,direct,matched,person-name,30000.0,9
+Rep. Elise M. Stefanik (R-NY),mixed_diversified,REP. ELISE MARIE STEFANIK,direct,matched,person-name,22500.0,5
+Rep. Erin Houchin (R-IN),health_focused,REP. ERIN HOUCHIN,direct,matched,person-name,37500.0,25
+Rep. Erin Houchin (R-IN),health_focused,ERIN HOUCHIN,direct,matched,person-name,36750.0,18
+Rep. Frank J. Mrvan (D-IN),health_focused,FRANK MRVAN,direct,matched,person-name,46500.0,28
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,"REP. FRANK PALLONE, JR",direct,matched,person-name,154500.0,51
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,FRANK PALLONE,direct,matched,person-name,107500.0,45
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,"PALLONE, FRANK",direct,inverted,person-name,53500.0,19
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,REP. FRANK PALLONE,direct,matched,person-name,42000.0,17
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,CONGRESSMAN FRANK PALLONE,direct,matched,person-name,40300.0,17
+"Rep. Frank Pallone, Jr. (D-NJ)",health_focused,REP. FRANK PALLONE JR,direct,matched,person-name,39000.0,13
+"Rep. Frank Pallone, Jr. (D-NJ)",mixed_diversified,"REP. FRANK PALLONE, JR",direct,matched,person-name,85000.0,32
+"Rep. Frank Pallone, Jr. (D-NJ)",mixed_diversified,THE HONORABLE FRANK PALLONE,direct,matched,person-name,40000.0,11
+"Rep. Frank Pallone, Jr. (D-NJ)",mixed_diversified,FRANK PALLONE,direct,matched,person-name,38500.0,12
+Rep. Grace Meng (D-NY),health_focused,REP. GRACE MENG,direct,matched,person-name,39500.0,16
+Rep. Greg Pence (R-IN),health_focused,GREG PENCE,direct,matched,person-name,40500.0,24
+Rep. Gus M. Bilirakis (R-FL),health_focused,GUS BILIRAKIS,direct,matched,person-name,59500.0,35
+Rep. Gus M. Bilirakis (R-FL),health_focused,REP. GUS BILIRAKIS; FL-12 US HOUSE,"multi-honoree, unallocated",compound:matched,person-name,50000.0,1
+Rep. Gus M. Bilirakis (R-FL),health_focused,REP. GUS MICHAEL BILIRAKIS,direct,matched,person-name,40000.0,23
+Rep. Gus M. Bilirakis (R-FL),mixed_diversified,REP. GUS MICHAEL BILIRAKIS,direct,matched,person-name,52000.0,25
+Rep. Gus M. Bilirakis (R-FL),mixed_diversified,GUS BILIRAKIS,direct,matched,person-name,39000.0,19
+Rep. Gus M. Bilirakis (R-FL),mixed_diversified,THE HONORABLE GUS BILIRAKIS,direct,matched,person-name,28500.0,8
+Rep. Guy Reschenthaler (R-PA),health_focused,GUY RESCHENTHALER,direct,matched,person-name,38500.0,18
+Rep. H. Morgan Griffith (R-VA),health_focused,REP. MORGAN GRIFFITH,direct,matched,person-name,61000.0,31
+Rep. H. Morgan Griffith (R-VA),health_focused,MORGAN GRIFFITH,direct,matched,person-name,37500.0,19
+Rep. H. Morgan Griffith (R-VA),mixed_diversified,REP. H. MORGAN GRIFFITH,direct,matched,person-name,59500.0,23
+Rep. Hakeem S. Jeffries (D-NY),health_focused,HAKEEM JEFFRIES,direct,matched,person-name,110550.0,32
+Rep. Hakeem S. Jeffries (D-NY),health_focused,"JEFFRIES, HAKEEM",direct,inverted,person-name,91000.0,19
+Rep. Hakeem S. Jeffries (D-NY),health_focused,REP. HAKEEM S. JEFFRIES,direct,matched,person-name,52750.0,23
+Rep. Haley M. Stevens (D-MI),health_focused,HALEY STEVENS,direct,matched,person-name,39000.0,21
+Rep. Henry Cuellar (D-TX),mixed_diversified,THE HONORABLE HENRY CUELLAR,direct,matched,person-name,25000.0,6
+Rep. J. Luis Correa (D-CA),mixed_diversified,REP. J. LUIS CORREA,direct,matched,person-name,33000.0,19
+Rep. Jack Bergman (R-MI),mixed_diversified,REP. JACK BERGMAN,direct,matched,person-name,33500.0,13
+Rep. Jake Auchincloss (D-MA),health_focused,REP. JAKE AUCHINCLOSS,direct,matched,person-name,62500.0,28
+Rep. James Comer (R-KY),mixed_diversified,"REP. JAMES R. COMER, JR",direct,matched,person-name,34000.0,12
+Rep. James E. Clyburn (D-SC),health_focused,"CLYBURN, JAMES",direct,inverted,person-name,59500.0,15
+Rep. James E. Clyburn (D-SC),health_focused,JAMES CLYBURN,direct,matched,person-name,53000.0,12
+Rep. James E. Clyburn (D-SC),mixed_diversified,REP. JAMES ENOS CLYBURN,direct,matched,person-name,129000.0,38
+Rep. Jason Smith (R-MO),health_focused,REP. JASON THOMAS SMITH,direct,matched,person-name,153000.0,45
+Rep. Jason Smith (R-MO),health_focused,JASON SMITH,direct,matched,person-name,145500.0,50
+Rep. Jason Smith (R-MO),health_focused,REP. JASON SMITH,direct,matched,person-name,111000.0,30
+Rep. Jason Smith (R-MO),health_focused,"SMITH, JASON",direct,inverted,person-name,73500.0,22
+Rep. Jason Smith (R-MO),health_focused,JASON T SMITH,direct,matched,person-name,67783.0,6
+Rep. Jason Smith (R-MO),health_focused,REP JASON SMITH,direct,matched,person-name,42000.0,15
+Rep. Jason Smith (R-MO),mixed_diversified,REP. JASON THOMAS SMITH,direct,matched,person-name,87500.0,33
+Rep. Jason Smith (R-MO),mixed_diversified,REP. JASON SMITH,direct,matched,person-name,62900.0,21
+Rep. Jason Smith (R-MO),mixed_diversified,JASON SMITH,direct,matched,person-name,53000.0,21
+Rep. Jason Smith (R-MO),mixed_diversified,THE HONORABLE JASON SMITH,direct,matched,person-name,30000.0,9
+Rep. Jason Smith (R-MO),mixed_diversified,CONGRESSMAN JASON SMITH,direct,matched,person-name,26500.0,8
+Rep. Jay Obernolte (R-CA),health_focused,REP. JAY OBERNOLTE,direct,matched,person-name,52500.0,30
+Rep. Jay Obernolte (R-CA),health_focused,JAY OBERNOLTE,direct,matched,person-name,38550.0,25
+Rep. Jay Obernolte (R-CA),mixed_diversified,REP. JAY OBERNOLTE,direct,matched,person-name,30000.0,21
+Rep. Jefferson Van Drew (R-NJ),mixed_diversified,THE HONORABLE JEFF VAN DREW,direct,title-initial,person-name,25000.0,5
+Rep. Jim Jordan (R-OH),mixed_diversified,REP. JAMES DANIEL JORDAN,direct,matched,person-name,28500.0,10
+Rep. Jim Jordan (R-OH),mixed_diversified,THE HONORABLE JIM JORDAN,direct,matched,person-name,22500.0,5
+Rep. Jimmy Gomez (D-CA),health_focused,REP. JIMMY GOMEZ,direct,matched,person-name,47500.0,24
+Rep. Jimmy Panetta (D-CA),health_focused,REP. JIMMY PANETTA,direct,matched,person-name,40000.0,19
+Rep. Jimmy Panetta (D-CA),mixed_diversified,REP. JAMES V. PANETTA,direct,title-initial,person-name,39500.0,17
+Rep. Jimmy Panetta (D-CA),mixed_diversified,JIMMY PANETTA,direct,matched,person-name,35500.0,19
+Rep. Jodey C. Arrington (R-TX),health_focused,JODEY ARRINGTON,direct,matched,person-name,46000.0,30
+Rep. Jodey C. Arrington (R-TX),health_focused,REP. JODEY COOK ARRINGTON,direct,matched,person-name,45500.0,21
+Rep. Jodey C. Arrington (R-TX),mixed_diversified,REP. JODEY COOK ARRINGTON,direct,matched,person-name,32500.0,20
+Rep. John B. Larson (D-CT),health_focused,JOHN LARSON,direct,matched,person-name,74500.0,13
+Rep. John H. Rutherford (R-FL),mixed_diversified,REP. JOHN H. RUTHERFORD,direct,matched,person-name,21500.0,12
+Rep. John Joyce (R-PA),health_focused,REP. JOHN JOYCE,direct,matched,person-name,128000.0,67
+Rep. John Joyce (R-PA),health_focused,JOHN JOYCE,direct,matched,person-name,77750.0,42
+Rep. John Joyce (R-PA),mixed_diversified,JOHN JOYCE,direct,matched,person-name,58000.0,24
+Rep. John Joyce (R-PA),mixed_diversified,REP. JOHN JOYCE,direct,matched,person-name,45500.0,26
+Rep. John R. Moolenaar (R-MI),mixed_diversified,THE HONORABLE JOHN MOOLENAAR,direct,matched,person-name,22500.0,10
+Rep. Joseph D. Morelle (D-NY),mixed_diversified,REP. JOSEPH D. MORELLE,direct,matched,person-name,21500.0,12
+Rep. Josh Gottheimer (D-NJ),health_focused,REP. JOSHUA S. GOTTHEIMER,direct,title-initial,person-name,55000.0,22
+Rep. Josh Gottheimer (D-NJ),health_focused,JOSH GOTTHEIMER,direct,matched,person-name,43500.0,27
+Rep. Josh Gottheimer (D-NJ),mixed_diversified,REP. JOSHUA S. GOTTHEIMER,direct,title-initial,person-name,53000.0,25
+Rep. Josh Gottheimer (D-NJ),mixed_diversified,JOSH GOTTHEIMER,direct,matched,person-name,31500.0,16
+Rep. Joyce Beatty (D-OH),health_focused,REP. JOYCE BEATTY,direct,matched,person-name,54000.0,30
+Rep. Joyce Beatty (D-OH),mixed_diversified,REP. JOYCE BEATTY,direct,matched,person-name,44000.0,24
+Rep. Julia Letlow (R-LA),mixed_diversified,REP. JULIA LETLOW,direct,matched,person-name,23500.0,18
+Rep. Kat Cammack (R-FL),health_focused,REP. KAT CAMMACK,direct,matched,person-name,49000.0,26
+Rep. Katherine M. Clark (D-MA),health_focused,KATHERINE CLARK,direct,matched,person-name,130500.0,52
+Rep. Katherine M. Clark (D-MA),health_focused,REP. KATHERINE M. CLARK,direct,matched,person-name,78000.0,30
+Rep. Katherine M. Clark (D-MA),health_focused,REP. KATHERINE CLARK,direct,matched,person-name,77500.0,34
+Rep. Katherine M. Clark (D-MA),health_focused,"CLARK, KATHERINE",direct,inverted,person-name,51000.0,17
+Rep. Katherine M. Clark (D-MA),mixed_diversified,REP. KATHERINE CLARK,direct,matched,person-name,52300.0,19
+Rep. Katherine M. Clark (D-MA),mixed_diversified,KATHERINE CLARK,direct,matched,person-name,42000.0,15
+Rep. Katherine M. Clark (D-MA),mixed_diversified,REP. KATHERINE M. CLARK,direct,matched,person-name,33000.0,11
+Rep. Kevin Hern (R-OK),health_focused,REP. KEVIN R. HERN,direct,matched,person-name,78500.0,30
+Rep. Kevin Hern (R-OK),health_focused,KEVIN HERN,direct,matched,person-name,42550.0,51
+Rep. Kevin Hern (R-OK),health_focused,REP. KEVIN HERN,direct,matched,person-name,42000.0,21
+Rep. Kevin Hern (R-OK),health_focused,CONGRESSMAN KEVIN HERN,direct,matched,person-name,38000.0,12
+Rep. Kevin Hern (R-OK),health_focused,"HERN, KEVIN",direct,inverted,person-name,36500.0,12
+Rep. Kevin Hern (R-OK),mixed_diversified,REP. KEVIN HERN,direct,matched,person-name,24000.0,15
+Rep. Kevin Hern (R-OK),mixed_diversified,REP. KEVIN R. HERN,direct,matched,person-name,23000.0,13
+Rep. Kevin Hern (R-OK),mixed_diversified,KEVIN HERN,direct,matched,person-name,21000.0,11
+Rep. Kevin McCarthy (R-CA),health_focused,REP KEVIN MCCARTHY,direct,matched,person-name,185000.0,10
+Rep. Kevin McCarthy (R-CA),health_focused,KEVIN MCCARTHY,direct,matched,person-name,100000.0,24
+Rep. Kevin McCarthy (R-CA),health_focused,REP. KEVIN OWEN MCCARTHY,direct,matched,person-name,95000.0,20
+Rep. Kevin McCarthy (R-CA),health_focused,"MCCARTHY, KEVIN",direct,inverted,person-name,79500.0,11
+Rep. Kevin McCarthy (R-CA),health_focused,REP. KEVIN MCCARTHY,direct,matched,person-name,38750.0,10
+Rep. Kevin McCarthy (R-CA),mixed_diversified,REP. KEVIN OWEN MCCARTHY,direct,matched,person-name,77500.0,19
+Rep. Kevin McCarthy (R-CA),mixed_diversified,REP. KEVIN MCCARTHY,direct,matched,person-name,56500.0,4
+Rep. Kevin McCarthy (R-CA),mixed_diversified,SPEAKER KEVIN MCCARTHY,direct,matched,person-name,50000.0,1
+Rep. Kevin McCarthy (R-CA),mixed_diversified,KEVIN MCCARTHY,direct,matched,person-name,40000.0,8
+Rep. Kevin McCarthy (R-CA),mixed_diversified,REP. KEVIN MCCARTHY; NRCC,"multi-honoree, unallocated",compound:matched,person-name,40000.0,2
+Rep. Kevin Mullin (D-CA),health_focused,REP. KEVIN MULLIN,direct,matched,person-name,64500.0,26
+Rep. Kevin Mullin (D-CA),health_focused,KEVIN MULLIN,direct,matched,person-name,44500.0,27
+Rep. Kevin Mullin (D-CA),mixed_diversified,REP. KEVIN MULLIN,direct,matched,person-name,36000.0,15
+Rep. Kim Schrier (D-WA),mixed_diversified,REP. KIM SCHRIER,direct,matched,person-name,50253.0,14
+Rep. Kim Schrier (D-WA),mixed_diversified,KIM SCHRIER,direct,matched,person-name,26000.0,9
+Rep. Larry Bucshon (R-IN),health_focused,LARRY BUCSHON,direct,matched,person-name,56500.0,26
+Rep. Larry Bucshon (R-IN),mixed_diversified,LARRY BUCSHON,direct,matched,person-name,37000.0,18
+Rep. Larry Bucshon (R-IN),mixed_diversified,REP. LARRY DEAN BUCSHON,direct,matched,person-name,33500.0,17
+Rep. Lloyd Smucker (R-PA),mixed_diversified,LLOYD SMUCKER,direct,matched,person-name,25500.0,11
+Rep. Lori Trahan (D-MA),health_focused,LORI TRAHAN,direct,matched,person-name,70600.0,23
+Rep. Marc A. Veasey (D-TX),health_focused,MARC VEASEY,direct,matched,person-name,45500.0,25
+Rep. Marc A. Veasey (D-TX),mixed_diversified,REP. MARC A. VEASEY,direct,matched,person-name,34500.0,17
+Rep. Marc A. Veasey (D-TX),mixed_diversified,MARC VEASEY,direct,matched,person-name,24000.0,14
+Rep. Mariannette Miller-Meeks (R-IA),health_focused,MARIANNETTE MILLER-MEEKS,direct,matched,person-name,365963.0,29
+Rep. Mariannette Miller-Meeks (R-IA),health_focused,REP. MARIANNETTE MILLER-MEEKS,direct,matched,person-name,49000.0,25
+Rep. Mariannette Miller-Meeks (R-IA),health_focused,REP. MARIANNETTE JANE MILLER-MEEKS,direct,matched,person-name,36500.0,19
+Rep. Mariannette Miller-Meeks (R-IA),mixed_diversified,REP. MARIANNETTE MILLER-MEEKS,direct,matched,person-name,46743.0,11
+Rep. Mariannette Miller-Meeks (R-IA),mixed_diversified,REP. MARIANNETTE JANE MILLER-MEEKS,direct,matched,person-name,39000.0,16
+Rep. Mariannette Miller-Meeks (R-IA),mixed_diversified,MARIANNETTE MILLER-MEEKS,direct,matched,person-name,38250.0,19
+Rep. Mariannette Miller-Meeks (R-IA),mixed_diversified,REP. MARIANNETTE MILLER -MEEKS,direct,matched,person-name,37699.0,1
+Rep. Marilyn Strickland (D-WA),health_focused,REP. MARILYN STRICKLAND,direct,matched,person-name,54000.0,29
+Rep. Marilyn Strickland (D-WA),health_focused,MARILYN STRICKLAND,direct,matched,person-name,41000.0,24
+Rep. Mary Gay Scanlon (D-PA),health_focused,REP. MARY GAY SCANLON,direct,matched,person-name,37000.0,19
+Rep. Michael C. Burgess (R-TX),mixed_diversified,REP. MICHAEL CLIFTON BURGESS,direct,matched,person-name,29500.0,13
+Rep. Michael K. Simpson (R-ID),mixed_diversified,THE HONORABLE MIKE SIMPSON,direct,matched,person-name,30500.0,7
+Rep. Michelle Fischbach (R-MN),health_focused,MICHELLE FISCHBACH,direct,matched,person-name,45250.0,24
+Rep. Michelle Steel (R-CA),health_focused,MICHELLE STEEL,direct,matched,person-name,48000.0,23
+Rep. Michelle Steel (R-CA),health_focused,REP. MICHELLE PARK STEEL,direct,matched,person-name,38500.0,24
+Rep. Michelle Steel (R-CA),mixed_diversified,REP. MICHELLE PARK STEEL,direct,matched,person-name,23000.0,15
+Rep. Mike Bost (R-IL),mixed_diversified,REP. MICHAEL J. BOST,direct,matched,person-name,38500.0,16
+Rep. Mike Carey (R-OH),health_focused,REP. MIKE CAREY,direct,matched,person-name,92250.0,46
+Rep. Mike Carey (R-OH),health_focused,MIKE CAREY,direct,matched,person-name,59000.0,36
+Rep. Mike Carey (R-OH),mixed_diversified,REP. MIKE CAREY,direct,matched,person-name,32500.0,17
+Rep. Mike Johnson (R-LA),health_focused,REP. MIKE JOHNSON,direct,matched,person-name,118000.0,29
+Rep. Mike Johnson (R-LA),health_focused,MIKE JOHNSON,direct,matched,person-name,105000.0,27
+Rep. Mike Johnson (R-LA),mixed_diversified,REP. MIKE JOHNSON,direct,matched,person-name,132000.0,28
+Rep. Mike Johnson (R-LA),mixed_diversified,REP. MIKE JOHNSON; NRCC,"multi-honoree, unallocated",compound:matched,person-name,85000.0,4
+Rep. Mike Johnson (R-LA),mixed_diversified,THE HONORABLE MIKE JOHNSON,direct,matched,person-name,22000.0,6
+Rep. Mike Kelly (R-PA),health_focused,MIKE KELLY,direct,matched,person-name,37500.0,17
+Rep. Mike Thompson (D-CA),health_focused,MIKE THOMPSON,direct,matched,person-name,58500.0,19
+Rep. Mike Thompson (D-CA),health_focused,REP. MICHAEL C. THOMPSON,direct,matched,person-name,43500.0,20
+Rep. Mike Thompson (D-CA),mixed_diversified,MIKE THOMPSON,direct,matched,person-name,30000.0,13
+Rep. Mike Thompson (D-CA),mixed_diversified,REP. MICHAEL C. THOMPSON,direct,matched,person-name,28500.0,14
+Rep. Mikie Sherrill (D-NJ),health_focused,REP. MIKIE SHERRILL,direct,matched,person-name,44000.0,27
+Rep. Nancy Pelosi (D-CA),health_focused,NANCY PELOSI,direct,matched,person-name,41000.0,11
+Rep. Nancy Pelosi (D-CA),mixed_diversified,THE HONORABLE NANCY PELOSI,direct,matched,person-name,25000.0,5
+Rep. Neal P. Dunn (R-FL),health_focused,REP. NEAL DUNN,direct,matched,person-name,50500.0,27
+Rep. Neal P. Dunn (R-FL),health_focused,NEAL DUNN,direct,matched,person-name,47000.0,29
+Rep. Neal P. Dunn (R-FL),mixed_diversified,NEAL DUNN,direct,matched,person-name,25500.0,15
+Rep. Neal P. Dunn (R-FL),mixed_diversified,REP. NEAL PATRICK DUNN,direct,matched,person-name,21000.0,18
+Rep. Nicole Malliotakis (R-NY),health_focused,REP. NICOLE MALLIOTAKIS,direct,matched,person-name,38000.0,24
+Rep. Norma J. Torres (D-CA),mixed_diversified,REP. NORMA JUDITH TORRES,direct,matched,person-name,29500.0,11
+Rep. Patrick T. McHenry (R-NC),mixed_diversified,REP. PATRICK TIMOTHY MCHENRY,direct,matched,person-name,43885.0,13
+Rep. Paul Tonko (D-NY),mixed_diversified,PAUL TONKO,direct,matched,person-name,22500.0,12
+Rep. Pete Aguilar (D-CA),health_focused,PETE AGUILAR,direct,matched,person-name,119250.0,41
+Rep. Pete Aguilar (D-CA),health_focused,REP. PETER RAY AGUILAR,direct,title-initial,person-name,110000.0,40
+Rep. Pete Aguilar (D-CA),health_focused,REP. PETE AGUILAR,direct,matched,person-name,79500.0,27
+Rep. Pete Aguilar (D-CA),health_focused,"AGUILAR, PETE",direct,inverted,person-name,47500.0,15
+Rep. Pete Aguilar (D-CA),health_focused,REP PETE AGUILAR,direct,matched,person-name,38500.0,15
+Rep. Pete Aguilar (D-CA),mixed_diversified,REP. PETER RAY AGUILAR,direct,title-initial,person-name,47140.0,19
+Rep. Pete Aguilar (D-CA),mixed_diversified,THE HONORABLE PETE AGUILAR,direct,matched,person-name,42500.0,11
+Rep. Pete Aguilar (D-CA),mixed_diversified,PETE AGUILAR,direct,matched,person-name,36500.0,17
+Rep. Pete Aguilar (D-CA),mixed_diversified,REP. PETE AGUILAR,direct,matched,person-name,21900.0,14
+Rep. Randy Feenstra (R-IA),health_focused,RANDALL FEENSTRA,direct,matched,person-name,124292.0,10
+Rep. Randy Feenstra (R-IA),health_focused,REP. RANDY FEENSTRA,direct,matched,person-name,77500.0,41
+Rep. Randy Feenstra (R-IA),health_focused,RANDY FEENSTRA,direct,matched,person-name,49050.0,26
+Rep. Raul Ruiz (D-CA),health_focused,REP. RAUL RUIZ,direct,matched,person-name,107000.0,39
+Rep. Raul Ruiz (D-CA),health_focused,RAUL RUIZ,direct,matched,person-name,38000.0,21
+Rep. Raul Ruiz (D-CA),mixed_diversified,REP. RAUL RUIZ,direct,matched,person-name,50500.0,22
+Rep. Raul Ruiz (D-CA),mixed_diversified,RAUL RUIZ,direct,matched,person-name,22000.0,12
+Rep. Richard E. Neal (D-MA),health_focused,REP. RICHARD EDMUND NEAL,direct,matched,person-name,129000.0,43
+Rep. Richard E. Neal (D-MA),health_focused,RICHARD NEAL,direct,matched,person-name,107750.0,37
+Rep. Richard E. Neal (D-MA),health_focused,REP. RICHARD NEAL,direct,matched,person-name,83500.0,31
+Rep. Richard E. Neal (D-MA),health_focused,"NEAL, RICHARD",direct,inverted,person-name,71500.0,19
+Rep. Richard E. Neal (D-MA),mixed_diversified,REP. RICHARD EDMUND NEAL,direct,matched,person-name,106500.0,32
+Rep. Richard E. Neal (D-MA),mixed_diversified,RICHARD NEAL,direct,matched,person-name,49000.0,16
+Rep. Richard E. Neal (D-MA),mixed_diversified,REP. RICHARD NEAL,direct,matched,person-name,24500.0,8
+Rep. Richard Hudson (R-NC),health_focused,"THE HONORABLE DEBBIE DINGELL, THE HONORABLE RICHARD HUDSON, THE HONORABLE CYNTHIA LUMMIS, THE HONORABLE RITCHIE TORRES, THE HONORABLE BEN RAY LUJAN","multi-honoree, unallocated",compound:matched,person-name,200000.0,3
+Rep. Richard Hudson (R-NC),health_focused,RICHARD HUDSON,direct,matched,person-name,114500.0,46
+Rep. Richard Hudson (R-NC),health_focused,"REP. RICHARD LANE HUDSON, JR",direct,matched,person-name,67500.0,24
+Rep. Richard Hudson (R-NC),health_focused,REP. RICHARD HUDSON,direct,matched,person-name,46500.0,18
+Rep. Richard Hudson (R-NC),health_focused,"HUDSON, RICHARD",direct,inverted,person-name,41500.0,13
+Rep. Richard Hudson (R-NC),mixed_diversified,"REP. RICHARD LANE HUDSON, JR",direct,matched,person-name,75500.0,26
+Rep. Richard Hudson (R-NC),mixed_diversified,"REP. RICHARD HUDSON, SEN. CYNTHIA LUMMIS, SEN. JOE MANCHIN","multi-honoree, unallocated",compound:matched,person-name,50000.0,1
+Rep. Richard Hudson (R-NC),mixed_diversified,RICHARD HUDSON,direct,matched,person-name,42500.0,16
+Rep. Richard Hudson (R-NC),mixed_diversified,REP. RICHARD HUDSON,direct,matched,person-name,38700.0,17
+Rep. Richard Hudson (R-NC),mixed_diversified,THE HONORABLE RICHARD HUDSON,direct,matched,person-name,32500.0,11
+Rep. Ritchie Torres (D-NY),health_focused,"THE HONORABLE DEBBIE DINGELL, THE HONORABLE RICHARD HUDSON, THE HONORABLE CYNTHIA LUMMIS, THE HONORABLE RITCHIE TORRES, THE HONORABLE BEN RAY LUJAN","multi-honoree, unallocated",compound:matched,person-name,200000.0,3
+Rep. Ritchie Torres (D-NY),mixed_diversified,"REP. VIRGINIA FOXX, SEN. BEN LUJAN, SEN. CYNTHIA LUMMIS, REP. RITCHIE TORRES, REP. DEBBIE DINGELL","multi-honoree, unallocated",compound:matched,person-name,75000.0,1
+Rep. Robert B. Aderholt (R-AL),mixed_diversified,THE HONORABLE ROBERT ADERHOLT,direct,matched,person-name,22000.0,8
+Rep. Robert E. Latta (R-OH),health_focused,BOB LATTA,direct,matched,person-name,36000.0,29
+Rep. Robert E. Latta (R-OH),mixed_diversified,REP. ROBERT E. LATTA,direct,matched,person-name,26500.0,15
+Rep. Robin L. Kelly (D-IL),health_focused,ROBIN KELLY,direct,matched,person-name,82500.0,44
+Rep. Robin L. Kelly (D-IL),health_focused,REP. ROBIN LYNNE KELLY,direct,matched,person-name,53000.0,28
+Rep. Robin L. Kelly (D-IL),health_focused,REP. ROBIN KELLY,direct,matched,person-name,44400.0,28
+Rep. Robin L. Kelly (D-IL),mixed_diversified,REP. ROBIN LYNNE KELLY,direct,matched,person-name,43500.0,23
+Rep. Robin L. Kelly (D-IL),mixed_diversified,THE HONORABLE ROBIN KELLY,direct,matched,person-name,22500.0,6
+Rep. Robin L. Kelly (D-IL),mixed_diversified,ROBIN KELLY,direct,matched,person-name,22500.0,15
+Rep. Ron Estes (R-KS),mixed_diversified,REP. RON ESTES,direct,matched,person-name,59500.0,35
+Rep. Rudy Yakym III (R-IN),health_focused,RUDY YAKYM,direct,matched,person-name,41750.0,25
+"Rep. Sanford D. Bishop, Jr. (D-GA)",mixed_diversified,"REP. SANFORD D. BISHOP, JR",direct,matched,person-name,34000.0,11
+Rep. Scott H. Peters (D-CA),health_focused,REP. SCOTT PETERS,direct,matched,person-name,93400.0,40
+Rep. Scott H. Peters (D-CA),health_focused,SCOTT PETERS,direct,matched,person-name,91500.0,39
+Rep. Scott H. Peters (D-CA),health_focused,REP. SCOTT H. PETERS,direct,matched,person-name,36000.0,21
+Rep. Scott H. Peters (D-CA),mixed_diversified,SCOTT PETERS,direct,matched,person-name,68900.0,30
+Rep. Scott H. Peters (D-CA),mixed_diversified,REP. SCOTT H. PETERS,direct,matched,person-name,58500.0,21
+Rep. Scott H. Peters (D-CA),mixed_diversified,REP. SCOTT PETERS,direct,matched,person-name,56000.0,20
+Rep. Sharice Davids (D-KS),health_focused,REP. SHARICE DAVIDS,direct,matched,person-name,52750.0,29
+Rep. Sheila Jackson Lee (D-TX),health_focused,SHEILA JACKSON LEE,direct,matched,person-name,75000.0,1
+Rep. Steny H. Hoyer (D-MD),health_focused,REP. STENY HAMILTON HOYER,direct,matched,person-name,115000.0,32
+Rep. Steny H. Hoyer (D-MD),mixed_diversified,REP. STENY HAMILTON HOYER,direct,matched,person-name,56500.0,16
+Rep. Steny H. Hoyer (D-MD),mixed_diversified,STENY HOYER,direct,matched,person-name,27500.0,7
+Rep. Steny H. Hoyer (D-MD),mixed_diversified,THE HONORABLE STENY HOYER,direct,matched,person-name,25000.0,5
+Rep. Steve Scalise (R-LA),health_focused,REP. STEPHEN JOSEPH SCALISE,direct,matched,person-name,143000.0,38
+Rep. Steve Scalise (R-LA),health_focused,STEVE SCALISE,direct,matched,person-name,132500.0,58
+Rep. Steve Scalise (R-LA),health_focused,REP. STEVE SCALISE,direct,matched,person-name,53500.0,17
+Rep. Steve Scalise (R-LA),health_focused,"SCALISE, STEVE",direct,inverted,person-name,45000.0,10
+Rep. Steve Scalise (R-LA),mixed_diversified,REP. STEPHEN JOSEPH SCALISE,direct,matched,person-name,123280.0,31
+Rep. Steve Scalise (R-LA),mixed_diversified,REP. STEVE SCALISE,direct,matched,person-name,69900.0,16
+Rep. Steve Scalise (R-LA),mixed_diversified,STEVE SCALISE,direct,matched,person-name,66250.0,20
+Rep. Steve Scalise (R-LA),mixed_diversified,THE HONORABLE STEVE SCALISE,direct,matched,person-name,30000.0,6
+Rep. Steve Womack (R-AR),mixed_diversified,REP. STEVE WOMACK,direct,matched,person-name,35000.0,6
+Rep. Steve Womack (R-AR),mixed_diversified,REP. STEPHEN ALLEN WOMACK,direct,matched,person-name,33000.0,10
+Rep. Steven Horsford (D-NV),health_focused,REP. STEVEN ALEXZANDER HORSFORD,direct,matched,person-name,76500.0,43
+Rep. Steven Horsford (D-NV),health_focused,STEVEN HORSFORD,direct,matched,person-name,50000.0,34
+Rep. Steven Horsford (D-NV),mixed_diversified,REP. STEVEN ALEXZANDER HORSFORD,direct,matched,person-name,79000.0,33
+Rep. Susan Wild (D-PA),health_focused,SUSAN WILD,direct,matched,person-name,367750.0,11
+Rep. Suzan K. DelBene (D-WA),health_focused,REP. SUZAN KAY DELBENE,direct,matched,person-name,73500.0,28
+Rep. Suzan K. DelBene (D-WA),health_focused,SUZAN DELBENE,direct,matched,person-name,72000.0,35
+Rep. Suzan K. DelBene (D-WA),health_focused,REP SUZAN DELBENE,direct,matched,person-name,49000.0,13
+Rep. Suzan K. DelBene (D-WA),health_focused,REP. SUZAN DELBENE,direct,matched,person-name,39500.0,18
+Rep. Suzan K. DelBene (D-WA),mixed_diversified,SUZAN DELBENE,direct,matched,person-name,70500.0,26
+Rep. Suzan K. DelBene (D-WA),mixed_diversified,REP. SUZAN KAY DELBENE,direct,matched,person-name,48500.0,19
+Rep. Terri A. Sewell (D-AL),health_focused,REP. TERRI SEWELL,direct,matched,person-name,133000.0,30
+Rep. Terri A. Sewell (D-AL),health_focused,TERRI SEWELL,direct,matched,person-name,112500.0,53
+Rep. Terri A. Sewell (D-AL),health_focused,REP. TERRYCINA ANDREA SEWELL,direct,title-initial,person-name,100000.0,35
+Rep. Terri A. Sewell (D-AL),health_focused,REP TERRI SEWELL,direct,matched,person-name,38500.0,14
+Rep. Terri A. Sewell (D-AL),health_focused,"SEWELL, TERRI",direct,inverted,person-name,38500.0,13
+Rep. Terri A. Sewell (D-AL),mixed_diversified,REP. TERRYCINA ANDREA SEWELL,direct,title-initial,person-name,44500.0,25
+Rep. Terri A. Sewell (D-AL),mixed_diversified,TERRI SEWELL,direct,matched,person-name,24500.0,14
+Rep. Tom Cole (R-OK),mixed_diversified,REP. TOM COLE,direct,matched,person-name,34300.0,17
+Rep. Tom Cole (R-OK),mixed_diversified,REP. THOMAS JEFFERY COLE,direct,matched,person-name,31000.0,11
+Rep. Tom Emmer (R-MN),health_focused,TOM EMMER,direct,matched,person-name,71700.0,36
+Rep. Tom Emmer (R-MN),health_focused,"REP. THOMAS EARL EMMER, JR",direct,matched,person-name,70500.0,23
+Rep. Tom Emmer (R-MN),health_focused,"EMMER, TOM",direct,inverted,person-name,67500.0,14
+Rep. Tom Emmer (R-MN),mixed_diversified,"REP. THOMAS EARL EMMER, JR",direct,matched,person-name,78500.0,22
+Rep. Tom Emmer (R-MN),mixed_diversified,TOM EMMER,direct,matched,person-name,61500.0,22
+Rep. Tom Emmer (R-MN),mixed_diversified,THE HONORABLE TOM EMMER,direct,matched,person-name,25000.0,6
+Rep. Troy A. Carter (D-LA),mixed_diversified,REP. TROY A. CARTER,direct,matched,person-name,22500.0,15
+Rep. Troy Balderson (R-OH),health_focused,REP. TROY BALDERSON,direct,matched,person-name,67000.0,34
+Rep. Troy Balderson (R-OH),health_focused,TROY BALDERSON,direct,matched,person-name,61000.0,31
+Rep. Troy Balderson (R-OH),mixed_diversified,REP. TROY BALDERSON,direct,matched,person-name,49500.0,18
+Rep. Vern Buchanan (R-FL),health_focused,VERN BUCHANAN,direct,matched,person-name,128824.0,24
+Rep. Vern Buchanan (R-FL),health_focused,REP. VERNON GALE BUCHANAN,direct,title-initial,person-name,85500.0,32
+Rep. Vern Buchanan (R-FL),health_focused,REP. VERN BUCHANAN,direct,matched,person-name,58000.0,26
+Rep. Vern Buchanan (R-FL),health_focused,"BUCHANAN, VERN",direct,inverted,person-name,56000.0,15
+Rep. Vern Buchanan (R-FL),mixed_diversified,REP. VERNON GALE BUCHANAN,direct,title-initial,person-name,51500.0,24
+Rep. Vern Buchanan (R-FL),mixed_diversified,VERN BUCHANAN,direct,matched,person-name,28500.0,9
+Rep. Vern Buchanan (R-FL),mixed_diversified,THE HONORABLE VERN BUCHANAN,direct,matched,person-name,25000.0,5
+Rep. Veronica Escobar (D-TX),mixed_diversified,REP. VERONICA ESCOBAR,direct,matched,person-name,23000.0,14
+Rep. Virginia Foxx (R-NC),health_focused,REP. VIRGINIA ANN FOXX,direct,matched,person-name,37000.0,13
+Rep. Virginia Foxx (R-NC),mixed_diversified,"REP. VIRGINIA FOXX, SEN. BEN LUJAN, SEN. CYNTHIA LUMMIS, REP. RITCHIE TORRES, REP. DEBBIE DINGELL","multi-honoree, unallocated",compound:matched,person-name,75000.0,1
+Rep. Virginia Foxx (R-NC),mixed_diversified,REP. VIRGINIA ANN FOXX,direct,matched,person-name,34000.0,17
+Rep. W. Gregory Steube (R-FL),health_focused,REP. GREG STEUBE,direct,matched,person-name,37500.0,23
+Rep. Young Kim (R-CA),health_focused,YOUNG KIM,direct,matched,person-name,37000.0,18
+Rep. Young Kim (R-CA),mixed_diversified,REP. YOUNG O. KIM,direct,matched,person-name,21500.0,12
+Rep. Yvette D. Clarke (D-NY),health_focused,YVETTE CLARKE,direct,matched,person-name,41000.0,16
+Sen. Alex Padilla (D-CA),health_focused,SEN. ALEX PADILLA,direct,matched,person-name,72500.0,20
+Sen. Alex Padilla (D-CA),health_focused,ALEX PADILLA,direct,matched,person-name,36000.0,12
+Sen. Amy Klobuchar (D-MN),health_focused,"THE HONORABLE RICK SCOTT, THE HONORABLE AMY KLOBUCHAR, THE HONORABLE DREW FERGUSON, THE HONORABLE RUBEN GALLEGO","multi-honoree, unallocated",compound:matched,person-name,65000.0,1
+"Sen. Angus S. King, Jr. (I-ME)",mixed_diversified,"SEN. ANGUS STANLEY KING, JR",direct,matched,person-name,27500.0,6
+Sen. Bill Cassidy (R-LA),health_focused,SEN. WILLIAM CASSIDY,direct,matched,person-name,117900.0,40
+Sen. Bill Cassidy (R-LA),health_focused,BILL CASSIDY,direct,matched,person-name,106000.0,44
+Sen. Bill Cassidy (R-LA),health_focused,SEN. BILL CASSIDY,direct,matched,person-name,86600.0,29
+Sen. Bill Cassidy (R-LA),health_focused,SENATOR BILL CASSIDY,direct,matched,person-name,47000.0,13
+Sen. Bill Cassidy (R-LA),mixed_diversified,SEN. WILLIAM CASSIDY,direct,matched,person-name,58000.0,23
+Sen. Bill Cassidy (R-LA),mixed_diversified,SEN. BILL CASSIDY,direct,matched,person-name,42500.0,23
+Sen. Bill Hagerty (R-TN),mixed_diversified,SEN. BILL HAGERTY,direct,matched,person-name,23500.0,7
+Sen. Catherine Cortez Masto (D-NV),health_focused,SEN. CATHERINE CORTEZ MASTO,direct,matched,person-name,131000.0,33
+Sen. Catherine Cortez Masto (D-NV),health_focused,CATHERINE CORTEZ MASTO,direct,matched,person-name,75750.0,16
+Sen. Catherine Cortez Masto (D-NV),health_focused,"CORTEZ MASTO, CATHERINE",direct,inverted,person-name,52500.0,11
+Sen. Catherine Cortez Masto (D-NV),mixed_diversified,SEN. CATHERINE CORTEZ MASTO,direct,matched,person-name,64250.0,18
+Sen. Charles E. Schumer (D-NY),health_focused,SEN. CHARLES E. SCHUMER,direct,matched,person-name,96250.0,29
+Sen. Charles E. Schumer (D-NY),health_focused,CHARLES SCHUMER,direct,matched,person-name,47500.0,12
+Sen. Charles E. Schumer (D-NY),health_focused,"SCHUMER, CHARLES",direct,inverted,person-name,45000.0,10
+Sen. Charles E. Schumer (D-NY),health_focused,SEN. CHUCK SCHUMER,direct,matched,person-name,43500.0,11
+Sen. Charles E. Schumer (D-NY),health_focused,CHUCK SCHUMER,direct,matched,person-name,36500.0,11
+Sen. Charles E. Schumer (D-NY),mixed_diversified,SEN. CHARLES E. SCHUMER,direct,matched,person-name,47500.0,10
+Sen. Christopher A. Coons (D-DE),health_focused,SEN. CHRIS COONS,direct,matched,person-name,44900.0,14
+Sen. Christopher A. Coons (D-DE),health_focused,SEN. CHRISTOPHER ANDREW COONS,direct,matched,person-name,40500.0,16
+Sen. Christopher A. Coons (D-DE),health_focused,CHRIS COONS,direct,matched,person-name,38000.0,16
+Sen. Christopher A. Coons (D-DE),mixed_diversified,CHRISTOPHER COONS,direct,matched,person-name,37500.0,18
+Sen. Christopher A. Coons (D-DE),mixed_diversified,SEN. CHRISTOPHER ANDREW COONS,direct,matched,person-name,31500.0,14
+Sen. Chuck Grassley (R-IA),health_focused,SEN. CHARLES E. GRASSLEY,direct,matched,person-name,50000.0,22
+Sen. Chuck Grassley (R-IA),mixed_diversified,SEN. CHARLES E. GRASSLEY,direct,matched,person-name,21500.0,11
+Sen. Cynthia M. Lummis (R-WY),health_focused,"THE HONORABLE DEBBIE DINGELL, THE HONORABLE RICHARD HUDSON, THE HONORABLE CYNTHIA LUMMIS, THE HONORABLE RITCHIE TORRES, THE HONORABLE BEN RAY LUJAN","multi-honoree, unallocated",compound:matched,person-name,200000.0,3
+Sen. Cynthia M. Lummis (R-WY),mixed_diversified,"REP. VIRGINIA FOXX, SEN. BEN LUJAN, SEN. CYNTHIA LUMMIS, REP. RITCHIE TORRES, REP. DEBBIE DINGELL","multi-honoree, unallocated",compound:matched,person-name,75000.0,1
+Sen. Cynthia M. Lummis (R-WY),mixed_diversified,"REP. RICHARD HUDSON, SEN. CYNTHIA LUMMIS, SEN. JOE MANCHIN","multi-honoree, unallocated",compound:matched,person-name,50000.0,1
+Sen. Deb Fischer (R-NE),health_focused,DEB FISCHER,direct,matched,person-name,265440.0,9
+Sen. Deb Fischer (R-NE),mixed_diversified,SEN. DEBRA S. FISCHER,direct,matched,person-name,25000.0,13
+Sen. Eric Schmitt (R-MO),health_focused,SEN. ERIC S. SCHMITT,direct,matched,person-name,45500.0,14
+Sen. Eric Schmitt (R-MO),health_focused,ERIC SCHMITT,direct,matched,person-name,38849.0,16
+Sen. Gary C. Peters (D-MI),health_focused,GARY PETERS,direct,matched,person-name,63000.0,24
+Sen. Gary C. Peters (D-MI),health_focused,SEN. GARY CHARLES PETERS,direct,matched,person-name,46000.0,17
+Sen. Gary C. Peters (D-MI),mixed_diversified,SEN. GARY CHARLES PETERS,direct,matched,person-name,26500.0,12
+Sen. J.D. Vance (R-OH),health_focused,DONALD TRUMP; JD VANCE,direct,matched,person-name,1000000.0,1
+Sen. J.D. Vance (R-OH),mixed_diversified,"DONALD TRUMP, JD VANCE",direct,matched,person-name,1000000.0,1
+Sen. Jacky Rosen (D-NV),health_focused,SEN. JACKY ROSEN,direct,matched,person-name,108000.0,47
+Sen. Jacky Rosen (D-NV),health_focused,JACKY ROSEN,direct,matched,person-name,85750.0,34
+Sen. Jacky Rosen (D-NV),mixed_diversified,SEN. JACKY ROSEN,direct,matched,person-name,57500.0,25
+Sen. Jacky Rosen (D-NV),mixed_diversified,JACKY ROSEN,direct,matched,person-name,32525.0,20
+Sen. James Lankford (R-OK),health_focused,SEN. JAMES PAUL LANKFORD,direct,matched,person-name,46500.0,19
+Sen. James Lankford (R-OK),mixed_diversified,SEN. JAMES PAUL LANKFORD,direct,matched,person-name,44000.0,21
+Sen. Jeanne Shaheen (D-NH),health_focused,SEN. JEANNE SHAHEEN,direct,matched,person-name,57000.0,23
+Sen. Jerry Moran (R-KS),health_focused,JERRY MORAN,direct,matched,person-name,60500.0,20
+Sen. Jerry Moran (R-KS),mixed_diversified,SEN. JERRY MORAN,direct,matched,person-name,33500.0,15
+Sen. Jerry Moran (R-KS),mixed_diversified,SEN. JERRY W. MORAN,direct,matched,person-name,22500.0,12
+Sen. Jim Banks (R-IN),health_focused,SEN. JIM BANKS,direct,matched,person-name,40500.0,13
+Sen. Jim Banks (R-IN),mixed_diversified,THE HONORABLE JIM BANKS,direct,matched,person-name,27500.0,6
+"Sen. Joe Manchin, III (I-WV)",mixed_diversified,"REP. RICHARD HUDSON, SEN. CYNTHIA LUMMIS, SEN. JOE MANCHIN","multi-honoree, unallocated",compound:matched,person-name,50000.0,1
+"Sen. Joe Manchin, III (I-WV)",mixed_diversified,"SEN. JOSEPH MANCHIN, III",direct,matched,person-name,30000.0,6
+Sen. John Barrasso (R-WY),health_focused,JOHN BARRASSO,direct,matched,person-name,92500.0,33
+Sen. John Barrasso (R-WY),health_focused,SEN. JOHN ANTHONY BARRASSO,direct,matched,person-name,69500.0,26
+Sen. John Barrasso (R-WY),mixed_diversified,SEN. JOHN ANTHONY BARRASSO,direct,matched,person-name,59500.0,22
+Sen. John Barrasso (R-WY),mixed_diversified,JOHN BARRASSO,direct,matched,person-name,47500.0,17
+Sen. John Barrasso (R-WY),mixed_diversified,"SEN. JOHN BARRASSO, III",direct,matched,person-name,22500.0,6
+Sen. John Boozman (R-AR),mixed_diversified,SEN. JOHN NICHOLS BOOZMAN,direct,matched,person-name,49500.0,17
+Sen. John Boozman (R-AR),mixed_diversified,SEN. JOHN BOOZMAN,direct,matched,person-name,31692.0,11
+Sen. John Cornyn (R-TX),health_focused,"SEN. JOHN CORNYN, III",direct,matched,person-name,111000.0,40
+Sen. John Cornyn (R-TX),health_focused,JOHN CORNYN,direct,matched,person-name,75000.0,32
+Sen. John Cornyn (R-TX),health_focused,"CORNYN, JOHN",direct,inverted,person-name,37500.0,10
+Sen. John Cornyn (R-TX),mixed_diversified,"SEN. JOHN CORNYN, III",direct,matched,person-name,84000.0,24
+Sen. John Cornyn (R-TX),mixed_diversified,JOHN CORNYN,direct,matched,person-name,38000.0,17
+Sen. John R. Curtis (R-UT),health_focused,JOHN CURTIS,direct,matched,person-name,94250.0,44
+Sen. John R. Curtis (R-UT),health_focused,REP. JOHN R. CURTIS,direct,matched,person-name,53000.0,26
+Sen. John R. Curtis (R-UT),mixed_diversified,JOHN CURTIS,direct,matched,person-name,23000.0,20
+Sen. John R. Curtis (R-UT),mixed_diversified,REP. JOHN R. CURTIS,direct,matched,person-name,22000.0,12
+Sen. John Thune (R-SD),health_focused,SEN. JOHN RANDOLPH THUNE,direct,matched,person-name,116000.0,32
+Sen. John Thune (R-SD),health_focused,JOHN THUNE,direct,matched,person-name,103400.0,34
+Sen. John Thune (R-SD),health_focused,SEN. JOHN THUNE,direct,matched,person-name,97900.0,29
+Sen. John Thune (R-SD),health_focused,"THUNE, JOHN",direct,inverted,person-name,53500.0,14
+Sen. John Thune (R-SD),health_focused,"$5,000 JOHN THUNE; $4,453.44 EACH BERNIE MORENO, DEB FISCHER, LARRY HOGAN, JIM JUSTICE; $27,186.24 NRSC","multi-honoree, unallocated",compound:matched,person-name,50000.0,1
+Sen. John Thune (R-SD),mixed_diversified,SEN. JOHN RANDOLPH THUNE,direct,matched,person-name,70500.0,19
+Sen. John Thune (R-SD),mixed_diversified,SEN. JOHN THUNE,direct,matched,person-name,59440.0,20
+Sen. John Thune (R-SD),mixed_diversified,JOHN THUNE,direct,matched,person-name,43500.0,15
+Sen. Jon Husted (R-OH),health_focused,SEN. JON HUSTED,direct,matched,person-name,45500.0,12
+Sen. Jon Husted (R-OH),mixed_diversified,SEN. JON HUSTED,direct,matched,person-name,31000.0,12
+Sen. Jon Tester (D-MT),health_focused,SEN. JON TESTER,direct,matched,person-name,103500.0,42
+Sen. Jon Tester (D-MT),health_focused,JON TESTER,direct,matched,person-name,77500.0,33
+Sen. Jon Tester (D-MT),mixed_diversified,SEN. JON TESTER,direct,matched,person-name,42500.0,14
+Sen. Jon Tester (D-MT),mixed_diversified,JON TESTER,direct,matched,person-name,28000.0,14
+Sen. Joni Ernst (R-IA),health_focused,SEN. JONI KAY ERNST,direct,matched,person-name,45500.0,17
+Sen. Joni Ernst (R-IA),mixed_diversified,SEN. JONI KAY ERNST,direct,matched,person-name,25000.0,14
+Sen. Katie Boyd Britt (R-AL),health_focused,KATIE BRITT,direct,matched,person-name,87821.0,14
+Sen. Katie Boyd Britt (R-AL),health_focused,SEN. KATIE BOYD BRITT,direct,matched,person-name,40500.0,15
+Sen. Katie Boyd Britt (R-AL),mixed_diversified,SEN. KATIE BOYD BRITT,direct,matched,person-name,22500.0,9
+Sen. Kevin Cramer (R-ND),health_focused,KEVIN CRAMER,direct,matched,person-name,95551.0,9
+Sen. Kyrsten Sinema (I-AZ),health_focused,SEN. KYRSTEN SINEMA,direct,matched,person-name,108830.0,39
+Sen. Kyrsten Sinema (I-AZ),health_focused,KYRSTEN SINEMA,direct,matched,person-name,87000.0,36
+Sen. Kyrsten Sinema (I-AZ),health_focused,"SINEMA, KYRSTEN",direct,inverted,person-name,37000.0,12
+Sen. Kyrsten Sinema (I-AZ),mixed_diversified,SEN. KYRSTEN SINEMA,direct,matched,person-name,56000.0,21
+Sen. Kyrsten Sinema (I-AZ),mixed_diversified,KYRSTEN SINEMA,direct,matched,person-name,26000.0,10
+Sen. Lisa Blunt Rochester (D-DE),health_focused,REP. LISA BLUNT ROCHESTER,direct,matched,person-name,88700.0,52
+Sen. Lisa Blunt Rochester (D-DE),health_focused,LISA BLUNT ROCHESTER,direct,matched,person-name,87600.0,53
+Sen. Lisa Blunt Rochester (D-DE),health_focused,SEN. LISA BLUNT ROCHESTER,direct,matched,person-name,38000.0,16
+Sen. Lisa Blunt Rochester (D-DE),mixed_diversified,LISA BLUNT ROCHESTER,direct,matched,person-name,51250.0,25
+Sen. Lisa Blunt Rochester (D-DE),mixed_diversified,REP. LISA BLUNT ROCHESTER,direct,matched,person-name,32500.0,18
+Sen. Lisa Blunt Rochester (D-DE),mixed_diversified,THE HONORABLE LISA BLUNT ROCHESTER,direct,matched,person-name,25000.0,7
+Sen. Lisa Murkowski (R-AK),health_focused,LISA MURKOWSKI,direct,matched,person-name,469232.0,22
+Sen. Lisa Murkowski (R-AK),health_focused,SEN. LISA MURKOWSKI,direct,matched,person-name,45500.0,18
+Sen. Marco Rubio (R-FL),health_focused,SEN. MARCO ANTONIO RUBIO,direct,matched,person-name,53500.0,16
+Sen. Marco Rubio (R-FL),mixed_diversified,SEN. MARCO ANTONIO RUBIO,direct,matched,person-name,28000.0,11
+Sen. Margaret Wood Hassan (D-NH),health_focused,MARGARET HASSAN,direct,matched,person-name,411998.0,4
+Sen. Margaret Wood Hassan (D-NH),health_focused,SEN. MARGARET WOOD HASSAN,direct,matched,person-name,99100.0,42
+Sen. Margaret Wood Hassan (D-NH),health_focused,SEN. MAGGIE HASSAN,direct,matched,person-name,58500.0,26
+Sen. Margaret Wood Hassan (D-NH),health_focused,MAGGIE HASSAN,direct,matched,person-name,41500.0,14
+Sen. Mark R. Warner (D-VA),health_focused,SEN. MARK ROBERT WARNER,direct,matched,person-name,58300.0,20
+Sen. Mark R. Warner (D-VA),health_focused,SEN. MARK WARNER,direct,matched,person-name,54500.0,20
+Sen. Mark R. Warner (D-VA),health_focused,MARK WARNER,direct,matched,person-name,49000.0,23
+Sen. Mark R. Warner (D-VA),mixed_diversified,SEN. MARK ROBERT WARNER,direct,matched,person-name,37500.0,10
+Sen. Mark R. Warner (D-VA),mixed_diversified,SEN. MARK WARNER,direct,matched,person-name,28300.0,13
+Sen. Markwayne Mullin (R-OK),health_focused,SEN. MARKWAYNE MULLIN,direct,matched,person-name,113000.0,51
+Sen. Markwayne Mullin (R-OK),health_focused,MARKWAYNE MULLIN,direct,matched,person-name,97250.0,55
+Sen. Markwayne Mullin (R-OK),mixed_diversified,SEN. MARKWAYNE MULLIN,direct,matched,person-name,49400.0,23
+Sen. Markwayne Mullin (R-OK),mixed_diversified,MARKWAYNE MULLIN,direct,matched,person-name,32500.0,13
+Sen. Marsha Blackburn (R-TN),health_focused,MARSHA BLACKBURN,direct,matched,person-name,166522.0,25
+Sen. Marsha Blackburn (R-TN),health_focused,SEN. MARSHA WEDGEWORTH BLACKBURN,direct,matched,person-name,97500.0,31
+Sen. Marsha Blackburn (R-TN),mixed_diversified,SEN. MARSHA WEDGEWORTH BLACKBURN,direct,matched,person-name,54500.0,22
+Sen. Marsha Blackburn (R-TN),mixed_diversified,MARSHA BLACKBURN,direct,matched,person-name,50000.0,19
+Sen. Marsha Blackburn (R-TN),mixed_diversified,SEN. MARSHA BLACKBURN,direct,matched,person-name,28500.0,8
+Sen. Martin Heinrich (D-NM),health_focused,SEN. MARTIN HEINRICH,direct,matched,person-name,69000.0,26
+Sen. Martin Heinrich (D-NM),health_focused,MARTIN HEINRICH,direct,matched,person-name,39500.0,24
+Sen. Martin Heinrich (D-NM),mixed_diversified,SEN. MARTIN HEINRICH,direct,matched,person-name,27000.0,20
+Sen. Mike Crapo (R-ID),health_focused,SEN. MICHAEL DEAN CRAPO,direct,matched,person-name,98500.0,29
+Sen. Mike Crapo (R-ID),health_focused,MIKE CRAPO,direct,matched,person-name,85500.0,28
+Sen. Mike Crapo (R-ID),health_focused,SEN. MIKE CRAPO,direct,matched,person-name,65000.0,19
+Sen. Mike Crapo (R-ID),health_focused,"CRAPO, MIKE",direct,inverted,person-name,53000.0,12
+Sen. Mike Crapo (R-ID),mixed_diversified,SEN. MICHAEL DEAN CRAPO,direct,matched,person-name,68500.0,26
+Sen. Mike Crapo (R-ID),mixed_diversified,MICHAEL CRAPO,direct,matched,person-name,35000.0,12
+Sen. Mike Lee (R-UT),health_focused,SEN. MICHAEL SHUMWAY LEE,direct,matched,person-name,37500.0,12
+Sen. Mike Lee (R-UT),mixed_diversified,SEN. MICHAEL SHUMWAY LEE,direct,matched,person-name,28500.0,9
+Sen. Mitch McConnell (R-KY),health_focused,SEN. MITCH MCCONNELL,direct,matched,person-name,119500.0,31
+Sen. Mitch McConnell (R-KY),health_focused,MITCH MCCONNELL,direct,matched,person-name,76300.0,23
+Sen. Mitch McConnell (R-KY),mixed_diversified,SEN. MITCH MCCONNELL,direct,matched,person-name,51140.0,14
+Sen. Mitch McConnell (R-KY),mixed_diversified,MITCH MCCONNELL,direct,matched,person-name,31000.0,9
+Sen. Mitt Romney (R-UT),health_focused,SEN. MITT ROMNEY,direct,matched,person-name,46000.0,12
+Sen. Mitt Romney (R-UT),mixed_diversified,SEN. MITT ROMNEY,direct,matched,person-name,21000.0,8
+Sen. Patty Murray (D-WA),health_focused,SEN. PATRICIA LYNN MURRAY,direct,title-initial,person-name,69500.0,32
+Sen. Patty Murray (D-WA),health_focused,PATTY MURRAY,direct,matched,person-name,62500.0,28
+Sen. Patty Murray (D-WA),health_focused,SEN. PATTY MURRAY,direct,matched,person-name,48300.0,23
+Sen. Patty Murray (D-WA),mixed_diversified,PATTY MURRAY,direct,matched,person-name,26000.0,17
+Sen. Patty Murray (D-WA),mixed_diversified,THE HONORABLE PATTY MURRAY,direct,matched,person-name,25000.0,5
+Sen. Patty Murray (D-WA),mixed_diversified,SEN. PATRICIA LYNN MURRAY,direct,title-initial,person-name,24500.0,10
+Sen. Rand Paul (R-KY),health_focused,SEN. RAND HOWARD PAUL,direct,matched,person-name,44500.0,13
+Sen. Rick Scott (R-FL),health_focused,"THE HONORABLE RICK SCOTT, THE HONORABLE AMY KLOBUCHAR, THE HONORABLE DREW FERGUSON, THE HONORABLE RUBEN GALLEGO","multi-honoree, unallocated",compound:matched,person-name,65000.0,1
+Sen. Rick Scott (R-FL),health_focused,SEN. RICK L. SCOTT,direct,matched,person-name,48000.0,13
+Sen. Rick Scott (R-FL),mixed_diversified,SEN. RICK L. SCOTT,direct,matched,person-name,32500.0,7
+Sen. Robert Menendez (D-NJ),mixed_diversified,SEN. ROBERT MENENDEZ,direct,title-chamber,person-name,26500.0,12
+"Sen. Robert P. Casey, Jr. (D-PA)",health_focused,BOB CASEY,direct,matched,person-name,522000.0,34
+"Sen. Robert P. Casey, Jr. (D-PA)",health_focused,"SEN. ROBERT P. CASEY, JR",direct,matched,person-name,57000.0,22
+"Sen. Robert P. Casey, Jr. (D-PA)",mixed_diversified,"SEN. ROBERT P. CASEY, JR",direct,matched,person-name,44500.0,23
+"Sen. Robert P. Casey, Jr. (D-PA)",mixed_diversified,BOB CASEY,direct,matched,person-name,23000.0,13
+Sen. Roger F. Wicker (R-MS),health_focused,SEN. ROGER FREDERICK WICKER,direct,matched,person-name,58000.0,21
+Sen. Roger F. Wicker (R-MS),mixed_diversified,SEN. ROGER FREDERICK WICKER,direct,matched,person-name,23500.0,16
+Sen. Roger Marshall (R-KS),health_focused,SEN. ROGER W. MARSHALL,direct,matched,person-name,40500.0,13
+Sen. Roger Marshall (R-KS),health_focused,ROGER MARSHALL,direct,matched,person-name,39400.0,19
+Sen. Roger Marshall (R-KS),mixed_diversified,SEN. ROGER W. MARSHALL,direct,matched,person-name,30000.0,12
+Sen. Roger Marshall (R-KS),mixed_diversified,SEN. ROGER MARSHALL,direct,matched,person-name,26500.0,12
+Sen. Roger Marshall (R-KS),mixed_diversified,ROGER MARSHALL,direct,matched,person-name,23000.0,12
+Sen. Ron Wyden (D-OR),health_focused,RON WYDEN,direct,matched,person-name,104500.0,33
+Sen. Ron Wyden (D-OR),health_focused,SEN. RON L. WYDEN,direct,matched,person-name,72000.0,26
+Sen. Ron Wyden (D-OR),health_focused,SEN. RON WYDEN,direct,matched,person-name,48000.0,18
+Sen. Ron Wyden (D-OR),mixed_diversified,RON WYDEN,direct,matched,person-name,21500.0,13
+Sen. Ruben Gallego (D-AZ),health_focused,"THE HONORABLE RICK SCOTT, THE HONORABLE AMY KLOBUCHAR, THE HONORABLE DREW FERGUSON, THE HONORABLE RUBEN GALLEGO","multi-honoree, unallocated",compound:matched,person-name,65000.0,1
+Sen. Ruben Gallego (D-AZ),mixed_diversified,RUBEN GALLEGO,direct,matched,person-name,21775.0,10
+Sen. Shelley Moore Capito (R-WV),health_focused,SEN. SHELLEY MOORE CAPITO,direct,matched,person-name,84500.0,33
+Sen. Shelley Moore Capito (R-WV),mixed_diversified,SEN. SHELLEY MOORE CAPITO,direct,matched,person-name,27500.0,24
+Sen. Sherrod Brown (D-OH),health_focused,SEN. SHERROD CAMPBELL BROWN,direct,matched,person-name,54000.0,23
+Sen. Steve Daines (R-MT),health_focused,SEN. STEVE DAVID DAINES,direct,matched,person-name,70000.0,25
+Sen. Steve Daines (R-MT),health_focused,SEN. STEVE DAINES,direct,matched,person-name,67000.0,22
+Sen. Steve Daines (R-MT),health_focused,"DAINES, STEVE",direct,inverted,person-name,46000.0,14
+Sen. Steve Daines (R-MT),health_focused,STEVE DAINES,direct,matched,person-name,42500.0,21
+Sen. Steve Daines (R-MT),mixed_diversified,SEN. STEVE DAVID DAINES,direct,matched,person-name,42000.0,12
+Sen. Steve Daines (R-MT),mixed_diversified,SEN. STEVE DAINES,direct,matched,person-name,27000.0,10
+Sen. Susan M. Collins (R-ME),health_focused,SUSAN COLLINS,direct,matched,person-name,64500.0,28
+Sen. Susan M. Collins (R-ME),health_focused,SEN. SUSAN COLLINS,direct,matched,person-name,62500.0,26
+Sen. Susan M. Collins (R-ME),health_focused,SEN. SUSAN MARGARET COLLINS,direct,matched,person-name,38500.0,15
+Sen. Susan M. Collins (R-ME),mixed_diversified,SUSAN COLLINS,direct,matched,person-name,37500.0,13
+Sen. Susan M. Collins (R-ME),mixed_diversified,SEN. SUSAN MARGARET COLLINS,direct,matched,person-name,29500.0,11
+Sen. Susan M. Collins (R-ME),mixed_diversified,SEN. SUSAN COLLINS,direct,matched,person-name,25000.0,9
+Sen. Tammy Baldwin (D-WI),health_focused,SEN. TAMMY BALDWIN,direct,matched,person-name,91000.0,10
+Sen. Tammy Baldwin (D-WI),health_focused,TAMMY BALDWIN,direct,matched,person-name,41982.0,27
+Sen. Tammy Duckworth (D-IL),health_focused,TAMMY DUCKWORTH,direct,matched,person-name,45000.0,13
+Sen. Ted Budd (R-NC),health_focused,SEN. THEODORE PAUL BUDD,direct,title-initial,person-name,52000.0,19
+Sen. Ted Budd (R-NC),mixed_diversified,SEN. TED BUDD,direct,matched,person-name,32800.0,12
+Sen. Ted Budd (R-NC),mixed_diversified,SEN. THEODORE PAUL BUDD,direct,title-initial,person-name,21000.0,7
+Sen. Thom Tillis (R-NC),health_focused,SEN. THOM TILLIS,direct,matched,person-name,82300.0,28
+Sen. Thom Tillis (R-NC),health_focused,THOM TILLIS,direct,matched,person-name,78500.0,24
+Sen. Thom Tillis (R-NC),health_focused,SEN. THOMAS ROLAND TILLIS,direct,title-initial,person-name,67500.0,17
+Sen. Thom Tillis (R-NC),mixed_diversified,SEN. THOM TILLIS,direct,matched,person-name,56167.0,22
+Sen. Thom Tillis (R-NC),mixed_diversified,SEN. THOMAS ROLAND TILLIS,direct,title-initial,person-name,43000.0,13
+Sen. Thom Tillis (R-NC),mixed_diversified,THOM TILLIS,direct,matched,person-name,36500.0,12
+Sen. Tim Kaine (D-VA),health_focused,TIM KAINE,direct,matched,person-name,97300.0,44
+Sen. Tim Kaine (D-VA),health_focused,SEN. TIMOTHY MICHAEL KAINE,direct,matched,person-name,71000.0,31
+Sen. Tim Kaine (D-VA),mixed_diversified,SEN. TIMOTHY MICHAEL KAINE,direct,matched,person-name,59000.0,21
+Sen. Tim Kaine (D-VA),mixed_diversified,TIM KAINE,direct,matched,person-name,37000.0,15
+Sen. Tim Scott (R-SC),health_focused,TIM SCOTT,direct,matched,person-name,91900.0,31
+Sen. Tim Scott (R-SC),health_focused,SEN. TIMOTHY EUGENE SCOTT,direct,matched,person-name,67500.0,18
+Sen. Tim Scott (R-SC),health_focused,SEN TIM SCOTT,direct,matched,person-name,48000.0,4
+Sen. Tim Scott (R-SC),mixed_diversified,SEN. TIMOTHY EUGENE SCOTT,direct,matched,person-name,38500.0,11
+Sen. Tim Scott (R-SC),mixed_diversified,TIM SCOTT,direct,matched,person-name,31000.0,10
+Sen. Tim Scott (R-SC),mixed_diversified,SEN. TIM SCOTT,direct,matched,person-name,21400.0,9
+Sen. Tina Smith (D-MN),health_focused,SEN. TINA SMITH,direct,title-chamber,person-name,48000.0,18
+Sen. Todd Young (R-IN),health_focused,TODD YOUNG,direct,matched,person-name,94000.0,37
+Sen. Todd Young (R-IN),health_focused,SEN. TODD CHRISTOPHER YOUNG,direct,matched,person-name,86000.0,28
+Sen. Todd Young (R-IN),health_focused,SEN. TODD YOUNG,direct,matched,person-name,38500.0,18
+Sen. Todd Young (R-IN),mixed_diversified,SEN. TODD CHRISTOPHER YOUNG,direct,matched,person-name,45500.0,15
+Sen. Todd Young (R-IN),mixed_diversified,TODD YOUNG,direct,matched,person-name,26500.0,16
+Sen. Todd Young (R-IN),mixed_diversified,SEN. TODD YOUNG,direct,matched,person-name,22400.0,10
+Sen. Tom Cotton (R-AR),mixed_diversified,SEN. TOM COTTON,direct,matched,person-name,41500.0,14

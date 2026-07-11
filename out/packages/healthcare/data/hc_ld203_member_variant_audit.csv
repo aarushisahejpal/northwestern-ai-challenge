@@ -1,0 +1,492 @@
+﻿member (merged row in the split CSV),party_source,giver_slice,raw_recipient_string_as_filed,total,items
+Rep. Aaron Bean (R-FL),members-table,health_focused,AARON BEAN,65000.0,37
+Rep. Adam Smith (D-WA),members-table,health_focused,REP. ADAM SMITH,44500.0,12
+Rep. Adrian Smith (R-NE),members-table,health_focused,REP. ADRIAN MICHAEL SMITH,58500.0,26
+Rep. Adrian Smith (R-NE),members-table,health_focused,ADRIAN SMITH,50500.0,33
+Rep. Adrian Smith (R-NE),members-table,mixed_diversified,REP. ADRIAN MICHAEL SMITH,41000.0,28
+Rep. Adrian Smith (R-NE),members-table,mixed_diversified,ADRIAN SMITH,22500.0,14
+Rep. Ami Bera (D-CA),members-table,health_focused,REP. AMERISH B. BERA,38000.0,18
+Rep. Ami Bera (D-CA),members-table,mixed_diversified,REP. AMERISH B. BERA,29000.0,13
+Rep. Ami Bera (D-CA),members-table,mixed_diversified,AMI BERA,25000.0,10
+Rep. Andrew R. Garbarino (R-NY),members-table,health_focused,ANDREW GARBARINO,47000.0,33
+Rep. Andrew R. Garbarino (R-NY),members-table,mixed_diversified,REP. ANDREW GARBARINO,67022.0,14
+Rep. Angie Craig (D-MN),members-table,health_focused,REP. ANGELA DAWN CRAIG,72500.0,27
+Rep. Angie Craig (D-MN),members-table,health_focused,ANGIE CRAIG,51300.0,31
+Rep. Angie Craig (D-MN),members-table,mixed_diversified,REP. ANGELA DAWN CRAIG,53370.0,30
+Rep. Angie Craig (D-MN),members-table,mixed_diversified,ANGIE CRAIG,45000.0,17
+Rep. Angie Craig (D-MN),members-table,mixed_diversified,REP. ANGIE CRAIG,21510.0,13
+Rep. Ann Wagner (R-MO),members-table,health_focused,REP. ANN LOUISE WAGNER,54000.0,19
+Rep. Anna Eshoo (D-CA),manual,health_focused,ANNA ESHOO,38000.0,16
+Rep. Anna Eshoo (D-CA),manual,mixed_diversified,REP. ANNA G. ESHOO,22000.0,10
+Rep. Ashley Hinson (R-IA),members-table,mixed_diversified,REP. ASHLEY HINSON,42000.0,19
+Rep. August Pfluger (R-TX),members-table,health_focused,AUGUST PFLUGER,37500.0,20
+Rep. August Pfluger (R-TX),members-table,mixed_diversified,REP. AUGUST PFLUGER,22600.0,6
+Rep. Ben Cline (R-VA),members-table,mixed_diversified,REP. BENJAMIN L. CLINE,28000.0,12
+Rep. Bennie G. Thompson (D-MS),members-table,mixed_diversified,REP. BENNIE G. THOMPSON,25500.0,13
+Rep. Blake D. Moore (R-UT),members-table,health_focused,BLAKE MOORE,83250.0,51
+Rep. Blake D. Moore (R-UT),members-table,health_focused,REP. BLAKE MOORE,40000.0,20
+Rep. Blake D. Moore (R-UT),members-table,mixed_diversified,REP. BLAKE MOORE,40000.0,17
+Rep. Blake D. Moore (R-UT),members-table,mixed_diversified,BLAKE MOORE,35500.0,15
+Rep. Bonnie Watson Coleman (D-NJ),members-table,health_focused,BONNIE WATSON COLEMAN,43000.0,18
+Rep. Bonnie Watson Coleman (D-NJ),members-table,mixed_diversified,REP. BONNIE WATSON COLEMAN,33000.0,21
+Rep. Bradley Scott Schneider (D-IL),members-table,health_focused,REP. BRADLEY SCOTT SCHNEIDER,58000.0,25
+Rep. Bradley Scott Schneider (D-IL),members-table,health_focused,REP. BRAD SCHNEIDER,56000.0,29
+Rep. Bradley Scott Schneider (D-IL),members-table,mixed_diversified,REP. BRADLEY SCOTT SCHNEIDER,66000.0,28
+Rep. Brett Guthrie (R-KY),members-table,health_focused,BRETT GUTHRIE,211291.0,85
+Rep. Brett Guthrie (R-KY),members-table,health_focused,REP. BRETT GUTHRIE,174500.0,65
+Rep. Brett Guthrie (R-KY),members-table,health_focused,REP BRETT GUTHRIE,54800.0,19
+Rep. Brett Guthrie (R-KY),members-table,health_focused,CONGRESSMAN BRETT GUTHRIE,41500.0,14
+Rep. Brett Guthrie (R-KY),members-table,mixed_diversified,BRETT GUTHRIE,88300.0,31
+Rep. Brett Guthrie (R-KY),members-table,mixed_diversified,REP. BRETT GUTHRIE,45500.0,22
+Rep. Brian K. Fitzpatrick (R-PA),members-table,health_focused,BRIAN FITZPATRICK,66000.0,32
+Rep. Brian K. Fitzpatrick (R-PA),members-table,health_focused,REP. BRIAN FITZPATRICK,63500.0,39
+Rep. Brian K. Fitzpatrick (R-PA),members-table,health_focused,REP. BRIAN K. FITZPATRICK,47000.0,25
+Rep. Brian K. Fitzpatrick (R-PA),members-table,mixed_diversified,REP. BRIAN K. FITZPATRICK,46000.0,25
+Rep. Brian K. Fitzpatrick (R-PA),members-table,mixed_diversified,BRIAN FITZPATRICK,30500.0,11
+Rep. Brian K. Fitzpatrick (R-PA),members-table,mixed_diversified,REP. BRIAN FITZPATRICK,26500.0,9
+Rep. Brittany Pettersen (D-CO),members-table,mixed_diversified,BRITTANY PETTERSEN,25000.0,11
+Rep. Bryan Steil (R-WI),members-table,health_focused,BRYAN GEORGE STEIL,128671.0,13
+Rep. Bryan Steil (R-WI),members-table,health_focused,BRYAN STEIL,63250.0,12
+Rep. Carol D. Miller (R-WV),members-table,health_focused,CAROL MILLER,57000.0,25
+Rep. Carol D. Miller (R-WV),members-table,health_focused,REP. CAROL MILLER,46000.0,22
+Rep. Claudia Tenney (R-NY),members-table,health_focused,CLAUDIA TENNEY,89927.0,22
+Rep. Claudia Tenney (R-NY),members-table,health_focused,REP. CLAUDIA TENNEY,47000.0,26
+Rep. Darin LaHood (R-IL),members-table,health_focused,DARIN LAHOOD,98000.0,41
+Rep. Darin LaHood (R-IL),members-table,health_focused,REP. DARIN M. LAHOOD,58000.0,23
+Rep. Darin LaHood (R-IL),members-table,mixed_diversified,REP. DARIN M. LAHOOD,52000.0,24
+Rep. Darin LaHood (R-IL),members-table,mixed_diversified,DARIN LAHOOD,27000.0,9
+Rep. Darren Soto (D-FL),members-table,health_focused,REP. DARREN SOTO,119500.0,18
+Rep. Darren Soto (D-FL),members-table,health_focused,REP. DARREN MICHAEL SOTO,71500.0,32
+Rep. Darren Soto (D-FL),members-table,health_focused,DARREN SOTO,50500.0,33
+Rep. Darren Soto (D-FL),members-table,mixed_diversified,REP. DARREN MICHAEL SOTO,22000.0,14
+Rep. David G. Valadao (R-CA),members-table,health_focused,DAVID VALADAO,342398.0,22
+Rep. David G. Valadao (R-CA),members-table,mixed_diversified,DAVID VALADAO,34000.0,16
+Rep. David P. Joyce (R-OH),members-table,mixed_diversified,REP. DAVID PATRICK JOYCE,33500.0,20
+Rep. David Rouzer (R-NC),members-table,mixed_diversified,REP. DAVID CHESTON ROUZER,32500.0,15
+Rep. David Rouzer (R-NC),members-table,mixed_diversified,REP. DAVID ROUZER,26900.0,12
+Rep. David Schweikert (R-AZ),members-table,health_focused,REP. DAVID SCHWEIKERT,73000.0,40
+Rep. David Schweikert (R-AZ),members-table,health_focused,DAVID SCHWEIKERT,41500.0,32
+Rep. David Schweikert (R-AZ),members-table,mixed_diversified,REP. DAVID SCHWEIKERT,22000.0,16
+Rep. David Scott (D-GA),members-table,mixed_diversified,REP. DAVID ALBERT SCOTT,34240.0,17
+Rep. Debbie Dingell (D-MI),members-table,health_focused,DEBBIE DINGELL,49500.0,27
+Rep. Debbie Wasserman Schultz (D-FL),members-table,health_focused,REP. DEBBIE WASSERMAN SCHULTZ,43000.0,16
+Rep. Debbie Wasserman Schultz (D-FL),members-table,mixed_diversified,REP. DEBBIE WASSERMAN SCHULTZ,29000.0,12
+Rep. Deborah K. Ross (D-NC),members-table,mixed_diversified,DEBORAH ROSS,26000.0,18
+Rep. Deborah K. Ross (D-NC),members-table,mixed_diversified,REP. DEBORAH ROSS,22500.0,12
+Rep. Diana DeGette (D-CO),members-table,health_focused,REP. DIANA DEGETTE,55100.0,26
+Rep. Diana DeGette (D-CO),members-table,mixed_diversified,DIANA DEGETTE,52500.0,24
+Rep. Diana DeGette (D-CO),members-table,mixed_diversified,REP. DIANA L. DEGETTE,34500.0,13
+Rep. Diana Harshbarger (R-TN),members-table,health_focused,DIANA HARSHBARGER,43520.0,23
+Rep. Diana Harshbarger (R-TN),members-table,mixed_diversified,REP. DIANA LYNN HARSHBARGER,28500.0,17
+Rep. Don Bacon (R-NE),members-table,health_focused,DON BACON,323076.0,11
+Rep. Donald G. Davis (D-NC),members-table,health_focused,REP. DON DAVIS,46000.0,19
+Rep. Donald G. Davis (D-NC),members-table,health_focused,DON DAVIS,41250.0,27
+Rep. Donald G. Davis (D-NC),members-table,mixed_diversified,REP. DON DAVIS,45750.0,25
+Rep. Donald G. Davis (D-NC),members-table,mixed_diversified,DON DAVIS,37250.0,15
+Rep. Donald G. Davis (D-NC),members-table,mixed_diversified,REP. DONALD GENE DAVIS,26000.0,13
+Rep. Doris O. Matsui (D-CA),members-table,health_focused,REP. DORIS MATSUI,36000.0,16
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,health_focused,REP. BUDDY CARTER,72500.0,28
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,health_focused,BUDDY CARTER,47500.0,27
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,health_focused,REP. EARL L. B. CARTER,44500.0,21
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,health_focused,CONGRESSMAN BUDDY CARTER,39000.0,11
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,mixed_diversified,BUDDY CARTER,54000.0,22
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",members-table,mixed_diversified,REP. EARL L. B. CARTER,43500.0,19
+Rep. Elise M. Stefanik (R-NY),members-table,health_focused,ELISE STEFANIK,48500.0,20
+Rep. Elise M. Stefanik (R-NY),members-table,mixed_diversified,REP. ELISE M. STEFANIK,43000.0,16
+Rep. Elise M. Stefanik (R-NY),members-table,mixed_diversified,REP. ELISE MARIE STEFANIK,22500.0,5
+Rep. Erin Houchin (R-IN),members-table,health_focused,REP. ERIN HOUCHIN,37500.0,25
+Rep. Erin Houchin (R-IN),members-table,health_focused,ERIN HOUCHIN,36750.0,18
+Rep. Frank J. Mrvan (D-IN),members-table,health_focused,FRANK MRVAN,46500.0,28
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,health_focused,"REP. FRANK PALLONE, JR",154500.0,51
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,health_focused,FRANK PALLONE,107500.0,45
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,health_focused,REP. FRANK PALLONE,42000.0,17
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,health_focused,CONGRESSMAN FRANK PALLONE,40300.0,17
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,health_focused,REP. FRANK PALLONE JR,39000.0,13
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,mixed_diversified,"REP. FRANK PALLONE, JR",85000.0,32
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,mixed_diversified,FRANK PALLONE,38500.0,12
+Rep. Grace Meng (D-NY),members-table,health_focused,REP. GRACE MENG,39500.0,16
+Rep. Gus M. Bilirakis (R-FL),members-table,health_focused,GUS BILIRAKIS,59500.0,35
+Rep. Gus M. Bilirakis (R-FL),members-table,health_focused,REP. GUS MICHAEL BILIRAKIS,40000.0,23
+Rep. Gus M. Bilirakis (R-FL),members-table,mixed_diversified,REP. GUS MICHAEL BILIRAKIS,52000.0,25
+Rep. Gus M. Bilirakis (R-FL),members-table,mixed_diversified,GUS BILIRAKIS,39000.0,19
+Rep. Guy Reschenthaler (R-PA),members-table,health_focused,GUY RESCHENTHALER,38500.0,18
+Rep. H. Morgan Griffith (R-VA),members-table,health_focused,REP. MORGAN GRIFFITH,61000.0,31
+Rep. H. Morgan Griffith (R-VA),members-table,health_focused,MORGAN GRIFFITH,37500.0,19
+Rep. H. Morgan Griffith (R-VA),members-table,mixed_diversified,REP. H. MORGAN GRIFFITH,59500.0,23
+Rep. Hakeem S. Jeffries (D-NY),members-table,health_focused,HAKEEM JEFFRIES,110550.0,32
+Rep. Hakeem S. Jeffries (D-NY),members-table,health_focused,REP. HAKEEM S. JEFFRIES,52750.0,23
+Rep. Haley M. Stevens (D-MI),members-table,health_focused,HALEY STEVENS,39000.0,21
+Rep. J. Luis Correa (D-CA),members-table,mixed_diversified,REP. J. LUIS CORREA,33000.0,19
+Rep. Jack Bergman (R-MI),members-table,mixed_diversified,REP. JACK BERGMAN,33500.0,13
+Rep. Jake Auchincloss (D-MA),members-table,health_focused,REP. JAKE AUCHINCLOSS,62500.0,28
+Rep. James Comer (R-KY),members-table,mixed_diversified,"REP. JAMES R. COMER, JR",34000.0,12
+Rep. James E. Clyburn (D-SC),members-table,health_focused,JAMES CLYBURN,53000.0,12
+Rep. James E. Clyburn (D-SC),members-table,mixed_diversified,REP. JAMES ENOS CLYBURN,129000.0,38
+Rep. Jason Smith (R-MO),members-table,health_focused,REP. JASON THOMAS SMITH,153000.0,45
+Rep. Jason Smith (R-MO),members-table,health_focused,JASON SMITH,145500.0,50
+Rep. Jason Smith (R-MO),members-table,health_focused,REP. JASON SMITH,111000.0,30
+Rep. Jason Smith (R-MO),members-table,health_focused,JASON T SMITH,67783.0,6
+Rep. Jason Smith (R-MO),members-table,health_focused,REP JASON SMITH,42000.0,15
+Rep. Jason Smith (R-MO),members-table,mixed_diversified,REP. JASON THOMAS SMITH,87500.0,33
+Rep. Jason Smith (R-MO),members-table,mixed_diversified,REP. JASON SMITH,62900.0,21
+Rep. Jason Smith (R-MO),members-table,mixed_diversified,JASON SMITH,53000.0,21
+Rep. Jason Smith (R-MO),members-table,mixed_diversified,CONGRESSMAN JASON SMITH,26500.0,8
+Rep. Jay Obernolte (R-CA),members-table,health_focused,REP. JAY OBERNOLTE,52500.0,30
+Rep. Jay Obernolte (R-CA),members-table,health_focused,JAY OBERNOLTE,38550.0,25
+Rep. Jay Obernolte (R-CA),members-table,mixed_diversified,REP. JAY OBERNOLTE,30000.0,21
+Rep. Jimmy Gomez (D-CA),members-table,health_focused,REP. JIMMY GOMEZ,47500.0,24
+Rep. Jimmy Panetta (D-CA),members-table,health_focused,REP. JIMMY PANETTA,40000.0,19
+Rep. Jimmy Panetta (D-CA),members-table,mixed_diversified,REP. JAMES V. PANETTA,39500.0,17
+Rep. Jimmy Panetta (D-CA),members-table,mixed_diversified,JIMMY PANETTA,35500.0,19
+Rep. Jodey C. Arrington (R-TX),members-table,health_focused,JODEY ARRINGTON,46000.0,30
+Rep. Jodey C. Arrington (R-TX),members-table,health_focused,REP. JODEY COOK ARRINGTON,45500.0,21
+Rep. Jodey C. Arrington (R-TX),members-table,mixed_diversified,REP. JODEY COOK ARRINGTON,32500.0,20
+Rep. John B. Larson (D-CT),members-table,health_focused,JOHN LARSON,74500.0,13
+Rep. John H. Rutherford (R-FL),members-table,mixed_diversified,REP. JOHN H. RUTHERFORD,21500.0,12
+Rep. John Joyce (R-PA),members-table,health_focused,REP. JOHN JOYCE,128000.0,67
+Rep. John Joyce (R-PA),members-table,health_focused,JOHN JOYCE,77750.0,42
+Rep. John Joyce (R-PA),members-table,mixed_diversified,JOHN JOYCE,58000.0,24
+Rep. John Joyce (R-PA),members-table,mixed_diversified,REP. JOHN JOYCE,45500.0,26
+Rep. Joseph D. Morelle (D-NY),members-table,mixed_diversified,REP. JOSEPH D. MORELLE,21500.0,12
+Rep. Josh Gottheimer (D-NJ),members-table,health_focused,REP. JOSHUA S. GOTTHEIMER,55000.0,22
+Rep. Josh Gottheimer (D-NJ),members-table,health_focused,JOSH GOTTHEIMER,43500.0,27
+Rep. Josh Gottheimer (D-NJ),members-table,mixed_diversified,REP. JOSHUA S. GOTTHEIMER,53000.0,25
+Rep. Josh Gottheimer (D-NJ),members-table,mixed_diversified,JOSH GOTTHEIMER,31500.0,16
+Rep. Joyce Beatty (D-OH),members-table,health_focused,REP. JOYCE BEATTY,54000.0,30
+Rep. Joyce Beatty (D-OH),members-table,mixed_diversified,REP. JOYCE BEATTY,44000.0,24
+Rep. Julia Letlow (R-LA),members-table,mixed_diversified,REP. JULIA LETLOW,23500.0,18
+Rep. Kat Cammack (R-FL),members-table,health_focused,REP. KAT CAMMACK,49000.0,26
+Rep. Katherine M. Clark (D-MA),members-table,health_focused,KATHERINE CLARK,130500.0,52
+Rep. Katherine M. Clark (D-MA),members-table,health_focused,REP. KATHERINE M. CLARK,78000.0,30
+Rep. Katherine M. Clark (D-MA),members-table,health_focused,REP. KATHERINE CLARK,77500.0,34
+Rep. Katherine M. Clark (D-MA),members-table,mixed_diversified,REP. KATHERINE CLARK,52300.0,19
+Rep. Katherine M. Clark (D-MA),members-table,mixed_diversified,KATHERINE CLARK,42000.0,15
+Rep. Katherine M. Clark (D-MA),members-table,mixed_diversified,REP. KATHERINE M. CLARK,33000.0,11
+Rep. Kevin Hern (R-OK),members-table,health_focused,REP. KEVIN R. HERN,78500.0,30
+Rep. Kevin Hern (R-OK),members-table,health_focused,KEVIN HERN,42550.0,51
+Rep. Kevin Hern (R-OK),members-table,health_focused,REP. KEVIN HERN,42000.0,21
+Rep. Kevin Hern (R-OK),members-table,health_focused,CONGRESSMAN KEVIN HERN,38000.0,12
+Rep. Kevin Hern (R-OK),members-table,mixed_diversified,REP. KEVIN HERN,24000.0,15
+Rep. Kevin Hern (R-OK),members-table,mixed_diversified,REP. KEVIN R. HERN,23000.0,13
+Rep. Kevin Hern (R-OK),members-table,mixed_diversified,KEVIN HERN,21000.0,11
+Rep. Kevin McCarthy (R-CA),manual,health_focused,REP KEVIN MCCARTHY,185000.0,10
+Rep. Kevin McCarthy (R-CA),manual,health_focused,KEVIN MCCARTHY,100000.0,24
+Rep. Kevin McCarthy (R-CA),manual,health_focused,REP. KEVIN OWEN MCCARTHY,95000.0,20
+Rep. Kevin McCarthy (R-CA),manual,health_focused,REP. KEVIN MCCARTHY,38750.0,10
+Rep. Kevin McCarthy (R-CA),manual,mixed_diversified,REP. KEVIN OWEN MCCARTHY,77500.0,19
+Rep. Kevin McCarthy (R-CA),manual,mixed_diversified,REP. KEVIN MCCARTHY,56500.0,4
+Rep. Kevin McCarthy (R-CA),manual,mixed_diversified,SPEAKER KEVIN MCCARTHY,50000.0,1
+Rep. Kevin McCarthy (R-CA),manual,mixed_diversified,KEVIN MCCARTHY,40000.0,8
+Rep. Kevin Mullin (D-CA),members-table,health_focused,REP. KEVIN MULLIN,64500.0,26
+Rep. Kevin Mullin (D-CA),members-table,health_focused,KEVIN MULLIN,44500.0,27
+Rep. Kevin Mullin (D-CA),members-table,mixed_diversified,REP. KEVIN MULLIN,36000.0,15
+Rep. Kim Schrier (D-WA),members-table,mixed_diversified,REP. KIM SCHRIER,50253.0,14
+Rep. Kim Schrier (D-WA),members-table,mixed_diversified,KIM SCHRIER,26000.0,9
+Rep. Lloyd Smucker (R-PA),members-table,mixed_diversified,LLOYD SMUCKER,25500.0,11
+Rep. Lori Trahan (D-MA),members-table,health_focused,LORI TRAHAN,70600.0,23
+Rep. Marc A. Veasey (D-TX),members-table,health_focused,MARC VEASEY,45500.0,25
+Rep. Marc A. Veasey (D-TX),members-table,mixed_diversified,REP. MARC A. VEASEY,34500.0,17
+Rep. Marc A. Veasey (D-TX),members-table,mixed_diversified,MARC VEASEY,24000.0,14
+Rep. Marilyn Strickland (D-WA),members-table,health_focused,REP. MARILYN STRICKLAND,54000.0,29
+Rep. Marilyn Strickland (D-WA),members-table,health_focused,MARILYN STRICKLAND,41000.0,24
+Rep. Mary Gay Scanlon (D-PA),members-table,health_focused,REP. MARY GAY SCANLON,37000.0,19
+Rep. Michelle Fischbach (R-MN),members-table,health_focused,MICHELLE FISCHBACH,45250.0,24
+Rep. Mike Bost (R-IL),members-table,mixed_diversified,REP. MICHAEL J. BOST,38500.0,16
+Rep. Mike Carey (R-OH),members-table,health_focused,REP. MIKE CAREY,92250.0,46
+Rep. Mike Carey (R-OH),members-table,health_focused,MIKE CAREY,59000.0,36
+Rep. Mike Carey (R-OH),members-table,mixed_diversified,REP. MIKE CAREY,32500.0,17
+Rep. Mike Johnson (R-LA),members-table,health_focused,REP. MIKE JOHNSON,118000.0,29
+Rep. Mike Johnson (R-LA),members-table,health_focused,MIKE JOHNSON,105000.0,27
+Rep. Mike Johnson (R-LA),members-table,mixed_diversified,REP. MIKE JOHNSON,132000.0,28
+Rep. Mike Kelly (R-PA),members-table,health_focused,MIKE KELLY,37500.0,17
+Rep. Mike Thompson (D-CA),members-table,health_focused,MIKE THOMPSON,58500.0,19
+Rep. Mike Thompson (D-CA),members-table,health_focused,REP. MICHAEL C. THOMPSON,43500.0,20
+Rep. Mike Thompson (D-CA),members-table,mixed_diversified,MIKE THOMPSON,30000.0,13
+Rep. Mike Thompson (D-CA),members-table,mixed_diversified,REP. MICHAEL C. THOMPSON,28500.0,14
+Rep. Nancy Pelosi (D-CA),members-table,health_focused,NANCY PELOSI,41000.0,11
+Rep. Neal P. Dunn (R-FL),members-table,health_focused,REP. NEAL DUNN,50500.0,27
+Rep. Neal P. Dunn (R-FL),members-table,health_focused,NEAL DUNN,47000.0,29
+Rep. Neal P. Dunn (R-FL),members-table,mixed_diversified,NEAL DUNN,25500.0,15
+Rep. Neal P. Dunn (R-FL),members-table,mixed_diversified,REP. NEAL PATRICK DUNN,21000.0,18
+Rep. Nicole Malliotakis (R-NY),members-table,health_focused,REP. NICOLE MALLIOTAKIS,38000.0,24
+Rep. Norma J. Torres (D-CA),members-table,mixed_diversified,REP. NORMA JUDITH TORRES,29500.0,11
+Rep. Patrick McHenry (R-NC),manual,mixed_diversified,REP. PATRICK TIMOTHY MCHENRY,43885.0,13
+Rep. Paul Tonko (D-NY),members-table,mixed_diversified,PAUL TONKO,22500.0,12
+Rep. Pete Aguilar (D-CA),members-table,health_focused,PETE AGUILAR,119250.0,41
+Rep. Pete Aguilar (D-CA),members-table,health_focused,REP. PETER RAY AGUILAR,110000.0,40
+Rep. Pete Aguilar (D-CA),members-table,health_focused,REP. PETE AGUILAR,79500.0,27
+Rep. Pete Aguilar (D-CA),members-table,health_focused,REP PETE AGUILAR,38500.0,15
+Rep. Pete Aguilar (D-CA),members-table,mixed_diversified,REP. PETER RAY AGUILAR,47140.0,19
+Rep. Pete Aguilar (D-CA),members-table,mixed_diversified,PETE AGUILAR,36500.0,17
+Rep. Pete Aguilar (D-CA),members-table,mixed_diversified,REP. PETE AGUILAR,21900.0,14
+Rep. Randy Feenstra (R-IA),members-table,health_focused,RANDALL FEENSTRA,124292.0,10
+Rep. Randy Feenstra (R-IA),members-table,health_focused,REP. RANDY FEENSTRA,77500.0,41
+Rep. Randy Feenstra (R-IA),members-table,health_focused,RANDY FEENSTRA,49050.0,26
+Rep. Raul Ruiz (D-CA),members-table,health_focused,REP. RAUL RUIZ,107000.0,39
+Rep. Raul Ruiz (D-CA),members-table,health_focused,RAUL RUIZ,38000.0,21
+Rep. Raul Ruiz (D-CA),members-table,mixed_diversified,REP. RAUL RUIZ,50500.0,22
+Rep. Raul Ruiz (D-CA),members-table,mixed_diversified,RAUL RUIZ,22000.0,12
+Rep. Richard E. Neal (D-MA),members-table,health_focused,REP. RICHARD EDMUND NEAL,129000.0,43
+Rep. Richard E. Neal (D-MA),members-table,health_focused,RICHARD NEAL,107750.0,37
+Rep. Richard E. Neal (D-MA),members-table,health_focused,REP. RICHARD NEAL,83500.0,31
+Rep. Richard E. Neal (D-MA),members-table,mixed_diversified,REP. RICHARD EDMUND NEAL,106500.0,32
+Rep. Richard E. Neal (D-MA),members-table,mixed_diversified,RICHARD NEAL,49000.0,16
+Rep. Richard E. Neal (D-MA),members-table,mixed_diversified,REP. RICHARD NEAL,24500.0,8
+Rep. Richard Hudson (R-NC),members-table,health_focused,RICHARD HUDSON,114500.0,46
+Rep. Richard Hudson (R-NC),members-table,health_focused,"REP. RICHARD LANE HUDSON, JR",67500.0,24
+Rep. Richard Hudson (R-NC),members-table,health_focused,REP. RICHARD HUDSON,46500.0,18
+Rep. Richard Hudson (R-NC),members-table,mixed_diversified,"REP. RICHARD LANE HUDSON, JR",75500.0,26
+Rep. Richard Hudson (R-NC),members-table,mixed_diversified,RICHARD HUDSON,42500.0,16
+Rep. Richard Hudson (R-NC),members-table,mixed_diversified,REP. RICHARD HUDSON,38700.0,17
+Rep. Robert E. Latta (R-OH),members-table,health_focused,BOB LATTA,36000.0,29
+Rep. Robert E. Latta (R-OH),members-table,mixed_diversified,REP. ROBERT E. LATTA,26500.0,15
+Rep. Robert Menendez (D-NJ),members-table,health_focused,ROBERT MENENDEZ,49250.0,23
+Rep. Robert Menendez (D-NJ),members-table,mixed_diversified,SEN. ROBERT MENENDEZ,26500.0,12
+Rep. Robert Menendez (D-NJ),members-table,mixed_diversified,ROBERT MENENDEZ,23500.0,13
+Rep. Robin L. Kelly (D-IL),members-table,health_focused,ROBIN KELLY,82500.0,44
+Rep. Robin L. Kelly (D-IL),members-table,health_focused,REP. ROBIN LYNNE KELLY,53000.0,28
+Rep. Robin L. Kelly (D-IL),members-table,health_focused,REP. ROBIN KELLY,44400.0,28
+Rep. Robin L. Kelly (D-IL),members-table,mixed_diversified,REP. ROBIN LYNNE KELLY,43500.0,23
+Rep. Robin L. Kelly (D-IL),members-table,mixed_diversified,ROBIN KELLY,22500.0,15
+Rep. Ron Estes (R-KS),members-table,mixed_diversified,REP. RON ESTES,59500.0,35
+Rep. Rudy Yakym III (R-IN),members-table,health_focused,RUDY YAKYM,41750.0,25
+"Rep. Sanford D. Bishop, Jr. (D-GA)",members-table,mixed_diversified,"REP. SANFORD D. BISHOP, JR",34000.0,11
+Rep. Scott H. Peters (D-CA),members-table,health_focused,REP. SCOTT PETERS,93400.0,40
+Rep. Scott H. Peters (D-CA),members-table,health_focused,SCOTT PETERS,91500.0,39
+Rep. Scott H. Peters (D-CA),members-table,health_focused,REP. SCOTT H. PETERS,36000.0,21
+Rep. Scott H. Peters (D-CA),members-table,mixed_diversified,SCOTT PETERS,68900.0,30
+Rep. Scott H. Peters (D-CA),members-table,mixed_diversified,REP. SCOTT H. PETERS,58500.0,21
+Rep. Scott H. Peters (D-CA),members-table,mixed_diversified,REP. SCOTT PETERS,56000.0,20
+Rep. Sharice Davids (D-KS),members-table,health_focused,REP. SHARICE DAVIDS,52750.0,29
+Rep. Steny H. Hoyer (D-MD),members-table,health_focused,REP. STENY HAMILTON HOYER,115000.0,32
+Rep. Steny H. Hoyer (D-MD),members-table,mixed_diversified,REP. STENY HAMILTON HOYER,56500.0,16
+Rep. Steny H. Hoyer (D-MD),members-table,mixed_diversified,STENY HOYER,27500.0,7
+Rep. Steve Scalise (R-LA),members-table,health_focused,REP. STEPHEN JOSEPH SCALISE,143000.0,38
+Rep. Steve Scalise (R-LA),members-table,health_focused,STEVE SCALISE,132500.0,58
+Rep. Steve Scalise (R-LA),members-table,health_focused,REP. STEVE SCALISE,53500.0,17
+Rep. Steve Scalise (R-LA),members-table,mixed_diversified,REP. STEPHEN JOSEPH SCALISE,123280.0,31
+Rep. Steve Scalise (R-LA),members-table,mixed_diversified,REP. STEVE SCALISE,69900.0,16
+Rep. Steve Scalise (R-LA),members-table,mixed_diversified,STEVE SCALISE,66250.0,20
+Rep. Steve Womack (R-AR),members-table,mixed_diversified,REP. STEVE WOMACK,35000.0,6
+Rep. Steve Womack (R-AR),members-table,mixed_diversified,REP. STEPHEN ALLEN WOMACK,33000.0,10
+Rep. Steven Horsford (D-NV),members-table,health_focused,REP. STEVEN ALEXZANDER HORSFORD,76500.0,43
+Rep. Steven Horsford (D-NV),members-table,health_focused,STEVEN HORSFORD,50000.0,34
+Rep. Steven Horsford (D-NV),members-table,mixed_diversified,REP. STEVEN ALEXZANDER HORSFORD,79000.0,33
+Rep. Suzan K. DelBene (D-WA),members-table,health_focused,REP. SUZAN KAY DELBENE,73500.0,28
+Rep. Suzan K. DelBene (D-WA),members-table,health_focused,SUZAN DELBENE,72000.0,35
+Rep. Suzan K. DelBene (D-WA),members-table,health_focused,REP SUZAN DELBENE,49000.0,13
+Rep. Suzan K. DelBene (D-WA),members-table,health_focused,REP. SUZAN DELBENE,39500.0,18
+Rep. Suzan K. DelBene (D-WA),members-table,mixed_diversified,SUZAN DELBENE,70500.0,26
+Rep. Suzan K. DelBene (D-WA),members-table,mixed_diversified,REP. SUZAN KAY DELBENE,48500.0,19
+Rep. Terri A. Sewell (D-AL),members-table,health_focused,REP. TERRI SEWELL,133000.0,30
+Rep. Terri A. Sewell (D-AL),members-table,health_focused,TERRI SEWELL,112500.0,53
+Rep. Terri A. Sewell (D-AL),members-table,health_focused,REP. TERRYCINA ANDREA SEWELL,100000.0,35
+Rep. Terri A. Sewell (D-AL),members-table,health_focused,REP TERRI SEWELL,38500.0,14
+Rep. Terri A. Sewell (D-AL),members-table,mixed_diversified,REP. TERRYCINA ANDREA SEWELL,44500.0,25
+Rep. Terri A. Sewell (D-AL),members-table,mixed_diversified,TERRI SEWELL,24500.0,14
+Rep. Tom Cole (R-OK),members-table,mixed_diversified,REP. TOM COLE,34300.0,17
+Rep. Tom Cole (R-OK),members-table,mixed_diversified,REP. THOMAS JEFFERY COLE,31000.0,11
+Rep. Tom Emmer (R-MN),members-table,health_focused,TOM EMMER,71700.0,36
+Rep. Tom Emmer (R-MN),members-table,health_focused,"REP. THOMAS EARL EMMER, JR",70500.0,23
+Rep. Tom Emmer (R-MN),members-table,mixed_diversified,"REP. THOMAS EARL EMMER, JR",78500.0,22
+Rep. Tom Emmer (R-MN),members-table,mixed_diversified,TOM EMMER,61500.0,22
+Rep. Troy A. Carter (D-LA),members-table,mixed_diversified,REP. TROY A. CARTER,22500.0,15
+Rep. Troy Balderson (R-OH),members-table,health_focused,REP. TROY BALDERSON,67000.0,34
+Rep. Troy Balderson (R-OH),members-table,health_focused,TROY BALDERSON,61000.0,31
+Rep. Troy Balderson (R-OH),members-table,mixed_diversified,REP. TROY BALDERSON,49500.0,18
+Rep. Vern Buchanan (R-FL),members-table,health_focused,VERN BUCHANAN,128824.0,24
+Rep. Vern Buchanan (R-FL),members-table,health_focused,REP. VERNON GALE BUCHANAN,85500.0,32
+Rep. Vern Buchanan (R-FL),members-table,health_focused,REP. VERN BUCHANAN,58000.0,26
+Rep. Vern Buchanan (R-FL),members-table,mixed_diversified,REP. VERNON GALE BUCHANAN,51500.0,24
+Rep. Vern Buchanan (R-FL),members-table,mixed_diversified,VERN BUCHANAN,28500.0,9
+Rep. Veronica Escobar (D-TX),members-table,mixed_diversified,REP. VERONICA ESCOBAR,23000.0,14
+Rep. Virginia Foxx (R-NC),members-table,health_focused,REP. VIRGINIA ANN FOXX,37000.0,13
+Rep. Virginia Foxx (R-NC),members-table,mixed_diversified,REP. VIRGINIA ANN FOXX,34000.0,17
+Rep. W. Gregory Steube (R-FL),members-table,health_focused,REP. GREG STEUBE,37500.0,23
+Rep. Young Kim (R-CA),members-table,health_focused,YOUNG KIM,37000.0,18
+Rep. Young Kim (R-CA),members-table,mixed_diversified,REP. YOUNG O. KIM,21500.0,12
+Rep. Yvette D. Clarke (D-NY),members-table,health_focused,YVETTE CLARKE,41000.0,16
+Sen. Alex Padilla (D-CA),members-table,health_focused,SEN. ALEX PADILLA,72500.0,20
+Sen. Alex Padilla (D-CA),members-table,health_focused,ALEX PADILLA,36000.0,12
+"Sen. Angus S. King, Jr. (I-ME)",members-table,mixed_diversified,"SEN. ANGUS STANLEY KING, JR",27500.0,6
+Sen. Bill Cassidy (R-LA),members-table,health_focused,SEN. WILLIAM CASSIDY,117900.0,40
+Sen. Bill Cassidy (R-LA),members-table,health_focused,BILL CASSIDY,106000.0,44
+Sen. Bill Cassidy (R-LA),members-table,health_focused,SEN. BILL CASSIDY,86600.0,29
+Sen. Bill Cassidy (R-LA),members-table,health_focused,SENATOR BILL CASSIDY,47000.0,13
+Sen. Bill Cassidy (R-LA),members-table,mixed_diversified,SEN. WILLIAM CASSIDY,58000.0,23
+Sen. Bill Cassidy (R-LA),members-table,mixed_diversified,SEN. BILL CASSIDY,42500.0,23
+Sen. Bill Hagerty (R-TN),members-table,mixed_diversified,SEN. BILL HAGERTY,23500.0,7
+Sen. Bob Casey (D-PA),manual,health_focused,BOB CASEY,522000.0,34
+Sen. Bob Casey (D-PA),manual,health_focused,"SEN. ROBERT P. CASEY, JR",57000.0,22
+Sen. Bob Casey (D-PA),manual,mixed_diversified,"SEN. ROBERT P. CASEY, JR",44500.0,23
+Sen. Bob Casey (D-PA),manual,mixed_diversified,BOB CASEY,23000.0,13
+Sen. Catherine Cortez Masto (D-NV),members-table,health_focused,SEN. CATHERINE CORTEZ MASTO,131000.0,33
+Sen. Catherine Cortez Masto (D-NV),members-table,health_focused,CATHERINE CORTEZ MASTO,75750.0,16
+Sen. Catherine Cortez Masto (D-NV),members-table,mixed_diversified,SEN. CATHERINE CORTEZ MASTO,64250.0,18
+Sen. Charles E. Schumer (D-NY),members-table,health_focused,SEN. CHARLES E. SCHUMER,96250.0,29
+Sen. Charles E. Schumer (D-NY),members-table,health_focused,CHARLES SCHUMER,47500.0,12
+Sen. Charles E. Schumer (D-NY),members-table,health_focused,SEN. CHUCK SCHUMER,43500.0,11
+Sen. Charles E. Schumer (D-NY),members-table,health_focused,CHUCK SCHUMER,36500.0,11
+Sen. Charles E. Schumer (D-NY),members-table,mixed_diversified,SEN. CHARLES E. SCHUMER,47500.0,10
+Sen. Christopher A. Coons (D-DE),members-table,health_focused,SEN. CHRIS COONS,44900.0,14
+Sen. Christopher A. Coons (D-DE),members-table,health_focused,SEN. CHRISTOPHER ANDREW COONS,40500.0,16
+Sen. Christopher A. Coons (D-DE),members-table,mixed_diversified,CHRISTOPHER COONS,37500.0,18
+Sen. Christopher A. Coons (D-DE),members-table,mixed_diversified,SEN. CHRISTOPHER ANDREW COONS,31500.0,14
+Sen. Chuck Grassley (R-IA),members-table,health_focused,SEN. CHARLES E. GRASSLEY,50000.0,22
+Sen. Chuck Grassley (R-IA),members-table,mixed_diversified,SEN. CHARLES E. GRASSLEY,21500.0,11
+Sen. Deb Fischer (R-NE),members-table,health_focused,DEB FISCHER,265440.0,9
+Sen. Deb Fischer (R-NE),members-table,mixed_diversified,SEN. DEBRA S. FISCHER,25000.0,13
+Sen. Eric Schmitt (R-MO),members-table,health_focused,SEN. ERIC S. SCHMITT,45500.0,14
+Sen. Eric Schmitt (R-MO),members-table,health_focused,ERIC SCHMITT,38849.0,16
+Sen. Gary C. Peters (D-MI),members-table,health_focused,GARY PETERS,63000.0,24
+Sen. Gary C. Peters (D-MI),members-table,health_focused,SEN. GARY CHARLES PETERS,46000.0,17
+Sen. Gary C. Peters (D-MI),members-table,mixed_diversified,SEN. GARY CHARLES PETERS,26500.0,12
+Sen. Jacky Rosen (D-NV),members-table,health_focused,SEN. JACKY ROSEN,108000.0,47
+Sen. Jacky Rosen (D-NV),members-table,health_focused,JACKY ROSEN,85750.0,34
+Sen. Jacky Rosen (D-NV),members-table,mixed_diversified,SEN. JACKY ROSEN,57500.0,25
+Sen. Jacky Rosen (D-NV),members-table,mixed_diversified,JACKY ROSEN,32525.0,20
+Sen. James Lankford (R-OK),members-table,health_focused,SEN. JAMES PAUL LANKFORD,46500.0,19
+Sen. James Lankford (R-OK),members-table,mixed_diversified,SEN. JAMES PAUL LANKFORD,44000.0,21
+Sen. Jeanne Shaheen (D-NH),members-table,health_focused,SEN. JEANNE SHAHEEN,57000.0,23
+Sen. Jerry Moran (R-KS),members-table,health_focused,JERRY MORAN,60500.0,20
+Sen. Jerry Moran (R-KS),members-table,mixed_diversified,SEN. JERRY MORAN,33500.0,15
+Sen. Jerry Moran (R-KS),members-table,mixed_diversified,SEN. JERRY W. MORAN,22500.0,12
+Sen. Jim Banks (R-IN),members-table,health_focused,SEN. JIM BANKS,40500.0,13
+Sen. Joe Manchin (I-WV),manual,mixed_diversified,"SEN. JOSEPH MANCHIN, III",30000.0,6
+Sen. John Barrasso (R-WY),members-table,health_focused,JOHN BARRASSO,92500.0,33
+Sen. John Barrasso (R-WY),members-table,health_focused,SEN. JOHN ANTHONY BARRASSO,69500.0,26
+Sen. John Barrasso (R-WY),members-table,mixed_diversified,SEN. JOHN ANTHONY BARRASSO,59500.0,22
+Sen. John Barrasso (R-WY),members-table,mixed_diversified,JOHN BARRASSO,47500.0,17
+Sen. John Barrasso (R-WY),members-table,mixed_diversified,"SEN. JOHN BARRASSO, III",22500.0,6
+Sen. John Boozman (R-AR),members-table,mixed_diversified,SEN. JOHN NICHOLS BOOZMAN,49500.0,17
+Sen. John Boozman (R-AR),members-table,mixed_diversified,SEN. JOHN BOOZMAN,31692.0,11
+Sen. John Cornyn (R-TX),members-table,health_focused,"SEN. JOHN CORNYN, III",111000.0,40
+Sen. John Cornyn (R-TX),members-table,health_focused,JOHN CORNYN,75000.0,32
+Sen. John Cornyn (R-TX),members-table,mixed_diversified,"SEN. JOHN CORNYN, III",84000.0,24
+Sen. John Cornyn (R-TX),members-table,mixed_diversified,JOHN CORNYN,38000.0,17
+Sen. John R. Curtis (R-UT),members-table,health_focused,JOHN CURTIS,94250.0,44
+Sen. John R. Curtis (R-UT),members-table,health_focused,REP. JOHN R. CURTIS,53000.0,26
+Sen. John R. Curtis (R-UT),members-table,mixed_diversified,JOHN CURTIS,23000.0,20
+Sen. John R. Curtis (R-UT),members-table,mixed_diversified,REP. JOHN R. CURTIS,22000.0,12
+Sen. John Thune (R-SD),members-table,health_focused,SEN. JOHN RANDOLPH THUNE,116000.0,32
+Sen. John Thune (R-SD),members-table,health_focused,JOHN THUNE,103400.0,34
+Sen. John Thune (R-SD),members-table,health_focused,SEN. JOHN THUNE,97900.0,29
+Sen. John Thune (R-SD),members-table,mixed_diversified,SEN. JOHN RANDOLPH THUNE,70500.0,19
+Sen. John Thune (R-SD),members-table,mixed_diversified,SEN. JOHN THUNE,59440.0,20
+Sen. John Thune (R-SD),members-table,mixed_diversified,JOHN THUNE,43500.0,15
+Sen. Jon Husted (R-OH),members-table,health_focused,SEN. JON HUSTED,45500.0,12
+Sen. Jon Husted (R-OH),members-table,mixed_diversified,SEN. JON HUSTED,31000.0,12
+Sen. Jon Tester (D-MT),manual,health_focused,SEN. JON TESTER,103500.0,42
+Sen. Jon Tester (D-MT),manual,health_focused,JON TESTER,77500.0,33
+Sen. Jon Tester (D-MT),manual,mixed_diversified,SEN. JON TESTER,42500.0,14
+Sen. Jon Tester (D-MT),manual,mixed_diversified,JON TESTER,28000.0,14
+Sen. Joni Ernst (R-IA),members-table,health_focused,SEN. JONI KAY ERNST,45500.0,17
+Sen. Joni Ernst (R-IA),members-table,mixed_diversified,SEN. JONI KAY ERNST,25000.0,14
+Sen. Katie Boyd Britt (R-AL),members-table,health_focused,KATIE BRITT,87821.0,14
+Sen. Katie Boyd Britt (R-AL),members-table,health_focused,SEN. KATIE BOYD BRITT,40500.0,15
+Sen. Katie Boyd Britt (R-AL),members-table,mixed_diversified,SEN. KATIE BOYD BRITT,22500.0,9
+Sen. Kevin Cramer (R-ND),members-table,health_focused,KEVIN CRAMER,95551.0,9
+Sen. Kyrsten Sinema (I-AZ),manual,health_focused,SEN. KYRSTEN SINEMA,108830.0,39
+Sen. Kyrsten Sinema (I-AZ),manual,health_focused,KYRSTEN SINEMA,87000.0,36
+Sen. Kyrsten Sinema (I-AZ),manual,mixed_diversified,SEN. KYRSTEN SINEMA,56000.0,21
+Sen. Kyrsten Sinema (I-AZ),manual,mixed_diversified,KYRSTEN SINEMA,26000.0,10
+Sen. Lisa Blunt Rochester (D-DE),members-table,health_focused,REP. LISA BLUNT ROCHESTER,88700.0,52
+Sen. Lisa Blunt Rochester (D-DE),members-table,health_focused,LISA BLUNT ROCHESTER,87600.0,53
+Sen. Lisa Blunt Rochester (D-DE),members-table,health_focused,SEN. LISA BLUNT ROCHESTER,38000.0,16
+Sen. Lisa Blunt Rochester (D-DE),members-table,mixed_diversified,LISA BLUNT ROCHESTER,51250.0,25
+Sen. Lisa Blunt Rochester (D-DE),members-table,mixed_diversified,REP. LISA BLUNT ROCHESTER,32500.0,18
+Sen. Lisa Murkowski (R-AK),members-table,health_focused,LISA MURKOWSKI,469232.0,22
+Sen. Lisa Murkowski (R-AK),members-table,health_focused,SEN. LISA MURKOWSKI,45500.0,18
+Sen. Margaret Wood Hassan (D-NH),members-table,health_focused,MARGARET HASSAN,411998.0,4
+Sen. Margaret Wood Hassan (D-NH),members-table,health_focused,SEN. MARGARET WOOD HASSAN,99100.0,42
+Sen. Margaret Wood Hassan (D-NH),members-table,health_focused,SEN. MAGGIE HASSAN,58500.0,26
+Sen. Mark R. Warner (D-VA),members-table,health_focused,SEN. MARK ROBERT WARNER,58300.0,20
+Sen. Mark R. Warner (D-VA),members-table,health_focused,SEN. MARK WARNER,54500.0,20
+Sen. Mark R. Warner (D-VA),members-table,health_focused,MARK WARNER,49000.0,23
+Sen. Mark R. Warner (D-VA),members-table,mixed_diversified,SEN. MARK ROBERT WARNER,37500.0,10
+Sen. Mark R. Warner (D-VA),members-table,mixed_diversified,SEN. MARK WARNER,28300.0,13
+Sen. Marsha Blackburn (R-TN),members-table,health_focused,MARSHA BLACKBURN,166522.0,25
+Sen. Marsha Blackburn (R-TN),members-table,health_focused,SEN. MARSHA WEDGEWORTH BLACKBURN,97500.0,31
+Sen. Marsha Blackburn (R-TN),members-table,mixed_diversified,SEN. MARSHA WEDGEWORTH BLACKBURN,54500.0,22
+Sen. Marsha Blackburn (R-TN),members-table,mixed_diversified,MARSHA BLACKBURN,50000.0,19
+Sen. Marsha Blackburn (R-TN),members-table,mixed_diversified,SEN. MARSHA BLACKBURN,28500.0,8
+Sen. Martin Heinrich (D-NM),members-table,health_focused,SEN. MARTIN HEINRICH,69000.0,26
+Sen. Martin Heinrich (D-NM),members-table,health_focused,MARTIN HEINRICH,39500.0,24
+Sen. Martin Heinrich (D-NM),members-table,mixed_diversified,SEN. MARTIN HEINRICH,27000.0,20
+Sen. Mike Crapo (R-ID),members-table,health_focused,SEN. MICHAEL DEAN CRAPO,98500.0,29
+Sen. Mike Crapo (R-ID),members-table,health_focused,MIKE CRAPO,85500.0,28
+Sen. Mike Crapo (R-ID),members-table,health_focused,SEN. MIKE CRAPO,65000.0,19
+Sen. Mike Crapo (R-ID),members-table,mixed_diversified,SEN. MICHAEL DEAN CRAPO,68500.0,26
+Sen. Mike Crapo (R-ID),members-table,mixed_diversified,MICHAEL CRAPO,35000.0,12
+Sen. Mike Lee (R-UT),members-table,health_focused,SEN. MICHAEL SHUMWAY LEE,37500.0,12
+Sen. Mike Lee (R-UT),members-table,mixed_diversified,SEN. MICHAEL SHUMWAY LEE,28500.0,9
+Sen. Mitch McConnell (R-KY),members-table,health_focused,SEN. MITCH MCCONNELL,119500.0,31
+Sen. Mitch McConnell (R-KY),members-table,health_focused,MITCH MCCONNELL,76300.0,23
+Sen. Mitch McConnell (R-KY),members-table,mixed_diversified,SEN. MITCH MCCONNELL,51140.0,14
+Sen. Mitch McConnell (R-KY),members-table,mixed_diversified,MITCH MCCONNELL,31000.0,9
+Sen. Mitt Romney (R-UT),manual,health_focused,SEN. MITT ROMNEY,46000.0,12
+Sen. Mitt Romney (R-UT),manual,mixed_diversified,SEN. MITT ROMNEY,21000.0,8
+Sen. Patty Murray (D-WA),members-table,health_focused,SEN. PATRICIA LYNN MURRAY,69500.0,32
+Sen. Patty Murray (D-WA),members-table,health_focused,PATTY MURRAY,62500.0,28
+Sen. Patty Murray (D-WA),members-table,health_focused,SEN. PATTY MURRAY,48300.0,23
+Sen. Patty Murray (D-WA),members-table,mixed_diversified,PATTY MURRAY,26000.0,17
+Sen. Patty Murray (D-WA),members-table,mixed_diversified,SEN. PATRICIA LYNN MURRAY,24500.0,10
+Sen. Rand Paul (R-KY),members-table,health_focused,SEN. RAND HOWARD PAUL,44500.0,13
+Sen. Rick Scott (R-FL),members-table,health_focused,SEN. RICK L. SCOTT,48000.0,13
+Sen. Rick Scott (R-FL),members-table,mixed_diversified,SEN. RICK L. SCOTT,32500.0,7
+Sen. Roger F. Wicker (R-MS),members-table,health_focused,SEN. ROGER FREDERICK WICKER,58000.0,21
+Sen. Roger F. Wicker (R-MS),members-table,mixed_diversified,SEN. ROGER FREDERICK WICKER,23500.0,16
+Sen. Roger Marshall (R-KS),members-table,health_focused,SEN. ROGER W. MARSHALL,40500.0,13
+Sen. Roger Marshall (R-KS),members-table,health_focused,ROGER MARSHALL,39400.0,19
+Sen. Roger Marshall (R-KS),members-table,mixed_diversified,SEN. ROGER W. MARSHALL,30000.0,12
+Sen. Roger Marshall (R-KS),members-table,mixed_diversified,SEN. ROGER MARSHALL,26500.0,12
+Sen. Roger Marshall (R-KS),members-table,mixed_diversified,ROGER MARSHALL,23000.0,12
+Sen. Ron Wyden (D-OR),members-table,health_focused,RON WYDEN,104500.0,33
+Sen. Ron Wyden (D-OR),members-table,health_focused,SEN. RON L. WYDEN,72000.0,26
+Sen. Ron Wyden (D-OR),members-table,health_focused,SEN. RON WYDEN,48000.0,18
+Sen. Ron Wyden (D-OR),members-table,mixed_diversified,RON WYDEN,21500.0,13
+Sen. Ruben Gallego (D-AZ),members-table,mixed_diversified,RUBEN GALLEGO,21775.0,10
+Sen. Shelley Moore Capito (R-WV),members-table,health_focused,SEN. SHELLEY MOORE CAPITO,84500.0,33
+Sen. Shelley Moore Capito (R-WV),members-table,mixed_diversified,SEN. SHELLEY MOORE CAPITO,27500.0,24
+Sen. Sherrod Brown (D-OH),manual,health_focused,SEN. SHERROD CAMPBELL BROWN,54000.0,23
+Sen. Steve Daines (R-MT),members-table,health_focused,SEN. STEVE DAVID DAINES,70000.0,25
+Sen. Steve Daines (R-MT),members-table,health_focused,SEN. STEVE DAINES,67000.0,22
+Sen. Steve Daines (R-MT),members-table,health_focused,STEVE DAINES,42500.0,21
+Sen. Steve Daines (R-MT),members-table,mixed_diversified,SEN. STEVE DAVID DAINES,42000.0,12
+Sen. Steve Daines (R-MT),members-table,mixed_diversified,SEN. STEVE DAINES,27000.0,10
+Sen. Susan M. Collins (R-ME),members-table,health_focused,SUSAN COLLINS,64500.0,28
+Sen. Susan M. Collins (R-ME),members-table,health_focused,SEN. SUSAN COLLINS,62500.0,26
+Sen. Susan M. Collins (R-ME),members-table,health_focused,SEN. SUSAN MARGARET COLLINS,38500.0,15
+Sen. Susan M. Collins (R-ME),members-table,mixed_diversified,SUSAN COLLINS,37500.0,13
+Sen. Susan M. Collins (R-ME),members-table,mixed_diversified,SEN. SUSAN MARGARET COLLINS,29500.0,11
+Sen. Susan M. Collins (R-ME),members-table,mixed_diversified,SEN. SUSAN COLLINS,25000.0,9
+Sen. Tammy Baldwin (D-WI),members-table,health_focused,SEN. TAMMY BALDWIN,91000.0,10
+Sen. Tammy Baldwin (D-WI),members-table,health_focused,TAMMY BALDWIN,41982.0,27
+Sen. Tammy Duckworth (D-IL),members-table,health_focused,TAMMY DUCKWORTH,45000.0,13
+Sen. Ted Budd (R-NC),members-table,health_focused,SEN. THEODORE PAUL BUDD,52000.0,19
+Sen. Ted Budd (R-NC),members-table,mixed_diversified,SEN. TED BUDD,32800.0,12
+Sen. Ted Budd (R-NC),members-table,mixed_diversified,SEN. THEODORE PAUL BUDD,21000.0,7
+Sen. Thom Tillis (R-NC),members-table,health_focused,SEN. THOM TILLIS,82300.0,28
+Sen. Thom Tillis (R-NC),members-table,health_focused,THOM TILLIS,78500.0,24
+Sen. Thom Tillis (R-NC),members-table,health_focused,SEN. THOMAS ROLAND TILLIS,67500.0,17
+Sen. Thom Tillis (R-NC),members-table,mixed_diversified,SEN. THOM TILLIS,56167.0,22
+Sen. Thom Tillis (R-NC),members-table,mixed_diversified,SEN. THOMAS ROLAND TILLIS,43000.0,13
+Sen. Thom Tillis (R-NC),members-table,mixed_diversified,THOM TILLIS,36500.0,12
+Sen. Tim Kaine (D-VA),members-table,health_focused,TIM KAINE,97300.0,44
+Sen. Tim Kaine (D-VA),members-table,health_focused,SEN. TIMOTHY MICHAEL KAINE,71000.0,31
+Sen. Tim Kaine (D-VA),members-table,mixed_diversified,SEN. TIMOTHY MICHAEL KAINE,59000.0,21
+Sen. Tim Kaine (D-VA),members-table,mixed_diversified,TIM KAINE,37000.0,15
+Sen. Tim Scott (R-SC),members-table,health_focused,TIM SCOTT,91900.0,31
+Sen. Tim Scott (R-SC),members-table,health_focused,SEN. TIMOTHY EUGENE SCOTT,67500.0,18
+Sen. Tim Scott (R-SC),members-table,health_focused,SEN TIM SCOTT,48000.0,4
+Sen. Tim Scott (R-SC),members-table,mixed_diversified,SEN. TIMOTHY EUGENE SCOTT,38500.0,11
+Sen. Tim Scott (R-SC),members-table,mixed_diversified,TIM SCOTT,31000.0,10
+Sen. Tim Scott (R-SC),members-table,mixed_diversified,SEN. TIM SCOTT,21400.0,9
+Sen. Tina Smith (D-MN),members-table,health_focused,SEN. TINA SMITH,48000.0,18
+Sen. Todd Young (R-IN),members-table,health_focused,TODD YOUNG,94000.0,37
+Sen. Todd Young (R-IN),members-table,health_focused,SEN. TODD CHRISTOPHER YOUNG,86000.0,28
+Sen. Todd Young (R-IN),members-table,health_focused,SEN. TODD YOUNG,38500.0,18
+Sen. Todd Young (R-IN),members-table,mixed_diversified,SEN. TODD CHRISTOPHER YOUNG,45500.0,15
+Sen. Todd Young (R-IN),members-table,mixed_diversified,TODD YOUNG,26500.0,16
+Sen. Todd Young (R-IN),members-table,mixed_diversified,SEN. TODD YOUNG,22400.0,10
+Sen. Tom Cotton (R-AR),members-table,mixed_diversified,SEN. TOM COTTON,41500.0,14
