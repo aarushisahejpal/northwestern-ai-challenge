@@ -17,7 +17,7 @@ gain-investigation/
 ├── skills/              ← the submitted Agent Skills, each self-contained (SKILL.md + scripts/)
 │   ├── lda-corpus-loader/     [build] raw corpus → DuckDB + show_record.py (citation → raw record)
 │   ├── lda-entity-resolver/   [build] adds entity tables + v_client_canonical_spend to the DB
-│   ├── lead-scanner/          [investigate] lens SQL + bill/giving/industry/FEC tools → leads
+│   ├── lead-scanner/          [investigate] lens SQL + bill/giving/industry/FEC/turnover tools → leads
 │   ├── finding-verifier/      [investigate] pre-lock claim re-derivation protocol
 │   ├── source-document-reader/ [investigate] external primary-source PDF → page-anchored citable text
 │   ├── outside-context-scan/  [investigate] exploratory novelty / contemporaneous web research
@@ -51,7 +51,7 @@ needs the built DB, `fec_*` needs the external openFEC API, untokened scripts ar
 
 **Investigate the corpus** (read-only over the DB + outside sources; run anytime after the build):
 - `lead-scanner` — SQL-first lens library + bill cross-check / giving map / industry map / FEC
-  enrichment → candidate leads.
+  enrichment / quarterly turnover tracker → candidate leads.
 - `finding-verifier` — independently re-derive every claim before a finding locks.
 - `outside-context-scan` — exploratory web research (novelty / contemporaneous), never a verifier.
 - `source-document-reader` — turn an external primary-source PDF into page-anchored, citable text.
@@ -76,6 +76,7 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
 .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
+.venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py [2025Q4]  # quarterly turnover beat: terminations/hires/swaps/in-house (+ --json)
 .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
 .venv/Scripts/python skills/investigation-ledger/scripts/ledger_lint.py LEDGER.md
 ```
@@ -102,6 +103,9 @@ from the source systems, valid regardless of which DB below they were queried th
   fan-out / individual-as-client / LD-203 flows); produced leads **L020–L025**.
 - `press_issue_coupling.sql` (+ `.md`) — press issue-frequency & lobbying–messaging share-coupling;
   produced **L026–L027**.
+- `p3_turnover.sql` (`P3a`–`P3e`) — the citeable form of the quarterly turnover tracker
+  (`lda_turnover.py`): declared-termination trend, terminations/new engagements/swaps/in-house
+  moves/firm churn for a target quarter.
 - `l003/l004/l006/l010_*.sql` — per-lead deep-dive SQL, kept for reproducibility.
 - `corpus_additions_roadmap.md` — design notes for not-yet-built extensions (FTS/keyness term
   discovery, Congress.gov bill-status & FEC joins, NER entity graph). **Internal; not a submission

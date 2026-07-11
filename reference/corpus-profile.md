@@ -29,6 +29,7 @@ The abstractions a SKILL.md references by name, and this corpus's binding for ea
 | `dedup_pick` | latest by `posted`, then `filing_id` | §3 |
 | `attribution_grain` | filing-level (income attributes whole to every item a filing names) | §3 |
 | `citation_keys` | senate `filing_uuid` · house XML filename · press `src_file:src_line` | §2 |
+| `termination_signal` | senate `filing_type` matching `^[1-4](T|TY|@|@Y)$` (declared, never inferred) | §3 |
 | `entity_tables` | `entities` / `entity_aliases` / `registrant_crosswalk` | §4 |
 | `canonical_spend_view` | `v_client_canonical_spend` | §4 |
 | `freetext_surface` | `lobbying_freetext` (+ FTS, `stemmer='none'`, discovery-only) | §5 |
@@ -89,6 +90,18 @@ key to a raw record. Never grep the raw corpus directly.
   client dollars, use `v_client_canonical_spend` (§4). *This is why press/bill "loudness" counts are
   read as facets, and only compared within the same press vintage (§1) — raw counts across vintages
   are not comparable.*
+- **Terminations are DECLARED, never inferred.** The end of an engagement is a senate
+  `filing_type` in the termination family `^[1-4](T|TY|@|@Y)$` — "N Quarter - Termination
+  [Amendment][(No Activity)]"; 18,292 filings corpus-wide, with the exact `termination_date` in
+  the raw record (not loaded; resolve via `show_record.py`). Never infer termination from
+  absence-between-quarters — late posting and partial house dumps fabricate exits. Detect by
+  **existence** of a T-family filing in the (pair, quarter) group while dollars still dedup on
+  `filing_period`, so a later amendment can't hide the termination; house `form` is only LD1/LD2
+  (no termination signal — senate-only lens). Terminations are seasonal: each Q4 2022–2025 runs
+  22–43% above that year's other quarters (compare Q4 to prior Q4s). And pair "newness" must be
+  grouped by resolved client entity, not `client_id` — a re-registration re-issues `client_id`
+  and fabricates a "new" engagement (Checkmate/Gunvor 2025-Q4). *Verified 2026-07-10 (P3 build);
+  cited form `queries/p3_turnover.sql` P3a–P3e.*
 
 ## 4. Entity resolution
 

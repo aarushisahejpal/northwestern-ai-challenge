@@ -1,11 +1,11 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every filing and press release touching it, each with a show_record.py-resolvable citation key. (3) A disclosed-giving map (LD-203) that, given a registrant entity or an industry roster, reports its disclosed political giving. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories, tags it with a curated vocabulary, and emits an entity-resolved player list that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. (5) An external campaign-finance enrichment (FEC/openFEC) that takes that roster and reports each player's contributions into an industry's Super-PAC network, reconciled against the disclosed-giving map. Corpus-specific facts (table names, dedup rules, citation keys, mirror sources) come from `reference/corpus-profile.md`; industry/bill vocabulary from the versioned JSON lexicons beside the scripts; external-dataset traps from the `reference/` briefs. Use when generating or refreshing the lead pipeline, running a bill-level "who's been quietly lobbying this?" check, or building the who / how-much / who-they-give-to map of an industry.
+description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every filing and press release touching it, each with a show_record.py-resolvable citation key. (3) A disclosed-giving map (LD-203) that, given a registrant entity or an industry roster, reports its disclosed political giving. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories, tags it with a curated vocabulary, and emits an entity-resolved player list that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. (5) An external campaign-finance enrichment (FEC/openFEC) that takes that roster and reports each player's contributions into an industry's Super-PAC network, reconciled against the disclosed-giving map. (6) A quarterly turnover tracker that diffs a quarter against the corpus — declared terminations, new engagements, firm swaps, in-house moves, and a firm churn scoreboard — the recurring beat report. Corpus-specific facts (table names, dedup rules, citation keys, mirror sources, the termination signal) come from `reference/corpus-profile.md`; industry/bill vocabulary from the versioned JSON lexicons beside the scripts; external-dataset traps from the `reference/` briefs. Use when generating or refreshing the lead pipeline, running a bill-level "who's been quietly lobbying this?" check, building the who / how-much / who-they-give-to map of an industry, or reporting a quarter's representation turnover.
 ---
 
 # Lead Scanner
 
-Five capabilities, one discipline: extraction and filtering stay in SQL; the model only ranks and
+Six capabilities, one discipline: extraction and filtering stay in SQL; the model only ranks and
 phrases hypotheses; output is record IDs + one-liners, never quoted record text.
 
 1. **A lens library** — SQL-first scans that turn the corpus into candidate lead rows.
@@ -17,6 +17,8 @@ phrases hypotheses; output is record IDs + one-liners, never quoted record text.
    industry hidden in the free-text, tag it deterministically, emit an entity-resolved player list.
 5. **An external campaign-finance enrichment** (`scripts/fec_enrich.py`) — take that roster and add
    the Super-PAC money leg from FEC/openFEC, reconciled against the disclosed-giving map.
+6. **A quarterly turnover tracker** (`scripts/lda_turnover.py`) — diff a quarter against the corpus:
+   declared terminations, new engagements, firm swaps, in-house moves, firm churn scoreboard.
 
 ## How this skill is bound to a corpus
 
@@ -231,6 +233,40 @@ every cached request has the key stripped. README §4 discloses the source + fet
   form — FEC data is external, not in the DB; the cache + live-resolved committee ids are the artifact.
 - **Pair with the other two legs:** `lda_ld203_giving.py` (disclosed giving) and the
   `canonical_spend_view` (lobbying spend) — together the who / how-much / who-they-give-to money map.
+
+## Quarterly turnover tracker — `scripts/lda_turnover.py`
+
+**The problem it solves.** The recurring "who moved" beat: each quarter, who *ended* representation,
+who *hired*, which clients *swapped* firms or took the work *in-house*, and which firms churned the
+most. Point-in-time spend rankings can't see any of this — turnover is a diff, not a total.
+
+```bash
+.venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py            # latest quarter in DB
+.venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py 2025Q4
+.venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py 2025Q4 --json > out/turnover_2025Q4.json
+```
+
+Useful flags: `--top`, `--window` (swap window in quarters), `--json`. Five sections: summary
+(vs prior quarter AND same quarter prior year), terminations ranked by trailing-4-quarter income,
+new engagements, in-house moves + firm swaps (with the client's canonical spend for size), and a
+firm churn scoreboard (engagements lost/signed per registrant).
+
+### Reading the output — caveats
+
+- **Terminations are DECLARED, never inferred** (`termination_signal`, profile §3): the tool reads
+  the termination filing-type family, not absence-between-quarters — late posting and partial mirror
+  dumps fabricate exits. Senate-only lens (the mirror source carries no termination signal).
+- **A termination is not always an exit.** `re_engaged` flags pairs that file again later (a pause);
+  `new_this_q` / `term_same_q` flag one-quarter engagements (hired and terminated inside the quarter).
+- **"New" is grouped by resolved client entity, never `client_id`** — a re-registration re-issues
+  `client_id` and would otherwise fabricate a hire (profile §4). Income NULL on a new engagement
+  usually means registration-only so far.
+- **Seasonality:** Q4 terminations run 22–43% above that year's other quarters (year-end cleanup) —
+  compare a Q4 to prior Q4s. The **latest** quarter in the DB is a floor (terminations post with a
+  lag); the tool warns when the target is the newest quarter.
+- **Client-size dollars come from the `canonical_spend_view`** (profile §4); engagement-level
+  trailing income dedups on `period_invariant_key` with a T treated as the terminal state.
+- Citeable aggregate form: `queries/p3_turnover.sql` (`P3a`–`P3e`).
 
 ## Lenses — `queries/*.sql` run via `queries/run_sweep.py`
 
