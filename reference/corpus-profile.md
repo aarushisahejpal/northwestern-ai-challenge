@@ -179,7 +179,7 @@ Built by `lda-entity-resolver/scripts/build_members.py` from external sources (c
 | Regime | Where it lives | Attribution boundary |
 |---|---|---|
 | `ld203` | **In the project DB** (Senate LD-203 contribution reports, loaded by `build_db.py`) | **Registrant-filed**, never client-attributable. Semiannual; early-year files legitimately tiny. **LD-203 ≠ FEC** — say "disclosed LD-203 giving," never "total." |
-| `fec` | **External** (openFEC API), fetched live + cached to gitignored `out/fec_cache/` | Committee-filed receipts. A *different universe* from LD-203 — look for gaps, not equality. Full traps in `reference/fec-campaign-finance.md`. |
+| `fec` | **External** (openFEC API), fetched live + cached to `out/fec_cache/` (committed since 2026-07-11 — the cache is the citeable evidence; only `out/.fec_api_key` stays gitignored) | Committee-filed receipts. A *different universe* from LD-203 — look for gaps, not equality. Full traps in `reference/fec-campaign-finance.md`. |
 
 The two are complementary halves of an industry's "who do they give to" — LD-203 is the disclosed
 lobbyist-side slice; FEC carries the Super-PAC money LD-203 cannot see.
