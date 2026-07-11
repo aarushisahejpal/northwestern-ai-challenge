@@ -1,7 +1,8 @@
 {
   "_meta": {
-    "version": "1.0",
+    "version": "1.1",
     "generated": "2026-07-07",
+    "changelog": "1.1 (2026-07-10): added PARDONS facet (presidential pardons / executive clemency), phrases triaged via lda_freetext_discovery.py --search + whole-word precision counts over lobbying_freetext; crypto facet unchanged, so CRYPTO tag rows reproduce byte-identically on rebuild.",
     "purpose": "Curated industry -> distinctive-phrase vocabulary for the lobbying free-text discovery/serving layer (lda_industry_map.py). Fixes cleanup-note B: an industry hidden under many issue codes and vague categories ('lobbying related to taxation') can only be mapped by the VOCABULARY it uses in the free-text, not by issue-code filtering. Each facet's 'phrases' are matched, whole-word and case-insensitively, against lobbying_freetext (senate activity descriptions + house specific_issues) to build the deterministic, cited serving table lobbying_issue_mentions. Same precision-over-recall discipline as bill_aliases.json.",
     "discipline": [
       "Precision over recall, same rule as build_db.py's ISSUE_KEYWORDS and bill_aliases.json. Every 'phrases' string is a distinctive, whole-word-matchable term, never a bare topic word.",
@@ -52,6 +53,32 @@
         "Vocabulary triaged from lda_freetext_discovery.py keyness/emergence over lobbying_freetext, 2026-07-07"
       ],
       "confidence": "high on the core terms (crypto/digital asset/stablecoin/blockchain); medium on bill-name phrases (window-specific)."
+    },
+    {
+      "id": "pardons",
+      "tag": "PARDONS",
+      "label": "Presidential pardons / executive clemency",
+      "phrases": [
+        "pardon", "pardons", "pardoning",
+        "clemency", "clemencies",
+        "commutation", "commutations",
+        "executive relief"
+      ],
+      "display_only": {
+        "commute": "transportation (commuter rail, clean-commute bills); 76 filings, ~all TRA/ENG; excluded.",
+        "commuted": "0 whole-word hits in-window; transportation risk if it appears; excluded.",
+        "amnesty": "immigration amnesty debates + Amnesty International org name; excluded.",
+        "expungement": "criminal-RECORDS relief, dominated by cannabis reform (MORE Act, 387 filings); a different legal mechanism than executive clemency; excluded.",
+        "compassionate release": "judicial sentence-reduction mechanism (18 U.S.C. 3582), not presidential clemency; 92 filings, sentencing-reform domain; excluded.",
+        "reprieve": "0 whole-word hits in-window; excluded.",
+        "pardon attorney": "always co-occurs with the whole word 'pardon', so the phrase adds no filings; recorded for the record."
+      },
+      "seed_note": "Two distinct populations share this vocabulary and both are in scope: (a) the paid pardon-seeking market — individuals as clients buying 'Executive relief' / 'Seeking a presidential pardon' engagements (ledger L021 Daibes, L034 Ver/Hatch/Schwartz; 'executive relief' whole-phrase resolves to exactly Binance Holdings + Changpeng Zhao + Fred Daibes in-window, a euphemism with near-perfect precision); and (b) clemency-POLICY advocacy by criminal-justice orgs (Due Process Institute, ACLU, marijuana-pardon expansion pushes). The facet deliberately does not split them at tag time; the map's client list separates individuals from orgs downstream.",
+      "sources": [
+        "LEDGER.md L021 (Fred Daibes 'Executive relief' $1M) and L034 (Ver/Hatch/Schwartz paid pardon-seeking, Burkman ~$1.56M) — the leads this facet generalizes",
+        "Vocabulary triaged from lda_freetext_discovery.py --search 'pardon' + whole-word precision counts over lobbying_freetext, 2026-07-10 (pardon 152 filings / clemency 170 / executive relief 26; commute/amnesty/expungement/compassionate-release collisions checked and excluded)"
+      ],
+      "confidence": "high on pardon/pardons/clemency/executive relief (precision-checked); medium on commutation/commutations (small counts; policy-advocacy contexts verified legit in-window)."
     }
   ]
 }
