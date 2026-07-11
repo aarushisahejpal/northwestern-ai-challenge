@@ -1,0 +1,2452 @@
+{
+  "query": "37 entities from healthcare_roster_mixed.txt",
+  "resolved_entities": [
+    {
+      "entity_id": "registrant:30267",
+      "canonical_name": "ORACLE CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106157",
+      "canonical_name": "PHLOW CORPORATION"
+    },
+    {
+      "entity_id": "registrant:56838",
+      "canonical_name": "SANOFI US SERVICES INC."
+    },
+    {
+      "entity_id": "registrant:323251",
+      "canonical_name": "THERMO FISHER SCIENTIFIC INC."
+    },
+    {
+      "entity_id": "registrant:401104825",
+      "canonical_name": "ILLUMINA, INC."
+    },
+    {
+      "entity_id": "registrant:401104248",
+      "canonical_name": "SEQIRUS"
+    },
+    {
+      "entity_id": "registrant:3093",
+      "canonical_name": "AMERICAN PHYSICAL THERAPY ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:20686",
+      "canonical_name": "JOHNSON & JOHNSON SERVICES, INC."
+    },
+    {
+      "entity_id": "registrant:401105344",
+      "canonical_name": "STERIS CORPORATION"
+    },
+    {
+      "entity_id": "registrant:2877",
+      "canonical_name": "AMERICAN MEDICAL ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:1364",
+      "canonical_name": "AMERICAN ACADEMY OF OPHTHALMOLOGY"
+    },
+    {
+      "entity_id": "registrant:31406",
+      "canonical_name": "ALTRIA CLIENT SERVICES LLC"
+    },
+    {
+      "entity_id": "registrant:49511",
+      "canonical_name": "RELX INC."
+    },
+    {
+      "entity_id": "registrant:16032",
+      "canonical_name": "ASSOCIATION FOR ACCESSIBLE MEDICINES"
+    },
+    {
+      "entity_id": "registrant:2228",
+      "canonical_name": "American Dental Association"
+    },
+    {
+      "entity_id": "registrant:4675",
+      "canonical_name": "AMERICAN BENEFITS COUNCIL"
+    },
+    {
+      "entity_id": "registrant:24817",
+      "canonical_name": "MEDTRONIC, INC."
+    },
+    {
+      "entity_id": "registrant:1694",
+      "canonical_name": "AARP"
+    },
+    {
+      "entity_id": "registrant:40305",
+      "canonical_name": "WALMART INC."
+    },
+    {
+      "entity_id": "registrant:400728183",
+      "canonical_name": "SMITH & NEPHEW, INC."
+    },
+    {
+      "entity_id": "registrant:1546",
+      "canonical_name": "AMERICAN ASSOCIATION OF COLLEGES OF OSTEOPATHIC MEDICINE"
+    },
+    {
+      "entity_id": "registrant:6245",
+      "canonical_name": "BIOTECHNOLOGY INNOVATION ORGANIZATION"
+    },
+    {
+      "entity_id": "registrant:26353",
+      "canonical_name": "VIATRIS INC."
+    },
+    {
+      "entity_id": "registrant:66",
+      "canonical_name": "ABBOTT LABORATORIES"
+    },
+    {
+      "entity_id": "registrant:4493",
+      "canonical_name": "ASSOCIATION OF AMERICAN MEDICAL COLLEGES"
+    },
+    {
+      "entity_id": "registrant:9204",
+      "canonical_name": "NOVARTIS"
+    },
+    {
+      "entity_id": "registrant:304931",
+      "canonical_name": "EMERGENT BIOSOLUTIONS INC."
+    }
+  ],
+  "ld203_filer_names": [
+    "AARP",
+    "ABBOTT LABORATORIES",
+    "ALTRIA CLIENT SERVICES LLC",
+    "AMERICAN ACADEMY OF OPHTHALMOLOGY",
+    "AMERICAN ASSOCIATION OF COLLEGES OF OSTEOPATHIC MEDICINE",
+    "AMERICAN BENEFITS COUNCIL",
+    "AMERICAN DENTAL ASSOCIATION",
+    "AMERICAN MEDICAL ASSOCIATION",
+    "AMERICAN PHYSICAL THERAPY ASSOCIATION",
+    "ASSOCIATION FOR ACCESSIBLE MEDICINES",
+    "ASSOCIATION OF AMERICAN MEDICAL COLLEGES",
+    "BIOTECHNOLOGY INNOVATION ORGANIZATION",
+    "EMERGENT BIOSOLUTIONS INC.",
+    "ILLUMINA, INC.",
+    "JOHNSON & JOHNSON SERVICES, INC.",
+    "MEDTRONIC, INC.",
+    "NOVARTIS",
+    "ORACLE CORPORATION",
+    "PHLOW CORPORATION",
+    "RELX INC.",
+    "SANOFI US SERVICES INC.",
+    "SEQIRUS",
+    "SMITH & NEPHEW, INC.",
+    "STERIS CORPORATION",
+    "THERMO FISHER SCIENTIFIC INC.",
+    "VIATRIS INC.",
+    "WALMART INC."
+  ],
+  "client_only": [
+    "Action Now Initiative, LLC",
+    "Aflac, Inc.",
+    "Zebra Technologies Corporation",
+    "COALITION FOR CANNABIS POLICY, EDUCATION, AND REGULATION",
+    "Air Methods Corporation",
+    "Pfizer, Inc."
+  ],
+  "unresolved": [
+    "Boehringer Ingelheim USA Corporation (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Maximus (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Bayer Corporation (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Planned Parenthood Federation of America (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)"
+  ],
+  "results": {
+    "totals": {
+      "raw_items": 13989,
+      "raw_total": 48189421.0,
+      "items": 13590,
+      "total": 47457641.0
+    },
+    "by_type": [
+      {
+        "contribution_type": "feca",
+        "items": 13306,
+        "total": 30392223.0
+      },
+      {
+        "contribution_type": "he",
+        "items": 163,
+        "total": 10211754.0
+      },
+      {
+        "contribution_type": "me",
+        "items": 115,
+        "total": 4093663.0
+      },
+      {
+        "contribution_type": "pic",
+        "items": 4,
+        "total": 2650000.0
+      },
+      {
+        "contribution_type": "ple",
+        "items": 2,
+        "total": 110000.0
+      }
+    ],
+    "by_year": [
+      {
+        "filing_year": 2022,
+        "total": 13662300.0
+      },
+      {
+        "filing_year": 2023,
+        "total": 10925495.0
+      },
+      {
+        "filing_year": 2024,
+        "total": 14142224.0
+      },
+      {
+        "filing_year": 2025,
+        "total": 8727623.0
+      }
+    ],
+    "by_filer": [
+      {
+        "filer_type": "organization",
+        "items": 12323,
+        "total": 45744718.0
+      },
+      {
+        "filer_type": "lobbyist",
+        "items": 1267,
+        "total": 1712923.0
+      }
+    ],
+    "recipients": [
+      {
+        "recipient": "DONATION FOR THE CONSTRUCTION OF THE CAPITOL VISITOR CENTER TUNNEL IN THE THOMAS JEFFERSON BUILDING (CONGRESSIONAL CROSSROADS)",
+        "items": 1,
+        "total": 2500000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL HISPANIC CAUCUS",
+        "items": 5,
+        "total": 2150000.0
+      },
+      {
+        "recipient": "DONALD TRUMP, JD VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN NATIONAL MUSEUM OF AMERICAN LATINO. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION, INC",
+        "items": 1,
+        "total": 850000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION",
+        "items": 7,
+        "total": 825000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP AND VICE PRESIDENT JD VANCE",
+        "items": 1,
+        "total": 500000.0
+      },
+      {
+        "recipient": "N/A",
+        "items": 84,
+        "total": 459937.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 9,
+        "total": 390000.0
+      },
+      {
+        "recipient": "DCCC",
+        "items": 31,
+        "total": 338100.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL BLACK CAUCUS",
+        "items": 5,
+        "total": 300000.0
+      },
+      {
+        "recipient": "NRCC",
+        "items": 39,
+        "total": 289302.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 61,
+        "total": 287214.0
+      },
+      {
+        "recipient": "DSCC",
+        "items": 32,
+        "total": 265150.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GERSHWIN PRIZE",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2025 NSO POPS SEASON",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE NSO POPS SEASON (PAYMENT 2 OF 2)",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS INSTITUTE",
+        "items": 4,
+        "total": 245000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC LEADERSHIP INSTITUTE",
+        "items": 7,
+        "total": 220000.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE",
+        "items": 18,
+        "total": 218600.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE",
+        "items": 17,
+        "total": 207500.0
+      },
+      {
+        "recipient": "2023 AMA AWARDS FOR OUTSTANDING GOVERNMENT SERVICE. SIX HONOREES, 3 COVERED OFFICIALS: US REP KEVIN BRADY, RAUL GUPTA, MD, DIRECTOR ONDCP, AND WENDELL PRIMUS, SPEAKER PELOSI'S SNR POLICY ADVISOR",
+        "items": 1,
+        "total": 190216.0
+      },
+      {
+        "recipient": "2025 AMA AWARDS FOR OUTSTANDING GOVERNMENT SERVICE. FIVE HONOREES, TWO COVERED OFFICIALS: U.S. REP. NEAL DUNN, MD, AND PRESIDENTIAL APPOINTEE MAJ. GEN. (RET.) PAUL FRIEDRICHS, MD",
+        "items": 1,
+        "total": 188710.0
+      },
+      {
+        "recipient": "2024 AMA AWARDS FOR OUTSTANDING GOVERNMENT SERVICE. SIX HONOREES, ONE COVERED OFFICIAL: US REP. LARRY BUCSHON, MD",
+        "items": 1,
+        "total": 171200.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL HISPANIC CONFERENCE",
+        "items": 4,
+        "total": 160000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP & VICE PRESIDENT JD VANCE",
+        "items": 1,
+        "total": 150000.0
+      },
+      {
+        "recipient": "REP. MIKE JOHNSON",
+        "items": 28,
+        "total": 132000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE",
+        "items": 16,
+        "total": 131197.0
+      },
+      {
+        "recipient": "REP. JAMES ENOS CLYBURN",
+        "items": 38,
+        "total": 129000.0
+      },
+      {
+        "recipient": "CHC BOLD PAC",
+        "items": 30,
+        "total": 125450.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE NATIONAL ARCHIVES CONGRESSIONAL OPEN HOUSE AND A TWO-YEAR SILVER LEVEL CORPORATE COUNCIL MEMBERSHIP",
+        "items": 1,
+        "total": 125000.0
+      },
+      {
+        "recipient": "REP. STEPHEN JOSEPH SCALISE",
+        "items": 31,
+        "total": 123280.0
+      },
+      {
+        "recipient": "NEW DEMOCRAT COALITION ACTION FUND",
+        "items": 25,
+        "total": 120000.0
+      },
+      {
+        "recipient": "REPUBLICAN MAIN STREET PARTNERSHIP",
+        "items": 3,
+        "total": 110000.0
+      },
+      {
+        "recipient": "REP. RICHARD EDMUND NEAL",
+        "items": 32,
+        "total": 106500.0
+      },
+      {
+        "recipient": "REP. CATHY MCMORRIS RODGERS",
+        "items": 40,
+        "total": 102900.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE PROGRAM \"FROM HER LENS: PERSPECTIVES ON RACE\"",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GERSHWIN PRIZE FOR POPULAR SONG EVENT",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE HIP HOP BLOCK PARTY",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE WOMEN'S E3 SUMMIT (PAYMENT 1 OF 2)",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL ASIAN PACIFIC AMERICAN CAUCUS",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2024 WOMEN'S SUMMIT \"LIFTING AS WE CLIMB MENTORING AND MOTIVATING\"",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "RONALD REAGAN",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE WOMEN'S E3 SUMMIT (PAYMENT 2 OF 2)",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "VARIOUS DEMOCRATIC CONGRESSIONAL CANDIDATES",
+        "items": 27,
+        "total": 98500.0
+      },
+      {
+        "recipient": "BLUE DOG POLITICAL ACTION COMMITTEE",
+        "items": 23,
+        "total": 97500.0
+      },
+      {
+        "recipient": "SPONSORSHIP AND SUPPORT OF THE 2022 LIBRARY OF CONGRESS NATIONAL BOOK FESTIVAL",
+        "items": 1,
+        "total": 90000.0
+      },
+      {
+        "recipient": "NATL REP SEN CMTE(NRSC)-FEDERAL ACCT",
+        "items": 6,
+        "total": 90000.0
+      },
+      {
+        "recipient": "BRETT GUTHRIE",
+        "items": 31,
+        "total": 88300.0
+      },
+      {
+        "recipient": "REP. JASON THOMAS SMITH",
+        "items": 33,
+        "total": 87500.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE, JR",
+        "items": 32,
+        "total": 85000.0
+      },
+      {
+        "recipient": "REP. MIKE JOHNSON; NRCC",
+        "items": 4,
+        "total": 85000.0
+      },
+      {
+        "recipient": "SEN. JOHN CORNYN, III",
+        "items": 24,
+        "total": 84000.0
+      },
+      {
+        "recipient": "REP. STEVEN ALEXZANDER HORSFORD",
+        "items": 33,
+        "total": 79000.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER, JR",
+        "items": 22,
+        "total": 78500.0
+      },
+      {
+        "recipient": "REP. KEVIN OWEN MCCARTHY",
+        "items": 19,
+        "total": 77500.0
+      },
+      {
+        "recipient": "REP. RICHARD LANE HUDSON, JR",
+        "items": 26,
+        "total": 75500.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE",
+        "items": 13,
+        "total": 75450.0
+      },
+      {
+        "recipient": "REP. VIRGINIA FOXX, SEN. BEN LUJAN, SEN. CYNTHIA LUMMIS, REP. RITCHIE TORRES, REP. DEBBIE DINGELL",
+        "items": 1,
+        "total": 75000.0
+      },
+      {
+        "recipient": "JILL BIDEN",
+        "items": 3,
+        "total": 75000.0
+      },
+      {
+        "recipient": "NATL REP CONG CMTE(NRCC)-FEDERAL ACCT",
+        "items": 5,
+        "total": 75000.0
+      },
+      {
+        "recipient": "REP. S. BRETT GUTHRIE",
+        "items": 27,
+        "total": 72000.0
+      },
+      {
+        "recipient": "2022 AMA AWARDS FOR OUTSTANDING GOVERNMENT SERVICE. SEVEN HONOREES, ONE COVERED OFFICIAL: U.S. SENATOR ROY BLUNT",
+        "items": 1,
+        "total": 71168.0
+      },
+      {
+        "recipient": "SUZAN DELBENE",
+        "items": 26,
+        "total": 70500.0
+      },
+      {
+        "recipient": "SEN. JOHN RANDOLPH THUNE",
+        "items": 19,
+        "total": 70500.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE CHAIRMAN'S LEVEL MEMBERSHIP",
+        "items": 2,
+        "total": 70000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2024 NATIONAL BOOK FESTIVAL",
+        "items": 1,
+        "total": 70000.0
+      },
+      {
+        "recipient": "REP. STEVE SCALISE",
+        "items": 16,
+        "total": 69900.0
+      },
+      {
+        "recipient": "SCOTT PETERS",
+        "items": 30,
+        "total": 68900.0
+      },
+      {
+        "recipient": "SEN. MICHAEL DEAN CRAPO",
+        "items": 26,
+        "total": 68500.0
+      },
+      {
+        "recipient": "REP. ANDREW GARBARINO",
+        "items": 14,
+        "total": 67022.0
+      },
+      {
+        "recipient": "STEVE SCALISE",
+        "items": 20,
+        "total": 66250.0
+      },
+      {
+        "recipient": "REP. BRADLEY SCOTT SCHNEIDER",
+        "items": 28,
+        "total": 66000.0
+      },
+      {
+        "recipient": "SEN. CATHERINE CORTEZ MASTO",
+        "items": 18,
+        "total": 64250.0
+      },
+      {
+        "recipient": "REP. JASON SMITH",
+        "items": 21,
+        "total": 62900.0
+      },
+      {
+        "recipient": "MEMBERSHIP DUES",
+        "items": 5,
+        "total": 61800.0
+      },
+      {
+        "recipient": "TOM EMMER",
+        "items": 22,
+        "total": 61500.0
+      },
+      {
+        "recipient": "KERMIT JONES",
+        "items": 6,
+        "total": 60648.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ANNUAL CBCF LEGISLATIVE CONFERENCE. ENTITY CONTROLLED BY COVERED OFFICIALS",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE LEADERSHIP INSTITUTE PROGRAMS",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "NRSC (BUILDING FUND)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "DCCC (BUILDING FUND)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "NRCC (BUILDING FUND)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2023 ALC PHOENIX AWARDS DINNER AND THE 2023 ECONOMIC SUMMIT SERIES",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "DSCC (BUILDING FUND)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SEN. JOHN ANTHONY BARRASSO",
+        "items": 22,
+        "total": 59500.0
+      },
+      {
+        "recipient": "REP. RON ESTES",
+        "items": 35,
+        "total": 59500.0
+      },
+      {
+        "recipient": "REP. H. MORGAN GRIFFITH",
+        "items": 23,
+        "total": 59500.0
+      },
+      {
+        "recipient": "SEN. JOHN THUNE",
+        "items": 20,
+        "total": 59440.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY MICHAEL KAINE",
+        "items": 21,
+        "total": 59000.0
+      },
+      {
+        "recipient": "REP. SCOTT H. PETERS",
+        "items": 21,
+        "total": 58500.0
+      },
+      {
+        "recipient": "JOHN JOYCE",
+        "items": 24,
+        "total": 58000.0
+      },
+      {
+        "recipient": "SEN. WILLIAM CASSIDY",
+        "items": 23,
+        "total": 58000.0
+      },
+      {
+        "recipient": "SEN. JACKY ROSEN",
+        "items": 25,
+        "total": 57500.0
+      },
+      {
+        "recipient": "REP. STENY HAMILTON HOYER",
+        "items": 16,
+        "total": 56500.0
+      },
+      {
+        "recipient": "REP. KEVIN MCCARTHY",
+        "items": 4,
+        "total": 56500.0
+      },
+      {
+        "recipient": "ELECT DEMOCRATIC WOMEN",
+        "items": 14,
+        "total": 56335.0
+      },
+      {
+        "recipient": "SEN. THOM TILLIS",
+        "items": 22,
+        "total": 56167.0
+      },
+      {
+        "recipient": "SEN. KYRSTEN SINEMA",
+        "items": 21,
+        "total": 56000.0
+      },
+      {
+        "recipient": "REP. SCOTT PETERS",
+        "items": 20,
+        "total": 56000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ALC PHOENIX AWARDS, PRAYER BREAKFAST, AND ANNUAL LEGISLATIVE CONFERENCE",
+        "items": 1,
+        "total": 55000.0
+      },
+      {
+        "recipient": "DONATION",
+        "items": 5,
+        "total": 55000.0
+      },
+      {
+        "recipient": "SEN. MARSHA WEDGEWORTH BLACKBURN",
+        "items": 22,
+        "total": 54500.0
+      },
+      {
+        "recipient": "BUDDY CARTER",
+        "items": 22,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. ANGELA DAWN CRAIG",
+        "items": 30,
+        "total": 53370.0
+      },
+      {
+        "recipient": "REP. JOSHUA S. GOTTHEIMER",
+        "items": 25,
+        "total": 53000.0
+      },
+      {
+        "recipient": "JASON SMITH",
+        "items": 21,
+        "total": 53000.0
+      },
+      {
+        "recipient": "DIANA DEGETTE",
+        "items": 24,
+        "total": 52500.0
+      },
+      {
+        "recipient": "REP. KATHERINE CLARK",
+        "items": 19,
+        "total": 52300.0
+      },
+      {
+        "recipient": "REP. DARIN M. LAHOOD",
+        "items": 24,
+        "total": 52000.0
+      },
+      {
+        "recipient": "REP. GUS MICHAEL BILIRAKIS",
+        "items": 25,
+        "total": 52000.0
+      },
+      {
+        "recipient": "REP. VERNON GALE BUCHANAN",
+        "items": 24,
+        "total": 51500.0
+      },
+      {
+        "recipient": "LISA BLUNT ROCHESTER",
+        "items": 25,
+        "total": 51250.0
+      },
+      {
+        "recipient": "SEN. MITCH MCCONNELL",
+        "items": 14,
+        "total": 51140.0
+      },
+      {
+        "recipient": "REP. RAUL RUIZ",
+        "items": 22,
+        "total": 50500.0
+      },
+      {
+        "recipient": "REP. KIM SCHRIER",
+        "items": 14,
+        "total": 50253.0
+      },
+      {
+        "recipient": "REP. RICHARD HUDSON, SEN. CYNTHIA LUMMIS, SEN. JOE MANCHIN",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "DONATION TO THE AMERICAN WOMEN'S HISTORY MUSEUM",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "DONATION FOR AMERICAN WOMEN'S HISTORY MUSEUM FOUNDING DONOR",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "DONATION TO THE GENERAL GIFT SUPPORT FUND",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "HEALTHCARE FREEDOM SUPER PAC",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "MARSHA BLACKBURN",
+        "items": 19,
+        "total": 50000.0
+      },
+      {
+        "recipient": "SPEAKER KEVIN MCCARTHY",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "MODERATE DEMOCRATS PAC",
+        "items": 10,
+        "total": 50000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE SEE ME AT THE SMITHSONIAN",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "SEN. JOHN NICHOLS BOOZMAN",
+        "items": 17,
+        "total": 49500.0
+      },
+      {
+        "recipient": "REP. TROY BALDERSON",
+        "items": 18,
+        "total": 49500.0
+      },
+      {
+        "recipient": "CATHY MCMORRIS RODGERS",
+        "items": 20,
+        "total": 49500.0
+      },
+      {
+        "recipient": "SEN. MARKWAYNE MULLIN",
+        "items": 23,
+        "total": 49400.0
+      },
+      {
+        "recipient": "RICHARD NEAL",
+        "items": 16,
+        "total": 49000.0
+      },
+      {
+        "recipient": "REP. SUZAN KAY DELBENE",
+        "items": 19,
+        "total": 48500.0
+      },
+      {
+        "recipient": "JOHN BARRASSO",
+        "items": 17,
+        "total": 47500.0
+      },
+      {
+        "recipient": "SEN. CHARLES E. SCHUMER",
+        "items": 10,
+        "total": 47500.0
+      },
+      {
+        "recipient": "REP. PETER RAY AGUILAR",
+        "items": 19,
+        "total": 47140.0
+      },
+      {
+        "recipient": "REP. MARIANNETTE MILLER-MEEKS",
+        "items": 11,
+        "total": 46743.0
+      },
+      {
+        "recipient": "REP. BRIAN K. FITZPATRICK",
+        "items": 25,
+        "total": 46000.0
+      },
+      {
+        "recipient": "REP. DON DAVIS",
+        "items": 25,
+        "total": 45750.0
+      },
+      {
+        "recipient": "REP. BRETT GUTHRIE",
+        "items": 22,
+        "total": 45500.0
+      },
+      {
+        "recipient": "REP. JOHN JOYCE",
+        "items": 26,
+        "total": 45500.0
+      },
+      {
+        "recipient": "SEN. TODD CHRISTOPHER YOUNG",
+        "items": 15,
+        "total": 45500.0
+      },
+      {
+        "recipient": "DEM CONG CAMP CMTE(DCCC)-FEDERAL ACCT",
+        "items": 3,
+        "total": 45000.0
+      },
+      {
+        "recipient": "VALUE IN ELECTING WOMEN POLITICAL ACTION COMMITTEE",
+        "items": 14,
+        "total": 45000.0
+      },
+      {
+        "recipient": "REPUBLICAN MAINSTREET PARTNERSHIP PAC",
+        "items": 13,
+        "total": 45000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE HHM LEADERSHIP CONFERENCE, 2025 ANNUAL AWARDS GALA AND THE 2025 TECH SUMMIT",
+        "items": 1,
+        "total": 45000.0
+      },
+      {
+        "recipient": "ASPIRE PAC",
+        "items": 12,
+        "total": 45000.0
+      },
+      {
+        "recipient": "ANGIE CRAIG",
+        "items": 17,
+        "total": 45000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GALA-ADVOCATE CIRCLE, THE LEADERSHIP CONFERENCE AND THE SWEARING-IN CEREMONY",
+        "items": 1,
+        "total": 45000.0
+      },
+      {
+        "recipient": "REP. TERRYCINA ANDREA SEWELL",
+        "items": 25,
+        "total": 44500.0
+      },
+      {
+        "recipient": "SEN. ROBERT P. CASEY, JR",
+        "items": 23,
+        "total": 44500.0
+      },
+      {
+        "recipient": "SEN. JAMES PAUL LANKFORD",
+        "items": 21,
+        "total": 44000.0
+      },
+      {
+        "recipient": "REP. JOYCE BEATTY",
+        "items": 24,
+        "total": 44000.0
+      },
+      {
+        "recipient": "REP. PATRICK TIMOTHY MCHENRY",
+        "items": 13,
+        "total": 43885.0
+      },
+      {
+        "recipient": "REP. ROBIN LYNNE KELLY",
+        "items": 23,
+        "total": 43500.0
+      },
+      {
+        "recipient": "REP. EARL L. B. CARTER",
+        "items": 19,
+        "total": 43500.0
+      },
+      {
+        "recipient": "JOHN THUNE",
+        "items": 15,
+        "total": 43500.0
+      },
+      {
+        "recipient": "SEN. THOMAS ROLAND TILLIS",
+        "items": 13,
+        "total": 43000.0
+      },
+      {
+        "recipient": "REP. ELISE M. STEFANIK",
+        "items": 16,
+        "total": 43000.0
+      },
+      {
+        "recipient": "SEN. BILL CASSIDY",
+        "items": 23,
+        "total": 42500.0
+      },
+      {
+        "recipient": "SEN. JON TESTER",
+        "items": 14,
+        "total": 42500.0
+      },
+      {
+        "recipient": "THE HONORABLE PETE AGUILAR",
+        "items": 11,
+        "total": 42500.0
+      },
+      {
+        "recipient": "RICHARD HUDSON",
+        "items": 16,
+        "total": 42500.0
+      },
+      {
+        "recipient": "KATHERINE CLARK",
+        "items": 15,
+        "total": 42000.0
+      },
+      {
+        "recipient": "SEN. STEVE DAVID DAINES",
+        "items": 12,
+        "total": 42000.0
+      },
+      {
+        "recipient": "REP. ASHLEY HINSON",
+        "items": 19,
+        "total": 42000.0
+      },
+      {
+        "recipient": "SEN. TOM COTTON",
+        "items": 14,
+        "total": 41500.0
+      },
+      {
+        "recipient": "REP. ADRIAN MICHAEL SMITH",
+        "items": 28,
+        "total": 41000.0
+      },
+      {
+        "recipient": "THE HONORABLE BRIAN BABIN",
+        "items": 9,
+        "total": 40250.0
+      },
+      {
+        "recipient": "THE HONORABLE FRANK PALLONE",
+        "items": 11,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REPUBLICAN GOVERNANCE GROUP/TUESDAY GROUP PAC",
+        "items": 10,
+        "total": 40000.0
+      },
+      {
+        "recipient": "RNCC",
+        "items": 2,
+        "total": 40000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2023 LEADERSHIP CONFERENCE AND GALA PARTNERSHIP",
+        "items": 1,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. BRAD R. WENSTRUP",
+        "items": 18,
+        "total": 40000.0
+      },
+      {
+        "recipient": "KEVIN MCCARTHY",
+        "items": 8,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. KEVIN MCCARTHY; NRCC",
+        "items": 2,
+        "total": 40000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ANNUAL CHCI LEADERSHIP CONFERENCE AND CHCI SWEARING-IN CEREMONY. ENTITY CONTROLLED BY COVERED OFFICIALS",
+        "items": 1,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. BLAKE MOORE",
+        "items": 17,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. JAMES V. PANETTA",
+        "items": 17,
+        "total": 39500.0
+      },
+      {
+        "recipient": "REP. MARIANNETTE JANE MILLER-MEEKS",
+        "items": 16,
+        "total": 39000.0
+      },
+      {
+        "recipient": "GUS BILIRAKIS",
+        "items": 19,
+        "total": 39000.0
+      },
+      {
+        "recipient": "REP. RICHARD HUDSON",
+        "items": 17,
+        "total": 38700.0
+      },
+      {
+        "recipient": "REP. MICHAEL J. BOST",
+        "items": 16,
+        "total": 38500.0
+      },
+      {
+        "recipient": "FRANK PALLONE",
+        "items": 12,
+        "total": 38500.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY EUGENE SCOTT",
+        "items": 11,
+        "total": 38500.0
+      },
+      {
+        "recipient": "BRAD SCHNEIDER",
+        "items": 23,
+        "total": 38500.0
+      },
+      {
+        "recipient": "MARIANNETTE MILLER-MEEKS",
+        "items": 19,
+        "total": 38250.0
+      },
+      {
+        "recipient": "JOHN CORNYN",
+        "items": 17,
+        "total": 38000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS PAC",
+        "items": 9,
+        "total": 38000.0
+      },
+      {
+        "recipient": "REP. MARIANNETTE MILLER -MEEKS",
+        "items": 1,
+        "total": 37699.0
+      },
+      {
+        "recipient": "SEN. MARK ROBERT WARNER",
+        "items": 10,
+        "total": 37500.0
+      },
+      {
+        "recipient": "CHRISTOPHER COONS",
+        "items": 18,
+        "total": 37500.0
+      },
+      {
+        "recipient": "SUSAN COLLINS",
+        "items": 13,
+        "total": 37500.0
+      },
+      {
+        "recipient": "DON DAVIS",
+        "items": 15,
+        "total": 37250.0
+      },
+      {
+        "recipient": "TIM KAINE",
+        "items": 15,
+        "total": 37000.0
+      },
+      {
+        "recipient": "LARRY BUCSHON",
+        "items": 18,
+        "total": 37000.0
+      },
+      {
+        "recipient": "THOM TILLIS",
+        "items": 12,
+        "total": 36500.0
+      },
+      {
+        "recipient": "ACROSS THE AISLE PAC",
+        "items": 12,
+        "total": 36500.0
+      },
+      {
+        "recipient": "BUILDING BRIDGES PAC",
+        "items": 15,
+        "total": 36500.0
+      },
+      {
+        "recipient": "PETE AGUILAR",
+        "items": 17,
+        "total": 36500.0
+      },
+      {
+        "recipient": "REP. KEVIN MULLIN",
+        "items": 15,
+        "total": 36000.0
+      },
+      {
+        "recipient": "JIMMY PANETTA",
+        "items": 19,
+        "total": 35500.0
+      },
+      {
+        "recipient": "BLAKE MOORE",
+        "items": 15,
+        "total": 35500.0
+      },
+      {
+        "recipient": "THE HONORABLE BRETT GUTHRIE",
+        "items": 11,
+        "total": 35500.0
+      },
+      {
+        "recipient": "REP. ANN MCLANE KUSTER",
+        "items": 23,
+        "total": 35500.0
+      },
+      {
+        "recipient": "REP. STEVE WOMACK",
+        "items": 6,
+        "total": 35000.0
+      },
+      {
+        "recipient": "THE HONORABLE ANDREW GARBARINO",
+        "items": 8,
+        "total": 35000.0
+      },
+      {
+        "recipient": "FUTURE FORUM PAC",
+        "items": 9,
+        "total": 35000.0
+      },
+      {
+        "recipient": "CHAIRMAN'S LEVEL SPONSORSHIP",
+        "items": 1,
+        "total": 35000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF CHAIRMAN'S LEVEL MEMBERSHIP",
+        "items": 1,
+        "total": 35000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE CHAIRMAN'S LEVEL CONTRIBUTION. (ENTITY CONTROLLED BY COVERED OFFICIALS)",
+        "items": 1,
+        "total": 35000.0
+      },
+      {
+        "recipient": "MICHAEL CRAPO",
+        "items": 12,
+        "total": 35000.0
+      },
+      {
+        "recipient": "REP. MARC A. VEASEY",
+        "items": 17,
+        "total": 34500.0
+      },
+      {
+        "recipient": "REP. DIANA L. DEGETTE",
+        "items": 13,
+        "total": 34500.0
+      },
+      {
+        "recipient": "REP. TOM COLE",
+        "items": 17,
+        "total": 34300.0
+      },
+      {
+        "recipient": "REP. DAVID ALBERT SCOTT",
+        "items": 17,
+        "total": 34240.0
+      },
+      {
+        "recipient": "REP. JAMES R. COMER, JR",
+        "items": 12,
+        "total": 34000.0
+      },
+      {
+        "recipient": "DAVID VALADAO",
+        "items": 16,
+        "total": 34000.0
+      },
+      {
+        "recipient": "REP. VIRGINIA ANN FOXX",
+        "items": 17,
+        "total": 34000.0
+      },
+      {
+        "recipient": "REP. SANFORD D. BISHOP, JR",
+        "items": 11,
+        "total": 34000.0
+      },
+      {
+        "recipient": "REP. LARRY DEAN BUCSHON",
+        "items": 17,
+        "total": 33500.0
+      },
+      {
+        "recipient": "REP. JACK BERGMAN",
+        "items": 13,
+        "total": 33500.0
+      },
+      {
+        "recipient": "SEN. JERRY MORAN",
+        "items": 15,
+        "total": 33500.0
+      },
+      {
+        "recipient": "REP. DAVID PATRICK JOYCE",
+        "items": 20,
+        "total": 33500.0
+      },
+      {
+        "recipient": "EQUALITY PAC",
+        "items": 9,
+        "total": 33000.0
+      },
+      {
+        "recipient": "REP. BONNIE WATSON COLEMAN",
+        "items": 21,
+        "total": 33000.0
+      },
+      {
+        "recipient": "REP. KATHERINE M. CLARK",
+        "items": 11,
+        "total": 33000.0
+      },
+      {
+        "recipient": "REP. STEPHEN ALLEN WOMACK",
+        "items": 10,
+        "total": 33000.0
+      },
+      {
+        "recipient": "REP. J. LUIS CORREA",
+        "items": 19,
+        "total": 33000.0
+      },
+      {
+        "recipient": "SEN. TED BUDD",
+        "items": 12,
+        "total": 32800.0
+      },
+      {
+        "recipient": "JACKY ROSEN",
+        "items": 20,
+        "total": 32525.0
+      },
+      {
+        "recipient": "MARKWAYNE MULLIN",
+        "items": 13,
+        "total": 32500.0
+      },
+      {
+        "recipient": "REP. MIKE CAREY",
+        "items": 17,
+        "total": 32500.0
+      },
+      {
+        "recipient": "SEN. RICK L. SCOTT",
+        "items": 7,
+        "total": 32500.0
+      },
+      {
+        "recipient": "THE HONORABLE RICHARD HUDSON",
+        "items": 11,
+        "total": 32500.0
+      },
+      {
+        "recipient": "REP. LISA BLUNT ROCHESTER",
+        "items": 18,
+        "total": 32500.0
+      },
+      {
+        "recipient": "REP. JODEY COOK ARRINGTON",
+        "items": 20,
+        "total": 32500.0
+      },
+      {
+        "recipient": "REP. DAVID CHESTON ROUZER",
+        "items": 15,
+        "total": 32500.0
+      },
+      {
+        "recipient": "REP. TONY CARDENAS",
+        "items": 17,
+        "total": 32500.0
+      },
+      {
+        "recipient": "SEN. JOHN BOOZMAN",
+        "items": 11,
+        "total": 31692.0
+      },
+      {
+        "recipient": "SEN. CHRISTOPHER ANDREW COONS",
+        "items": 14,
+        "total": 31500.0
+      },
+      {
+        "recipient": "JOSH GOTTHEIMER",
+        "items": 16,
+        "total": 31500.0
+      },
+      {
+        "recipient": "REP. THOMAS JEFFERY COLE",
+        "items": 11,
+        "total": 31000.0
+      },
+      {
+        "recipient": "MITCH MCCONNELL",
+        "items": 9,
+        "total": 31000.0
+      },
+      {
+        "recipient": "TIM SCOTT",
+        "items": 10,
+        "total": 31000.0
+      },
+      {
+        "recipient": "SEN. JON HUSTED",
+        "items": 12,
+        "total": 31000.0
+      },
+      {
+        "recipient": "WONDER WOMEN PAC",
+        "items": 8,
+        "total": 30750.0
+      },
+      {
+        "recipient": "THE HONORABLE MIKE SIMPSON",
+        "items": 7,
+        "total": 30500.0
+      },
+      {
+        "recipient": "BRIAN FITZPATRICK",
+        "items": 11,
+        "total": 30500.0
+      },
+      {
+        "recipient": "THE HONORABLE AARON BEAN",
+        "items": 8,
+        "total": 30000.0
+      },
+      {
+        "recipient": "THE HONORABLE DARIN LAHOOD",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
+        "recipient": "THE HONORABLE STEVE SCALISE",
+        "items": 6,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP. LINDA SANCHEZ",
+        "items": 12,
+        "total": 30000.0
+      },
+      {
+        "recipient": "THE HONORABLE ELISE STEFANIK",
+        "items": 9,
+        "total": 30000.0
+      },
+      {
+        "recipient": "SEN. JOSEPH MANCHIN, III",
+        "items": 6,
+        "total": 30000.0
+      },
+      {
+        "recipient": "THE NATIONAL REPUBLICAN SENATORIAL CAMPAIGN",
+        "items": 1,
+        "total": 30000.0
+      },
+      {
+        "recipient": "2024 CONTRIBUTION",
+        "items": 1,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP. JAY OBERNOLTE",
+        "items": 21,
+        "total": 30000.0
+      },
+      {
+        "recipient": "THE HONORABLE JASON SMITH",
+        "items": 9,
+        "total": 30000.0
+      },
+      {
+        "recipient": "MIKE THOMPSON",
+        "items": 13,
+        "total": 30000.0
+      },
+      {
+        "recipient": "SEN. ROGER W. MARSHALL",
+        "items": 12,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP. A. DREW FERGUSON, IV",
+        "items": 14,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP. NORMA JUDITH TORRES",
+        "items": 11,
+        "total": 29500.0
+      },
+      {
+        "recipient": "REP. MICHAEL CLIFTON BURGESS",
+        "items": 13,
+        "total": 29500.0
+      },
+      {
+        "recipient": "SEN. SUSAN MARGARET COLLINS",
+        "items": 11,
+        "total": 29500.0
+      },
+      {
+        "recipient": "REP. AMERISH B. BERA",
+        "items": 13,
+        "total": 29000.0
+      },
+      {
+        "recipient": "REP. DEBBIE WASSERMAN SCHULTZ",
+        "items": 12,
+        "total": 29000.0
+      },
+      {
+        "recipient": "REP. MICHAEL C. THOMPSON",
+        "items": 14,
+        "total": 28500.0
+      },
+      {
+        "recipient": "THE HONORABLE GUS BILIRAKIS",
+        "items": 8,
+        "total": 28500.0
+      },
+      {
+        "recipient": "SEN. MARSHA BLACKBURN",
+        "items": 8,
+        "total": 28500.0
+      },
+      {
+        "recipient": "REP. DIANA LYNN HARSHBARGER",
+        "items": 17,
+        "total": 28500.0
+      },
+      {
+        "recipient": "VERN BUCHANAN",
+        "items": 9,
+        "total": 28500.0
+      },
+      {
+        "recipient": "SEN. L. TAMMY DUCKWORTH",
+        "items": 8,
+        "total": 28500.0
+      },
+      {
+        "recipient": "SEN. MICHAEL SHUMWAY LEE",
+        "items": 9,
+        "total": 28500.0
+      },
+      {
+        "recipient": "REP. JAMES DANIEL JORDAN",
+        "items": 10,
+        "total": 28500.0
+      },
+      {
+        "recipient": "SEN. MARK WARNER",
+        "items": 13,
+        "total": 28300.0
+      },
+      {
+        "recipient": "SEN. MARCO ANTONIO RUBIO",
+        "items": 11,
+        "total": 28000.0
+      },
+      {
+        "recipient": "JON TESTER",
+        "items": 14,
+        "total": 28000.0
+      },
+      {
+        "recipient": "REP. BENJAMIN L. CLINE",
+        "items": 12,
+        "total": 28000.0
+      },
+      {
+        "recipient": "SEN. SHELLEY MOORE CAPITO",
+        "items": 24,
+        "total": 27500.0
+      },
+      {
+        "recipient": "PURPOSE PRIZE EVENT RECEPTION",
+        "items": 1,
+        "total": 27500.0
+      },
+      {
+        "recipient": "STENY HOYER",
+        "items": 7,
+        "total": 27500.0
+      },
+      {
+        "recipient": "THE HONORABLE JIM BANKS",
+        "items": 6,
+        "total": 27500.0
+      },
+      {
+        "recipient": "SEN. ANGUS STANLEY KING, JR",
+        "items": 6,
+        "total": 27500.0
+      },
+      {
+        "recipient": "LOU CORREA",
+        "items": 19,
+        "total": 27000.0
+      },
+      {
+        "recipient": "REP. G. MIKE J. KELLY",
+        "items": 17,
+        "total": 27000.0
+      },
+      {
+        "recipient": "SEN. STEVE DAINES",
+        "items": 10,
+        "total": 27000.0
+      },
+      {
+        "recipient": "DARIN LAHOOD",
+        "items": 9,
+        "total": 27000.0
+      },
+      {
+        "recipient": "SEN. MARTIN HEINRICH",
+        "items": 20,
+        "total": 27000.0
+      },
+      {
+        "recipient": "REP. DAVID ROUZER",
+        "items": 12,
+        "total": 26900.0
+      },
+      {
+        "recipient": "REP. ROBERT E. LATTA",
+        "items": 15,
+        "total": 26500.0
+      },
+      {
+        "recipient": "TODD YOUNG",
+        "items": 16,
+        "total": 26500.0
+      },
+      {
+        "recipient": "SEN. ROBERT MENENDEZ",
+        "items": 12,
+        "total": 26500.0
+      },
+      {
+        "recipient": "CONGRESSMAN JASON SMITH",
+        "items": 8,
+        "total": 26500.0
+      },
+      {
+        "recipient": "SEN. ROGER MARSHALL",
+        "items": 12,
+        "total": 26500.0
+      },
+      {
+        "recipient": "SEN. GARY CHARLES PETERS",
+        "items": 12,
+        "total": 26500.0
+      },
+      {
+        "recipient": "REP. BRIAN FITZPATRICK",
+        "items": 9,
+        "total": 26500.0
+      },
+      {
+        "recipient": "REP. DONALD GENE DAVIS",
+        "items": 13,
+        "total": 26000.0
+      },
+      {
+        "recipient": "KIM SCHRIER",
+        "items": 9,
+        "total": 26000.0
+      },
+      {
+        "recipient": "PATTY MURRAY",
+        "items": 17,
+        "total": 26000.0
+      },
+      {
+        "recipient": "DEBORAH ROSS",
+        "items": 18,
+        "total": 26000.0
+      },
+      {
+        "recipient": "KYRSTEN SINEMA",
+        "items": 10,
+        "total": 26000.0
+      },
+      {
+        "recipient": "NEAL DUNN",
+        "items": 15,
+        "total": 25500.0
+      },
+      {
+        "recipient": "LLOYD SMUCKER",
+        "items": 11,
+        "total": 25500.0
+      },
+      {
+        "recipient": "REP. BENNIE G. THOMPSON",
+        "items": 13,
+        "total": 25500.0
+      },
+      {
+        "recipient": "SPONSORSHIP AT THE GOLD LEVEL",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "FIRST LADY MELANIA TRUMP",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2023 TECH SUMMIT AND THE 2023 APAICS GALA",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE STENY HOYER",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE VERN BUCHANAN",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "GENERAL SUPPORT SPONSORSHIP",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF A GOLD MEMBERSHIP",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF BRIEFING FOCUSED ON FINANCIAL RETIREMENT SECURITY",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "FOR THE 2022 GOLD SPONSORSHIP. ENTITY CONTROLLED BY COVERED OFFICIALS",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SEN. JONI KAY ERNST",
+        "items": 14,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ANACOSTIA COMMUNITY MUSEUM",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SEN. SUSAN COLLINS",
+        "items": 9,
+        "total": 25000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE - HQ",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE PATTY MURRAY",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE LISA BLUNT ROCHESTER",
+        "items": 7,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ANNUAL AWARDS GALA",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE PURPOSE PRIZE RECEPTION",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP FOR GENERAL SUPPORT",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "AMI BERA",
+        "items": 10,
+        "total": 25000.0
+      },
+      {
+        "recipient": "GOLD SPONSORSHIP MEMBERSHIP",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE TOM EMMER",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "GOLD LEVEL SPONSORSHIP AND MEMBERSHIP FEES",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SILVER SPONSORSHIP OF THE CONGRESSIONAL STAFF APPRECIATION RECEPTION, CONGRESSIONAL HISPANIC LEADERSHIP RECEPTION, AND THE CONGRESSIONAL HISPANIC LEADERSHIP INSTITUTE GALA",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "BRITTANY PETTERSEN",
+        "items": 11,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2024 HOLIDAY PARTY, SWEARING-IN CEREMONY AND GALA",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE JEFF VAN DREW",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "DONATION TO THE NATIONAL MUSEUM OF AMERICAN HISTORY",
+        "items": 1,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE ADRIAN SMITH",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP. NANETTE DIAZ BARRAGAN",
+        "items": 14,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE HENRY CUELLAR",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "THE HONORABLE NANCY PELOSI",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "SEN. DEBRA S. FISCHER",
+        "items": 13,
+        "total": 25000.0
+      },
+      {
+        "recipient": "FACILITY RENTAL FOR AARP BOARD OF DIRECTORS DINNER",
+        "items": 1,
+        "total": 24912.0
+      },
+      {
+        "recipient": "SEN. PATRICIA LYNN MURRAY",
+        "items": 10,
+        "total": 24500.0
+      },
+      {
+        "recipient": "TERRI SEWELL",
+        "items": 14,
+        "total": 24500.0
+      },
+      {
+        "recipient": "BRAD WENSTRUP",
+        "items": 14,
+        "total": 24500.0
+      },
+      {
+        "recipient": "REP. RICHARD NEAL",
+        "items": 8,
+        "total": 24500.0
+      },
+      {
+        "recipient": "REP. KEVIN HERN",
+        "items": 15,
+        "total": 24000.0
+      },
+      {
+        "recipient": "MARC VEASEY",
+        "items": 14,
+        "total": 24000.0
+      },
+      {
+        "recipient": "REP. JULIA LETLOW",
+        "items": 18,
+        "total": 23500.0
+      },
+      {
+        "recipient": "THE HONORABLE BUDDY CARTER",
+        "items": 7,
+        "total": 23500.0
+      },
+      {
+        "recipient": "SEN. ROGER FREDERICK WICKER",
+        "items": 16,
+        "total": 23500.0
+      },
+      {
+        "recipient": "SEN. BILL HAGERTY",
+        "items": 7,
+        "total": 23500.0
+      },
+      {
+        "recipient": "HISPANIC LEADERSHIP TRUST",
+        "items": 6,
+        "total": 23500.0
+      },
+      {
+        "recipient": "ROBERT MENENDEZ",
+        "items": 13,
+        "total": 23500.0
+      },
+      {
+        "recipient": "JOHN CURTIS",
+        "items": 20,
+        "total": 23000.0
+      },
+      {
+        "recipient": "REP. MICHELLE PARK STEEL",
+        "items": 15,
+        "total": 23000.0
+      },
+      {
+        "recipient": "BOB CASEY",
+        "items": 13,
+        "total": 23000.0
+      },
+      {
+        "recipient": "REP. VERONICA ESCOBAR",
+        "items": 14,
+        "total": 23000.0
+      },
+      {
+        "recipient": "REP. KEVIN R. HERN",
+        "items": 13,
+        "total": 23000.0
+      },
+      {
+        "recipient": "ROGER MARSHALL",
+        "items": 12,
+        "total": 23000.0
+      },
+      {
+        "recipient": "THE HONORABLE DREW FERGUSON",
+        "items": 5,
+        "total": 23000.0
+      },
+      {
+        "recipient": "TONY CARDENAS",
+        "items": 14,
+        "total": 23000.0
+      },
+      {
+        "recipient": "REP. AUGUST PFLUGER",
+        "items": 6,
+        "total": 22600.0
+      },
+      {
+        "recipient": "THE HONORABLE ROBIN KELLY",
+        "items": 6,
+        "total": 22500.0
+      },
+      {
+        "recipient": "ROBIN KELLY",
+        "items": 15,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SEN. JERRY W. MORAN",
+        "items": 12,
+        "total": 22500.0
+      },
+      {
+        "recipient": "REP. DEBORAH ROSS",
+        "items": 12,
+        "total": 22500.0
+      },
+      {
+        "recipient": "THE HONORABLE JIM JORDAN",
+        "items": 5,
+        "total": 22500.0
+      },
+      {
+        "recipient": "REP. TROY A. CARTER",
+        "items": 15,
+        "total": 22500.0
+      },
+      {
+        "recipient": "ADRIAN SMITH",
+        "items": 14,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SPONSORSHIP AND FUNDING DONOR OF THE SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 22500.0
+      },
+      {
+        "recipient": "PAUL TONKO",
+        "items": 12,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SEN. KATIE BOYD BRITT",
+        "items": 9,
+        "total": 22500.0
+      },
+      {
+        "recipient": "THE HONORABLE CATHY MCMORRIS RODGERS",
+        "items": 8,
+        "total": 22500.0
+      },
+      {
+        "recipient": "REP. S. RAJA KRISHNAMOORTHI",
+        "items": 10,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SENATE VICTORY PAC",
+        "items": 8,
+        "total": 22500.0
+      },
+      {
+        "recipient": "REP. ELISE MARIE STEFANIK",
+        "items": 5,
+        "total": 22500.0
+      },
+      {
+        "recipient": "THE HONORABLE ANN WAGNER",
+        "items": 5,
+        "total": 22500.0
+      },
+      {
+        "recipient": "MAGGIE HASSAN, SENATE NH",
+        "items": 6,
+        "total": 22500.0
+      },
+      {
+        "recipient": "THE HONORABLE JOHN MOOLENAAR",
+        "items": 10,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SEN. JOHN BARRASSO, III",
+        "items": 6,
+        "total": 22500.0
+      },
+      {
+        "recipient": "SEN. TODD YOUNG",
+        "items": 10,
+        "total": 22400.0
+      },
+      {
+        "recipient": "RAUL RUIZ",
+        "items": 12,
+        "total": 22000.0
+      },
+      {
+        "recipient": "REP. JOHN R. CURTIS",
+        "items": 12,
+        "total": 22000.0
+      },
+      {
+        "recipient": "REP. DARREN MICHAEL SOTO",
+        "items": 14,
+        "total": 22000.0
+      },
+      {
+        "recipient": "THE HONORABLE MIKE JOHNSON",
+        "items": 6,
+        "total": 22000.0
+      },
+      {
+        "recipient": "REP. ANNA G. ESHOO",
+        "items": 10,
+        "total": 22000.0
+      },
+      {
+        "recipient": "REP. DAVID SCHWEIKERT",
+        "items": 16,
+        "total": 22000.0
+      },
+      {
+        "recipient": "THE HONORABLE ROBERT ADERHOLT",
+        "items": 8,
+        "total": 22000.0
+      },
+      {
+        "recipient": "REP. PETE AGUILAR",
+        "items": 14,
+        "total": 21900.0
+      },
+      {
+        "recipient": "RUBEN GALLEGO",
+        "items": 10,
+        "total": 21775.0
+      },
+      {
+        "recipient": "REP. ANGIE CRAIG",
+        "items": 13,
+        "total": 21510.0
+      },
+      {
+        "recipient": "REP. YOUNG O. KIM",
+        "items": 12,
+        "total": 21500.0
+      },
+      {
+        "recipient": "RON WYDEN",
+        "items": 13,
+        "total": 21500.0
+      },
+      {
+        "recipient": "SEN. CHARLES E. GRASSLEY",
+        "items": 11,
+        "total": 21500.0
+      },
+      {
+        "recipient": "REP. JOHN H. RUTHERFORD",
+        "items": 12,
+        "total": 21500.0
+      },
+      {
+        "recipient": "REP. JOSEPH D. MORELLE",
+        "items": 12,
+        "total": 21500.0
+      },
+      {
+        "recipient": "SEN. TIM SCOTT",
+        "items": 9,
+        "total": 21400.0
+      },
+      {
+        "recipient": "REP. NEAL PATRICK DUNN",
+        "items": 18,
+        "total": 21000.0
+      },
+      {
+        "recipient": "SEN. THEODORE PAUL BUDD",
+        "items": 7,
+        "total": 21000.0
+      },
+      {
+        "recipient": "KEVIN HERN",
+        "items": 11,
+        "total": 21000.0
+      },
+      {
+        "recipient": "HERB CONAWAY",
+        "items": 9,
+        "total": 21000.0
+      },
+      {
+        "recipient": "AMISH SHAH",
+        "items": 6,
+        "total": 21000.0
+      },
+      {
+        "recipient": "SEN. MITT ROMNEY",
+        "items": 8,
+        "total": 21000.0
+      }
+    ],
+    "per_entity": [
+      {
+        "registrant_name": "AARP",
+        "total": 7956043.0,
+        "items": 296
+      },
+      {
+        "registrant_name": "ALTRIA CLIENT SERVICES LLC",
+        "total": 6520537.0,
+        "items": 1602
+      },
+      {
+        "registrant_name": "WALMART INC.",
+        "total": 6505685.0,
+        "items": 2033
+      },
+      {
+        "registrant_name": "JOHNSON & JOHNSON SERVICES, INC.",
+        "total": 3998775.0,
+        "items": 869
+      },
+      {
+        "registrant_name": "AMERICAN DENTAL ASSOCIATION",
+        "total": 3924805.0,
+        "items": 1188
+      },
+      {
+        "registrant_name": "AMERICAN MEDICAL ASSOCIATION",
+        "total": 3624768.0,
+        "items": 1147
+      },
+      {
+        "registrant_name": "ABBOTT LABORATORIES",
+        "total": 3325735.0,
+        "items": 785
+      },
+      {
+        "registrant_name": "AMERICAN PHYSICAL THERAPY ASSOCIATION",
+        "total": 2208625.0,
+        "items": 1139
+      },
+      {
+        "registrant_name": "AMERICAN ACADEMY OF OPHTHALMOLOGY",
+        "total": 1790927.0,
+        "items": 762
+      },
+      {
+        "registrant_name": "ORACLE CORPORATION",
+        "total": 1272220.0,
+        "items": 431
+      },
+      {
+        "registrant_name": "SANOFI US SERVICES INC.",
+        "total": 1024850.0,
+        "items": 430
+      },
+      {
+        "registrant_name": "NOVARTIS",
+        "total": 903062.0,
+        "items": 597
+      },
+      {
+        "registrant_name": "MEDTRONIC, INC.",
+        "total": 782250.0,
+        "items": 318
+      },
+      {
+        "registrant_name": "BIOTECHNOLOGY INNOVATION ORGANIZATION",
+        "total": 755483.0,
+        "items": 563
+      },
+      {
+        "registrant_name": "VIATRIS INC.",
+        "total": 572700.0,
+        "items": 194
+      },
+      {
+        "registrant_name": "THERMO FISHER SCIENTIFIC INC.",
+        "total": 444452.0,
+        "items": 182
+      },
+      {
+        "registrant_name": "RELX INC.",
+        "total": 424809.0,
+        "items": 160
+      },
+      {
+        "registrant_name": "ASSOCIATION FOR ACCESSIBLE MEDICINES",
+        "total": 366017.0,
+        "items": 209
+      },
+      {
+        "registrant_name": "SMITH & NEPHEW, INC.",
+        "total": 362800.0,
+        "items": 260
+      },
+      {
+        "registrant_name": "EMERGENT BIOSOLUTIONS INC.",
+        "total": 336697.0,
+        "items": 160
+      },
+      {
+        "registrant_name": "STERIS CORPORATION",
+        "total": 159050.0,
+        "items": 90
+      },
+      {
+        "registrant_name": "SEQIRUS",
+        "total": 105300.0,
+        "items": 49
+      },
+      {
+        "registrant_name": "AMERICAN BENEFITS COUNCIL",
+        "total": 42170.0,
+        "items": 42
+      },
+      {
+        "registrant_name": "ILLUMINA, INC.",
+        "total": 41800.0,
+        "items": 25
+      },
+      {
+        "registrant_name": "ASSOCIATION OF AMERICAN MEDICAL COLLEGES",
+        "total": 5353.0,
+        "items": 45
+      },
+      {
+        "registrant_name": "PHLOW CORPORATION",
+        "total": 2500.0,
+        "items": 2
+      },
+      {
+        "registrant_name": "AMERICAN ASSOCIATION OF COLLEGES OF OSTEOPATHIC MEDICINE",
+        "total": 228.0,
+        "items": 12
+      }
+    ],
+    "sample": [
+      {
+        "record_key": "2999aaaa-cc4e-44c4-b9f0-b77e1b09d5cb",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 2500000,
+        "recipient": "Donation for the construction of the Capitol Visitor Center tunnel in the Thomas Jefferson Building (Congressional Crossroads).",
+        "date": "2023-04-06"
+      },
+      {
+        "record_key": "8577b1c7-3aa4-40ab-8008-ae586e357ce3",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "me",
+        "amount": 1000000,
+        "recipient": "Founding donor and sponsor of the design, development, and opening of the Smithsonian American Women's History Museum. Entity controlled by covered officials. Multiple MOCs on Board of Regents.",
+        "date": "2022-10-04"
+      },
+      {
+        "record_key": "872d447d-f56a-4fb6-b255-d37077d381f1",
+        "registrant_name": "WALMART INC.",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1000000,
+        "recipient": "Members of the Congressional Hispanic Caucus",
+        "date": "2025-10-16"
+      },
+      {
+        "record_key": "90ee663a-148f-4b8b-bb46-b647b2b1a212",
+        "registrant_name": "JOHNSON & JOHNSON SERVICES, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Donald Trump, JD Vance",
+        "date": "2024-12-19"
+      },
+      {
+        "record_key": "c23184dd-2b22-40bd-894e-c15532e05912",
+        "registrant_name": "ALTRIA CLIENT SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee",
+        "date": "2024-12-03"
+      },
+      {
+        "record_key": "597a430a-4c7e-4e5d-8049-a0977a340bd9",
+        "registrant_name": "WALMART INC.",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1000000,
+        "recipient": "Members of the Congressional Hispanic Caucus",
+        "date": "2022-08-02"
+      },
+      {
+        "record_key": "8577b1c7-3aa4-40ab-8008-ae586e357ce3",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "me",
+        "amount": 1000000,
+        "recipient": "Founding donor and sponsor of the design, development, and opening of the Smithsonian National Museum of American Latino. Entity controlled by covered officials. Multiple MOCs on Board of Regents.",
+        "date": "2022-10-03"
+      },
+      {
+        "record_key": "ea4f8435-dc7d-487e-a43a-975f087dfb37",
+        "registrant_name": "JOHNSON & JOHNSON SERVICES, INC.",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 850000,
+        "recipient": "Congressional Black Caucus Foundation, Inc.",
+        "date": "2024-02-13"
+      },
+      {
+        "record_key": "2626f8f5-dfeb-4b19-ab6b-39b1c48a0885",
+        "registrant_name": "ABBOTT LABORATORIES",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 500000,
+        "recipient": "President Donald Trump and Vice President JD Vance",
+        "date": "2024-12-20"
+      },
+      {
+        "record_key": "8dd51f11-ec01-4dac-a68a-7643b6a39563",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "me",
+        "amount": 250000,
+        "recipient": "Sponsorship of the Gershwin Prize.",
+        "date": "2024-01-18"
+      }
+    ]
+  }
+}

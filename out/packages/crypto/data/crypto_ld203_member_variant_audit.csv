@@ -1,0 +1,521 @@
+﻿member (merged row in the split CSV),party_source,giver_slice,raw_recipient_string_as_filed,total,items
+Rep. Abraham J. Hamadeh (R-AZ),members-table,crypto_native,REP. ABRAHAM HAMADEH,1500.0,1
+Rep. Adam Gray (D-CA),members-table,crypto_native,REP. ADAM GRAY,2000.0,3
+Rep. Adam Smith (D-WA),members-table,diversified_core,REP. ADAM SMITH,54500.0,22
+Rep. Addison P. McDowell (R-NC),members-table,crypto_native,REP. ADDISON MCDOWELL,1000.0,1
+Rep. Adrian Smith (R-NE),members-table,diversified_core,REP. ADRIAN SMITH,55900.0,24
+Rep. Adriano Espaillat (D-NY),members-table,crypto_native,REP. ADRIANO ESPAILLAT,500.0,1
+Rep. Andrew R. Garbarino (R-NY),members-table,crypto_native,REP. ANDREW GARBARINO,1000.0,1
+Rep. Andrew R. Garbarino (R-NY),members-table,diversified_core,ANDREW GARBARINO,157000.0,73
+Rep. Andrew R. Garbarino (R-NY),members-table,diversified_core,REP. ANDREW GARBARINO,125090.0,50
+Rep. Andrew R. Garbarino (R-NY),members-table,diversified_core,REP ANDREW GARBARINO,66500.0,30
+Rep. Andrew R. Garbarino (R-NY),members-table,diversified_core,REP. ANDREW R. GARBARINO,60000.0,35
+Rep. Andy Barr (R-KY),members-table,crypto_native,REP. ANDY BARR,8500.0,6
+Rep. Andy Barr (R-KY),members-table,diversified_core,ANDY BARR,287017.0,98
+Rep. Andy Barr (R-KY),members-table,diversified_core,REP. ANDY BARR,209040.0,70
+Rep. Andy Barr (R-KY),members-table,diversified_core,REP ANDY BARR IV,127000.0,36
+Rep. Andy Barr (R-KY),members-table,diversified_core,"REP. ANDY H. BARR, IV",110500.0,35
+Rep. Angie Craig (D-MN),members-table,crypto_native,REP. ANGIE CRAIG,17500.0,7
+Rep. Angie Craig (D-MN),members-table,crypto_native,ANGIE CRAIG,3500.0,2
+Rep. Angie Craig (D-MN),members-table,diversified_core,REP. ANGIE CRAIG,55590.0,28
+Rep. Ann Wagner (R-MO),members-table,crypto_native,REP. ANN WAGNER,1000.0,1
+Rep. Ann Wagner (R-MO),members-table,diversified_core,REP. ANN WAGNER,214598.0,81
+Rep. Ann Wagner (R-MO),members-table,diversified_core,ANN WAGNER,167000.0,71
+Rep. Ann Wagner (R-MO),members-table,diversified_core,REP. ANN LOUISE WAGNER,126500.0,47
+Rep. Ann Wagner (R-MO),members-table,diversified_core,REP ANN WAGNER,106000.0,27
+Rep. Ashley Hinson (R-IA),members-table,crypto_native,REP. ASHLEY HINSON,1000.0,1
+Rep. Ashley Hinson (R-IA),members-table,diversified_core,REP. ASHLEY HINSON,88095.0,33
+Rep. Barry Loudermilk (R-GA),members-table,diversified_core,BARRY LOUDERMILK,58250.0,24
+Rep. Barry Loudermilk (R-GA),members-table,diversified_core,REP. BARRY LOUDERMILK,56300.0,28
+Rep. Becca Balint (D-VT),members-table,crypto_native,BECCA BALINT,1000.0,1
+Rep. Beth Van Duyne (R-TX),members-table,crypto_native,REP. BETH VAN DUYNE,1000.0,1
+Rep. Bill Foster (D-IL),members-table,crypto_native,REP. BILL FOSTER,250.0,1
+Rep. Bill Foster (D-IL),members-table,diversified_core,REP. BILL FOSTER,229000.0,110
+Rep. Bill Foster (D-IL),members-table,diversified_core,BILL FOSTER,169500.0,77
+Rep. Bill Foster (D-IL),members-table,diversified_core,REP BILL FOSTER,86500.0,35
+Rep. Bill Huizenga (R-MI),members-table,crypto_native,REP. WILLIAM HUIZENGA,2000.0,2
+Rep. Bill Huizenga (R-MI),members-table,crypto_native,REP. WILLIAM P. HUIZENGA,1500.0,1
+Rep. Bill Huizenga (R-MI),members-table,diversified_core,BILL HUIZENGA,251500.0,91
+Rep. Bill Huizenga (R-MI),members-table,diversified_core,REP. BILL HUIZENGA,239985.0,78
+Rep. Bill Huizenga (R-MI),members-table,diversified_core,REP. WILLIAM PATRICK HUIZENGA,145500.0,57
+Rep. Bill Huizenga (R-MI),members-table,diversified_core,REP BILL HUIZENGA,124500.0,36
+Rep. Blake D. Moore (R-UT),members-table,crypto_native,REP. BLAKE MOORE,1000.0,1
+Rep. Blake D. Moore (R-UT),members-table,diversified_core,REP. BLAKE MOORE,61185.0,30
+Rep. Brad Sherman (D-CA),members-table,diversified_core,REP. BRAD SHERMAN,162500.0,60
+Rep. Brad Sherman (D-CA),members-table,diversified_core,BRAD SHERMAN,101000.0,43
+Rep. Bradley Scott Schneider (D-IL),members-table,crypto_native,REP. BRAD SCHNEIDER,3500.0,3
+Rep. Bradley Scott Schneider (D-IL),members-table,crypto_native,REP. BRADLEY SCHNEIDER,1000.0,1
+Rep. Bradley Scott Schneider (D-IL),members-table,crypto_native,REP. BRADLEY S. SCHNEIDER,1000.0,1
+Rep. Bradley Scott Schneider (D-IL),members-table,diversified_core,REP. BRAD SCHNEIDER,109500.0,42
+Rep. Brendan F. Boyle (D-PA),members-table,crypto_native,REP. BRENDAN BOYLE,2000.0,2
+Rep. Brett Guthrie (R-KY),members-table,diversified_core,REP. BRETT GUTHRIE,54000.0,24
+Rep. Brian Jack (R-GA),members-table,crypto_native,REP. BRIAN JACK,5000.0,2
+Rep. Brian Jack (R-GA),members-table,crypto_native,BRIAN JACK,1500.0,2
+Rep. Brian Jack (R-GA),members-table,crypto_native,REPRESENTATIVE BRIAN JACK,500.0,1
+Rep. Brian K. Fitzpatrick (R-PA),members-table,diversified_core,BRIAN FITZPATRICK,91000.0,32
+Rep. Brian K. Fitzpatrick (R-PA),members-table,diversified_core,REP. BRIAN FITZPATRICK,63500.0,19
+Rep. Brian K. Fitzpatrick (R-PA),members-table,diversified_core,REP BRIAN FITZPATRICK,53000.0,24
+Rep. Brittany Pettersen (D-CO),members-table,crypto_native,REP. BRITTANY PETTERSEN,4500.0,5
+Rep. Brittany Pettersen (D-CO),members-table,crypto_native,BRITTANY PETTERSEN,1000.0,1
+Rep. Brittany Pettersen (D-CO),members-table,crypto_native,REP. BRITTANY LOUISE PETTERSEN,500.0,1
+Rep. Brittany Pettersen (D-CO),members-table,diversified_core,REP. BRITTANY PETTERSEN,114500.0,52
+Rep. Brittany Pettersen (D-CO),members-table,diversified_core,BRITTANY PETTERSEN,95750.0,41
+Rep. Bryan Steil (R-WI),members-table,crypto_native,REP. BRYAN GEORGE STEIL,6000.0,4
+Rep. Bryan Steil (R-WI),members-table,crypto_native,BRYAN STEIL,3500.0,2
+Rep. Bryan Steil (R-WI),members-table,crypto_native,REPRESENTATIVE BRYAN STEIL,2500.0,1
+Rep. Bryan Steil (R-WI),members-table,diversified_core,REP. BRYAN STEIL,194500.0,72
+Rep. Bryan Steil (R-WI),members-table,diversified_core,BRYAN STEIL,149500.0,76
+Rep. Bryan Steil (R-WI),members-table,diversified_core,REP BRYAN STEIL,98000.0,32
+Rep. Bryan Steil (R-WI),members-table,diversified_core,REP. BRYAN G. STEIL,92500.0,42
+Rep. Byron Donalds (R-FL),members-table,crypto_native,BYRON DONALDS,3300.0,1
+Rep. Claudia Tenney (R-NY),members-table,crypto_native,REP. CLAUDIA TENNEY,1000.0,1
+Rep. Claudia Tenney (R-NY),members-table,diversified_core,REP. CLAUDIA TENNEY,83000.0,41
+Rep. Daniel Meuser (R-PA),members-table,crypto_native,REP. DANIEL MEUSER,1500.0,1
+Rep. Daniel Meuser (R-PA),members-table,diversified_core,REP. DAN MEUSER,102750.0,40
+Rep. Daniel Meuser (R-PA),members-table,diversified_core,REP DAN MEUSER,58000.0,20
+Rep. Daniel S. Goldman (D-NY),members-table,crypto_native,REP. DAN GOLDMAN,500.0,1
+Rep. Darin LaHood (R-IL),members-table,diversified_core,REP. DARIN LAHOOD,135685.0,44
+Rep. Darin LaHood (R-IL),members-table,diversified_core,DARIN LAHOOD,83000.0,35
+Rep. Darin LaHood (R-IL),members-table,diversified_core,REP DARIN LAHOOD,71500.0,26
+Rep. Darren Soto (D-FL),members-table,crypto_native,DARREN SOTO,6500.0,3
+Rep. Darren Soto (D-FL),members-table,crypto_native,REP. DARREN SOTO,4500.0,4
+Rep. Dave Min (D-CA),members-table,crypto_native,REP. DAVE MIN,1000.0,2
+Rep. David Kustoff (R-TN),members-table,diversified_core,REP. DAVID KUSTOFF,78000.0,33
+Rep. David P. Joyce (R-OH),members-table,crypto_native,REP. DAVE JOYCE,1000.0,1
+Rep. David Schweikert (R-AZ),members-table,crypto_native,REP. DAVID S. SCHWEIKERT,1500.0,1
+Rep. David Scott (D-GA),members-table,diversified_core,DAVID SCOTT,95000.0,36
+Rep. David Scott (D-GA),members-table,diversified_core,REP DAVID SCOTT,77500.0,23
+Rep. David Scott (D-GA),members-table,diversified_core,REP. DAVID SCOTT,61000.0,28
+Rep. Deborah K. Ross (D-NC),members-table,diversified_core,REP. DEBORAH ROSS,54000.0,23
+Rep. Derek Tran (D-CA),members-table,crypto_native,REP. DEREK TRAN,2000.0,3
+Rep. Donald G. Davis (D-NC),members-table,crypto_native,REP. DON DAVIS,1500.0,3
+Rep. Donald Norcross (D-NJ),members-table,diversified_core,REP. DONALD NORCROSS,64000.0,28
+Rep. Dusty Johnson (R-SD),members-table,crypto_native,REP. DUSTY JOHNSON,4500.0,4
+Rep. Dusty Johnson (R-SD),members-table,crypto_native,DUSTY JOHNSON,2000.0,1
+Rep. Dusty Johnson (R-SD),members-table,diversified_core,REP. DUSTY JOHNSON,77095.0,38
+Rep. Eleanor Holmes Norton (D-DC),members-table,diversified_core,ELEANOR HOLMES NORTON,200000.0,2
+Rep. Emily Randall (D-WA),members-table,crypto_native,EMILY RANDALL,1000.0,1
+Rep. Eric Sorensen (D-IL),members-table,crypto_native,REP. ERIC SORENSEN,2000.0,2
+Rep. Erin Houchin (R-IN),members-table,crypto_native,REP. ERIN HOUCHIN,3000.0,3
+Rep. Erin Houchin (R-IN),members-table,crypto_native,ERIN HOUCHIN,1000.0,1
+Rep. Erin Houchin (R-IN),members-table,diversified_core,REP. ERIN HOUCHIN,97750.0,47
+Rep. Erin Houchin (R-IN),members-table,diversified_core,ERIN HOUCHIN,77500.0,44
+Rep. Eugene Simon Vindman (D-VA),members-table,crypto_native,REP. EUGENE VINDMAN,2500.0,3
+Rep. Frank D. Lucas (R-OK),members-table,diversified_core,REP. FRANK LUCAS,84500.0,34
+Rep. Frank D. Lucas (R-OK),members-table,diversified_core,FRANK LUCAS,67000.0,26
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,crypto_native,REP. FRANK PALLONE,250.0,1
+"Rep. Frank Pallone, Jr. (D-NJ)",members-table,diversified_core,REP. FRANK PALLONE,57500.0,17
+Rep. Gabe Amo (D-RI),members-table,crypto_native,REP. GABE AMO,1000.0,1
+Rep. Gabe Vasquez (D-NM),members-table,crypto_native,REP. GABE VASQUEZ,1500.0,2
+Rep. Gabe Vasquez (D-NM),members-table,crypto_native,REP. GABRIEL VASQUEZ,500.0,1
+Rep. George Whitesides (D-CA),members-table,crypto_native,REP. GEORGE WHITESIDES,1000.0,2
+Rep. Glenn Ivey (D-MD),members-table,crypto_native,REP. GLENN IVEY,1000.0,1
+Rep. Glenn Thompson (R-PA),members-table,crypto_native,REP. GLENN THOMPSON,10750.0,6
+Rep. Grace Meng (D-NY),members-table,crypto_native,REP. GRACE MENG,2000.0,2
+Rep. Gregory W. Meeks (D-NY),members-table,diversified_core,GREGORY MEEKS,155000.0,64
+Rep. Gregory W. Meeks (D-NY),members-table,diversified_core,REP. GREGORY MEEKS,146700.0,63
+Rep. Gregory W. Meeks (D-NY),members-table,diversified_core,REP. GREGORY WELDON MEEKS,72500.0,41
+Rep. Gregory W. Meeks (D-NY),members-table,diversified_core,REP GREGORY W MEEKS,60500.0,19
+Rep. Guy Reschenthaler (R-PA),members-table,diversified_core,REP. GUY RESCHENTHALER,61500.0,20
+Rep. Guy Reschenthaler (R-PA),members-table,diversified_core,REP GUY RESCHENTHALER,61500.0,23
+Rep. Gwen Moore (D-WI),members-table,diversified_core,REP. GWEN MOORE,79500.0,32
+Rep. Hakeem S. Jeffries (D-NY),members-table,crypto_native,REP. HAKEEM JEFFRIES,5000.0,2
+Rep. Hakeem S. Jeffries (D-NY),members-table,diversified_core,REP. HAKEEM JEFFRIES,232000.0,62
+Rep. Hakeem S. Jeffries (D-NY),members-table,diversified_core,HAKEEM JEFFRIES,172100.0,53
+Rep. Hakeem S. Jeffries (D-NY),members-table,diversified_core,REP HAKEEM JEFFRIES,120000.0,28
+Rep. Hakeem S. Jeffries (D-NY),members-table,diversified_core,REP. HAKEEM S. JEFFRIES,82000.0,28
+Rep. Haley M. Stevens (D-MI),members-table,crypto_native,REP. HALEY STEVENS,1000.0,1
+Rep. Haley M. Stevens (D-MI),members-table,diversified_core,REP. HALEY STEVENS,67500.0,21
+Rep. Henry Cuellar (D-TX),members-table,crypto_native,REP. HENRY CUELLAR,1000.0,2
+Rep. J. French Hill (R-AR),members-table,crypto_native,REP. JAMES FRENCH HILL,24800.0,9
+Rep. J. French Hill (R-AR),members-table,crypto_native,REP. FRENCH HILL,7250.0,6
+Rep. J. French Hill (R-AR),members-table,crypto_native,FRENCH HILL,5450.0,5
+Rep. J. French Hill (R-AR),members-table,diversified_core,REP. FRENCH HILL,295700.0,97
+Rep. J. French Hill (R-AR),members-table,diversified_core,FRENCH HILL,276650.0,94
+Rep. J. French Hill (R-AR),members-table,diversified_core,REP FRENCH HILL,146500.0,40
+Rep. J. French Hill (R-AR),members-table,diversified_core,REP. J. FRENCH HILL,139500.0,48
+Rep. Jack Bergman (R-MI),members-table,crypto_native,JACK BERGMAN,500.0,1
+Rep. Jake Auchincloss (D-MA),members-table,crypto_native,REP. JAKE AUCHINCLOSS,6800.0,2
+Rep. James A. Himes (D-CT),members-table,crypto_native,JIM HIMES,10800.0,3
+Rep. James A. Himes (D-CT),members-table,crypto_native,REP. JIM HIMES,1500.0,2
+Rep. James A. Himes (D-CT),members-table,diversified_core,REP. JIM HIMES,149500.0,64
+Rep. James A. Himes (D-CT),members-table,diversified_core,JIM HIMES,147500.0,73
+Rep. James A. Himes (D-CT),members-table,diversified_core,REP JIM HIMES,93500.0,33
+Rep. James A. Himes (D-CT),members-table,diversified_core,REP. JAMES ANDREW HIMES,64000.0,34
+Rep. James E. Clyburn (D-SC),members-table,diversified_core,REP. JAMES CLYBURN,86000.0,23
+Rep. James E. Clyburn (D-SC),members-table,diversified_core,JAMES CLYBURN,67500.0,22
+Rep. James E. Clyburn (D-SC),members-table,diversified_core,REP JAMES E CLYBURN,60000.0,16
+Rep. James E. Clyburn (D-SC),members-table,diversified_core,REP. JAMES ENOS CLYBURN,53500.0,18
+Rep. Janelle S. Bynum (D-OR),members-table,crypto_native,REP. JANELLE BYNUM,2000.0,3
+Rep. Janelle S. Bynum (D-OR),members-table,crypto_native,JANELLE BYNUM,500.0,1
+Rep. Janelle S. Bynum (D-OR),members-table,crypto_native,HON. JANELLE BYNUM,250.0,1
+Rep. Jared Moskowitz (D-FL),members-table,crypto_native,REP. JARED MOSKOWITZ,2000.0,2
+Rep. Jasmine Crockett (D-TX),members-table,crypto_native,REP. JASMINE CROCKETT,2000.0,2
+Rep. Jason Smith (R-MO),members-table,crypto_native,REP. JASON SMITH,6000.0,3
+Rep. Jason Smith (R-MO),members-table,crypto_native,REP. JASON T. SMITH,3500.0,1
+Rep. Jason Smith (R-MO),members-table,diversified_core,REP. JASON SMITH,150000.0,40
+Rep. Jason Smith (R-MO),members-table,diversified_core,REP JASON SMITH,122500.0,32
+Rep. Jason Smith (R-MO),members-table,diversified_core,JASON SMITH,110500.0,38
+Rep. Jason Smith (R-MO),members-table,diversified_core,REP. JASON THOMAS SMITH,68000.0,17
+Rep. Jimmy Gomez (D-CA),members-table,crypto_native,REP. JIMMY GOMEZ,1000.0,1
+Rep. Jimmy Panetta (D-CA),members-table,crypto_native,REP. JIMMY PANETTA,1000.0,1
+Rep. Jimmy Panetta (D-CA),members-table,diversified_core,REP. JIMMY PANETTA,81000.0,42
+Rep. Joe Neguse (D-CO),members-table,diversified_core,REP. JOE NEGUSE,75000.0,34
+Rep. John B. Larson (D-CT),members-table,diversified_core,REP. JOHN LARSON,66000.0,25
+Rep. Joseph D. Morelle (D-NY),members-table,diversified_core,REP. JOSEPH MORELLE,77500.0,33
+Rep. Josh Gottheimer (D-NJ),members-table,crypto_native,REP. JOSH GOTTHEIMER,10650.0,7
+Rep. Josh Gottheimer (D-NJ),members-table,diversified_core,JOSH GOTTHEIMER,134000.0,55
+Rep. Josh Gottheimer (D-NJ),members-table,diversified_core,REP. JOSH GOTTHEIMER,115500.0,45
+Rep. Josh Gottheimer (D-NJ),members-table,diversified_core,REP JOSH GOTTHEIMER,111500.0,31
+Rep. Josh Gottheimer (D-NJ),members-table,diversified_core,REP. JOSHUA S. GOTTHEIMER,107000.0,46
+Rep. Josh Riley (D-NY),members-table,crypto_native,REP. JOSH RILEY,250.0,1
+Rep. Joyce Beatty (D-OH),members-table,crypto_native,REP. JOYCE BEATTY,5800.0,1
+Rep. Joyce Beatty (D-OH),members-table,diversified_core,REP. JOYCE BEATTY,171500.0,77
+Rep. Joyce Beatty (D-OH),members-table,diversified_core,JOYCE BEATTY,123000.0,56
+Rep. Joyce Beatty (D-OH),members-table,diversified_core,REP JOYCE BEATTY,95500.0,30
+Rep. Juan Vargas (D-CA),members-table,diversified_core,REP. JUAN VARGAS,59500.0,30
+Rep. Judy Chu (D-CA),members-table,diversified_core,REP. JUDY CHU,62500.0,24
+Rep. Julia Letlow (R-LA),members-table,diversified_core,REP. JULIA LETLOW,56500.0,27
+Rep. Julie Fedorchak (R-ND),members-table,crypto_native,REP. JULIE FEDORCHAK,1000.0,1
+Rep. Julie Johnson (D-TX),members-table,crypto_native,JULIE JOHNSON,1000.0,1
+Rep. Katherine M. Clark (D-MA),members-table,crypto_native,REP. KATHERINE CLARK,5000.0,2
+Rep. Katherine M. Clark (D-MA),members-table,crypto_native,KATHERINE CLARK,1500.0,1
+Rep. Katherine M. Clark (D-MA),members-table,crypto_native,REPRESENTATIVE KATHERINE CLARK,500.0,1
+Rep. Katherine M. Clark (D-MA),members-table,diversified_core,REP. KATHERINE CLARK,209250.0,67
+Rep. Katherine M. Clark (D-MA),members-table,diversified_core,KATHERINE CLARK,103000.0,40
+Rep. Katherine M. Clark (D-MA),members-table,diversified_core,REP. KATHERINE M. CLARK,60500.0,18
+Rep. Kevin Hern (R-OK),members-table,diversified_core,REP. KEVIN HERN,66500.0,23
+Rep. Kevin Hern (R-OK),members-table,diversified_core,KEVIN HERN,61500.0,24
+Rep. Kevin McCarthy (R-CA),manual,diversified_core,KEVIN MCCARTHY,107500.0,22
+Rep. Kevin McCarthy (R-CA),manual,diversified_core,REP. KEVIN OWEN MCCARTHY,58500.0,13
+Rep. Kevin McCarthy (R-CA),manual,diversified_core,REP. KEVIN MCCARTHY,57500.0,12
+Rep. Kevin McCarthy (R-CA),manual,diversified_core,REP KEVIN MCCARTHY,55000.0,12
+Rep. Kristen McDonald Rivet (D-MI),members-table,crypto_native,KRISTEN MCDONALD RIVET,1500.0,2
+Rep. Kristen McDonald Rivet (D-MI),members-table,crypto_native,CONGRESSWOMAN KRISTEN MCDONALD RIVET,500.0,1
+Rep. Kristen McDonald Rivet (D-MI),members-table,crypto_native,REP. MCDONALD RIVET,500.0,1
+Rep. Kristen McDonald Rivet (D-MI),members-table,crypto_native,REP. KRISTEN MCDONALD RIVET,500.0,1
+Rep. Laura Gillen (D-NY),members-table,crypto_native,REP. LAURA GILLEN,1000.0,2
+Rep. Laura Gillen (D-NY),members-table,crypto_native,LAURA GILLEN,500.0,1
+Rep. Lisa C. McClain (R-MI),members-table,crypto_native,REP. LISA MCCLAIN,1000.0,1
+Rep. Lisa C. McClain (R-MI),members-table,diversified_core,REP. LISA MCCLAIN,82500.0,33
+Rep. Lucy McBath (D-GA),members-table,crypto_native,REP. LUCY MCBATH,1000.0,1
+Rep. Madeleine Dean (D-PA),members-table,diversified_core,REP. MADELEINE DEAN,82500.0,43
+Rep. Madeleine Dean (D-PA),members-table,diversified_core,MADELEINE DEAN,76500.0,30
+Rep. Maggie Goodlander (D-NH),members-table,crypto_native,REP. MAGGIE GOODLANDER,500.0,1
+Rep. Marc A. Veasey (D-TX),members-table,crypto_native,REP. MARC VEASEY,2000.0,2
+Rep. Mark Alford (R-MO),members-table,crypto_native,REP. MARK ALFORD,300.0,1
+Rep. Marlin A. Stutzman (R-IN),members-table,crypto_native,REP. MARLIN A. STUTZMAN,1000.0,1
+Rep. Max L. Miller (R-OH),members-table,crypto_native,REP. MAX MILLER,2000.0,2
+Rep. Maxine Waters (D-CA),members-table,crypto_native,REP. MAXINE WATERS,2900.0,1
+Rep. Maxine Waters (D-CA),members-table,diversified_core,REP. MAXINE WATERS,89000.0,33
+Rep. Michael Lawler (R-NY),members-table,crypto_native,REP. MICHAEL LAWLER,1000.0,1
+Rep. Michael Lawler (R-NY),members-table,crypto_native,REP. MIKE LAWLER,250.0,1
+Rep. Michael Lawler (R-NY),members-table,diversified_core,MICHAEL LAWLER,78500.0,34
+Rep. Michael Lawler (R-NY),members-table,diversified_core,REP. MIKE LAWLER,66760.0,30
+Rep. Mike Carey (R-OH),members-table,crypto_native,REP. MIKE CAREY,5000.0,3
+Rep. Mike Carey (R-OH),members-table,diversified_core,REP. MIKE CAREY,140700.0,69
+Rep. Mike Flood (R-NE),members-table,crypto_native,REP. MIKE FLOOD,3500.0,3
+Rep. Mike Flood (R-NE),members-table,crypto_native,MIKE FLOOD,3300.0,1
+Rep. Mike Flood (R-NE),members-table,diversified_core,MIKE FLOOD,99500.0,42
+Rep. Mike Haridopolos (R-FL),members-table,crypto_native,REP. MIKE HARIDOPOLOS,2500.0,2
+Rep. Mike Johnson (R-LA),members-table,crypto_native,REP. MIKE JOHNSON,5000.0,1
+Rep. Mike Johnson (R-LA),members-table,diversified_core,REP. MIKE JOHNSON,140033.0,33
+Rep. Mike Johnson (R-LA),members-table,diversified_core,MIKE JOHNSON,112500.0,26
+Rep. Mike Johnson (R-LA),members-table,diversified_core,REP MIKE JOHNSON,106000.0,25
+Rep. Mike Quigley (D-IL),members-table,diversified_core,REP. MIKE QUIGLEY,56500.0,22
+Rep. Mike Rogers (R-AL),members-table,crypto_native,SEN. MICHAEL J. ROGERS,825.0,1
+Rep. Mike Thompson (D-CA),members-table,diversified_core,REP. MIKE THOMPSON,96000.0,38
+Rep. Mike Thompson (D-CA),members-table,diversified_core,MIKE THOMPSON,74000.0,23
+Rep. Nellie Pou (D-NJ),members-table,crypto_native,REP. NELIDA POU,500.0,1
+Rep. Nellie Pou (D-NJ),members-table,crypto_native,REP. NELLIE POU,500.0,1
+Rep. Nellie Pou (D-NJ),members-table,crypto_native,NELLIE POU,500.0,1
+Rep. Nicholas J. Begich III (R-AK),members-table,crypto_native,REP. NICK BEGICH,1500.0,1
+Rep. Nicole Malliotakis (R-NY),members-table,diversified_core,REP. NICOLE MALLIOTAKIS,60000.0,29
+Rep. Nikema Williams (D-GA),members-table,diversified_core,REP. NIKEMA WILLIAMS,57500.0,35
+Rep. Nikki Budzinski (D-IL),members-table,crypto_native,REP. NIKKI BUDZINSKI,3500.0,4
+Rep. Nikki Budzinski (D-IL),members-table,crypto_native,NIKKI BUDZINSKI,500.0,1
+Rep. Patrick McHenry (R-NC),manual,crypto_native,REP. PATRICK TIMOTHY MCHENRY,8300.0,2
+Rep. Patrick McHenry (R-NC),manual,crypto_native,REP. PATRICK MCHENRY,3500.0,3
+Rep. Patrick McHenry (R-NC),manual,crypto_native,PATRICK MCHENRY,3100.0,2
+Rep. Patrick McHenry (R-NC),manual,diversified_core,PATRICK MCHENRY,215400.0,59
+Rep. Patrick McHenry (R-NC),manual,diversified_core,REP. PATRICK TIMOTHY MCHENRY,156250.0,45
+Rep. Patrick McHenry (R-NC),manual,diversified_core,REP. PATRICK MCHENRY,145500.0,46
+Rep. Patrick McHenry (R-NC),manual,diversified_core,REP PATRICK MCHENRY,73500.0,19
+Rep. Pete Aguilar (D-CA),members-table,crypto_native,REP. PETE AGUILAR,2500.0,1
+Rep. Pete Aguilar (D-CA),members-table,diversified_core,REP. PETE AGUILAR,160000.0,46
+Rep. Pete Aguilar (D-CA),members-table,diversified_core,PETE AGUILAR,112000.0,38
+Rep. Pete Aguilar (D-CA),members-table,diversified_core,REP PETE AGUILAR,71000.0,21
+Rep. Randy Feenstra (R-IA),members-table,crypto_native,REP. RANDALL FEENSTRA,1000.0,1
+Rep. Randy Feenstra (R-IA),members-table,diversified_core,REP. RANDY FEENSTRA,72095.0,37
+Rep. Randy Feenstra (R-IA),members-table,diversified_core,REP RANDY FEENSTRA,53000.0,16
+Rep. Richard E. Neal (D-MA),members-table,crypto_native,REP. RICHARD NEAL,500.0,1
+Rep. Richard E. Neal (D-MA),members-table,diversified_core,RICHARD NEAL,185500.0,52
+Rep. Richard E. Neal (D-MA),members-table,diversified_core,REP. RICHARD NEAL,172000.0,47
+Rep. Richard E. Neal (D-MA),members-table,diversified_core,REP. RICHARD EDMUND NEAL,119000.0,33
+Rep. Richard E. Neal (D-MA),members-table,diversified_core,REP RICHARD NEAL,53000.0,15
+Rep. Richard Hudson (R-NC),members-table,diversified_core,REP RICHARD HUDSON,87000.0,20
+Rep. Richard Hudson (R-NC),members-table,diversified_core,RICHARD HUDSON,57500.0,21
+Rep. Rick Larsen (D-WA),members-table,diversified_core,REP. RICK LARSEN,64500.0,27
+Rep. Ritchie Torres (D-NY),members-table,crypto_native,REP. RITCHIE TORRES,16000.0,7
+Rep. Ritchie Torres (D-NY),members-table,crypto_native,RITCHIE TORRES,3500.0,3
+Rep. Ritchie Torres (D-NY),members-table,crypto_native,REP. RITCHIE JOHN TORRES,1500.0,1
+Rep. Ritchie Torres (D-NY),members-table,crypto_native,REP. RICHIE TORRES,500.0,1
+Rep. Ritchie Torres (D-NY),members-table,diversified_core,REP. RITCHIE TORRES,115900.0,51
+Rep. Ritchie Torres (D-NY),members-table,diversified_core,RITCHIE TORRES,89500.0,45
+Rep. Ritchie Torres (D-NY),members-table,diversified_core,REP. RITCHIE J. TORRES,56000.0,35
+Rep. Ro Khanna (D-CA),members-table,crypto_native,RO KHANNA,7100.0,2
+Rep. Ro Khanna (D-CA),members-table,crypto_native,REP. ROHIT KHANNA,3500.0,1
+Rep. Robert Garcia (D-CA),members-table,crypto_native,REP. ROBERT GARCIA,1000.0,1
+Rep. Robert Menendez (D-NJ),members-table,crypto_native,REP. ROB MENENDEZ,1500.0,1
+Rep. Robert Menendez (D-NJ),members-table,crypto_native,SEN. ROBERT MENENDEZ,1000.0,1
+Rep. Robert Menendez (D-NJ),members-table,crypto_native,REP. ROBERT J. MENENDEZ,1000.0,2
+Rep. Robin L. Kelly (D-IL),members-table,diversified_core,REP. ROBIN KELLY,75133.0,34
+Rep. Roger Williams (R-TX),members-table,diversified_core,REP. ROGER WILLIAMS,85250.0,32
+Rep. Ron Estes (R-KS),members-table,diversified_core,REP. RON ESTES,112000.0,42
+Rep. Ron Estes (R-KS),members-table,diversified_core,REP RON ESTES,53750.0,26
+Rep. Sam T. Liccardo (D-CA),members-table,crypto_native,REP. SAM LICCARDO,4300.0,3
+Rep. Sam T. Liccardo (D-CA),members-table,crypto_native,SAM LICCARDO,1000.0,1
+Rep. Sarah McBride (D-DE),members-table,crypto_native,REP. SARAH ELIZABETH MCBRIDE,500.0,1
+Rep. Scott Fitzgerald (R-WI),members-table,diversified_core,REP. SCOTT FITZGERALD,80750.0,37
+Rep. Sean Casten (D-IL),members-table,diversified_core,REP. SEAN CASTEN,164500.0,77
+Rep. Sean Casten (D-IL),members-table,diversified_core,SEAN CASTEN,72000.0,33
+Rep. Sean Casten (D-IL),members-table,diversified_core,REP SEAN CASTEN,63500.0,23
+Rep. Sharice Davids (D-KS),members-table,diversified_core,REP. SHARICE DAVIDS,62590.0,30
+Rep. Shomari Figures (D-AL),members-table,crypto_native,REP. SHOMARI FIGURES,500.0,2
+Rep. Steny H. Hoyer (D-MD),members-table,diversified_core,REP. STENY HOYER,105000.0,30
+Rep. Steny H. Hoyer (D-MD),members-table,diversified_core,REP STENY HOYER,96500.0,23
+Rep. Steny H. Hoyer (D-MD),members-table,diversified_core,STENY HOYER,86300.0,25
+Rep. Steny H. Hoyer (D-MD),members-table,diversified_core,REP. STENY HAMILTON HOYER,75500.0,24
+Rep. Steve Scalise (R-LA),members-table,crypto_native,REP. STEVE SCALISE,2500.0,1
+Rep. Steve Scalise (R-LA),members-table,diversified_core,REP. STEVE SCALISE,154000.0,42
+Rep. Steve Scalise (R-LA),members-table,diversified_core,REP STEVE SCALISE,102500.0,23
+Rep. Steve Scalise (R-LA),members-table,diversified_core,STEVE SCALISE,80500.0,22
+Rep. Steven Horsford (D-NV),members-table,crypto_native,REP. STEVEN HORSFORD,4500.0,4
+Rep. Steven Horsford (D-NV),members-table,diversified_core,REP. STEVEN HORSFORD,127000.0,50
+Rep. Steven Horsford (D-NV),members-table,diversified_core,STEVEN HORSFORD,89000.0,39
+Rep. Steven Horsford (D-NV),members-table,diversified_core,REP. STEVEN ALEXZANDER HORSFORD,69000.0,29
+Rep. Susie Lee (D-NV),members-table,crypto_native,REP. SUSIE LEE,1000.0,2
+Rep. Susie Lee (D-NV),members-table,diversified_core,REP. SUSIE LEE,70185.0,31
+Rep. Suzan K. DelBene (D-WA),members-table,crypto_native,REP. SUZAN DELBENE,1000.0,1
+Rep. Suzan K. DelBene (D-WA),members-table,crypto_native,REP. SUZAN K. DELBENE,1000.0,1
+Rep. Suzan K. DelBene (D-WA),members-table,diversified_core,REP. SUZAN DELBENE,182500.0,69
+Rep. Suzan K. DelBene (D-WA),members-table,diversified_core,REP SUZAN DELBENE,86500.0,27
+Rep. Suzan K. DelBene (D-WA),members-table,diversified_core,REP. SUZAN KAY DELBENE,68000.0,28
+Rep. Sylvia R. Garcia (D-TX),members-table,diversified_core,REP. SYLVIA GARCIA,62000.0,29
+Rep. Ted Lieu (D-CA),members-table,crypto_native,TED LIEU,1000.0,1
+Rep. Ted Lieu (D-CA),members-table,crypto_native,REP. TED LIEU,1000.0,1
+Rep. Terri A. Sewell (D-AL),members-table,crypto_native,TERRI SEWELL,500.0,1
+Rep. Terri A. Sewell (D-AL),members-table,crypto_native,REP. TERRI SEWELL,250.0,1
+Rep. Terri A. Sewell (D-AL),members-table,diversified_core,REP. TERRI SEWELL,124500.0,54
+Rep. Terri A. Sewell (D-AL),members-table,diversified_core,REP TERRI SEWELL,88500.0,29
+Rep. Terri A. Sewell (D-AL),members-table,diversified_core,TERRI SEWELL,78500.0,32
+Rep. Thomas R. Suozzi (D-NY),members-table,crypto_native,REP. THOMAS SUOZZI,1500.0,3
+Rep. Tim Moore (R-NC),members-table,crypto_native,REP. TIM MOORE,1000.0,1
+Rep. Tim Walberg (R-MI),members-table,diversified_core,REP. TIM WALBERG,58521.0,25
+Rep. Timothy M. Kennedy (D-NY),members-table,crypto_native,REP. TIM KENNEDY,2000.0,2
+Rep. Tom Emmer (R-MN),members-table,crypto_native,REP. THOMAS EARL EMMER JR,50000.0,3
+Rep. Tom Emmer (R-MN),members-table,crypto_native,"REP. THOMAS EARL EMMER, JR",9300.0,3
+Rep. Tom Emmer (R-MN),members-table,crypto_native,REP. THOMAS EARL EMMER,9100.0,2
+Rep. Tom Emmer (R-MN),members-table,crypto_native,REP. TOM EMMER,5500.0,4
+Rep. Tom Emmer (R-MN),members-table,crypto_native,TOM EMMER,2500.0,1
+Rep. Tom Emmer (R-MN),members-table,diversified_core,TOM EMMER,181500.0,63
+Rep. Tom Emmer (R-MN),members-table,diversified_core,REP TOM EMMER JR,130500.0,35
+Rep. Tom Emmer (R-MN),members-table,diversified_core,"REP. THOMAS EARL EMMER, JR",117500.0,38
+Rep. Tom Emmer (R-MN),members-table,diversified_core,REP. TOM EMMER,88000.0,29
+Rep. Tom Emmer (R-MN),members-table,diversified_core,REP. TOM EMMER JR,66000.0,19
+Rep. Troy A. Carter (D-LA),members-table,crypto_native,REP. TROY CARTER,1000.0,1
+Rep. Troy Balderson (R-OH),members-table,diversified_core,REP. TROY BALDERSON,82095.0,30
+Rep. Troy Downing (R-MT),members-table,crypto_native,REP. TROY DOWNING,1000.0,1
+Rep. Val T. Hoyle (D-OR),members-table,crypto_native,REP. VALERIE HOYLE,500.0,1
+Rep. Vern Buchanan (R-FL),members-table,diversified_core,REP. VERN BUCHANAN,102090.0,29
+Rep. Veronica Escobar (D-TX),members-table,diversified_core,REP. VERONICA ESCOBAR,54000.0,23
+Rep. Vicente Gonzalez (D-TX),members-table,crypto_native,REP. VINCENTE GONZALEZ,2000.0,2
+Rep. Vicente Gonzalez (D-TX),members-table,crypto_native,REP. VINCENTE GONZALEZ JR,500.0,1
+Rep. Vicente Gonzalez (D-TX),members-table,crypto_native,REP. VICENTE GONZALEZ,500.0,1
+Rep. Vicente Gonzalez (D-TX),members-table,diversified_core,REP. VICENTE GONZALEZ,101090.0,48
+Rep. Vicente Gonzalez (D-TX),members-table,diversified_core,VICENTE GONZALEZ,55000.0,29
+Rep. Warren Davidson (R-OH),members-table,crypto_native,WARREN DAVIDSON,6800.0,3
+Rep. Warren Davidson (R-OH),members-table,crypto_native,REP. WARREN DAVIDSON,5000.0,3
+Rep. Warren Davidson (R-OH),members-table,diversified_core,REP. WARREN DAVIDSON,128200.0,55
+Rep. Warren Davidson (R-OH),members-table,diversified_core,REP WARREN DAVIDSON,54500.0,16
+Rep. William R. Timmons IV (R-SC),members-table,crypto_native,REP. WILLIAM TIMMONS,1500.0,1
+Rep. William R. Timmons IV (R-SC),members-table,diversified_core,REP WILLIAM TIMMONS IV,74000.0,25
+Rep. William R. Timmons IV (R-SC),members-table,diversified_core,WILLIAM TIMMONS,58500.0,26
+Rep. Young Kim (R-CA),members-table,crypto_native,REP. YOUNG KIM,3900.0,2
+Rep. Young Kim (R-CA),members-table,diversified_core,REP. YOUNG KIM,141385.0,56
+Rep. Young Kim (R-CA),members-table,diversified_core,YOUNG KIM,139000.0,61
+Rep. Young Kim (R-CA),members-table,diversified_core,REP YOUNG KIM,79000.0,23
+Rep. Young Kim (R-CA),members-table,diversified_core,REP. YOUNG O. KIM,56500.0,24
+Rep. Zachary Nunn (R-IA),members-table,crypto_native,REP. ZACH NUNN,1000.0,1
+Rep. Zachary Nunn (R-IA),members-table,diversified_core,REP. ZACH NUNN,104000.0,53
+Rep. Zoe Lofgren (D-CA),members-table,crypto_native,REP. ZOE LOFGREN,1000.0,1
+Rep. Zoe Lofgren (D-CA),members-table,diversified_core,REP. ZOE LOFGREN,58100.0,25
+Sen. Adam B. Schiff (D-CA),members-table,crypto_native,ADAM SCHIFF,6600.0,1
+Sen. Alex Padilla (D-CA),members-table,crypto_native,SEN. ALEX PADILLA,1000.0,1
+Sen. Alex Padilla (D-CA),members-table,crypto_native,SENATOR ALEX PADILLA,500.0,1
+Sen. Andy Kim (D-NJ),members-table,crypto_native,REP. ANDY KIM,250.0,1
+Sen. Angela D. Alsobrooks (D-MD),members-table,crypto_native,ANGELA ALSOBROOKS,6800.0,5
+Sen. Angela D. Alsobrooks (D-MD),members-table,crypto_native,SEN. ANGELA ALSOBROOKS,1000.0,1
+Sen. Angela D. Alsobrooks (D-MD),members-table,crypto_native,SENATOR ANGELA ALSOBROOKS,500.0,1
+Sen. Bernie Moreno (R-OH),members-table,crypto_native,BERNIE MORENO,11800.0,7
+Sen. Bernie Moreno (R-OH),members-table,crypto_native,SEN. BERNIE MORENO,4125.0,2
+Sen. Bill Hagerty (R-TN),members-table,crypto_native,SENATOR BILL HAGERTY,16000.0,3
+Sen. Bill Hagerty (R-TN),members-table,crypto_native,BILL HAGERTY,5000.0,1
+Sen. Bill Hagerty (R-TN),members-table,crypto_native,SEN. BILL HAGERTY,5000.0,2
+Sen. Bill Hagerty (R-TN),members-table,crypto_native,REP. BILL HAGERTY,2000.0,1
+Sen. Bill Hagerty (R-TN),members-table,diversified_core,SEN. BILL HAGERTY,180500.0,68
+Sen. Bill Hagerty (R-TN),members-table,diversified_core,BILL HAGERTY,141250.0,47
+Sen. Bill Hagerty (R-TN),members-table,diversified_core,SEN BILL HAGERTY,69500.0,18
+Sen. Bob Casey (D-PA),manual,crypto_native,SEN. ROBERT CASEY,500.0,1
+Sen. Bob Casey (D-PA),manual,crypto_native,SEN. BOB CASEY,250.0,1
+Sen. Catherine Cortez Masto (D-NV),members-table,crypto_native,SENATOR CATHERINE CORTEZ MASTO,1500.0,1
+Sen. Catherine Cortez Masto (D-NV),members-table,crypto_native,SEN. CATHERINE CORTEZ MASTO,350.0,1
+Sen. Catherine Cortez Masto (D-NV),members-table,diversified_core,SEN. CATHERINE CORTEZ MASTO,130334.0,50
+Sen. Catherine Cortez Masto (D-NV),members-table,diversified_core,SEN CATHERINE CORTEZ MASTO,55000.0,15
+Sen. Charles E. Schumer (D-NY),members-table,crypto_native,SEN. CHARLES E. SCHUMER,2900.0,1
+Sen. Charles E. Schumer (D-NY),members-table,diversified_core,CHARLES SCHUMER,72500.0,18
+Sen. Charles E. Schumer (D-NY),members-table,diversified_core,SEN CHUCK SCHUMER,63000.0,16
+Sen. Charles E. Schumer (D-NY),members-table,diversified_core,SEN. CHUCK SCHUMER,60500.0,15
+Sen. Chris Van Hollen (D-MD),members-table,diversified_core,CHRIS VAN HOLLEN,52900.0,18
+Sen. Christopher A. Coons (D-DE),members-table,crypto_native,SEN. CHRIS COONS,1000.0,1
+Sen. Christopher A. Coons (D-DE),members-table,diversified_core,SEN. CHRIS COONS,71000.0,25
+Sen. Christopher A. Coons (D-DE),members-table,diversified_core,SEN CHRIS COONS,67000.0,21
+Sen. Christopher A. Coons (D-DE),members-table,diversified_core,CHRISTOPHER COONS,58500.0,25
+Sen. Cynthia M. Lummis (R-WY),members-table,crypto_native,SEN. CYNTHIA MARIE LUMMIS,23600.0,5
+Sen. Cynthia M. Lummis (R-WY),members-table,crypto_native,CYNTHIA LUMMIS,7000.0,3
+Sen. Cynthia M. Lummis (R-WY),members-table,crypto_native,SENATOR CYNTHIA LUMMIS,5900.0,3
+Sen. Cynthia M. Lummis (R-WY),members-table,crypto_native,REP. CYNTHIA LUMMIS,5000.0,1
+Sen. Cynthia M. Lummis (R-WY),members-table,crypto_native,SEN. CYNTHIA LUMMIS,4000.0,2
+Sen. Cynthia M. Lummis (R-WY),members-table,diversified_core,SEN. CYNTHIA LUMMIS,56000.0,21
+Sen. David McCormick (R-PA),members-table,crypto_native,SEN. DAVE MCCORMICK,825.0,1
+Sen. David McCormick (R-PA),members-table,diversified_core,DAVE MCCORMICK,67600.0,24
+Sen. Deb Fischer (R-NE),members-table,crypto_native,SEN. DEBRA FISCHER,4300.0,2
+Sen. Deb Fischer (R-NE),members-table,crypto_native,SEN. DEB FISCHER,2500.0,1
+Sen. Deb Fischer (R-NE),members-table,crypto_native,SENATOR DEB FISCHER,2500.0,1
+Sen. Eric Schmitt (R-MO),members-table,diversified_core,SEN ERIC S SCHMITT,61000.0,16
+Sen. Gary C. Peters (D-MI),members-table,diversified_core,SEN GARY PETERS SR,81000.0,16
+Sen. Gary C. Peters (D-MI),members-table,diversified_core,GARY PETERS,80050.0,37
+Sen. Gary C. Peters (D-MI),members-table,diversified_core,SEN. GARY CHARLES PETERS,78500.0,38
+Sen. Jacky Rosen (D-NV),members-table,crypto_native,SEN. JACKY ROSEN,1000.0,1
+Sen. Jacky Rosen (D-NV),members-table,diversified_core,SEN. JACKY ROSEN,112781.0,43
+Sen. Jacky Rosen (D-NV),members-table,diversified_core,SEN JACKY ROSEN,53500.0,16
+Sen. James C. Justice (R-WV),members-table,crypto_native,SEN. JIM JUSTICE,1000.0,1
+Sen. James Lankford (R-OK),members-table,crypto_native,JAMES LANKFORD,250.0,1
+Sen. James Lankford (R-OK),members-table,diversified_core,JAMES LANKFORD,52500.0,19
+Sen. Jerry Moran (R-KS),members-table,diversified_core,SEN. JERRY MORAN,80750.0,29
+Sen. Jerry Moran (R-KS),members-table,diversified_core,SEN JERRY MORAN,54000.0,13
+Sen. Jim Banks (R-IN),members-table,crypto_native,REP. JAMES BANKS,1000.0,1
+Sen. John Barrasso (R-WY),members-table,crypto_native,SEN. JOHN BARRASSO,8300.0,2
+Sen. John Barrasso (R-WY),members-table,diversified_core,JOHN BARRASSO,77000.0,29
+Sen. John Barrasso (R-WY),members-table,diversified_core,SEN JOHN A BARRASSO,64000.0,19
+Sen. John Barrasso (R-WY),members-table,diversified_core,SEN. JOHN ANTHONY BARRASSO,61500.0,20
+Sen. John Boozman (R-AR),members-table,crypto_native,SEN. JOHN BOOZMAN,10300.0,4
+Sen. John Boozman (R-AR),members-table,diversified_core,SEN. JOHN NICHOLS BOOZMAN,67500.0,23
+Sen. John Boozman (R-AR),members-table,diversified_core,SEN. JOHN BOOZMAN,66500.0,22
+Sen. John Boozman (R-AR),members-table,diversified_core,SEN JOHN BOOZMAN,62000.0,19
+Sen. John Boozman (R-AR),members-table,diversified_core,JOHN BOOZMAN,60500.0,19
+Sen. John Cornyn (R-TX),members-table,crypto_native,SENATOR JOHN CORNYN,3500.0,1
+Sen. John Cornyn (R-TX),members-table,diversified_core,"SEN. JOHN CORNYN, III",78500.0,21
+Sen. John Cornyn (R-TX),members-table,diversified_core,SEN JOHN CORNYN III,66000.0,19
+Sen. John Cornyn (R-TX),members-table,diversified_core,JOHN CORNYN,62500.0,29
+Sen. John Cornyn (R-TX),members-table,diversified_core,SEN. JOHN CORNYN,60041.0,23
+Sen. John Fetterman (D-PA),members-table,crypto_native,SEN. JOHN FETTERMAN,1000.0,1
+Sen. John Kennedy (R-LA),members-table,crypto_native,SENATOR JOHN KENNEDY,250.0,1
+Sen. John R. Curtis (R-UT),members-table,crypto_native,SENATOR JOHN CURTIS,500.0,1
+Sen. John R. Curtis (R-UT),members-table,diversified_core,JOHN CURTIS,60000.0,22
+Sen. John Thune (R-SD),members-table,crypto_native,SEN. JOHN THUNE,4500.0,2
+Sen. John Thune (R-SD),members-table,crypto_native,SENATOR JOHN THUNE,3000.0,2
+Sen. John Thune (R-SD),members-table,diversified_core,JOHN THUNE,152000.0,39
+Sen. John Thune (R-SD),members-table,diversified_core,SEN. JOHN THUNE,117595.0,30
+Sen. John Thune (R-SD),members-table,diversified_core,SEN JOHN THUNE,100500.0,24
+Sen. John Thune (R-SD),members-table,diversified_core,SEN. JOHN RANDOLPH THUNE,68000.0,21
+Sen. Jon Tester (D-MT),manual,diversified_core,SEN. JON TESTER,206250.0,70
+Sen. Jon Tester (D-MT),manual,diversified_core,JON TESTER,123950.0,56
+Sen. Joni Ernst (R-IA),members-table,crypto_native,SEN. JONI ERNST,2000.0,1
+Sen. Joni Ernst (R-IA),members-table,diversified_core,SEN. JONI ERNST,55000.0,15
+Sen. Katie Boyd Britt (R-AL),members-table,crypto_native,SEN. KATIE BRITT,6000.0,2
+Sen. Katie Boyd Britt (R-AL),members-table,crypto_native,SEN. KATIE BOYD BRITT,1000.0,1
+Sen. Katie Boyd Britt (R-AL),members-table,diversified_core,KATIE BRITT,124250.0,43
+Sen. Katie Boyd Britt (R-AL),members-table,diversified_core,SEN. KATIE BRITT,92500.0,29
+Sen. Katie Boyd Britt (R-AL),members-table,diversified_core,SEN. KATIE BOYD BRITT,72000.0,26
+Sen. Kevin Cramer (R-ND),members-table,diversified_core,SEN. KEVIN CRAMER,93000.0,30
+Sen. Kevin Cramer (R-ND),members-table,diversified_core,KEVIN CRAMER,74500.0,23
+Sen. Kirsten E. Gillibrand (D-NY),members-table,crypto_native,SEN. KIRSTEN GILLIBRAND,5800.0,2
+Sen. Kirsten E. Gillibrand (D-NY),members-table,crypto_native,SEN. KRISTEN GILLIBRAND,5300.0,2
+Sen. Kirsten E. Gillibrand (D-NY),members-table,crypto_native,KIRSTEN GILLIBRAND,500.0,1
+Sen. Kirsten E. Gillibrand (D-NY),members-table,diversified_core,SEN. KIRSTEN GILLIBRAND,57000.0,21
+Sen. Kyrsten Sinema (I-AZ),manual,diversified_core,SEN. KYRSTEN SINEMA,108090.0,47
+Sen. Kyrsten Sinema (I-AZ),manual,diversified_core,KYRSTEN SINEMA,100500.0,30
+Sen. Lisa Blunt Rochester (D-DE),members-table,crypto_native,REP. LISA BLUNT ROCHESTER,2000.0,2
+Sen. Lisa Blunt Rochester (D-DE),members-table,crypto_native,SEN. LISA BLUNT ROCHESTER,500.0,1
+Sen. Lisa Blunt Rochester (D-DE),members-table,diversified_core,LISA BLUNT ROCHESTER,109750.0,38
+Sen. Lisa Blunt Rochester (D-DE),members-table,diversified_core,REP. LISA BLUNT ROCHESTER,83500.0,31
+Sen. Lisa Murkowski (R-AK),members-table,diversified_core,SEN. LISA MURKOWSKI,53500.0,18
+Sen. Margaret Wood Hassan (D-NH),members-table,diversified_core,SEN. MARGARET WOOD HASSAN,61834.0,29
+Sen. Mark R. Warner (D-VA),members-table,crypto_native,SENATOR MARK WARNER,3500.0,1
+Sen. Mark R. Warner (D-VA),members-table,crypto_native,SEN. MARK WARNER,1000.0,1
+Sen. Mark R. Warner (D-VA),members-table,diversified_core,SEN. MARK WARNER,177200.0,55
+Sen. Mark R. Warner (D-VA),members-table,diversified_core,MARK WARNER,146850.0,64
+Sen. Mark R. Warner (D-VA),members-table,diversified_core,SEN. MARK ROBERT WARNER,78500.0,28
+Sen. Mark R. Warner (D-VA),members-table,diversified_core,SEN MARK R WARNER,71500.0,19
+Sen. Marsha Blackburn (R-TN),members-table,diversified_core,SEN MARSHA BLACKBURN,68500.0,23
+Sen. Martin Heinrich (D-NM),members-table,crypto_native,SEN. MARTIN HEINRICH,1000.0,1
+Sen. Martin Heinrich (D-NM),members-table,diversified_core,SEN. MARTIN HEINRICH,58500.0,26
+Sen. Mike Crapo (R-ID),members-table,crypto_native,SEN. MIKE CRAPO,4900.0,2
+Sen. Mike Crapo (R-ID),members-table,diversified_core,SEN. MIKE CRAPO,88000.0,23
+Sen. Mike Crapo (R-ID),members-table,diversified_core,SEN MIKE CRAPO,71500.0,17
+Sen. Mike Crapo (R-ID),members-table,diversified_core,MICHAEL CRAPO,69500.0,23
+Sen. Mike Crapo (R-ID),members-table,diversified_core,SEN. MICHAEL DEAN CRAPO,68000.0,28
+Sen. Mike Rounds (R-SD),members-table,crypto_native,SEN. MIKE ROUNDS,7000.0,3
+Sen. Mike Rounds (R-SD),members-table,diversified_core,SEN. MIKE ROUNDS,132500.0,47
+Sen. Mike Rounds (R-SD),members-table,diversified_core,MIKE ROUNDS,106500.0,34
+Sen. Mike Rounds (R-SD),members-table,diversified_core,SEN MIKE ROUNDS,84000.0,25
+Sen. Mike Rounds (R-SD),members-table,diversified_core,SEN. M. MICHAEL ROUNDS,57000.0,20
+Sen. Mitch McConnell (R-KY),members-table,diversified_core,SEN. MITCH MCCONNELL,77000.0,21
+Sen. Mitch McConnell (R-KY),members-table,diversified_core,MITCH MCCONNELL,67000.0,18
+Sen. Pat Toomey (R-PA),manual,crypto_native,SEN. PATRICK TOOMEY,53790.0,1
+Sen. Patty Murray (D-WA),members-table,diversified_core,SEN. PATTY MURRAY,67500.0,19
+Sen. Pete Ricketts (R-NE),members-table,diversified_core,PETE RICKETTS,68000.0,23
+Sen. Raphael G. Warnock (D-GA),members-table,crypto_native,SEN. RAPHAEL WARNOCK,500.0,1
+Sen. Rick Scott (R-FL),members-table,crypto_native,SENATOR RICK SCOTT,2500.0,1
+Sen. Ron Wyden (D-OR),members-table,crypto_native,RONALD LEE WYDEN,5000.0,2
+Sen. Ron Wyden (D-OR),members-table,crypto_native,SEN. RONALD LEE WYDEN,2900.0,1
+Sen. Ruben Gallego (D-AZ),members-table,crypto_native,SENATOR RUBEN GALLEGO,6500.0,3
+Sen. Ruben Gallego (D-AZ),members-table,crypto_native,RUBEN GALLEGO,1500.0,2
+Sen. Ruben Gallego (D-AZ),members-table,crypto_native,SEN. RUBEN GALLEGO,1000.0,1
+Sen. Ruben Gallego (D-AZ),members-table,crypto_native,REP. RUBEN GALLEGO,500.0,1
+Sen. Sherrod Brown (D-OH),manual,crypto_native,SEN. SHERROD BROWN,1000.0,1
+Sen. Sherrod Brown (D-OH),manual,diversified_core,SEN. SHERROD BROWN,88000.0,31
+Sen. Sherrod Brown (D-OH),manual,diversified_core,SHERROD BROWN,67650.0,25
+Sen. Sherrod Brown (D-OH),manual,diversified_core,SEN SHERROD BROWN,65000.0,16
+Sen. Sherrod Brown (D-OH),manual,diversified_core,SEN. SHERROD CAMPBELL BROWN,60500.0,20
+Sen. Steve Daines (R-MT),members-table,crypto_native,SENATOR STEVE DAINES,2500.0,1
+Sen. Steve Daines (R-MT),members-table,crypto_native,SEN. STEVE DAINES,2000.0,1
+Sen. Steve Daines (R-MT),members-table,diversified_core,SEN STEVE DAINES,145000.0,26
+Sen. Steve Daines (R-MT),members-table,diversified_core,SEN. STEVE DAINES,104000.0,33
+Sen. Steve Daines (R-MT),members-table,diversified_core,STEVEN DAINES,60500.0,20
+Sen. Steve Daines (R-MT),members-table,diversified_core,SEN. STEVE DAVID DAINES,53500.0,22
+Sen. Ted Budd (R-NC),members-table,crypto_native,SEN. THEODORE BUDD,2000.0,1
+Sen. Ted Budd (R-NC),members-table,diversified_core,SEN TED BUDD,55000.0,15
+Sen. Ted Cruz (R-TX),members-table,crypto_native,TED CRUZ,1000.0,1
+Sen. Thom Tillis (R-NC),members-table,crypto_native,SENATOR THOM TILLIS,3000.0,2
+Sen. Thom Tillis (R-NC),members-table,diversified_core,THOM TILLIS,151750.0,47
+Sen. Thom Tillis (R-NC),members-table,diversified_core,SEN. THOM TILLIS,129750.0,42
+Sen. Thom Tillis (R-NC),members-table,diversified_core,SEN THOM TILLIS,88000.0,21
+Sen. Thom Tillis (R-NC),members-table,diversified_core,SEN. THOMAS ROLAND TILLIS,73000.0,24
+Sen. Tim Kaine (D-VA),members-table,diversified_core,SEN. TIM KAINE,83750.0,30
+Sen. Tim Scott (R-SC),members-table,crypto_native,SEN. TIMOTHY SCOTT,9900.0,2
+Sen. Tim Scott (R-SC),members-table,crypto_native,SEN. TIM SCOTT,5000.0,4
+Sen. Tim Scott (R-SC),members-table,crypto_native,SENATOR TIM SCOTT,3000.0,2
+Sen. Tim Scott (R-SC),members-table,crypto_native,SEN. TIMOTHY E. SCOTT,2500.0,1
+Sen. Tim Scott (R-SC),members-table,crypto_native,SENATOR TIMOTHY SCOTT,2500.0,1
+Sen. Tim Scott (R-SC),members-table,diversified_core,TIM SCOTT,165750.0,52
+Sen. Tim Scott (R-SC),members-table,diversified_core,SEN. TIM SCOTT,159000.0,47
+Sen. Tim Scott (R-SC),members-table,diversified_core,SEN. TIMOTHY EUGENE SCOTT,110500.0,33
+Sen. Tim Scott (R-SC),members-table,diversified_core,SEN TIM SCOTT,95000.0,21
+Sen. Tim Sheehy (R-MT),members-table,crypto_native,SEN. TIM SHEEHY,3300.0,1
+Sen. Tim Sheehy (R-MT),members-table,crypto_native,TIM SHEEHY,1000.0,1
+Sen. Tina Smith (D-MN),members-table,diversified_core,SEN. TINA SMITH,94000.0,35
+Sen. Todd Young (R-IN),members-table,diversified_core,SEN. TODD CHRISTOPHER YOUNG,63000.0,23
+Sen. Todd Young (R-IN),members-table,diversified_core,SEN. TODD YOUNG,57500.0,17
+Sen. Todd Young (R-IN),members-table,diversified_core,TODD YOUNG,53000.0,19

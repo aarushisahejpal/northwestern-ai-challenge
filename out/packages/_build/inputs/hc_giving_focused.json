@@ -1,0 +1,2897 @@
+{
+  "query": "113 entities from healthcare_roster_focused.txt",
+  "resolved_entities": [
+    {
+      "entity_id": "registrant:16830",
+      "canonical_name": "Greater New York Hospital Association"
+    },
+    {
+      "entity_id": "registrant:55792",
+      "canonical_name": "AMERICAN ASSOCIATION FOR HOMECARE"
+    },
+    {
+      "entity_id": "registrant:401104097",
+      "canonical_name": "FERRING PHARMACEUTICALS, INC."
+    },
+    {
+      "entity_id": "registrant:46940",
+      "canonical_name": "FRESENIUS MEDICAL CARE NORTH AMERICA"
+    },
+    {
+      "entity_id": "registrant:76695",
+      "canonical_name": "TEVA PHARMACEUTICALS USA, INC."
+    },
+    {
+      "entity_id": "registrant:40027242",
+      "canonical_name": "VERTEX PHARMACEUTICALS INCORPORATED"
+    },
+    {
+      "entity_id": "registrant:40032268",
+      "canonical_name": "ASTELLAS PHARMA US, INC."
+    },
+    {
+      "entity_id": "registrant:57954",
+      "canonical_name": "TAKEDA PHARMACEUTICALS AMERICA, INC."
+    },
+    {
+      "entity_id": "registrant:401105832",
+      "canonical_name": "ARDELYX, INC."
+    },
+    {
+      "entity_id": "registrant:5610",
+      "canonical_name": "BAXTER HEALTHCARE CORPORATION"
+    },
+    {
+      "entity_id": "registrant:67934",
+      "canonical_name": "SCAN HEALTH PLAN"
+    },
+    {
+      "entity_id": "registrant:BOEHRINGER INGELHEIM PHARMACEUTICALS",
+      "canonical_name": "BOEHRINGER INGELHEIM PHARMACEUTICALS, INC."
+    },
+    {
+      "entity_id": "registrant:296511",
+      "canonical_name": "STRYKER CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401105667",
+      "canonical_name": "ALLIANCE FOR PHYSICAL THERAPY QUALITY AND INNOVATION"
+    },
+    {
+      "entity_id": "registrant:401104109",
+      "canonical_name": "HACKENSACK MERIDIAN HEALTH"
+    },
+    {
+      "entity_id": "registrant:24794",
+      "canonical_name": "MEDICAL DEVICE MANUFACTURERS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401105020",
+      "canonical_name": "HARMONY BIOSCIENCES"
+    },
+    {
+      "entity_id": "registrant:26706",
+      "canonical_name": "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS"
+    },
+    {
+      "entity_id": "registrant:14267",
+      "canonical_name": "FEDERATION OF AMERICAN HOSPITALS"
+    },
+    {
+      "entity_id": "registrant:401106410",
+      "canonical_name": "ATA ACTION"
+    },
+    {
+      "entity_id": "registrant:316434",
+      "canonical_name": "340B HEALTH"
+    },
+    {
+      "entity_id": "registrant:27057",
+      "canonical_name": "AMERICA'S ESSENTIAL HOSPITALS"
+    },
+    {
+      "entity_id": "registrant:13392",
+      "canonical_name": "ELI LILLY AND COMPANY"
+    },
+    {
+      "entity_id": "registrant:319038",
+      "canonical_name": "HOSPICE ACTION NETWORK"
+    },
+    {
+      "entity_id": "registrant:401104190",
+      "canonical_name": "TRAVERE THERAPEUTICS"
+    },
+    {
+      "entity_id": "registrant:18912",
+      "canonical_name": "HUMANA, INC."
+    },
+    {
+      "entity_id": "registrant:284790",
+      "canonical_name": "NOVO NORDISK INC."
+    },
+    {
+      "entity_id": "registrant:401103906",
+      "canonical_name": "AMERICAN KIDNEY FUND"
+    },
+    {
+      "entity_id": "registrant:31350",
+      "canonical_name": "PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA"
+    },
+    {
+      "entity_id": "registrant:312257",
+      "canonical_name": "BAVARIAN NORDIC INC."
+    },
+    {
+      "entity_id": "registrant:308935",
+      "canonical_name": "CSL BEHRING LLC"
+    },
+    {
+      "entity_id": "registrant:293756",
+      "canonical_name": "CENCORA, INC."
+    },
+    {
+      "entity_id": "registrant:32555",
+      "canonical_name": "QUEST DIAGNOSTICS INCORPORATED"
+    },
+    {
+      "entity_id": "registrant:2571",
+      "canonical_name": "AMERICAN HOSPITAL ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:301232",
+      "canonical_name": "DAVITA INC."
+    },
+    {
+      "entity_id": "registrant:401106071",
+      "canonical_name": "JAZZ PHARMACEUTICALS, INC."
+    },
+    {
+      "entity_id": "registrant:6518",
+      "canonical_name": "BLUE SHIELD OF CALIFORNIA"
+    },
+    {
+      "entity_id": "registrant:401109136",
+      "canonical_name": "SKINCURE ONCOLOGY"
+    },
+    {
+      "entity_id": "registrant:401106045",
+      "canonical_name": "SIDECAR HEALTH, INC"
+    },
+    {
+      "entity_id": "registrant:17933",
+      "canonical_name": "HEALTHCARE LEADERSHIP COUNCIL"
+    },
+    {
+      "entity_id": "registrant:7053",
+      "canonical_name": "BRISTOL-MYERS SQUIBB COMPANY"
+    },
+    {
+      "entity_id": "registrant:287177",
+      "canonical_name": "GILEAD SCIENCES, INC."
+    },
+    {
+      "entity_id": "registrant:297330",
+      "canonical_name": "EDWARDS LIFESCIENCES, LLC"
+    },
+    {
+      "entity_id": "registrant:401107958",
+      "canonical_name": "MODERNA, INC."
+    },
+    {
+      "entity_id": "registrant:401103646",
+      "canonical_name": "INDEPENDENCE BLUE CROSS, LLC"
+    },
+    {
+      "entity_id": "registrant:6484",
+      "canonical_name": "ELEVANCE HEALTH, INC."
+    },
+    {
+      "entity_id": "registrant:48736",
+      "canonical_name": "EMD SERONO, INC."
+    },
+    {
+      "entity_id": "registrant:401105828",
+      "canonical_name": "ACADIA PHARMACEUTICALS"
+    },
+    {
+      "entity_id": "registrant:400458235",
+      "canonical_name": "ALKERMES, INC."
+    },
+    {
+      "entity_id": "registrant:6358",
+      "canonical_name": "BLUE CROSS AND BLUE SHIELD ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401093052",
+      "canonical_name": "OTSUKA AMERICA PHARMACEUTICAL, INC."
+    },
+    {
+      "entity_id": "registrant:306578",
+      "canonical_name": "CENTENE CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106576",
+      "canonical_name": "ALLIANCE FOR REGENERATIVE MEDICINE"
+    },
+    {
+      "entity_id": "registrant:400270238",
+      "canonical_name": "MAYO CLINIC"
+    },
+    {
+      "entity_id": "registrant:401105402",
+      "canonical_name": "EXACT SCIENCES"
+    },
+    {
+      "entity_id": "registrant:9237",
+      "canonical_name": "THE CIGNA GROUP AND SUBSIDIARIES (FORMERLY CIGNA CORPORATION AND SUBSIDIARIES)"
+    },
+    {
+      "entity_id": "registrant:56018",
+      "canonical_name": "AMERICAN AMBULANCE ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:298774",
+      "canonical_name": "UCB, INC."
+    },
+    {
+      "entity_id": "registrant:2981",
+      "canonical_name": "AMERICAN OPTOMETRIC ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:58055",
+      "canonical_name": "CARDINAL HEALTH, INC."
+    },
+    {
+      "entity_id": "registrant:401105844",
+      "canonical_name": "INCYTE CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106108",
+      "canonical_name": "ORGANON & CO."
+    },
+    {
+      "entity_id": "registrant:401103282",
+      "canonical_name": "DIRECT SUPPLY, INC."
+    },
+    {
+      "entity_id": "registrant:2491",
+      "canonical_name": "AMERICAN HEALTH CARE ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:39143",
+      "canonical_name": "UNITEDHEALTH GROUP, INC."
+    },
+    {
+      "entity_id": "registrant:303837",
+      "canonical_name": "MOLINA HEALTHCARE, INC."
+    },
+    {
+      "entity_id": "registrant:401107875",
+      "canonical_name": "ALNYLAM PHARMACEUTICALS, INC."
+    },
+    {
+      "entity_id": "registrant:31348",
+      "canonical_name": "PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401104607",
+      "canonical_name": "SENIOR CARE PHARMACY COALITION"
+    },
+    {
+      "entity_id": "registrant:401104995",
+      "canonical_name": "MYRIAD GENETICS, INC."
+    },
+    {
+      "entity_id": "registrant:400307436",
+      "canonical_name": "VITAS HEALTHCARE CORPORATION"
+    }
+  ],
+  "ld203_filer_names": [
+    "340B HEALTH",
+    "ACADIA PHARMACEUTICALS",
+    "ALKERMES, INC.",
+    "ALLIANCE FOR PHYSICAL THERAPY QUALITY AND INNOVATION",
+    "ALLIANCE FOR REGENERATIVE MEDICINE",
+    "ALNYLAM PHARMACEUTICALS, INC.",
+    "AMERICA'S ESSENTIAL HOSPITALS",
+    "AMERICAN AMBULANCE ASSOCIATION",
+    "AMERICAN ASSOCIATION FOR HOMECARE",
+    "AMERICAN HEALTH CARE ASSOCIATION",
+    "AMERICAN HOSPITAL ASSOCIATION",
+    "AMERICAN KIDNEY FUND",
+    "AMERICAN OPTOMETRIC ASSOCIATION",
+    "ARDELYX, INC.",
+    "ASTELLAS PHARMA US, INC.",
+    "ATA ACTION",
+    "BAVARIAN NORDIC INC.",
+    "BAXTER HEALTHCARE CORPORATION",
+    "BLUE CROSS AND BLUE SHIELD ASSOCIATION",
+    "BLUE SHIELD OF CALIFORNIA",
+    "BRISTOL-MYERS SQUIBB COMPANY",
+    "CARDINAL HEALTH, INC.",
+    "CENCORA, INC.",
+    "CENTENE CORPORATION",
+    "CSL BEHRING LLC",
+    "DAVITA INC.",
+    "DIRECT SUPPLY, INC.",
+    "EDWARDS LIFESCIENCES, LLC",
+    "ELEVANCE HEALTH, INC.",
+    "ELI LILLY AND COMPANY",
+    "EMD SERONO, INC.",
+    "EXACT SCIENCES",
+    "FEDERATION OF AMERICAN HOSPITALS",
+    "FERRING PHARMACEUTICALS, INC.",
+    "FRESENIUS MEDICAL CARE NORTH AMERICA",
+    "GILEAD SCIENCES, INC.",
+    "GREATER NEW YORK HOSPITAL ASSOCIATION",
+    "HACKENSACK MERIDIAN HEALTH",
+    "HARMONY BIOSCIENCES",
+    "HEALTHCARE LEADERSHIP COUNCIL",
+    "HOSPICE ACTION NETWORK",
+    "HUMANA, INC.",
+    "INCYTE CORPORATION",
+    "INDEPENDENCE BLUE CROSS, LLC",
+    "JAZZ PHARMACEUTICALS, INC.",
+    "MAYO CLINIC",
+    "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+    "MODERNA, INC.",
+    "MOLINA HEALTHCARE, INC.",
+    "MYRIAD GENETICS, INC.",
+    "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS",
+    "NOVO NORDISK INC.",
+    "ORGANON & CO.",
+    "OTSUKA AMERICA PHARMACEUTICAL, INC.",
+    "PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION",
+    "PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA",
+    "QUEST DIAGNOSTICS INCORPORATED",
+    "SCAN HEALTH PLAN",
+    "SENIOR CARE PHARMACY COALITION",
+    "SIDECAR HEALTH, INC",
+    "SKINCURE ONCOLOGY",
+    "STRYKER CORPORATION",
+    "TAKEDA PHARMACEUTICALS AMERICA, INC.",
+    "TEVA PHARMACEUTICALS USA, INC.",
+    "THE CIGNA GROUP AND SUBSIDIARIES (FORMERLY CIGNA CORPORATION AND SUBSIDIARIES)",
+    "TRAVERE THERAPEUTICS",
+    "UCB, INC.",
+    "UNITEDHEALTH GROUP, INC.",
+    "VERTEX PHARMACEUTICALS INCORPORATED",
+    "VITAS HEALTHCARE CORPORATION"
+  ],
+  "client_only": [
+    "Walgreen Co.",
+    "Neurocrine Biosciences, Inc.",
+    "AbbVie Inc.",
+    "Blue Cross Blue Shield Association",
+    "TIBER CREEK GROUP (OBO JAZZ PHARMACEUTICALS)",
+    "BEONE MEDICINES USA, INC. (FKA BEIGENE USA, INC.)",
+    "America's Health Insurance Plans (AHIP)",
+    "LIVANOVA USA INC",
+    "GlaxoSmithKline LLC",
+    "Advanced Medical Technology Association (AdvaMed)",
+    "We Work For Health",
+    "Biogen, Inc.",
+    "Guardant Health, Inc.",
+    "Pharmaceutical Industry Labor Management Association",
+    "TIBER CREEK HEALTH STRATEGIES, INC. (ON BEHALF OF NOVARTIS)",
+    "Novavax, Inc.",
+    "Merck & Co., Inc.",
+    "RADIOLOGY PARTNERS (AMERICANS FOR FAIR HEALTH CARE)",
+    "Amgen Inc.",
+    "National Brain Tumor Society",
+    "Elekta Inc.",
+    "Genentech, Inc.",
+    "Alexion Pharmaceuticals, Inc.",
+    "PhRMA",
+    "Siemens Healthineers",
+    "ENVISION HEALTHCARE (FORMERLY KNOWN AS EMCARE INC.)",
+    "Omeros Corporation",
+    "Roche Diagnostics",
+    "Eisai, Inc.",
+    "Exelixis, Inc.",
+    "Indivior Inc.",
+    "Kidney Care Partners"
+  ],
+  "unresolved": [
+    "Mass General Brigham (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Alliance of Community Health Plans (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Global Medical Response (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Horizon Therapeutics USA, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Encompass Health (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "PTC Therapeutics (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Healthcare Distribution Alliance (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "CVS Health (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "GRAIL, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Coherus Biosciences (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)"
+  ],
+  "results": {
+    "totals": {
+      "raw_items": 24317,
+      "raw_total": 69291414.0,
+      "items": 23509,
+      "total": 66812528.0
+    },
+    "by_type": [
+      {
+        "contribution_type": "feca",
+        "items": 23382,
+        "total": 62325823.0
+      },
+      {
+        "contribution_type": "he",
+        "items": 125,
+        "total": 3436705.0
+      },
+      {
+        "contribution_type": "pic",
+        "items": 2,
+        "total": 1050000.0
+      }
+    ],
+    "by_year": [
+      {
+        "filing_year": 2022,
+        "total": 16787217.0
+      },
+      {
+        "filing_year": 2023,
+        "total": 13895208.0
+      },
+      {
+        "filing_year": 2024,
+        "total": 19239837.0
+      },
+      {
+        "filing_year": 2025,
+        "total": 16887765.0
+      },
+      {
+        "filing_year": 2026,
+        "total": 2500.0
+      }
+    ],
+    "by_filer": [
+      {
+        "filer_type": "organization",
+        "items": 21273,
+        "total": 64176724.0
+      },
+      {
+        "filer_type": "lobbyist",
+        "items": 2236,
+        "total": 2635804.0
+      }
+    ],
+    "recipients": [
+      {
+        "recipient": "PRESIDENT DONALD J. TRUMP AND VICE PRESIDENT JD VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "DONALD TRUMP; JD VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "DSCC",
+        "items": 91,
+        "total": 778460.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 77,
+        "total": 735250.0
+      },
+      {
+        "recipient": "NRCC",
+        "items": 69,
+        "total": 682175.0
+      },
+      {
+        "recipient": "DCCC",
+        "items": 79,
+        "total": 676215.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE",
+        "items": 2,
+        "total": 550000.0
+      },
+      {
+        "recipient": "BOB CASEY",
+        "items": 34,
+        "total": 522000.0
+      },
+      {
+        "recipient": "LISA MURKOWSKI",
+        "items": 22,
+        "total": 469232.0
+      },
+      {
+        "recipient": "MARGARET HASSAN",
+        "items": 4,
+        "total": 411998.0
+      },
+      {
+        "recipient": "SUSAN WILD",
+        "items": 11,
+        "total": 367750.0
+      },
+      {
+        "recipient": "MARIANNETTE MILLER-MEEKS",
+        "items": 29,
+        "total": 365963.0
+      },
+      {
+        "recipient": "DAVID VALADAO",
+        "items": 22,
+        "total": 342398.0
+      },
+      {
+        "recipient": "DAN KILDEE",
+        "items": 17,
+        "total": 333132.0
+      },
+      {
+        "recipient": "DON BACON",
+        "items": 11,
+        "total": 323076.0
+      },
+      {
+        "recipient": "DEB FISCHER",
+        "items": 9,
+        "total": 265440.0
+      },
+      {
+        "recipient": "DEMOCRATIC MEMBERS OF THE HOUSE",
+        "items": 11,
+        "total": 255000.0
+      },
+      {
+        "recipient": "REPUBLICAN MEMBERS OF THE SENATE",
+        "items": 10,
+        "total": 255000.0
+      },
+      {
+        "recipient": "REPUBLICAN MEMBERS OF THE HOUSE",
+        "items": 12,
+        "total": 255000.0
+      },
+      {
+        "recipient": "DEMOCRATIC MEMBERS OF THE SENATE",
+        "items": 10,
+        "total": 255000.0
+      },
+      {
+        "recipient": "CHC BOLD PAC",
+        "items": 53,
+        "total": 232000.0
+      },
+      {
+        "recipient": "BRETT GUTHRIE",
+        "items": 85,
+        "total": 211291.0
+      },
+      {
+        "recipient": "THE HONORABLE DEBBIE DINGELL, THE HONORABLE RICHARD HUDSON, THE HONORABLE CYNTHIA LUMMIS, THE HONORABLE RITCHIE TORRES, THE HONORABLE BEN RAY LUJAN",
+        "items": 3,
+        "total": 200000.0
+      },
+      {
+        "recipient": "NEW DEMOCRAT COALITION ACTION FUND",
+        "items": 45,
+        "total": 195525.0
+      },
+      {
+        "recipient": "MODERATE DEMOCRATS PAC",
+        "items": 37,
+        "total": 192500.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS PAC",
+        "items": 48,
+        "total": 188500.0
+      },
+      {
+        "recipient": "REP KEVIN MCCARTHY",
+        "items": 10,
+        "total": 185000.0
+      },
+      {
+        "recipient": "BLUE DOG POLITICAL ACTION COMMITTEE",
+        "items": 39,
+        "total": 176000.0
+      },
+      {
+        "recipient": "REP. S. BRETT GUTHRIE",
+        "items": 58,
+        "total": 175000.0
+      },
+      {
+        "recipient": "REP. BRETT GUTHRIE",
+        "items": 65,
+        "total": 174500.0
+      },
+      {
+        "recipient": "MARSHA BLACKBURN",
+        "items": 25,
+        "total": 166522.0
+      },
+      {
+        "recipient": "REP. CATHY MCMORRIS RODGERS",
+        "items": 59,
+        "total": 160000.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE, JR",
+        "items": 51,
+        "total": 154500.0
+      },
+      {
+        "recipient": "REP. JASON THOMAS SMITH",
+        "items": 45,
+        "total": 153000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD J. TRUMP, VICE PRESIDENT J.D. VANCE",
+        "items": 1,
+        "total": 150000.0
+      },
+      {
+        "recipient": "JASON SMITH",
+        "items": 50,
+        "total": 145500.0
+      },
+      {
+        "recipient": "REP. STEPHEN JOSEPH SCALISE",
+        "items": 38,
+        "total": 143000.0
+      },
+      {
+        "recipient": "REP. TERRI SEWELL",
+        "items": 30,
+        "total": 133000.0
+      },
+      {
+        "recipient": "NATL REP SEN CMTE(NRSC)-FEDERAL ACCT",
+        "items": 12,
+        "total": 132500.0
+      },
+      {
+        "recipient": "STEVE SCALISE",
+        "items": 58,
+        "total": 132500.0
+      },
+      {
+        "recipient": "SEN. CATHERINE CORTEZ MASTO",
+        "items": 33,
+        "total": 131000.0
+      },
+      {
+        "recipient": "KATHERINE CLARK",
+        "items": 52,
+        "total": 130500.0
+      },
+      {
+        "recipient": "REP. RICHARD EDMUND NEAL",
+        "items": 43,
+        "total": 129000.0
+      },
+      {
+        "recipient": "VERN BUCHANAN",
+        "items": 24,
+        "total": 128824.0
+      },
+      {
+        "recipient": "BRYAN GEORGE STEIL",
+        "items": 13,
+        "total": 128671.0
+      },
+      {
+        "recipient": "REP. JOHN JOYCE",
+        "items": 67,
+        "total": 128000.0
+      },
+      {
+        "recipient": "NRCC (BUILDING FUND)",
+        "items": 10,
+        "total": 125500.0
+      },
+      {
+        "recipient": "RANDALL FEENSTRA",
+        "items": 10,
+        "total": 124292.0
+      },
+      {
+        "recipient": "REP. DARREN SOTO",
+        "items": 18,
+        "total": 119500.0
+      },
+      {
+        "recipient": "SEN. MITCH MCCONNELL",
+        "items": 31,
+        "total": 119500.0
+      },
+      {
+        "recipient": "PETE AGUILAR",
+        "items": 41,
+        "total": 119250.0
+      },
+      {
+        "recipient": "REP. MIKE JOHNSON",
+        "items": 29,
+        "total": 118000.0
+      },
+      {
+        "recipient": "SEN. WILLIAM CASSIDY",
+        "items": 40,
+        "total": 117900.0
+      },
+      {
+        "recipient": "SEN. JOHN RANDOLPH THUNE",
+        "items": 32,
+        "total": 116000.0
+      },
+      {
+        "recipient": "CATHY MCMORRIS RODGERS",
+        "items": 46,
+        "total": 115700.0
+      },
+      {
+        "recipient": "REP. STENY HAMILTON HOYER",
+        "items": 32,
+        "total": 115000.0
+      },
+      {
+        "recipient": "RICHARD HUDSON",
+        "items": 46,
+        "total": 114500.0
+      },
+      {
+        "recipient": "ASPIRE PAC",
+        "items": 29,
+        "total": 113500.0
+      },
+      {
+        "recipient": "SEN. MARKWAYNE MULLIN",
+        "items": 51,
+        "total": 113000.0
+      },
+      {
+        "recipient": "TERRI SEWELL",
+        "items": 53,
+        "total": 112500.0
+      },
+      {
+        "recipient": "SEN. JOHN CORNYN, III",
+        "items": 40,
+        "total": 111000.0
+      },
+      {
+        "recipient": "REP. JASON SMITH",
+        "items": 30,
+        "total": 111000.0
+      },
+      {
+        "recipient": "HAKEEM JEFFRIES",
+        "items": 32,
+        "total": 110550.0
+      },
+      {
+        "recipient": "REP. PETER RAY AGUILAR",
+        "items": 40,
+        "total": 110000.0
+      },
+      {
+        "recipient": "REP. ANN MCLANE KUSTER",
+        "items": 40,
+        "total": 109000.0
+      },
+      {
+        "recipient": "NRSC (BUILDING FUND)",
+        "items": 10,
+        "total": 109000.0
+      },
+      {
+        "recipient": "SEN. KYRSTEN SINEMA",
+        "items": 39,
+        "total": 108830.0
+      },
+      {
+        "recipient": "SEN. JACKY ROSEN",
+        "items": 47,
+        "total": 108000.0
+      },
+      {
+        "recipient": "RICHARD NEAL",
+        "items": 37,
+        "total": 107750.0
+      },
+      {
+        "recipient": "DSCC (RECOUNT AND LEGAL FUND)",
+        "items": 15,
+        "total": 107750.0
+      },
+      {
+        "recipient": "FRANK PALLONE",
+        "items": 45,
+        "total": 107500.0
+      },
+      {
+        "recipient": "REP. RAUL RUIZ",
+        "items": 39,
+        "total": 107000.0
+      },
+      {
+        "recipient": "BILL CASSIDY",
+        "items": 44,
+        "total": 106000.0
+      },
+      {
+        "recipient": "NRCC (RECOUNT AND LEGAL FUND)",
+        "items": 5,
+        "total": 105000.0
+      },
+      {
+        "recipient": "MIKE JOHNSON",
+        "items": 27,
+        "total": 105000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE (NRCC)",
+        "items": 7,
+        "total": 105000.0
+      },
+      {
+        "recipient": "RON WYDEN",
+        "items": 33,
+        "total": 104500.0
+      },
+      {
+        "recipient": "SEN. JON TESTER",
+        "items": 42,
+        "total": 103500.0
+      },
+      {
+        "recipient": "JOHN THUNE",
+        "items": 34,
+        "total": 103400.0
+      },
+      {
+        "recipient": "DSCC (BUILDING FUND)",
+        "items": 10,
+        "total": 101500.0
+      },
+      {
+        "recipient": "KEVIN MCCARTHY",
+        "items": 24,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SENATE REPUBLICANS",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "REP. TERRYCINA ANDREA SEWELL",
+        "items": 35,
+        "total": 100000.0
+      },
+      {
+        "recipient": "NATL REP CONG CMTE(NRCC)-FEDERAL ACCT",
+        "items": 7,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SEN. MARGARET WOOD HASSAN",
+        "items": 42,
+        "total": 99100.0
+      },
+      {
+        "recipient": "SEN. MICHAEL DEAN CRAPO",
+        "items": 29,
+        "total": 98500.0
+      },
+      {
+        "recipient": "DCCC (BUILDING FUND)",
+        "items": 13,
+        "total": 98000.0
+      },
+      {
+        "recipient": "DARIN LAHOOD",
+        "items": 41,
+        "total": 98000.0
+      },
+      {
+        "recipient": "SEN. JOHN THUNE",
+        "items": 29,
+        "total": 97900.0
+      },
+      {
+        "recipient": "SEN. MARSHA WEDGEWORTH BLACKBURN",
+        "items": 31,
+        "total": 97500.0
+      },
+      {
+        "recipient": "TIM KAINE",
+        "items": 44,
+        "total": 97300.0
+      },
+      {
+        "recipient": "MARKWAYNE MULLIN",
+        "items": 55,
+        "total": 97250.0
+      },
+      {
+        "recipient": "SEN. CHARLES E. SCHUMER",
+        "items": 29,
+        "total": 96250.0
+      },
+      {
+        "recipient": "KEVIN CRAMER",
+        "items": 9,
+        "total": 95551.0
+      },
+      {
+        "recipient": "REP. KEVIN OWEN MCCARTHY",
+        "items": 20,
+        "total": 95000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL",
+        "items": 7,
+        "total": 95000.0
+      },
+      {
+        "recipient": "JOHN CURTIS",
+        "items": 44,
+        "total": 94250.0
+      },
+      {
+        "recipient": "TODD YOUNG",
+        "items": 37,
+        "total": 94000.0
+      },
+      {
+        "recipient": "REP. SCOTT PETERS",
+        "items": 40,
+        "total": 93400.0
+      },
+      {
+        "recipient": "JOHN BARRASSO",
+        "items": 33,
+        "total": 92500.0
+      },
+      {
+        "recipient": "REPUBLICAN GOVERNANCE GROUP/TUESDAY GROUP PAC",
+        "items": 21,
+        "total": 92500.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE (DCCC)",
+        "items": 7,
+        "total": 92500.0
+      },
+      {
+        "recipient": "REP. MIKE CAREY",
+        "items": 46,
+        "total": 92250.0
+      },
+      {
+        "recipient": "TIM SCOTT",
+        "items": 31,
+        "total": 91900.0
+      },
+      {
+        "recipient": "SCOTT PETERS",
+        "items": 39,
+        "total": 91500.0
+      },
+      {
+        "recipient": "JEFFRIES, HAKEEM",
+        "items": 19,
+        "total": 91000.0
+      },
+      {
+        "recipient": "SEN. TAMMY BALDWIN",
+        "items": 10,
+        "total": 91000.0
+      },
+      {
+        "recipient": "ACROSS THE AISLE PAC",
+        "items": 23,
+        "total": 90000.0
+      },
+      {
+        "recipient": "EQUALITY PAC",
+        "items": 24,
+        "total": 90000.0
+      },
+      {
+        "recipient": "CLAUDIA TENNEY",
+        "items": 22,
+        "total": 89927.0
+      },
+      {
+        "recipient": "REP. LISA BLUNT ROCHESTER",
+        "items": 52,
+        "total": 88700.0
+      },
+      {
+        "recipient": "BUILDING BRIDGES PAC",
+        "items": 26,
+        "total": 88500.0
+      },
+      {
+        "recipient": "KATIE BRITT",
+        "items": 14,
+        "total": 87821.0
+      },
+      {
+        "recipient": "LISA BLUNT ROCHESTER",
+        "items": 53,
+        "total": 87600.0
+      },
+      {
+        "recipient": "DEM CONG CAMP CMTE(DCCC)-FEDERAL ACCT",
+        "items": 7,
+        "total": 87500.0
+      },
+      {
+        "recipient": "KYRSTEN SINEMA",
+        "items": 36,
+        "total": 87000.0
+      },
+      {
+        "recipient": "SEN. BILL CASSIDY",
+        "items": 29,
+        "total": 86600.0
+      },
+      {
+        "recipient": "SEN. TODD CHRISTOPHER YOUNG",
+        "items": 28,
+        "total": 86000.0
+      },
+      {
+        "recipient": "JACKY ROSEN",
+        "items": 34,
+        "total": 85750.0
+      },
+      {
+        "recipient": "MIKE CRAPO",
+        "items": 28,
+        "total": 85500.0
+      },
+      {
+        "recipient": "REP. VERNON GALE BUCHANAN",
+        "items": 32,
+        "total": 85500.0
+      },
+      {
+        "recipient": "BOARD OF DIRECTORS OF THE CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 1,
+        "total": 85000.0
+      },
+      {
+        "recipient": "REPUBLICAN MAINSTREET PARTNERSHIP PAC",
+        "items": 18,
+        "total": 85000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE (NRSC)",
+        "items": 7,
+        "total": 85000.0
+      },
+      {
+        "recipient": "SEN. SHELLEY MOORE CAPITO",
+        "items": 33,
+        "total": 84500.0
+      },
+      {
+        "recipient": "REP. RICHARD NEAL",
+        "items": 31,
+        "total": 83500.0
+      },
+      {
+        "recipient": "BLAKE MOORE",
+        "items": 51,
+        "total": 83250.0
+      },
+      {
+        "recipient": "ROBIN KELLY",
+        "items": 44,
+        "total": 82500.0
+      },
+      {
+        "recipient": "SEN. THOM TILLIS",
+        "items": 28,
+        "total": 82300.0
+      },
+      {
+        "recipient": "GUTHRIE, BRETT",
+        "items": 22,
+        "total": 80000.0
+      },
+      {
+        "recipient": "SEN. TAMMY BALDWIN: WI US SENATE",
+        "items": 1,
+        "total": 80000.0
+      },
+      {
+        "recipient": "REP. PETE AGUILAR",
+        "items": 27,
+        "total": 79500.0
+      },
+      {
+        "recipient": "MCCARTHY, KEVIN",
+        "items": 11,
+        "total": 79500.0
+      },
+      {
+        "recipient": "REP. KEVIN R. HERN",
+        "items": 30,
+        "total": 78500.0
+      },
+      {
+        "recipient": "THOM TILLIS",
+        "items": 24,
+        "total": 78500.0
+      },
+      {
+        "recipient": "REP. KATHERINE M. CLARK",
+        "items": 30,
+        "total": 78000.0
+      },
+      {
+        "recipient": "JOHN JOYCE",
+        "items": 42,
+        "total": 77750.0
+      },
+      {
+        "recipient": "JON TESTER",
+        "items": 33,
+        "total": 77500.0
+      },
+      {
+        "recipient": "REP. KATHERINE CLARK",
+        "items": 34,
+        "total": 77500.0
+      },
+      {
+        "recipient": "REP. RANDY FEENSTRA",
+        "items": 41,
+        "total": 77500.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE (DSCC)",
+        "items": 7,
+        "total": 77000.0
+      },
+      {
+        "recipient": "REP. STEVEN ALEXZANDER HORSFORD",
+        "items": 43,
+        "total": 76500.0
+      },
+      {
+        "recipient": "BRAD SCHNEIDER",
+        "items": 37,
+        "total": 76500.0
+      },
+      {
+        "recipient": "MITCH MCCONNELL",
+        "items": 23,
+        "total": 76300.0
+      },
+      {
+        "recipient": "ELECT DEMOCRATIC WOMEN",
+        "items": 20,
+        "total": 76170.0
+      },
+      {
+        "recipient": "CATHERINE CORTEZ MASTO",
+        "items": 16,
+        "total": 75750.0
+      },
+      {
+        "recipient": "VARIOUS",
+        "items": 4,
+        "total": 75000.0
+      },
+      {
+        "recipient": "JOHN CORNYN",
+        "items": 32,
+        "total": 75000.0
+      },
+      {
+        "recipient": "SHEILA JACKSON LEE",
+        "items": 1,
+        "total": 75000.0
+      },
+      {
+        "recipient": "JOHN LARSON",
+        "items": 13,
+        "total": 74500.0
+      },
+      {
+        "recipient": "SMITH, JASON",
+        "items": 22,
+        "total": 73500.0
+      },
+      {
+        "recipient": "REP. SUZAN KAY DELBENE",
+        "items": 28,
+        "total": 73500.0
+      },
+      {
+        "recipient": "REP. DAVID SCHWEIKERT",
+        "items": 40,
+        "total": 73000.0
+      },
+      {
+        "recipient": "SEN. ALEX PADILLA",
+        "items": 20,
+        "total": 72500.0
+      },
+      {
+        "recipient": "REP. ANGELA DAWN CRAIG",
+        "items": 27,
+        "total": 72500.0
+      },
+      {
+        "recipient": "REP. BUDDY CARTER",
+        "items": 28,
+        "total": 72500.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPA",
+        "items": 4,
+        "total": 72500.0
+      },
+      {
+        "recipient": "SUZAN DELBENE",
+        "items": 35,
+        "total": 72000.0
+      },
+      {
+        "recipient": "SEN. RON L. WYDEN",
+        "items": 26,
+        "total": 72000.0
+      },
+      {
+        "recipient": "REP. TONY CARDENAS",
+        "items": 25,
+        "total": 72000.0
+      },
+      {
+        "recipient": "TOM EMMER",
+        "items": 36,
+        "total": 71700.0
+      },
+      {
+        "recipient": "NEAL, RICHARD",
+        "items": 19,
+        "total": 71500.0
+      },
+      {
+        "recipient": "REP. DARREN MICHAEL SOTO",
+        "items": 32,
+        "total": 71500.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY MICHAEL KAINE",
+        "items": 31,
+        "total": 71000.0
+      },
+      {
+        "recipient": "FUTURE FORUM PAC",
+        "items": 45,
+        "total": 70833.0
+      },
+      {
+        "recipient": "LORI TRAHAN",
+        "items": 23,
+        "total": 70600.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER, JR",
+        "items": 23,
+        "total": 70500.0
+      },
+      {
+        "recipient": "NANETTE BARRAGAN",
+        "items": 33,
+        "total": 70500.0
+      },
+      {
+        "recipient": "SEN. STEVE DAVID DAINES",
+        "items": 25,
+        "total": 70000.0
+      },
+      {
+        "recipient": "THE HONORABLE JOE BIDEN, CARLA HAYDEN, TERRI SEWELL, JOYCE BEATTY, TROY CARTER, GLENN IVEY, ROBIN KELLY, LUCY MCBATH, STACEY PLASKETT, FREDERICA WILSON",
+        "items": 1,
+        "total": 70000.0
+      },
+      {
+        "recipient": "NRSC (RECOUNT AND LEGAL FUND)",
+        "items": 5,
+        "total": 70000.0
+      },
+      {
+        "recipient": "THE HONORABLE TERRI SEWELL, JOYCE BEATTY, TROY CARTER, GLENN IVEY, ROBIN KELLY, LUCY MCBATH, STACEY PLASKETT, FREDERICA WILSON",
+        "items": 1,
+        "total": 70000.0
+      },
+      {
+        "recipient": "SEN. PATRICIA LYNN MURRAY",
+        "items": 32,
+        "total": 69500.0
+      },
+      {
+        "recipient": "SEN. JOHN ANTHONY BARRASSO",
+        "items": 26,
+        "total": 69500.0
+      },
+      {
+        "recipient": "SEN. MARTIN HEINRICH",
+        "items": 26,
+        "total": 69000.0
+      },
+      {
+        "recipient": "JASON T SMITH",
+        "items": 6,
+        "total": 67783.0
+      },
+      {
+        "recipient": "SEN. THOMAS ROLAND TILLIS",
+        "items": 17,
+        "total": 67500.0
+      },
+      {
+        "recipient": "EMMER, TOM",
+        "items": 14,
+        "total": 67500.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY EUGENE SCOTT",
+        "items": 18,
+        "total": 67500.0
+      },
+      {
+        "recipient": "REP. RICHARD LANE HUDSON, JR",
+        "items": 24,
+        "total": 67500.0
+      },
+      {
+        "recipient": "REP. TROY BALDERSON",
+        "items": 34,
+        "total": 67000.0
+      },
+      {
+        "recipient": "LINDA SANCHEZ",
+        "items": 36,
+        "total": 67000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE",
+        "items": 25,
+        "total": 67000.0
+      },
+      {
+        "recipient": "SEN. STEVE DAINES",
+        "items": 22,
+        "total": 67000.0
+      },
+      {
+        "recipient": "BRIAN FITZPATRICK",
+        "items": 32,
+        "total": 66000.0
+      },
+      {
+        "recipient": "THE HONORABLE RICK SCOTT, THE HONORABLE AMY KLOBUCHAR, THE HONORABLE DREW FERGUSON, THE HONORABLE RUBEN GALLEGO",
+        "items": 1,
+        "total": 65000.0
+      },
+      {
+        "recipient": "SEN. MIKE CRAPO",
+        "items": 19,
+        "total": 65000.0
+      },
+      {
+        "recipient": "AARON BEAN",
+        "items": 37,
+        "total": 65000.0
+      },
+      {
+        "recipient": "REP. KEVIN MULLIN",
+        "items": 26,
+        "total": 64500.0
+      },
+      {
+        "recipient": "SUSAN COLLINS",
+        "items": 28,
+        "total": 64500.0
+      },
+      {
+        "recipient": "REP. BRIAN FITZPATRICK",
+        "items": 39,
+        "total": 63500.0
+      },
+      {
+        "recipient": "BRYAN STEIL",
+        "items": 12,
+        "total": 63250.0
+      },
+      {
+        "recipient": "DEM SEN CAMP CMTE(DSCC)-FEDERAL ACCT",
+        "items": 11,
+        "total": 63000.0
+      },
+      {
+        "recipient": "GARY PETERS",
+        "items": 24,
+        "total": 63000.0
+      },
+      {
+        "recipient": "PATTY MURRAY",
+        "items": 28,
+        "total": 62500.0
+      },
+      {
+        "recipient": "REP. JAKE AUCHINCLOSS",
+        "items": 28,
+        "total": 62500.0
+      },
+      {
+        "recipient": "SEN. SUSAN COLLINS",
+        "items": 26,
+        "total": 62500.0
+      },
+      {
+        "recipient": "REP. LINDA T. SANCHEZ",
+        "items": 23,
+        "total": 61500.0
+      },
+      {
+        "recipient": "REP. MORGAN GRIFFITH",
+        "items": 31,
+        "total": 61000.0
+      },
+      {
+        "recipient": "TROY BALDERSON",
+        "items": 31,
+        "total": 61000.0
+      },
+      {
+        "recipient": "JERRY MORAN",
+        "items": 20,
+        "total": 60500.0
+      },
+      {
+        "recipient": "DCCC (RECOUNT AND LEGAL FUND)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "GUS BILIRAKIS",
+        "items": 35,
+        "total": 59500.0
+      },
+      {
+        "recipient": "CLYBURN, JAMES",
+        "items": 15,
+        "total": 59500.0
+      },
+      {
+        "recipient": "MIKE CAREY",
+        "items": 36,
+        "total": 59000.0
+      },
+      {
+        "recipient": "SEN. MAGGIE HASSAN",
+        "items": 26,
+        "total": 58500.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS",
+        "items": 4,
+        "total": 58500.0
+      },
+      {
+        "recipient": "MIKE THOMPSON",
+        "items": 19,
+        "total": 58500.0
+      },
+      {
+        "recipient": "REP. ADRIAN MICHAEL SMITH",
+        "items": 26,
+        "total": 58500.0
+      },
+      {
+        "recipient": "SEN. MARK ROBERT WARNER",
+        "items": 20,
+        "total": 58300.0
+      },
+      {
+        "recipient": "REP. BRADLEY SCOTT SCHNEIDER",
+        "items": 25,
+        "total": 58000.0
+      },
+      {
+        "recipient": "REP. DARIN M. LAHOOD",
+        "items": 23,
+        "total": 58000.0
+      },
+      {
+        "recipient": "SEN. ROGER FREDERICK WICKER",
+        "items": 21,
+        "total": 58000.0
+      },
+      {
+        "recipient": "REP. VERN BUCHANAN",
+        "items": 26,
+        "total": 58000.0
+      },
+      {
+        "recipient": "SEN. ROBERT P. CASEY, JR",
+        "items": 22,
+        "total": 57000.0
+      },
+      {
+        "recipient": "SEN. JEANNE SHAHEEN",
+        "items": 23,
+        "total": 57000.0
+      },
+      {
+        "recipient": "CAROL MILLER",
+        "items": 25,
+        "total": 57000.0
+      },
+      {
+        "recipient": "LARRY BUCSHON",
+        "items": 26,
+        "total": 56500.0
+      },
+      {
+        "recipient": "BUCHANAN, VERN",
+        "items": 15,
+        "total": 56000.0
+      },
+      {
+        "recipient": "REP. BRAD SCHNEIDER",
+        "items": 29,
+        "total": 56000.0
+      },
+      {
+        "recipient": "REP. DIANA DEGETTE",
+        "items": 26,
+        "total": 55100.0
+      },
+      {
+        "recipient": "REP. JOSHUA S. GOTTHEIMER",
+        "items": 22,
+        "total": 55000.0
+      },
+      {
+        "recipient": "REP BRETT GUTHRIE",
+        "items": 19,
+        "total": 54800.0
+      },
+      {
+        "recipient": "REP. G. MIKE J. KELLY",
+        "items": 27,
+        "total": 54500.0
+      },
+      {
+        "recipient": "SEN. MARK WARNER",
+        "items": 20,
+        "total": 54500.0
+      },
+      {
+        "recipient": "REP. JOYCE BEATTY",
+        "items": 30,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. ANN LOUISE WAGNER",
+        "items": 19,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. MARILYN STRICKLAND",
+        "items": 29,
+        "total": 54000.0
+      },
+      {
+        "recipient": "SEN. SHERROD CAMPBELL BROWN",
+        "items": 23,
+        "total": 54000.0
+      },
+      {
+        "recipient": "THUNE, JOHN",
+        "items": 14,
+        "total": 53500.0
+      },
+      {
+        "recipient": "REP. STEVE SCALISE",
+        "items": 17,
+        "total": 53500.0
+      },
+      {
+        "recipient": "PALLONE, FRANK",
+        "items": 19,
+        "total": 53500.0
+      },
+      {
+        "recipient": "SEN. MARCO ANTONIO RUBIO",
+        "items": 16,
+        "total": 53500.0
+      },
+      {
+        "recipient": "JAMES CLYBURN",
+        "items": 12,
+        "total": 53000.0
+      },
+      {
+        "recipient": "REP. ROBIN LYNNE KELLY",
+        "items": 28,
+        "total": 53000.0
+      },
+      {
+        "recipient": "REP. JOHN R. CURTIS",
+        "items": 26,
+        "total": 53000.0
+      },
+      {
+        "recipient": "CRAPO, MIKE",
+        "items": 12,
+        "total": 53000.0
+      },
+      {
+        "recipient": "MCMORRIS RODGERS, CATHY",
+        "items": 14,
+        "total": 53000.0
+      },
+      {
+        "recipient": "REP. HAKEEM S. JEFFRIES",
+        "items": 23,
+        "total": 52750.0
+      },
+      {
+        "recipient": "REP. SHARICE DAVIDS",
+        "items": 29,
+        "total": 52750.0
+      },
+      {
+        "recipient": "CORTEZ MASTO, CATHERINE",
+        "items": 11,
+        "total": 52500.0
+      },
+      {
+        "recipient": "REP. JAY OBERNOLTE",
+        "items": 30,
+        "total": 52500.0
+      },
+      {
+        "recipient": "REP. NANETTE DIAZ BARRAGAN",
+        "items": 27,
+        "total": 52000.0
+      },
+      {
+        "recipient": "SEN. THEODORE PAUL BUDD",
+        "items": 19,
+        "total": 52000.0
+      },
+      {
+        "recipient": "REP. LINDA SANCHEZ",
+        "items": 24,
+        "total": 52000.0
+      },
+      {
+        "recipient": "ANGIE CRAIG",
+        "items": 31,
+        "total": 51300.0
+      },
+      {
+        "recipient": "CLARK, KATHERINE",
+        "items": 17,
+        "total": 51000.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE",
+        "items": 7,
+        "total": 50750.0
+      },
+      {
+        "recipient": "REP. NEAL DUNN",
+        "items": 27,
+        "total": 50500.0
+      },
+      {
+        "recipient": "DARREN SOTO",
+        "items": 33,
+        "total": 50500.0
+      },
+      {
+        "recipient": "ADRIAN SMITH",
+        "items": 33,
+        "total": 50500.0
+      },
+      {
+        "recipient": "REP XAVIER BECERRA",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "HOUSE NEW DEMOCRAT COALITION DEMOCRATS",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "$5,000 JOHN THUNE; $4,453.44 EACH BERNIE MORENO, DEB FISCHER, LARRY HOGAN, JIM JUSTICE; $27,186.24 NRSC",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "SEN. CHARLES E. GRASSLEY",
+        "items": 22,
+        "total": 50000.0
+      },
+      {
+        "recipient": "STEVEN HORSFORD",
+        "items": 34,
+        "total": 50000.0
+      },
+      {
+        "recipient": "MOD SQUAD SENATE DEMOCRATS",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "REP. GUS BILIRAKIS; FL-12 US HOUSE",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "REPUBLICAN NATIONAL COMMITTEE",
+        "items": 8,
+        "total": 50000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "MIKE CRAPO, MICHAEL BENNET, TERRI SEWELL, JODEY ARRINGTON, RAUL RUIZ, RICHARD HUDSON",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "THE BOARD OF DIRECTORS OF THE CHC INSTITUTE",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "HOUSE REPUBLICANS",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "HOUSE BLUE DOG DEMOCRATS",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "THE HONORABLE BOB LATTA, ROBIN KELLY, RICK SCOTT, DAN GOLDMAN, GREG LANDSMAN, SANFORD BISHOP",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "THE BOARD OF DIRECTORS OF THE CBC FOUNDATION",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "THE CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "DEBBIE DINGELL",
+        "items": 27,
+        "total": 49500.0
+      },
+      {
+        "recipient": "ROBERT MENENDEZ",
+        "items": 23,
+        "total": 49250.0
+      },
+      {
+        "recipient": "RANDY FEENSTRA",
+        "items": 26,
+        "total": 49050.0
+      },
+      {
+        "recipient": "REP. KAT CAMMACK",
+        "items": 26,
+        "total": 49000.0
+      },
+      {
+        "recipient": "REP. MARIANNETTE MILLER-MEEKS",
+        "items": 25,
+        "total": 49000.0
+      },
+      {
+        "recipient": "REP SUZAN DELBENE",
+        "items": 13,
+        "total": 49000.0
+      },
+      {
+        "recipient": "MARK WARNER",
+        "items": 23,
+        "total": 49000.0
+      },
+      {
+        "recipient": "ELISE STEFANIK",
+        "items": 20,
+        "total": 48500.0
+      },
+      {
+        "recipient": "SEN. PATTY MURRAY",
+        "items": 23,
+        "total": 48300.0
+      },
+      {
+        "recipient": "SEN. TINA SMITH",
+        "items": 18,
+        "total": 48000.0
+      },
+      {
+        "recipient": "REP. ELIZABETH ANN VAN DUYNE",
+        "items": 22,
+        "total": 48000.0
+      },
+      {
+        "recipient": "MICHELLE STEEL",
+        "items": 23,
+        "total": 48000.0
+      },
+      {
+        "recipient": "SEN. RICK L. SCOTT",
+        "items": 13,
+        "total": 48000.0
+      },
+      {
+        "recipient": "SEN TIM SCOTT",
+        "items": 4,
+        "total": 48000.0
+      },
+      {
+        "recipient": "SEN. RON WYDEN",
+        "items": 18,
+        "total": 48000.0
+      },
+      {
+        "recipient": "CHARLES SCHUMER",
+        "items": 12,
+        "total": 47500.0
+      },
+      {
+        "recipient": "AGUILAR, PETE",
+        "items": 15,
+        "total": 47500.0
+      },
+      {
+        "recipient": "BUDDY CARTER",
+        "items": 27,
+        "total": 47500.0
+      },
+      {
+        "recipient": "REP. JIMMY GOMEZ",
+        "items": 24,
+        "total": 47500.0
+      },
+      {
+        "recipient": "ANDREW GARBARINO",
+        "items": 33,
+        "total": 47000.0
+      },
+      {
+        "recipient": "NEAL DUNN",
+        "items": 29,
+        "total": 47000.0
+      },
+      {
+        "recipient": "REP. CLAUDIA TENNEY",
+        "items": 26,
+        "total": 47000.0
+      },
+      {
+        "recipient": "SENATOR BILL CASSIDY",
+        "items": 13,
+        "total": 47000.0
+      },
+      {
+        "recipient": "REP. BRIAN K. FITZPATRICK",
+        "items": 25,
+        "total": 47000.0
+      },
+      {
+        "recipient": "FRANK MRVAN",
+        "items": 28,
+        "total": 46500.0
+      },
+      {
+        "recipient": "SEN. JAMES PAUL LANKFORD",
+        "items": 19,
+        "total": 46500.0
+      },
+      {
+        "recipient": "REP. RICHARD HUDSON",
+        "items": 18,
+        "total": 46500.0
+      },
+      {
+        "recipient": "SEN. MITT ROMNEY",
+        "items": 12,
+        "total": 46000.0
+      },
+      {
+        "recipient": "REP. DON DAVIS",
+        "items": 19,
+        "total": 46000.0
+      },
+      {
+        "recipient": "DAINES, STEVE",
+        "items": 14,
+        "total": 46000.0
+      },
+      {
+        "recipient": "REP. CAROL MILLER",
+        "items": 22,
+        "total": 46000.0
+      },
+      {
+        "recipient": "JODEY ARRINGTON",
+        "items": 30,
+        "total": 46000.0
+      },
+      {
+        "recipient": "SEN. GARY CHARLES PETERS",
+        "items": 17,
+        "total": 46000.0
+      },
+      {
+        "recipient": "GREG ABBOTT",
+        "items": 3,
+        "total": 46000.0
+      },
+      {
+        "recipient": "SEN. ERIC S. SCHMITT",
+        "items": 14,
+        "total": 45500.0
+      },
+      {
+        "recipient": "MARC VEASEY",
+        "items": 25,
+        "total": 45500.0
+      },
+      {
+        "recipient": "SEN. JON HUSTED",
+        "items": 12,
+        "total": 45500.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE",
+        "items": 13,
+        "total": 45500.0
+      },
+      {
+        "recipient": "REP. JODEY COOK ARRINGTON",
+        "items": 21,
+        "total": 45500.0
+      },
+      {
+        "recipient": "SEN. LISA MURKOWSKI",
+        "items": 18,
+        "total": 45500.0
+      },
+      {
+        "recipient": "SEN. JONI KAY ERNST",
+        "items": 17,
+        "total": 45500.0
+      },
+      {
+        "recipient": "MICHELLE FISCHBACH",
+        "items": 24,
+        "total": 45250.0
+      },
+      {
+        "recipient": "SCHUMER, CHARLES",
+        "items": 10,
+        "total": 45000.0
+      },
+      {
+        "recipient": "TAMMY DUCKWORTH",
+        "items": 13,
+        "total": 45000.0
+      },
+      {
+        "recipient": "SCALISE, STEVE",
+        "items": 10,
+        "total": 45000.0
+      },
+      {
+        "recipient": "SEN. CHRIS COONS",
+        "items": 14,
+        "total": 44900.0
+      },
+      {
+        "recipient": "KEVIN MULLIN",
+        "items": 27,
+        "total": 44500.0
+      },
+      {
+        "recipient": "SEN. RAND HOWARD PAUL",
+        "items": 13,
+        "total": 44500.0
+      },
+      {
+        "recipient": "REP. ADAM SMITH",
+        "items": 12,
+        "total": 44500.0
+      },
+      {
+        "recipient": "REP. EARL L. B. CARTER",
+        "items": 21,
+        "total": 44500.0
+      },
+      {
+        "recipient": "REP. ROBIN KELLY",
+        "items": 28,
+        "total": 44400.0
+      },
+      {
+        "recipient": "REP. MIKIE SHERRILL",
+        "items": 27,
+        "total": 44000.0
+      },
+      {
+        "recipient": "DIANA HARSHBARGER",
+        "items": 23,
+        "total": 43520.0
+      },
+      {
+        "recipient": "JOSH GOTTHEIMER",
+        "items": 27,
+        "total": 43500.0
+      },
+      {
+        "recipient": "SEN. CHUCK SCHUMER",
+        "items": 11,
+        "total": 43500.0
+      },
+      {
+        "recipient": "REP. MICHAEL C. THOMPSON",
+        "items": 20,
+        "total": 43500.0
+      },
+      {
+        "recipient": "BONNIE WATSON COLEMAN",
+        "items": 18,
+        "total": 43000.0
+      },
+      {
+        "recipient": "REP. DEBBIE WASSERMAN SCHULTZ",
+        "items": 16,
+        "total": 43000.0
+      },
+      {
+        "recipient": "CONNECTICUT DEMOCRATIC STATE CENTRAL COMMITTEE",
+        "items": 12,
+        "total": 43000.0
+      },
+      {
+        "recipient": "KEVIN HERN",
+        "items": 51,
+        "total": 42550.0
+      },
+      {
+        "recipient": "STEVE DAINES",
+        "items": 21,
+        "total": 42500.0
+      },
+      {
+        "recipient": "COVERED OFFICIALS ON THE CHCI BOARD",
+        "items": 2,
+        "total": 42500.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE",
+        "items": 17,
+        "total": 42000.0
+      },
+      {
+        "recipient": "REP JASON SMITH",
+        "items": 15,
+        "total": 42000.0
+      },
+      {
+        "recipient": "REP. KEVIN HERN",
+        "items": 21,
+        "total": 42000.0
+      },
+      {
+        "recipient": "TAMMY BALDWIN",
+        "items": 27,
+        "total": 41982.0
+      },
+      {
+        "recipient": "RUDY YAKYM",
+        "items": 25,
+        "total": 41750.0
+      },
+      {
+        "recipient": "CONGRESSMAN BRETT GUTHRIE",
+        "items": 14,
+        "total": 41500.0
+      },
+      {
+        "recipient": "DAVID SCHWEIKERT",
+        "items": 32,
+        "total": 41500.0
+      },
+      {
+        "recipient": "HUDSON, RICHARD",
+        "items": 13,
+        "total": 41500.0
+      },
+      {
+        "recipient": "MAGGIE HASSAN",
+        "items": 14,
+        "total": 41500.0
+      },
+      {
+        "recipient": "DON DAVIS",
+        "items": 27,
+        "total": 41250.0
+      },
+      {
+        "recipient": "YVETTE CLARKE",
+        "items": 16,
+        "total": 41000.0
+      },
+      {
+        "recipient": "NANCY PELOSI",
+        "items": 11,
+        "total": 41000.0
+      },
+      {
+        "recipient": "MARILYN STRICKLAND",
+        "items": 24,
+        "total": 41000.0
+      },
+      {
+        "recipient": "GREG PENCE",
+        "items": 24,
+        "total": 40500.0
+      },
+      {
+        "recipient": "SEN. KATIE BOYD BRITT",
+        "items": 15,
+        "total": 40500.0
+      },
+      {
+        "recipient": "SEN. ROGER W. MARSHALL",
+        "items": 13,
+        "total": 40500.0
+      },
+      {
+        "recipient": "SEN. CHRISTOPHER ANDREW COONS",
+        "items": 16,
+        "total": 40500.0
+      },
+      {
+        "recipient": "SEN. JIM BANKS",
+        "items": 13,
+        "total": 40500.0
+      },
+      {
+        "recipient": "CONGRESSMAN FRANK PALLONE",
+        "items": 17,
+        "total": 40300.0
+      },
+      {
+        "recipient": "REP. BLAKE MOORE",
+        "items": 20,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. JIMMY PANETTA",
+        "items": 19,
+        "total": 40000.0
+      },
+      {
+        "recipient": "SEN R JON TESTER",
+        "items": 2,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. GUS MICHAEL BILIRAKIS",
+        "items": 23,
+        "total": 40000.0
+      },
+      {
+        "recipient": "REP. SUZAN DELBENE",
+        "items": 18,
+        "total": 39500.0
+      },
+      {
+        "recipient": "REP. GRACE MENG",
+        "items": 16,
+        "total": 39500.0
+      },
+      {
+        "recipient": "MARTIN HEINRICH",
+        "items": 24,
+        "total": 39500.0
+      },
+      {
+        "recipient": "ROGER MARSHALL",
+        "items": 19,
+        "total": 39400.0
+      },
+      {
+        "recipient": "REP. NANETTE BARRAGAN",
+        "items": 19,
+        "total": 39000.0
+      },
+      {
+        "recipient": "HALEY STEVENS",
+        "items": 21,
+        "total": 39000.0
+      },
+      {
+        "recipient": "CONGRESSMAN BUDDY CARTER",
+        "items": 11,
+        "total": 39000.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE JR",
+        "items": 13,
+        "total": 39000.0
+      },
+      {
+        "recipient": "ERIC SCHMITT",
+        "items": 16,
+        "total": 38849.0
+      },
+      {
+        "recipient": "REP. KEVIN MCCARTHY",
+        "items": 10,
+        "total": 38750.0
+      },
+      {
+        "recipient": "JAY OBERNOLTE",
+        "items": 25,
+        "total": 38550.0
+      },
+      {
+        "recipient": "GUY RESCHENTHALER",
+        "items": 18,
+        "total": 38500.0
+      },
+      {
+        "recipient": "REP PETE AGUILAR",
+        "items": 15,
+        "total": 38500.0
+      },
+      {
+        "recipient": "REP TERRI SEWELL",
+        "items": 14,
+        "total": 38500.0
+      },
+      {
+        "recipient": "SEN. SUSAN MARGARET COLLINS",
+        "items": 15,
+        "total": 38500.0
+      },
+      {
+        "recipient": "REP. MICHELLE PARK STEEL",
+        "items": 24,
+        "total": 38500.0
+      },
+      {
+        "recipient": "SEWELL, TERRI",
+        "items": 13,
+        "total": 38500.0
+      },
+      {
+        "recipient": "REP. BRAD R. WENSTRUP",
+        "items": 13,
+        "total": 38500.0
+      },
+      {
+        "recipient": "SEN. TODD YOUNG",
+        "items": 18,
+        "total": 38500.0
+      },
+      {
+        "recipient": "SEN. LISA BLUNT ROCHESTER",
+        "items": 16,
+        "total": 38000.0
+      },
+      {
+        "recipient": "DREW FERGUSON",
+        "items": 19,
+        "total": 38000.0
+      },
+      {
+        "recipient": "CONGRESSMAN KEVIN HERN",
+        "items": 12,
+        "total": 38000.0
+      },
+      {
+        "recipient": "CHRIS COONS",
+        "items": 16,
+        "total": 38000.0
+      },
+      {
+        "recipient": "ANNA ESHOO",
+        "items": 16,
+        "total": 38000.0
+      },
+      {
+        "recipient": "REP. NICOLE MALLIOTAKIS",
+        "items": 24,
+        "total": 38000.0
+      },
+      {
+        "recipient": "REP. AMERISH B. BERA",
+        "items": 18,
+        "total": 38000.0
+      },
+      {
+        "recipient": "RAUL RUIZ",
+        "items": 21,
+        "total": 38000.0
+      },
+      {
+        "recipient": "MIKE KELLY",
+        "items": 17,
+        "total": 37500.0
+      },
+      {
+        "recipient": "AUGUST PFLUGER",
+        "items": 20,
+        "total": 37500.0
+      },
+      {
+        "recipient": "REP. GREG STEUBE",
+        "items": 23,
+        "total": 37500.0
+      },
+      {
+        "recipient": "SEN. MICHAEL SHUMWAY LEE",
+        "items": 12,
+        "total": 37500.0
+      },
+      {
+        "recipient": "REP. ERIN HOUCHIN",
+        "items": 25,
+        "total": 37500.0
+      },
+      {
+        "recipient": "CORNYN, JOHN",
+        "items": 10,
+        "total": 37500.0
+      },
+      {
+        "recipient": "MORGAN GRIFFITH",
+        "items": 19,
+        "total": 37500.0
+      },
+      {
+        "recipient": "SINEMA, KYRSTEN",
+        "items": 12,
+        "total": 37000.0
+      },
+      {
+        "recipient": "YOUNG KIM",
+        "items": 18,
+        "total": 37000.0
+      },
+      {
+        "recipient": "REP. MARY GAY SCANLON",
+        "items": 19,
+        "total": 37000.0
+      },
+      {
+        "recipient": "REP. VIRGINIA ANN FOXX",
+        "items": 13,
+        "total": 37000.0
+      },
+      {
+        "recipient": "ERIN HOUCHIN",
+        "items": 18,
+        "total": 36750.0
+      },
+      {
+        "recipient": "CHUCK SCHUMER",
+        "items": 11,
+        "total": 36500.0
+      },
+      {
+        "recipient": "REP. MARIANNETTE JANE MILLER-MEEKS",
+        "items": 19,
+        "total": 36500.0
+      },
+      {
+        "recipient": "HERN, KEVIN",
+        "items": 12,
+        "total": 36500.0
+      },
+      {
+        "recipient": "ALEX PADILLA",
+        "items": 12,
+        "total": 36000.0
+      },
+      {
+        "recipient": "REP. DORIS MATSUI",
+        "items": 16,
+        "total": 36000.0
+      },
+      {
+        "recipient": "REP. A. DREW FERGUSON, IV",
+        "items": 17,
+        "total": 36000.0
+      },
+      {
+        "recipient": "REP. SCOTT H. PETERS",
+        "items": 21,
+        "total": 36000.0
+      },
+      {
+        "recipient": "BOB LATTA",
+        "items": 29,
+        "total": 36000.0
+      }
+    ],
+    "per_entity": [
+      {
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "total": 9693241.0,
+        "items": 2427
+      },
+      {
+        "registrant_name": "ELEVANCE HEALTH, INC.",
+        "total": 4968493.0,
+        "items": 1636
+      },
+      {
+        "registrant_name": "AMERICAN OPTOMETRIC ASSOCIATION",
+        "total": 3969350.0,
+        "items": 1644
+      },
+      {
+        "registrant_name": "ELI LILLY AND COMPANY",
+        "total": 3198800.0,
+        "items": 828
+      },
+      {
+        "registrant_name": "MOLINA HEALTHCARE, INC.",
+        "total": 3137800.0,
+        "items": 1443
+      },
+      {
+        "registrant_name": "THE CIGNA GROUP AND SUBSIDIARIES (FORMERLY CIGNA CORPORATION AND SUBSIDIARIES)",
+        "total": 3104150.0,
+        "items": 1042
+      },
+      {
+        "registrant_name": "UNITEDHEALTH GROUP, INC.",
+        "total": 2688025.0,
+        "items": 859
+      },
+      {
+        "registrant_name": "PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA",
+        "total": 2596029.0,
+        "items": 741
+      },
+      {
+        "registrant_name": "DAVITA INC.",
+        "total": 2554436.0,
+        "items": 1049
+      },
+      {
+        "registrant_name": "BLUE CROSS AND BLUE SHIELD ASSOCIATION",
+        "total": 2260136.0,
+        "items": 1106
+      },
+      {
+        "registrant_name": "GILEAD SCIENCES, INC.",
+        "total": 2148155.0,
+        "items": 554
+      },
+      {
+        "registrant_name": "HUMANA, INC.",
+        "total": 2074525.0,
+        "items": 649
+      },
+      {
+        "registrant_name": "CENCORA, INC.",
+        "total": 1906250.0,
+        "items": 498
+      },
+      {
+        "registrant_name": "AMERICAN HEALTH CARE ASSOCIATION",
+        "total": 1662250.0,
+        "items": 551
+      },
+      {
+        "registrant_name": "CENTENE CORPORATION",
+        "total": 1613404.0,
+        "items": 659
+      },
+      {
+        "registrant_name": "FEDERATION OF AMERICAN HOSPITALS",
+        "total": 1589900.0,
+        "items": 555
+      },
+      {
+        "registrant_name": "FRESENIUS MEDICAL CARE NORTH AMERICA",
+        "total": 1527350.0,
+        "items": 416
+      },
+      {
+        "registrant_name": "DIRECT SUPPLY, INC.",
+        "total": 1489071.0,
+        "items": 180
+      },
+      {
+        "registrant_name": "SENIOR CARE PHARMACY COALITION",
+        "total": 1250201.0,
+        "items": 287
+      },
+      {
+        "registrant_name": "BRISTOL-MYERS SQUIBB COMPANY",
+        "total": 1227000.0,
+        "items": 563
+      },
+      {
+        "registrant_name": "NOVO NORDISK INC.",
+        "total": 959410.0,
+        "items": 344
+      },
+      {
+        "registrant_name": "CARDINAL HEALTH, INC.",
+        "total": 858925.0,
+        "items": 333
+      },
+      {
+        "registrant_name": "TAKEDA PHARMACEUTICALS AMERICA, INC.",
+        "total": 850150.0,
+        "items": 241
+      },
+      {
+        "registrant_name": "PHARMACEUTICAL CARE MANAGEMENT ASSOCIATION",
+        "total": 795600.0,
+        "items": 768
+      },
+      {
+        "registrant_name": "EDWARDS LIFESCIENCES, LLC",
+        "total": 727400.0,
+        "items": 380
+      },
+      {
+        "registrant_name": "BLUE SHIELD OF CALIFORNIA",
+        "total": 671350.0,
+        "items": 232
+      },
+      {
+        "registrant_name": "ASTELLAS PHARMA US, INC.",
+        "total": 659050.0,
+        "items": 274
+      },
+      {
+        "registrant_name": "FERRING PHARMACEUTICALS, INC.",
+        "total": 517750.0,
+        "items": 14
+      },
+      {
+        "registrant_name": "VERTEX PHARMACEUTICALS INCORPORATED",
+        "total": 511487.0,
+        "items": 257
+      },
+      {
+        "registrant_name": "AMERICAN AMBULANCE ASSOCIATION",
+        "total": 494100.0,
+        "items": 299
+      },
+      {
+        "registrant_name": "QUEST DIAGNOSTICS INCORPORATED",
+        "total": 484850.0,
+        "items": 238
+      },
+      {
+        "registrant_name": "ALNYLAM PHARMACEUTICALS, INC.",
+        "total": 438250.0,
+        "items": 163
+      },
+      {
+        "registrant_name": "EMD SERONO, INC.",
+        "total": 423496.0,
+        "items": 256
+      },
+      {
+        "registrant_name": "OTSUKA AMERICA PHARMACEUTICAL, INC.",
+        "total": 397250.0,
+        "items": 198
+      },
+      {
+        "registrant_name": "MEDICAL DEVICE MANUFACTURERS ASSOCIATION",
+        "total": 333700.0,
+        "items": 113
+      },
+      {
+        "registrant_name": "INDEPENDENCE BLUE CROSS, LLC",
+        "total": 333175.0,
+        "items": 207
+      },
+      {
+        "registrant_name": "AMERICA'S ESSENTIAL HOSPITALS",
+        "total": 328250.0,
+        "items": 217
+      },
+      {
+        "registrant_name": "ALKERMES, INC.",
+        "total": 300300.0,
+        "items": 135
+      },
+      {
+        "registrant_name": "JAZZ PHARMACEUTICALS, INC.",
+        "total": 297125.0,
+        "items": 90
+      },
+      {
+        "registrant_name": "BAXTER HEALTHCARE CORPORATION",
+        "total": 178767.0,
+        "items": 74
+      },
+      {
+        "registrant_name": "TEVA PHARMACEUTICALS USA, INC.",
+        "total": 169865.0,
+        "items": 70
+      },
+      {
+        "registrant_name": "ORGANON & CO.",
+        "total": 156250.0,
+        "items": 80
+      },
+      {
+        "registrant_name": "GREATER NEW YORK HOSPITAL ASSOCIATION",
+        "total": 141900.0,
+        "items": 65
+      },
+      {
+        "registrant_name": "CSL BEHRING LLC",
+        "total": 127200.0,
+        "items": 81
+      },
+      {
+        "registrant_name": "ALLIANCE FOR PHYSICAL THERAPY QUALITY AND INNOVATION",
+        "total": 126750.0,
+        "items": 26
+      },
+      {
+        "registrant_name": "ARDELYX, INC.",
+        "total": 123200.0,
+        "items": 81
+      },
+      {
+        "registrant_name": "TRAVERE THERAPEUTICS",
+        "total": 119500.0,
+        "items": 88
+      },
+      {
+        "registrant_name": "340B HEALTH",
+        "total": 113898.0,
+        "items": 68
+      },
+      {
+        "registrant_name": "UCB, INC.",
+        "total": 90550.0,
+        "items": 73
+      },
+      {
+        "registrant_name": "AMERICAN ASSOCIATION FOR HOMECARE",
+        "total": 84500.0,
+        "items": 41
+      },
+      {
+        "registrant_name": "SIDECAR HEALTH, INC",
+        "total": 70150.0,
+        "items": 45
+      },
+      {
+        "registrant_name": "HARMONY BIOSCIENCES",
+        "total": 56760.0,
+        "items": 48
+      },
+      {
+        "registrant_name": "HOSPICE ACTION NETWORK",
+        "total": 38250.0,
+        "items": 36
+      },
+      {
+        "registrant_name": "EXACT SCIENCES",
+        "total": 33891.0,
+        "items": 39
+      },
+      {
+        "registrant_name": "HEALTHCARE LEADERSHIP COUNCIL",
+        "total": 31150.0,
+        "items": 19
+      },
+      {
+        "registrant_name": "ALLIANCE FOR REGENERATIVE MEDICINE",
+        "total": 31050.0,
+        "items": 20
+      },
+      {
+        "registrant_name": "MYRIAD GENETICS, INC.",
+        "total": 18000.0,
+        "items": 11
+      },
+      {
+        "registrant_name": "ACADIA PHARMACEUTICALS",
+        "total": 13800.0,
+        "items": 19
+      },
+      {
+        "registrant_name": "VITAS HEALTHCARE CORPORATION",
+        "total": 10500.0,
+        "items": 13
+      },
+      {
+        "registrant_name": "NATIONAL ASSOCIATION OF COMMUNITY HEALTH CENTERS",
+        "total": 8500.0,
+        "items": 12
+      },
+      {
+        "registrant_name": "HACKENSACK MERIDIAN HEALTH",
+        "total": 8500.0,
+        "items": 10
+      },
+      {
+        "registrant_name": "MODERNA, INC.",
+        "total": 6082.0,
+        "items": 9
+      },
+      {
+        "registrant_name": "SCAN HEALTH PLAN",
+        "total": 5250.0,
+        "items": 10
+      },
+      {
+        "registrant_name": "ATA ACTION",
+        "total": 3000.0,
+        "items": 2
+      },
+      {
+        "registrant_name": "AMERICAN KIDNEY FUND",
+        "total": 2830.0,
+        "items": 19
+      },
+      {
+        "registrant_name": "INCYTE CORPORATION",
+        "total": 2000.0,
+        "items": 3
+      },
+      {
+        "registrant_name": "STRYKER CORPORATION",
+        "total": 250.0,
+        "items": 1
+      }
+    ],
+    "sample": [
+      {
+        "record_key": "b217b5b7-b431-4c70-bc0e-766b862ad660",
+        "registrant_name": "GILEAD SCIENCES, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "President Donald J. Trump and Vice President JD Vance",
+        "date": "2025-02-06"
+      },
+      {
+        "record_key": "2b1979c8-e221-42ef-8732-82920919be37",
+        "registrant_name": "PHARMACEUTICAL RESEARCH AND MANUFACTURERS OF AMERICA",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1000000,
+        "recipient": "Donald Trump; JD Vance",
+        "date": "2024-12-20"
+      },
+      {
+        "record_key": "da86b895-7fee-4653-a7b3-9a658130f7eb",
+        "registrant_name": "ELI LILLY AND COMPANY",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 500000,
+        "recipient": "Trump Vance Inaugural Committee",
+        "date": "2025-01-16"
+      },
+      {
+        "record_key": "a8fcdf40-5faa-48e5-9915-5078a26e9d6d",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 450000,
+        "recipient": "Bob Casey",
+        "date": "2024-10-01"
+      },
+      {
+        "record_key": "c65e5de4-0d00-4aee-9465-0c4b699651c7",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 410232,
+        "recipient": "Lisa Murkowski",
+        "date": "2022-10-04"
+      },
+      {
+        "record_key": "c65e5de4-0d00-4aee-9465-0c4b699651c7",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 400707,
+        "recipient": "Margaret Hassan",
+        "date": "2022-10-05"
+      },
+      {
+        "record_key": "a8fcdf40-5faa-48e5-9915-5078a26e9d6d",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 350000,
+        "recipient": "Susan Wild",
+        "date": "2024-10-01"
+      },
+      {
+        "record_key": "c65e5de4-0d00-4aee-9465-0c4b699651c7",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 308213,
+        "recipient": "Mariannette Miller-Meeks",
+        "date": "2022-10-05"
+      },
+      {
+        "record_key": "c65e5de4-0d00-4aee-9465-0c4b699651c7",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 307032,
+        "recipient": "Dan Kildee",
+        "date": "2022-10-17"
+      },
+      {
+        "record_key": "a8fcdf40-5faa-48e5-9915-5078a26e9d6d",
+        "registrant_name": "AMERICAN HOSPITAL ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 300148,
+        "recipient": "David Valadao",
+        "date": "2024-10-04"
+      }
+    ]
+  }
+}

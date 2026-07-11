@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIPAC Lobbying Review</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  padding: 28px 20px 60px; line-height: 1.45;
+}
+.viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+  --seq-250: #86b6ef; --seq-400: #3987e5; --seq-550: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  .viz-root {
+    --page: #0d0d0d; --surface-1: #1a1a19;
+    --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+    --grid: #2c2c2a; --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+    --s5: #9085e9; --s6: #e66767;
+    --deemph: #4a4a46;
+  }
+}
+:root[data-theme="light"] .viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+}
+:root[data-theme="dark"] .viz-root {
+  --page: #0d0d0d; --surface-1: #1a1a19;
+  --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+  --grid: #2c2c2a; --baseline: #383835;
+  --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+  --s5: #9085e9; --s6: #e66767;
+  --deemph: #4a4a46;
+}
+:root[data-theme="light"] body, :root[data-theme="dark"] body { background: var(--page); }
+
+.wrap { max-width: 1060px; margin: 0 auto; }
+header.page { margin-bottom: 22px; }
+header.page h1 { font-size: 24px; font-weight: 650; letter-spacing: -0.01em; }
+header.page .sub { color: var(--ink-2); margin-top: 6px; max-width: 78ch; font-size: 14px; }
+header.page .meta { color: var(--ink-3); margin-top: 6px; font-size: 12px; }
+.theme-toggle {
+  float: right; font: inherit; font-size: 12px; color: var(--ink-2);
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 5px 10px; cursor: pointer;
+}
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.tile {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.tile .lbl { font-size: 12px; color: var(--ink-2); }
+.tile .val { font-size: 26px; font-weight: 600; margin-top: 3px; }
+.tile .note { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 18px 12px; margin: 16px 0;
+}
+.card h2 { font-size: 15.5px; font-weight: 650; }
+.card .sub { font-size: 12.5px; color: var(--ink-2); margin: 3px 0 4px; max-width: 90ch; }
+.card .foot { font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 2px; font-size: 12px; color: var(--ink-2); }
+.legend .key { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw-rect { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend .sw-line { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.chart-box { position: relative; }
+.chart-box svg { display: block; width: 100%; height: auto; }
+svg text { font-family: inherit; }
+.ax { font-size: 11px; fill: var(--ink-3); }
+.ax-tab { font-variant-numeric: tabular-nums; }
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.baseline { stroke: var(--baseline); stroke-width: 1; }
+.dlabel { font-size: 11px; fill: var(--ink-2); }
+.dlabel-strong { font-size: 11.5px; font-weight: 600; fill: var(--ink-1); }
+.blabel { font-size: 11px; pointer-events: none; }
+.crosshair { stroke: var(--baseline); stroke-width: 1; }
+.tt {
+  position: fixed; z-index: 40; pointer-events: none; display: none;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13); padding: 9px 11px; font-size: 12px;
+  max-width: 320px;
+}
+.tt .tt-title { color: var(--ink-3); font-size: 11px; margin-bottom: 5px; }
+.tt .row { display: flex; align-items: center; gap: 7px; margin-top: 3px; }
+.tt .k { width: 14px; height: 3px; border-radius: 2px; flex: none; }
+.tt .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tt .n { color: var(--ink-2); }
+details.tv { margin-top: 8px; }
+details.tv summary { font-size: 12px; color: var(--ink-2); cursor: pointer; }
+details.tv .scroll { overflow-x: auto; margin-top: 8px; }
+table.dt { border-collapse: collapse; font-size: 12px; min-width: 480px; }
+table.dt th, table.dt td { text-align: left; padding: 5px 12px 5px 0; border-bottom: 1px solid var(--grid); }
+table.dt td.num, table.dt th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.dt th { color: var(--ink-2); font-weight: 600; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+.caveats { font-size: 12.5px; color: var(--ink-2); }
+.caveats li { margin: 4px 0 4px 18px; }
+footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
+
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <button class="theme-toggle" id="themeToggle" type="button">Toggle light/dark</button>
+    <h1>AIPAC Lobbying Review</h1>
+    <div class="sub">AIPAC's federal lobbying 2022–2026Q1: budget, targets, bills, the wider Israel-policy lobbying field, disclosed political giving, and how its spending relates to the congressional news cycle.</div>
+    <div class="meta">Generated 2026-07-08 · Source: Senate LDA filings 2022–2026 Q1 (senate-primary, amendment-deduped), LD-203 contribution reports, congressional press releases. Unverified research output for team review — every table row traces to records via the CSVs in <code>data/</code>.</div>
+  </header>
+  <main id="app"></main>
+  <footer class="page">Built from db/lda_full.duckdb · See README.md in this package for method, caveats, and how to QA any number here.</footer>
+</div>
+<script>
+/* Tiny self-contained chart lib — SVG, theme-aware via CSS vars, hover layer + table views. */
+"use strict";
+const NS = "http://www.w3.org/2000/svg";
+const SLOT = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)"];
+// per-slot in-mark label ink (yellow/aqua too light for white text)
+const SLOT_LABEL = ["#ffffff", "#08351f", "#3a2800", "#ffffff", "#ffffff", "#ffffff"];
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function div(cls, parent, text) {
+  const d = document.createElement("div");
+  if (cls) d.className = cls;
+  if (text != null) d.textContent = text;
+  if (parent) parent.appendChild(d);
+  return d;
+}
+function fmtMoney(v) {
+  if (v == null || isNaN(v)) return "–";
+  const a = Math.abs(v), s = v < 0 ? "-" : "";
+  if (a >= 995e6) return s + "$" + (a / 1e9).toFixed(a >= 9.95e9 ? 0 : 1) + "B";
+  if (a >= 995e3) return s + "$" + (a / 1e6).toFixed(a >= 9.95e6 ? 0 : 1) + "M";
+  if (a >= 1e3) return s + "$" + Math.round(a / 1e3) + "K";
+  return s + "$" + Math.round(a);
+}
+function fmtNum(v) {
+  if (v == null || isNaN(v)) return "–";
+  return Number(v).toLocaleString("en-US");
+}
+function fmtPct(v) { return v == null ? "–" : v.toFixed(v < 10 ? 1 : 0) + "%"; }
+function niceTicks(max, n) {
+  if (max <= 0) return [0, 1];
+  const raw = max / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => max / s <= n) || 10 * mag;
+  const ticks = [];
+  for (let v = 0; v <= max * 1.0001 + step * 0.999; v += step) { ticks.push(v); if (v >= max) break; }
+  return ticks;
+}
+
+/* singleton tooltip */
+let TT = null;
+function tt() {
+  if (!TT) { TT = div("tt", document.body); }
+  return TT;
+}
+function ttShow(x, y, titleText, rows) {
+  const t = tt();
+  t.innerHTML = "";
+  if (titleText) div("tt-title", t, titleText);
+  for (const r of rows) {
+    const row = div("row", t);
+    if (r.color) { const k = div("k", row); k.style.background = r.color; }
+    const v = document.createElement("span"); v.className = "v"; v.textContent = r.value; row.appendChild(v);
+    const n = document.createElement("span"); n.className = "n"; n.textContent = r.name; row.appendChild(n);
+  }
+  t.style.display = "block";
+  const bw = t.offsetWidth, bh = t.offsetHeight;
+  let px = x + 14, py = y + 12;
+  if (px + bw > innerWidth - 8) px = x - bw - 14;
+  if (py + bh > innerHeight - 8) py = y - bh - 12;
+  t.style.left = px + "px"; t.style.top = py + "px";
+}
+function ttHide() { if (TT) TT.style.display = "none"; }
+
+function legend(parent, items, kind) {
+  const lg = div("legend", parent);
+  for (const it of items) {
+    const k = div("key", lg);
+    const sw = div(kind === "line" ? "sw-line" : "sw-rect", k);
+    sw.style.background = it.color;
+    k.appendChild(document.createTextNode(it.name));
+  }
+  return lg;
+}
+
+function tableView(parent, cols, rows, fmts) {
+  const det = document.createElement("details"); det.className = "tv"; parent.appendChild(det);
+  const sum = document.createElement("summary"); sum.textContent = "Table view"; det.appendChild(sum);
+  const scroll = div("scroll", det);
+  const tb = document.createElement("table"); tb.className = "dt"; scroll.appendChild(tb);
+  const trh = tb.insertRow();
+  cols.forEach((c, i) => {
+    const th = document.createElement("th"); th.textContent = c;
+    if (fmts && fmts[i] !== "s") th.className = "num";
+    trh.appendChild(th);
+  });
+  for (const r of rows) {
+    const tr = tb.insertRow();
+    r.forEach((v, i) => {
+      const td = tr.insertCell();
+      const f = fmts ? fmts[i] : "s";
+      td.textContent = f === "$" ? fmtMoney(v) : f === "#" ? fmtNum(v) : f === "%" ? (v == null ? "–" : v + "%") : (v == null ? "–" : v);
+      if (f !== "s") td.className = "num";
+    });
+  }
+}
+
+function card(root, title, sub, foot) {
+  const c = div("card", root);
+  const h = document.createElement("h2"); h.textContent = title; c.appendChild(h);
+  if (sub) div("sub", c, sub);
+  const box = div("chart-box", c);
+  if (foot) { const f = div("foot", c, foot); c.appendChild(f); }
+  return { cardEl: c, box: box };
+}
+
+function statTiles(root, tiles) {
+  const k = div("kpis", root);
+  for (const t of tiles) {
+    const tile = div("tile", k);
+    div("lbl", tile, t.label);
+    div("val", tile, t.value);
+    if (t.note) div("note", tile, t.note);
+  }
+}
+
+/* ---- line panel: series share one x; crosshair + all-series tooltip ---- */
+function linePanel(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 240, mL = 46, mR = cfg.marginRight || 76, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const maxV = cfg.max || Math.max(...cfg.series.flatMap(s => s.values.filter(v => v != null))) * 1.08;
+  const ticks = niceTicks(maxV, 4);
+  const yMax = ticks[ticks.length - 1];
+  const X = i => mL + (n === 1 ? pw / 2 : (i * pw) / (n - 1));
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : cfg.fmt === "%" ? tv + "%" : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: X(i), y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  const placedLabels = [];
+  cfg.series.forEach((s, si) => {
+    const col = s.color || SLOT[si];
+    const pts = s.values.map((v, i) => (v == null ? null : [X(i), Y(v)]));
+    let d = "";
+    pts.forEach(p => { if (p) d += (d ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); });
+    const path = el("path", { d, fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    path.style.stroke = col;
+    const last = pts.map((p, i) => (p ? i : -1)).filter(i => i >= 0).pop();
+    if (last != null) {
+      const ring = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 6 }, svg);
+      ring.style.fill = "var(--surface-1)";
+      const dot = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 4 }, svg);
+      dot.style.fill = col;
+      const ly = pts[last][1] + 4;
+      // when end-labels collide, fall back to legend + tooltip (skip the label)
+      if (!placedLabels.some(p => Math.abs(p - ly) < 14)) {
+        const lb = el("text", { x: pts[last][0] + 10, y: ly, class: "dlabel-strong" }, svg);
+        lb.textContent = (cfg.endLabel === "name" ? s.name : (cfg.fmt === "$" ? fmtMoney(s.values[last]) : cfg.fmt === "%" ? s.values[last] + "%" : fmtNum(s.values[last])));
+        placedLabels.push(ly);
+      }
+    }
+  });
+  /* crosshair + tooltip */
+  const ch = el("line", { y1: mT, y2: mT + ph, class: "crosshair", visibility: "hidden" }, svg);
+  const hit = el("rect", { x: mL, y: mT, width: pw, height: ph, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", ev => {
+    const r = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - r.left) / r.width) * W;
+    let i = Math.round(((fx - mL) / pw) * (n - 1));
+    i = Math.max(0, Math.min(n - 1, i));
+    ch.setAttribute("x1", X(i)); ch.setAttribute("x2", X(i));
+    ch.setAttribute("visibility", "visible");
+    ttShow(ev.clientX, ev.clientY, xs[i], cfg.series.map((s, si) => ({
+      color: s.color || SLOT[si],
+      value: s.values[i] == null ? "–" : cfg.fmt === "$" ? fmtMoney(s.values[i]) : cfg.fmt === "%" ? s.values[i] + "%" : fmtNum(s.values[i]),
+      name: s.name
+    })));
+  });
+  hit.addEventListener("pointerleave", () => { ch.setAttribute("visibility", "hidden"); ttHide(); });
+}
+
+/* ---- columns (single series or stacked) ---- */
+function columns(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 250, mL = 46, mR = 14, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const series = cfg.series; // [{name,color,values}]
+  const totals = xs.map((_, i) => series.reduce((a, s) => a + (s.values[i] || 0), 0));
+  const ticks = niceTicks(Math.max(...totals) * 1.05, 4);
+  const yMax = ticks[ticks.length - 1];
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const band = pw / n, bw = Math.min(24, band * 0.55);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: mL + band * i + band / 2, y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  xs.forEach((lab, i) => {
+    const cx = mL + band * i + band / 2;
+    let acc = 0;
+    series.forEach((s, si) => {
+      const v = s.values[i] || 0;
+      if (v <= 0) { return; }
+      const y1 = Y(acc + v), y0 = Y(acc);
+      const hpx = Math.max(0, y0 - y1 - (si < series.length - 1 && acc + v < totals[i] ? 2 : 0)); // 2px surface gap
+      const isTop = acc + v >= totals[i] - 1e-9;
+      const rTop = isTop ? 4 : 0;
+      const x0 = cx - bw / 2;
+      const p = el("path", {
+        d: `M${x0} ${y0} L${x0} ${y1 + rTop} Q${x0} ${y1} ${x0 + rTop} ${y1} L${x0 + bw - rTop} ${y1} Q${x0 + bw} ${y1} ${x0 + bw} ${y1 + rTop} L${x0 + bw} ${y0} Z`
+      }, svg);
+      p.style.fill = s.color || SLOT[si];
+      acc += v;
+    });
+    const hit = el("rect", { x: mL + band * i, y: mT, width: band, height: ph, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = series.map((s, si) => ({
+        color: s.color || SLOT[si],
+        value: cfg.fmt === "$" ? fmtMoney(s.values[i]) : fmtNum(s.values[i]),
+        name: s.name
+      }));
+      if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      ttShow(ev.clientX, ev.clientY, lab, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- horizontal bars ---- */
+function hbars(box, cfg) {
+  const items = cfg.items; // [{label, value, value2?, note?, color?}]
+  const W = cfg.width || 980, rowH = cfg.rowH || 30, mL = cfg.labelW || 300, mR = cfg.width ? 64 : 90, mT = 6, mB = 8;
+  const H = mT + rowH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.map(d => d.value)) * 1.02;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  items.forEach((d, i) => {
+    const y = mT + i * rowH + (rowH - Math.min(20, rowH - 8)) / 2;
+    const bh = Math.min(20, rowH - 8);
+    const w = Math.max(1.5, (d.value / maxV) * pw);
+    const p = el("path", {
+      d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z`
+    }, svg);
+    p.style.fill = d.color || cfg.color || SLOT[0];
+    const maxChars = Math.floor((mL - 14) / 6.4);
+    const lb = el("text", { x: mL - 10, y: y + bh / 2 + 4, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel-strong ax-tab" }, svg);
+    vl.textContent = cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value);
+    const hit = el("rect", { x: 0, y: mT + i * rowH, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [{ color: d.color || cfg.color || SLOT[0], value: cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value), name: cfg.valueName || "value" }];
+      if (d.note) rows.push({ color: null, value: "", name: d.note });
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- grouped horizontal bars (2 series) ---- */
+function groupedHBars(box, cfg) {
+  const items = cfg.items; // [{label, a, b}]
+  const W = cfg.width || 980, groupH = 44, mL = cfg.labelW || 300, mR = cfg.width ? 66 : 96, mT = 6, mB = 8;
+  const H = mT + groupH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.flatMap(d => [d.a, d.b])) * 1.02;
+  const colA = cfg.aColor || SLOT[0], colB = cfg.bColor || SLOT[1];
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  const maxChars = Math.floor((mL - 14) / 6.4);
+  items.forEach((d, i) => {
+    const y0 = mT + i * groupH;
+    [["a", colA, cfg.aName, 4], ["b", colB, cfg.bName, 24]].forEach(([k, col, nm, dy]) => {
+      const v = d[k], bh = 14;
+      const w = Math.max(1.5, (v / maxV) * pw);
+      const y = y0 + dy;
+      const p = el("path", { d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z` }, svg);
+      p.style.fill = col;
+      const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel ax-tab" }, svg);
+      vl.textContent = fmtMoney(v);
+    });
+    const lb = el("text", { x: mL - 10, y: y0 + groupH / 2 + 2, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const hit = el("rect", { x: 0, y: y0, width: W, height: groupH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => ttShow(ev.clientX, ev.clientY, d.label, [
+      { color: colA, value: fmtMoney(d.a), name: cfg.aName },
+      { color: colB, value: fmtMoney(d.b), name: cfg.bName }
+    ]));
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- bubble pack (greedy spiral, collision-free) ---- */
+function bubblePack(box, cfg) {
+  const items = cfg.items.slice().sort((p, q) => q.r0 - p.r0); // r0 = raw size value
+  const W = 980, H = cfg.height || 430;
+  const maxV = Math.max(...items.map(d => d.r0));
+  const R = v => 6 + 52 * Math.sqrt(v / maxV);
+  const placed = [];
+  const cx0 = W / 2, cy0 = H / 2;
+  for (const d of items) {
+    const r = R(d.r0);
+    let ok = false, x = cx0, y = cy0;
+    for (let a = 0, sp = 0; sp < 5200; sp += 4) {
+      a = sp * 0.055;
+      const rad = sp * 0.115;
+      x = cx0 + rad * Math.cos(a) * 1.55;
+      y = cy0 + rad * Math.sin(a) * 0.8;
+      if (x - r < 6 || x + r > W - 6 || y - r < 6 || y + r > H - 6) continue;
+      ok = placed.every(p => {
+        const dx = p.x - x, dy = p.y - y;
+        return dx * dx + dy * dy >= (p.r + r + 2.5) * (p.r + r + 2.5);
+      });
+      if (ok) break;
+    }
+    if (ok) placed.push({ x, y, r, d });
+  }
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  const measure = el("text", { x: -1000, y: -1000, class: "blabel" }, svg);
+  for (const p of placed) {
+    const c = el("circle", { cx: p.x, cy: p.y, r: p.r }, svg);
+    c.style.fill = SLOT[p.d.slot];
+    c.style.stroke = "var(--surface-1)"; c.style.strokeWidth = "2";
+    // label only if it fits
+    measure.textContent = p.d.short || p.d.label;
+    const tw = measure.getComputedTextLength ? 0 : 0; // measured after attach below
+  }
+  // second pass for labels (needs layout)
+  requestAnimationFrame(() => {
+    for (const p of placed) {
+      const name = p.d.short || p.d.label;
+      measure.textContent = name;
+      let tw = 60;
+      try { tw = measure.getComputedTextLength(); } catch (e) {}
+      if (tw < p.r * 1.75 && p.r > 15) {
+        const t = el("text", { x: p.x, y: p.y + (p.r > 26 ? -2 : 4), "text-anchor": "middle", class: "blabel" }, svg);
+        t.textContent = name;
+        t.style.fill = SLOT_LABEL[p.d.slot];
+        if (p.r > 26) {
+          const t2 = el("text", { x: p.x, y: p.y + 13, "text-anchor": "middle", class: "blabel" }, svg);
+          t2.textContent = cfg.fmtSize === "$" ? fmtMoney(p.d.r0) : fmtNum(p.d.r0);
+          t2.style.fill = SLOT_LABEL[p.d.slot];
+          t2.style.opacity = "0.85";
+        }
+      }
+    }
+    measure.remove();
+  });
+  /* nearest-circle hover */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    if (best && bd < 14) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+    } else ttHide();
+  });
+  hit.addEventListener("pointerleave", ttHide);
+}
+
+</script>
+<script>
+const DATA = {"kpis": [{"label": "2025 lobbying spend (in-house)", "value": "$3.76M", "note": "+38% vs 2022; steady ~9%/yr climb"}, {"label": "Quarterly filings 2022–2026Q1", "value": "17 / 17", "note": "no amendments, no gaps — a clean self-filer"}, {"label": "Disclosed LD-203 giving 2022–25", "value": "$7.65M", "note": "100% FECA contributions, both parties"}, {"label": "Bills named in filings", "value": "314", "note": "Iran sanctions, aid approps, U.S.–Israel defense"}], "coupling": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "amount": [690388.0, 650750.0, 640469.0, 741474.0, 769502.0, 704298.0, 767812.0, 818273.0, 837889.0, 786536.0, 789890.0, 909953.0, 963135.0, 880060.0, 940000.0, 973910.0, 844410.0], "share": [1.92, 1.02, 0.84, 1.39, 1.92, 1.86, 2.59, 20.32, 8.4, 11.28, 5.26, 8.85, 3.36, 4.77, 3.94, 4.64, 3.27], "rel": [97, 52, 44, 60, 152, 149, 178, 1514, 737, 1069, 416, 481, 463, 610, 439, 493, 375], "all": [5041, 5114, 5223, 4324, 7899, 8015, 6885, 7450, 8772, 9476, 7902, 5433, 13772, 12775, 11147, 10624, 11466]}, "govEntities": [{"name": "SENATE", "n": 56}, {"name": "HOUSE OF REPRESENTATIVES", "n": 55}, {"name": "Defense, Dept of (DOD)", "n": 50}, {"name": "Homeland Security, Dept of (DHS)", "n": 35}, {"name": "State, Dept of (DOS)", "n": 34}, {"name": "Energy, Dept of", "n": 34}, {"name": "Treasury, Dept of", "n": 34}, {"name": "Natl Security Council (NSC)", "n": 34}, {"name": "Commerce, Dept of (DOC)", "n": 16}, {"name": "U.S. Agency for International Development (USAID)", "n": 14}, {"name": "Agriculture, Dept of (USDA)", "n": 4}], "nBills": 314, "topBills": [{"bill": "HR3033", "n": 7, "hint": "Solidify Iran Sanctions Act of 2023 H"}, {"bill": "HR3792", "n": 7, "hint": ""}, {"bill": "HR3907", "n": 7, "hint": "United States-Israel International Development Cooperation Act H"}, {"bill": "HR4076", "n": 7, "hint": "To authorize funding for a bilateral cooperative program with Israel fo"}, {"bill": "S1390", "n": 7, "hint": "Solidify Iran Sanctions Act of 2023 H"}, {"bill": "S2240", "n": 6, "hint": "United States-Israel International Development Cooperation Act H"}, {"bill": "S2413", "n": 6, "hint": "Reginal Integration and Normalization Act H"}, {"bill": "S2587", "n": 6, "hint": "Defense Appropriations Bills H"}, {"bill": "HR1229", "n": 5, "hint": ""}, {"bill": "HR1422", "n": 5, "hint": "Enhanced Iran Sanctions Act of 2025 H"}, {"bill": "HR1777", "n": 5, "hint": "The U"}, {"bill": "HR2454", "n": 5, "hint": "United States-Israel PTSD Collaborative Research Act H"}], "billsTable": [{"bill": "HR3033", "n": 7, "y0": "2023", "y1": "2024"}, {"bill": "HR3792", "n": 7, "y0": "2023", "y1": "2024"}, {"bill": "HR3907", "n": 7, "y0": "2023", "y1": "2024"}, {"bill": "HR4076", "n": 7, "y0": "2023", "y1": "2024"}, {"bill": "S1390", "n": 7, "y0": "2023", "y1": "2024"}, {"bill": "S2240", "n": 6, "y0": "2023", "y1": "2024"}, {"bill": "S2413", "n": 6, "y0": "2023", "y1": "2024"}, {"bill": "S2587", "n": 6, "y0": "2023", "y1": "2026"}, {"bill": "HR1229", "n": 5, "y0": "2025", "y1": "2026"}, {"bill": "HR1422", "n": 5, "y0": "2025", "y1": "2026"}, {"bill": "HR1777", "n": 5, "y0": "2023", "y1": "2024"}, {"bill": "HR2454", "n": 5, "y0": "2023", "y1": "2024"}, {"bill": "HRES786", "n": 5, "y0": "2023", "y1": "2024"}, {"bill": "S1143", "n": 5, "y0": "2023", "y1": "2024"}, {"bill": "S554", "n": 5, "y0": "2025", "y1": "2026"}, {"bill": "S556", "n": 5, "y0": "2025", "y1": "2026"}, {"bill": "HR1218", "n": 4, "y0": "2023", "y1": "2023"}, {"bill": "HR1800", "n": 4, "y0": "2025", "y1": "2026"}, {"bill": "HR2973", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "HR3103", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "HR340", "n": 4, "y0": "2023", "y1": "2023"}, {"bill": "HR3685", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "HR3774", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "HR4521", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "HR5148", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "HR6089", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "HR6201", "n": 4, "y0": "2024", "y1": "2024"}, {"bill": "HR7223", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "HR7866", "n": 4, "y0": "2024", "y1": "2024"}, {"bill": "HR852", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S1260", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S1334", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S1518", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S1802", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S1829", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S1889", "n": 4, "y0": "2025", "y1": "2026"}, {"bill": "S1904", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S2120", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S2131", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S221", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S2336", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S2626", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "S3197", "n": 4, "y0": "2024", "y1": "2024"}, {"bill": "S3347", "n": 4, "y0": "2022", "y1": "2024"}, {"bill": "S3421", "n": 4, "y0": "2022", "y1": "2022"}, {"bill": "S510", "n": 4, "y0": "2023", "y1": "2023"}, {"bill": "SRES505", "n": 4, "y0": "2023", "y1": "2024"}, {"bill": "HR2280", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR23", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR2374", "n": 3, "y0": "2022", "y1": "2022"}, {"bill": "HR2531", "n": 3, "y0": "2023", "y1": "2023"}, {"bill": "HR2670", "n": 3, "y0": "2023", "y1": "2023"}, {"bill": "HR3016", "n": 3, "y0": "2023", "y1": "2024"}, {"bill": "HR3266", "n": 3, "y0": "2023", "y1": "2023"}, {"bill": "HR3565", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR4016", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR4121", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR4213", "n": 3, "y0": "2025", "y1": "2026"}, {"bill": "HR4365", "n": 3, "y0": "2023", "y1": "2024"}, {"bill": "HR4367", "n": 3, "y0": "2023", "y1": "2024"}], "coLobby": [{"name": "J Street", "bills": 146, "filings": 652}, {"name": "FDD Action", "bills": 146, "filings": 280}, {"name": "Hadassah, The Women'S Zionist Organization Of America, Inc.", "bills": 55, "filings": 139}, {"name": "Republican Jewish Coalition", "bills": 53, "filings": 275}, {"name": "Friends Committee On National Legislation", "bills": 46, "filings": 134}, {"name": "National Treasury Employees Union", "bills": 33, "filings": 121}, {"name": "Christians United For Israel Action Fund", "bills": 30, "filings": 111}, {"name": "American Civil Liberties Union", "bills": 29, "filings": 70}, {"name": "A New Policy Inc.", "bills": 27, "filings": 33}, {"name": "Chamber Of Commerce Of The U.S.A.", "bills": 25, "filings": 87}, {"name": "Rutgers The State University Of New Jersey", "bills": 25, "filings": 78}, {"name": "Moveon.Org Civic Action", "bills": 25, "filings": 37}, {"name": "Heritage Action For America", "bills": 23, "filings": 25}, {"name": "Planned Parenthood Federation of America", "bills": 22, "filings": 56}, {"name": "Amnesty International Of The USA Inc", "bills": 20, "filings": 24}], "israelPlayers": [{"name": "Anti-Defamation League", "n": 29, "spend": 4353000.0}, {"name": "Republican Jewish Coalition", "n": 21, "spend": 1010000.0}, {"name": "J Street", "n": 19, "spend": 2675000.0}, {"name": "Chevron U.S.A. Inc.", "n": 18, "spend": 33280000.0}, {"name": "FDD Action", "n": 18, "spend": 2270000.0}, {"name": "American Civil Liberties Union", "n": 17, "spend": 7120000.0}, {"name": "Mentis Sciences, Inc.", "n": 17, "spend": 170000.0}, {"name": "Christians United For Israel Action Fund", "n": 17, "spend": 1629410.0}, {"name": "New Jewish Narrative (Fka Americans For Peace Now)", "n": 17, "spend": null}, {"name": "Friends Committee On National Legislation", "n": 17, "spend": 17000000.0}, {"name": "Zionist Organization Of America", "n": 17, "spend": 750000.0}, {"name": "Jewish Federations Of North America", "n": 17, "spend": 2929005.0}, {"name": "American Automotive Policy Council, Inc.", "n": 17, "spend": 1375000.0}, {"name": "Estate Of Esther Klieman And Other American Victims Of Palestinian Terror", "n": 16, "spend": null}, {"name": "Hadassah, The Women'S Zionist Organization Of America, Inc.", "n": 16, "spend": 920000.0}, {"name": "American Jewish Committee", "n": 15, "spend": 184000.0}, {"name": "Moveon.Org Civic Action", "n": 14, "spend": 310000.0}, {"name": "Case Western Reserve University", "n": 14, "spend": 2089155.0}], "givingRecipients": [{"name": "DCCC", "total": 45500.0, "items": 4}, {"name": "DSCC", "total": 45000.0, "items": 3}, {"name": "Rep. Randy K. Weber, Sr. (R-TX)", "total": 37900.0, "items": 8}, {"name": "Rep. Joseph D. Morelle (D-NY)", "total": 37100.0, "items": 9}, {"name": "Rep. Charles J. \"Chuck\" Fleischmann (R-TN)", "total": 35000.0, "items": 8}, {"name": "Rep. Ritchie Torres (D-NY)", "total": 35000.0, "items": 8}, {"name": "Rep. Kat Cammack (R-FL)", "total": 35000.0, "items": 8}, {"name": "Rep. Nicholas A. Langworthy (R-NY)", "total": 35000.0, "items": 7}, {"name": "Rep. Marc A. Veasey (D-TX)", "total": 33900.0, "items": 8}, {"name": "Sen. Dan Sullivan (R-AK)", "total": 30000.0, "items": 2}, {"name": "Rep. Tony Gonzales (R-TX)", "total": 30000.0, "items": 7}, {"name": "Rep. Michael T. McCaul (R-TX)", "total": 30000.0, "items": 7}, {"name": "Rep. Jim Costa (D-CA)", "total": 30000.0, "items": 7}, {"name": "Rep. Kevin Hern (R-OK)", "total": 30000.0, "items": 7}, {"name": "Rep. Ron Estes (R-KS)", "total": 30000.0, "items": 7}], "givingByYear": [{"y": "2022", "total": 2855100.0}, {"y": "2023", "total": 1143000.0}, {"y": "2024", "total": 2696000.0}, {"y": "2025", "total": 958050.0}], "givingTotal": 7652150, "partySplit": {"R": {"total": 3767600.0, "n": 194}, "D": {"total": 2208000.0, "n": 119}, "I": {"total": 15000.0, "n": 1}}, "lobbyists": [{"name": "Marvin Feuer", "filings": 17, "years": "2022–2026"}, {"name": "Alex Bronzo", "filings": 17, "years": "2022–2026"}, {"name": "Oren Adaki", "filings": 17, "years": "2022–2026"}, {"name": "David Gillette", "filings": 17, "years": "2022–2026"}, {"name": "Deborah Saxon", "filings": 17, "years": "2022–2026"}, {"name": "Zachary Moses", "filings": 17, "years": "2022–2026"}, {"name": "Jeffrey Colman", "filings": 16, "years": "2022–2025"}, {"name": "Joshua Nason", "filings": 16, "years": "2022–2025"}, {"name": "Daniel Grey", "filings": 11, "years": "2023–2026"}, {"name": "Michael Fleischman", "filings": 11, "years": "2022–2024"}, {"name": "Celia Glassman", "filings": 7, "years": "2024–2026"}, {"name": "Samuel Peyton", "filings": 3, "years": "2022–2022"}], "caveats": ["AIPAC self-files (in-house registrant): quarterly amounts are its own reported lobbying spend, not payments to outside firms. No outside-firm engagements appear for AIPAC in this window.", "'Co-lobbying a bill' means filing on the same bill — allies and opponents both appear; direction of advocacy is not in the disclosure data.", "The Israel-policy field scan is an exploratory whole-word text search (israel/gaza/antisemitism/etc.), not the curated lexicon pipeline; treat the list as a triage candidate set.", "Press releases are congressional members' releases — the 'say' side of Congress, not AIPAC's own communications.", "LD-203 disclosed giving is the lobbyist-side regime; AIPAC-affiliated Super-PAC spending (e.g. United Democracy Project) lives in FEC data and is not included here.", "Senate-primary, amendment-deduplicated; every table row traces to a filing UUID in the CSVs."]};
+</script>
+<script>
+(function () {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const r = document.documentElement;
+    const cur = r.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    r.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  });
+})();
+(function () {
+  const app = document.getElementById("app");
+  statTiles(app, DATA.kpis);
+
+  /* Spend + press coupling: two panels, shared x (never a dual axis) */
+  {
+    const { box, cardEl } = card(app, "AIPAC's lobbying budget is a slow ratchet; the news cycle is not",
+      "Top panel: AIPAC's reported quarterly lobbying amount (in-house LD-2 filings). Bottom panel: share of ALL congressional member press releases mentioning Israel/Gaza-related terms — same quarters, same x-axis.",
+      "After October 7, 2023 the press share jumps 2.6% → 20.3% in one quarter (~8×). AIPAC's lobbying spend moves +6.6% that quarter and just keeps its steady ~9%/yr climb — $690K (2022-Q1) to a $974K peak (2025-Q4). Read: lobbying budgets are planned annual infrastructure, not news-reactive spending.");
+    const sub1 = div("sub", null); sub1.textContent = "AIPAC reported lobbying amount per quarter";
+    box.appendChild(sub1);
+    const b1 = div(null, box);
+    columns(b1, {
+      x: DATA.coupling.q, fmt: "$", height: 220,
+      series: [{ name: "AIPAC reported quarterly amount", values: DATA.coupling.amount, color: SLOT[0] }]
+    });
+    const sub2 = div("sub", null); sub2.textContent = "Israel-topic share of all member press releases (%)";
+    box.appendChild(sub2);
+    const b2 = div(null, box);
+    linePanel(b2, {
+      x: DATA.coupling.q, fmt: "%", height: 200,
+      series: [{ name: "Israel-topic share of member releases", values: DATA.coupling.share, color: SLOT[5] }]
+    });
+    tableView(cardEl, ["Quarter", "AIPAC amount", "Israel-topic releases", "All releases", "Share %"],
+      DATA.coupling.q.map((q, i) => [q, DATA.coupling.amount[i], DATA.coupling.rel[i], DATA.coupling.all[i], DATA.coupling.share[i]]),
+      ["s", "$", "#", "#", "%"]);
+  }
+
+  /* Who is lobbied */
+  {
+    const { box, cardEl } = card(app, "Who AIPAC lobbies",
+      "Government entities named on AIPAC's quarterly filings, 2022–2026Q1 (activity-level mentions).",
+      "Beyond both chambers: DOD, DHS, State, Treasury, the NSC — and the Energy Department (civil-nuclear and Iran-sanctions issues ride with the security portfolio).");
+    hbars(box, {
+      items: DATA.govEntities.map(d => ({ label: d.name, value: d.n })),
+      fmt: "#", labelW: 330, valueName: "mentions on filings"
+    });
+    tableView(cardEl, ["Entity", "Mentions"], DATA.govEntities.map(d => [d.name, d.n]), ["s", "#"]);
+  }
+
+  /* What they talk about: issue mix + bills note — table-forward card */
+  {
+    const { box, cardEl } = card(app, "What the filings talk about",
+      "Every AIPAC activity is coded BUD (appropriations), FOR (foreign relations), or DEF (defense) — plus a handful of AGR/TRD/HOM entries. The activity text names specific bills: " + DATA.nBills + " distinct bills across 17 quarters.",
+      "Recurring subjects: security assistance appropriations to Israel, Iran sanctions bills, U.S.-Israel defense-partnership acts, antisemitism-related resolutions. Full activity text (their own words, citable) is in data/aipac_activities.csv.");
+    hbars(box, {
+      items: DATA.topBills.map(d => ({ label: d.bill + (d.hint ? " — " + d.hint : ""), value: d.n, note: "quarterly filings naming it" })),
+      fmt: "#", labelW: 380, valueName: "AIPAC filings naming the bill"
+    });
+    tableView(cardEl, ["Bill", "AIPAC filings", "First year", "Last year"],
+      DATA.billsTable.map(d => [d.bill, d.n, d.y0, d.y1]), ["s", "#", "s", "s"]);
+  }
+
+  /* Co-lobbyists */
+  {
+    const { box, cardEl } = card(app, "Who else lobbies AIPAC's bills",
+      "Organizations lobbying the same distinctive bills as AIPAC (bills with ≤200 lobbying engagements corpus-wide, so mega-bills like the NDAA don't drown the signal). Ranked by number of shared bills.",
+      "Both camps show up: allied groups (FDD Action, Hadassah, Republican Jewish Coalition, Christians United for Israel) AND opposing ones (J Street, Friends Committee on National Legislation, ACLU, MoveOn, Amnesty). Sharing a bill means lobbying ON it, not necessarily the same side — the overlap maps the battlefield, not the alliance.");
+    hbars(box, {
+      items: DATA.coLobby.map(d => ({ label: d.name, value: d.bills, note: fmtNum(d.filings) + " filings on those bills" })),
+      fmt: "#", labelW: 360, valueName: "shared distinctive bills"
+    });
+    tableView(cardEl, ["Organization", "Shared distinctive bills", "Filings on those bills"],
+      DATA.coLobby.map(d => [d.name, d.bills, d.filings]), ["s", "#", "#"]);
+  }
+
+  /* Israel-policy field */
+  {
+    const { box, cardEl } = card(app, "The wider Israel-policy lobbying field",
+      "Clients whose senate filing free-text mentions Israel/Gaza-related terms, ranked by matching filings (exploratory whole-word scan, ≥2 filings). Total lobbying spend (all issues) in the tooltip.",
+      "AIPAC sits in a crowded field: ADL, Republican Jewish Coalition, J Street, FDD Action, CUFI, ZOA, Jewish Federations, Hadassah, AJC — plus non-obvious entries like Chevron (Eastern-Mediterranean gas leases) and terror-victim litigation estates. Exploratory scan, not the curated lexicon pipeline; promote to a lexicon facet before citing in a finding.");
+    hbars(box, {
+      items: DATA.israelPlayers.map(d => ({ label: d.name, value: d.n, note: "total all-issue spend " + fmtMoney(d.spend) })),
+      fmt: "#", labelW: 360, valueName: "filings mentioning Israel terms"
+    });
+    tableView(cardEl, ["Client", "Israel-term filings", "Total spend (all issues)"],
+      DATA.israelPlayers.map(d => [d.name, d.n, d.spend]), ["s", "#", "$"]);
+  }
+
+  /* Giving */
+  {
+    const ps = DATA.partySplit || {};
+    const psLine = ["R", "D", "I"].filter(p => ps[p]).map(p =>
+      fmtMoney(ps[p].total) + " to " + ps[p].n + " " + (p === "R" ? "Republicans" : p === "D" ? "Democrats" : "Independents")).join(" · ");
+    const { box, cardEl } = card(app, "AIPAC's disclosed political giving (LD-203)",
+      "Top recipients of AIPAC's disclosed LD-203 contributions, 2022–2025. Total: " + fmtMoney(DATA.givingTotal) + " (amendment-deduplicated), 100% FECA contributions, clear election-year cadence. Member-matched giving splits " + psLine + " — bipartisan, tilted Republican ~63:37 by dollars.",
+      "Party/state brackets from the corpus members table (retired members hand-mapped, flagged in the CSV); committees, PACs and joint-fundraising entries carry no bracket. NOT shown here (different legal regime): AIPAC-affiliated Super-PAC spending (e.g. United Democracy Project) lives in FEC data, outside LD-203 — the same disclosure gap as crypto's Fairshake. LD-203 reports are registrant-filed; recipient strings lightly normalized.");
+    hbars(box, {
+      items: DATA.givingRecipients.map(d => ({ label: d.name, value: d.total, note: fmtNum(d.items) + " reported items" })),
+      fmt: "$", labelW: 300, valueName: "disclosed LD-203 contributions"
+    });
+    const sub2 = div("sub", null); sub2.textContent = "By year — election-year cadence";
+    cardEl.insertBefore(sub2, cardEl.querySelector(".foot"));
+    const b2 = div(null, null); cardEl.insertBefore(b2, cardEl.querySelector(".foot"));
+    columns(b2, {
+      x: DATA.givingByYear.map(d => String(d.y)), fmt: "$", height: 170,
+      series: [{ name: "Disclosed LD-203 giving", values: DATA.givingByYear.map(d => d.total), color: SLOT[1] }]
+    });
+    tableView(cardEl, ["Recipient", "Total", "Items"],
+      DATA.givingRecipients.map(d => [d.name, d.total, d.items]), ["s", "$", "#"]);
+  }
+
+  /* The team */
+  {
+    const { box, cardEl } = card(app, "The in-house team",
+      DATA.lobbyists.length + " registered in-house lobbyists across the window; no covered federal positions listed on the filings.", null);
+    hbars(box, {
+      items: DATA.lobbyists.map(d => ({ label: d.name, value: d.filings, note: d.years })),
+      fmt: "#", labelW: 260, valueName: "quarterly filings appearing on", rowH: 26
+    });
+    tableView(cardEl, ["Lobbyist", "Filings", "Active years"],
+      DATA.lobbyists.map(d => [d.name, d.filings, d.years]), ["s", "#", "s"]);
+  }
+
+  /* Caveats */
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2"); h.textContent = "How to read this (caveats that matter)"; c.appendChild(h);
+    const ul = document.createElement("ul"); ul.className = "caveats"; c.appendChild(ul);
+    DATA.caveats.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+  }
+})();
+
+</script>
+</body>
+</html>

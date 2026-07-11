@@ -1,0 +1,99 @@
+{
+  "_endpoint": "https://api.open.fec.gov/v1/committees/",
+  "_params": {
+    "q": "Protect Progress",
+    "per_page": 20
+  },
+  "_fetched_at": "2026-07-08T01:54:02.942542+00:00",
+  "response": {
+    "api_version": "1.0",
+    "pagination": {
+      "count": 2,
+      "is_count_exact": true,
+      "page": 1,
+      "pages": 1,
+      "per_page": 20
+    },
+    "results": [
+      {
+        "affiliated_committee_name": "NONE",
+        "candidate_ids": [],
+        "committee_id": "C00768051",
+        "committee_type": "N",
+        "committee_type_full": "PAC - Nonqualified",
+        "cycles": [
+          2022
+        ],
+        "designated_agent_city": "CHANDLER",
+        "designated_agent_first_name": "ROY",
+        "designated_agent_last_name": "TATEM",
+        "designated_agent_middle_name": "M",
+        "designated_agent_name": "TATEM, ROY M JR",
+        "designated_agent_phone_number": "6023012546",
+        "designated_agent_prefix": null,
+        "designated_agent_state": "AZ",
+        "designated_agent_street1": "1900 W. CHANDLER BLVD",
+        "designated_agent_street2": "STE 15-293",
+        "designated_agent_suffix": "JR",
+        "designated_agent_title": "PRESIDENT",
+        "designated_agent_zip": "85224",
+        "designation": "U",
+        "designation_full": "Unauthorized",
+        "filing_frequency": "A",
+        "first_f1_date": "2021-02-01",
+        "first_file_date": "2021-02-01",
+        "last_f1_date": "2021-02-09",
+        "last_file_date": "2022-11-21",
+        "name": "PROTECT OUR PROGRESS",
+        "organization_type": null,
+        "organization_type_full": null,
+        "party": null,
+        "party_full": null,
+        "sponsor_candidate_ids": null,
+        "sponsor_candidate_list": [],
+        "state": "AZ",
+        "treasurer_name": "DOUGLASS, MYRON MR"
+      },
+      {
+        "affiliated_committee_name": "FAIRSHAKE",
+        "candidate_ids": [],
+        "committee_id": "C00848440",
+        "committee_type": "O",
+        "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+        "cycles": [
+          2024,
+          2026
+        ],
+        "designated_agent_city": null,
+        "designated_agent_first_name": null,
+        "designated_agent_last_name": null,
+        "designated_agent_middle_name": null,
+        "designated_agent_name": null,
+        "designated_agent_phone_number": null,
+        "designated_agent_prefix": null,
+        "designated_agent_state": null,
+        "designated_agent_street1": null,
+        "designated_agent_street2": null,
+        "designated_agent_suffix": null,
+        "designated_agent_title": null,
+        "designated_agent_zip": null,
+        "designation": "U",
+        "designation_full": "Unauthorized",
+        "filing_frequency": "M",
+        "first_f1_date": "2023-08-18",
+        "first_file_date": "2023-08-18",
+        "last_f1_date": "2025-07-07",
+        "last_file_date": "2026-06-20",
+        "name": "PROTECT PROGRESS",
+        "organization_type": null,
+        "organization_type_full": null,
+        "party": null,
+        "party_full": null,
+        "sponsor_candidate_ids": null,
+        "sponsor_candidate_list": [],
+        "state": "MN",
+        "treasurer_name": "PHILIPCZYK, BRANDON"
+      }
+    ]
+  }
+}

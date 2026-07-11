@@ -1,0 +1,3086 @@
+{
+  "query": "162 entities from crypto_roster_core_diversified.txt",
+  "resolved_entities": [
+    {
+      "entity_id": "registrant:401103770",
+      "canonical_name": "PAYPAL, INC."
+    },
+    {
+      "entity_id": "registrant:40156",
+      "canonical_name": "VISA INC."
+    },
+    {
+      "entity_id": "registrant:23997",
+      "canonical_name": "MASTERCARD WORLDWIDE"
+    },
+    {
+      "entity_id": "registrant:9033",
+      "canonical_name": "CME GROUP, INC."
+    },
+    {
+      "entity_id": "registrant:401105904",
+      "canonical_name": "ROBINHOOD MARKETS, INC."
+    },
+    {
+      "entity_id": "registrant:401106823",
+      "canonical_name": "ANCHOR LABS, INC."
+    },
+    {
+      "entity_id": "registrant:401103932",
+      "canonical_name": "CITIGROUP WASHINGTON, INC."
+    },
+    {
+      "entity_id": "registrant:21687",
+      "canonical_name": "NATIONAL VENTURE CAPITAL ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:15678",
+      "canonical_name": "FUTURES INDUSTRY ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:400761286",
+      "canonical_name": "TD BANK, NA"
+    },
+    {
+      "entity_id": "registrant:1785",
+      "canonical_name": "AMERICAN BANKERS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401104319",
+      "canonical_name": "Fidelity National Information Systems, Inc. and Subsidiaries"
+    },
+    {
+      "entity_id": "registrant:400621887",
+      "canonical_name": "NORTHERN TRUST CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106310",
+      "canonical_name": "MOODY'S CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401104268",
+      "canonical_name": "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS"
+    },
+    {
+      "entity_id": "registrant:401107189",
+      "canonical_name": "WEB 3.0 TECHNOLOGIES FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:400534597",
+      "canonical_name": "BLACKROCK FUNDS SERVICES GROUP, LLC"
+    },
+    {
+      "entity_id": "registrant:48816",
+      "canonical_name": "FMR LLC"
+    },
+    {
+      "entity_id": "registrant:323672",
+      "canonical_name": "WESTERN UNION"
+    },
+    {
+      "entity_id": "registrant:401104962",
+      "canonical_name": "ACCENTURE FEDERAL SERVICES LLC"
+    },
+    {
+      "entity_id": "registrant:11322",
+      "canonical_name": "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS"
+    },
+    {
+      "entity_id": "registrant:27115",
+      "canonical_name": "NASDAQ, INC."
+    },
+    {
+      "entity_id": "registrant:2274",
+      "canonical_name": "AMERICAN EXPRESS COMPANY"
+    },
+    {
+      "entity_id": "registrant:401104925",
+      "canonical_name": "AMERICANS FOR FINANCIAL REFORM"
+    },
+    {
+      "entity_id": "registrant:19194",
+      "canonical_name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA"
+    },
+    {
+      "entity_id": "registrant:73293",
+      "canonical_name": "CONSUMER TECHNOLOGY ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:32362",
+      "canonical_name": "PUBLIC CITIZEN"
+    },
+    {
+      "entity_id": "registrant:54494",
+      "canonical_name": "AMAZON.COM SERVICES LLC"
+    },
+    {
+      "entity_id": "registrant:4733",
+      "canonical_name": "AMERICAN ASSOCIATION FOR JUSTICE"
+    },
+    {
+      "entity_id": "registrant:313010",
+      "canonical_name": "MANAGED FUNDS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401104236",
+      "canonical_name": "JPMORGAN CHASE HOLDINGS LLC"
+    },
+    {
+      "entity_id": "registrant:401106522",
+      "canonical_name": "WESTERN ALLIANCE BANCORPORATION"
+    },
+    {
+      "entity_id": "registrant:1694",
+      "canonical_name": "AARP"
+    },
+    {
+      "entity_id": "registrant:26400",
+      "canonical_name": "BANK OF AMERICA CORPORATION"
+    },
+    {
+      "entity_id": "registrant:83854",
+      "canonical_name": "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES"
+    },
+    {
+      "entity_id": "registrant:401103094",
+      "canonical_name": "Electronic Transactions Association"
+    },
+    {
+      "entity_id": "registrant:48510",
+      "canonical_name": "CBOE GLOBAL MARKETS, INC."
+    },
+    {
+      "entity_id": "registrant:285494",
+      "canonical_name": "INSURED RETIREMENT INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401104951",
+      "canonical_name": "CROSS RIVER BANK"
+    },
+    {
+      "entity_id": "registrant:400531588",
+      "canonical_name": "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS"
+    },
+    {
+      "entity_id": "registrant:401103843",
+      "canonical_name": "CROWE LLP"
+    },
+    {
+      "entity_id": "registrant:25157",
+      "canonical_name": "MICHIGAN CREDIT UNION LEAGUE"
+    },
+    {
+      "entity_id": "registrant:10627",
+      "canonical_name": "CONSUMER BANKERS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:25842",
+      "canonical_name": "MORGAN STANLEY & CO. LLC"
+    },
+    {
+      "entity_id": "registrant:83535",
+      "canonical_name": "FINANCIAL SERVICES FORUM"
+    },
+    {
+      "entity_id": "registrant:22371",
+      "canonical_name": "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS"
+    },
+    {
+      "entity_id": "registrant:401105434",
+      "canonical_name": "GLOBAL PAYMENTS, INC."
+    },
+    {
+      "entity_id": "registrant:401103625",
+      "canonical_name": "MONEYGRAM INTERNATIONAL INC."
+    },
+    {
+      "entity_id": "registrant:29620",
+      "canonical_name": "WELLS FARGO & COMPANY"
+    },
+    {
+      "entity_id": "registrant:18694",
+      "canonical_name": "HSBC TECHNOLOGY AND SERVICES USA INC."
+    },
+    {
+      "entity_id": "registrant:24863",
+      "canonical_name": "MELLON FINANCIAL SERVICES CORPORATION #1"
+    },
+    {
+      "entity_id": "registrant:77435",
+      "canonical_name": "HUNTINGTON BANCSHARES INCORPORATED"
+    },
+    {
+      "entity_id": "registrant:401105885",
+      "canonical_name": "AMERICAN SECURITIES ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401106197",
+      "canonical_name": "CHAMBER OF PROGRESS"
+    },
+    {
+      "entity_id": "registrant:38756",
+      "canonical_name": "CHAMBER OF COMMERCE OF THE U.S.A."
+    },
+    {
+      "entity_id": "registrant:23986",
+      "canonical_name": "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY"
+    },
+    {
+      "entity_id": "registrant:283914",
+      "canonical_name": "FIFTH THIRD BANCORP"
+    },
+    {
+      "entity_id": "registrant:401106233",
+      "canonical_name": "STRIPE, INC."
+    },
+    {
+      "entity_id": "registrant:5290",
+      "canonical_name": "BANK POLICY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401107501",
+      "canonical_name": "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES"
+    },
+    {
+      "entity_id": "registrant:28925",
+      "canonical_name": "NCR VOYIX CORPORATION (FKA NCR CORPORATION)"
+    },
+    {
+      "entity_id": "registrant:401108875",
+      "canonical_name": "CLEANSPARK, INC"
+    },
+    {
+      "entity_id": "registrant:401105527",
+      "canonical_name": "ATOLLetc LLC"
+    },
+    {
+      "entity_id": "registrant:401109580",
+      "canonical_name": "PwC US Group LLP (fka PRICEWATERHOUSECOOPERS)"
+    },
+    {
+      "entity_id": "registrant:401105012",
+      "canonical_name": "BNP PARIBAS RCC, INC."
+    },
+    {
+      "entity_id": "registrant:401106701",
+      "canonical_name": "WEST REALM SHIRES SERVICES, INC. D/B/A FTX US"
+    },
+    {
+      "entity_id": "registrant:401109215",
+      "canonical_name": "EXODUS MOVEMENT, INC."
+    },
+    {
+      "entity_id": "registrant:400386789",
+      "canonical_name": "NATIONAL FOOTBALL LEAGUE"
+    },
+    {
+      "entity_id": "registrant:401105867",
+      "canonical_name": "HUMANITY FORWARD"
+    },
+    {
+      "entity_id": "registrant:28663",
+      "canonical_name": "NATIONAL TAXPAYERS UNION"
+    },
+    {
+      "entity_id": "registrant:401109113",
+      "canonical_name": "DIGITAL ENERGY COUNCIL"
+    },
+    {
+      "entity_id": "registrant:401103225",
+      "canonical_name": "AMERICANS FOR PROSPERITY"
+    },
+    {
+      "entity_id": "registrant:401107689",
+      "canonical_name": "LONDON STOCK EXCHANGE GROUP"
+    },
+    {
+      "entity_id": "registrant:401105062",
+      "canonical_name": "STANDARD CHARTERED BANK"
+    },
+    {
+      "entity_id": "registrant:401104412",
+      "canonical_name": "THE INSTITUTE OF INTERNAL AUDITORS"
+    },
+    {
+      "entity_id": "registrant:401109106",
+      "canonical_name": "DECENTRALIZATION RESEARCH CENTER"
+    },
+    {
+      "entity_id": "registrant:401106716",
+      "canonical_name": "TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)"
+    },
+    {
+      "entity_id": "registrant:19877",
+      "canonical_name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)"
+    },
+    {
+      "entity_id": "registrant:74534",
+      "canonical_name": "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)"
+    },
+    {
+      "entity_id": "registrant:69116",
+      "canonical_name": "TECHNOLOGY NETWORK AKA TECHNET"
+    },
+    {
+      "entity_id": "registrant:401108418",
+      "canonical_name": "SMBC AMERICAS HOLDINGS, INC."
+    },
+    {
+      "entity_id": "registrant:31667",
+      "canonical_name": "THE PNC FINANCIAL SERVICES GROUP"
+    },
+    {
+      "entity_id": "registrant:401105458",
+      "canonical_name": "FDD ACTION"
+    },
+    {
+      "entity_id": "registrant:401109630",
+      "canonical_name": "BITDEER TECHNOLOGIES GROUP"
+    },
+    {
+      "entity_id": "registrant:401109833",
+      "canonical_name": "SMARTCONTRACT INC."
+    },
+    {
+      "entity_id": "registrant:20128",
+      "canonical_name": "INVESTMENT COMPANY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:3960",
+      "canonical_name": "ACCENTURE, LLP"
+    },
+    {
+      "entity_id": "registrant:400503478",
+      "canonical_name": "ALTERNATIVE INVESTMENT MANAGEMENT ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401103603",
+      "canonical_name": "VMWARE, INC."
+    },
+    {
+      "entity_id": "registrant:401108414",
+      "canonical_name": "WORLDPAY"
+    },
+    {
+      "entity_id": "registrant:401106809",
+      "canonical_name": "CELO FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:401108761",
+      "canonical_name": "PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC"
+    },
+    {
+      "entity_id": "registrant:401108118",
+      "canonical_name": "Nova Labs, Inc."
+    }
+  ],
+  "ld203_filer_names": [
+    "AARP",
+    "ACCENTURE FEDERAL SERVICES LLC",
+    "ACCENTURE, LLP",
+    "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS",
+    "ALTERNATIVE INVESTMENT MANAGEMENT ASSOCIATION",
+    "AMAZON.COM SERVICES LLC",
+    "AMERICAN ASSOCIATION FOR JUSTICE",
+    "AMERICAN BANKERS ASSOCIATION",
+    "AMERICAN EXPRESS COMPANY",
+    "AMERICAN SECURITIES ASSOCIATION",
+    "AMERICANS FOR FINANCIAL REFORM",
+    "AMERICANS FOR PROSPERITY",
+    "ANCHOR LABS, INC.",
+    "ATOLLETC LLC",
+    "BANK OF AMERICA CORPORATION",
+    "BANK POLICY INSTITUTE",
+    "BITDEER TECHNOLOGIES GROUP",
+    "BLACKROCK FUNDS SERVICES GROUP, LLC",
+    "BNP PARIBAS RCC, INC.",
+    "CBOE GLOBAL MARKETS, INC.",
+    "CELO FOUNDATION",
+    "CHAMBER OF COMMERCE OF THE U.S.A.",
+    "CHAMBER OF PROGRESS",
+    "CITIGROUP WASHINGTON, INC.",
+    "CLEANSPARK, INC",
+    "CME GROUP, INC.",
+    "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS",
+    "CONSUMER BANKERS ASSOCIATION",
+    "CONSUMER TECHNOLOGY ASSOCIATION",
+    "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS",
+    "CROSS RIVER BANK",
+    "CROWE LLP",
+    "DECENTRALIZATION RESEARCH CENTER",
+    "DIGITAL ENERGY COUNCIL",
+    "ELECTRONIC TRANSACTIONS ASSOCIATION",
+    "EXODUS MOVEMENT, INC.",
+    "FDD ACTION",
+    "FIDELITY NATIONAL INFORMATION SYSTEMS, INC. AND SUBSIDIARIES",
+    "FIFTH THIRD BANCORP",
+    "FINANCIAL SERVICES FORUM",
+    "FMR LLC",
+    "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",
+    "FUTURES INDUSTRY ASSOCIATION",
+    "GLOBAL PAYMENTS, INC.",
+    "HSBC TECHNOLOGY AND SERVICES USA INC.",
+    "HUMANITY FORWARD",
+    "HUNTINGTON BANCSHARES INCORPORATED",
+    "INDEPENDENT COMMUNITY BANKERS OF AMERICA",
+    "INSURED RETIREMENT INSTITUTE",
+    "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)",
+    "INVESTMENT COMPANY INSTITUTE",
+    "JPMORGAN CHASE HOLDINGS LLC",
+    "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS",
+    "LONDON STOCK EXCHANGE GROUP",
+    "MANAGED FUNDS ASSOCIATION",
+    "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+    "MASTERCARD WORLDWIDE",
+    "MELLON FINANCIAL SERVICES CORPORATION #1",
+    "MICHIGAN CREDIT UNION LEAGUE",
+    "MONEYGRAM INTERNATIONAL INC.",
+    "MOODY'S CORPORATION",
+    "MORGAN STANLEY & CO. LLC",
+    "NASDAQ, INC.",
+    "NATIONAL FOOTBALL LEAGUE",
+    "NATIONAL TAXPAYERS UNION",
+    "NATIONAL VENTURE CAPITAL ASSOCIATION",
+    "NCR VOYIX CORPORATION (FKA NCR CORPORATION)",
+    "NORTHERN TRUST CORPORATION",
+    "NOVA LABS, INC.",
+    "PAYPAL, INC.",
+    "PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC",
+    "PUBLIC CITIZEN",
+    "PWC US GROUP LLP",
+    "ROBINHOOD MARKETS, INC.",
+    "SMARTCONTRACT INC.",
+    "SMBC AMERICAS HOLDINGS, INC.",
+    "STANDARD CHARTERED BANK",
+    "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES",
+    "STRIPE, INC.",
+    "TD BANK, NA",
+    "TECHNOLOGY NETWORK AKA TECHNET",
+    "THE INSTITUTE OF INTERNAL AUDITORS",
+    "THE PNC FINANCIAL SERVICES GROUP",
+    "TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)",
+    "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)",
+    "VISA INC.",
+    "VMWARE, INC.",
+    "WEB 3.0 TECHNOLOGIES FOUNDATION",
+    "WELLS FARGO & COMPANY",
+    "WEST REALM SHIRES SERVICES, INC. D/B/A FTX US",
+    "WESTERN ALLIANCE BANCORPORATION",
+    "WESTERN UNION",
+    "WORLDPAY"
+  ],
+  "client_only": [
+    "Securities Industry and Financial Markets Association (SIFMA)",
+    "Paxos Trust Company, LLC",
+    "Regions Financial Corporation",
+    "Hedera Hashgraph, LLC",
+    "ATMOSPHERE I, LLC, FORMERLY IGNEIO, LLC",
+    "GLOBAL TRADING SYSTEMS, LLC",
+    "American Transaction Processors Coalition",
+    "LMAX Group",
+    "VaultLink Inc.",
+    "OZONE NETWORKS, INC. D/B/A OPENSEA",
+    "AngelList",
+    "TAXBIT INC.",
+    "LAW OFFICES OF MICHAEL JASON LEE, APLC (ON BEHALF OF TETHER OPERATIONS LIMITED)",
+    "Mastercard International Incorporated",
+    "Tether Operations, S.A. de C.V.",
+    "FIDELITY INVESTMENTS",
+    "ORCHID LABS, INC.",
+    "Credit Suisse Securities (USA) LLC",
+    "JARDEN ZINC PRODUCTS",
+    "Sujitech, LLC",
+    "IEX Group, Inc.",
+    "DYDX TRADING INC.",
+    "Proof of Stake Alliance",
+    "BITWISE ASSET MANAGEMENT",
+    "NEW YORK STATE BAR ASSOCIATION",
+    "COMMITTEE ON CAPITAL MARKETS REGULATION",
+    "FALCONX BRAVO INC.",
+    "Sorare SAS",
+    "Flexa Inc.",
+    "NORTH ISLAND VENTURES, LLC",
+    "SIEVAKO",
+    "CF Secured LLC",
+    "THE CLEARING HOUSE ASSOCIATION",
+    "TRM LABS, INC.",
+    "CHIA NETWORKS",
+    "CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP",
+    "SWIFT, INC.",
+    "MELLON FINANCIAL SERVICES CORPORTATION #1",
+    "BRALE INC.",
+    "PROSUS GROUP N.V.",
+    "Securitize, Inc.",
+    "CHIA NETWORK, INC.",
+    "Charles Schwab & Co., Inc.",
+    "THE PAYMENT CHOICE COALITION",
+    "ECURRENCY",
+    "GENRAE",
+    "SAGINT",
+    "Prometheum",
+    "Visa U.S.A. Inc.",
+    "CRUSOE TECHNOLOGIES (FKA CRUSOE ENERGY)",
+    "U.S. CHAMBER OF COMMERCE - C_TEC AND CCMC",
+    "FIR TREE PARTNERS",
+    "WISDOMTREE DIGITAL MANAGEMENT",
+    "SF OPERATIONS, INC",
+    "LIBERLAND"
+  ],
+  "unresolved": [
+    "Block, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Fiserv (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Meta Platforms, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Electronic Payments Coalition (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Shopify (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Cedar Innovation Foundation (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Ernst & Young LLP (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "U.S. Bancorp (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "INSTITUTE OF INTERNAL AUDITORS (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "IBM (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "S&P Global (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Mastercard (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "National Association of Federally-Insured Credit Unions (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Association of National Advertisers (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)"
+  ],
+  "results": {
+    "totals": {
+      "raw_items": 34359,
+      "raw_total": 117193583.0,
+      "items": 32073,
+      "total": 110715690.0
+    },
+    "by_type": [
+      {
+        "contribution_type": "feca",
+        "items": 31522,
+        "total": 82298663.0
+      },
+      {
+        "contribution_type": "he",
+        "items": 420,
+        "total": 17382107.0
+      },
+      {
+        "contribution_type": "pic",
+        "items": 9,
+        "total": 6443894.0
+      },
+      {
+        "contribution_type": "me",
+        "items": 115,
+        "total": 4360652.0
+      },
+      {
+        "contribution_type": "ple",
+        "items": 7,
+        "total": 230375.0
+      }
+    ],
+    "by_year": [
+      {
+        "filing_year": 2022,
+        "total": 26445034.0
+      },
+      {
+        "filing_year": 2023,
+        "total": 26072784.0
+      },
+      {
+        "filing_year": 2024,
+        "total": 29605505.0
+      },
+      {
+        "filing_year": 2025,
+        "total": 28592366.0
+      }
+    ],
+    "by_filer": [
+      {
+        "filer_type": "organization",
+        "items": 29093,
+        "total": 106972245.0
+      },
+      {
+        "filer_type": "lobbyist",
+        "items": 2980,
+        "total": 3743444.0
+      }
+    ],
+    "recipients": [
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL BLACK CAUCUS",
+        "items": 15,
+        "total": 3484013.0
+      },
+      {
+        "recipient": "DONATION FOR THE CONSTRUCTION OF THE CAPITOL VISITOR CENTER TUNNEL IN THE THOMAS JEFFERSON BUILDING (CONGRESSIONAL CROSSROADS)",
+        "items": 1,
+        "total": 2500000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL HISPANIC CAUCUS",
+        "items": 8,
+        "total": 2395000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP; VICE-PRESIDENT JD VANCE",
+        "items": 1,
+        "total": 2000000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD J. TRUMP",
+        "items": 2,
+        "total": 1888894.0
+      },
+      {
+        "recipient": "DONALD J TRUMP AND JD VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN NATIONAL MUSEUM OF AMERICAN LATINO. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL ASIAN PACIFIC AMERICAN CAUCUS",
+        "items": 2,
+        "total": 800000.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE, INC",
+        "items": 1,
+        "total": 750000.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 59,
+        "total": 720733.0
+      },
+      {
+        "recipient": "NRCC",
+        "items": 54,
+        "total": 710800.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE",
+        "items": 50,
+        "total": 658294.0
+      },
+      {
+        "recipient": "DSCC",
+        "items": 65,
+        "total": 631500.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION",
+        "items": 14,
+        "total": 628000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE",
+        "items": 34,
+        "total": 566000.0
+      },
+      {
+        "recipient": "DCCC",
+        "items": 50,
+        "total": 562950.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE",
+        "items": 39,
+        "total": 552200.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 11,
+        "total": 505000.0
+      },
+      {
+        "recipient": "DONALD TRUMP AND JAMES DAVID VANCE",
+        "items": 1,
+        "total": 500000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE",
+        "items": 30,
+        "total": 427500.0
+      },
+      {
+        "recipient": "MEMBERS OF THE ASIAN PACIFIC ISLANDER CAUCUS",
+        "items": 1,
+        "total": 400000.0
+      },
+      {
+        "recipient": "REP. FRENCH HILL",
+        "items": 97,
+        "total": 295700.0
+      },
+      {
+        "recipient": "ANDY BARR",
+        "items": 98,
+        "total": 287017.0
+      },
+      {
+        "recipient": "REPS. DON BEYER AND BILL FOSTER WERE AMONG THE HONOREES, CTA DIGITAL PATRIOTS DINNER",
+        "items": 1,
+        "total": 276989.0
+      },
+      {
+        "recipient": "FRENCH HILL",
+        "items": 94,
+        "total": 276650.0
+      },
+      {
+        "recipient": "BILL HUIZENGA",
+        "items": 91,
+        "total": 251500.0
+      },
+      {
+        "recipient": "DONALD TRUMP",
+        "items": 2,
+        "total": 250102.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GERSHWIN PRIZE",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2025 NSO POPS SEASON",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "GAIL MCGOVERN, BOARD MEMBER, MARY BERNER, BOARD MEMBER, DAVID BRANDON, BOARD MEMBER, HERMAN BULLS, BOARD MEMBER, CHRISTINA CHIU, BOARD MEMBER, DAVID CLARK, BOARD MEMBER, STEVEN COLLIS, BOARD MEMBER",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE NSO POPS SEASON (PAYMENT 2 OF 2)",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "EQUALITY PAC",
+        "items": 60,
+        "total": 249000.0
+      },
+      {
+        "recipient": "REP. BILL HUIZENGA",
+        "items": 78,
+        "total": 239985.0
+      },
+      {
+        "recipient": "REP. HAKEEM JEFFRIES",
+        "items": 62,
+        "total": 232000.0
+      },
+      {
+        "recipient": "REP. BILL FOSTER",
+        "items": 110,
+        "total": 229000.0
+      },
+      {
+        "recipient": "NATL REP SEN CMTE(NRSC)-FEDERAL ACCT",
+        "items": 13,
+        "total": 225000.0
+      },
+      {
+        "recipient": "2025 CONGRESSIONAL BASEBALL GAME",
+        "items": 2,
+        "total": 225000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS PAC",
+        "items": 56,
+        "total": 221899.0
+      },
+      {
+        "recipient": "NEW DEMOCRAT COALITION ACTION FUND",
+        "items": 46,
+        "total": 218500.0
+      },
+      {
+        "recipient": "PATRICK MCHENRY",
+        "items": 59,
+        "total": 215400.0
+      },
+      {
+        "recipient": "REP. ANN WAGNER",
+        "items": 81,
+        "total": 214598.0
+      },
+      {
+        "recipient": "REP. KATHERINE CLARK",
+        "items": 67,
+        "total": 209250.0
+      },
+      {
+        "recipient": "REP. ANDY BARR",
+        "items": 70,
+        "total": 209040.0
+      },
+      {
+        "recipient": "SEN. JON TESTER",
+        "items": 70,
+        "total": 206250.0
+      },
+      {
+        "recipient": "TANNIA TALENTO, REGIONAL DIRECTOR OF NORTHERN VIRGINIA FOR U.S. SENATOR MARK R. WARNER",
+        "items": 4,
+        "total": 205000.0
+      },
+      {
+        "recipient": "HOUSE PROBLEM SOLVERS CAUCUS AND SEN. JACKY ROSEN",
+        "items": 1,
+        "total": 203722.0
+      },
+      {
+        "recipient": "ELEANOR HOLMES NORTON",
+        "items": 2,
+        "total": 200000.0
+      },
+      {
+        "recipient": "CARLEEN HERRING, SECRETARY, US ECONOMIC DEVELOPMENT ADMINISTRATION",
+        "items": 2,
+        "total": 200000.0
+      },
+      {
+        "recipient": "DEM CONG CAMP CMTE(DCCC)-FEDERAL ACCT",
+        "items": 11,
+        "total": 195000.0
+      },
+      {
+        "recipient": "REP. BRYAN STEIL",
+        "items": 72,
+        "total": 194500.0
+      },
+      {
+        "recipient": "RICHARD NEAL",
+        "items": 52,
+        "total": 185500.0
+      },
+      {
+        "recipient": "REP. SUZAN DELBENE",
+        "items": 69,
+        "total": 182500.0
+      },
+      {
+        "recipient": "TOM EMMER",
+        "items": 63,
+        "total": 181500.0
+      },
+      {
+        "recipient": "SEN. BILL HAGERTY",
+        "items": 68,
+        "total": 180500.0
+      },
+      {
+        "recipient": "BOARD MEMBER - DONALD LAYTON, FREDDIE MAC, FEDERAL GSE",
+        "items": 1,
+        "total": 180000.0
+      },
+      {
+        "recipient": "SEN. MARK WARNER",
+        "items": 55,
+        "total": 177200.0
+      },
+      {
+        "recipient": "HAKEEM JEFFRIES",
+        "items": 53,
+        "total": 172100.0
+      },
+      {
+        "recipient": "REP. RICHARD NEAL",
+        "items": 47,
+        "total": 172000.0
+      },
+      {
+        "recipient": "REP. JOYCE BEATTY",
+        "items": 77,
+        "total": 171500.0
+      },
+      {
+        "recipient": "BILL FOSTER",
+        "items": 77,
+        "total": 169500.0
+      },
+      {
+        "recipient": "ANN WAGNER",
+        "items": 71,
+        "total": 167000.0
+      },
+      {
+        "recipient": "TIM SCOTT",
+        "items": 52,
+        "total": 165750.0
+      },
+      {
+        "recipient": "REP. SEAN CASTEN",
+        "items": 77,
+        "total": 164500.0
+      },
+      {
+        "recipient": "REP. BRAD SHERMAN",
+        "items": 60,
+        "total": 162500.0
+      },
+      {
+        "recipient": "REP. PETE AGUILAR",
+        "items": 46,
+        "total": 160000.0
+      },
+      {
+        "recipient": "SEN. TIM SCOTT",
+        "items": 47,
+        "total": 159000.0
+      },
+      {
+        "recipient": "CHC BOLD PAC",
+        "items": 36,
+        "total": 158500.0
+      },
+      {
+        "recipient": "ANDREW GARBARINO",
+        "items": 73,
+        "total": 157000.0
+      },
+      {
+        "recipient": "REP. PATRICK TIMOTHY MCHENRY",
+        "items": 45,
+        "total": 156250.0
+      },
+      {
+        "recipient": "GREGORY MEEKS",
+        "items": 64,
+        "total": 155000.0
+      },
+      {
+        "recipient": "REP. STEVE SCALISE",
+        "items": 42,
+        "total": 154000.0
+      },
+      {
+        "recipient": "JOHN THUNE",
+        "items": 39,
+        "total": 152000.0
+      },
+      {
+        "recipient": "THOM TILLIS",
+        "items": 47,
+        "total": 151750.0
+      },
+      {
+        "recipient": "REPUBLICAN NATIONAL COMMITTEE",
+        "items": 8,
+        "total": 150035.0
+      },
+      {
+        "recipient": "REP. JASON SMITH",
+        "items": 40,
+        "total": 150000.0
+      },
+      {
+        "recipient": "DEM SEN CAMP CMTE(DSCC)-FEDERAL ACCT",
+        "items": 10,
+        "total": 150000.0
+      },
+      {
+        "recipient": "BRYAN STEIL",
+        "items": 76,
+        "total": 149500.0
+      },
+      {
+        "recipient": "REP. JIM HIMES",
+        "items": 64,
+        "total": 149500.0
+      },
+      {
+        "recipient": "JIM HIMES",
+        "items": 73,
+        "total": 147500.0
+      },
+      {
+        "recipient": "MARK WARNER",
+        "items": 64,
+        "total": 146850.0
+      },
+      {
+        "recipient": "REP. GREGORY MEEKS",
+        "items": 63,
+        "total": 146700.0
+      },
+      {
+        "recipient": "REP FRENCH HILL",
+        "items": 40,
+        "total": 146500.0
+      },
+      {
+        "recipient": "REP. WILLIAM PATRICK HUIZENGA",
+        "items": 57,
+        "total": 145500.0
+      },
+      {
+        "recipient": "REP. PATRICK MCHENRY",
+        "items": 46,
+        "total": 145500.0
+      },
+      {
+        "recipient": "SEN STEVE DAINES",
+        "items": 26,
+        "total": 145000.0
+      },
+      {
+        "recipient": "BLAINE LUETKEMEYER",
+        "items": 51,
+        "total": 141900.0
+      },
+      {
+        "recipient": "REP. YOUNG KIM",
+        "items": 56,
+        "total": 141385.0
+      },
+      {
+        "recipient": "BILL HAGERTY",
+        "items": 47,
+        "total": 141250.0
+      },
+      {
+        "recipient": "REP. MIKE CAREY",
+        "items": 69,
+        "total": 140700.0
+      },
+      {
+        "recipient": "REP. MIKE JOHNSON",
+        "items": 33,
+        "total": 140033.0
+      },
+      {
+        "recipient": "JOHN F. KENNEDY LIBRARY FOUNDATION",
+        "items": 6,
+        "total": 140000.0
+      },
+      {
+        "recipient": "REP. J. FRENCH HILL",
+        "items": 48,
+        "total": 139500.0
+      },
+      {
+        "recipient": "YOUNG KIM",
+        "items": 61,
+        "total": 139000.0
+      },
+      {
+        "recipient": "REP. DARIN LAHOOD",
+        "items": 44,
+        "total": 135685.0
+      },
+      {
+        "recipient": "NATL REP CONG CMTE(NRCC)-FEDERAL ACCT",
+        "items": 9,
+        "total": 135000.0
+      },
+      {
+        "recipient": "JOSH GOTTHEIMER",
+        "items": 55,
+        "total": 134000.0
+      },
+      {
+        "recipient": "MODERATE DEMOCRATS PAC",
+        "items": 29,
+        "total": 132500.0
+      },
+      {
+        "recipient": "SEN. MIKE ROUNDS",
+        "items": 47,
+        "total": 132500.0
+      },
+      {
+        "recipient": "REP TOM EMMER JR",
+        "items": 35,
+        "total": 130500.0
+      },
+      {
+        "recipient": "SEN. CATHERINE CORTEZ MASTO",
+        "items": 50,
+        "total": 130334.0
+      },
+      {
+        "recipient": "SEN. THOM TILLIS",
+        "items": 42,
+        "total": 129750.0
+      },
+      {
+        "recipient": "REP. WARREN DAVIDSON",
+        "items": 55,
+        "total": 128200.0
+      },
+      {
+        "recipient": "REP ANDY BARR IV",
+        "items": 36,
+        "total": 127000.0
+      },
+      {
+        "recipient": "REP. STEVEN HORSFORD",
+        "items": 50,
+        "total": 127000.0
+      },
+      {
+        "recipient": "REP. ANN LOUISE WAGNER",
+        "items": 47,
+        "total": 126500.0
+      },
+      {
+        "recipient": "REP. ANDREW GARBARINO",
+        "items": 50,
+        "total": 125090.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE NATIONAL ARCHIVES CONGRESSIONAL OPEN HOUSE AND A TWO-YEAR SILVER LEVEL CORPORATE COUNCIL MEMBERSHIP",
+        "items": 1,
+        "total": 125000.0
+      },
+      {
+        "recipient": "REP. LINDA SANCHEZ",
+        "items": 58,
+        "total": 125000.0
+      },
+      {
+        "recipient": "REP. TERRI SEWELL",
+        "items": 54,
+        "total": 124500.0
+      },
+      {
+        "recipient": "REP BILL HUIZENGA",
+        "items": 36,
+        "total": 124500.0
+      },
+      {
+        "recipient": "KATIE BRITT",
+        "items": 43,
+        "total": 124250.0
+      },
+      {
+        "recipient": "JON TESTER",
+        "items": 56,
+        "total": 123950.0
+      },
+      {
+        "recipient": "DEMOCRATIC NATIONAL COMMITTEE",
+        "items": 45,
+        "total": 123902.0
+      },
+      {
+        "recipient": "JOYCE BEATTY",
+        "items": 56,
+        "total": 123000.0
+      },
+      {
+        "recipient": "REP JASON SMITH",
+        "items": 32,
+        "total": 122500.0
+      },
+      {
+        "recipient": "NRCC BUILDING FUND",
+        "items": 3,
+        "total": 120000.0
+      },
+      {
+        "recipient": "REP HAKEEM JEFFRIES",
+        "items": 28,
+        "total": 120000.0
+      },
+      {
+        "recipient": "NRSC BUILDING FUND",
+        "items": 3,
+        "total": 120000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CHC",
+        "items": 3,
+        "total": 120000.0
+      },
+      {
+        "recipient": "REP. RICHARD EDMUND NEAL",
+        "items": 33,
+        "total": 119000.0
+      },
+      {
+        "recipient": "SEN. JOHN THUNE",
+        "items": 30,
+        "total": 117595.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER, JR",
+        "items": 38,
+        "total": 117500.0
+      },
+      {
+        "recipient": "REP. RITCHIE TORRES",
+        "items": 51,
+        "total": 115900.0
+      },
+      {
+        "recipient": "REP. JOSH GOTTHEIMER",
+        "items": 45,
+        "total": 115500.0
+      },
+      {
+        "recipient": "GHADA IJAM, CIO OF FEDERAL RESERVE",
+        "items": 1,
+        "total": 115000.0
+      },
+      {
+        "recipient": "BOARD MEMBER - GHADA IJAM",
+        "items": 1,
+        "total": 115000.0
+      },
+      {
+        "recipient": "FEDERAL RESERVE BANK OF RICHMOND - GHADA IJAM",
+        "items": 1,
+        "total": 115000.0
+      },
+      {
+        "recipient": "REP. BRITTANY PETTERSEN",
+        "items": 52,
+        "total": 114500.0
+      },
+      {
+        "recipient": "REP. BLAINE LUETKEMEYER",
+        "items": 39,
+        "total": 112900.0
+      },
+      {
+        "recipient": "SEN. JACKY ROSEN",
+        "items": 43,
+        "total": 112781.0
+      },
+      {
+        "recipient": "MIKE JOHNSON",
+        "items": 26,
+        "total": 112500.0
+      },
+      {
+        "recipient": "REP. RON ESTES",
+        "items": 42,
+        "total": 112000.0
+      },
+      {
+        "recipient": "PETE AGUILAR",
+        "items": 38,
+        "total": 112000.0
+      },
+      {
+        "recipient": "REP JOSH GOTTHEIMER",
+        "items": 31,
+        "total": 111500.0
+      },
+      {
+        "recipient": "REP. ANDY H. BARR, IV",
+        "items": 35,
+        "total": 110500.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY EUGENE SCOTT",
+        "items": 33,
+        "total": 110500.0
+      },
+      {
+        "recipient": "JASON SMITH",
+        "items": 38,
+        "total": 110500.0
+      },
+      {
+        "recipient": "LISA BLUNT ROCHESTER",
+        "items": 38,
+        "total": 109750.0
+      },
+      {
+        "recipient": "REP. BRAD SCHNEIDER",
+        "items": 42,
+        "total": 109500.0
+      },
+      {
+        "recipient": "SEN. KYRSTEN SINEMA",
+        "items": 47,
+        "total": 108090.0
+      },
+      {
+        "recipient": "KEVIN MCCARTHY",
+        "items": 22,
+        "total": 107500.0
+      },
+      {
+        "recipient": "REP. JOSHUA S. GOTTHEIMER",
+        "items": 46,
+        "total": 107000.0
+      },
+      {
+        "recipient": "MIKE ROUNDS",
+        "items": 34,
+        "total": 106500.0
+      },
+      {
+        "recipient": "REP ANN WAGNER",
+        "items": 27,
+        "total": 106000.0
+      },
+      {
+        "recipient": "REP MIKE JOHNSON",
+        "items": 25,
+        "total": 106000.0
+      },
+      {
+        "recipient": "REP. W. BLAINE LUETKEMEYER",
+        "items": 34,
+        "total": 105000.0
+      },
+      {
+        "recipient": "US DEPT OF CUSTOMS AND BORDER PROTECTION GORDON HARMON",
+        "items": 1,
+        "total": 105000.0
+      },
+      {
+        "recipient": "REP. STENY HOYER",
+        "items": 30,
+        "total": 105000.0
+      },
+      {
+        "recipient": "REP. ZACH NUNN",
+        "items": 53,
+        "total": 104000.0
+      },
+      {
+        "recipient": "SEN. STEVE DAINES",
+        "items": 33,
+        "total": 104000.0
+      },
+      {
+        "recipient": "KATHERINE CLARK",
+        "items": 40,
+        "total": 103000.0
+      },
+      {
+        "recipient": "REP. DAN MEUSER",
+        "items": 40,
+        "total": 102750.0
+      },
+      {
+        "recipient": "REP STEVE SCALISE",
+        "items": 23,
+        "total": 102500.0
+      },
+      {
+        "recipient": "REP. VERN BUCHANAN",
+        "items": 29,
+        "total": 102090.0
+      },
+      {
+        "recipient": "REP. VICENTE GONZALEZ",
+        "items": 48,
+        "total": 101090.0
+      },
+      {
+        "recipient": "BRAD SHERMAN",
+        "items": 43,
+        "total": 101000.0
+      },
+      {
+        "recipient": "KYRSTEN SINEMA",
+        "items": 30,
+        "total": 100500.0
+      },
+      {
+        "recipient": "SEN JOHN THUNE",
+        "items": 24,
+        "total": 100500.0
+      },
+      {
+        "recipient": "BOARD MEMBERS - MARTIN GRUENBERG, FDIC FED GOV; MICHELLE W. BOWMAN, FED RES FED GOV; GROVETTA GARDINEER, OCC FED GOV; RODNEY E HOOD, NAT CRED UNION ADM, FED G; ADRIANNE TODMAN, HUD FED GOV",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "BRAD SCHNEIDER",
+        "items": 40,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE PROGRAM \"FROM HER LENS: PERSPECTIVES ON RACE\"",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GERSHWIN PRIZE FOR POPULAR SONG EVENT",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "US DEPT. OF JUSTICE - SHINA MAJEED",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE WOMEN'S E3 SUMMIT (PAYMENT 1 OF 2)",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "MARTIN GRUENBERG FDIC CHAIRMAN, RODNEY E. HOOD NATIONAL CREDIT UNION ADMINISTRATION, GROVETTA GARDINEER OFFICE OF THE COMPTROLLER OF THE CURRENCY, ADRIANNE TODMAN U.S. DEPT OF HOUSING AND UD",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "ASIAN PACIFIC AMERICAN INSTITUTE FOR CONGRESSIONAL STUDIES",
+        "items": 4,
+        "total": 100000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP AND VICE PRESIDENT J.D. VANCE",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BOARD MEMBERS",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2024 WOMEN'S SUMMIT \"LIFTING AS WE CLIMB MENTORING AND MOTIVATING\"",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE WOMEN'S E3 SUMMIT (PAYMENT 2 OF 2)",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "BOARD MEMBER - CARLEEN HERRING, US DEPT OF COMMERCE",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "CARLEEN HERRING -US DEPARTMENT OF COMMERCE",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE HIP HOP BLOCK PARTY",
+        "items": 1,
+        "total": 100000.0
+      },
+      {
+        "recipient": "MIKE FLOOD",
+        "items": 42,
+        "total": 99500.0
+      },
+      {
+        "recipient": "REP BRYAN STEIL",
+        "items": 32,
+        "total": 98000.0
+      },
+      {
+        "recipient": "REP. ERIN HOUCHIN",
+        "items": 47,
+        "total": 97750.0
+      },
+      {
+        "recipient": "REP STENY HOYER",
+        "items": 23,
+        "total": 96500.0
+      },
+      {
+        "recipient": "REP. MIKE THOMPSON",
+        "items": 38,
+        "total": 96000.0
+      },
+      {
+        "recipient": "BRITTANY PETTERSEN",
+        "items": 41,
+        "total": 95750.0
+      },
+      {
+        "recipient": "REP JOYCE BEATTY",
+        "items": 30,
+        "total": 95500.0
+      },
+      {
+        "recipient": "DAVID SCOTT",
+        "items": 36,
+        "total": 95000.0
+      },
+      {
+        "recipient": "SEN TIM SCOTT",
+        "items": 21,
+        "total": 95000.0
+      },
+      {
+        "recipient": "SEN. TINA SMITH",
+        "items": 35,
+        "total": 94000.0
+      },
+      {
+        "recipient": "REP JIM HIMES",
+        "items": 33,
+        "total": 93500.0
+      },
+      {
+        "recipient": "SEN. KEVIN CRAMER",
+        "items": 30,
+        "total": 93000.0
+      },
+      {
+        "recipient": "SEN. KATIE BRITT",
+        "items": 29,
+        "total": 92500.0
+      },
+      {
+        "recipient": "REP. BRYAN G. STEIL",
+        "items": 42,
+        "total": 92500.0
+      },
+      {
+        "recipient": "BRIAN FITZPATRICK",
+        "items": 32,
+        "total": 91000.0
+      },
+      {
+        "recipient": "SPONSORSHIP AND SUPPORT OF THE 2022 LIBRARY OF CONGRESS NATIONAL BOOK FESTIVAL",
+        "items": 1,
+        "total": 90000.0
+      },
+      {
+        "recipient": "RITCHIE TORRES",
+        "items": 45,
+        "total": 89500.0
+      },
+      {
+        "recipient": "REP. MAXINE WATERS",
+        "items": 33,
+        "total": 89000.0
+      },
+      {
+        "recipient": "STEVEN HORSFORD",
+        "items": 39,
+        "total": 89000.0
+      },
+      {
+        "recipient": "REP TERRI SEWELL",
+        "items": 29,
+        "total": 88500.0
+      },
+      {
+        "recipient": "REP. ASHLEY HINSON",
+        "items": 33,
+        "total": 88095.0
+      },
+      {
+        "recipient": "SEN. SHERROD BROWN",
+        "items": 31,
+        "total": 88000.0
+      },
+      {
+        "recipient": "SEN THOM TILLIS",
+        "items": 21,
+        "total": 88000.0
+      },
+      {
+        "recipient": "REP. TOM EMMER",
+        "items": 29,
+        "total": 88000.0
+      },
+      {
+        "recipient": "SEN. MIKE CRAPO",
+        "items": 23,
+        "total": 88000.0
+      },
+      {
+        "recipient": "US COURT OF APPEALS - THE HON. JAMES E. GRAVES JR. AND THE HON. CORNELIA T.L. PILLARD",
+        "items": 1,
+        "total": 87000.0
+      },
+      {
+        "recipient": "REP RICHARD HUDSON",
+        "items": 20,
+        "total": 87000.0
+      },
+      {
+        "recipient": "REP SUZAN DELBENE",
+        "items": 27,
+        "total": 86500.0
+      },
+      {
+        "recipient": "REP BILL FOSTER",
+        "items": 35,
+        "total": 86500.0
+      },
+      {
+        "recipient": "STENY HOYER",
+        "items": 25,
+        "total": 86300.0
+      },
+      {
+        "recipient": "REP. JAMES CLYBURN",
+        "items": 23,
+        "total": 86000.0
+      },
+      {
+        "recipient": "ZACH NUNN",
+        "items": 43,
+        "total": 85500.0
+      },
+      {
+        "recipient": "REP. ROGER WILLIAMS",
+        "items": 32,
+        "total": 85250.0
+      },
+      {
+        "recipient": "REP. FRANK LUCAS",
+        "items": 34,
+        "total": 84500.0
+      },
+      {
+        "recipient": "SEN MIKE ROUNDS",
+        "items": 25,
+        "total": 84000.0
+      },
+      {
+        "recipient": "SEN. TIM KAINE",
+        "items": 30,
+        "total": 83750.0
+      },
+      {
+        "recipient": "REP. LISA BLUNT ROCHESTER",
+        "items": 31,
+        "total": 83500.0
+      },
+      {
+        "recipient": "REP. CLAUDIA TENNEY",
+        "items": 41,
+        "total": 83000.0
+      },
+      {
+        "recipient": "DARIN LAHOOD",
+        "items": 35,
+        "total": 83000.0
+      },
+      {
+        "recipient": "REP. LISA MCCLAIN",
+        "items": 33,
+        "total": 82500.0
+      },
+      {
+        "recipient": "REP. MADELEINE DEAN",
+        "items": 43,
+        "total": 82500.0
+      },
+      {
+        "recipient": "REP. TROY BALDERSON",
+        "items": 30,
+        "total": 82095.0
+      },
+      {
+        "recipient": "REP. HAKEEM S. JEFFRIES",
+        "items": 28,
+        "total": 82000.0
+      },
+      {
+        "recipient": "REP. CATHY MCMORRIS RODGERS",
+        "items": 27,
+        "total": 81000.0
+      },
+      {
+        "recipient": "REP. JIMMY PANETTA",
+        "items": 42,
+        "total": 81000.0
+      },
+      {
+        "recipient": "SEN GARY PETERS SR",
+        "items": 16,
+        "total": 81000.0
+      },
+      {
+        "recipient": "REP. SCOTT FITZGERALD",
+        "items": 37,
+        "total": 80750.0
+      },
+      {
+        "recipient": "SEN. JERRY MORAN",
+        "items": 29,
+        "total": 80750.0
+      },
+      {
+        "recipient": "STEVE SCALISE",
+        "items": 22,
+        "total": 80500.0
+      },
+      {
+        "recipient": "GARY PETERS",
+        "items": 37,
+        "total": 80050.0
+      },
+      {
+        "recipient": "JAMES GRIFFIN, FEDERAL HOUSING FINANCE AGENCY",
+        "items": 1,
+        "total": 80000.0
+      },
+      {
+        "recipient": "BLUE DOG POLITICAL ACTION COMMITTEE",
+        "items": 19,
+        "total": 80000.0
+      },
+      {
+        "recipient": "GEORGE W. BUSH",
+        "items": 1,
+        "total": 80000.0
+      },
+      {
+        "recipient": "REP. GWEN MOORE",
+        "items": 32,
+        "total": 79500.0
+      },
+      {
+        "recipient": "REP YOUNG KIM",
+        "items": 23,
+        "total": 79000.0
+      },
+      {
+        "recipient": "SEN. GARY CHARLES PETERS",
+        "items": 38,
+        "total": 78500.0
+      },
+      {
+        "recipient": "TERRI SEWELL",
+        "items": 32,
+        "total": 78500.0
+      },
+      {
+        "recipient": "SEN. MARK ROBERT WARNER",
+        "items": 28,
+        "total": 78500.0
+      },
+      {
+        "recipient": "SEN. JOHN CORNYN, III",
+        "items": 21,
+        "total": 78500.0
+      },
+      {
+        "recipient": "MICHAEL LAWLER",
+        "items": 34,
+        "total": 78500.0
+      },
+      {
+        "recipient": "REP. DAVID KUSTOFF",
+        "items": 33,
+        "total": 78000.0
+      },
+      {
+        "recipient": "HILL, FRENCH",
+        "items": 24,
+        "total": 78000.0
+      },
+      {
+        "recipient": "REP. JOSEPH MORELLE",
+        "items": 33,
+        "total": 77500.0
+      },
+      {
+        "recipient": "ERIN HOUCHIN",
+        "items": 44,
+        "total": 77500.0
+      },
+      {
+        "recipient": "REP DAVID SCOTT",
+        "items": 23,
+        "total": 77500.0
+      },
+      {
+        "recipient": "REP. DUSTY JOHNSON",
+        "items": 38,
+        "total": 77095.0
+      },
+      {
+        "recipient": "JOHN BARRASSO",
+        "items": 29,
+        "total": 77000.0
+      },
+      {
+        "recipient": "THE HON. JAMES E. GRAVES JR. US COURT OF APPEALS, THE HON. CORNELIA T.L. PILLARD US COURT OF APPEALS",
+        "items": 1,
+        "total": 77000.0
+      },
+      {
+        "recipient": "SEN. MITCH MCCONNELL",
+        "items": 21,
+        "total": 77000.0
+      },
+      {
+        "recipient": "MADELEINE DEAN",
+        "items": 30,
+        "total": 76500.0
+      },
+      {
+        "recipient": "REP. STENY HAMILTON HOYER",
+        "items": 24,
+        "total": 75500.0
+      },
+      {
+        "recipient": "REP. ROBIN KELLY",
+        "items": 34,
+        "total": 75133.0
+      },
+      {
+        "recipient": "REP. JOE NEGUSE",
+        "items": 34,
+        "total": 75000.0
+      },
+      {
+        "recipient": "BARBARA FAVOLA, SENATOR, COMMONWEALTH OF VIRGINIA",
+        "items": 1,
+        "total": 75000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITEE",
+        "items": 5,
+        "total": 75000.0
+      },
+      {
+        "recipient": "KEVIN CRAMER",
+        "items": 23,
+        "total": 74500.0
+      },
+      {
+        "recipient": "REP WILLIAM TIMMONS IV",
+        "items": 25,
+        "total": 74000.0
+      },
+      {
+        "recipient": "MIKE THOMPSON",
+        "items": 23,
+        "total": 74000.0
+      },
+      {
+        "recipient": "REP PATRICK MCHENRY",
+        "items": 19,
+        "total": 73500.0
+      },
+      {
+        "recipient": "SEN. THOMAS ROLAND TILLIS",
+        "items": 24,
+        "total": 73000.0
+      },
+      {
+        "recipient": "REP. GREGORY WELDON MEEKS",
+        "items": 41,
+        "total": 72500.0
+      },
+      {
+        "recipient": "CHARLES SCHUMER",
+        "items": 18,
+        "total": 72500.0
+      },
+      {
+        "recipient": "REP. RANDY FEENSTRA",
+        "items": 37,
+        "total": 72095.0
+      },
+      {
+        "recipient": "NRSC (BUILDING FUND)",
+        "items": 6,
+        "total": 72000.0
+      },
+      {
+        "recipient": "SEAN CASTEN",
+        "items": 33,
+        "total": 72000.0
+      },
+      {
+        "recipient": "SEN. KATIE BOYD BRITT",
+        "items": 26,
+        "total": 72000.0
+      },
+      {
+        "recipient": "SMITH, JASON",
+        "items": 25,
+        "total": 71500.0
+      },
+      {
+        "recipient": "SEN MIKE CRAPO",
+        "items": 17,
+        "total": 71500.0
+      },
+      {
+        "recipient": "REP DARIN LAHOOD",
+        "items": 26,
+        "total": 71500.0
+      },
+      {
+        "recipient": "SEN MARK R WARNER",
+        "items": 19,
+        "total": 71500.0
+      },
+      {
+        "recipient": "REP PETE AGUILAR",
+        "items": 21,
+        "total": 71000.0
+      },
+      {
+        "recipient": "SEN. CHRIS COONS",
+        "items": 25,
+        "total": 71000.0
+      },
+      {
+        "recipient": "REP. SUSIE LEE",
+        "items": 31,
+        "total": 70185.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE CHAIRMAN'S LEVEL MEMBERSHIP",
+        "items": 2,
+        "total": 70000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION, INC",
+        "items": 2,
+        "total": 70000.0
+      },
+      {
+        "recipient": "ACROSS THE AISLE PAC",
+        "items": 14,
+        "total": 70000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2024 NATIONAL BOOK FESTIVAL",
+        "items": 1,
+        "total": 70000.0
+      },
+      {
+        "recipient": "SCALISE, STEVE",
+        "items": 17,
+        "total": 70000.0
+      },
+      {
+        "recipient": "MARLA BILONICK, DEPARTMENT OF TREASURYS CDFI FUND COMMUNITY DEVELOPMENT ADVISORY BOARD",
+        "items": 1,
+        "total": 70000.0
+      },
+      {
+        "recipient": "SEN BILL HAGERTY",
+        "items": 18,
+        "total": 69500.0
+      },
+      {
+        "recipient": "MICHAEL CRAPO",
+        "items": 23,
+        "total": 69500.0
+      },
+      {
+        "recipient": "REP. STEVEN ALEXZANDER HORSFORD",
+        "items": 29,
+        "total": 69000.0
+      },
+      {
+        "recipient": "SEN MARSHA BLACKBURN",
+        "items": 23,
+        "total": 68500.0
+      },
+      {
+        "recipient": "MAGGIE HASSAN",
+        "items": 27,
+        "total": 68500.0
+      },
+      {
+        "recipient": "SEN. MICHAEL DEAN CRAPO",
+        "items": 28,
+        "total": 68000.0
+      },
+      {
+        "recipient": "SEN. JOHN RANDOLPH THUNE",
+        "items": 21,
+        "total": 68000.0
+      },
+      {
+        "recipient": "REP. SUZAN KAY DELBENE",
+        "items": 28,
+        "total": 68000.0
+      },
+      {
+        "recipient": "REP. JASON THOMAS SMITH",
+        "items": 17,
+        "total": 68000.0
+      },
+      {
+        "recipient": "PETE RICKETTS",
+        "items": 23,
+        "total": 68000.0
+      },
+      {
+        "recipient": "SHERROD BROWN",
+        "items": 25,
+        "total": 67650.0
+      },
+      {
+        "recipient": "DAVE MCCORMICK",
+        "items": 24,
+        "total": 67600.0
+      },
+      {
+        "recipient": "JAMES CLYBURN",
+        "items": 22,
+        "total": 67500.0
+      },
+      {
+        "recipient": "SEN. PATTY MURRAY",
+        "items": 19,
+        "total": 67500.0
+      },
+      {
+        "recipient": "SEN. JOHN NICHOLS BOOZMAN",
+        "items": 23,
+        "total": 67500.0
+      },
+      {
+        "recipient": "REP. HALEY STEVENS",
+        "items": 21,
+        "total": 67500.0
+      },
+      {
+        "recipient": "SEN CHRIS COONS",
+        "items": 21,
+        "total": 67000.0
+      },
+      {
+        "recipient": "FRANK LUCAS",
+        "items": 26,
+        "total": 67000.0
+      },
+      {
+        "recipient": "MITCH MCCONNELL",
+        "items": 18,
+        "total": 67000.0
+      },
+      {
+        "recipient": "REP. MIKE LAWLER",
+        "items": 30,
+        "total": 66760.0
+      },
+      {
+        "recipient": "REP. KEVIN HERN",
+        "items": 23,
+        "total": 66500.0
+      },
+      {
+        "recipient": "REP ANDREW GARBARINO",
+        "items": 30,
+        "total": 66500.0
+      },
+      {
+        "recipient": "SEN. JOHN BOOZMAN",
+        "items": 22,
+        "total": 66500.0
+      },
+      {
+        "recipient": "REP. TOM EMMER JR",
+        "items": 19,
+        "total": 66000.0
+      },
+      {
+        "recipient": "SEN JOHN CORNYN III",
+        "items": 19,
+        "total": 66000.0
+      },
+      {
+        "recipient": "REP. JOHN LARSON",
+        "items": 25,
+        "total": 66000.0
+      },
+      {
+        "recipient": "REP. DEREK KILMER",
+        "items": 36,
+        "total": 65500.0
+      },
+      {
+        "recipient": "FEDERAL HOUSING FINANCE AGENCY NICHOLAS SATRIANO",
+        "items": 1,
+        "total": 65000.0
+      },
+      {
+        "recipient": "BUILDING BRIDGES PAC",
+        "items": 13,
+        "total": 65000.0
+      },
+      {
+        "recipient": "SEN SHERROD BROWN",
+        "items": 16,
+        "total": 65000.0
+      },
+      {
+        "recipient": "REP BLAINE LUETKEMEYER",
+        "items": 19,
+        "total": 64500.0
+      },
+      {
+        "recipient": "BARR, ANDY",
+        "items": 27,
+        "total": 64500.0
+      },
+      {
+        "recipient": "REP. RICK LARSEN",
+        "items": 27,
+        "total": 64500.0
+      },
+      {
+        "recipient": "SEN JOHN A BARRASSO",
+        "items": 19,
+        "total": 64000.0
+      },
+      {
+        "recipient": "REP. JAMES ANDREW HIMES",
+        "items": 34,
+        "total": 64000.0
+      },
+      {
+        "recipient": "REP. DONALD NORCROSS",
+        "items": 28,
+        "total": 64000.0
+      },
+      {
+        "recipient": "REP SEAN CASTEN",
+        "items": 23,
+        "total": 63500.0
+      },
+      {
+        "recipient": "REP. BRIAN FITZPATRICK",
+        "items": 19,
+        "total": 63500.0
+      },
+      {
+        "recipient": "SEN CHUCK SCHUMER",
+        "items": 16,
+        "total": 63000.0
+      },
+      {
+        "recipient": "SEN. TODD CHRISTOPHER YOUNG",
+        "items": 23,
+        "total": 63000.0
+      },
+      {
+        "recipient": "REP. SHARICE DAVIDS",
+        "items": 30,
+        "total": 62590.0
+      },
+      {
+        "recipient": "JOHN CORNYN",
+        "items": 29,
+        "total": 62500.0
+      },
+      {
+        "recipient": "REP. JUDY CHU",
+        "items": 24,
+        "total": 62500.0
+      },
+      {
+        "recipient": "SEN JOHN BOOZMAN",
+        "items": 19,
+        "total": 62000.0
+      },
+      {
+        "recipient": "REP. SYLVIA GARCIA",
+        "items": 29,
+        "total": 62000.0
+      },
+      {
+        "recipient": "SEN. MARGARET WOOD HASSAN",
+        "items": 29,
+        "total": 61834.0
+      },
+      {
+        "recipient": "MEMBERSHIP DUES",
+        "items": 5,
+        "total": 61800.0
+      },
+      {
+        "recipient": "REP. GUY RESCHENTHALER",
+        "items": 20,
+        "total": 61500.0
+      },
+      {
+        "recipient": "REP GUY RESCHENTHALER",
+        "items": 23,
+        "total": 61500.0
+      },
+      {
+        "recipient": "REP. MATT CARTWRIGHT",
+        "items": 19,
+        "total": 61500.0
+      },
+      {
+        "recipient": "SEN. JOHN ANTHONY BARRASSO",
+        "items": 20,
+        "total": 61500.0
+      },
+      {
+        "recipient": "KEVIN HERN",
+        "items": 24,
+        "total": 61500.0
+      },
+      {
+        "recipient": "REP. BLAKE MOORE",
+        "items": 30,
+        "total": 61185.0
+      },
+      {
+        "recipient": "SEN ERIC S SCHMITT",
+        "items": 16,
+        "total": 61000.0
+      },
+      {
+        "recipient": "REP. DAVID SCOTT",
+        "items": 28,
+        "total": 61000.0
+      },
+      {
+        "recipient": "SEN. CHUCK SCHUMER",
+        "items": 15,
+        "total": 60500.0
+      },
+      {
+        "recipient": "SEN. SHERROD CAMPBELL BROWN",
+        "items": 20,
+        "total": 60500.0
+      },
+      {
+        "recipient": "REP. KATHERINE M. CLARK",
+        "items": 18,
+        "total": 60500.0
+      },
+      {
+        "recipient": "REP GREGORY W MEEKS",
+        "items": 19,
+        "total": 60500.0
+      },
+      {
+        "recipient": "JOHN BOOZMAN",
+        "items": 19,
+        "total": 60500.0
+      },
+      {
+        "recipient": "STEVEN DAINES",
+        "items": 20,
+        "total": 60500.0
+      },
+      {
+        "recipient": "SEN. JOHN CORNYN",
+        "items": 23,
+        "total": 60041.0
+      },
+      {
+        "recipient": "JOHN CURTIS",
+        "items": 22,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SEN DICK DURBIN",
+        "items": 6,
+        "total": 60000.0
+      },
+      {
+        "recipient": "REP. NICOLE MALLIOTAKIS",
+        "items": 29,
+        "total": 60000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE (NRCC)",
+        "items": 4,
+        "total": 60000.0
+      },
+      {
+        "recipient": "REP. ANDREW R. GARBARINO",
+        "items": 35,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2023 ALC PHOENIX AWARDS DINNER AND THE 2023 ECONOMIC SUMMIT SERIES",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE LEADERSHIP INSTITUTE PROGRAMS",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ANNUAL CBCF LEGISLATIVE CONFERENCE. ENTITY CONTROLLED BY COVERED OFFICIALS",
+        "items": 1,
+        "total": 60000.0
+      },
+      {
+        "recipient": "REP JAMES E CLYBURN",
+        "items": 16,
+        "total": 60000.0
+      },
+      {
+        "recipient": "REP. JUAN VARGAS",
+        "items": 30,
+        "total": 59500.0
+      },
+      {
+        "recipient": "REP. TIM WALBERG",
+        "items": 25,
+        "total": 58521.0
+      },
+      {
+        "recipient": "NEAL, RICHARD",
+        "items": 19,
+        "total": 58500.0
+      },
+      {
+        "recipient": "SEN. MARTIN HEINRICH",
+        "items": 26,
+        "total": 58500.0
+      },
+      {
+        "recipient": "CHRISTOPHER COONS",
+        "items": 25,
+        "total": 58500.0
+      },
+      {
+        "recipient": "WILLIAM TIMMONS",
+        "items": 26,
+        "total": 58500.0
+      },
+      {
+        "recipient": "REP. KEVIN OWEN MCCARTHY",
+        "items": 13,
+        "total": 58500.0
+      },
+      {
+        "recipient": "BARRY LOUDERMILK",
+        "items": 24,
+        "total": 58250.0
+      },
+      {
+        "recipient": "REP. ZOE LOFGREN",
+        "items": 25,
+        "total": 58100.0
+      },
+      {
+        "recipient": "HUIZENGA, BILL",
+        "items": 24,
+        "total": 58000.0
+      },
+      {
+        "recipient": "REP DAN MEUSER",
+        "items": 20,
+        "total": 58000.0
+      },
+      {
+        "recipient": "REP. MICHELLE STEEL",
+        "items": 21,
+        "total": 57595.0
+      },
+      {
+        "recipient": "REP. KEVIN MCCARTHY",
+        "items": 12,
+        "total": 57500.0
+      },
+      {
+        "recipient": "SEN. TODD YOUNG",
+        "items": 17,
+        "total": 57500.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE",
+        "items": 17,
+        "total": 57500.0
+      },
+      {
+        "recipient": "RICHARD HUDSON",
+        "items": 21,
+        "total": 57500.0
+      },
+      {
+        "recipient": "REP. NIKEMA WILLIAMS",
+        "items": 35,
+        "total": 57500.0
+      },
+      {
+        "recipient": "US SENATE - MARK R WARNER (VA)",
+        "items": 2,
+        "total": 57440.0
+      },
+      {
+        "recipient": "SEN. KIRSTEN GILLIBRAND",
+        "items": 21,
+        "total": 57000.0
+      },
+      {
+        "recipient": "SEN. M. MICHAEL ROUNDS",
+        "items": 20,
+        "total": 57000.0
+      },
+      {
+        "recipient": "EMMER, TOM",
+        "items": 25,
+        "total": 57000.0
+      },
+      {
+        "recipient": "REP. JULIA LETLOW",
+        "items": 27,
+        "total": 56500.0
+      },
+      {
+        "recipient": "REP. MIKE QUIGLEY",
+        "items": 22,
+        "total": 56500.0
+      },
+      {
+        "recipient": "REP. YOUNG O. KIM",
+        "items": 24,
+        "total": 56500.0
+      },
+      {
+        "recipient": "REP. BARRY LOUDERMILK",
+        "items": 28,
+        "total": 56300.0
+      },
+      {
+        "recipient": "SEN. CYNTHIA LUMMIS",
+        "items": 21,
+        "total": 56000.0
+      },
+      {
+        "recipient": "REP. RITCHIE J. TORRES",
+        "items": 35,
+        "total": 56000.0
+      },
+      {
+        "recipient": "REP. ADRIAN SMITH",
+        "items": 24,
+        "total": 55900.0
+      },
+      {
+        "recipient": "REP. ANGIE CRAIG",
+        "items": 28,
+        "total": 55590.0
+      },
+      {
+        "recipient": "DONATION",
+        "items": 5,
+        "total": 55000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CBC",
+        "items": 2,
+        "total": 55000.0
+      },
+      {
+        "recipient": "SEN. JONI ERNST",
+        "items": 15,
+        "total": 55000.0
+      },
+      {
+        "recipient": "SEN CATHERINE CORTEZ MASTO",
+        "items": 15,
+        "total": 55000.0
+      },
+      {
+        "recipient": "VICENTE GONZALEZ",
+        "items": 29,
+        "total": 55000.0
+      },
+      {
+        "recipient": "SEN TED BUDD",
+        "items": 15,
+        "total": 55000.0
+      },
+      {
+        "recipient": "REPUBLICAN MAINSTREET PARTNERSHIP PAC",
+        "items": 11,
+        "total": 55000.0
+      },
+      {
+        "recipient": "REP KEVIN MCCARTHY",
+        "items": 12,
+        "total": 55000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE ALC PHOENIX AWARDS, PRAYER BREAKFAST, AND ANNUAL LEGISLATIVE CONFERENCE",
+        "items": 1,
+        "total": 55000.0
+      },
+      {
+        "recipient": "DSCC (BUILDING FUND)",
+        "items": 4,
+        "total": 55000.0
+      },
+      {
+        "recipient": "REP WARREN DAVIDSON",
+        "items": 16,
+        "total": 54500.0
+      },
+      {
+        "recipient": "REP. ADAM SMITH",
+        "items": 22,
+        "total": 54500.0
+      },
+      {
+        "recipient": "SEN JERRY MORAN",
+        "items": 13,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. BRETT GUTHRIE",
+        "items": 24,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. VERONICA ESCOBAR",
+        "items": 23,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP. DEBORAH ROSS",
+        "items": 23,
+        "total": 54000.0
+      },
+      {
+        "recipient": "REP RON ESTES",
+        "items": 26,
+        "total": 53750.0
+      },
+      {
+        "recipient": "SEN JACKY ROSEN",
+        "items": 16,
+        "total": 53500.0
+      },
+      {
+        "recipient": "SEN. LISA MURKOWSKI",
+        "items": 18,
+        "total": 53500.0
+      },
+      {
+        "recipient": "REP. JAMES ENOS CLYBURN",
+        "items": 18,
+        "total": 53500.0
+      },
+      {
+        "recipient": "SEN. STEVE DAVID DAINES",
+        "items": 22,
+        "total": 53500.0
+      },
+      {
+        "recipient": "REP BRIAN FITZPATRICK",
+        "items": 24,
+        "total": 53000.0
+      },
+      {
+        "recipient": "REP RANDY FEENSTRA",
+        "items": 16,
+        "total": 53000.0
+      },
+      {
+        "recipient": "REP RICHARD NEAL",
+        "items": 15,
+        "total": 53000.0
+      },
+      {
+        "recipient": "TODD YOUNG",
+        "items": 19,
+        "total": 53000.0
+      },
+      {
+        "recipient": "CHRIS VAN HOLLEN",
+        "items": 18,
+        "total": 52900.0
+      },
+      {
+        "recipient": "JAMES LANKFORD",
+        "items": 19,
+        "total": 52500.0
+      }
+    ],
+    "per_entity": [
+      {
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "total": 12435719.0,
+        "items": 1701
+      },
+      {
+        "registrant_name": "AARP",
+        "total": 7956043.0,
+        "items": 296
+      },
+      {
+        "registrant_name": "AMERICAN BANKERS ASSOCIATION",
+        "total": 7734883.0,
+        "items": 2999
+      },
+      {
+        "registrant_name": "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS",
+        "total": 7392200.0,
+        "items": 2327
+      },
+      {
+        "registrant_name": "AMERICAN ASSOCIATION FOR JUSTICE",
+        "total": 5556575.0,
+        "items": 1984
+      },
+      {
+        "registrant_name": "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS",
+        "total": 5255750.0,
+        "items": 1473
+      },
+      {
+        "registrant_name": "MORGAN STANLEY & CO. LLC",
+        "total": 4788952.0,
+        "items": 621
+      },
+      {
+        "registrant_name": "VISA INC.",
+        "total": 3966844.0,
+        "items": 1135
+      },
+      {
+        "registrant_name": "INVESTMENT COMPANY INSTITUTE",
+        "total": 3440145.0,
+        "items": 1289
+      },
+      {
+        "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+        "total": 3110150.0,
+        "items": 649
+      },
+      {
+        "registrant_name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA",
+        "total": 2848535.0,
+        "items": 1606
+      },
+      {
+        "registrant_name": "FMR LLC",
+        "total": 2806250.0,
+        "items": 1037
+      },
+      {
+        "registrant_name": "JPMORGAN CHASE HOLDINGS LLC",
+        "total": 2621007.0,
+        "items": 952
+      },
+      {
+        "registrant_name": "WELLS FARGO & COMPANY",
+        "total": 2546420.0,
+        "items": 942
+      },
+      {
+        "registrant_name": "THE PNC FINANCIAL SERVICES GROUP",
+        "total": 2372000.0,
+        "items": 510
+      },
+      {
+        "registrant_name": "ROBINHOOD MARKETS, INC.",
+        "total": 2325898.0,
+        "items": 160
+      },
+      {
+        "registrant_name": "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+        "total": 2276000.0,
+        "items": 542
+      },
+      {
+        "registrant_name": "BANK OF AMERICA CORPORATION",
+        "total": 2037521.0,
+        "items": 624
+      },
+      {
+        "registrant_name": "AMERICAN EXPRESS COMPANY",
+        "total": 2037350.0,
+        "items": 681
+      },
+      {
+        "registrant_name": "CME GROUP, INC.",
+        "total": 2034500.0,
+        "items": 760
+      },
+      {
+        "registrant_name": "CITIGROUP WASHINGTON, INC.",
+        "total": 2033603.0,
+        "items": 779
+      },
+      {
+        "registrant_name": "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)",
+        "total": 1894144.0,
+        "items": 526
+      },
+      {
+        "registrant_name": "HUNTINGTON BANCSHARES INCORPORATED",
+        "total": 1742502.0,
+        "items": 826
+      },
+      {
+        "registrant_name": "NATIONAL FOOTBALL LEAGUE",
+        "total": 1740750.0,
+        "items": 534
+      },
+      {
+        "registrant_name": "CONSUMER TECHNOLOGY ASSOCIATION",
+        "total": 1356956.0,
+        "items": 316
+      },
+      {
+        "registrant_name": "CHAMBER OF COMMERCE OF THE U.S.A.",
+        "total": 1356601.0,
+        "items": 907
+      },
+      {
+        "registrant_name": "PWC US GROUP LLP",
+        "total": 1237500.0,
+        "items": 338
+      },
+      {
+        "registrant_name": "MASTERCARD WORLDWIDE",
+        "total": 1221201.0,
+        "items": 473
+      },
+      {
+        "registrant_name": "MELLON FINANCIAL SERVICES CORPORATION #1",
+        "total": 1214800.0,
+        "items": 432
+      },
+      {
+        "registrant_name": "TD BANK, NA",
+        "total": 1102500.0,
+        "items": 443
+      },
+      {
+        "registrant_name": "NATIONAL VENTURE CAPITAL ASSOCIATION",
+        "total": 983042.0,
+        "items": 322
+      },
+      {
+        "registrant_name": "WESTERN ALLIANCE BANCORPORATION",
+        "total": 857000.0,
+        "items": 330
+      },
+      {
+        "registrant_name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)",
+        "total": 752010.0,
+        "items": 8
+      },
+      {
+        "registrant_name": "ACCENTURE, LLP",
+        "total": 679184.0,
+        "items": 76
+      },
+      {
+        "registrant_name": "CBOE GLOBAL MARKETS, INC.",
+        "total": 610250.0,
+        "items": 238
+      },
+      {
+        "registrant_name": "MANAGED FUNDS ASSOCIATION",
+        "total": 605633.0,
+        "items": 321
+      },
+      {
+        "registrant_name": "INSURED RETIREMENT INSTITUTE",
+        "total": 590522.0,
+        "items": 331
+      },
+      {
+        "registrant_name": "CONSUMER BANKERS ASSOCIATION",
+        "total": 582250.0,
+        "items": 195
+      },
+      {
+        "registrant_name": "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES",
+        "total": 532250.0,
+        "items": 217
+      },
+      {
+        "registrant_name": "FIFTH THIRD BANCORP",
+        "total": 502750.0,
+        "items": 183
+      },
+      {
+        "registrant_name": "HSBC TECHNOLOGY AND SERVICES USA INC.",
+        "total": 402012.0,
+        "items": 218
+      },
+      {
+        "registrant_name": "NASDAQ, INC.",
+        "total": 358325.0,
+        "items": 192
+      },
+      {
+        "registrant_name": "VMWARE, INC.",
+        "total": 336800.0,
+        "items": 132
+      },
+      {
+        "registrant_name": "MOODY'S CORPORATION",
+        "total": 295820.0,
+        "items": 40
+      },
+      {
+        "registrant_name": "PAYPAL, INC.",
+        "total": 258750.0,
+        "items": 20
+      },
+      {
+        "registrant_name": "BANK POLICY INSTITUTE",
+        "total": 232077.0,
+        "items": 142
+      },
+      {
+        "registrant_name": "LONDON STOCK EXCHANGE GROUP",
+        "total": 223348.0,
+        "items": 102
+      },
+      {
+        "registrant_name": "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",
+        "total": 221750.0,
+        "items": 135
+      },
+      {
+        "registrant_name": "FINANCIAL SERVICES FORUM",
+        "total": 195650.0,
+        "items": 151
+      },
+      {
+        "registrant_name": "TECHNOLOGY NETWORK AKA TECHNET",
+        "total": 158000.0,
+        "items": 115
+      },
+      {
+        "registrant_name": "NORTHERN TRUST CORPORATION",
+        "total": 134250.0,
+        "items": 106
+      },
+      {
+        "registrant_name": "FIDELITY NATIONAL INFORMATION SYSTEMS, INC. AND SUBSIDIARIES",
+        "total": 123500.0,
+        "items": 37
+      },
+      {
+        "registrant_name": "AMERICAN SECURITIES ASSOCIATION",
+        "total": 113625.0,
+        "items": 58
+      },
+      {
+        "registrant_name": "GLOBAL PAYMENTS, INC.",
+        "total": 108750.0,
+        "items": 41
+      },
+      {
+        "registrant_name": "HUMANITY FORWARD",
+        "total": 80016.0,
+        "items": 27
+      },
+      {
+        "registrant_name": "STRIPE, INC.",
+        "total": 59600.0,
+        "items": 13
+      },
+      {
+        "registrant_name": "FUTURES INDUSTRY ASSOCIATION",
+        "total": 51500.0,
+        "items": 29
+      },
+      {
+        "registrant_name": "WORLDPAY",
+        "total": 50233.0,
+        "items": 26
+      },
+      {
+        "registrant_name": "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS",
+        "total": 29506.0,
+        "items": 144
+      },
+      {
+        "registrant_name": "SMARTCONTRACT INC.",
+        "total": 24750.0,
+        "items": 20
+      },
+      {
+        "registrant_name": "MONEYGRAM INTERNATIONAL INC.",
+        "total": 24500.0,
+        "items": 21
+      },
+      {
+        "registrant_name": "ELECTRONIC TRANSACTIONS ASSOCIATION",
+        "total": 17250.0,
+        "items": 8
+      },
+      {
+        "registrant_name": "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS",
+        "total": 16712.0,
+        "items": 50
+      },
+      {
+        "registrant_name": "BNP PARIBAS RCC, INC.",
+        "total": 11275.0,
+        "items": 9
+      },
+      {
+        "registrant_name": "ACCENTURE FEDERAL SERVICES LLC",
+        "total": 9180.0,
+        "items": 13
+      },
+      {
+        "registrant_name": "NATIONAL TAXPAYERS UNION",
+        "total": 8842.0,
+        "items": 21
+      },
+      {
+        "registrant_name": "WESTERN UNION",
+        "total": 8750.0,
+        "items": 4
+      },
+      {
+        "registrant_name": "PUBLIC CITIZEN",
+        "total": 7880.0,
+        "items": 91
+      },
+      {
+        "registrant_name": "CLEANSPARK, INC",
+        "total": 5000.0,
+        "items": 4
+      },
+      {
+        "registrant_name": "THE INSTITUTE OF INTERNAL AUDITORS",
+        "total": 2700.0,
+        "items": 7
+      },
+      {
+        "registrant_name": "TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)",
+        "total": 2034.0,
+        "items": 1
+      },
+      {
+        "registrant_name": "ANCHOR LABS, INC.",
+        "total": 2000.0,
+        "items": 4
+      },
+      {
+        "registrant_name": "PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC",
+        "total": 1518.0,
+        "items": 3
+      },
+      {
+        "registrant_name": "FDD ACTION",
+        "total": 980.0,
+        "items": 3
+      },
+      {
+        "registrant_name": "AMERICANS FOR PROSPERITY",
+        "total": 360.0,
+        "items": 2
+      },
+      {
+        "registrant_name": "MICHIGAN CREDIT UNION LEAGUE",
+        "total": 260.0,
+        "items": 1
+      }
+    ],
+    "sample": [
+      {
+        "record_key": "2999aaaa-cc4e-44c4-b9f0-b77e1b09d5cb",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 2500000,
+        "recipient": "Donation for the construction of the Capitol Visitor Center tunnel in the Thomas Jefferson Building (Congressional Crossroads).",
+        "date": "2023-04-06"
+      },
+      {
+        "record_key": "3600bcd0-b64e-47e4-96ff-349634cc73fa",
+        "registrant_name": "ROBINHOOD MARKETS, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 2000000,
+        "recipient": "President Donald Trump; Vice-President JD Vance",
+        "date": "2024-12-16"
+      },
+      {
+        "record_key": "b0d60f07-36a6-4e84-a833-5985743366a0",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1300000,
+        "recipient": "Members of the Congressional Black Caucus",
+        "date": "2023-08-23"
+      },
+      {
+        "record_key": "55f16f50-fbe8-49f7-85b1-a7f3c0676113",
+        "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Donald J Trump and JD Vance",
+        "date": "2025-01-02"
+      },
+      {
+        "record_key": "1b686c94-d6a9-4126-8e3e-cc92e67764e5",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "President Donald J. Trump",
+        "date": "2024-12-21"
+      },
+      {
+        "record_key": "8577b1c7-3aa4-40ab-8008-ae586e357ce3",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "me",
+        "amount": 1000000,
+        "recipient": "Founding donor and sponsor of the design, development, and opening of the Smithsonian National Museum of American Latino. Entity controlled by covered officials. Multiple MOCs on Board of Regents.",
+        "date": "2022-10-03"
+      },
+      {
+        "record_key": "8577b1c7-3aa4-40ab-8008-ae586e357ce3",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "me",
+        "amount": 1000000,
+        "recipient": "Founding donor and sponsor of the design, development, and opening of the Smithsonian American Women's History Museum. Entity controlled by covered officials. Multiple MOCs on Board of Regents.",
+        "date": "2022-10-04"
+      },
+      {
+        "record_key": "1b686c94-d6a9-4126-8e3e-cc92e67764e5",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1000000,
+        "recipient": "Members of the Congressional Black Caucus",
+        "date": "2024-11-26"
+      },
+      {
+        "record_key": "4aeb0fb5-80e0-445f-b9c6-77da72d2840a",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 888894,
+        "recipient": "President Donald J. Trump",
+        "date": "2025-01-20"
+      },
+      {
+        "record_key": "55702a4b-954e-43be-bd64-3c18d282b515",
+        "registrant_name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 750000,
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE, INC.",
+        "date": "2025-01-15"
+      }
+    ]
+  }
+}

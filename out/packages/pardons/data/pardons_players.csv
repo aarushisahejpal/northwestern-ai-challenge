@@ -1,0 +1,55 @@
+﻿player,entity_id,pardons_filings_senate,first_year,last_year,total_all_issue_spend,client_class,class_note
+DUE PROCESS INSTITUTE,client:202679,16,2022,2025,430000,advocacy,
+American Civil Liberties Union,client:102662,15,2022,2025,7120000,advocacy,
+COMMON CAUSE,client:114110,11,2022,2024,510000,advocacy,
+Binance Holdings Limited,client:53862,9,2025,2026,2450000,seeker_vehicle,'digital assets and cryptocurrency; and executive relief'
+NDN Collective,client:213300,9,2023,2025,827125,advocacy,
+AMNESTY INTERNATIONAL USA,client:208576,8,2023,2025,150000,advocacy,
+RICHARD SCRUSHY,client:67642,8,2025,2026,40000,seeker,'Granting of Pardon'
+Joseph Schwartz,client:66423,6,2025,2026,1060000,seeker,'Seeking a federal pardon.' (ledger L034)
+ORIGIN PROPERTY GROUP,client:60525,6,2024,2024,320000,seeker_vehicle,"'Potential Presidential pardon of Marco Bitran, founder' (named in filing text)"
+Anne Pramaggiore,client:69250,5,2025,2026,490000,seeker,
+WILLIAM TIERNEY,client:67179,5,2025,2026,100000,seeker,
+National Cannabis Roundtable,client:137758,4,2022,2022,1661500,advocacy,
+NATIONAL ASSOCIATION FOR THE ADVANCEMENT OF COLORED PEOPLE,client:156069,4,2024,2025,870000,advocacy,
+NATIONAL ASSOCIATION OF CRIMINAL DEFENSE LAWYERS (NACDL),client:134221,4,2022,2024,255000,advocacy,
+JUNO EMPIRE INC,client:64847,4,2025,2025,120000,seeker_vehicle,'the Pardon of Jorge Ferrer' (named in filing text)
+MAGMA POWER LLC,client:64712,4,2025,2025,40000,seeker_vehicle,beneficiary not stated in filing text
+CHANGPENG ZHAO,client:65126,4,2025,2025,30000,seeker,'Executive relief.'
+Dr. Shallfdeen Amuwo,client:63309,4,2024,2025,20000,seeker,'Commutation of sentencing'
+Leadership Conference on Civil and Human Rights,client:129233,3,2024,2025,7850000,advocacy,
+FWD.us,client:127201,3,2024,2025,6020000,advocacy,
+TORENCE HATCH,client:68982,3,2025,2026,600000,seeker,'Seeking a presidential pardon. White House issues.' (ledger L034)
+PROTECT DEMOCRACY UNITED (FORMERLY KNOWN AS UNITED TO PROTECT DEMOCRACY),client:211192,3,2024,2025,570000,advocacy,
+KOMAL PATEL,client:69046,3,2025,2026,150000,seeker,
+DEMOCRACY DEFENDERS ACTION,client:69225,3,2025,2026,120000,advocacy,
+AMERICAN CONSERVATIVE UNION,client:162029,3,2023,2023,100000,advocacy,
+HEALTHICITY,client:63408,3,2024,2025,100000,seeker_vehicle,beneficiary not stated in filing text
+"THE ALEPH INSTITUTE, INC.",client:207995,3,2024,2026,60375,advocacy,
+"FAHMY HUDOME INTL., INC. ON BEHALF OF RICHARD SCRUSHY",client:67980,3,2025,2025,35000,seeker_vehicle,Richard Scrushy (named in client string)
+YENER VAHIT BELLI,client:70494,3,2025,2026,20210,seeker,'Lobbying for pardon/commutation of sentence.'
+Students for Sensible Drug Policy,client:212030,3,2024,2025,10000,advocacy,
+STATE OF LOC NATION GLOBAL PUBLIC BENEFIT CORPORATION,client:61287,2,2025,2025,80000000,unclear,HR 40 / faith-recognition text; pardon term incidental
+The Immigration Hub LLC,client:203018,2,2022,2024,2290000,advocacy,
+FRED DAIBES,client:67147,2,2025,2025,1000000,seeker,'Executive relief' (ledger L021)
+LAWYERS' COMMITTEE FOR CIVIL RIGHTS UNDER LAW,client:192870,2,2024,2025,680000,advocacy,
+BRENNAN CENTER FOR JUSTICE AT NEW YORK UNIVERSITY SCHOOL OF LAW,client:188551,2,2024,2025,345000,advocacy,
+"CAMPAIGN LEGAL CENTER, INC.",client:178832,2,2025,2026,300000,advocacy,
+CONFERENCE OF PROVINCIALS OF NORTH AMERICA,client:170171,2,2022,2024,260000,advocacy,
+NATIONAL COUNCIL OF JEWISH WOMEN,client:134307,2,2025,2025,170000,advocacy,
+PHILLIP FREDERICK CAMINO,client:71181,2,2025,2026,60000,seeker,
+JOSH SMITH,client:60167,2,2024,2024,50000,seeker,'Client is requesting a presidential pardon.'
+SANTIAGO ALVAREZ,client:69538,2,2025,2025,40000,seeker,'Advocating for pardon for Santiago Alvarez'
+GREG E. LINDBERG,client:68173,2,2025,2025,,seeker,'Executive pardon.'
+Americans for Prosperity,client:101301,1,2022,2022,6770000,advocacy,
+Prison Fellowship Ministries,client:127759,1,2024,2024,371500,advocacy,
+MOVEON.ORG CIVIC ACTION,client:210442,1,2024,2024,310000,advocacy,
+SELIM ZHERKA,client:70019,1,2025,2025,295000,seeker,"'pardon application submitted on October 22, 2025'"
+NATIONAL ASSOCIATION OF ASSISTANT UNITED STATES ATTORNEYS,client:204412,1,2022,2022,163600,advocacy,
+DISABILITY RIGHTS EDUCATION & DEFENSE INC,client:117064,1,2024,2024,130000,advocacy,
+CALIFORNIA CANNABIS INDUSTRY ASSOCIATION,client:201643,1,2022,2022,32000,advocacy,
+RAYMOND LIDDY,client:69651,1,2025,2025,,seeker,'Legal/ pardon'
+DIAMOND STREET PROPERTIES LLC,client:71850,1,2026,2026,,seeker_vehicle,'pardons for federal crimes of those they feel have served their time' — no named beneficiary
+RYAN AND WADE LALONE,client:71032,1,2026,2026,,seeker,'Pardon application consulting and support'
+MATT GEOUGE,client:72371,1,2026,2026,,seeker,'Pardon Request'
+"Veritaseum Inc.,",client:64358,1,2026,2026,,seeker_vehicle,SEC/DOJ matters in same text; beneficiary not stated

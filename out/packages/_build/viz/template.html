@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+__CSS__
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <button class="theme-toggle" id="themeToggle" type="button">Toggle light/dark</button>
+    <h1>__TITLE__</h1>
+    <div class="sub">__SUBTITLE__</div>
+    <div class="meta">Generated __GENDATE__ · Source: Senate LDA filings 2022–2026 Q1 (senate-primary, amendment-deduped), LD-203 contribution reports, congressional press releases__EXTRA_SOURCES__. Unverified research output for team review — every table row traces to records via the CSVs in <code>data/</code>.</div>
+  </header>
+  <main id="app"></main>
+  <footer class="page">Built from db/lda_full.duckdb · See README.md in this package for method, caveats, and how to QA any number here.</footer>
+</div>
+<script>
+__LIB__
+</script>
+<script>
+const DATA = __DATA__;
+</script>
+<script>
+(function () {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const r = document.documentElement;
+    const cur = r.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    r.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  });
+})();
+__PAGE__
+</script>
+</body>
+</html>

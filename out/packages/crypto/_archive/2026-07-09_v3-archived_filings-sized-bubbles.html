@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto Lobbying — State of the Industry</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  padding: 28px 20px 60px; line-height: 1.45;
+}
+.viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+  --seq-250: #86b6ef; --seq-400: #3987e5; --seq-550: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  .viz-root {
+    --page: #0d0d0d; --surface-1: #1a1a19;
+    --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+    --grid: #2c2c2a; --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+    --s5: #9085e9; --s6: #e66767;
+    --deemph: #4a4a46;
+  }
+}
+:root[data-theme="light"] .viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+}
+:root[data-theme="dark"] .viz-root {
+  --page: #0d0d0d; --surface-1: #1a1a19;
+  --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+  --grid: #2c2c2a; --baseline: #383835;
+  --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+  --s5: #9085e9; --s6: #e66767;
+  --deemph: #4a4a46;
+}
+:root[data-theme="light"] body, :root[data-theme="dark"] body { background: var(--page); }
+
+.wrap { max-width: 1060px; margin: 0 auto; }
+header.page { margin-bottom: 22px; }
+header.page h1 { font-size: 24px; font-weight: 650; letter-spacing: -0.01em; }
+header.page .sub { color: var(--ink-2); margin-top: 6px; max-width: 78ch; font-size: 14px; }
+header.page .meta { color: var(--ink-3); margin-top: 6px; font-size: 12px; }
+.theme-toggle {
+  float: right; font: inherit; font-size: 12px; color: var(--ink-2);
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 5px 10px; cursor: pointer;
+}
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.tile {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.tile .lbl { font-size: 12px; color: var(--ink-2); }
+.tile .val { font-size: 26px; font-weight: 600; margin-top: 3px; }
+.tile .note { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 18px 12px; margin: 16px 0;
+}
+.card h2 { font-size: 15.5px; font-weight: 650; }
+.card .sub { font-size: 12.5px; color: var(--ink-2); margin: 3px 0 4px; max-width: 90ch; }
+.card .foot { font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 2px; font-size: 12px; color: var(--ink-2); }
+.legend .key { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw-rect { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend .sw-line { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.chart-box { position: relative; }
+.chart-box svg { display: block; width: 100%; height: auto; }
+svg text { font-family: inherit; }
+.ax { font-size: 11px; fill: var(--ink-3); }
+.ax-tab { font-variant-numeric: tabular-nums; }
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.baseline { stroke: var(--baseline); stroke-width: 1; }
+.dlabel { font-size: 11px; fill: var(--ink-2); }
+.dlabel-strong { font-size: 11.5px; font-weight: 600; fill: var(--ink-1); }
+.blabel { font-size: 11px; pointer-events: none; }
+.crosshair { stroke: var(--baseline); stroke-width: 1; }
+.tt {
+  position: fixed; z-index: 40; pointer-events: none; display: none;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13); padding: 9px 11px; font-size: 12px;
+  max-width: 320px;
+}
+.tt .tt-title { color: var(--ink-3); font-size: 11px; margin-bottom: 5px; }
+.tt .row { display: flex; align-items: center; gap: 7px; margin-top: 3px; }
+.tt .k { width: 14px; height: 3px; border-radius: 2px; flex: none; }
+.tt .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tt .n { color: var(--ink-2); }
+details.tv { margin-top: 8px; }
+details.tv summary { font-size: 12px; color: var(--ink-2); cursor: pointer; }
+details.tv .scroll { overflow-x: auto; margin-top: 8px; }
+table.dt { border-collapse: collapse; font-size: 12px; min-width: 480px; }
+table.dt th, table.dt td { text-align: left; padding: 5px 12px 5px 0; border-bottom: 1px solid var(--grid); }
+table.dt td.num, table.dt th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.dt th { color: var(--ink-2); font-weight: 600; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+.caveats { font-size: 12.5px; color: var(--ink-2); }
+.caveats li { margin: 4px 0 4px 18px; }
+footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
+
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <button class="theme-toggle" id="themeToggle" type="button">Toggle light/dark</button>
+    <h1>Crypto Lobbying — State of the Industry</h1>
+    <div class="sub">Who lobbies Washington on crypto, how fast it grew, where it hides in the disclosure forms, and who the industry gives money to — mapped from what 500+ organizations SAY they lobby on, not what they're named.</div>
+    <div class="meta">Generated 2026-07-08 · Source: Senate LDA filings 2022–2026 Q1 (senate-primary, amendment-deduped), LD-203 contribution reports, congressional press releases and openFEC (cached raw responses). Unverified research output for team review — every table row traces to records via the CSVs in <code>data/</code>.</div>
+  </header>
+  <main id="app"></main>
+  <footer class="page">Built from db/lda_full.duckdb · See README.md in this package for method, caveats, and how to QA any number here.</footer>
+</div>
+<script>
+/* Tiny self-contained chart lib — SVG, theme-aware via CSS vars, hover layer + table views. */
+"use strict";
+const NS = "http://www.w3.org/2000/svg";
+const SLOT = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)"];
+// per-slot in-mark label ink (yellow/aqua too light for white text)
+const SLOT_LABEL = ["#ffffff", "#08351f", "#3a2800", "#ffffff", "#ffffff", "#ffffff"];
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function div(cls, parent, text) {
+  const d = document.createElement("div");
+  if (cls) d.className = cls;
+  if (text != null) d.textContent = text;
+  if (parent) parent.appendChild(d);
+  return d;
+}
+function fmtMoney(v) {
+  if (v == null || isNaN(v)) return "–";
+  const a = Math.abs(v), s = v < 0 ? "-" : "";
+  if (a >= 995e6) return s + "$" + (a / 1e9).toFixed(a >= 9.95e9 ? 0 : 1) + "B";
+  if (a >= 995e3) return s + "$" + (a / 1e6).toFixed(a >= 9.95e6 ? 0 : 1) + "M";
+  if (a >= 1e3) return s + "$" + Math.round(a / 1e3) + "K";
+  return s + "$" + Math.round(a);
+}
+function fmtNum(v) {
+  if (v == null || isNaN(v)) return "–";
+  return Number(v).toLocaleString("en-US");
+}
+function fmtPct(v) { return v == null ? "–" : v.toFixed(v < 10 ? 1 : 0) + "%"; }
+function niceTicks(max, n) {
+  if (max <= 0) return [0, 1];
+  const raw = max / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => max / s <= n) || 10 * mag;
+  const ticks = [];
+  for (let v = 0; v <= max * 1.0001 + step * 0.999; v += step) { ticks.push(v); if (v >= max) break; }
+  return ticks;
+}
+
+/* singleton tooltip */
+let TT = null;
+function tt() {
+  if (!TT) { TT = div("tt", document.body); }
+  return TT;
+}
+function ttShow(x, y, titleText, rows) {
+  const t = tt();
+  t.innerHTML = "";
+  if (titleText) div("tt-title", t, titleText);
+  for (const r of rows) {
+    const row = div("row", t);
+    if (r.color) { const k = div("k", row); k.style.background = r.color; }
+    const v = document.createElement("span"); v.className = "v"; v.textContent = r.value; row.appendChild(v);
+    const n = document.createElement("span"); n.className = "n"; n.textContent = r.name; row.appendChild(n);
+  }
+  t.style.display = "block";
+  const bw = t.offsetWidth, bh = t.offsetHeight;
+  let px = x + 14, py = y + 12;
+  if (px + bw > innerWidth - 8) px = x - bw - 14;
+  if (py + bh > innerHeight - 8) py = y - bh - 12;
+  t.style.left = px + "px"; t.style.top = py + "px";
+}
+function ttHide() { if (TT) TT.style.display = "none"; }
+
+function legend(parent, items, kind) {
+  const lg = div("legend", parent);
+  for (const it of items) {
+    const k = div("key", lg);
+    const sw = div(kind === "line" ? "sw-line" : "sw-rect", k);
+    sw.style.background = it.color;
+    k.appendChild(document.createTextNode(it.name));
+  }
+  return lg;
+}
+
+function tableView(parent, cols, rows, fmts) {
+  const det = document.createElement("details"); det.className = "tv"; parent.appendChild(det);
+  const sum = document.createElement("summary"); sum.textContent = "Table view"; det.appendChild(sum);
+  const scroll = div("scroll", det);
+  const tb = document.createElement("table"); tb.className = "dt"; scroll.appendChild(tb);
+  const trh = tb.insertRow();
+  cols.forEach((c, i) => {
+    const th = document.createElement("th"); th.textContent = c;
+    if (fmts && fmts[i] !== "s") th.className = "num";
+    trh.appendChild(th);
+  });
+  for (const r of rows) {
+    const tr = tb.insertRow();
+    r.forEach((v, i) => {
+      const td = tr.insertCell();
+      const f = fmts ? fmts[i] : "s";
+      td.textContent = f === "$" ? fmtMoney(v) : f === "#" ? fmtNum(v) : f === "%" ? (v == null ? "–" : v + "%") : (v == null ? "–" : v);
+      if (f !== "s") td.className = "num";
+    });
+  }
+}
+
+function card(root, title, sub, foot) {
+  const c = div("card", root);
+  const h = document.createElement("h2"); h.textContent = title; c.appendChild(h);
+  if (sub) div("sub", c, sub);
+  const box = div("chart-box", c);
+  if (foot) { const f = div("foot", c, foot); c.appendChild(f); }
+  return { cardEl: c, box: box };
+}
+
+function statTiles(root, tiles) {
+  const k = div("kpis", root);
+  for (const t of tiles) {
+    const tile = div("tile", k);
+    div("lbl", tile, t.label);
+    div("val", tile, t.value);
+    if (t.note) div("note", tile, t.note);
+  }
+}
+
+/* ---- line panel: series share one x; crosshair + all-series tooltip ---- */
+function linePanel(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 240, mL = 46, mR = cfg.marginRight || 76, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const maxV = cfg.max || Math.max(...cfg.series.flatMap(s => s.values.filter(v => v != null))) * 1.08;
+  const ticks = niceTicks(maxV, 4);
+  const yMax = ticks[ticks.length - 1];
+  const X = i => mL + (n === 1 ? pw / 2 : (i * pw) / (n - 1));
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : cfg.fmt === "%" ? tv + "%" : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: X(i), y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  const placedLabels = [];
+  cfg.series.forEach((s, si) => {
+    const col = s.color || SLOT[si];
+    const pts = s.values.map((v, i) => (v == null ? null : [X(i), Y(v)]));
+    let d = "";
+    pts.forEach(p => { if (p) d += (d ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); });
+    const path = el("path", { d, fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    path.style.stroke = col;
+    const last = pts.map((p, i) => (p ? i : -1)).filter(i => i >= 0).pop();
+    if (last != null) {
+      const ring = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 6 }, svg);
+      ring.style.fill = "var(--surface-1)";
+      const dot = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 4 }, svg);
+      dot.style.fill = col;
+      const ly = pts[last][1] + 4;
+      // when end-labels collide, fall back to legend + tooltip (skip the label)
+      if (!placedLabels.some(p => Math.abs(p - ly) < 14)) {
+        const lb = el("text", { x: pts[last][0] + 10, y: ly, class: "dlabel-strong" }, svg);
+        lb.textContent = (cfg.endLabel === "name" ? s.name : (cfg.fmt === "$" ? fmtMoney(s.values[last]) : cfg.fmt === "%" ? s.values[last] + "%" : fmtNum(s.values[last])));
+        placedLabels.push(ly);
+      }
+    }
+  });
+  /* crosshair + tooltip */
+  const ch = el("line", { y1: mT, y2: mT + ph, class: "crosshair", visibility: "hidden" }, svg);
+  const hit = el("rect", { x: mL, y: mT, width: pw, height: ph, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", ev => {
+    const r = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - r.left) / r.width) * W;
+    let i = Math.round(((fx - mL) / pw) * (n - 1));
+    i = Math.max(0, Math.min(n - 1, i));
+    ch.setAttribute("x1", X(i)); ch.setAttribute("x2", X(i));
+    ch.setAttribute("visibility", "visible");
+    ttShow(ev.clientX, ev.clientY, xs[i], cfg.series.map((s, si) => ({
+      color: s.color || SLOT[si],
+      value: s.values[i] == null ? "–" : cfg.fmt === "$" ? fmtMoney(s.values[i]) : cfg.fmt === "%" ? s.values[i] + "%" : fmtNum(s.values[i]),
+      name: s.name
+    })));
+  });
+  hit.addEventListener("pointerleave", () => { ch.setAttribute("visibility", "hidden"); ttHide(); });
+}
+
+/* ---- columns (single series or stacked) ---- */
+function columns(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 250, mL = 46, mR = 14, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const series = cfg.series; // [{name,color,values}]
+  const totals = xs.map((_, i) => series.reduce((a, s) => a + (s.values[i] || 0), 0));
+  const ticks = niceTicks(Math.max(...totals) * 1.05, 4);
+  const yMax = ticks[ticks.length - 1];
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const band = pw / n, bw = Math.min(24, band * 0.55);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: mL + band * i + band / 2, y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  xs.forEach((lab, i) => {
+    const cx = mL + band * i + band / 2;
+    let acc = 0;
+    series.forEach((s, si) => {
+      const v = s.values[i] || 0;
+      if (v <= 0) { return; }
+      const y1 = Y(acc + v), y0 = Y(acc);
+      const hpx = Math.max(0, y0 - y1 - (si < series.length - 1 && acc + v < totals[i] ? 2 : 0)); // 2px surface gap
+      const isTop = acc + v >= totals[i] - 1e-9;
+      const rTop = isTop ? 4 : 0;
+      const x0 = cx - bw / 2;
+      const p = el("path", {
+        d: `M${x0} ${y0} L${x0} ${y1 + rTop} Q${x0} ${y1} ${x0 + rTop} ${y1} L${x0 + bw - rTop} ${y1} Q${x0 + bw} ${y1} ${x0 + bw} ${y1 + rTop} L${x0 + bw} ${y0} Z`
+      }, svg);
+      p.style.fill = s.color || SLOT[si];
+      acc += v;
+    });
+    const hit = el("rect", { x: mL + band * i, y: mT, width: band, height: ph, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = series.map((s, si) => ({
+        color: s.color || SLOT[si],
+        value: cfg.fmt === "$" ? fmtMoney(s.values[i]) : fmtNum(s.values[i]),
+        name: s.name
+      }));
+      if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      ttShow(ev.clientX, ev.clientY, lab, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- horizontal bars ---- */
+function hbars(box, cfg) {
+  const items = cfg.items; // [{label, value, value2?, note?, color?}]
+  const W = cfg.width || 980, rowH = cfg.rowH || 30, mL = cfg.labelW || 300, mR = cfg.width ? 64 : 90, mT = 6, mB = 8;
+  const H = mT + rowH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.map(d => d.value)) * 1.02;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  items.forEach((d, i) => {
+    const y = mT + i * rowH + (rowH - Math.min(20, rowH - 8)) / 2;
+    const bh = Math.min(20, rowH - 8);
+    const w = Math.max(1.5, (d.value / maxV) * pw);
+    const p = el("path", {
+      d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z`
+    }, svg);
+    p.style.fill = d.color || cfg.color || SLOT[0];
+    const maxChars = Math.floor((mL - 14) / 6.4);
+    const lb = el("text", { x: mL - 10, y: y + bh / 2 + 4, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel-strong ax-tab" }, svg);
+    vl.textContent = cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value);
+    const hit = el("rect", { x: 0, y: mT + i * rowH, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [{ color: d.color || cfg.color || SLOT[0], value: cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value), name: cfg.valueName || "value" }];
+      if (d.note) rows.push({ color: null, value: "", name: d.note });
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- grouped horizontal bars (2 series) ---- */
+function groupedHBars(box, cfg) {
+  const items = cfg.items; // [{label, a, b}]
+  const W = cfg.width || 980, groupH = 44, mL = cfg.labelW || 300, mR = cfg.width ? 66 : 96, mT = 6, mB = 8;
+  const H = mT + groupH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.flatMap(d => [d.a, d.b])) * 1.02;
+  const colA = cfg.aColor || SLOT[0], colB = cfg.bColor || SLOT[1];
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  const maxChars = Math.floor((mL - 14) / 6.4);
+  items.forEach((d, i) => {
+    const y0 = mT + i * groupH;
+    [["a", colA, cfg.aName, 4], ["b", colB, cfg.bName, 24]].forEach(([k, col, nm, dy]) => {
+      const v = d[k], bh = 14;
+      const w = Math.max(1.5, (v / maxV) * pw);
+      const y = y0 + dy;
+      const p = el("path", { d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z` }, svg);
+      p.style.fill = col;
+      const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel ax-tab" }, svg);
+      vl.textContent = fmtMoney(v);
+    });
+    const lb = el("text", { x: mL - 10, y: y0 + groupH / 2 + 2, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const hit = el("rect", { x: 0, y: y0, width: W, height: groupH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => ttShow(ev.clientX, ev.clientY, d.label, [
+      { color: colA, value: fmtMoney(d.a), name: cfg.aName },
+      { color: colB, value: fmtMoney(d.b), name: cfg.bName }
+    ]));
+    hit.addEventListener("pointerleave", ttHide);
+  });
+}
+
+/* ---- bubble pack (greedy spiral, collision-free) ---- */
+function bubblePack(box, cfg) {
+  const items = cfg.items.slice().sort((p, q) => q.r0 - p.r0); // r0 = raw size value
+  const W = 980, H = cfg.height || 430;
+  const maxV = Math.max(...items.map(d => d.r0));
+  const R = v => 6 + 52 * Math.sqrt(v / maxV);
+  const placed = [];
+  const cx0 = W / 2, cy0 = H / 2;
+  for (const d of items) {
+    const r = R(d.r0);
+    let ok = false, x = cx0, y = cy0;
+    for (let a = 0, sp = 0; sp < 5200; sp += 4) {
+      a = sp * 0.055;
+      const rad = sp * 0.115;
+      x = cx0 + rad * Math.cos(a) * 1.55;
+      y = cy0 + rad * Math.sin(a) * 0.8;
+      if (x - r < 6 || x + r > W - 6 || y - r < 6 || y + r > H - 6) continue;
+      ok = placed.every(p => {
+        const dx = p.x - x, dy = p.y - y;
+        return dx * dx + dy * dy >= (p.r + r + 2.5) * (p.r + r + 2.5);
+      });
+      if (ok) break;
+    }
+    if (ok) placed.push({ x, y, r, d });
+  }
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  const measure = el("text", { x: -1000, y: -1000, class: "blabel" }, svg);
+  for (const p of placed) {
+    const c = el("circle", { cx: p.x, cy: p.y, r: p.r }, svg);
+    c.style.fill = SLOT[p.d.slot];
+    c.style.stroke = "var(--surface-1)"; c.style.strokeWidth = "2";
+    // label only if it fits
+    measure.textContent = p.d.short || p.d.label;
+    const tw = measure.getComputedTextLength ? 0 : 0; // measured after attach below
+  }
+  // second pass for labels (needs layout)
+  requestAnimationFrame(() => {
+    for (const p of placed) {
+      const name = p.d.short || p.d.label;
+      measure.textContent = name;
+      let tw = 60;
+      try { tw = measure.getComputedTextLength(); } catch (e) {}
+      if (tw < p.r * 1.75 && p.r > 15) {
+        const t = el("text", { x: p.x, y: p.y + (p.r > 26 ? -2 : 4), "text-anchor": "middle", class: "blabel" }, svg);
+        t.textContent = name;
+        t.style.fill = SLOT_LABEL[p.d.slot];
+        if (p.r > 26) {
+          const t2 = el("text", { x: p.x, y: p.y + 13, "text-anchor": "middle", class: "blabel" }, svg);
+          t2.textContent = cfg.fmtSize === "$" ? fmtMoney(p.d.r0) : fmtNum(p.d.r0);
+          t2.style.fill = SLOT_LABEL[p.d.slot];
+          t2.style.opacity = "0.85";
+        }
+      }
+    }
+    measure.remove();
+  });
+  /* nearest-circle hover */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    if (best && bd < 14) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+    } else ttHide();
+  });
+  hit.addEventListener("pointerleave", ttHide);
+}
+
+</script>
+<script>
+const DATA = {"kpis": [{"label": "Client orgs lobbying on crypto, 2025-Q4", "value": "287", "note": "vs 177 in 2024-Q4 (+62%)"}, {"label": "Crypto-tagged filings, 2025-Q4", "value": "391", "note": "flat ~240/qtr through 2022–2024"}, {"label": "Players with no crypto term in their name", "value": "466 of 508", "note": "found only via what filings SAY (free-text map)"}, {"label": "Top-4 players' Super-PAC money (FEC)", "value": "$322.6M", "note": "vs $1.7M in disclosed LD-203 — different regimes"}], "players": [{"name": "Coinbase, Inc.", "filings": 126, "tier": "core", "spend": 15050000.0, "vis": true, "short": "Coinbase"}, {"name": "Block, Inc.", "filings": 85, "tier": "core", "spend": 8250000.0, "vis": false, "short": "Block"}, {"name": "Foris DAX, Inc. d/b/a Crypto.com", "filings": 66, "tier": "core", "spend": 3650000.0, "vis": true, "short": "Crypto.com"}, {"name": "Ava Labs, Inc.", "filings": 64, "tier": "core", "spend": 2666000.0, "vis": true, "short": "Ava Labs"}, {"name": "PayPal, Inc.", "filings": 63, "tier": "core", "spend": 7011311.0, "vis": false, "short": "PayPal"}, {"name": "Crypto Council for Innovation", "filings": 62, "tier": "core", "spend": 3364000.0, "vis": true, "short": "Crypto Council"}, {"name": "DeFi Education Fund", "filings": 60, "tier": "core", "spend": 3400000.0, "vis": true, "short": "DeFi Ed. Fund"}, {"name": "Visa Inc.", "filings": 57, "tier": "core", "spend": 39280000.0, "vis": false, "short": "Visa"}, {"name": "MASTERCARD WORLDWIDE", "filings": 54, "tier": "core", "spend": 20160000.0, "vis": false, "short": "Mastercard"}, {"name": "Ripple Labs Inc.", "filings": 52, "tier": "core", "spend": 4790000.0, "vis": true, "short": "Ripple Labs"}, {"name": "Blockchain Association", "filings": 51, "tier": "core", "spend": 8220000.0, "vis": true, "short": "Blockchain Assn"}, {"name": "Filecoin Foundation", "filings": 50, "tier": "core", "spend": 1830000.0, "vis": true, "short": "Filecoin"}, {"name": "Coin Center", "filings": 49, "tier": "core", "spend": 3020000.0, "vis": true, "short": "Coin Center"}, {"name": "Paradigm Operations LP", "filings": 48, "tier": "core", "spend": 3220000.0, "vis": true, "short": "Paradigm"}, {"name": "CME Group, Inc.", "filings": 43, "tier": "core", "spend": 6690000.0, "vis": false, "short": "CME Group"}, {"name": "Robinhood Markets, Inc.", "filings": 39, "tier": "core", "spend": 6490000.0, "vis": false, "short": "Robinhood Markets"}, {"name": "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)", "filings": 39, "tier": "core", "spend": 2176650.0, "vis": true, "short": "Digital Chamber"}, {"name": "Anchor Labs, Inc.", "filings": 39, "tier": "core", "spend": 1620000.0, "vis": false, "short": "Anchorage"}, {"name": "Citigroup Washington, Inc.", "filings": 35, "tier": "core", "spend": 20940000.0, "vis": false, "short": "Citigroup"}, {"name": "National Venture Capital Association", "filings": 35, "tier": "core", "spend": 11089098.0, "vis": false, "short": "National Venture"}, {"name": "A16Z CAPITAL MANAGEMENT LLC (F/K/A AH CAPITAL MANAGEMENT L.L.C.)", "filings": 35, "tier": "core", "spend": 6900000.0, "vis": true, "short": "a16z"}, {"name": "Futures Industry Association", "filings": 35, "tier": "core", "spend": 3874453.0, "vis": false, "short": "Futures Industry"}, {"name": "Chainalysis Inc.", "filings": 35, "tier": "core", "spend": 998000.0, "vis": true, "short": "Chainalysis"}, {"name": "RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)", "filings": 34, "tier": "core", "spend": 2460000.0, "vis": true, "short": "RIOT PLATFORMS"}, {"name": "TD Bank, NA", "filings": 32, "tier": "core", "spend": 6400000.0, "vis": false, "short": "TD Bank"}, {"name": "Securities Industry and Financial Markets Association (SIFMA)", "filings": 31, "tier": "core", "spend": 32870000.0, "vis": false, "short": "SIFMA"}, {"name": "Dapper Labs Inc.", "filings": 31, "tier": "core", "spend": 1720000.0, "vis": true, "short": "Dapper Labs"}, {"name": "Digital Currency Group", "filings": 30, "tier": "core", "spend": 3170000.0, "vis": true, "short": "Digital Currency"}, {"name": "Stellar Development Foundation", "filings": 30, "tier": "core", "spend": 1700000.0, "vis": true, "short": "Stellar"}, {"name": "American Bankers Association", "filings": 29, "tier": "core", "spend": 34726000.0, "vis": false, "short": "Am. Bankers Assn"}, {"name": "Fiserv", "filings": 29, "tier": "core", "spend": 3070000.0, "vis": false, "short": "Fiserv"}, {"name": "Fidelity National Information Systems, Inc. and Subsidiaries", "filings": 27, "tier": "core", "spend": 4050000.0, "vis": false, "short": "Fidelity National"}, {"name": "NORTHERN TRUST CORPORATION", "filings": 26, "tier": "core", "spend": 1800000.0, "vis": false, "short": "NORTHERN TRUST"}, {"name": "Meta Platforms, Inc.", "filings": 25, "tier": "core", "spend": 15021250.0, "vis": false, "short": "Meta Platforms"}, {"name": "Moody's Corporation", "filings": 25, "tier": "core", "spend": 2840000.0, "vis": false, "short": "Moody's"}, {"name": "AICPA Association of International Certified Professional Accountants", "filings": 24, "tier": "core", "spend": 22669000.0, "vis": false, "short": "AICPA Association"}, {"name": "Paxos Trust Company, LLC", "filings": 24, "tier": "core", "spend": 1340000.0, "vis": false, "short": "Paxos Trust"}, {"name": "WEB 3.0 TECHNOLOGIES FOUNDATION", "filings": 24, "tier": "core", "spend": 1130000.0, "vis": false, "short": "WEB 3.0"}, {"name": "Electronic Payments Coalition", "filings": 23, "tier": "core", "spend": 24400000.0, "vis": false, "short": "Electronic"}, {"name": "BlackRock Funds Services Group, LLC", "filings": 23, "tier": "core", "spend": 10900000.0, "vis": false, "short": "BlackRock Funds"}, {"name": "FMR LLC", "filings": 23, "tier": "core", "spend": 10510000.0, "vis": false, "short": "FMR"}, {"name": "Regions Financial Corporation", "filings": 23, "tier": "core", "spend": 7100000.0, "vis": false, "short": "Regions Financial"}, {"name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)", "filings": 23, "tier": "core", "spend": 4711000.0, "vis": true, "short": "Kraken"}, {"name": "Western Union", "filings": 23, "tier": "core", "spend": 3449480.0, "vis": false, "short": "Western Union"}, {"name": "PAYWARD INC D/B/A KRAKEN", "filings": 23, "tier": "core", "spend": 1370000.0, "vis": true, "short": "Kraken"}, {"name": "Cornerstone Government Affairs obo Circle Internet Financial, Inc.", "filings": 23, "tier": "core", "spend": null, "vis": true, "short": "Cornerstone"}, {"name": "Accenture Federal Services LLC", "filings": 22, "tier": "core", "spend": 4130000.0, "vis": false, "short": "Accenture Federal"}, {"name": "Solana Policy Institute", "filings": 22, "tier": "core", "spend": 2370000.0, "vis": true, "short": "Solana Policy"}, {"name": "Circle", "filings": 22, "tier": "core", "spend": 2150000.0, "vis": true, "short": "Circle"}, {"name": "ConsenSys Software Inc.", "filings": 22, "tier": "core", "spend": 1047700.0, "vis": true, "short": "ConsenSys"}, {"name": "UNISWAP LABS", "filings": 22, "tier": "core", "spend": 640000.0, "vis": true, "short": "UNISWAP LABS"}, {"name": "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS", "filings": 21, "tier": "core", "spend": 20119746.0, "vis": false, "short": "CREDIT UNION"}, {"name": "Nasdaq, Inc.", "filings": 21, "tier": "core", "spend": 9535000.0, "vis": false, "short": "Nasdaq"}, {"name": "American Express Company", "filings": 21, "tier": "core", "spend": 6490000.0, "vis": false, "short": "American Express"}, {"name": "Americans for Financial Reform", "filings": 21, "tier": "core", "spend": 2330000.0, "vis": false, "short": "Americans for"}, {"name": "UNIVERSAL NAVIGATION, INC. (D/B/A UNISWAP LABS)", "filings": 21, "tier": "core", "spend": 870000.0, "vis": true, "short": "UNIVERSAL"}, {"name": "Binance Holdings Limited", "filings": 20, "tier": "core", "spend": 2450000.0, "vis": true, "short": "Binance Holdings"}, {"name": "Polygon Labs Services (Switzerland) AG", "filings": 20, "tier": "core", "spend": 770000.0, "vis": true, "short": "Polygon Labs"}, {"name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA", "filings": 19, "tier": "core", "spend": 19261826.0, "vis": false, "short": "INDEPENDENT"}, {"name": "Consumer Technology Association", "filings": 19, "tier": "core", "spend": 17420000.0, "vis": false, "short": "Consumer"}], "trend": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "filings": [181, 212, 244, 255, 235, 242, 242, 229, 224, 245, 232, 240, 277, 367, 387, 391, 372], "clients": [136, 155, 181, 191, 179, 181, 183, 174, 168, 181, 173, 177, 210, 277, 288, 287, 268], "spend": [80441132.0, 66460124.0, 80389557.0, 83157421.0, 72654898.0, 75443620.0, 68558243.0, 68675698.0, 74833308.0, 70445005.0, 61791625.0, 80904967.0, 73296152.0, 83552319.0, 100071466.0, 112323700.0, 109618395.0]}, "issueScatter": [{"code": "FIN", "name": "Financial institutions & securities", "docs": 6502, "pct": 43.7}, {"code": "BAN", "name": "Banking", "docs": 3541, "pct": 23.8}, {"code": "TAX", "name": "Taxation", "docs": 1254, "pct": 8.4}, {"code": "SCI", "name": "Science & technology", "docs": 636, "pct": 4.3}, {"code": "CPI", "name": "Computer industry", "docs": 490, "pct": 3.3}, {"code": "CDT", "name": "Commodities trading", "docs": 390, "pct": 2.6}, {"code": "AGR", "name": "Agriculture", "docs": 359, "pct": 2.4}, {"code": "ACC", "name": "Accounting", "docs": 189, "pct": 1.3}, {"code": "ENG", "name": "Energy & nuclear", "docs": 143, "pct": 1.0}, {"code": "LAW", "name": "Law enforcement & crime", "docs": 138, "pct": 0.9}, {"code": "GOV", "name": "Government issues", "docs": 134, "pct": 0.9}, {"code": "BUD", "name": "Budget & appropriations", "docs": 103, "pct": 0.7}], "nativeSpend": [{"name": "Coinbase (combined)", "spend": 15560000.0, "filings": 134}, {"name": "Crypto.com (Foris entities, combined)", "spend": 10310000.0, "filings": 99}, {"name": "Blockchain Association", "spend": 8220000.0, "filings": 51}, {"name": "a16z / Andreessen Horowitz (combined)", "spend": 7750000.0, "filings": 48}, {"name": "Kraken (Payward entities, combined)", "spend": 6381000.0, "filings": 51}, {"name": "Ripple Labs Inc.", "spend": 4790000.0, "filings": 52}, {"name": "Binance / Binance.US (combined)", "spend": 4255000.0, "filings": 50}, {"name": "DeFi Education Fund", "spend": 3400000.0, "filings": 60}, {"name": "Crypto Council for Innovation", "spend": 3364000.0, "filings": 62}, {"name": "Paradigm Operations LP", "spend": 3220000.0, "filings": 48}, {"name": "Digital Currency Group", "spend": 3170000.0, "filings": 30}, {"name": "Coin Center", "spend": 3020000.0, "filings": 49}], "diversSpend": [{"name": "CHAMBER OF COMMERCE OF THE U.S.A.", "spend": 311610000.0, "filings": 14}, {"name": "Amazon.com Services LLC", "spend": 77570000.0, "filings": 18}, {"name": "AARP", "spend": 77050000.0, "filings": 17}, {"name": "Visa Inc.", "spend": 39280000.0, "filings": 57}, {"name": "American Bankers Association", "spend": 34726000.0, "filings": 29}, {"name": "Securities Industry and Financial Markets Association (SIFMA)", "spend": 32870000.0, "filings": 31}, {"name": "Electronic Payments Coalition", "spend": 24400000.0, "filings": 23}, {"name": "AICPA Association of International Certified Professional Accountants", "spend": 22669000.0, "filings": 24}, {"name": "American Association for Justice", "spend": 21830000.0, "filings": 18}, {"name": "Investment Company Institute", "spend": 21056510.0, "filings": 8}, {"name": "Citigroup Washington, Inc.", "spend": 20940000.0, "filings": 35}, {"name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)", "spend": 20600000.0, "filings": 9}], "givingTop": [{"name": "Trump-Vance Inaugural / Trump (name variants combined)", "a": 5007855.0, "b": 6488996.0, "party": ""}, {"name": "Members Of The Congressional Black Caucus", "a": 0, "b": 3484013.0, "party": ""}, {"name": "Donation For The Construction Of The Capitol Visitor Center Tunnel In The Thomas Jefferson Building (Congressional Crossroads)", "a": 0, "b": 2500000.0, "party": ""}, {"name": "Members Of The Congressional Hispanic Caucus", "a": 0, "b": 2395000.0, "party": ""}, {"name": "DSCC", "a": 35000.0, "b": 1289794.0, "party": ""}, {"name": "NRSC", "a": 13750.0, "b": 1286733.0, "party": ""}, {"name": "National Republican Congressional Committee", "a": 12500.0, "b": 1138300.0, "party": ""}, {"name": "DCCC", "a": 11000.0, "b": 1115150.0, "party": ""}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian American Women'S History Museum. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "a": 0, "b": 1000000.0, "party": ""}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian National Museum Of American Latino. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "a": 0, "b": 1000000.0, "party": ""}], "givingMembersNative": [{"name": "Rep. Tom Emmer (R-MN)", "a": 76400.0, "b": 583500.0, "party": "(R-MN)"}, {"name": "Sen. Pat Toomey (R-PA)", "a": 53790.0, "b": 0, "party": "(R-PA)"}, {"name": "Sen. Cynthia M. Lummis (R-WY)", "a": 45500.0, "b": 56000.0, "party": "(R-WY)"}, {"name": "Rep. J. French Hill (R-AR)", "a": 37500.0, "b": 858350.0, "party": "(R-AR)"}, {"name": "Sen. Bill Hagerty (R-TN)", "a": 28000.0, "b": 391250.0, "party": "(R-TN)"}, {"name": "Sen. Tim Scott (R-SC)", "a": 22900.0, "b": 530250.0, "party": "(R-SC)"}, {"name": "Rep. Ritchie Torres (D-NY)", "a": 21500.0, "b": 261400.0, "party": "(D-NY)"}, {"name": "Rep. Angie Craig (D-MN)", "a": 21000.0, "b": 55590.0, "party": "(D-MN)"}, {"name": "Sen. Bernie Moreno (R-OH)", "a": 15925.0, "b": 0, "party": "(R-OH)"}, {"name": "Rep. Patrick McHenry (R-NC)", "a": 14900.0, "b": 590650.0, "party": "(R-NC)"}], "givingMembersDiv": [{"name": "Rep. J. French Hill (R-AR)", "a": 37500.0, "b": 858350.0, "party": "(R-AR)"}, {"name": "Rep. Bill Huizenga (R-MI)", "a": 3500.0, "b": 761485.0, "party": "(R-MI)"}, {"name": "Rep. Andy Barr (R-KY)", "a": 8500.0, "b": 733557.0, "party": "(R-KY)"}, {"name": "Rep. Ann Wagner (R-MO)", "a": 1000.0, "b": 614098.0, "party": "(R-MO)"}, {"name": "Rep. Hakeem S. Jeffries (D-NY)", "a": 5000.0, "b": 606100.0, "party": "(D-NY)"}, {"name": "Rep. Patrick McHenry (R-NC)", "a": 14900.0, "b": 590650.0, "party": "(R-NC)"}, {"name": "Rep. Tom Emmer (R-MN)", "a": 76400.0, "b": 583500.0, "party": "(R-MN)"}, {"name": "Rep. Bryan Steil (R-WI)", "a": 12000.0, "b": 534500.0, "party": "(R-WI)"}, {"name": "Sen. Tim Scott (R-SC)", "a": 22900.0, "b": 530250.0, "party": "(R-SC)"}, {"name": "Rep. Richard E. Neal (D-MA)", "a": 500.0, "b": 529500.0, "party": "(D-MA)"}], "givingRecipientsRaw": [{"name": "Trump-Vance Inaugural / Trump (name variants combined)", "party": "", "a": 5007855.0, "b": 6488996.0}, {"name": "Members Of The Congressional Black Caucus", "party": "", "a": 0, "b": 3484013.0}, {"name": "Donation For The Construction Of The Capitol Visitor Center Tunnel In The Thomas Jefferson Building (Congressional Crossroads)", "party": "", "a": 0, "b": 2500000.0}, {"name": "Members Of The Congressional Hispanic Caucus", "party": "", "a": 0, "b": 2395000.0}, {"name": "DSCC", "party": "", "a": 35000.0, "b": 1289794.0}, {"name": "NRSC", "party": "", "a": 13750.0, "b": 1286733.0}, {"name": "National Republican Congressional Committee", "party": "", "a": 12500.0, "b": 1138300.0}, {"name": "DCCC", "party": "", "a": 11000.0, "b": 1115150.0}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian American Women'S History Museum. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "party": "", "a": 0, "b": 1000000.0}, {"name": "Founding Donor And Sponsor Of The Design, Development, And Opening Of The Smithsonian National Museum Of American Latino. Entity Controlled By Covered Officials. Multiple Mocs On Board Of Regents", "party": "", "a": 0, "b": 1000000.0}, {"name": "Rep. J. French Hill (R-AR)", "party": "(R-AR)", "a": 37500.0, "b": 858350.0}, {"name": "Members Of The Congressional Asian Pacific American Caucus", "party": "", "a": 0, "b": 800000.0}, {"name": "Rep. Bill Huizenga (R-MI)", "party": "(R-MI)", "a": 3500.0, "b": 761485.0}, {"name": "Rep. Andy Barr (R-KY)", "party": "(R-KY)", "a": 8500.0, "b": 733557.0}, {"name": "Congressional Black Caucus Foundation", "party": "", "a": 15000.0, "b": 698000.0}, {"name": "Rep. Tom Emmer (R-MN)", "party": "(R-MN)", "a": 76400.0, "b": 583500.0}, {"name": "Rep. Ann Wagner (R-MO)", "party": "(R-MO)", "a": 1000.0, "b": 614098.0}, {"name": "Rep. Hakeem S. Jeffries (D-NY)", "party": "(D-NY)", "a": 5000.0, "b": 606100.0}, {"name": "Rep. Patrick McHenry (R-NC)", "party": "(R-NC)", "a": 14900.0, "b": 590650.0}, {"name": "Congressional Hispanic Caucus Institute, Inc", "party": "", "a": 50000.0, "b": 505000.0}, {"name": "Sen. Tim Scott (R-SC)", "party": "(R-SC)", "a": 22900.0, "b": 530250.0}, {"name": "Rep. Bryan Steil (R-WI)", "party": "(R-WI)", "a": 12000.0, "b": 534500.0}, {"name": "Rep. Richard E. Neal (D-MA)", "party": "(D-MA)", "a": 500.0, "b": 529500.0}, {"name": "Rep. Bill Foster (D-IL)", "party": "(D-IL)", "a": 250.0, "b": 485000.0}, {"name": "Rep. Josh Gottheimer (D-NJ)", "party": "(D-NJ)", "a": 10650.0, "b": 468000.0}, {"name": "Sen. Mark R. Warner (D-VA)", "party": "(D-VA)", "a": 4500.0, "b": 474050.0}, {"name": "Rep. James A. Himes (D-CT)", "party": "(D-CT)", "a": 12300.0, "b": 454500.0}, {"name": "Rep. Jason Smith (R-MO)", "party": "(R-MO)", "a": 9500.0, "b": 451000.0}, {"name": "Sen. John Thune (R-SD)", "party": "(R-SD)", "a": 7500.0, "b": 438095.0}, {"name": "Sen. Thom Tillis (R-NC)", "party": "(R-NC)", "a": 3000.0, "b": 442500.0}, {"name": "Rep. Gregory W. Meeks (D-NY)", "party": "(D-NY)", "a": 0, "b": 434700.0}, {"name": "Rep. Young Kim (R-CA)", "party": "(R-CA)", "a": 3900.0, "b": 415885.0}, {"name": "Sen. Bill Hagerty (R-TN)", "party": "(R-TN)", "a": 28000.0, "b": 391250.0}, {"name": "Rep. Andrew R. Garbarino (R-NY)", "party": "(R-NY)", "a": 1000.0, "b": 408590.0}, {"name": "Members Of The Asian Pacific Islander Caucus", "party": "", "a": 0, "b": 400000.0}, {"name": "Rep. Joyce Beatty (D-OH)", "party": "(D-OH)", "a": 5800.0, "b": 390000.0}, {"name": "Sen. Mike Rounds (R-SD)", "party": "(R-SD)", "a": 7000.0, "b": 380000.0}, {"name": "Rep. Katherine M. Clark (D-MA)", "party": "(D-MA)", "a": 7000.0, "b": 372750.0}, {"name": "Sen. Steve Daines (R-MT)", "party": "(R-MT)", "a": 4500.0, "b": 363000.0}, {"name": "Rep. Mike Johnson (R-LA)", "party": "(R-LA)", "a": 5000.0, "b": 358533.0}], "fec": [{"name": "Coinbase, Inc.", "fec": 106592470.0, "ld203": 1696150.0, "conf": "exact"}, {"name": "Ripple Labs Inc.", "fec": 96500000.0, "ld203": 0, "conf": "exact"}, {"name": "a16z / Andreessen Horowitz", "fec": 94500000.02, "ld203": 0, "conf": "exact"}, {"name": "Jump Crypto", "fec": 25000000.0, "ld203": 0, "conf": "candidate"}, {"name": "Circle Internet Financial", "fec": 1000000.0, "ld203": 0, "conf": "candidate"}, {"name": "Payward / Kraken", "fec": 1000000.0, "ld203": 1062585.0, "conf": "exact"}, {"name": "Uniswap Labs", "fec": 999987.89, "ld203": 0, "conf": "candidate"}, {"name": "ConsenSys Software Inc.", "fec": 800000.0, "ld203": 0, "conf": "exact"}], "press": {"q": ["2022-Q1", "2022-Q2", "2022-Q3", "2022-Q4", "2023-Q1", "2023-Q2", "2023-Q3", "2023-Q4", "2024-Q1", "2024-Q2", "2024-Q3", "2024-Q4", "2025-Q1", "2025-Q2", "2025-Q3", "2025-Q4", "2026-Q1"], "share": [0.5, 0.16, 0.29, 0.23, 0.49, 0.32, 0.61, 0.27, 0.32, 0.68, 0.51, 0.4, 0.9, 1.35, 1.13, 0.54, 0.7], "n": [25, 8, 15, 10, 39, 26, 42, 20, 28, 64, 40, 22, 124, 173, 126, 57, 80], "all": [5041, 5114, 5223, 4324, 7899, 8015, 6885, 7450, 8772, 9476, 7902, 5433, 13772, 12775, 11147, 10624, 11466]}, "caveats": ["Recall-first map: any client whose filing free-text names one of 43 curated crypto phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'", "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue.", "Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated.", "LD-203 'disclosed giving' is the lobbyist-side regime only. Super-PAC money (Fairshake network) legally lives in FEC data — the two never sum.", "FEC↔lobbying name matches are candidates for human confirmation (shown with confidence labels). Entity resolution is the ceiling: a few companies (Kraken/Payward, a16z) file under multiple names and are recovered manually.", "Everything is self-reported disclosure data. 'Disclosed' never means 'total': 501(c)(4) dark money and state lobbying are outside every number here."]};
+</script>
+<script>
+(function () {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const r = document.documentElement;
+    const cur = r.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    r.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  });
+})();
+(function () {
+  const app = document.getElementById("app");
+  statTiles(app, DATA.kpis);
+
+  /* Players bubble map */
+  {
+    const { box, cardEl } = card(app, "The player map — who lobbies on crypto",
+      "Top " + DATA.players.length + " client-side players. Bubble size = crypto-tagged senate filings 2022–2026Q1 (how sustained the crypto lobbying is). Color = crypto-native organization (hand-triaged) vs diversified filer lobbying on crypto. Hover for each player's total lobbying budget.",
+      "Recall-first map: an organization appears if its filings' free-text names crypto vocabulary (43 curated phrases). 92% of all 508 mapped players have no crypto term in their name — the industry is mostly invisible to a name search. Full list in data/crypto_players.csv.");
+    const lg = legend(cardEl, [
+      { name: "Crypto-native (Coinbase, Kraken, Blockchain Assn…)", color: SLOT[0] },
+      { name: "Diversified filer (PayPal, Visa, Fidelity, banks…)", color: SLOT[2] }
+    ]);
+    cardEl.insertBefore(lg, box);
+    bubblePack(box, {
+      items: DATA.players.map(p => ({
+        label: p.name, short: p.short, r0: p.filings,
+        slot: p.vis ? 0 : 2, extra: p
+      })),
+      height: 470, fmtSize: "#",
+      ttRows: d => [
+        { color: SLOT[d.slot], value: fmtNum(d.extra.filings), name: "crypto-tagged senate filings" },
+        { color: null, value: fmtMoney(d.extra.spend), name: "total lobbying spend (all issues)" },
+        { color: null, value: d.extra.tier, name: "tier (core ≥8 · active 3–7 · peripheral ≤2)" }
+      ]
+    });
+    tableView(cardEl, ["Player", "Crypto filings (senate)", "Tier", "Crypto-native", "Total spend (all issues)"],
+      DATA.players.map(p => [p.name, p.filings, p.tier, p.vis ? "yes" : "no", p.spend]),
+      ["s", "#", "s", "s", "$"]);
+  }
+
+  /* Trend */
+  {
+    const { box, cardEl } = card(app, "2025 is the breakout year",
+      "Crypto-tagged senate filings and distinct client organizations per quarter (amendment-deduped).",
+      "Flat through 2022–2024 (~230 filings, ~175 clients a quarter), then +60% through 2025 as the GENIUS Act (stablecoins) and market-structure bills moved. 2026-Q1 holds the new plateau.");
+    const lg = legend(cardEl, [{ name: "Crypto-tagged filings", color: SLOT[0] }, { name: "Distinct clients", color: SLOT[1] }], "line");
+    cardEl.insertBefore(lg, box);
+    linePanel(box, {
+      x: DATA.trend.q, fmt: "#",
+      series: [
+        { name: "Crypto-tagged filings", values: DATA.trend.filings },
+        { name: "Distinct clients", values: DATA.trend.clients }
+      ]
+    });
+    tableView(cardEl, ["Quarter", "Filings", "Clients", "Canonical spend of active clients (all-issue)"],
+      DATA.trend.q.map((q, i) => [q, DATA.trend.filings[i], DATA.trend.clients[i], DATA.trend.spend[i]]),
+      ["s", "#", "#", "$"]);
+  }
+
+  /* Where it hides */
+  {
+    const { box, cardEl } = card(app, "Where crypto hides in the disclosure forms",
+      "Share of crypto-tagged filing text by the general issue code the registrant filed it under.",
+      "Only 43.7% sits under Financial Institutions (FIN). The rest scatters across banking, taxation, science/tech, computers, consumer safety, agriculture and 40+ more codes — an issue-code filter alone misses most of the industry. This is why the map is built from what filers SAY (free-text vocabulary), not the category they tick.");
+    hbars(box, {
+      items: DATA.issueScatter.map(d => ({ label: d.code + " — " + d.name, value: d.pct, note: fmtNum(d.docs) + " tagged text blocks" })),
+      fmt: "%", labelW: 330, valueName: "share of crypto-tagged text"
+    });
+    tableView(cardEl, ["Issue code", "Crypto-tagged text blocks", "Share %"],
+      DATA.issueScatter.map(d => [d.code + " — " + d.name, d.docs, d.pct]), ["s", "#", "%"]);
+  }
+
+  /* Top spenders — native vs diversified, side by side */
+  {
+    const { box, cardEl } = card(app, "The money — two different industries lobby on crypto",
+      "Total canonical lobbying spend 2022–2026Q1 (all issues). Left: crypto-native organizations — for them this is essentially crypto money. Right: diversified core players (≥8 crypto filings) whose budgets span many issues; crypto is one desk.",
+      "The comparison is the story: Coinbase's entire five-year lobbying budget ($15M) is smaller than what Visa ($39M) or Mastercard ($20M) spends across all its issues — but the crypto-native side is the one whose money is all-in on this fight. Known name-variant families (Crypto.com/Foris, Kraken/Payward, a16z/AH Capital) are combined here; per-variant rows are in data/crypto_players.csv.");
+    const grid = div("two-col", box);
+    const left = div(null, grid), right = div(null, grid);
+    div("sub", left, "Crypto-native");
+    hbars(div(null, left), {
+      items: DATA.nativeSpend.map(d => ({ label: d.name, value: d.spend, note: fmtNum(d.filings) + " crypto-tagged filings" })),
+      fmt: "$", labelW: 190, rowH: 27, width: 480, color: SLOT[0], valueName: "total lobbying spend"
+    });
+    div("sub", right, "Diversified, active on crypto (≥8 crypto filings)");
+    hbars(div(null, right), {
+      items: DATA.diversSpend.map(d => ({ label: d.name, value: d.spend, note: fmtNum(d.filings) + " crypto-tagged filings" })),
+      fmt: "$", labelW: 190, rowH: 27, width: 480, color: SLOT[2], valueName: "total lobbying spend (all issues)"
+    });
+    tableView(cardEl, ["Crypto-native", "Spend", "", "Diversified", "Spend (all issues)"],
+      DATA.nativeSpend.map((d, i) => [d.name, d.spend, "",
+        DATA.diversSpend[i] ? DATA.diversSpend[i].name : "",
+        DATA.diversSpend[i] ? DATA.diversSpend[i].spend : null]),
+      ["s", "$", "s", "s", "$"]);
+  }
+
+  /* Giving — LD-203, split crypto-native vs diversified */
+  {
+    const { box, cardEl } = card(app, "Who gets the money — and whether it comes from crypto natives or the incumbents (disclosed LD-203)",
+      "Every recipient shows two bars: giving by 105 hand-triaged crypto-NATIVE organizations (exchanges, protocols, miners, crypto VCs, trade groups) vs giving by the 162 DIVERSIFIED core players (banks, card networks, asset managers and other incumbents with a sustained crypto lobbying record). 2022–2025, amendment-deduplicated.",
+      "Attribution caveat: LD-203 giving is organization-level — a bank PAC's contribution to a Financial Services member is not necessarily crypto-motivated; the split shows WHO funds each recipient, not why. Disclosed LD-203 only (Fairshake Super-PAC money is the next chart). Party/state from the corpus members table; retired members hand-mapped and flagged in the CSV. Person-name and Trump-inaugural variants combined; raw variants in data/crypto_ld203_recipients_split.csv.");
+    const lg = legend(cardEl, [
+      { name: "From crypto-native orgs", color: SLOT[0] },
+      { name: "From diversified core players (banks, cards, asset mgrs…)", color: SLOT[2] }
+    ]);
+    cardEl.insertBefore(lg, box);
+    div("sub", box, "Top recipients overall");
+    groupedHBars(div(null, box), {
+      items: DATA.givingTop.map(d => ({ label: d.name, a: d.a, b: d.b })),
+      aName: "from crypto-native orgs", bName: "from diversified core players",
+      aColor: SLOT[0], bColor: SLOT[2], labelW: 330
+    });
+    div("sub", box, "Members of Congress — the two funding worlds, side by side");
+    const mgrid = div("two-col", box);
+    const mleft = div(null, mgrid), mright = div(null, mgrid);
+    div("sub", mleft, "Top by CRYPTO-NATIVE giving");
+    groupedHBars(div(null, mleft), {
+      items: DATA.givingMembersNative.map(d => ({ label: d.name, a: d.a, b: d.b })),
+      aName: "from crypto-native orgs", bName: "from diversified core players",
+      aColor: SLOT[0], bColor: SLOT[2], labelW: 185, width: 480
+    });
+    div("sub", mright, "Top by DIVERSIFIED-incumbent giving");
+    groupedHBars(div(null, mright), {
+      items: DATA.givingMembersDiv.map(d => ({ label: d.name, a: d.a, b: d.b })),
+      aName: "from crypto-native orgs", bName: "from diversified core players",
+      aColor: SLOT[0], bColor: SLOT[2], labelW: 185, width: 480
+    });
+    tableView(cardEl, ["Recipient", "From crypto-native", "From diversified core"],
+      DATA.givingRecipientsRaw.map(d => [d.name, d.a, d.b]), ["s", "$", "$"]);
+  }
+
+  /* FEC vs LD-203 */
+  {
+    const { box, cardEl } = card(app, "The disclosed-lobbying view understates the political money ~60×",
+      "Same players, two disclosure regimes: contributions into the Fairshake Super-PAC network (FEC, 2024+2026 cycles) vs their disclosed LD-203 giving.",
+      "Fairshake + Defend American Jobs + Protect Progress (committees resolved live from openFEC; itemized line-11 contributions only, memo/attribution rows and crypto-sale proceeds excluded). FEC↔LDA name matches are candidates for human confirmation, shown as reported. LD-203 legally cannot capture Super-PAC money — the gap is the point, not an error.");
+    const lg = legend(cardEl, [
+      { name: "FEC Super-PAC contributions (Fairshake network)", color: SLOT[0] },
+      { name: "Disclosed LD-203 giving", color: SLOT[1] }
+    ]);
+    cardEl.insertBefore(lg, box);
+    groupedHBars(box, {
+      items: DATA.fec.map(d => ({ label: d.name, a: d.fec, b: d.ld203 })),
+      aName: "FEC Super-PAC (Fairshake network)", bName: "Disclosed LD-203 giving", labelW: 250
+    });
+    tableView(cardEl, ["Player", "FEC Super-PAC", "LD-203 disclosed", "Match confidence"],
+      DATA.fec.map(d => [d.name, d.fec, d.ld203, d.conf]), ["s", "$", "$", "s"]);
+  }
+
+  /* Press coupling */
+  {
+    const { box, cardEl } = card(app, "Congress talks about crypto more too — but less than it files",
+      "Share of member press releases mentioning crypto terms, by quarter (crypto share of ~141K releases).",
+      "Peaks at 1.35% in 2025-Q2 — the GENIUS Act floor fight — up from ~0.3–0.5% in 2022–2024. Even at peak, crypto is a small share of congressional messaging while the filing side has grown 60%: the lobbying build-out is bigger than the public conversation.");
+    linePanel(box, {
+      x: DATA.press.q, fmt: "%",
+      series: [{ name: "Crypto share of member press releases", values: DATA.press.share }],
+      height: 210
+    });
+    tableView(cardEl, ["Quarter", "Crypto releases", "All releases", "Share %"],
+      DATA.press.q.map((q, i) => [q, DATA.press.n[i], DATA.press.all[i], DATA.press.share[i]]),
+      ["s", "#", "#", "%"]);
+  }
+
+  /* Caveats */
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2"); h.textContent = "How to read this (caveats that matter)"; c.appendChild(h);
+    const ul = document.createElement("ul"); ul.className = "caveats"; c.appendChild(ul);
+    DATA.caveats.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+  }
+})();
+
+</script>
+</body>
+</html>

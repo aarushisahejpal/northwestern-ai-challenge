@@ -1,0 +1,603 @@
+﻿member,giver_slice,raw_recipient_string_as_filed,tier,confidence,source,total,items
+Rep. Abraham J. Hamadeh (R-AZ),crypto_native,REP. ABRAHAM HAMADEH,direct,matched,person-name,1500.0,1
+Rep. Adam Gray (D-CA),crypto_native,REP. ADAM GRAY,direct,matched,person-name,2000.0,3
+Rep. Adam Smith (D-WA),diversified_core,REP. ADAM SMITH,direct,matched,person-name,54500.0,22
+Rep. Addison P. McDowell (R-NC),crypto_native,REP. ADDISON MCDOWELL,direct,matched,person-name,1000.0,1
+Rep. Adrian Smith (R-NE),diversified_core,REP. ADRIAN SMITH,direct,matched,person-name,55900.0,24
+Rep. Adriano Espaillat (D-NY),crypto_native,REP. ADRIANO ESPAILLAT,direct,matched,person-name,500.0,1
+Rep. Andrew R. Garbarino (R-NY),crypto_native,REP. ANDREW GARBARINO,direct,matched,person-name,1000.0,1
+Rep. Andrew R. Garbarino (R-NY),diversified_core,ANDREW GARBARINO,direct,matched,person-name,157000.0,73
+Rep. Andrew R. Garbarino (R-NY),diversified_core,REP. ANDREW GARBARINO,direct,matched,person-name,125090.0,50
+Rep. Andrew R. Garbarino (R-NY),diversified_core,REP ANDREW GARBARINO,direct,matched,person-name,66500.0,30
+Rep. Andrew R. Garbarino (R-NY),diversified_core,REP. ANDREW R. GARBARINO,direct,matched,person-name,60000.0,35
+Rep. Andy Barr (R-KY),crypto_native,REP. ANDY BARR,direct,matched,person-name,8500.0,6
+Rep. Andy Barr (R-KY),crypto_native,"BUILDING AMERICA'S REPUBLICAN REPRESENTATION PAC, KEEP AMERICA GREAT PAC, INC., ANDY BAR FOR SENATE, INC",leadership-pac,prefix,committee-prefix/openfec-sponsor,3500.0,1
+Rep. Andy Barr (R-KY),crypto_native,REP. GARLAND ANDY BARR,direct,matched,person-name,3300.0,1
+Rep. Andy Barr (R-KY),diversified_core,ANDY BARR,direct,matched,person-name,287017.0,98
+Rep. Andy Barr (R-KY),diversified_core,REP. ANDY BARR,direct,matched,person-name,209040.0,70
+Rep. Andy Barr (R-KY),diversified_core,REP ANDY BARR IV,direct,matched,person-name,127000.0,36
+Rep. Andy Barr (R-KY),diversified_core,"REP. ANDY H. BARR, IV",direct,matched,person-name,110500.0,35
+Rep. Andy Barr (R-KY),diversified_core,"BARR, ANDY",direct,inverted,person-name,64500.0,27
+Rep. Angie Craig (D-MN),crypto_native,REP. ANGIE CRAIG,direct,matched,person-name,17500.0,7
+Rep. Angie Craig (D-MN),crypto_native,ANGIE CRAIG,direct,matched,person-name,3500.0,2
+Rep. Angie Craig (D-MN),diversified_core,REP. ANGIE CRAIG,direct,matched,person-name,55590.0,28
+Rep. Ann Wagner (R-MO),crypto_native,REP. ANN WAGNER,direct,matched,person-name,1000.0,1
+Rep. Ann Wagner (R-MO),diversified_core,REP. ANN WAGNER,direct,matched,person-name,214598.0,81
+Rep. Ann Wagner (R-MO),diversified_core,ANN WAGNER,direct,matched,person-name,167000.0,71
+Rep. Ann Wagner (R-MO),diversified_core,REP. ANN LOUISE WAGNER,direct,matched,person-name,126500.0,47
+Rep. Ann Wagner (R-MO),diversified_core,REP ANN WAGNER,direct,matched,person-name,106000.0,27
+Rep. Ashley Hinson (R-IA),crypto_native,REP. ASHLEY HINSON,direct,matched,person-name,1000.0,1
+Rep. Ashley Hinson (R-IA),diversified_core,REP. ASHLEY HINSON,direct,matched,person-name,88095.0,33
+Rep. Barry Loudermilk (R-GA),diversified_core,BARRY LOUDERMILK,direct,matched,person-name,58250.0,24
+Rep. Barry Loudermilk (R-GA),diversified_core,REP. BARRY LOUDERMILK,direct,matched,person-name,56300.0,28
+Rep. Becca Balint (D-VT),crypto_native,BECCA BALINT,direct,matched,person-name,1000.0,1
+Rep. Ben McAdams (D-UT),crypto_native,BEN MCADAMS,direct,matched,person-name,500.0,1
+Rep. Beth Van Duyne (R-TX),crypto_native,REP. BETH VAN DUYNE,direct,matched,person-name,1000.0,1
+Rep. Bill Foster (D-IL),crypto_native,REP. BILL FOSTER,direct,matched,person-name,250.0,1
+Rep. Bill Foster (D-IL),diversified_core,REP. BILL FOSTER,direct,matched,person-name,229000.0,110
+Rep. Bill Foster (D-IL),diversified_core,BILL FOSTER,direct,matched,person-name,169500.0,77
+Rep. Bill Foster (D-IL),diversified_core,REP BILL FOSTER,direct,matched,person-name,86500.0,35
+Rep. Bill Huizenga (R-MI),crypto_native,REP. WILLIAM HUIZENGA,direct,matched,person-name,2000.0,2
+Rep. Bill Huizenga (R-MI),crypto_native,REP. WILLIAM P. HUIZENGA,direct,matched,person-name,1500.0,1
+Rep. Bill Huizenga (R-MI),diversified_core,BILL HUIZENGA,direct,matched,person-name,251500.0,91
+Rep. Bill Huizenga (R-MI),diversified_core,REP. BILL HUIZENGA,direct,matched,person-name,239985.0,78
+Rep. Bill Huizenga (R-MI),diversified_core,REP. WILLIAM PATRICK HUIZENGA,direct,matched,person-name,145500.0,57
+Rep. Bill Huizenga (R-MI),diversified_core,REP BILL HUIZENGA,direct,matched,person-name,124500.0,36
+Rep. Bill Huizenga (R-MI),diversified_core,"HUIZENGA, BILL",direct,inverted,person-name,58000.0,24
+Rep. Blaine Luetkemeyer (R-MO),diversified_core,BLAINE LUETKEMEYER,direct,matched,person-name,141900.0,51
+Rep. Blaine Luetkemeyer (R-MO),diversified_core,REP. BLAINE LUETKEMEYER,direct,matched,person-name,112900.0,39
+Rep. Blaine Luetkemeyer (R-MO),diversified_core,REP BLAINE LUETKEMEYER,direct,matched,person-name,64500.0,19
+Rep. Blake D. Moore (R-UT),crypto_native,REP. BLAKE MOORE,direct,matched,person-name,1000.0,1
+Rep. Blake D. Moore (R-UT),diversified_core,REP. BLAKE MOORE,direct,matched,person-name,61185.0,30
+Rep. Brad Sherman (D-CA),diversified_core,REP. BRAD SHERMAN,direct,matched,person-name,162500.0,60
+Rep. Brad Sherman (D-CA),diversified_core,BRAD SHERMAN,direct,matched,person-name,101000.0,43
+Rep. Bradley Scott Schneider (D-IL),crypto_native,REP. BRAD SCHNEIDER,direct,matched,person-name,3500.0,3
+Rep. Bradley Scott Schneider (D-IL),crypto_native,BRAD SCHNEIDER,direct,matched,person-name,1000.0,1
+Rep. Bradley Scott Schneider (D-IL),crypto_native,REP. BRADLEY SCHNEIDER,direct,matched,person-name,1000.0,1
+Rep. Bradley Scott Schneider (D-IL),crypto_native,REP. BRADLEY S. SCHNEIDER,direct,matched,person-name,1000.0,1
+Rep. Bradley Scott Schneider (D-IL),diversified_core,REP. BRAD SCHNEIDER,direct,matched,person-name,109500.0,42
+Rep. Bradley Scott Schneider (D-IL),diversified_core,BRAD SCHNEIDER,direct,matched,person-name,100000.0,40
+Rep. Brendan F. Boyle (D-PA),crypto_native,REP. BRENDAN BOYLE,direct,matched,person-name,2000.0,2
+Rep. Brett Guthrie (R-KY),diversified_core,REP. BRETT GUTHRIE,direct,matched,person-name,54000.0,24
+Rep. Brian Jack (R-GA),crypto_native,REP. BRIAN JACK,direct,matched,person-name,5000.0,2
+Rep. Brian Jack (R-GA),crypto_native,BRIAN JACK,direct,matched,person-name,1500.0,2
+Rep. Brian Jack (R-GA),crypto_native,REPRESENTATIVE BRIAN JACK,direct,matched,person-name,500.0,1
+Rep. Brian K. Fitzpatrick (R-PA),diversified_core,BRIAN FITZPATRICK,direct,matched,person-name,91000.0,32
+Rep. Brian K. Fitzpatrick (R-PA),diversified_core,REP. BRIAN FITZPATRICK,direct,matched,person-name,63500.0,19
+Rep. Brian K. Fitzpatrick (R-PA),diversified_core,REP BRIAN FITZPATRICK,direct,matched,person-name,53000.0,24
+Rep. Brittany Pettersen (D-CO),crypto_native,REP. BRITTANY PETTERSEN,direct,matched,person-name,4500.0,5
+Rep. Brittany Pettersen (D-CO),crypto_native,BRITTANY PETTERSEN,direct,matched,person-name,1000.0,1
+Rep. Brittany Pettersen (D-CO),crypto_native,REP. BRITTANY LOUISE PETTERSEN,direct,matched,person-name,500.0,1
+Rep. Brittany Pettersen (D-CO),diversified_core,REP. BRITTANY PETTERSEN,direct,matched,person-name,114500.0,52
+Rep. Brittany Pettersen (D-CO),diversified_core,BRITTANY PETTERSEN,direct,matched,person-name,95750.0,41
+Rep. Bryan Steil (R-WI),crypto_native,"STEIL FOR WISCONSIN, INC.; REPUBLICAN PARTY OF WISCONSIN; ON WISCONSIN PAC; NRCC",campaign-committee,compound:linked,committee-exact/fec-ccl,10500.0,4
+Rep. Bryan Steil (R-WI),crypto_native,"STEIL FOR WISCONSIN, INC.; REPUBLICAN PARTY OF WISCONSIN; ON WISCONSIN PAC; NRCC",leadership-pac,compound:prefix,committee-prefix/openfec-sponsor,10500.0,4
+Rep. Bryan Steil (R-WI),crypto_native,REP. BRYAN GEORGE STEIL,direct,matched,person-name,6000.0,4
+Rep. Bryan Steil (R-WI),crypto_native,BRYAN STEIL,direct,matched,person-name,3500.0,2
+Rep. Bryan Steil (R-WI),crypto_native,REPRESENTATIVE BRYAN STEIL,direct,matched,person-name,2500.0,1
+Rep. Bryan Steil (R-WI),crypto_native,"STEIL FOR WISCONSIN, INC. REPUBLICAN PARTY OF WISCONSIN ON WISCONSIN PAC NRCC",campaign-committee,prefix,committee-prefix/fec-ccl,500.0,1
+Rep. Bryan Steil (R-WI),diversified_core,REP. BRYAN STEIL,direct,matched,person-name,194500.0,72
+Rep. Bryan Steil (R-WI),diversified_core,BRYAN STEIL,direct,matched,person-name,149500.0,76
+Rep. Bryan Steil (R-WI),diversified_core,REP BRYAN STEIL,direct,matched,person-name,98000.0,32
+Rep. Bryan Steil (R-WI),diversified_core,REP. BRYAN G. STEIL,direct,matched,person-name,92500.0,42
+Rep. Byron Donalds (R-FL),crypto_native,BYRON DONALDS,direct,matched,person-name,3300.0,1
+Rep. Cathy McMorris Rodgers (R-WA),diversified_core,REP. CATHY MCMORRIS RODGERS,direct,matched,person-name,81000.0,27
+Rep. Claudia Tenney (R-NY),crypto_native,REP. CLAUDIA TENNEY,direct,matched,person-name,1000.0,1
+Rep. Claudia Tenney (R-NY),diversified_core,REP. CLAUDIA TENNEY,direct,matched,person-name,83000.0,41
+Rep. Daniel Meuser (R-PA),crypto_native,REP. DANIEL MEUSER,direct,matched,person-name,1500.0,1
+Rep. Daniel Meuser (R-PA),diversified_core,REP. DAN MEUSER,direct,matched,person-name,102750.0,40
+Rep. Daniel Meuser (R-PA),diversified_core,REP DAN MEUSER,direct,matched,person-name,58000.0,20
+Rep. Daniel S. Goldman (D-NY),crypto_native,REP. DAN GOLDMAN,direct,matched,person-name,500.0,1
+Rep. Darin LaHood (R-IL),diversified_core,REP. DARIN LAHOOD,direct,matched,person-name,135685.0,44
+Rep. Darin LaHood (R-IL),diversified_core,DARIN LAHOOD,direct,matched,person-name,83000.0,35
+Rep. Darin LaHood (R-IL),diversified_core,REP DARIN LAHOOD,direct,matched,person-name,71500.0,26
+Rep. Darren Soto (D-FL),crypto_native,DARREN SOTO,direct,matched,person-name,6500.0,3
+Rep. Darren Soto (D-FL),crypto_native,REP. DARREN SOTO,direct,matched,person-name,4500.0,4
+Rep. Darren Soto (D-FL),crypto_native,DARREN SOTO FOR CONGRESS,campaign-committee,linked,committee-exact/fec-ccl,2500.0,1
+Rep. Dave Min (D-CA),crypto_native,REP. DAVE MIN,direct,matched,person-name,1000.0,2
+Rep. David Kustoff (R-TN),diversified_core,REP. DAVID KUSTOFF,direct,matched,person-name,78000.0,33
+Rep. David P. Joyce (R-OH),crypto_native,REP. DAVE JOYCE,direct,matched,person-name,1000.0,1
+Rep. David Schweikert (R-AZ),crypto_native,REP. DAVID S. SCHWEIKERT,direct,matched,person-name,1500.0,1
+Rep. David Scott (D-GA),diversified_core,DAVID SCOTT,direct,matched,person-name,95000.0,36
+Rep. David Scott (D-GA),diversified_core,REP DAVID SCOTT,direct,matched,person-name,77500.0,23
+Rep. David Scott (D-GA),diversified_core,REP. DAVID SCOTT,direct,matched,person-name,61000.0,28
+Rep. Deborah K. Ross (D-NC),diversified_core,REP. DEBORAH ROSS,direct,matched,person-name,54000.0,23
+Rep. Derek Kilmer (D-WA),diversified_core,REP. DEREK KILMER,direct,matched,person-name,65500.0,36
+Rep. Derek Tran (D-CA),crypto_native,REP. DEREK TRAN,direct,matched,person-name,2000.0,3
+Rep. Donald G. Davis (D-NC),crypto_native,REP. DON DAVIS,direct,matched,person-name,1500.0,3
+Rep. Donald Norcross (D-NJ),diversified_core,REP. DONALD NORCROSS,direct,matched,person-name,64000.0,28
+Rep. Dusty Johnson (R-SD),crypto_native,REP. DUSTY JOHNSON,direct,matched,person-name,4500.0,4
+Rep. Dusty Johnson (R-SD),crypto_native,DAKOTA LEADERSHIP PAC; FRIENDS OF DUSTY JOHNSON; DUSTY PAC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,4500.0,2
+Rep. Dusty Johnson (R-SD),crypto_native,DAKOTA LEADERSHIP PAC; FRIENDS OF DUSTY JOHNSON; DUSTY PAC,campaign-committee,compound:linked,committee-exact/fec-ccl,4500.0,2
+Rep. Dusty Johnson (R-SD),crypto_native,DUSTY JOHNSON,direct,matched,person-name,2000.0,1
+Rep. Dusty Johnson (R-SD),diversified_core,REP. DUSTY JOHNSON,direct,matched,person-name,77095.0,38
+Rep. Eleanor Holmes Norton (D-DC),diversified_core,ELEANOR HOLMES NORTON,direct,matched,person-name,200000.0,2
+Rep. Emily Randall (D-WA),crypto_native,EMILY RANDALL,direct,matched,person-name,1000.0,1
+Rep. Eric Sorensen (D-IL),crypto_native,REP. ERIC SORENSEN,direct,matched,person-name,2000.0,2
+Rep. Erin Houchin (R-IN),crypto_native,REP. ERIN HOUCHIN,direct,matched,person-name,3000.0,3
+Rep. Erin Houchin (R-IN),crypto_native,ERIN HOUCHIN,direct,matched,person-name,1000.0,1
+Rep. Erin Houchin (R-IN),diversified_core,REP. ERIN HOUCHIN,direct,matched,person-name,97750.0,47
+Rep. Erin Houchin (R-IN),diversified_core,ERIN HOUCHIN,direct,matched,person-name,77500.0,44
+Rep. Eugene Simon Vindman (D-VA),crypto_native,REP. EUGENE VINDMAN,direct,matched,person-name,2500.0,3
+Rep. Frank D. Lucas (R-OK),diversified_core,REP. FRANK LUCAS,direct,matched,person-name,84500.0,34
+Rep. Frank D. Lucas (R-OK),diversified_core,FRANK LUCAS,direct,matched,person-name,67000.0,26
+"Rep. Frank Pallone, Jr. (D-NJ)",crypto_native,REP. FRANK PALLONE,direct,matched,person-name,250.0,1
+"Rep. Frank Pallone, Jr. (D-NJ)",diversified_core,REP. FRANK PALLONE,direct,matched,person-name,57500.0,17
+Rep. Gabe Amo (D-RI),crypto_native,REP. GABE AMO,direct,matched,person-name,1000.0,1
+Rep. Gabe Vasquez (D-NM),crypto_native,REP. GABE VASQUEZ,direct,matched,person-name,1500.0,2
+Rep. Gabe Vasquez (D-NM),crypto_native,REP. GABRIEL VASQUEZ,direct,matched,person-name,500.0,1
+Rep. George Whitesides (D-CA),crypto_native,REP. GEORGE WHITESIDES,direct,matched,person-name,1000.0,2
+Rep. Glenn Ivey (D-MD),crypto_native,REP. GLENN IVEY,direct,matched,person-name,1000.0,1
+Rep. Glenn Thompson (R-PA),crypto_native,REP. GLENN THOMPSON,direct,title-initial,person-name,10750.0,6
+Rep. Grace Meng (D-NY),crypto_native,REP. GRACE MENG,direct,matched,person-name,2000.0,2
+Rep. Gregory W. Meeks (D-NY),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Gregory W. Meeks (D-NY),diversified_core,GREGORY MEEKS,direct,matched,person-name,155000.0,64
+Rep. Gregory W. Meeks (D-NY),diversified_core,REP. GREGORY MEEKS,direct,matched,person-name,146700.0,63
+Rep. Gregory W. Meeks (D-NY),diversified_core,REP. GREGORY WELDON MEEKS,direct,matched,person-name,72500.0,41
+Rep. Gregory W. Meeks (D-NY),diversified_core,REP GREGORY W MEEKS,direct,matched,person-name,60500.0,19
+Rep. Guy Reschenthaler (R-PA),diversified_core,REP. GUY RESCHENTHALER,direct,matched,person-name,61500.0,20
+Rep. Guy Reschenthaler (R-PA),diversified_core,REP GUY RESCHENTHALER,direct,matched,person-name,61500.0,23
+Rep. Gwen Moore (D-WI),diversified_core,REP. GWEN MOORE,direct,matched,person-name,79500.0,32
+Rep. Hakeem S. Jeffries (D-NY),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Hakeem S. Jeffries (D-NY),crypto_native,REP. HAKEEM JEFFRIES,direct,matched,person-name,5000.0,2
+Rep. Hakeem S. Jeffries (D-NY),crypto_native,JEFFRIES FOR CONGRESS,campaign-committee,linked,committee-exact/fec-ccl,500.0,1
+Rep. Hakeem S. Jeffries (D-NY),diversified_core,REP. HAKEEM JEFFRIES,direct,matched,person-name,232000.0,62
+Rep. Hakeem S. Jeffries (D-NY),diversified_core,HAKEEM JEFFRIES,direct,matched,person-name,172100.0,53
+Rep. Hakeem S. Jeffries (D-NY),diversified_core,REP HAKEEM JEFFRIES,direct,matched,person-name,120000.0,28
+Rep. Hakeem S. Jeffries (D-NY),diversified_core,REP. HAKEEM S. JEFFRIES,direct,matched,person-name,82000.0,28
+Rep. Haley M. Stevens (D-MI),crypto_native,REP. HALEY STEVENS,direct,matched,person-name,1000.0,1
+Rep. Haley M. Stevens (D-MI),diversified_core,REP. HALEY STEVENS,direct,matched,person-name,67500.0,21
+Rep. Henry Cuellar (D-TX),crypto_native,REP. HENRY CUELLAR,direct,matched,person-name,1000.0,2
+Rep. J. French Hill (R-AR),crypto_native,REP. JAMES FRENCH HILL,direct,matched,person-name,24800.0,9
+Rep. J. French Hill (R-AR),crypto_native,REP. FRENCH HILL,direct,matched,person-name,7250.0,6
+Rep. J. French Hill (R-AR),crypto_native,FRENCH HILL,direct,matched,person-name,5450.0,5
+Rep. J. French Hill (R-AR),crypto_native,FRENCH HILL FOR ARKANSAS IN THE ARENA PAC NRCC,campaign-committee,prefix,committee-prefix/fec-ccl,3500.0,1
+Rep. J. French Hill (R-AR),crypto_native,FRENCH HILL FOR ARKANSAS; IN THE ARENA PAC; NRCC,campaign-committee,compound:linked,committee-exact/fec-ccl,3300.0,1
+Rep. J. French Hill (R-AR),crypto_native,FRENCH HILL FOR ARKANSAS; IN THE ARENA PAC; NRCC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,3300.0,1
+Rep. J. French Hill (R-AR),crypto_native,TEAM HILL,"jfc-shared, unallocated",inferred,committee-exact/name-inference,500.0,1
+Rep. J. French Hill (R-AR),diversified_core,REP. FRENCH HILL,direct,matched,person-name,295700.0,97
+Rep. J. French Hill (R-AR),diversified_core,FRENCH HILL,direct,matched,person-name,276650.0,94
+Rep. J. French Hill (R-AR),diversified_core,REP FRENCH HILL,direct,matched,person-name,146500.0,40
+Rep. J. French Hill (R-AR),diversified_core,REP. J. FRENCH HILL,direct,matched,person-name,139500.0,48
+Rep. J. French Hill (R-AR),diversified_core,"HILL, FRENCH",direct,inverted,person-name,78000.0,24
+Rep. Jack Bergman (R-MI),crypto_native,JACK BERGMAN,direct,matched,person-name,500.0,1
+Rep. Jake Auchincloss (D-MA),crypto_native,REP. JAKE AUCHINCLOSS,direct,matched,person-name,6800.0,2
+Rep. James A. Himes (D-CT),crypto_native,JIM HIMES,direct,matched,person-name,10800.0,3
+Rep. James A. Himes (D-CT),crypto_native,REP. JIM HIMES,direct,matched,person-name,1500.0,2
+Rep. James A. Himes (D-CT),diversified_core,REP. JIM HIMES,direct,matched,person-name,149500.0,64
+Rep. James A. Himes (D-CT),diversified_core,JIM HIMES,direct,matched,person-name,147500.0,73
+Rep. James A. Himes (D-CT),diversified_core,REP JIM HIMES,direct,matched,person-name,93500.0,33
+Rep. James A. Himes (D-CT),diversified_core,REP. JAMES ANDREW HIMES,direct,matched,person-name,64000.0,34
+Rep. James E. Clyburn (D-SC),diversified_core,REP. JAMES CLYBURN,direct,matched,person-name,86000.0,23
+Rep. James E. Clyburn (D-SC),diversified_core,JAMES CLYBURN,direct,matched,person-name,67500.0,22
+Rep. James E. Clyburn (D-SC),diversified_core,REP JAMES E CLYBURN,direct,matched,person-name,60000.0,16
+Rep. James E. Clyburn (D-SC),diversified_core,REP. JAMES ENOS CLYBURN,direct,matched,person-name,53500.0,18
+Rep. Janelle S. Bynum (D-OR),crypto_native,REP. JANELLE BYNUM,direct,matched,person-name,2000.0,3
+Rep. Janelle S. Bynum (D-OR),crypto_native,JANELLE BYNUM,direct,matched,person-name,500.0,1
+Rep. Janelle S. Bynum (D-OR),crypto_native,HON. JANELLE BYNUM,direct,matched,person-name,250.0,1
+Rep. Jared Moskowitz (D-FL),crypto_native,REP. JARED MOSKOWITZ,direct,matched,person-name,2000.0,2
+Rep. Jasmine Crockett (D-TX),crypto_native,REP. JASMINE CROCKETT,direct,matched,person-name,2000.0,2
+Rep. Jasmine Crockett (D-TX),crypto_native,JASMINE FOR US,campaign-committee,linked,committee-exact/fec-ccl,1000.0,1
+Rep. Jason Smith (R-MO),crypto_native,REP. JASON SMITH,direct,matched,person-name,6000.0,3
+Rep. Jason Smith (R-MO),crypto_native,REP. JASON T. SMITH,direct,matched,person-name,3500.0,1
+Rep. Jason Smith (R-MO),diversified_core,REP. JASON SMITH,direct,matched,person-name,150000.0,40
+Rep. Jason Smith (R-MO),diversified_core,REP JASON SMITH,direct,matched,person-name,122500.0,32
+Rep. Jason Smith (R-MO),diversified_core,JASON SMITH,direct,matched,person-name,110500.0,38
+Rep. Jason Smith (R-MO),diversified_core,"SMITH, JASON",direct,inverted,person-name,71500.0,25
+Rep. Jason Smith (R-MO),diversified_core,REP. JASON THOMAS SMITH,direct,matched,person-name,68000.0,17
+Rep. Jennifer Wexton (D-VA),crypto_native,REP. JENNIFER WEXTON,direct,matched,person-name,250.0,1
+Rep. Jimmy Gomez (D-CA),crypto_native,REP. JIMMY GOMEZ,direct,matched,person-name,1000.0,1
+Rep. Jimmy Panetta (D-CA),crypto_native,REP. JIMMY PANETTA,direct,matched,person-name,1000.0,1
+Rep. Jimmy Panetta (D-CA),diversified_core,REP. JIMMY PANETTA,direct,matched,person-name,81000.0,42
+Rep. Joe Neguse (D-CO),diversified_core,REP. JOE NEGUSE,direct,matched,person-name,75000.0,34
+Rep. John B. Larson (D-CT),diversified_core,REP. JOHN LARSON,direct,matched,person-name,66000.0,25
+Rep. Jonathan L. Jackson (D-IL),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Joseph D. Morelle (D-NY),diversified_core,REP. JOSEPH MORELLE,direct,matched,person-name,77500.0,33
+Rep. Josh Gottheimer (D-NJ),crypto_native,REP. JOSH GOTTHEIMER,direct,matched,person-name,10650.0,7
+Rep. Josh Gottheimer (D-NJ),diversified_core,JOSH GOTTHEIMER,direct,matched,person-name,134000.0,55
+Rep. Josh Gottheimer (D-NJ),diversified_core,REP. JOSH GOTTHEIMER,direct,matched,person-name,115500.0,45
+Rep. Josh Gottheimer (D-NJ),diversified_core,REP JOSH GOTTHEIMER,direct,matched,person-name,111500.0,31
+Rep. Josh Gottheimer (D-NJ),diversified_core,REP. JOSHUA S. GOTTHEIMER,direct,title-initial,person-name,107000.0,46
+Rep. Josh Riley (D-NY),crypto_native,REP. JOSH RILEY,direct,matched,person-name,250.0,1
+Rep. Joyce Beatty (D-OH),crypto_native,REP. JOYCE BEATTY,direct,matched,person-name,5800.0,1
+Rep. Joyce Beatty (D-OH),diversified_core,REP. JOYCE BEATTY,direct,matched,person-name,171500.0,77
+Rep. Joyce Beatty (D-OH),diversified_core,JOYCE BEATTY,direct,matched,person-name,123000.0,56
+Rep. Joyce Beatty (D-OH),diversified_core,REP JOYCE BEATTY,direct,matched,person-name,95500.0,30
+Rep. Juan Vargas (D-CA),diversified_core,REP. JUAN VARGAS,direct,matched,person-name,59500.0,30
+Rep. Judy Chu (D-CA),diversified_core,REP. JUDY CHU,direct,matched,person-name,62500.0,24
+Rep. Julia Letlow (R-LA),diversified_core,REP. JULIA LETLOW,direct,matched,person-name,56500.0,27
+Rep. Julie Fedorchak (R-ND),crypto_native,REP. JULIE FEDORCHAK,direct,matched,person-name,1000.0,1
+Rep. Julie Johnson (D-TX),crypto_native,JULIE JOHNSON,direct,matched,person-name,1000.0,1
+Rep. K. Michael Conaway (R-TX),crypto_native,REP. MICHAEL CONAWAY,direct,matched,person-name,1000.0,1
+Rep. Katherine M. Clark (D-MA),crypto_native,REP. KATHERINE CLARK,direct,matched,person-name,5000.0,2
+Rep. Katherine M. Clark (D-MA),crypto_native,KATHERINE CLARK,direct,matched,person-name,1500.0,1
+Rep. Katherine M. Clark (D-MA),crypto_native,KATHERINE CLARK FOR CONGRESS; FAIR SHOT PAC,campaign-committee,compound:linked,committee-exact/fec-ccl,500.0,1
+Rep. Katherine M. Clark (D-MA),crypto_native,KATHERINE CLARK FOR CONGRESS; FAIR SHOT PAC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,500.0,1
+Rep. Katherine M. Clark (D-MA),crypto_native,REPRESENTATIVE KATHERINE CLARK,direct,matched,person-name,500.0,1
+Rep. Katherine M. Clark (D-MA),diversified_core,REP. KATHERINE CLARK,direct,matched,person-name,209250.0,67
+Rep. Katherine M. Clark (D-MA),diversified_core,KATHERINE CLARK,direct,matched,person-name,103000.0,40
+Rep. Katherine M. Clark (D-MA),diversified_core,REP. KATHERINE M. CLARK,direct,matched,person-name,60500.0,18
+Rep. Kevin Hern (R-OK),diversified_core,REP. KEVIN HERN,direct,matched,person-name,66500.0,23
+Rep. Kevin Hern (R-OK),diversified_core,KEVIN HERN,direct,matched,person-name,61500.0,24
+Rep. Kevin McCarthy (R-CA),diversified_core,KEVIN MCCARTHY,direct,matched,person-name,107500.0,22
+Rep. Kevin McCarthy (R-CA),diversified_core,REP. KEVIN OWEN MCCARTHY,direct,matched,person-name,58500.0,13
+Rep. Kevin McCarthy (R-CA),diversified_core,REP. KEVIN MCCARTHY,direct,matched,person-name,57500.0,12
+Rep. Kevin McCarthy (R-CA),diversified_core,REP KEVIN MCCARTHY,direct,matched,person-name,55000.0,12
+Rep. Kristen McDonald Rivet (D-MI),crypto_native,KRISTEN MCDONALD RIVET,direct,matched,person-name,1500.0,2
+Rep. Kristen McDonald Rivet (D-MI),crypto_native,CONGRESSWOMAN KRISTEN MCDONALD RIVET,direct,matched,person-name,500.0,1
+Rep. Kristen McDonald Rivet (D-MI),crypto_native,REP. MCDONALD RIVET,direct,matched,person-name,500.0,1
+Rep. Kristen McDonald Rivet (D-MI),crypto_native,REP. KRISTEN MCDONALD RIVET,direct,matched,person-name,500.0,1
+Rep. Laura Gillen (D-NY),crypto_native,REP. LAURA GILLEN,direct,matched,person-name,1000.0,2
+Rep. Laura Gillen (D-NY),crypto_native,LAURA GILLEN,direct,matched,person-name,500.0,1
+Rep. Lauren Underwood (D-IL),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Lisa C. McClain (R-MI),crypto_native,REP. LISA MCCLAIN,direct,matched,person-name,1000.0,1
+Rep. Lisa C. McClain (R-MI),diversified_core,REP. LISA MCCLAIN,direct,matched,person-name,82500.0,33
+Rep. Lucy McBath (D-GA),crypto_native,REP. LUCY MCBATH,direct,matched,person-name,1000.0,1
+Rep. Madeleine Dean (D-PA),diversified_core,REP. MADELEINE DEAN,direct,matched,person-name,82500.0,43
+Rep. Madeleine Dean (D-PA),diversified_core,MADELEINE DEAN,direct,matched,person-name,76500.0,30
+Rep. Maggie Goodlander (D-NH),crypto_native,REP. MAGGIE GOODLANDER,direct,matched,person-name,500.0,1
+Rep. Marc A. Veasey (D-TX),crypto_native,REP. MARC VEASEY,direct,matched,person-name,2000.0,2
+Rep. Marcus J. Molinaro (R-NY),crypto_native,REP. MARCUS J. MOLINARO,direct,matched,person-name,3900.0,2
+Rep. Mark Alford (R-MO),crypto_native,REP. MARK ALFORD,direct,matched,person-name,300.0,1
+Rep. Marlin A. Stutzman (R-IN),crypto_native,REP. MARLIN A. STUTZMAN,direct,matched,person-name,1000.0,1
+Rep. Mary Sattler Peltola (D-AK),crypto_native,REP. MARY PELTOLA,direct,matched,person-name,500.0,1
+Rep. Matt Cartwright (D-PA),diversified_core,REP. MATT CARTWRIGHT,direct,matched,person-name,61500.0,19
+Rep. Max L. Miller (R-OH),crypto_native,REP. MAX MILLER,direct,matched,person-name,2000.0,2
+Rep. Maxine Waters (D-CA),crypto_native,REP. MAXINE WATERS,direct,matched,person-name,2900.0,1
+Rep. Maxine Waters (D-CA),crypto_native,CITIZENS FOR WATERS,campaign-committee,linked,committee-exact/fec-ccl,1000.0,1
+Rep. Maxine Waters (D-CA),diversified_core,REP. MAXINE WATERS,direct,matched,person-name,89000.0,33
+Rep. Michael Lawler (R-NY),crypto_native,REP. MICHAEL LAWLER,direct,matched,person-name,1000.0,1
+Rep. Michael Lawler (R-NY),crypto_native,REP. MIKE LAWLER,direct,matched,person-name,250.0,1
+Rep. Michael Lawler (R-NY),diversified_core,MICHAEL LAWLER,direct,matched,person-name,78500.0,34
+Rep. Michael Lawler (R-NY),diversified_core,REP. MIKE LAWLER,direct,matched,person-name,66760.0,30
+Rep. Michelle Steel (R-CA),crypto_native,REP. MICHELLE STEEL,direct,matched,person-name,1000.0,1
+Rep. Michelle Steel (R-CA),diversified_core,REP. MICHELLE STEEL,direct,matched,person-name,57595.0,21
+Rep. Mike Carey (R-OH),crypto_native,REP. MIKE CAREY,direct,matched,person-name,5000.0,3
+Rep. Mike Carey (R-OH),crypto_native,CAREY FOR CONGRESS; CARRY ON PAC; NRCC,campaign-committee,compound:linked,committee-exact/fec-ccl,2500.0,1
+Rep. Mike Carey (R-OH),crypto_native,CAREY FOR CONGRESS; CARRY ON PAC; NRCC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,2500.0,1
+Rep. Mike Carey (R-OH),diversified_core,REP. MIKE CAREY,direct,matched,person-name,140700.0,69
+Rep. Mike Flood (R-NE),crypto_native,REP. MIKE FLOOD,direct,matched,person-name,3500.0,3
+Rep. Mike Flood (R-NE),crypto_native,MIKE FLOOD,direct,matched,person-name,3300.0,1
+Rep. Mike Flood (R-NE),crypto_native,MIKE FLOOD FOR CONGRESS,campaign-committee,linked,committee-exact/fec-ccl,1000.0,1
+Rep. Mike Flood (R-NE),diversified_core,MIKE FLOOD,direct,matched,person-name,99500.0,42
+Rep. Mike Haridopolos (R-FL),crypto_native,REP. MIKE HARIDOPOLOS,direct,matched,person-name,2500.0,2
+Rep. Mike Johnson (R-LA),crypto_native,REP. MIKE JOHNSON,direct,matched,person-name,5000.0,1
+Rep. Mike Johnson (R-LA),diversified_core,REP. MIKE JOHNSON,direct,matched,person-name,140033.0,33
+Rep. Mike Johnson (R-LA),diversified_core,MIKE JOHNSON,direct,matched,person-name,112500.0,26
+Rep. Mike Johnson (R-LA),diversified_core,REP MIKE JOHNSON,direct,matched,person-name,106000.0,25
+Rep. Mike Quigley (D-IL),diversified_core,REP. MIKE QUIGLEY,direct,matched,person-name,56500.0,22
+Rep. Mike Rogers (R-AL),crypto_native,SEN. MICHAEL J. ROGERS,direct,matched,person-name,825.0,1
+Rep. Mike Thompson (D-CA),diversified_core,REP. MIKE THOMPSON,direct,matched,person-name,96000.0,38
+Rep. Mike Thompson (D-CA),diversified_core,MIKE THOMPSON,direct,matched,person-name,74000.0,23
+Rep. Mikie Sherrill (D-NJ),crypto_native,REP. MIKIE SHERRILL,direct,matched,person-name,2000.0,2
+Rep. Nellie Pou (D-NJ),crypto_native,REP. NELIDA POU,direct,title-initial,person-name,500.0,1
+Rep. Nellie Pou (D-NJ),crypto_native,REP. NELLIE POU,direct,matched,person-name,500.0,1
+Rep. Nellie Pou (D-NJ),crypto_native,NELLIE POU,direct,matched,person-name,500.0,1
+Rep. Nicholas J. Begich III (R-AK),crypto_native,REP. NICK BEGICH,direct,matched,person-name,1500.0,1
+Rep. Nicole Malliotakis (R-NY),diversified_core,REP. NICOLE MALLIOTAKIS,direct,matched,person-name,60000.0,29
+Rep. Nikema Williams (D-GA),diversified_core,REP. NIKEMA WILLIAMS,direct,matched,person-name,57500.0,35
+Rep. Nikki Budzinski (D-IL),crypto_native,REP. NIKKI BUDZINSKI,direct,matched,person-name,3500.0,4
+Rep. Nikki Budzinski (D-IL),crypto_native,NIKKI BUDZINSKI,direct,matched,person-name,500.0,1
+Rep. Patrick T. McHenry (R-NC),crypto_native,REP. PATRICK TIMOTHY MCHENRY,direct,matched,person-name,8300.0,2
+Rep. Patrick T. McHenry (R-NC),crypto_native,REP. PATRICK MCHENRY,direct,matched,person-name,3500.0,3
+Rep. Patrick T. McHenry (R-NC),crypto_native,PATRICK MCHENRY,direct,matched,person-name,3100.0,2
+Rep. Patrick T. McHenry (R-NC),diversified_core,PATRICK MCHENRY,direct,matched,person-name,215400.0,59
+Rep. Patrick T. McHenry (R-NC),diversified_core,REP. PATRICK TIMOTHY MCHENRY,direct,matched,person-name,156250.0,45
+Rep. Patrick T. McHenry (R-NC),diversified_core,REP. PATRICK MCHENRY,direct,matched,person-name,145500.0,46
+Rep. Patrick T. McHenry (R-NC),diversified_core,REP PATRICK MCHENRY,direct,matched,person-name,73500.0,19
+Rep. Pete Aguilar (D-CA),crypto_native,REP. PETE AGUILAR,direct,matched,person-name,2500.0,1
+Rep. Pete Aguilar (D-CA),diversified_core,REP. PETE AGUILAR,direct,matched,person-name,160000.0,46
+Rep. Pete Aguilar (D-CA),diversified_core,PETE AGUILAR,direct,matched,person-name,112000.0,38
+Rep. Pete Aguilar (D-CA),diversified_core,REP PETE AGUILAR,direct,matched,person-name,71000.0,21
+Rep. Randy Feenstra (R-IA),crypto_native,REP. RANDALL FEENSTRA,direct,matched,person-name,1000.0,1
+Rep. Randy Feenstra (R-IA),diversified_core,REP. RANDY FEENSTRA,direct,matched,person-name,72095.0,37
+Rep. Randy Feenstra (R-IA),diversified_core,REP RANDY FEENSTRA,direct,matched,person-name,53000.0,16
+Rep. Richard E. Neal (D-MA),crypto_native,REP. RICHARD NEAL,direct,matched,person-name,500.0,1
+Rep. Richard E. Neal (D-MA),diversified_core,RICHARD NEAL,direct,matched,person-name,185500.0,52
+Rep. Richard E. Neal (D-MA),diversified_core,REP. RICHARD NEAL,direct,matched,person-name,172000.0,47
+Rep. Richard E. Neal (D-MA),diversified_core,REP. RICHARD EDMUND NEAL,direct,matched,person-name,119000.0,33
+Rep. Richard E. Neal (D-MA),diversified_core,"NEAL, RICHARD",direct,inverted,person-name,58500.0,19
+Rep. Richard E. Neal (D-MA),diversified_core,REP RICHARD NEAL,direct,matched,person-name,53000.0,15
+Rep. Richard Hudson (R-NC),diversified_core,REP RICHARD HUDSON,direct,matched,person-name,87000.0,20
+Rep. Richard Hudson (R-NC),diversified_core,RICHARD HUDSON,direct,matched,person-name,57500.0,21
+Rep. Rick Larsen (D-WA),diversified_core,REP. RICK LARSEN,direct,matched,person-name,64500.0,27
+Rep. Ritchie Torres (D-NY),crypto_native,REP. RITCHIE TORRES,direct,matched,person-name,16000.0,7
+Rep. Ritchie Torres (D-NY),crypto_native,RITCHIE TORRES,direct,matched,person-name,3500.0,3
+Rep. Ritchie Torres (D-NY),crypto_native,REP. RITCHIE JOHN TORRES,direct,matched,person-name,1500.0,1
+Rep. Ritchie Torres (D-NY),crypto_native,REP. RICHIE TORRES,direct,title-initial,person-name,500.0,1
+Rep. Ritchie Torres (D-NY),diversified_core,REP. RITCHIE TORRES,direct,matched,person-name,115900.0,51
+Rep. Ritchie Torres (D-NY),diversified_core,RITCHIE TORRES,direct,matched,person-name,89500.0,45
+Rep. Ritchie Torres (D-NY),diversified_core,REP. RITCHIE J. TORRES,direct,matched,person-name,56000.0,35
+Rep. Ro Khanna (D-CA),crypto_native,RO KHANNA,direct,matched,person-name,7100.0,2
+Rep. Ro Khanna (D-CA),crypto_native,REP. ROHIT KHANNA,direct,title-initial,person-name,3500.0,1
+Rep. Ro Khanna (D-CA),crypto_native,RO FOR CONGRESS INC,campaign-committee,linked,committee-exact/fec-ccl,1000.0,1
+Rep. Robert Garcia (D-CA),crypto_native,REP. ROBERT GARCIA,direct,title-initial,person-name,1000.0,1
+Rep. Robert Menendez (D-NJ),crypto_native,REP. ROB MENENDEZ,direct,title-chamber,person-name,1500.0,1
+Rep. Robert Menendez (D-NJ),crypto_native,REP. ROBERT J. MENENDEZ,direct,title-chamber,person-name,1000.0,2
+Rep. Robin L. Kelly (D-IL),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Robin L. Kelly (D-IL),diversified_core,REP. ROBIN KELLY,direct,matched,person-name,75133.0,34
+Rep. Roger Williams (R-TX),diversified_core,REP. ROGER WILLIAMS,direct,matched,person-name,85250.0,32
+Rep. Ron Estes (R-KS),diversified_core,REP. RON ESTES,direct,matched,person-name,112000.0,42
+Rep. Ron Estes (R-KS),diversified_core,REP RON ESTES,direct,matched,person-name,53750.0,26
+Rep. Sam T. Liccardo (D-CA),crypto_native,REP. SAM LICCARDO,direct,matched,person-name,4300.0,3
+Rep. Sam T. Liccardo (D-CA),crypto_native,SAM LICCARDO,direct,matched,person-name,1000.0,1
+Rep. Sarah McBride (D-DE),crypto_native,REP. SARAH ELIZABETH MCBRIDE,direct,matched,person-name,500.0,1
+Rep. Scott Fitzgerald (R-WI),diversified_core,REP. SCOTT FITZGERALD,direct,matched,person-name,80750.0,37
+Rep. Sean Casten (D-IL),diversified_core,REP. SEAN CASTEN,direct,matched,person-name,164500.0,77
+Rep. Sean Casten (D-IL),diversified_core,SEAN CASTEN,direct,matched,person-name,72000.0,33
+Rep. Sean Casten (D-IL),diversified_core,REP SEAN CASTEN,direct,matched,person-name,63500.0,23
+Rep. Sean Patrick Maloney (D-NY),crypto_native,REP. SEAN PATRICK MALONEY,direct,matched,person-name,2900.0,1
+Rep. Sharice Davids (D-KS),diversified_core,REP. SHARICE DAVIDS,direct,matched,person-name,62590.0,30
+Rep. Shomari Figures (D-AL),crypto_native,REP. SHOMARI FIGURES,direct,matched,person-name,500.0,2
+Rep. Steny H. Hoyer (D-MD),diversified_core,REP. STENY HOYER,direct,matched,person-name,105000.0,30
+Rep. Steny H. Hoyer (D-MD),diversified_core,REP STENY HOYER,direct,matched,person-name,96500.0,23
+Rep. Steny H. Hoyer (D-MD),diversified_core,STENY HOYER,direct,matched,person-name,86300.0,25
+Rep. Steny H. Hoyer (D-MD),diversified_core,REP. STENY HAMILTON HOYER,direct,matched,person-name,75500.0,24
+Rep. Steve Scalise (R-LA),crypto_native,"EYE OF THE TIGER POLITICAL ACTION COMMITTEE, THE; NRCC; SCALISE FOR CONGRESS",campaign-committee,compound:linked,committee-exact/fec-ccl,6600.0,1
+Rep. Steve Scalise (R-LA),crypto_native,REP. STEVE SCALISE,direct,matched,person-name,2500.0,1
+Rep. Steve Scalise (R-LA),diversified_core,REP. STEVE SCALISE,direct,matched,person-name,154000.0,42
+Rep. Steve Scalise (R-LA),diversified_core,REP STEVE SCALISE,direct,matched,person-name,102500.0,23
+Rep. Steve Scalise (R-LA),diversified_core,STEVE SCALISE,direct,matched,person-name,80500.0,22
+Rep. Steve Scalise (R-LA),diversified_core,"SCALISE, STEVE",direct,inverted,person-name,70000.0,17
+Rep. Steven Horsford (D-NV),crypto_native,REP. STEVEN HORSFORD,direct,matched,person-name,4500.0,4
+Rep. Steven Horsford (D-NV),diversified_core,REP. STEVEN HORSFORD,direct,matched,person-name,127000.0,50
+Rep. Steven Horsford (D-NV),diversified_core,STEVEN HORSFORD,direct,matched,person-name,89000.0,39
+Rep. Steven Horsford (D-NV),diversified_core,REP. STEVEN ALEXZANDER HORSFORD,direct,matched,person-name,69000.0,29
+Rep. Susie Lee (D-NV),crypto_native,REP. SUSIE LEE,direct,matched,person-name,1000.0,2
+Rep. Susie Lee (D-NV),diversified_core,REP. SUSIE LEE,direct,matched,person-name,70185.0,31
+Rep. Suzan K. DelBene (D-WA),crypto_native,REP. SUZAN DELBENE,direct,matched,person-name,1000.0,1
+Rep. Suzan K. DelBene (D-WA),crypto_native,REP. SUZAN K. DELBENE,direct,matched,person-name,1000.0,1
+Rep. Suzan K. DelBene (D-WA),diversified_core,REP. SUZAN DELBENE,direct,matched,person-name,182500.0,69
+Rep. Suzan K. DelBene (D-WA),diversified_core,REP SUZAN DELBENE,direct,matched,person-name,86500.0,27
+Rep. Suzan K. DelBene (D-WA),diversified_core,REP. SUZAN KAY DELBENE,direct,matched,person-name,68000.0,28
+Rep. Sylvia R. Garcia (D-TX),diversified_core,REP. SYLVIA GARCIA,direct,matched,person-name,62000.0,29
+Rep. Ted Lieu (D-CA),crypto_native,TED LIEU,direct,matched,person-name,1000.0,1
+Rep. Ted Lieu (D-CA),crypto_native,REP. TED LIEU,direct,matched,person-name,1000.0,1
+Rep. Terri A. Sewell (D-AL),crypto_native,TERRI SEWELL,direct,matched,person-name,500.0,1
+Rep. Terri A. Sewell (D-AL),crypto_native,REP. TERRI SEWELL,direct,matched,person-name,250.0,1
+Rep. Terri A. Sewell (D-AL),diversified_core,REP. TERRI SEWELL,direct,matched,person-name,124500.0,54
+Rep. Terri A. Sewell (D-AL),diversified_core,REP TERRI SEWELL,direct,matched,person-name,88500.0,29
+Rep. Terri A. Sewell (D-AL),diversified_core,TERRI SEWELL,direct,matched,person-name,78500.0,32
+Rep. Thomas R. Suozzi (D-NY),crypto_native,REP. THOMAS SUOZZI,direct,matched,person-name,1500.0,3
+Rep. Tim Moore (R-NC),crypto_native,REP. TIM MOORE,direct,matched,person-name,1000.0,1
+Rep. Tim Ryan (D-OH),crypto_native,REP. TIM RYAN,direct,matched,person-name,5800.0,1
+Rep. Tim Walberg (R-MI),diversified_core,REP. TIM WALBERG,direct,matched,person-name,58521.0,25
+Rep. Timothy M. Kennedy (D-NY),crypto_native,REP. TIM KENNEDY,direct,matched,person-name,2000.0,2
+Rep. Tom Emmer (R-MN),crypto_native,REP. THOMAS EARL EMMER JR,direct,matched,person-name,50000.0,3
+Rep. Tom Emmer (R-MN),crypto_native,"REP. THOMAS EARL EMMER, JR",direct,matched,person-name,9300.0,3
+Rep. Tom Emmer (R-MN),crypto_native,REP. THOMAS EARL EMMER,direct,matched,person-name,9100.0,2
+Rep. Tom Emmer (R-MN),crypto_native,REP. TOM EMMER,direct,matched,person-name,5500.0,4
+Rep. Tom Emmer (R-MN),crypto_native,TOM EMMER,direct,matched,person-name,2500.0,1
+Rep. Tom Emmer (R-MN),crypto_native,EMMER FOR CONGRESS,campaign-committee,linked,committee-exact/fec-ccl,500.0,1
+Rep. Tom Emmer (R-MN),diversified_core,TOM EMMER,direct,matched,person-name,181500.0,63
+Rep. Tom Emmer (R-MN),diversified_core,REP TOM EMMER JR,direct,matched,person-name,130500.0,35
+Rep. Tom Emmer (R-MN),diversified_core,"REP. THOMAS EARL EMMER, JR",direct,matched,person-name,117500.0,38
+Rep. Tom Emmer (R-MN),diversified_core,REP. TOM EMMER,direct,matched,person-name,88000.0,29
+Rep. Tom Emmer (R-MN),diversified_core,REP. TOM EMMER JR,direct,matched,person-name,66000.0,19
+Rep. Tom Emmer (R-MN),diversified_core,"EMMER, TOM",direct,inverted,person-name,57000.0,25
+Rep. Troy A. Carter (D-LA),crypto_native,REP. TROY CARTER,direct,matched,person-name,1000.0,1
+Rep. Troy Balderson (R-OH),diversified_core,REP. TROY BALDERSON,direct,matched,person-name,82095.0,30
+Rep. Troy Downing (R-MT),crypto_native,REP. TROY DOWNING,direct,matched,person-name,1000.0,1
+Rep. Val T. Hoyle (D-OR),crypto_native,REP. VALERIE HOYLE,direct,matched,person-name,500.0,1
+Rep. Vern Buchanan (R-FL),diversified_core,REP. VERN BUCHANAN,direct,matched,person-name,102090.0,29
+Rep. Veronica Escobar (D-TX),diversified_core,REP. VERONICA ESCOBAR,direct,matched,person-name,54000.0,23
+Rep. Vicente Gonzalez (D-TX),crypto_native,REP. VINCENTE GONZALEZ,direct,title-initial,person-name,2000.0,2
+Rep. Vicente Gonzalez (D-TX),crypto_native,REP. VINCENTE GONZALEZ JR,direct,title-initial,person-name,500.0,1
+Rep. Vicente Gonzalez (D-TX),crypto_native,REP. VICENTE GONZALEZ,direct,matched,person-name,500.0,1
+Rep. Vicente Gonzalez (D-TX),diversified_core,REP. VICENTE GONZALEZ,direct,matched,person-name,101090.0,48
+Rep. Vicente Gonzalez (D-TX),diversified_core,VICENTE GONZALEZ,direct,matched,person-name,55000.0,29
+Rep. Warren Davidson (R-OH),crypto_native,WARREN DAVIDSON,direct,matched,person-name,6800.0,3
+Rep. Warren Davidson (R-OH),crypto_native,REP. WARREN DAVIDSON,direct,matched,person-name,5000.0,3
+Rep. Warren Davidson (R-OH),diversified_core,REP. WARREN DAVIDSON,direct,matched,person-name,128200.0,55
+Rep. Warren Davidson (R-OH),diversified_core,REP WARREN DAVIDSON,direct,matched,person-name,54500.0,16
+Rep. Wiley Nickel (D-NC),crypto_native,REP. WILEY NICKEL,direct,matched,person-name,2000.0,2
+Rep. Wiley Nickel (D-NC),crypto_native,WILEY NICKEL,direct,matched,person-name,500.0,1
+Rep. William R. Timmons IV (R-SC),crypto_native,REP. WILLIAM TIMMONS,direct,matched,person-name,1500.0,1
+Rep. William R. Timmons IV (R-SC),diversified_core,REP WILLIAM TIMMONS IV,direct,matched,person-name,74000.0,25
+Rep. William R. Timmons IV (R-SC),diversified_core,WILLIAM TIMMONS,direct,matched,person-name,58500.0,26
+Rep. Young Kim (R-CA),crypto_native,REP. YOUNG KIM,direct,matched,person-name,3900.0,2
+Rep. Young Kim (R-CA),diversified_core,REP. YOUNG KIM,direct,matched,person-name,141385.0,56
+Rep. Young Kim (R-CA),diversified_core,YOUNG KIM,direct,matched,person-name,139000.0,61
+Rep. Young Kim (R-CA),diversified_core,REP YOUNG KIM,direct,matched,person-name,79000.0,23
+Rep. Young Kim (R-CA),diversified_core,REP. YOUNG O. KIM,direct,matched,person-name,56500.0,24
+Rep. Yvette D. Clarke (D-NY),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Rep. Zachary Nunn (R-IA),crypto_native,REP. ZACH NUNN,direct,matched,person-name,1000.0,1
+Rep. Zachary Nunn (R-IA),diversified_core,REP. ZACH NUNN,direct,matched,person-name,104000.0,53
+Rep. Zachary Nunn (R-IA),diversified_core,ZACH NUNN,direct,matched,person-name,85500.0,43
+Rep. Zoe Lofgren (D-CA),crypto_native,REP. ZOE LOFGREN,direct,matched,person-name,1000.0,1
+Rep. Zoe Lofgren (D-CA),diversified_core,REP. ZOE LOFGREN,direct,matched,person-name,58100.0,25
+Sen. Adam B. Schiff (D-CA),crypto_native,ADAM SCHIFF,direct,matched,person-name,6600.0,1
+Sen. Alex Padilla (D-CA),crypto_native,SEN. ALEX PADILLA,direct,matched,person-name,1000.0,1
+Sen. Alex Padilla (D-CA),crypto_native,SENATOR ALEX PADILLA,direct,matched,person-name,500.0,1
+Sen. Andy Kim (D-NJ),crypto_native,REP. ANDY KIM,direct,matched,person-name,250.0,1
+Sen. Angela D. Alsobrooks (D-MD),crypto_native,ANGELA ALSOBROOKS,direct,matched,person-name,6800.0,5
+Sen. Angela D. Alsobrooks (D-MD),crypto_native,SEN. ANGELA ALSOBROOKS,direct,matched,person-name,1000.0,1
+Sen. Angela D. Alsobrooks (D-MD),crypto_native,ALSOBROOKS VICTORY FUND,"jfc-shared, unallocated",inferred,committee-exact/name-inference,1000.0,1
+Sen. Angela D. Alsobrooks (D-MD),crypto_native,SENATOR ANGELA ALSOBROOKS,direct,matched,person-name,500.0,1
+Sen. Bernie Moreno (R-OH),crypto_native,BERNIE MORENO,direct,matched,person-name,11800.0,7
+Sen. Bernie Moreno (R-OH),crypto_native,SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC,campaign-committee,compound:linked,committee-exact/fec-ccl,5000.0,1
+Sen. Bernie Moreno (R-OH),crypto_native,SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,5000.0,1
+Sen. Bernie Moreno (R-OH),crypto_native,SEN. BERNIE MORENO,direct,matched,person-name,4125.0,2
+Sen. Bill Hagerty (R-TN),crypto_native,SENATOR BILL HAGERTY,direct,matched,person-name,16000.0,3
+Sen. Bill Hagerty (R-TN),crypto_native,BILL HAGERTY,direct,matched,person-name,5000.0,1
+Sen. Bill Hagerty (R-TN),crypto_native,SEN. BILL HAGERTY,direct,matched,person-name,5000.0,2
+Sen. Bill Hagerty (R-TN),crypto_native,REP. BILL HAGERTY,direct,matched,person-name,2000.0,1
+Sen. Bill Hagerty (R-TN),diversified_core,SEN. BILL HAGERTY,direct,matched,person-name,180500.0,68
+Sen. Bill Hagerty (R-TN),diversified_core,BILL HAGERTY,direct,matched,person-name,141250.0,47
+Sen. Bill Hagerty (R-TN),diversified_core,SEN BILL HAGERTY,direct,matched,person-name,69500.0,18
+Sen. Catherine Cortez Masto (D-NV),crypto_native,SENATOR CATHERINE CORTEZ MASTO,direct,matched,person-name,1500.0,1
+Sen. Catherine Cortez Masto (D-NV),crypto_native,SEN. CATHERINE CORTEZ MASTO,direct,matched,person-name,350.0,1
+Sen. Catherine Cortez Masto (D-NV),diversified_core,SEN. CATHERINE CORTEZ MASTO,direct,matched,person-name,130334.0,50
+Sen. Catherine Cortez Masto (D-NV),diversified_core,SEN CATHERINE CORTEZ MASTO,direct,matched,person-name,55000.0,15
+Sen. Charles E. Schumer (D-NY),crypto_native,SEN. CHARLES E. SCHUMER,direct,matched,person-name,2900.0,1
+Sen. Charles E. Schumer (D-NY),diversified_core,CHARLES SCHUMER,direct,matched,person-name,72500.0,18
+Sen. Charles E. Schumer (D-NY),diversified_core,SEN CHUCK SCHUMER,direct,matched,person-name,63000.0,16
+Sen. Charles E. Schumer (D-NY),diversified_core,SEN. CHUCK SCHUMER,direct,matched,person-name,60500.0,15
+Sen. Chris Van Hollen (D-MD),diversified_core,CHRIS VAN HOLLEN,direct,matched,person-name,52900.0,18
+Sen. Christopher A. Coons (D-DE),crypto_native,SEN. CHRIS COONS,direct,matched,person-name,1000.0,1
+Sen. Christopher A. Coons (D-DE),diversified_core,SEN. CHRIS COONS,direct,matched,person-name,71000.0,25
+Sen. Christopher A. Coons (D-DE),diversified_core,SEN CHRIS COONS,direct,matched,person-name,67000.0,21
+Sen. Christopher A. Coons (D-DE),diversified_core,CHRISTOPHER COONS,direct,matched,person-name,58500.0,25
+Sen. Cynthia M. Lummis (R-WY),crypto_native,SEN. CYNTHIA MARIE LUMMIS,direct,matched,person-name,23600.0,5
+Sen. Cynthia M. Lummis (R-WY),crypto_native,CYNTHIA LUMMIS,direct,matched,person-name,7000.0,3
+Sen. Cynthia M. Lummis (R-WY),crypto_native,SENATOR CYNTHIA LUMMIS,direct,matched,person-name,5900.0,3
+Sen. Cynthia M. Lummis (R-WY),crypto_native,LUMMIS VICTORY COMMITTEE,"jfc-shared, unallocated",inferred,committee-exact/name-inference,5000.0,2
+Sen. Cynthia M. Lummis (R-WY),crypto_native,REP. CYNTHIA LUMMIS,direct,matched,person-name,5000.0,1
+Sen. Cynthia M. Lummis (R-WY),crypto_native,SEN. CYNTHIA LUMMIS,direct,matched,person-name,4000.0,2
+Sen. Cynthia M. Lummis (R-WY),crypto_native,LUMMIS FOR WYOMING INC.; STEER PAC,campaign-committee,compound:linked,committee-exact/fec-ccl,1000.0,1
+Sen. Cynthia M. Lummis (R-WY),crypto_native,LUMMIS FOR WYOMING INC.; STEER PAC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,1000.0,1
+Sen. Cynthia M. Lummis (R-WY),crypto_native,"LUMMIS FOR WYOMING INC., STEER PAC, FIRST PRINCIPLES DIGITAL, NRSC",campaign-committee,prefix,committee-prefix/fec-ccl,1000.0,1
+Sen. Cynthia M. Lummis (R-WY),crypto_native,LUMMIS VICTORY,"jfc-shared, unallocated",prefix,committee-prefix/name-inference,1000.0,1
+Sen. Cynthia M. Lummis (R-WY),diversified_core,SEN. CYNTHIA LUMMIS,direct,matched,person-name,56000.0,21
+Sen. David McCormick (R-PA),crypto_native,DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA,campaign-committee,compound:linked,committee-exact/fec-ccl,6600.0,1
+Sen. David McCormick (R-PA),crypto_native,DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA,campaign-committee,compound:linked,committee-exact/fec-ccl,6600.0,1
+Sen. David McCormick (R-PA),crypto_native,DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA,leadership-pac,compound:linked,committee-exact/openfec-sponsor,6600.0,1
+Sen. David McCormick (R-PA),crypto_native,SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC,campaign-committee,compound:linked,committee-exact/fec-ccl,5000.0,1
+Sen. David McCormick (R-PA),crypto_native,SEN. DAVE MCCORMICK,direct,matched,person-name,825.0,1
+Sen. David McCormick (R-PA),diversified_core,DAVE MCCORMICK,direct,matched,person-name,67600.0,24
+Sen. Deb Fischer (R-NE),crypto_native,SEN. DEBRA FISCHER,direct,matched,person-name,4300.0,2
+Sen. Deb Fischer (R-NE),crypto_native,SEN. DEB FISCHER,direct,matched,person-name,2500.0,1
+Sen. Deb Fischer (R-NE),crypto_native,SENATOR DEB FISCHER,direct,matched,person-name,2500.0,1
+Sen. Eric Schmitt (R-MO),diversified_core,SEN ERIC S SCHMITT,direct,matched,person-name,61000.0,16
+Sen. Gary C. Peters (D-MI),diversified_core,SEN GARY PETERS SR,direct,matched,person-name,81000.0,16
+Sen. Gary C. Peters (D-MI),diversified_core,GARY PETERS,direct,matched,person-name,80050.0,37
+Sen. Gary C. Peters (D-MI),diversified_core,SEN. GARY CHARLES PETERS,direct,matched,person-name,78500.0,38
+Sen. J.D. Vance (R-OH),crypto_native,DONALD TRUMP/ J.D. VANCE,direct,matched,person-name,1000000.0,1
+Sen. J.D. Vance (R-OH),crypto_native,SENATOR J.D. VANCE,direct,matched,person-name,2500.0,1
+Sen. Jacky Rosen (D-NV),crypto_native,SEN. JACKY ROSEN,direct,matched,person-name,1000.0,1
+Sen. Jacky Rosen (D-NV),diversified_core,SEN. JACKY ROSEN,direct,matched,person-name,112781.0,43
+Sen. Jacky Rosen (D-NV),diversified_core,SEN JACKY ROSEN,direct,matched,person-name,53500.0,16
+Sen. James C. Justice (R-WV),crypto_native,SEN. JIM JUSTICE,direct,matched,person-name,1000.0,1
+Sen. James Lankford (R-OK),crypto_native,JAMES LANKFORD,direct,matched,person-name,250.0,1
+Sen. James Lankford (R-OK),diversified_core,JAMES LANKFORD,direct,matched,person-name,52500.0,19
+Sen. Jerry Moran (R-KS),diversified_core,SEN. JERRY MORAN,direct,matched,person-name,80750.0,29
+Sen. Jerry Moran (R-KS),diversified_core,SEN JERRY MORAN,direct,matched,person-name,54000.0,13
+Sen. Jim Banks (R-IN),crypto_native,REP. JAMES BANKS,direct,matched,person-name,1000.0,1
+Sen. John Barrasso (R-WY),crypto_native,SEN. JOHN BARRASSO,direct,matched,person-name,8300.0,2
+Sen. John Barrasso (R-WY),diversified_core,JOHN BARRASSO,direct,matched,person-name,77000.0,29
+Sen. John Barrasso (R-WY),diversified_core,SEN JOHN A BARRASSO,direct,matched,person-name,64000.0,19
+Sen. John Barrasso (R-WY),diversified_core,SEN. JOHN ANTHONY BARRASSO,direct,matched,person-name,61500.0,20
+Sen. John Boozman (R-AR),crypto_native,SEN. JOHN BOOZMAN,direct,matched,person-name,10300.0,4
+Sen. John Boozman (R-AR),diversified_core,SEN. JOHN NICHOLS BOOZMAN,direct,matched,person-name,67500.0,23
+Sen. John Boozman (R-AR),diversified_core,SEN. JOHN BOOZMAN,direct,matched,person-name,66500.0,22
+Sen. John Boozman (R-AR),diversified_core,SEN JOHN BOOZMAN,direct,matched,person-name,62000.0,19
+Sen. John Boozman (R-AR),diversified_core,JOHN BOOZMAN,direct,matched,person-name,60500.0,19
+Sen. John Cornyn (R-TX),crypto_native,SENATOR JOHN CORNYN,direct,matched,person-name,3500.0,1
+Sen. John Cornyn (R-TX),diversified_core,"SEN. JOHN CORNYN, III",direct,matched,person-name,78500.0,21
+Sen. John Cornyn (R-TX),diversified_core,SEN JOHN CORNYN III,direct,matched,person-name,66000.0,19
+Sen. John Cornyn (R-TX),diversified_core,JOHN CORNYN,direct,matched,person-name,62500.0,29
+Sen. John Cornyn (R-TX),diversified_core,SEN. JOHN CORNYN,direct,matched,person-name,60041.0,23
+Sen. John Fetterman (D-PA),crypto_native,SEN. JOHN FETTERMAN,direct,matched,person-name,1000.0,1
+Sen. John Kennedy (R-LA),crypto_native,SENATOR JOHN KENNEDY,direct,matched,person-name,250.0,1
+Sen. John R. Curtis (R-UT),crypto_native,SENATOR JOHN CURTIS,direct,matched,person-name,500.0,1
+Sen. John R. Curtis (R-UT),diversified_core,JOHN CURTIS,direct,matched,person-name,60000.0,22
+Sen. John Thune (R-SD),crypto_native,SEN. JOHN THUNE,direct,matched,person-name,4500.0,2
+Sen. John Thune (R-SD),crypto_native,SENATOR JOHN THUNE,direct,matched,person-name,3000.0,2
+Sen. John Thune (R-SD),diversified_core,JOHN THUNE,direct,matched,person-name,152000.0,39
+Sen. John Thune (R-SD),diversified_core,SEN. JOHN THUNE,direct,matched,person-name,117595.0,30
+Sen. John Thune (R-SD),diversified_core,SEN JOHN THUNE,direct,matched,person-name,100500.0,24
+Sen. John Thune (R-SD),diversified_core,SEN. JOHN RANDOLPH THUNE,direct,matched,person-name,68000.0,21
+Sen. Jon Tester (D-MT),diversified_core,SEN. JON TESTER,direct,matched,person-name,206250.0,70
+Sen. Jon Tester (D-MT),diversified_core,JON TESTER,direct,matched,person-name,123950.0,56
+Sen. Joni Ernst (R-IA),crypto_native,SEN. JONI ERNST,direct,matched,person-name,2000.0,1
+Sen. Joni Ernst (R-IA),diversified_core,SEN. JONI ERNST,direct,matched,person-name,55000.0,15
+Sen. Katie Boyd Britt (R-AL),crypto_native,SEN. KATIE BRITT,direct,matched,person-name,6000.0,2
+Sen. Katie Boyd Britt (R-AL),crypto_native,SEN. KATIE BOYD BRITT,direct,matched,person-name,1000.0,1
+Sen. Katie Boyd Britt (R-AL),diversified_core,KATIE BRITT,direct,matched,person-name,124250.0,43
+Sen. Katie Boyd Britt (R-AL),diversified_core,SEN. KATIE BRITT,direct,matched,person-name,92500.0,29
+Sen. Katie Boyd Britt (R-AL),diversified_core,SEN. KATIE BOYD BRITT,direct,matched,person-name,72000.0,26
+Sen. Kevin Cramer (R-ND),diversified_core,SEN. KEVIN CRAMER,direct,matched,person-name,93000.0,30
+Sen. Kevin Cramer (R-ND),diversified_core,KEVIN CRAMER,direct,matched,person-name,74500.0,23
+Sen. Kirsten E. Gillibrand (D-NY),crypto_native,SEN. KIRSTEN GILLIBRAND,direct,matched,person-name,5800.0,2
+Sen. Kirsten E. Gillibrand (D-NY),crypto_native,SEN. KRISTEN GILLIBRAND,direct,title-initial,person-name,5300.0,2
+Sen. Kirsten E. Gillibrand (D-NY),crypto_native,GILLIBRAND FOR SENATE,campaign-committee,linked,committee-exact/fec-ccl,1250.0,2
+Sen. Kirsten E. Gillibrand (D-NY),crypto_native,GILLIBRAND VICTORY FUND,"jfc-shared, unallocated",inferred,committee-exact/name-inference,500.0,1
+Sen. Kirsten E. Gillibrand (D-NY),crypto_native,KIRSTEN GILLIBRAND,direct,matched,person-name,500.0,1
+Sen. Kirsten E. Gillibrand (D-NY),diversified_core,SEN. KIRSTEN GILLIBRAND,direct,matched,person-name,57000.0,21
+Sen. Kyrsten Sinema (I-AZ),diversified_core,SEN. KYRSTEN SINEMA,direct,matched,person-name,108090.0,47
+Sen. Kyrsten Sinema (I-AZ),diversified_core,KYRSTEN SINEMA,direct,matched,person-name,100500.0,30
+Sen. Lisa Blunt Rochester (D-DE),crypto_native,"CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO","multi-honoree, unallocated",compound:matched,person-name,15000.0,1
+Sen. Lisa Blunt Rochester (D-DE),crypto_native,REP. LISA BLUNT ROCHESTER,direct,matched,person-name,2000.0,2
+Sen. Lisa Blunt Rochester (D-DE),crypto_native,SEN. LISA BLUNT ROCHESTER,direct,matched,person-name,500.0,1
+Sen. Lisa Blunt Rochester (D-DE),diversified_core,LISA BLUNT ROCHESTER,direct,matched,person-name,109750.0,38
+Sen. Lisa Blunt Rochester (D-DE),diversified_core,REP. LISA BLUNT ROCHESTER,direct,matched,person-name,83500.0,31
+Sen. Lisa Murkowski (R-AK),diversified_core,SEN. LISA MURKOWSKI,direct,matched,person-name,53500.0,18
+Sen. Margaret Wood Hassan (D-NH),diversified_core,MAGGIE HASSAN,direct,matched,person-name,68500.0,27
+Sen. Margaret Wood Hassan (D-NH),diversified_core,SEN. MARGARET WOOD HASSAN,direct,matched,person-name,61834.0,29
+Sen. Mark R. Warner (D-VA),crypto_native,MARK WARNER ACTION FUND,"jfc-shared, unallocated",inferred,committee-exact/name-inference,5000.0,1
+Sen. Mark R. Warner (D-VA),crypto_native,SENATOR MARK WARNER,direct,matched,person-name,3500.0,1
+Sen. Mark R. Warner (D-VA),crypto_native,SEN. MARK WARNER,direct,matched,person-name,1000.0,1
+Sen. Mark R. Warner (D-VA),diversified_core,SEN. MARK WARNER,direct,matched,person-name,177200.0,55
+Sen. Mark R. Warner (D-VA),diversified_core,MARK WARNER,direct,matched,person-name,146850.0,64
+Sen. Mark R. Warner (D-VA),diversified_core,SEN. MARK ROBERT WARNER,direct,matched,person-name,78500.0,28
+Sen. Mark R. Warner (D-VA),diversified_core,SEN MARK R WARNER,direct,matched,person-name,71500.0,19
+Sen. Marsha Blackburn (R-TN),diversified_core,SEN MARSHA BLACKBURN,direct,matched,person-name,68500.0,23
+Sen. Martin Heinrich (D-NM),crypto_native,SEN. MARTIN HEINRICH,direct,matched,person-name,1000.0,1
+Sen. Martin Heinrich (D-NM),diversified_core,SEN. MARTIN HEINRICH,direct,matched,person-name,58500.0,26
+Sen. Michael F. Bennet (D-CO),crypto_native,BENNET COLORADO VICTORY FUND,"jfc-shared, unallocated",inferred,committee-exact/name-inference,1000.0,1
+Sen. Mike Crapo (R-ID),crypto_native,SEN. MIKE CRAPO,direct,matched,person-name,4900.0,2
+Sen. Mike Crapo (R-ID),crypto_native,DEN. MICHAEL D. CRAPO,direct,matched,person-name,1000.0,1
+Sen. Mike Crapo (R-ID),diversified_core,SEN. MIKE CRAPO,direct,matched,person-name,88000.0,23
+Sen. Mike Crapo (R-ID),diversified_core,SEN MIKE CRAPO,direct,matched,person-name,71500.0,17
+Sen. Mike Crapo (R-ID),diversified_core,MICHAEL CRAPO,direct,matched,person-name,69500.0,23
+Sen. Mike Crapo (R-ID),diversified_core,SEN. MICHAEL DEAN CRAPO,direct,matched,person-name,68000.0,28
+Sen. Mike Rounds (R-SD),crypto_native,SEN. MIKE ROUNDS,direct,matched,person-name,7000.0,3
+Sen. Mike Rounds (R-SD),diversified_core,SEN. MIKE ROUNDS,direct,matched,person-name,132500.0,47
+Sen. Mike Rounds (R-SD),diversified_core,MIKE ROUNDS,direct,matched,person-name,106500.0,34
+Sen. Mike Rounds (R-SD),diversified_core,SEN MIKE ROUNDS,direct,matched,person-name,84000.0,25
+Sen. Mike Rounds (R-SD),diversified_core,SEN. M. MICHAEL ROUNDS,direct,matched,person-name,57000.0,20
+Sen. Mitch McConnell (R-KY),diversified_core,SEN. MITCH MCCONNELL,direct,matched,person-name,77000.0,21
+Sen. Mitch McConnell (R-KY),diversified_core,MITCH MCCONNELL,direct,matched,person-name,67000.0,18
+Sen. Patrick J. Toomey (R-PA),crypto_native,SEN. PATRICK TOOMEY,direct,matched,person-name,53790.0,1
+Sen. Patty Murray (D-WA),diversified_core,SEN. PATTY MURRAY,direct,matched,person-name,67500.0,19
+Sen. Pete Ricketts (R-NE),diversified_core,PETE RICKETTS,direct,matched,person-name,68000.0,23
+Sen. Raphael G. Warnock (D-GA),crypto_native,SEN. RAPHAEL WARNOCK,direct,matched,person-name,500.0,1
+Sen. Rick Scott (R-FL),crypto_native,SENATOR RICK SCOTT,direct,matched,person-name,2500.0,1
+Sen. Robert Menendez (D-NJ),crypto_native,SEN. ROBERT MENENDEZ,direct,title-chamber,person-name,1000.0,1
+Sen. Robert Menendez (D-NJ),crypto_native,MENENDEZ FOR SENATE,campaign-committee,linked,committee-exact/fec-ccl,1000.0,1
+"Sen. Robert P. Casey, Jr. (D-PA)",crypto_native,SEN. ROBERT CASEY,direct,matched,person-name,500.0,1
+"Sen. Robert P. Casey, Jr. (D-PA)",crypto_native,VICTORY NOW FOR CASEY,"jfc-shared, unallocated",inferred,committee-exact/name-inference,500.0,1
+"Sen. Robert P. Casey, Jr. (D-PA)",crypto_native,SEN. BOB CASEY,direct,matched,person-name,250.0,1
+Sen. Ron Wyden (D-OR),crypto_native,RONALD LEE WYDEN,direct,matched,person-name,5000.0,2
+Sen. Ron Wyden (D-OR),crypto_native,SEN. RONALD LEE WYDEN,direct,matched,person-name,2900.0,1
+Sen. Ruben Gallego (D-AZ),crypto_native,SENATOR RUBEN GALLEGO,direct,matched,person-name,6500.0,3
+Sen. Ruben Gallego (D-AZ),crypto_native,RUBEN GALLEGO,direct,matched,person-name,1500.0,2
+Sen. Ruben Gallego (D-AZ),crypto_native,SEN. RUBEN GALLEGO,direct,matched,person-name,1000.0,1
+Sen. Ruben Gallego (D-AZ),crypto_native,REP. RUBEN GALLEGO,direct,matched,person-name,500.0,1
+Sen. Sherrod Brown (D-OH),crypto_native,SEN. SHERROD BROWN,direct,matched,person-name,1000.0,1
+Sen. Sherrod Brown (D-OH),diversified_core,SEN. SHERROD BROWN,direct,matched,person-name,88000.0,31
+Sen. Sherrod Brown (D-OH),diversified_core,SHERROD BROWN,direct,matched,person-name,67650.0,25
+Sen. Sherrod Brown (D-OH),diversified_core,SEN SHERROD BROWN,direct,matched,person-name,65000.0,16
+Sen. Sherrod Brown (D-OH),diversified_core,SEN. SHERROD CAMPBELL BROWN,direct,matched,person-name,60500.0,20
+Sen. Steve Daines (R-MT),crypto_native,SENATOR STEVE DAINES,direct,matched,person-name,2500.0,1
+Sen. Steve Daines (R-MT),crypto_native,SEN. STEVE DAINES,direct,matched,person-name,2000.0,1
+Sen. Steve Daines (R-MT),diversified_core,SEN STEVE DAINES,direct,matched,person-name,145000.0,26
+Sen. Steve Daines (R-MT),diversified_core,SEN. STEVE DAINES,direct,matched,person-name,104000.0,33
+Sen. Steve Daines (R-MT),diversified_core,STEVEN DAINES,direct,matched,person-name,60500.0,20
+Sen. Steve Daines (R-MT),diversified_core,SEN. STEVE DAVID DAINES,direct,matched,person-name,53500.0,22
+Sen. Ted Budd (R-NC),crypto_native,SEN. THEODORE BUDD,direct,title-initial,person-name,2000.0,1
+Sen. Ted Budd (R-NC),diversified_core,SEN TED BUDD,direct,matched,person-name,55000.0,15
+Sen. Ted Cruz (R-TX),crypto_native,TED CRUZ,direct,matched,person-name,1000.0,1
+Sen. Thom Tillis (R-NC),crypto_native,SENATOR THOM TILLIS,direct,matched,person-name,3000.0,2
+Sen. Thom Tillis (R-NC),diversified_core,THOM TILLIS,direct,matched,person-name,151750.0,47
+Sen. Thom Tillis (R-NC),diversified_core,SEN. THOM TILLIS,direct,matched,person-name,129750.0,42
+Sen. Thom Tillis (R-NC),diversified_core,SEN THOM TILLIS,direct,matched,person-name,88000.0,21
+Sen. Thom Tillis (R-NC),diversified_core,SEN. THOMAS ROLAND TILLIS,direct,title-initial,person-name,73000.0,24
+Sen. Tim Kaine (D-VA),diversified_core,SEN. TIM KAINE,direct,matched,person-name,83750.0,30
+Sen. Tim Scott (R-SC),crypto_native,SEN. TIMOTHY SCOTT,direct,matched,person-name,9900.0,2
+Sen. Tim Scott (R-SC),crypto_native,SEN. TIM SCOTT,direct,matched,person-name,5000.0,4
+Sen. Tim Scott (R-SC),crypto_native,TOMORROW IS MEANINGFUL PAC - FEDERAL; TIM SCOTT FOR AMERICA; NRSC,leadership-pac,compound:linked,committee-exact/openfec-sponsor,5000.0,1
+Sen. Tim Scott (R-SC),crypto_native,TOMORROW IS MEANINGFUL PAC - FEDERAL; TIM SCOTT FOR AMERICA; NRSC,campaign-committee,compound:linked,committee-exact/fec-ccl,5000.0,1
+Sen. Tim Scott (R-SC),crypto_native,SENATOR TIM SCOTT,direct,matched,person-name,3000.0,2
+Sen. Tim Scott (R-SC),crypto_native,SEN. TIMOTHY E. SCOTT,direct,matched,person-name,2500.0,1
+Sen. Tim Scott (R-SC),crypto_native,SENATOR TIMOTHY SCOTT,direct,matched,person-name,2500.0,1
+Sen. Tim Scott (R-SC),diversified_core,TIM SCOTT,direct,matched,person-name,165750.0,52
+Sen. Tim Scott (R-SC),diversified_core,SEN. TIM SCOTT,direct,matched,person-name,159000.0,47
+Sen. Tim Scott (R-SC),diversified_core,SEN. TIMOTHY EUGENE SCOTT,direct,matched,person-name,110500.0,33
+Sen. Tim Scott (R-SC),diversified_core,SEN TIM SCOTT,direct,matched,person-name,95000.0,21
+Sen. Tim Sheehy (R-MT),crypto_native,SEN. TIM SHEEHY,direct,matched,person-name,3300.0,1
+Sen. Tim Sheehy (R-MT),crypto_native,TIM SHEEHY,direct,matched,person-name,1000.0,1
+Sen. Tina Smith (D-MN),diversified_core,SEN. TINA SMITH,direct,title-chamber,person-name,94000.0,35
+Sen. Todd Young (R-IN),diversified_core,SEN. TODD CHRISTOPHER YOUNG,direct,matched,person-name,63000.0,23
+Sen. Todd Young (R-IN),diversified_core,SEN. TODD YOUNG,direct,matched,person-name,57500.0,17
+Sen. Todd Young (R-IN),diversified_core,TODD YOUNG,direct,matched,person-name,53000.0,19

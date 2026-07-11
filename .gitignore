@@ -6,9 +6,12 @@
 *.duckdb.wal
 tests/tmp/
 
-# Generated intermediates (industry-map rosters, other tool outputs) — disposable,
-# rebuilt from the DB; written to a repo-root out/, never into skills/, never committed.
-/out/
+# Tool outputs (rosters, review packages, API caches) live in repo-root out/ and ARE
+# committed (Rob, 2026-07-11 — reversal of the 4cae303 gitignored-out/ convention):
+# packages are review artifacts, caches are the citeable evidence. Still never write
+# generated artifacts into skills/. The FEC API key file must NEVER be committed,
+# whether or not it currently exists:
+/out/.fec_api_key
 
 # Python
 __pycache__/

@@ -1,0 +1,383 @@
+﻿member,giver_slice,raw_recipient_string_as_filed,tier,confidence,source,total,items
+Rep. A. Donald McEachin (D-VA),aipac,REP A DONALD MCEACHIN,direct,matched,person-name,10000.0,4
+Rep. Aaron Bean (R-FL),aipac,REP AARON BEAN,direct,matched,person-name,20000.0,4
+Rep. Aaron Bean (R-FL),aipac,AARON P BEAN,direct,matched,person-name,10000.0,2
+Rep. Abigail Davis Spanberger (D-VA),aipac,REP ABIGAIL SPANBERGER,direct,matched,person-name,12100.0,5
+Rep. Adam Smith (D-WA),aipac,REP ADAM SMITH,direct,matched,person-name,30000.0,7
+Rep. Addison P. McDowell (R-NC),aipac,REP ADDISON MCDOWELL,direct,matched,person-name,10000.0,2
+Rep. Adrian Smith (R-NE),aipac,REP ADRIAN SMITH,direct,matched,person-name,17900.0,4
+Rep. Adriano Espaillat (D-NY),aipac,REP ADRIANO ESPAILLAT,direct,matched,person-name,20000.0,5
+Rep. Alma S. Adams (D-NC),aipac,REP ALMA S ADAMS,direct,matched,person-name,12900.0,3
+Rep. Ami Bera (D-CA),aipac,REP AMI BERA,direct,matched,person-name,12900.0,3
+Rep. Andrea Salinas (D-OR),aipac,REP ANDREA SALINAS,direct,matched,person-name,10000.0,2
+Rep. Andrew Ogles (R-TN),aipac,REP ANDY OGLES,direct,matched,person-name,20000.0,5
+Rep. Andrew R. Garbarino (R-NY),aipac,REP ANDREW GARBARINO,direct,matched,person-name,20000.0,5
+Rep. Andy Barr (R-KY),aipac,REP ANDY BARR IV,direct,matched,person-name,15000.0,4
+Rep. Andy Biggs (R-AZ),aipac,REP ANDY BIGGS,direct,matched,person-name,10000.0,3
+Rep. Andy Harris (R-MD),aipac,REP ANDY HARRIS,direct,matched,person-name,25800.0,6
+Rep. Angie Craig (D-MN),aipac,REP ANGIE CRAIG,direct,matched,person-name,30000.0,7
+Rep. Ann Wagner (R-MO),aipac,REP ANN WAGNER,direct,matched,person-name,16500.0,5
+Rep. Anna Paulina Luna (R-FL),aipac,REP ANNA PAULINA LUNA,direct,matched,person-name,10000.0,2
+Rep. April McClain Delaney (D-MD),aipac,REP APRIL MCCLAIN DELANEY,direct,matched,person-name,10000.0,3
+Rep. Ashley Hinson (R-IA),aipac,REP ASHLEY HINSON,direct,matched,person-name,22900.0,5
+Rep. August Pfluger (R-TX),aipac,REP AUGUST PFLUGER II,direct,matched,person-name,22900.0,5
+Rep. Austin Scott (R-GA),aipac,REP AUSTIN SCOTT,direct,matched,person-name,20900.0,7
+Rep. Barry Loudermilk (R-GA),aipac,REP BARRY LOUDERMILK,direct,matched,person-name,17900.0,4
+Rep. Barry Moore (R-AL),aipac,REP BARRY MOORE,direct,matched,person-name,17900.0,4
+Rep. Ben Cline (R-VA),aipac,REP BEN CLINE,direct,matched,person-name,20000.0,5
+Rep. Beth Van Duyne (R-TX),aipac,REP BETH VAN DUYNE,direct,matched,person-name,17900.0,4
+Rep. Bill Huizenga (R-MI),aipac,REP BILL HUIZENGA,direct,matched,person-name,20000.0,5
+Rep. Bill Johnson (R-OH),aipac,REP BILL JOHNSON,direct,matched,person-name,12900.0,3
+"Rep. Bill Pascrell, Jr. (D-NJ)",aipac,REP BILL PASCRELL JR,direct,matched,person-name,12900.0,3
+Rep. Bill Posey (R-FL),aipac,REP BILL POSEY,direct,matched,person-name,13900.0,5
+Rep. Blaine Luetkemeyer (R-MO),aipac,REP BLAINE LUETKEMEYER,direct,matched,person-name,15000.0,5
+Rep. Blake D. Moore (R-UT),aipac,REP BLAKE MOORE,direct,matched,person-name,20000.0,5
+Rep. Brad Finstad (R-MN),aipac,REP BRAD FINSTAD,direct,matched,person-name,20000.0,4
+Rep. Brad R. Wenstrup (R-OH),aipac,REP BRAD WENSTRUP,direct,matched,person-name,17900.0,4
+Rep. Brad Sherman (D-CA),aipac,REP BRAD SHERMAN,direct,matched,person-name,20000.0,5
+Rep. Bradley Scott Schneider (D-IL),aipac,REP BRAD SCHNEIDER,direct,matched,person-name,27100.0,8
+Rep. Brandon Gill (R-TX),aipac,REP BRANDON GILL,direct,matched,person-name,9000.0,2
+Rep. Brandon Williams (R-NY),aipac,REP BRANDON WILLIAMS,direct,matched,person-name,15000.0,3
+Rep. Brendan F. Boyle (D-PA),aipac,REP BRENDAN BOYLE,direct,matched,person-name,25000.0,6
+Rep. Brett Guthrie (R-KY),aipac,REP BRETT GUTHRIE,direct,matched,person-name,17900.0,4
+Rep. Brian Babin (R-TX),aipac,REP BRIAN BABIN,direct,matched,person-name,27900.0,7
+Rep. Brian Higgins (D-NY),aipac,REP BRIAN HIGGINS,direct,matched,person-name,17100.0,5
+Rep. Brian J. Mast (R-FL),aipac,REP BRIAN MAST,direct,matched,person-name,25000.0,6
+Rep. Brian Jack (R-GA),aipac,REP BRIAN T JACK,direct,matched,person-name,15000.0,3
+Rep. Brian Jack (R-GA),aipac,BRIAN JACK,direct,matched,person-name,10000.0,2
+Rep. Brian K. Fitzpatrick (R-PA),aipac,REP BRIAN FITZPATRICK,direct,matched,person-name,25000.0,6
+Rep. Brittany Pettersen (D-CO),aipac,REP BRITTANY PETTERSEN,direct,matched,person-name,15000.0,5
+Rep. Bruce Westerman (R-AR),aipac,REP BRUCE WESTERMAN,direct,matched,person-name,17900.0,4
+Rep. Bryan Steil (R-WI),aipac,REP BRYAN STEIL,direct,matched,person-name,25000.0,6
+Rep. Burgess Owens (R-UT),aipac,REP BURGESS OWENS,direct,matched,person-name,15000.0,4
+Rep. Byron Donalds (R-FL),aipac,REP BYRON DONALDS,direct,matched,person-name,25000.0,6
+Rep. Carlos A. Gimenez (R-FL),aipac,REP CARLOS GIMENEZ,direct,matched,person-name,15000.0,4
+Rep. Carlos A. Gimenez (R-FL),aipac,REP CARLOS A GIMENEZ,direct,matched,person-name,10000.0,2
+Rep. Carol D. Miller (R-WV),aipac,REP CAROL MILLER,direct,matched,person-name,25000.0,6
+Rep. Cathy McMorris Rodgers (R-WA),aipac,REP CATHY MCMORRIS RODGERS,direct,matched,person-name,10000.0,3
+Rep. Celeste Maloy (R-UT),aipac,REP CELESTE MALOY,direct,matched,person-name,20000.0,4
+"Rep. Charles J. ""Chuck"" Fleischmann (R-TN)",aipac,REP CHUCK FLEISCHMANN,direct,matched,person-name,35000.0,8
+Rep. Chris Pappas (D-NH),aipac,REP CHRIS PAPPAS,direct,matched,person-name,20000.0,5
+Rep. Chris Stewart (R-UT),aipac,REP CHRIS STEWART,direct,matched,person-name,10000.0,3
+Rep. Chrissy Houlahan (D-PA),aipac,REP CHRISSY HOULAHAN,direct,matched,person-name,15000.0,4
+Rep. Christopher H. Smith (R-NJ),aipac,REP CHRIS SMITH,direct,matched,person-name,15000.0,3
+Rep. Christopher H. Smith (R-NJ),aipac,REP CHRIS H SMITH,direct,matched,person-name,7900.0,2
+Rep. Chuck Edwards (R-NC),aipac,REP CHUCK EDWARDS,direct,matched,person-name,20000.0,4
+Rep. Chuck Edwards (R-NC),aipac,CHUCK EDWARDS,direct,matched,person-name,10000.0,2
+Rep. Claudia Tenney (R-NY),aipac,REP CLAUDIA TENNEY,direct,matched,person-name,20000.0,5
+Rep. Clay Higgins (R-LA),aipac,REP CLAY HIGGINS,direct,matched,person-name,15000.0,4
+Rep. Cliff Bentz (R-OR),aipac,REP CLIFF BENTZ,direct,matched,person-name,10000.0,2
+Rep. Colin Z. Allred (D-TX),aipac,REP COLIN ALLRED,direct,matched,person-name,7900.0,2
+Rep. Craig A. Goldman (R-TX),aipac,CRAIG GOLDMAN,direct,matched,person-name,10000.0,2
+Rep. Cynthia Axne (D-IA),aipac,REP CINDY AXNE,direct,matched,person-name,7900.0,2
+Rep. Dale W. Strong (R-AL),aipac,REP DALE W STRONG,direct,matched,person-name,10000.0,2
+Rep. Dale W. Strong (R-AL),aipac,REP DALE STRONG,direct,matched,person-name,10000.0,2
+Rep. Dan Bishop (R-NC),aipac,REP DAN BISHOP,direct,title-initial,person-name,7900.0,2
+Rep. Dan Crenshaw (R-TX),aipac,REP DAN CRENSHAW,direct,matched,person-name,15000.0,3
+Rep. Dan Newhouse (R-WA),aipac,REP DAN NEWHOUSE,direct,matched,person-name,20000.0,6
+Rep. Daniel Meuser (R-PA),aipac,REP DAN MEUSER,direct,matched,person-name,22900.0,5
+Rep. Daniel S. Goldman (D-NY),aipac,REP DAN GOLDMAN,direct,matched,person-name,15000.0,3
+Rep. Daniel Webster (R-FL),aipac,REP DANIEL WEBSTER,direct,matched,person-name,25000.0,6
+Rep. Darin LaHood (R-IL),aipac,REP DARIN LAHOOD,direct,matched,person-name,25000.0,6
+Rep. Darrell Issa (R-CA),aipac,REP DARRELL ISSA,direct,matched,person-name,22900.0,5
+Rep. Darren Soto (D-FL),aipac,REP DARREN SOTO,direct,matched,person-name,25000.0,6
+Rep. David G. Valadao (R-CA),aipac,REP DAVID VALADAO,direct,matched,person-name,17900.0,4
+Rep. David Kustoff (R-TN),aipac,REP DAVID KUSTOFF,direct,matched,person-name,20000.0,5
+Rep. David P. Joyce (R-OH),aipac,REP DAVE JOYCE,direct,matched,person-name,18900.0,5
+Rep. David Rouzer (R-NC),aipac,REP DAVID ROUZER,direct,matched,person-name,27900.0,6
+Rep. David Schweikert (R-AZ),aipac,REP DAVID SCHWEIKERT,direct,matched,person-name,20000.0,5
+Rep. David Scott (D-GA),aipac,REP DAVID SCOTT,direct,matched,person-name,22900.0,6
+Rep. Debbie Lesko (R-AZ),aipac,REP DEBBIE LESKO,direct,matched,person-name,15000.0,4
+Rep. Debbie Wasserman Schultz (D-FL),aipac,REP DEBBIE WASSERMAN SCHULTZ,direct,matched,person-name,22100.0,6
+Rep. Deborah K. Ross (D-NC),aipac,REP DEBORAH ROSS,direct,matched,person-name,15000.0,3
+Rep. Derek Schmidt (R-KS),aipac,REP DEREK L SCHMIDT,direct,matched,person-name,15000.0,3
+Rep. Derek Schmidt (R-KS),aipac,REP DEREK SCHMIDT,direct,matched,person-name,10000.0,2
+Rep. Derrick Van Orden (R-WI),aipac,REP DERRICK VAN ORDEN,direct,matched,person-name,15000.0,3
+Rep. Diana DeGette (D-CO),aipac,REP DIANA DEGETTE,direct,matched,person-name,7900.0,2
+Rep. Diana Harshbarger (R-TN),aipac,REP DIANA HARSHBARGER,direct,matched,person-name,23000.0,7
+Rep. Dina Titus (D-NV),aipac,REP DINA TITUS,direct,matched,person-name,22900.0,5
+Rep. Don Bacon (R-NE),aipac,REP DON BACON,direct,matched,person-name,15000.0,4
+Rep. Donald G. Davis (D-NC),aipac,REP DON DAVIS,direct,matched,person-name,20000.0,5
+Rep. Donald G. Davis (D-NC),aipac,DON DAVIS,direct,matched,person-name,7900.0,2
+Rep. Donald Norcross (D-NJ),aipac,REP DONALD NORCROSS,direct,matched,person-name,22900.0,5
+Rep. Doris O. Matsui (D-CA),aipac,REP DORIS MATSUI,direct,matched,person-name,22900.0,5
+Rep. Doug LaMalfa (R-CA),aipac,REP DOUG LAMALFA,direct,matched,person-name,17900.0,4
+Rep. Doug Lamborn (R-CO),aipac,REP DOUG LAMBORN,direct,matched,person-name,17100.0,5
+Rep. Dusty Johnson (R-SD),aipac,REP DUSTY JOHNSON,direct,matched,person-name,22900.0,5
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",aipac,REP BUDDY CARTER,direct,matched,person-name,17900.0,4
+Rep. Ed Case (D-HI),aipac,REP ED CASE,direct,matched,person-name,27100.0,8
+Rep. Elise M. Stefanik (R-NY),aipac,REP ELISE STEFANIK,direct,matched,person-name,20000.0,5
+Rep. Emanuel Cleaver (D-MO),aipac,REP EMANUEL CLEAVER II,direct,matched,person-name,20000.0,5
+Rep. Emilia Strong Sykes (D-OH),aipac,REP EMILIA SYKES,direct,matched,person-name,25000.0,5
+"Rep. Eric A. ""Rick"" Crawford (R-AR)",aipac,REP RICK CRAWFORD,direct,matched,person-name,17900.0,4
+Rep. Eric Burlison (R-MO),aipac,REP ERIC BURLISON,direct,matched,person-name,11000.0,3
+Rep. Eric Sorensen (D-IL),aipac,REP ERIC SORENSEN,direct,matched,person-name,10000.0,2
+Rep. Eric Swalwell (D-CA),aipac,REP ERIC SWALWELL,direct,matched,person-name,15000.0,4
+Rep. Erin Houchin (R-IN),aipac,REP ERIN HOUCHIN,direct,matched,person-name,15000.0,3
+Rep. Frank D. Lucas (R-OK),aipac,REP FRANK LUCAS,direct,matched,person-name,10000.0,2
+Rep. Frank J. Mrvan (D-IN),aipac,REP FRANK MRVAN,direct,matched,person-name,17900.0,4
+"Rep. Frank Pallone, Jr. (D-NJ)",aipac,REP FRANK PALLONE JR,direct,matched,person-name,22900.0,5
+Rep. Frederica S. Wilson (D-FL),aipac,REP FREDERICA S WILSON,direct,matched,person-name,27500.0,8
+Rep. Gabe Amo (D-RI),aipac,REP GABE AMO JR,direct,matched,person-name,16500.0,5
+Rep. Garret Graves (R-LA),aipac,REP GARRET GRAVES,direct,matched,person-name,22100.0,6
+Rep. Gary J. Palmer (R-AL),aipac,REP GARY PALMER,direct,matched,person-name,15000.0,4
+Rep. Glenn Grothman (R-WI),aipac,REP GLENN GROTHMAN,direct,matched,person-name,20000.0,5
+Rep. Glenn Ivey (D-MD),aipac,REP GLENN IVEY,direct,matched,person-name,15000.0,3
+Rep. Glenn Ivey (D-MD),aipac,GLENN IVEY,direct,matched,person-name,12900.0,4
+Rep. Glenn Thompson (R-PA),aipac,REP GLENN THOMPSON JR,direct,title-initial,person-name,17900.0,4
+Rep. Grace F. Napolitano (D-CA),aipac,REP GRACE F NAPOLITANO,direct,matched,person-name,7900.0,2
+Rep. Grace Meng (D-NY),aipac,REP GRACE MENG,direct,matched,person-name,20000.0,7
+Rep. Greg Landsman (D-OH),aipac,REP GREG LANDSMAN,direct,matched,person-name,15000.0,3
+Rep. Greg Pence (R-IN),aipac,REP GREG PENCE,direct,matched,person-name,7900.0,2
+Rep. Greg Stanton (D-AZ),aipac,REP GREG STANTON,direct,matched,person-name,20000.0,5
+Rep. Gregory F. Murphy (R-NC),aipac,REP GREGORY F MURPHY,direct,matched,person-name,27900.0,6
+Rep. Gregory W. Meeks (D-NY),aipac,REP GREGORY MEEKS,direct,matched,person-name,15000.0,3
+Rep. Gregory W. Meeks (D-NY),aipac,REP GREGORY W MEEKS,direct,matched,person-name,10000.0,3
+Rep. Gus M. Bilirakis (R-FL),aipac,REP GUS BILIRAKIS,direct,matched,person-name,25000.0,6
+Rep. Guy Reschenthaler (R-PA),aipac,REP GUY RESCHENTHALER,direct,matched,person-name,25000.0,6
+Rep. H. Morgan Griffith (R-VA),aipac,REP MORGAN GRIFFITH,direct,matched,person-name,20000.0,5
+Rep. Hakeem S. Jeffries (D-NY),aipac,REP HAKEEM JEFFRIES,direct,matched,person-name,10000.0,4
+Rep. Haley M. Stevens (D-MI),aipac,REP HALEY STEVENS,direct,matched,person-name,25000.0,6
+Rep. Harold Rogers (R-KY),aipac,REP HAL ROGERS,direct,matched,person-name,15000.0,4
+Rep. Harriet M. Hageman (R-WY),aipac,REP HARRIET HAGEMAN,direct,matched,person-name,10000.0,2
+Rep. Henry Cuellar (D-TX),aipac,REP HENRY CUELLAR,direct,matched,person-name,25800.0,6
+Rep. Hillary J. Scholten (D-MI),aipac,REP HILLARY SCHOLTEN,direct,matched,person-name,11000.0,3
+Rep. J. French Hill (R-AR),aipac,REP FRENCH HILL,direct,matched,person-name,17900.0,4
+Rep. Jack Bergman (R-MI),aipac,REP JACK BERGMAN,direct,matched,person-name,20000.0,5
+Rep. Jackie Walorski (R-IN),aipac,REP JACKIE WALORSKI,direct,matched,person-name,7900.0,2
+Rep. Jaime Herrera Beutler (R-WA),aipac,REP JAIME HERRERA BEUTLER,direct,matched,person-name,10000.0,4
+Rep. Jake Auchincloss (D-MA),aipac,REP JAKE AUCHINCLOSS,direct,matched,person-name,25000.0,6
+Rep. Jake Ellzey (R-TX),aipac,REP JAKE ELLZEY,direct,matched,person-name,27900.0,6
+Rep. Jake LaTurner (R-KS),aipac,REP JAKE LATURNER,direct,matched,person-name,20000.0,5
+Rep. James A. Himes (D-CT),aipac,REP JIM HIMES,direct,matched,person-name,10500.0,4
+Rep. James Comer (R-KY),aipac,REP JAMES COMER JR,direct,matched,person-name,17900.0,4
+Rep. James E. Clyburn (D-SC),aipac,REP JAMES E CLYBURN,direct,matched,person-name,10000.0,5
+Rep. James R. Baird (R-IN),aipac,REP JIM BAIRD,direct,matched,person-name,20000.0,5
+Rep. Jared F. Golden (D-ME),aipac,REP JARED GOLDEN,direct,matched,person-name,22900.0,5
+Rep. Jared Moskowitz (D-FL),aipac,REP JARED MOSKOWITZ,direct,matched,person-name,20000.0,4
+Rep. Jared Moskowitz (D-FL),aipac,REP JARED EVAN MOSKOWITZ,direct,matched,person-name,10000.0,2
+Rep. Jason Crow (D-CO),aipac,REP JASON CROW,direct,matched,person-name,10500.0,4
+Rep. Jason Smith (R-MO),aipac,REP JASON SMITH,direct,matched,person-name,15000.0,4
+Rep. Jay Obernolte (R-CA),aipac,REP JAY OBERNOLTE,direct,matched,person-name,22900.0,5
+Rep. Jeff Duncan (R-SC),aipac,REP JEFF D DUNCAN,direct,matched,person-name,7900.0,2
+Rep. Jeff Jackson (D-NC),aipac,JEFF JACKSON,direct,matched,person-name,7900.0,2
+Rep. Jefferson Shreve (R-IN),aipac,REP JEFFERSON SHREVE,direct,matched,person-name,10000.0,2
+Rep. Jefferson Van Drew (R-NJ),aipac,REP JEFFERSON VAN DREW,direct,matched,person-name,22900.0,5
+Rep. Jennifer A. Kiggans (R-VA),aipac,REP JEN KIGGANS,direct,title-initial,person-name,10000.0,2
+Rep. Jennifer L. McClellan (D-VA),aipac,REP JENNIFER MCCLELLAN,direct,matched,person-name,10000.0,2
+Rep. Jerry L. Carl (R-AL),aipac,REP JERRY L CARL JR,direct,matched,person-name,10000.0,3
+Rep. Jim Costa (D-CA),aipac,REP JIM COSTA,direct,matched,person-name,30000.0,7
+Rep. Jim Jordan (R-OH),aipac,REP JIM JORDAN,direct,matched,person-name,20000.0,5
+Rep. Jimmy Gomez (D-CA),aipac,REP JIMMY GOMEZ,direct,matched,person-name,17900.0,4
+Rep. Jimmy Panetta (D-CA),aipac,REP JIMMY PANETTA,direct,matched,person-name,20000.0,5
+Rep. Jimmy Patronis (R-FL),aipac,REP JIMMY PATRONIS JR,direct,matched,person-name,10000.0,2
+Rep. Jodey C. Arrington (R-TX),aipac,REP JODEY ARRINGTON,direct,matched,person-name,17900.0,4
+Rep. Joe Courtney (D-CT),aipac,REP JOE COURTNEY,direct,matched,person-name,16000.0,5
+Rep. Joe Neguse (D-CO),aipac,REP JOE NEGUSE,direct,matched,person-name,27100.0,7
+Rep. Joe Wilson (R-SC),aipac,REP JOE WILSON,direct,matched,person-name,20000.0,5
+Rep. John B. Larson (D-CT),aipac,REP JOHN LARSON,direct,matched,person-name,17000.0,5
+Rep. John H. Rutherford (R-FL),aipac,REP JOHN RUTHERFORD,direct,matched,person-name,21000.0,6
+Rep. John J. McGuire III (R-VA),aipac,JOHN MCGUIRE,direct,matched,person-name,10000.0,2
+Rep. John James (R-MI),aipac,REP JOHN JAMES,direct,matched,person-name,10000.0,2
+Rep. John R. Carter (R-TX),aipac,REP JOHN CARTER,direct,matched,person-name,22900.0,5
+Rep. John R. Moolenaar (R-MI),aipac,REP JOHN MOOLENAAR,direct,matched,person-name,21000.0,6
+Rep. John S. Duarte (R-CA),aipac,REP JOHN DUARTE,direct,matched,person-name,10000.0,2
+Rep. John W. Rose (R-TN),aipac,REP JOHN ROSE,direct,matched,person-name,25000.0,6
+Rep. Jonathan L. Jackson (D-IL),aipac,REP JONATHAN JACKSON,direct,matched,person-name,15000.0,3
+Rep. Joseph D. Morelle (D-NY),aipac,REP JOSEPH MORELLE,direct,matched,person-name,37100.0,9
+Rep. Josh Brecheen (R-OK),aipac,REP JOSH BRECHEEN,direct,matched,person-name,20000.0,4
+Rep. Josh Gottheimer (D-NJ),aipac,REP JOSH GOTTHEIMER,direct,matched,person-name,15000.0,4
+Rep. Josh Harder (D-CA),aipac,REP JOSH HARDER,direct,matched,person-name,17900.0,4
+Rep. Joyce Beatty (D-OH),aipac,REP JOYCE BEATTY,direct,matched,person-name,20000.0,5
+Rep. Juan Ciscomani (R-AZ),aipac,REP JUAN CISCOMANI,direct,matched,person-name,10000.0,2
+Rep. Juan Vargas (D-CA),aipac,REP JUAN VARGAS,direct,matched,person-name,20000.0,6
+Rep. Julia Brownley (D-CA),aipac,REP JULIA BROWNLEY,direct,matched,person-name,17900.0,4
+Rep. Julia Letlow (R-LA),aipac,REP JULIA LETLOW,direct,matched,person-name,20000.0,5
+Rep. Kat Cammack (R-FL),aipac,REP KAT CAMMACK,direct,matched,person-name,35000.0,8
+Rep. Katherine M. Clark (D-MA),aipac,REP KATHERINE CLARK,direct,matched,person-name,25000.0,6
+Rep. Kathy Castor (D-FL),aipac,REP KATHY CASTOR,direct,matched,person-name,25000.0,6
+Rep. Kathy E. Manning (D-NC),aipac,REP KATHY MANNING,direct,matched,person-name,10000.0,3
+Rep. Kay Granger (R-TX),aipac,REP KAY GRANGER,direct,matched,person-name,10000.0,3
+Rep. Keith Self (R-TX),aipac,REP KEITH SELF,direct,matched,person-name,16000.0,4
+Rep. Kelly Armstrong (R-ND),aipac,REP KELLY ARMSTRONG,direct,matched,person-name,7900.0,2
+Rep. Ken Buck (R-CO),aipac,REP KEN BUCK,direct,matched,person-name,10000.0,3
+Rep. Ken Calvert (R-CA),aipac,REP KEN CALVERT,direct,matched,person-name,20000.0,6
+Rep. Kevin Hern (R-OK),aipac,REP KEVIN HERN,direct,matched,person-name,30000.0,7
+Rep. Kevin Kiley (I-CA),aipac,REP KEVIN KILEY,direct,matched,person-name,15000.0,3
+Rep. Kevin Mullin (D-CA),aipac,REP KEVIN MULLIN,direct,matched,person-name,10000.0,2
+Rep. Kevin Mullin (D-CA),aipac,KEVIN MULLIN,direct,matched,person-name,7900.0,2
+Rep. Kim Schrier (D-WA),aipac,REP KIM SCHRIER,direct,matched,person-name,20000.0,5
+Rep. Kweisi Mfume (D-MD),aipac,KWEISI MFUME,direct,matched,person-name,20000.0,5
+Rep. Lance Gooden (R-TX),aipac,REP LANCE GOODEN,direct,matched,person-name,27900.0,6
+Rep. Larry Bucshon (R-IN),aipac,REP LARRY BUCSHON,direct,matched,person-name,7900.0,2
+Rep. Laurel M. Lee (R-FL),aipac,REP LAUREL LEE,direct,title-initial,person-name,15000.0,3
+Rep. Lisa C. McClain (R-MI),aipac,REP LISA MCCLAIN,direct,matched,person-name,20000.0,5
+Rep. Lizzie Fletcher (D-TX),aipac,REP LIZZIE FLETCHER,direct,matched,person-name,10000.0,2
+Rep. Lizzie Fletcher (D-TX),aipac,REP LIZZIE PANNILL FLETCHER,direct,matched,person-name,7900.0,2
+Rep. Lloyd Smucker (R-PA),aipac,REP LLOYD SMUCKER,direct,matched,person-name,22900.0,5
+Rep. Lois Frankel (D-FL),aipac,REP LOIS FRANKEL,direct,matched,person-name,20000.0,5
+Rep. Lori Trahan (D-MA),aipac,REP LORI TRAHAN,direct,matched,person-name,10000.0,3
+Rep. Lucy McBath (D-GA),aipac,REP LUCY MCBATH,direct,matched,person-name,22900.0,5
+Rep. Luz M. Rivas (D-CA),aipac,LUZ RIVAS,direct,matched,person-name,10000.0,2
+Rep. Maggie Goodlander (D-NH),aipac,REP MAGGIE GOODLANDER,direct,matched,person-name,10000.0,2
+Rep. Marc A. Veasey (D-TX),aipac,REP MARC VEASEY,direct,matched,person-name,33900.0,8
+Rep. Marcus J. Molinaro (R-NY),aipac,REP MARC MOLINARO,direct,matched,person-name,10000.0,2
+Rep. Maria Elvira Salazar (R-FL),aipac,REP MARIA SALAZAR,direct,matched,person-name,17100.0,5
+Rep. Maria Elvira Salazar (R-FL),aipac,REP MARIA ELVIRA SALAZAR,direct,matched,person-name,10000.0,2
+Rep. Marie Gluesenkamp Perez (D-WA),aipac,REP MARIE GLUESENKAMP PEREZ,direct,matched,person-name,20000.0,4
+Rep. Marilyn Strickland (D-WA),aipac,REP MARILYN STRICKLAND,direct,matched,person-name,22100.0,6
+Rep. Mark Alford (R-MO),aipac,REP MARK ALFORD,direct,matched,person-name,25000.0,5
+Rep. Mark E. Amodei (R-NV),aipac,REP MARK AMODEI,direct,matched,person-name,17900.0,4
+Rep. Mark E. Green (R-TN),aipac,REP MARK GREEN,direct,matched,person-name,12900.0,3
+Rep. Marlin A. Stutzman (R-IN),aipac,REP MARLIN A STUTZMAN,direct,matched,person-name,15000.0,3
+Rep. Mary Sattler Peltola (D-AK),aipac,REP MARY SATTLER PELTOLA,direct,matched,person-name,10000.0,3
+Rep. Matt Cartwright (D-PA),aipac,REP MATT CARTWRIGHT,direct,matched,person-name,17900.0,5
+"Rep. Matthew M. Rosendale, Sr. (R-MT)",aipac,REP MATT ROSENDALE SR,direct,matched,person-name,7900.0,2
+Rep. Max L. Miller (R-OH),aipac,REP MAX MILLER,direct,matched,person-name,10000.0,2
+Rep. Michael A. Rulli (R-OH),aipac,REP MICHAEL RULLI,direct,matched,person-name,15000.0,3
+Rep. Michael Baumgartner (R-WA),aipac,REP MICHAEL BAUMGARTNER,direct,matched,person-name,10000.0,2
+Rep. Michael C. Burgess (R-TX),aipac,REP MICHAEL C BURGESS,direct,matched,person-name,7900.0,2
+Rep. Michael Cloud (R-TX),aipac,REP MICHAEL CLOUD,direct,matched,person-name,17900.0,4
+Rep. Michael Guest (R-MS),aipac,REP MICHAEL GUEST,direct,matched,person-name,17900.0,4
+Rep. Michael K. Simpson (R-ID),aipac,REP MIKE SIMPSON,direct,matched,person-name,22900.0,5
+Rep. Michael Lawler (R-NY),aipac,REP MIKE LAWLER,direct,matched,person-name,25000.0,5
+Rep. Michael R. Turner (R-OH),aipac,REP MIKE TURNER,direct,matched,person-name,16000.0,5
+Rep. Michael T. McCaul (R-TX),aipac,REP MICHAEL MCCAUL,direct,matched,person-name,30000.0,7
+Rep. Michael Waltz (R-FL),aipac,REP MIKE WALTZ,direct,matched,person-name,15000.0,4
+Rep. Michelle Fischbach (R-MN),aipac,REP MICHELLE FISCHBACH,direct,matched,person-name,21000.0,6
+Rep. Michelle Steel (R-CA),aipac,REP MICHELLE STEEL,direct,matched,person-name,17900.0,4
+Rep. Mike Bost (R-IL),aipac,REP MIKE BOST,direct,matched,person-name,25000.0,6
+Rep. Mike Carey (R-OH),aipac,REP MIKE CAREY,direct,matched,person-name,20000.0,4
+Rep. Mike Ezell (R-MS),aipac,REP MIKE EZELL,direct,matched,person-name,20000.0,4
+Rep. Mike Flood (R-NE),aipac,REP MIKE FLOOD,direct,matched,person-name,10000.0,2
+Rep. Mike Flood (R-NE),aipac,MIKE FLOOD,direct,matched,person-name,10000.0,3
+Rep. Mike Gallagher (R-WI),aipac,REP MIKE GALLAGHER,direct,matched,person-name,10000.0,3
+Rep. Mike Garcia (R-CA),aipac,REP MIKE GARCIA,direct,matched,person-name,22900.0,5
+Rep. Mike Haridopolos (R-FL),aipac,REP MICHAEL HARIDOPOLOS,direct,matched,person-name,10000.0,2
+Rep. Mike Johnson (R-LA),aipac,REP MIKE JOHNSON,direct,matched,person-name,20000.0,5
+Rep. Mike Kelly (R-PA),aipac,REP MIKE KELLY JR,direct,matched,person-name,17900.0,4
+Rep. Mike Kennedy (R-UT),aipac,REP MICHAEL S KENNEDY,direct,matched,person-name,10000.0,2
+Rep. Mike Levin (D-CA),aipac,REP MIKE LEVIN,direct,matched,person-name,22900.0,5
+Rep. Mike Quigley (D-IL),aipac,REP MIKE QUIGLEY,direct,matched,person-name,20000.0,5
+Rep. Mike Rogers (R-AL),aipac,REP MIKE ROGERS,direct,matched,person-name,20000.0,5
+Rep. Mikie Sherrill (D-NJ),aipac,REP MIKIE SHERRILL,direct,matched,person-name,7900.0,2
+Rep. Monica De La Cruz (R-TX),aipac,REP MONICA DE LA CRUZ,direct,matched,person-name,15000.0,3
+Rep. Morgan Luttrell (R-TX),aipac,REP MORGAN LUTTRELL,direct,matched,person-name,10000.0,2
+Rep. Morgan McGarvey (D-KY),aipac,MORGAN MCGARVEY,direct,matched,person-name,7900.0,2
+Rep. Nancy Mace (R-SC),aipac,REP NANCY MACE,direct,matched,person-name,27900.0,6
+Rep. Nancy Pelosi (D-CA),aipac,REP NANCY PELOSI,direct,matched,person-name,10000.0,3
+Rep. Nathaniel Moran (R-TX),aipac,REP NATHANIEL MORAN,direct,matched,person-name,15000.0,3
+Rep. Neal P. Dunn (R-FL),aipac,REP NEAL DUNN,direct,matched,person-name,17900.0,4
+Rep. Nicholas A. Langworthy (R-NY),aipac,REP NICHOLAS A LANGWORTHY,direct,matched,person-name,20000.0,4
+Rep. Nicholas A. Langworthy (R-NY),aipac,REP NICK LANGWORTHY,direct,matched,person-name,15000.0,3
+Rep. Nick LaLota (R-NY),aipac,REP NICK LALOTA,direct,matched,person-name,15000.0,3
+Rep. Nicole Malliotakis (R-NY),aipac,REP NICOLE MALLIOTAKIS,direct,matched,person-name,25000.0,6
+Rep. Nikema Williams (D-GA),aipac,REP NIKEMA WILLIAMS,direct,matched,person-name,17900.0,4
+Rep. Norma J. Torres (D-CA),aipac,REP NORMA TORRES,direct,matched,person-name,15000.0,4
+Rep. Pat Fallon (R-TX),aipac,REP PAT FALLON,direct,matched,person-name,27900.0,6
+Rep. Patrick Ryan (D-NY),aipac,REP PAT RYAN,direct,matched,person-name,20000.0,5
+Rep. Pete Aguilar (D-CA),aipac,REP PETE AGUILAR,direct,matched,person-name,20000.0,5
+Rep. Pete Sessions (R-TX),aipac,REP PETE SESSIONS,direct,matched,person-name,17900.0,4
+Rep. Pete Stauber (R-MN),aipac,REP PETE STAUBER,direct,matched,person-name,25000.0,6
+Rep. Raja Krishnamoorthi (D-IL),aipac,REP RAJA KRISHNAMOORTHI,direct,matched,person-name,20800.0,5
+Rep. Randy Feenstra (R-IA),aipac,REP RANDY FEENSTRA,direct,matched,person-name,17900.0,4
+"Rep. Randy K. Weber, Sr. (R-TX)",aipac,REP RANDY WEBER,direct,matched,person-name,37900.0,8
+Rep. Raul Ruiz (D-CA),aipac,REP RAUL RUIZ,direct,matched,person-name,17900.0,4
+Rep. Richard E. Neal (D-MA),aipac,REP RICHARD NEAL,direct,matched,person-name,10000.0,3
+Rep. Richard Hudson (R-NC),aipac,REP RICHARD HUDSON,direct,matched,person-name,10000.0,2
+Rep. Richard McCormick (R-GA),aipac,REP RICH MCCORMICK,direct,matched,person-name,15000.0,3
+Rep. Richard McCormick (R-GA),aipac,REP RICHARD D MCCORMICK,direct,matched,person-name,10000.0,2
+Rep. Rick Larsen (D-WA),aipac,REP RICK LARSEN,direct,matched,person-name,20000.0,5
+Rep. Rick W. Allen (R-GA),aipac,REP RICK W ALLEN,direct,matched,person-name,25000.0,6
+Rep. Ritchie Torres (D-NY),aipac,REP RITCHIE TORRES,direct,matched,person-name,35000.0,8
+Rep. Robert B. Aderholt (R-AL),aipac,REP ROBERT B ADERHOLT,direct,matched,person-name,15000.0,4
+Rep. Robert E. Latta (R-OH),aipac,REP BOB LATTA,direct,matched,person-name,22900.0,5
+"Rep. Robert F. Onder, Jr. (R-MO)",aipac,REP BOB ONDER,direct,matched,person-name,10000.0,2
+Rep. Robert J. Wittman (R-VA),aipac,REP ROB WITTMAN,direct,matched,person-name,26000.0,8
+Rep. Robert Menendez (D-NJ),aipac,REP ROB MENENDEZ,direct,title-chamber,person-name,15000.0,3
+Rep. Roger Williams (R-TX),aipac,REP ROGER WILLIAMS,direct,matched,person-name,20000.0,5
+Rep. Ron Estes (R-KS),aipac,REP RON ESTES,direct,matched,person-name,30000.0,7
+Rep. Ronny Jackson (R-TX),aipac,REP RONNY JACKSON,direct,matched,person-name,27900.0,6
+Rep. Rudy Yakym III (R-IN),aipac,REP RUDY YAKYM III,direct,matched,person-name,25000.0,5
+Rep. Russ Fulcher (R-ID),aipac,REP RUSS FULCHER,direct,matched,person-name,17900.0,4
+Rep. Russell Fry (R-SC),aipac,RUSSELL FRY,direct,matched,person-name,10000.0,2
+Rep. Russell Fry (R-SC),aipac,REP RUSSELL FRY,direct,matched,person-name,10000.0,2
+Rep. Sam Graves (R-MO),aipac,REP SAM GRAVES,direct,matched,person-name,27100.0,7
+"Rep. Sanford D. Bishop, Jr. (D-GA)",aipac,REP SANFORD D BISHOP JR,direct,matched,person-name,17900.0,4
+Rep. Sarah McBride (D-DE),aipac,REP SARAH MCBRIDE,direct,matched,person-name,10000.0,2
+Rep. Scott DesJarlais (R-TN),aipac,REP SCOTT DESJARLAIS,direct,matched,person-name,10000.0,3
+Rep. Scott Fitzgerald (R-WI),aipac,REP SCOTT FITZGERALD,direct,matched,person-name,25000.0,6
+Rep. Scott Franklin (R-FL),aipac,REP SCOTT FRANKLIN,direct,matched,person-name,20000.0,5
+Rep. Scott H. Peters (D-CA),aipac,REP SCOTT PETERS,direct,matched,person-name,7900.0,2
+Rep. Scott Perry (R-PA),aipac,REP SCOTT PERRY,direct,matched,person-name,12900.0,3
+Rep. Seth Magaziner (D-RI),aipac,REP SETH MAGAZINER,direct,matched,person-name,15000.0,3
+Rep. Seth Moulton (D-MA),aipac,REP SETH MOULTON,direct,matched,person-name,15000.0,3
+Rep. Sharice Davids (D-KS),aipac,REP SHARICE DAVIDS,direct,matched,person-name,12900.0,3
+Rep. Sheila Jackson Lee (D-TX),aipac,REP SHEILA JACKSON LEE,direct,matched,person-name,12900.0,3
+Rep. Sheri Biggs (R-SC),aipac,REP SHERI BIGGS,direct,matched,person-name,10000.0,2
+Rep. Shontel M. Brown (D-OH),aipac,REP SHONTEL BROWN,direct,matched,person-name,22900.0,5
+Rep. Shri Thanedar (D-MI),aipac,REP SHRI THANEDAR,direct,matched,person-name,10000.0,2
+Rep. Steny H. Hoyer (D-MD),aipac,REP STENY HOYER,direct,matched,person-name,17100.0,5
+Rep. Stephanie I. Bice (R-OK),aipac,REP STEPHANIE BICE,direct,matched,person-name,20000.0,5
+Rep. Steve Chabot (R-OH),aipac,REP STEVE CHABOT,direct,matched,person-name,7900.0,2
+Rep. Steve Scalise (R-LA),aipac,REP STEVE SCALISE,direct,matched,person-name,15000.0,4
+Rep. Steve Womack (R-AR),aipac,REP STEVE WOMACK,direct,matched,person-name,28000.0,8
+Rep. Steven Horsford (D-NV),aipac,REP STEVEN HORSFORD,direct,matched,person-name,22900.0,6
+Rep. Susan Wild (D-PA),aipac,REP SUSAN WILD,direct,matched,person-name,10000.0,3
+Rep. Susie Lee (D-NV),aipac,REP SUSIE LEE,direct,matched,person-name,26300.0,8
+Rep. Suzan K. DelBene (D-WA),aipac,REP SUZAN DELBENE,direct,matched,person-name,25000.0,6
+Rep. Sylvia R. Garcia (D-TX),aipac,REP SYLVIA GARCIA,direct,matched,person-name,22900.0,5
+Rep. Ted Lieu (D-CA),aipac,REP TED LIEU,direct,matched,person-name,25000.0,6
+Rep. Teresa Leger Fernandez (D-NM),aipac,REP TERESA LEGER FERNANDEZ,direct,matched,person-name,7900.0,2
+Rep. Terri A. Sewell (D-AL),aipac,REP TERRI SEWELL,direct,matched,person-name,17900.0,4
+"Rep. Thomas H. Kean, Jr. (R-NJ)",aipac,REP TOM KEAN JR,direct,matched,person-name,25000.0,5
+Rep. Thomas P. Tiffany (R-WI),aipac,REP TOM TIFFANY,direct,matched,person-name,15000.0,4
+Rep. Thomas R. Suozzi (D-NY),aipac,REP TOM SUOZZI,direct,matched,person-name,15000.0,3
+Rep. Tim Burchett (R-TN),aipac,REP TIM BURCHETT,direct,matched,person-name,15000.0,4
+Rep. Tim Moore (R-NC),aipac,TIM MOORE,direct,matched,person-name,10000.0,2
+Rep. Tim Walberg (R-MI),aipac,REP TIM WALBERG,direct,matched,person-name,21000.0,6
+Rep. Timothy M. Kennedy (D-NY),aipac,REP TIMOTHY M KENNEDY,direct,matched,person-name,10000.0,3
+Rep. Tom Cole (R-OK),aipac,REP TOM COLE,direct,matched,person-name,22100.0,6
+Rep. Tom Emmer (R-MN),aipac,REP TOM EMMER JR,direct,matched,person-name,26000.0,7
+Rep. Tom McClintock (R-CA),aipac,REP TOM MCCLINTOCK,direct,matched,person-name,18900.0,5
+Rep. Tony Gonzales (R-TX),aipac,REP TONY GONZALES II,direct,matched,person-name,30000.0,7
+Rep. Tracey Mann (R-KS),aipac,REP TRACEY MANN,direct,matched,person-name,15000.0,4
+Rep. Trent Kelly (R-MS),aipac,REP TRENT KELLY,direct,matched,person-name,17900.0,4
+Rep. Troy A. Carter (D-LA),aipac,REP TROY CARTER,direct,matched,person-name,15000.0,4
+Rep. Troy Balderson (R-OH),aipac,REP TROY BALDERSON,direct,matched,person-name,22900.0,5
+Rep. Troy Downing (R-MT),aipac,REP TROY DOWNING,direct,matched,person-name,10000.0,2
+Rep. Valerie P. Foushee (D-NC),aipac,VALERIE FOUSHEE,direct,matched,person-name,10800.0,3
+Rep. Vern Buchanan (R-FL),aipac,REP VERN BUCHANAN,direct,matched,person-name,20000.0,5
+Rep. Vicente Gonzalez (D-TX),aipac,REP VICENTE GONZALEZ,direct,matched,person-name,20000.0,6
+Rep. Victoria Spartz (R-IN),aipac,REP VICTORIA SPARTZ,direct,matched,person-name,25000.0,6
+Rep. Vince Fong (R-CA),aipac,REP VINCE FONG,direct,matched,person-name,10000.0,2
+Rep. Virginia Foxx (R-NC),aipac,REP VIRGINIA FOXX,direct,matched,person-name,27900.0,6
+Rep. W. Gregory Steube (R-FL),aipac,REP GREG STEUBE,direct,matched,person-name,20000.0,5
+Rep. Wesley Hunt (R-TX),aipac,REP WESLEY HUNT,direct,matched,person-name,15000.0,3
+Rep. Wiley Nickel (D-NC),aipac,REP WILEY NICKEL,direct,matched,person-name,10000.0,2
+Rep. William R. Keating (D-MA),aipac,REP BILL KEATING,direct,matched,person-name,20000.0,5
+Rep. William R. Timmons IV (R-SC),aipac,REP WILLIAM TIMMONS IV,direct,matched,person-name,20000.0,5
+Rep. Yadira Caraveo (D-CO),aipac,REP YADIRA CARAVEO,direct,matched,person-name,10000.0,2
+Rep. Young Kim (R-CA),aipac,REP YOUNG KIM,direct,matched,person-name,22900.0,5
+Rep. Yvette D. Clarke (D-NY),aipac,REP YVETTE D CLARKE,direct,matched,person-name,11000.0,4
+Rep. Zachary Nunn (R-IA),aipac,REP ZACH NUNN,direct,matched,person-name,20000.0,4
+Sen. Adam B. Schiff (D-CA),aipac,REP ADAM SCHIFF,direct,matched,person-name,10000.0,3
+Sen. Amy Klobuchar (D-MN),aipac,SEN AMY KLOBUCHAR,direct,matched,person-name,15000.0,3
+Sen. Dan Sullivan (R-AK),aipac,SEN DAN SULLIVAN,direct,matched,person-name,30000.0,2
+Sen. Deb Fischer (R-NE),aipac,SEN DEB FISCHER,direct,matched,person-name,15000.0,3
+Sen. Jacky Rosen (D-NV),aipac,SEN JACKY ROSEN,direct,matched,person-name,10000.0,2
+Sen. Jim Banks (R-IN),aipac,REP JIM BANKS,direct,matched,person-name,10000.0,3
+Sen. John Cornyn (R-TX),aipac,SEN JOHN CORNYN III,direct,matched,person-name,10000.0,2
+Sen. John R. Curtis (R-UT),aipac,REP JOHN CURTIS,direct,matched,person-name,20000.0,5
+Sen. Jon Tester (D-MT),aipac,SEN JON TESTER,direct,matched,person-name,10000.0,3
+Sen. Josh Hawley (R-MO),aipac,SEN JOSH HAWLEY,direct,matched,person-name,10000.0,2
+Sen. Kevin Cramer (R-ND),aipac,SEN KEVIN CRAMER,direct,matched,person-name,10000.0,2
+Sen. Kirsten E. Gillibrand (D-NY),aipac,SEN KIRSTEN GILLIBRAND,direct,matched,person-name,10000.0,2
+Sen. Markwayne Mullin (R-OK),aipac,SEN MARKWAYNE MULLIN,direct,matched,person-name,20000.0,4
+Sen. Marsha Blackburn (R-TN),aipac,SEN MARSHA BLACKBURN,direct,matched,person-name,10000.0,2
+Sen. Rick Scott (R-FL),aipac,SEN RICK SCOTT,direct,matched,person-name,15000.0,3
+"Sen. Robert P. Casey, Jr. (D-PA)",aipac,SEN BOB CASEY,direct,matched,person-name,10000.0,2
+Sen. Roger F. Wicker (R-MS),aipac,SEN ROGER WICKER,direct,matched,person-name,10000.0,2
+Sen. Sheldon Whitehouse (D-RI),aipac,SEN SHELDON WHITEHOUSE,direct,matched,person-name,15000.0,3
+Sen. Ted Cruz (R-TX),aipac,SEN TED CRUZ,direct,matched,person-name,15000.0,3
+Sen. Tom Cotton (R-AR),aipac,SEN TOM COTTON,direct,matched,person-name,15000.0,3

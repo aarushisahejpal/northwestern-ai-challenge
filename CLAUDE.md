@@ -28,6 +28,9 @@ gain-investigation/
 ├── findings/            ← one locked finding per file (locked = verification passed)
 ├── traces/              ← session JSONL exports + INDEX.md + rendered/ HTML
 ├── tests/               ← smoke_test.py + fixtures/ (tiny excerpts of real public records)
+├── out/                 ← tool outputs: rosters, review packages, API caches — COMMITTED
+│                          as of 2026-07-11 (Rob; reversal of the 4cae303 gitignored-out/
+│                          convention). Exception: out/.fec_api_key stays ignored forever.
 ├── data/                ← raw corpus (gitignored; layout per the challenge data manual)
 └── db/                  ← built DuckDB files (gitignored; rebuilt from raw via loader)
 ```
