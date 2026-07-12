@@ -1,0 +1,97 @@
+{
+  "_meta": "Spec for the pardons industry review package (L035). Regenerates the 2026-07-10 hand-built package via the industry-review-packager skill; the class triage is the human-owned file pardons_class_triage.json. KPI values are human-verified copy — reconcile against the fresh CSVs after a corpus refresh.",
+  "id": "pardons",
+  "title": "Presidential Pardons — the Lobbying Around Executive Clemency",
+  "subtitle": "Two markets share one vocabulary: individuals paying lobbying firms to seek presidential pardons ('Executive relief'), and policy organizations lobbying on clemency itself — mapped from the filings' own free-text 2022–2026Q1.",
+  "extra_sources": "",
+  "gendate": "2026-07-10",
+  "lens": {"type": "facet", "tag": "PARDONS", "file_prefix": "pardons", "col_token": "pardons"},
+  "press": {
+    "regex": "\\b(pardon|pardons|pardoned|pardoning|clemency|clemencies|commutation|commutations)\\b",
+    "col_token": "pardon"
+  },
+  "players": {"class_triage_file": "specs/pardons_class_triage.json"},
+  "classes": {
+    "names": ["Pardon seeker (individual as client)", "Seeker vehicle (org; engagement seeks a pardon)", "Clemency-policy advocacy org", "Unclear"],
+    "slots": [0, 1, 2, 4],
+    "map": {"seeker": 0, "seeker_vehicle": 1, "advocacy": 2, "unclear": 3}
+  },
+  "modules": {
+    "engagements": {"classes": ["seeker", "seeker_vehicle"]},
+    "trend_spend": false,
+    "registrants_limit": 40
+  },
+  "giving": [
+    {
+      "roster": "out/pardons_roster.txt",
+      "args": ["--top", "400"],
+      "chart": false,
+      "files": {
+        "by_org": "pardons_ld203_by_org.csv",
+        "recipients": "pardons_ld203_recipients.csv",
+        "by_year": "pardons_ld203_by_year.csv",
+        "member_rollup": "pardons_ld203_member_rollup.csv"
+      }
+    }
+  ],
+  "assembly": "facet",
+  "page_js": "facet_page.js",
+  "zip": true,
+  "readme": {"write": false},
+  "kpis": [
+    {"label": "Paid pardon-seeker market, disclosed billings", "value": "$6.21M",
+     "note": "27 engagements · 26 seeker clients · 10 declared-terminated"},
+    {"label": "Pardon/clemency-tagged filings 2022–2026Q1", "value": "366",
+     "note": "54 client organizations & individuals (senate-primary)"},
+    {"label": "Tagged filings per quarter", "value": "~6 → ~16",
+     "note": "2022–2024Q3 baseline vs 2024-Q4 onward (22 in 2024-Q4 alone)"},
+    {"label": "Pardon press peak, 2025-Q1", "value": "156 releases",
+     "note": "1.13% of ALL member releases — ~10× the 2022–24 norm; 2026-Q1: 132"}
+  ],
+  "copy": {
+    "players": {
+      "title": "The player map — who lobbies on pardons and clemency",
+      "sub": "All {n} client-side players with pardon/clemency-tagged senate filings 2022–2026Q1, sized by tagged filing count. Color = hand-triaged client class: individuals buying pardon engagements, organizational vehicles for a named beneficiary, and policy advocacy organizations. Click a bubble to list its tagged filings.",
+      "foot": "Two different populations share this vocabulary: a paid pardon-seeking MARKET (individuals and vehicles hiring firms — 'Granting of Pardon', 'Executive relief') and clemency-POLICY advocacy (Due Process Institute, ACLU, Aleph Institute, marijuana-pardon pushes, pardon-power constitutional amendments). The map keeps both; the class column separates them. Full list with class notes: data/pardons_players.csv."
+    },
+    "engagements": {
+      "title": "The paid pardon-seeker market — engagements and what they billed",
+      "sub": "Every seeker/vehicle engagement (client × lobbying firm pair with pardon/clemency-tagged filings), ranked by reported billings in the tagged quarters. Color = whether the engagement has a DECLARED termination filing. Click a bar for the filings and the engagement's own declared language.",
+      "foot": "Dollars are the engagement's full reported billing for the quarters where the pardon/clemency language appears — filing-level disclosure cannot split dollars by issue (Binance's engagements also cover digital-asset lobbying). Some engagements declare the purpose only on the LD-1 registration while their quarterlies carry no text: those quarters are credited conservatively (only when the quarterly declares no other work) and labeled tag_basis='registration-only' in the CSV. Termination is declared only (senate filing_type termination family), never inferred from silence; a termination filing marks the engagement closing — it does not say whether the ask landed. Missing bars = engagements whose tagged quarterlies report no income (self-reported data)."
+    },
+    "trend": {
+      "title": "A niche that doubled after the 2024 election",
+      "sub": "Pardon/clemency-tagged senate filings and distinct clients per quarter (amendment-deduped, registrations excluded). Click a quarter to list exactly the filings it counts.",
+      "foot": "Steady ~5–8 filings a quarter through 2022–2024Q3 — mostly the advocacy orgs — then 22 in 2024-Q4 (post-election: end-of-term clemency pushes and the first waves of the seeker market) and a sustained 13–18/quarter through 2025–2026Q1, when nearly all seeker engagements begin."
+    },
+    "scatter": {
+      "title": "There is no 'pardons' issue code — where the text actually files",
+      "sub": "Issue codes the registrants filed their pardon/clemency-tagged free-text under (senate + house text blocks).",
+      "foot": "The ALI form has no clemency code, so the field scatters: less than half sits under Law Enforcement (LAW); the rest hides in Government Issues, Civil Rights, and a 30-code tail — the same 'hidden under other codes' problem the crypto map demonstrated, at boutique scale. Individuals' engagements are usually coded GOV or LAW with a one-line description."
+    },
+    "keywords": {
+      "title": "Which words carried the signal",
+      "sub": "Distinct filings matched by each of the 8 curated lexicon phrases (whole-word, case-insensitive; industry_lexicon.json facet PARDONS).",
+      "foot": "'Executive relief' is the market's own euphemism: in this corpus the whole phrase resolves to exactly three clients — Binance Holdings, Changpeng Zhao, and Fred Daibes. Verb forms (pardoned/pardoning) barely exist in filings but dominate press releases — the two sides speak differently."
+    },
+    "registrants": {
+      "title": "The firms that sell this service",
+      "sub": "Outside lobbying firms on pardon/clemency-tagged filings (self-filing advocacy orgs excluded), ranked by tagged filings.",
+      "foot": "J M Burkman & Associates alone collected ~$1.56M from two pardon-seekers (Hatch, Schwartz — ledger L034). The Vogel Group runs a small stable of clemency clients (Tierney, Patel, Magma Power, Healthicity); Baker & Hostetler and Checkmate carry the Binance/Zhao 'executive relief' work. Reported amounts are ranking signals summed over tagged filings."
+    },
+    "press": {
+      "title": "Congress barely mentioned pardons — until 2025",
+      "sub": "Share of ALL member press releases mentioning pardon/clemency vocabulary, by quarter. Click a quarter to list the releases.",
+      "foot": "A near-zero baseline (0.02–0.3%) breaks at 2024-Q4 and spikes ~10× at 2025-Q1 (156 releases — the Jan-6 mass pardons and the preemptive-pardon fight) and again at 2026-Q1 (132). The say-side runs on the political calendar; the filing-side market it tracks is the quiet, paid one above."
+    }
+  },
+  "caveats": [
+    "Recall boundary: only engagements whose filing free-text uses the 8-phrase pardon/clemency vocabulary appear. Engagements that never say the word are invisible — Roger Ver's Drake Ventures ($600K) and Sterling Green engagements (ledger L034) declare 'US government prosecution of Roger Ver' and are NOT on this map; the quarterly-turnover lens caught them instead. The two lenses are complements.",
+    "Engagement dollars are the pair's full reported billing for quarters where the tagged language appears — filing-level disclosure cannot split dollars by issue (Binance's engagements also cover digital-asset lobbying). Several engagements report no income at all (self-reported data); the market total is a floor.",
+    "Player bubble 'total lobbying spend' is ALL-ISSUE canonical spend (v_client_canonical_spend) — a size signal, not pardon dollars. For the ACLU or FWD.us it is almost entirely non-pardon work.",
+    "Termination is DECLARED only (senate filing_type termination family, corpus-profile §3), never inferred from a missing quarterly. A termination filing marks the engagement closing — whether the pardon was granted is an outside-record question this data cannot answer.",
+    "Client classes (seeker / vehicle / advocacy) were hand-triaged 2026-07-10 from the filings' own text; class notes quote only what the filings declare. Living persons with active clemency asks: editorial/legal review before naming anyone in a story (same flag as ledger L021/L034).",
+    "LD-203 giving for this roster ships in the CSVs but is deliberately NOT charted: it is organization-level, dominated by the advocacy orgs' non-pardon activity (the largest items are one org's fundraising-gala honoree costs), and never pardon-attributable.",
+    "Senate-primary; never sum the two chambers. Filings amendment-deduped on filing_period, latest by posted; registrations excluded from dollar work."
+  ]
+}

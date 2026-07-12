@@ -1,0 +1,98 @@
+{
+  "_meta": "Spec for the crypto industry review package (L029–L031). The data CSVs regenerate through the packager's invariant core; the dashboard keeps its bespoke crypto_page.js and is assembled by the legacy _build/viz_build.py crypto section (assembly: viz_build), which also carries the KPI/caveat copy. The giving-split view (crypto_ld203_recipients_split.csv), per-item index and the P6 variant audits are products of the pre-P6 enhance/retrofit pipeline and are PASSED THROUGH from the baseline package, not regenerated — new packages get the member rollup from lda_ld203_giving.py instead. FEC CSVs regenerate via fec_enrich.py when the cache/key allows, else pass through.",
+  "id": "crypto",
+  "title": "Crypto Lobbying — State of the Industry",
+  "subtitle": "Who lobbies Washington on crypto, how fast it grew, where it hides in the disclosure forms, and who the industry gives money to.",
+  "extra_sources": " and openFEC (cached raw responses)",
+  "gendate": "2026-07-09",
+  "lens": {
+    "type": "facet",
+    "tag": "CRYPTO",
+    "file_prefix": "crypto",
+    "col_token": "crypto",
+    "spend_col": "canonical_spend_tagged_clients"
+  },
+  "press": {
+    "regex": "\\b(crypto|cryptocurrency|cryptocurrencies|stablecoin|stablecoins|digital asset|digital assets|bitcoin|blockchain|central bank digital currency|cbdc)\\b",
+    "col_token": "crypto"
+  },
+  "players": {
+    "name_visibility_regex": "(?i)\\b(crypto|cryptocurrenc|blockchain|bitcoin|digital asset|stablecoin|defi|web3|digital currenc|coin center|dogecoin|ethereum|solana|ripple)",
+    "tiers": {
+      "core": 8,
+      "active": 3
+    }
+  },
+  "modules": {
+    "trend_spend": true,
+    "spend_quarters": true,
+    "scatter_filings": true,
+    "registrants_limit": 60,
+    "fec": {
+      "mode": "run",
+      "roster": "out/crypto_roster.txt",
+      "args": [
+        "--verify-totals"
+      ],
+      "files": {
+        "recon": "crypto_fec_superpac_vs_ld203.csv",
+        "unmatched": "crypto_fec_unmatched_network_donors.csv",
+        "committees": "crypto_fec_committees.csv"
+      }
+    }
+  },
+  "giving": [
+    {
+      "roster": "out/crypto_roster.txt",
+      "args": [
+        "--top",
+        "100"
+      ],
+      "note_filings_col": true,
+      "files": {
+        "by_org": "crypto_ld203_giving_by_org.csv",
+        "recipients": "crypto_ld203_top_recipients.csv",
+        "by_year": "crypto_ld203_by_year.csv",
+        "member_rollup": "crypto_ld203_member_rollup.csv"
+      }
+    },
+    {
+      "roster": "out/crypto_roster_pureplay.txt",
+      "args": [
+        "--top",
+        "60"
+      ],
+      "files": {
+        "by_org": "crypto_ld203_pureplay_by_org.csv",
+        "recipients": "crypto_ld203_pureplay_recipients.csv",
+        "by_year": "crypto_ld203_pureplay_by_year.csv"
+      }
+    },
+    {
+      "roster": "out/crypto_roster_core.txt",
+      "args": [
+        "--top",
+        "60"
+      ],
+      "files": {
+        "by_org": "crypto_ld203_core_by_org.csv",
+        "recipients": "crypto_ld203_core_recipients.csv",
+        "by_year": "crypto_ld203_core_by_year.csv"
+      }
+    }
+  ],
+  "passthrough": [
+    "crypto_ld203_recipients_split.csv",
+    "crypto_ld203_items.csv",
+    "crypto_ld203_member_variant_audit.csv",
+    "crypto_ld203_member_variant_audit_p6.csv",
+    "crypto_member_support_rollup.csv"
+  ],
+  "assembly": "viz_build",
+  "zip": true,
+  "readme": {
+    "write": false
+  },
+  "kpis": [],
+  "caveats": []
+}

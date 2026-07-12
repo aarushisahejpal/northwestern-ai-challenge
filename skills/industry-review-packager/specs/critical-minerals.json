@@ -1,0 +1,140 @@
+{
+  "_meta": "Spec for the critical-minerals / battery-materials review package — the industry-review-packager skill's first born-spec package, built 2026-07-11 to serve ledger L024 (BATT Coalition, ultimate members undisclosed): map the field BATT files in so its co-lobby neighbors and the name-invisible players become visible. Facet CRITMIN, industry_lexicon.json v1.2. KPI values are human-verified copy — reconcile against the fresh CSVs after a corpus refresh.",
+  "id": "critical-minerals",
+  "title": "Critical Minerals & Battery Materials — the Lobbying Field",
+  "subtitle": "Who lobbies Washington on critical minerals, rare earths, and the battery-materials supply chain — the field where the BATT Coalition (a coalition whose ultimate members are not disclosed in its filings) sits, mapped from the filings' own free-text 2022–2026Q1.",
+  "extra_sources": "",
+  "lens": {
+    "type": "facet",
+    "tag": "CRITMIN",
+    "file_prefix": "critmin",
+    "col_token": "critmin",
+    "spend_col": "canonical_spend_tagged_clients"
+  },
+  "press": {
+    "regex": "\\b(critical minerals?|critical materials|rare earths?|battery materials?|battery supply chain|battery manufacturing|energy storage|lithium|graphite|foreign entity of concern)\\b",
+    "col_token": "critmin"
+  },
+  "players": {
+    "name_visibility_regex": "(?i)\\b(batter|lithium|mineral|mining|rare earth|graphite|anode|nickel|cobalt|magnet)",
+    "tiers": {
+      "core": 8,
+      "active": 3
+    }
+  },
+  "modules": {
+    "trend_spend": true,
+    "spend_quarters": true,
+    "bills": {
+      "limit": 60
+    },
+    "registrants_limit": 60
+  },
+  "roster": {
+    "path": "out/critical-minerals_roster.txt",
+    "top": 150
+  },
+  "giving": [
+    {
+      "roster": "out/critical-minerals_roster.txt",
+      "args": [
+        "--top",
+        "400"
+      ],
+      "chart": true,
+      "files": {
+        "by_org": "critmin_ld203_by_org.csv",
+        "recipients": "critmin_ld203_recipients.csv",
+        "by_year": "critmin_ld203_by_year.csv",
+        "member_rollup": "critmin_ld203_member_rollup.csv"
+      }
+    }
+  ],
+  "assembly": "facet",
+  "page_js": "facet_page.js",
+  "zip": true,
+  "readme": {
+    "write": true,
+    "overview": [
+      "This package maps the federal lobbying field around critical minerals, rare earths, and the battery-materials supply chain — an industry that, like crypto, scatters across many disclosure issue codes (Natural Resources, Energy, Trade, Defense, Taxation, Manufacturing) and is therefore invisible to issue-code filtering alone. The map is built from what filers SAY they lobby on: 19 curated, collision-checked phrases (from 'critical minerals' and 'rare earths' to the statutory terms '45X', '30D', and 'foreign entity of concern') matched whole-word against the filings' own activity text.",
+      "One seed question this map serves: the Battery Advocacy for Technology Transformation (BATT) Coalition stood up ~$800K/yr of lobbying from a zero base in mid-2024 without disclosing its ultimate members. This package places BATT inside its field — the same-vocabulary co-filers (automakers, miners, chemical, defense and electronics companies, most with no battery/mineral term in their name) that a reporter would canvass to establish who funds and benefits from the coalition's asks. BATT files under two client-name spellings ('THE BATTERY ADVOCACY FOR TECHNOLOGY TRANSFORMATION (BATT) COALITION' via Strategic Marketing Innovations, and 'SMI ON BEHALF OF THE…' via Cannon|Pearce), which the entity resolver keeps as separate players — a documented name-resolution ceiling. A third similarly-named player, the 'BATTERY MATERIALS AND TECHNOLOGY COALITION' (via Venn Strategies, filing since 2022, $2.2M reported), appears to be a DISTINCT coalition in the same space — the field held an earlier battery-materials coalition before BATT emerged, and the two should not be conflated."
+    ],
+    "notes": [
+      "This is unverified research output for team review. Headline numbers are candidates with record anchors, not locked findings; the candidate angles live in the investigation ledger (L024)."
+    ]
+  },
+  "kpis": [
+    {
+      "label": "Client organizations on the map",
+      "value": "851",
+      "note": "774 (91%) carry no battery/mineral term in their name — found only by what they say they lobby on"
+    },
+    {
+      "label": "Tagged filings, 2025-Q4",
+      "value": "467",
+      "note": "vs 366 a year earlier (+28%); the field ran ~290/quarter through 2022"
+    },
+    {
+      "label": "Canonical spend of tagged clients, 2025",
+      "value": "$484M",
+      "note": "all-issue spend of clients filing on the field that quarter — a size signal, not minerals dollars"
+    },
+    {
+      "label": "BATT Coalition on the map",
+      "value": "2 filed spellings",
+      "note": "18 tagged filings since 2024 via SMI + Cannon|Pearce · plus the distinct Battery Materials & Technology Coalition (Venn, since 2022) in the same field · BATT members undisclosed (ledger L024)"
+    }
+  ],
+  "copy": {
+    "players": {
+      "title": "The player map — who lobbies on critical minerals and battery materials",
+      "sub": "All {n} client-side players with CRITMIN-tagged senate filings 2022–2026Q1, sized by tagged filing count. Click a bubble to list its tagged filings.",
+      "foot": "Recall-first map: most players carry NO battery/mineral term in their name — Ford, Rio Tinto, Edison Electric Institute, defense primes — and are found only by what their filings say. The BATT Coalition appears under two filed spellings, beside the distinct Battery Materials & Technology Coalition (see README). Incidental one-off mentions sit in the peripheral tier by design; a story names specific players from the CSVs, never 'the whole list.'"
+    },
+    "trend": {
+      "title": "A field that surged with the IRA credits",
+      "sub": "CRITMIN-tagged senate filings and distinct clients per quarter (amendment-deduped, registrations excluded). Click a quarter to list exactly the filings it counts.",
+      "foot": "A steady ~290 filings/quarter through 2022 climbs to 467 by 2025-Q4 (+28% year-over-year) with distinct clients up 246→401. The vocabulary is dominated by 'critical minerals', 'energy storage', the 45X/30D credits and 'rare earth' — statutory language of the 2022 IRA and the 2024–25 sourcing-restriction fights ('foreign entity of concern')."
+    },
+    "scatter": {
+      "title": "No single issue code holds this field",
+      "sub": "Issue codes the registrants filed their CRITMIN-tagged free-text under (senate + house text blocks).",
+      "foot": "The field scatters across Natural Resources, Energy, Trade, Defense, Taxation and Manufacturing — the same 'hidden under other codes' problem the crypto map demonstrated. This is why the BATT Coalition's field cannot be assembled from issue codes alone."
+    },
+    "keywords": {
+      "title": "Which words carried the signal",
+      "sub": "Distinct filings matched by each of the 19 curated lexicon phrases (whole-word, case-insensitive; industry_lexicon.json v1.2 facet CRITMIN).",
+      "foot": "Collision-triaged: bare 'battery' (the wider EV/consumer-battery field), 'lithium-ion' (consumer fire-safety standards story), and 'cobalt' (Cobalt-60 medical sterilization) were checked and excluded — reasons recorded in the lexicon's display_only block."
+    },
+    "registrants": {
+      "title": "The firms carrying the field's work",
+      "sub": "Outside lobbying firms on CRITMIN-tagged filings (self-filers excluded), ranked by tagged filings.",
+      "foot": "BATT's own firms — Strategic Marketing Innovations (SMI) and Cannon-Pearce — sit in this list; their other mineral-field clients are the natural first canvass for who else buys the same asks (ledger L024)."
+    },
+    "spendTop": {
+      "show": true,
+      "title": "The biggest lobbying budgets on the map",
+      "sub": "Mapped players ranked by TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal, not minerals dollars.",
+      "foot": "Filing-level disclosure cannot split dollars by issue; a diversified giant's budget is mostly not minerals work. Use with the tagged-filing counts on the map."
+    },
+    "giving": {
+      "title": "Disclosed LD-203 giving of the field's top 150 players",
+      "sub": "The roster organizations' own disclosed LD-203 political giving (registrant-filed regime; amendment-deduped), with the per-member rollup (name variants + support committees merged; JFC/multi-honoree dollars stay unallocated).",
+      "foot": "Organization-level and NOT minerals-attributable: a diversified filer's giving reflects its whole portfolio. Super-PAC money is invisible in LD-203 by law and lives in FEC data — the two never sum."
+    },
+    "press": {
+      "title": "The say side — members on critical minerals",
+      "sub": "Share of ALL member press releases matching the critical-minerals vocabulary, by quarter. Click a quarter to list the releases.",
+      "foot": "The share PEAKS in 2022-Q3 (1.49%) — the Inflation Reduction Act's passage quarter, when members touted the credits this field now lobbies on — then settles to a durable ~1% floor. Press counts are window-biased (the corpus starts 2022 and grows ~4× by 2025), so read the share line, not raw counts."
+    }
+  },
+  "caveats": [
+    "Recall-first map: any client whose filing free-text names one of the 19 curated phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
+    "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue.",
+    "Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated on filing_period, latest by posted; registrations excluded from dollar work.",
+    "'Energy storage' includes non-battery storage (hydrogen, pumped hydro) — a documented recall/precision trade recorded in the lexicon; the mineral and battery-materials phrases are the high-precision core.",
+    "The BATT Coalition files under two client-name spellings which remain separate players on the map (the entity resolver's documented name-variant ceiling); the similarly-named 'Battery Materials and Technology Coalition' (Venn Strategies, filing since 2022) appears to be a DISTINCT organization in the same space — do not conflate the two.",
+    "LD-203 'disclosed giving' is the lobbyist-side regime only, organization-level, and never minerals-attributable. Super-PAC money legally lives in FEC data — the two never sum.",
+    "Everything is self-reported disclosure data. 'Disclosed' never means 'total': 501(c)(4) dark money and state lobbying are outside every number here."
+  ]
+}

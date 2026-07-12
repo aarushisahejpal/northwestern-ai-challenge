@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "source": "Hand triage 2026-07-10 from the 54-player pardons map (previously the CLASS/ADVOCACY dicts inside out/packages/pardons/_build/export_pardons.py; extracted verbatim into this human-owned file when the industry-review-packager skill was built, 2026-07-11).",
+    "discipline": "Classes are assigned by a HUMAN from the filings' own text; beneficiary notes quote ONLY what the filings themselves declare — no outside facts. Classes: seeker = individual person as client, buying a pardon/clemency engagement; seeker_vehicle = organization client whose tagged engagement seeks executive relief/pardon (beneficiary named in text where declared); advocacy = policy organization lobbying on clemency/pardon policy or the pardon power itself; unclear = tagged but purpose not classifiable from the filings alone. New tagged players on a corpus refresh land on the default class until re-triaged."
+  },
+  "classes": {
+    "ANNE PRAMAGGIORE": {"class": "seeker", "note": ""},
+    "CHANGPENG ZHAO": {"class": "seeker", "note": "'Executive relief.'"},
+    "DR. SHALLFDEEN AMUWO": {"class": "seeker", "note": "'Commutation of sentencing'"},
+    "FRED DAIBES": {"class": "seeker", "note": "'Executive relief' (ledger L021)"},
+    "GREG E. LINDBERG": {"class": "seeker", "note": "'Executive pardon.'"},
+    "JOSH SMITH": {"class": "seeker", "note": "'Client is requesting a presidential pardon.'"},
+    "JOSEPH SCHWARTZ": {"class": "seeker", "note": "'Seeking a federal pardon.' (ledger L034)"},
+    "KOMAL PATEL": {"class": "seeker", "note": ""},
+    "MATT GEOUGE": {"class": "seeker", "note": "'Pardon Request'"},
+    "PHILLIP FREDERICK CAMINO": {"class": "seeker", "note": ""},
+    "RAYMOND LIDDY": {"class": "seeker", "note": "'Legal/ pardon'"},
+    "RICHARD SCRUSHY": {"class": "seeker", "note": "'Granting of Pardon'"},
+    "RYAN AND WADE LALONE": {"class": "seeker", "note": "'Pardon application consulting and support'"},
+    "SANTIAGO ALVAREZ": {"class": "seeker", "note": "'Advocating for pardon for Santiago Alvarez'"},
+    "SELIM ZHERKA": {"class": "seeker", "note": "'pardon application submitted on October 22, 2025'"},
+    "TORENCE HATCH": {"class": "seeker", "note": "'Seeking a presidential pardon. White House issues.' (ledger L034)"},
+    "WILLIAM TIERNEY": {"class": "seeker", "note": ""},
+    "YENER VAHIT BELLI": {"class": "seeker", "note": "'Lobbying for pardon/commutation of sentence.'"},
+    "BINANCE HOLDINGS LIMITED": {"class": "seeker_vehicle", "note": "'digital assets and cryptocurrency; and executive relief'"},
+    "FAHMY HUDOME INTL., INC. ON BEHALF OF RICHARD SCRUSHY": {"class": "seeker_vehicle", "note": "Richard Scrushy (named in client string)"},
+    "JUNO EMPIRE INC": {"class": "seeker_vehicle", "note": "'the Pardon of Jorge Ferrer' (named in filing text)"},
+    "ORIGIN PROPERTY GROUP": {"class": "seeker_vehicle", "note": "'Potential Presidential pardon of Marco Bitran, founder' (named in filing text)"},
+    "MAGMA POWER LLC": {"class": "seeker_vehicle", "note": "beneficiary not stated in filing text"},
+    "HEALTHICITY": {"class": "seeker_vehicle", "note": "beneficiary not stated in filing text"},
+    "DIAMOND STREET PROPERTIES LLC": {"class": "seeker_vehicle", "note": "'pardons for federal crimes of those they feel have served their time' — no named beneficiary"},
+    "VERITASEUM INC.,": {"class": "seeker_vehicle", "note": "SEC/DOJ matters in same text; beneficiary not stated"},
+    "STATE OF LOC NATION GLOBAL PUBLIC BENEFIT CORPORATION": {"class": "unclear", "note": "HR 40 / faith-recognition text; pardon term incidental"}
+  },
+  "class_sets": {
+    "advocacy": [
+      "AMERICAN CONSERVATIVE UNION", "AMNESTY INTERNATIONAL USA",
+      "AMERICAN CIVIL LIBERTIES UNION", "AMERICANS FOR PROSPERITY",
+      "BRENNAN CENTER FOR JUSTICE AT NEW YORK UNIVERSITY SCHOOL OF LAW",
+      "CALIFORNIA CANNABIS INDUSTRY ASSOCIATION", "CAMPAIGN LEGAL CENTER, INC.",
+      "COMMON CAUSE", "CONFERENCE OF PROVINCIALS OF NORTH AMERICA",
+      "DEMOCRACY DEFENDERS ACTION", "DISABILITY RIGHTS EDUCATION & DEFENSE INC",
+      "DUE PROCESS INSTITUTE", "FWD.US",
+      "LAWYERS' COMMITTEE FOR CIVIL RIGHTS UNDER LAW",
+      "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS", "MOVEON.ORG CIVIC ACTION",
+      "NATIONAL ASSOCIATION FOR THE ADVANCEMENT OF COLORED PEOPLE",
+      "NATIONAL ASSOCIATION OF ASSISTANT UNITED STATES ATTORNEYS",
+      "NATIONAL ASSOCIATION OF CRIMINAL DEFENSE LAWYERS (NACDL)",
+      "NATIONAL COUNCIL OF JEWISH WOMEN", "NDN COLLECTIVE",
+      "NATIONAL CANNABIS ROUNDTABLE",
+      "PROTECT DEMOCRACY UNITED (FORMERLY KNOWN AS UNITED TO PROTECT DEMOCRACY)",
+      "PRISON FELLOWSHIP MINISTRIES", "STUDENTS FOR SENSIBLE DRUG POLICY",
+      "THE ALEPH INSTITUTE, INC.", "THE IMMIGRATION HUB LLC"
+    ]
+  },
+  "default": {"class": "unclear", "note": "not in the 2026-07-10 hand triage — re-triage on a corpus refresh"}
+}

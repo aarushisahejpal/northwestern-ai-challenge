@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "version": "1.1",
+    "version": "1.2",
     "generated": "2026-07-07",
-    "changelog": "1.1 (2026-07-10): added PARDONS facet (presidential pardons / executive clemency), phrases triaged via lda_freetext_discovery.py --search + whole-word precision counts over lobbying_freetext; crypto facet unchanged, so CRYPTO tag rows reproduce byte-identically on rebuild.",
+    "changelog": "1.2 (2026-07-11): added CRITMIN facet (critical minerals / battery-materials supply chain, serving ledger L024/BATT), phrases sized + collision-triaged over lobbying_freetext whole-word counts; CRYPTO and PARDONS facets unchanged, so their tag rows reproduce identically on rebuild. 1.1 (2026-07-10): added PARDONS facet (presidential pardons / executive clemency), phrases triaged via lda_freetext_discovery.py --search + whole-word precision counts over lobbying_freetext; crypto facet unchanged, so CRYPTO tag rows reproduce byte-identically on rebuild.",
     "purpose": "Curated industry -> distinctive-phrase vocabulary for the lobbying free-text discovery/serving layer (lda_industry_map.py). Fixes cleanup-note B: an industry hidden under many issue codes and vague categories ('lobbying related to taxation') can only be mapped by the VOCABULARY it uses in the free-text, not by issue-code filtering. Each facet's 'phrases' are matched, whole-word and case-insensitively, against lobbying_freetext (senate activity descriptions + house specific_issues) to build the deterministic, cited serving table lobbying_issue_mentions. Same precision-over-recall discipline as bill_aliases.json.",
     "discipline": [
       "Precision over recall, same rule as build_db.py's ISSUE_KEYWORDS and bill_aliases.json. Every 'phrases' string is a distinctive, whole-word-matchable term, never a bare topic word.",
@@ -79,6 +79,39 @@
         "Vocabulary triaged from lda_freetext_discovery.py --search 'pardon' + whole-word precision counts over lobbying_freetext, 2026-07-10 (pardon 152 filings / clemency 170 / executive relief 26; commute/amnesty/expungement/compassionate-release collisions checked and excluded)"
       ],
       "confidence": "high on pardon/pardons/clemency/executive relief (precision-checked); medium on commutation/commutations (small counts; policy-advocacy contexts verified legit in-window)."
+    },
+    {
+      "id": "critical-minerals",
+      "tag": "CRITMIN",
+      "label": "Critical minerals / battery-materials supply chain",
+      "phrases": [
+        "critical minerals", "critical mineral",
+        "critical materials",
+        "rare earth", "rare earths",
+        "energy storage",
+        "battery materials", "battery material",
+        "battery supply chain", "battery manufacturing", "battery recycling",
+        "advanced batteries",
+        "foreign entity of concern",
+        "45x", "30d",
+        "graphite", "anode",
+        "lithium",
+        "nickel"
+      ],
+      "display_only": {
+        "battery": "bare word is the WIDER battery-policy field (EV deployment, storage funding, consumer-battery fires) beyond the materials supply chain — 4,223 filings, incl. 35 artillery/assault-adjacent; the battery-* compound phrases carry the materials signal.",
+        "lithium-ion": "dominated by the Setting Consumer Standards for Lithium-Ion Batteries Act consumer-fire-safety story (CSP 249 of 958 docs) — a different beat than the materials supply chain; 'lithium ion' excluded for the same reason.",
+        "cobalt": "Cobalt-60 gamma-sterilization/radiotherapy supply dominates the whole word (HCR/ENV/FOR contexts; Rosatom Sanctions Enforcement Act) — excluded despite being a battery metal (81 filings, most off-facet).",
+        "cathode": "2 whole-word filings in-window — adds nothing; anode carries the electrode signal.",
+        "rare earth elements": "subsumed — the whole-word phrase 'rare earth' matches inside it; recorded so its absence isn't read as an omission.",
+        "mining": "coal/hardrock/data-mining dominate the bare word (6.7k hits, mostly NAT — same exclusion the crypto facet documented 2026-07-07); the minerals signal arrives via the mineral/materials phrases."
+      },
+      "seed_note": "Built 2026-07-11 for ledger L024 (BATT Coalition — 'Battery Advocacy for Technology Transformation', ultimate members undisclosed): map the critical-minerals / battery-materials lobbying field BATT files in, so its co-lobby field and the name-invisible players (automakers, miners, chemical and defense filers) become visible. 45X (advanced manufacturing production credit) and 30D (clean vehicle credit) are the IRA credits this field lobbies on; 'foreign entity of concern' is the IRA sourcing restriction; 'lithium' kept after a pharma-collision check found only 4 pharmaceutical-context filings of 1,315; 'nickel' kept after a coin-collision check (Common Cents Act) found only 4 of 255. Copper/aluminum deliberately left untriaged in v1.2 — revisit if the map needs them.",
+      "sources": [
+        "LEDGER.md L024 (BATT Coalition emergence, 2026-07-06) — the lead this facet serves",
+        "Vocabulary sized + precision-triaged over lobbying_freetext whole-word counts, 2026-07-11 (critical minerals 4,339 filings / energy storage 2,883 / 45X 1,292 / rare earth 1,311 / 30D 879 / battery manufacturing 726 / critical materials 538 / battery recycling 281 / battery materials 264 / graphite 226 / battery supply chain 171 / foreign entity of concern 133 / anode 74; collision samples for battery/lithium/nickel/cobalt/lithium-ion recorded in display_only)"
+      ],
+      "confidence": "high on the mineral/materials phrases and the statutory terms (45X/30D/foreign entity of concern); medium on energy storage (includes non-battery storage: hydrogen, pumped hydro) and advanced batteries (36 filings)."
     }
   ]
 }

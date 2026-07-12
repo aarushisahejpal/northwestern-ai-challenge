@@ -22,7 +22,10 @@ gain-investigation/
 │   ├── source-document-reader/ [investigate] external primary-source PDF → page-anchored citable text
 │   ├── outside-context-scan/  [investigate] exploratory novelty / contemporaneous web research
 │   ├── investigation-ledger/  [any]  leads/decisions state; read at session start, commit at end
-│   └── dataset-primer/        [any]  orient on a NEW dataset before building against it → reference/ brief
+│   ├── dataset-primer/        [any]  orient on a NEW dataset before building against it → reference/ brief
+│   └── industry-review-packager/ [investigate] spec-driven generate/regenerate of an industry review
+│                              package (CSVs + dashboard + README + zip); also hosts the shared viz/
+│                              templates every dashboard build reads
 ├── reference/           ← dataset orientation briefs (produced by dataset-primer; working aid, not a submission artifact)
 ├── queries/             ← lens SQL + internal design notes (see "Query library & derived tables"); cited by aggregate claims
 ├── findings/            ← one locked finding per file (locked = verification passed)
@@ -58,6 +61,9 @@ needs the built DB, `fec_*` needs the external openFEC API, untokened scripts ar
 - `finding-verifier` — independently re-derive every claim before a finding locks.
 - `outside-context-scan` — exploratory web research (novelty / contemporaneous), never a verifier.
 - `source-document-reader` — turn an external primary-source PDF into page-anchored, citable text.
+- `industry-review-packager` — one command per industry spec → the full review package (data CSVs +
+  dashboard + README skeleton + zip), reconciliation mismatches failing the build; regenerate after
+  a corpus refresh. Facet packages need `lda_industry_map.py --build-tags` first.
 
 **Cross-cutting** (either phase): `investigation-ledger` (leads/decisions state — read at session
 start, commit at end) and `dataset-primer` (orient on a NEW external dataset before building against

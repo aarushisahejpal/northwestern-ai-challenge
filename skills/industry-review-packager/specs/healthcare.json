@@ -1,0 +1,66 @@
+{
+  "_meta": "Spec for the healthcare industry review package (L033), issue-code lens (healthcare is ALI-code-visible, unlike crypto). Baselines against the POST-FIX package (entity_aliases fan-out fix, commit edc3bcd 2026-07-11) — the activity_share module carries the corrected §4-safe DISTINCT alias join. Dashboard keeps its bespoke hc_page.js via the legacy viz_build assembly. The giving split (hc_ld203_recipients_split.csv) and P6 audit/rollup files are enhance/retrofit-pipeline products passed through from the baseline.",
+  "id": "healthcare",
+  "title": "Healthcare Lobbying — State of the Industry",
+  "subtitle": "The largest standing lobbying operation in Washington: who the players are, what kind of health issues they file on, which bills they crowd onto, and who the industry gives money to.",
+  "extra_sources": "",
+  "gendate": "2026-07-11",
+  "lens": {
+    "type": "issue_codes",
+    "codes": [
+      "HCR",
+      "MMM",
+      "PHA",
+      "MED"
+    ],
+    "file_prefix": "hc",
+    "col_token": "health",
+    "spend_col": "canonical_spend_hc_clients"
+  },
+  "press": {
+    "col_token": "health"
+  },
+  "players": {
+    "limit": 400
+  },
+  "modules": {
+    "activity_share": true,
+    "trend_spend": true,
+    "bills": {
+      "limit": 60
+    },
+    "registrants_limit": 60
+  },
+  "roster": {
+    "path": "out/healthcare_roster.txt",
+    "top": 150
+  },
+  "giving": [
+    {
+      "roster": "out/healthcare_roster.txt",
+      "args": [
+        "--top",
+        "80"
+      ],
+      "files": {
+        "by_org": "hc_ld203_by_org.csv",
+        "recipients": "hc_ld203_recipients.csv",
+        "by_year": "hc_ld203_by_year.csv",
+        "member_rollup": "hc_ld203_member_rollup.csv"
+      }
+    }
+  ],
+  "passthrough": [
+    "hc_ld203_recipients_split.csv",
+    "hc_ld203_member_variant_audit.csv",
+    "healthcare_ld203_member_variant_audit_p6.csv",
+    "healthcare_member_support_rollup.csv"
+  ],
+  "assembly": "viz_build",
+  "zip": true,
+  "readme": {
+    "write": false
+  },
+  "kpis": [],
+  "caveats": []
+}
