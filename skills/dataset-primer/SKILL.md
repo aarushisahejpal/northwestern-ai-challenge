@@ -1,9 +1,14 @@
 ---
 name: dataset-primer
 description: Bounded outward research to orient on an unfamiliar dataset before building against it — the "how does this data actually work, and what will silently corrupt my results?" scan. Given a dataset (FEC campaign finance, PACER/court dockets, CMS claims or Open Payments, a state open-data portal, any new API or bulk dump) and — ideally — the specific task you'll use it for, it runs a five-axis web scan (authoritative source + data dictionary; tribal-knowledge gotchas; open-source tooling; cleaned/derived datasets; access mechanics + licensing) against a fixed nine-category data-quality checklist (coverage boundaries; grain / double-counting; entity resolution; versioning / amendments; time semantics; denominators; suppression / privacy; authoritative-vs-derived; join keys / crosswalks) and emits a tiered, task-tailored reference brief. Two modes: first-contact (full brief, no task yet) and targeted (the traps for one specific operation). Checks reference/ for an existing brief first and refreshes it rather than re-researching from scratch; saves new briefs there. A starting orientation, NOT a verification gate — every trap it surfaces is a hypothesis to test against a real sample, not a fact to trust. Sibling to outside-context-scan (that scans whether a lead is already reported; this scans how a dataset works). Use when starting on a data source you haven't worked before, when a build is about to depend on data whose cleanliness you haven't vetted, or when onboarding someone to a dataset.
+model: sonnet  # bounded web research; the brief is hypotheses-not-gospel — mid-tier is the right spend
 ---
 
 # Dataset Primer
+
+On invocation, first tell the user: "Model override active — running at sonnet for the rest
+of this turn." (This skill sets `model: sonnet` in its frontmatter; the override lasts until
+the turn ends.)
 
 Orient on an unfamiliar dataset *before* you build against it. The failure this skill exists to
 prevent is the one everyone hits once: you wire up a data source, the query runs, the numbers look
@@ -106,3 +111,9 @@ Worked example: `reference/fec-campaign-finance.md` — the FEC campaign-finance
 
 No custom script — this is a documented discipline for using WebSearch/WebFetch directly, the same
 way `outside-context-scan` and `lead-scanner` document disciplines rather than automate them.
+
+## Turn discipline
+
+When the brief is saved to `reference/` and indexed, report where it landed and end the turn.
+The model override lasts the rest of the turn, so don't continue into the build the brief was
+for — start that on a fresh prompt, at the session's own model.

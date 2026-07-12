@@ -1,6 +1,7 @@
 ---
 name: outside-context-scan
 description: Exploratory web research in two modes — a live scan for whether a lead's angle is already reported (novelty/prior-art) and the current picture on an entity (news-landscape), and a date-gated contemporaneous scan for what the public record looked like at the time of a past event (salience-at-passage, say-vs-pay). Informal and bounded, not a verification gate; does not confirm or refute any claim in this project's own data. Use during triage, before or alongside drafting, never as a substitute for skills/finding-verifier for claims that need locking.
+model: inherit  # deliberate: used mid-flow during triage/drafting; an override would re-model the rest of the calling turn
 ---
 
 # Outside Context Scan

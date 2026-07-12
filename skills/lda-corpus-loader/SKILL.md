@@ -1,6 +1,7 @@
 ---
 name: lda-corpus-loader
 description: Parse the challenge corpus (congressional press releases JSONL, Senate LDA JSON, House LDA XML) into a single queryable DuckDB database where every row carries a pointer to its raw source record. Use when setting up or rebuilding the investigation database, verifying corpus completeness against the data manual, or fetching a raw record from a citation key.
+model: inherit  # deliberate: auto-loaded mid-investigation for citation-key guidance; an override would re-model the rest of the calling turn — pick the tier per session via /model
 ---
 
 # LDA Corpus Loader

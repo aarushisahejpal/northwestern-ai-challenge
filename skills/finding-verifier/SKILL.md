@@ -1,9 +1,14 @@
 ---
 name: finding-verifier
 description: Independently re-derive every claim in a draft finding before it locks. A fresh agent receives the claims with citation keys but without the drafting session's reasoning, opens each cited record itself, re-runs cited SQL for aggregate claims, and issues a per-claim verdict (verified, attribution error, overstated, fabricated). Use before any finding is locked or published.
+model: opus  # frontier tier — adversarial claim verification is where the model budget goes
 ---
 
 # Finding Verifier
+
+On invocation, first tell the user: "Model override active — running at opus for the rest of
+this turn." (This skill sets `model: opus` in its frontmatter; the override lasts until the
+turn ends.)
 
 Input: one finding file (locked-finding shape) + a built DuckDB + raw corpus.
 Output: a verification block appended to the finding, with a verdict per claim.
@@ -31,3 +36,11 @@ filing), use `skills/source-document-reader` to turn that PDF into page-anchored
 text, then apply the exact verdict discipline above to the specific claim against the
 specific text. That skill owns the OCR mechanics and the external-document citation
 convention; this skill owns the verdict.
+
+## Turn discipline
+
+When the verification pass is complete (all verdicts issued, verification block appended,
+lock logged on pass), report the result and end the turn. The model override lasts the rest
+of the turn, so don't continue into unrelated work here — start it on a fresh prompt, at the
+session's own model. This also keeps verification sessions single-purpose, which the
+fresh-context protocol requires anyway.

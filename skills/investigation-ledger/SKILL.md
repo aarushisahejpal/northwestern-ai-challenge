@@ -1,6 +1,7 @@
 ---
 name: investigation-ledger
 description: Maintain the investigation's single source of truth for leads, entities checked, queries run, and cold threads, plus a human-decision log. Use at the start of every investigation session (read state), at any lead status change, and at session end (commit updates) so no session ever starts cold and no thread is silently lost.
+model: inherit  # deliberate: bookends every session's turns; an override would re-model the rest of the calling turn
 ---
 
 # Investigation Ledger

@@ -1,6 +1,7 @@
 ---
 name: lda-entity-resolver
 description: Build a cross-dataset entity table resolving lobbying registrants and clients across Senate LDA JSON and House LDA XML (which has no UUIDs and no standardized casing), using shared senateID/houseID plus normalized-name fuzzy matching. Use when linking the same organization across filings, joining lobbying data to press-release entity mentions, or auditing crosswalk quality.
+model: inherit  # deliberate: auto-loaded mid-investigation for entity-join guidance; an override would re-model the rest of the calling turn — pick the tier per session via /model
 ---
 
 # LDA Entity Resolver

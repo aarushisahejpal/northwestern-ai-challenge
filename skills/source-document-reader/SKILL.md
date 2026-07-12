@@ -1,6 +1,7 @@
 ---
 name: source-document-reader
 description: Turn an external primary-source PDF (court filing, SEC complaint, agency letter, contract) into searchable, page-anchored text a claim can cite. Uses render-to-image OCR that survives the broken embedded fonts common in e-filing systems (PACER/ECF and many state portals), where ordinary text extraction returns glyph-index garbage. For OUTSIDE-source documents only — the LDA/press corpus already ships as clean, citable text and must never be routed through this. Consumed by finding-verifier (re-deriving a claim that rests on an external document) and available to outside-context-scan (reading a fetched primary source during a landscape check).
+model: inherit  # deliberate: consumed mid-turn by finding-verifier; an override would downgrade the rest of the verification turn
 ---
 
 # Source Document Reader
