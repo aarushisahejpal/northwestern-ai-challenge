@@ -10,12 +10,21 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 REPO = r"c:\Users\rcalv\Projects\Northwestern Project\gain-investigation"
 HERE = os.path.dirname(os.path.abspath(__file__))
 S = os.path.join(HERE, "inputs")   # durable copies of the 2026-07-08 tool JSONs
-VIZ = os.path.join(HERE, "viz")
-GENDATE = "2026-07-09"
+# Shared viz templates live in the committed industry-review-packager skill as of
+# 2026-07-11 (one copy; this legacy builder and the skill's generator both read it).
+VIZ = os.path.join(REPO, "skills", "industry-review-packager", "viz")
+GENDATE = os.environ.get("PKG_GENDATE", "2026-07-09")
+# PKG_PACKAGES_ROOT lets the packager skill assemble a package into a different
+# root (e.g. a regression-regen dir). Packages NOT being rebuilt still read their
+# CSVs from the default root (fallback in rd()), so single-package rebuilds work.
+PKROOT_DEFAULT = os.path.join(REPO, "out", "packages")
+PKROOT = os.environ.get("PKG_PACKAGES_ROOT", PKROOT_DEFAULT)
 ONLY = set(sys.argv[1:])
 
 def rd(pkg, name):
-    p = os.path.join(REPO, "out", "packages", pkg, "data", name)
+    p = os.path.join(PKROOT, pkg, "data", name)
+    if not os.path.exists(p) and PKROOT != PKROOT_DEFAULT:
+        p = os.path.join(PKROOT_DEFAULT, pkg, "data", name)
     with open(p, encoding="utf-8-sig") as f:
         return list(csv.DictReader(f))
 
@@ -104,7 +113,9 @@ def build(pkg, title, subtitle, extra_sources, data, page_js, gendate=None):
             .replace("__CSS__", css).replace("__LIB__", lib)
             .replace("__DATA__", json.dumps(data, ensure_ascii=False))
             .replace("__PAGE__", page))
-    out = os.path.join(REPO, "out", "packages", pkg, f"{pkg}_dashboard.html")
+    out_dir = os.path.join(PKROOT, pkg)
+    os.makedirs(out_dir, exist_ok=True)
+    out = os.path.join(out_dir, f"{pkg}_dashboard.html")
     with open(out, "w", encoding="utf-8") as f:
         f.write(html)
     print(f"[html] {out}  ({len(html)//1024} KB)")
@@ -160,7 +171,11 @@ press = rd("crypto", "crypto_press_quarterly.csv")
 recip = rd("crypto", "crypto_ld203_pureplay_recipients.csv")
 split = rd("crypto", "crypto_ld203_recipients_split.csv")
 split_rows = [{"name": r["recipient"], "a": num(r["from_crypto_native"]) or 0,
-               "b": num(r["from_diversified_core"]) or 0, "party": r["party"]} for r in split]
+               # compat shim 2026-07-11: the split CSV moved to a three-way tier
+               # (native / diversified_forward / ambient_lowshare); until the crypto
+               # section is reworked for it, "diversified" = the forward tier.
+               "b": num(r.get("from_diversified_core") or r.get("from_diversified_forward")) or 0,
+               "party": r["party"]} for r in split]
 giv_top = sorted(split_rows, key=lambda r: -(r["a"] + r["b"]))[:10]
 member_rows = [r for r in split_rows if r["party"]]
 giv_members_native = sorted(member_rows, key=lambda r: -r["a"])[:10]
@@ -306,7 +321,7 @@ crypto_data = {
     "givingMembersDiv": giv_members_div,
     "givingRecipientsRaw": [{"name": r["recipient"], "party": r["party"],
                              "a": num(r["from_crypto_native"]) or 0,
-                             "b": num(r["from_diversified_core"]) or 0} for r in split[:40]],
+                             "b": num(r.get("from_diversified_core") or r.get("from_diversified_forward")) or 0} for r in split[:40]],
     "fec": fec,
     "press": {"q": [r["quarter"] for r in press], "share": [num(r["crypto_share_pct"]) for r in press],
               "n": [int(r["crypto_releases"]) for r in press], "all": [int(r["all_releases"]) for r in press]},

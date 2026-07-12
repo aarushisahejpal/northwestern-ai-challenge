@@ -1,22 +1,28 @@
-﻿player,registrant_name,first_tagged_quarter,last_tagged_quarter,tagged_quarters,reported_total_tagged_quarters,terminated,termination_quarter,sample_filing_uuid,client_class,declared_text_sample
-Binance Holdings Limited,CHECKMATE GOVERNMENT RELATIONS,2025-Q3,2026-Q1,3,1350000,no,,ed62afd3-34a1-471c-a840-58f745258104,seeker_vehicle,Financial services policy issues relating to digital assets and cryptocurrency; and executive relief.
-Joseph Schwartz,J M BURKMAN & ASSOCIATES,2025-Q2,2026-Q1,4,960000,yes,2026-Q1,e741a1c5-7644-4f1e-8590-db11669460c9,seeker,Seeking a federal pardon.
-TORENCE HATCH,J M BURKMAN & ASSOCIATES,2025-Q4,2026-Q1,2,600000,yes,2026-Q1,f9c3a194-3f90-4802-934b-f4c4753d39f0,seeker,Seeking a presidential pardon. White House issues
-ORIGIN PROPERTY GROUP,"A10 ASSOCIATES, LLC",2024-Q1,2024-Q4,4,320000,yes,2024-Q4,bffa49c9-7c43-4c53-bb02-76c1e4c7f18f,seeker_vehicle,"Potential Presidential pardon of Marco Bitran, founder of Origin Property Group."
-Binance Holdings Limited,BAKER & HOSTETLER LLP,2025-Q2,2025-Q4,3,290000,no,,e86f2395-b99a-4f6f-bad3-30f636f5596b,seeker_vehicle,Executive relief.
-Anne Pramaggiore,"CROSSROADS STRATEGIES, LLC",2025-Q3,2026-Q1,3,260000,no,,e11d6fbc-a3a7-4f36-84e1-380eb0952956,seeker,Advising on public policy and legislative matters relevant to the pardon process.
-WILLIAM TIERNEY,THE VOGEL GROUP,2025-Q2,2026-Q1,4,100000,no,,d29bcbfc-6ce4-4cf2-af4c-798272eedad7,seeker,Issues related to clemency
-HEALTHICITY,THE VOGEL GROUP,2024-Q4,2025-Q1,2,100000,yes,2025-Q1,5a40e29f-2dca-4a63-b7bd-1556731bc27e,seeker_vehicle,Issues related to clemency
-JUNO EMPIRE INC,"CORCORAN & ASSOCIATES, INC. DBA CORCORAN PARTNERS",2025-Q3,2025-Q4,2,60000,no,,6c592bbb-a88a-4902-b6e7-4c684cdfe3ea,seeker_vehicle,Issues related to the Pardon of Jorge Ferrer
-PHILLIP FREDERICK CAMINO,FORBES-TATE,2026-Q1,2026-Q1,1,60000,no,,250b47f3-1a80-420f-af99-1cc4a426a0a2,seeker,Issues related to executive clemency.
-KOMAL PATEL,THE VOGEL GROUP,2025-Q4,2026-Q1,2,50000,no,,ea7cafe3-85cb-484f-b893-6653d7bdafa0,seeker,Issues related to clemency
-MAGMA POWER LLC,THE VOGEL GROUP,2025-Q1,2025-Q2,2,40000,yes,2025-Q2,ce234fbf-f8e7-4db1-9b37-bdccea78c3b6,seeker_vehicle,Issues related to clemency
-RICHARD SCRUSHY,"FAHMY HUDOME INTERNATIONAL, LLC",2025-Q2,2026-Q1,4,40000,no,,a6f8da1f-34cd-4b29-bc97-3dc34421fc91,seeker,Granting of Pardon
-"FAHMY HUDOME INTL., INC. ON BEHALF OF RICHARD SCRUSHY",VICTORY COALITION STRATEGIES LLC,2025-Q2,2025-Q3,2,35000,yes,2025-Q4,f0623d5a-a674-4a8d-8884-82e85c57607c,seeker_vehicle,Granting of pardon.
-CHANGPENG ZHAO,BAKER & HOSTETLER LLP,2025-Q2,2025-Q4,3,30000,no,,a9762ad4-649e-4af2-9065-887c4773a46e,seeker,Executive relief.
-SANTIAGO ALVAREZ,"CORCORAN & ASSOCIATES, INC. DBA CORCORAN PARTNERS",2025-Q4,2025-Q4,1,30000,no,,f1f2d818-4110-400b-8ae2-62ea34fb1ef8,seeker,Advocating for pardon for Santiago Alvarez
-YENER VAHIT BELLI,"BELTRAN LITIGATION, P.A.",2025-Q4,2026-Q1,2,20210,no,,f2265521-b419-4e7d-9959-68c075f80e1c,seeker,Lobbying for pardon/commutation of sentence.
-Dr. Shallfdeen Amuwo,ADOMI ADVISORY GROUP PLLC,2024-Q4,2025-Q2,3,20000,yes,2025-Q2,de3e1965-b135-4e16-bed7-41d34ed844a2,seeker,Lobbying the Biden administration for a presidential pardon
-FRED DAIBES,JAVELIN ADVISORS LLC,2025-Q2,2025-Q2,1,,yes,2026-Q1,bca27ed3-c0c6-4876-99cf-384f3cfb6540,seeker,Executive relief
-"Veritaseum Inc.,",RULON & WHITE GOVERNANCE STRATEGIES,2026-Q1,2026-Q1,1,,no,,36195b37-a04c-48ae-a4ff-30c7f9dd954f,seeker_vehicle,Securities Exchange Commission Emmet and Murphy Negotiations U.S Senate Tim Scott Department of Justice Department of Clemency White House Counsel Alice Johnson American Bankers Association Robert Nichols and Tab Stewart
-GREG E. LINDBERG,JAVELIN ADVISORS LLC,2025-Q3,2025-Q3,1,,no,,9e571aa3-2498-4e81-933e-ab1c3a4cd5cf,seeker,Executive pardon.
+﻿player,registrant_name,first_tagged_quarter,last_tagged_quarter,tagged_quarters,reported_total_tagged_quarters,terminated,termination_quarter,sample_filing_uuid,tag_basis,client_class,declared_text_sample
+Binance Holdings Limited,CHECKMATE GOVERNMENT RELATIONS,2025-Q3,2026-Q1,3,1350000,no,,ed62afd3-34a1-471c-a840-58f745258104,quarterly-text,seeker_vehicle,Financial services policy issues relating to digital assets and cryptocurrency; and executive relief.
+FRED DAIBES,JAVELIN ADVISORS LLC,2025-Q1,2026-Q1,5,1000000,yes,2026-Q1,bca27ed3-c0c6-4876-99cf-384f3cfb6540,quarterly-text,seeker,Executive relief
+Joseph Schwartz,J M BURKMAN & ASSOCIATES,2025-Q2,2026-Q1,4,960000,yes,2026-Q1,e741a1c5-7644-4f1e-8590-db11669460c9,quarterly-text,seeker,Seeking a federal pardon.
+TORENCE HATCH,J M BURKMAN & ASSOCIATES,2025-Q4,2026-Q1,2,600000,yes,2026-Q1,f9c3a194-3f90-4802-934b-f4c4753d39f0,quarterly-text,seeker,Seeking a presidential pardon. White House issues
+ORIGIN PROPERTY GROUP,"A10 ASSOCIATES, LLC",2024-Q1,2024-Q4,4,320000,yes,2024-Q4,bffa49c9-7c43-4c53-bb02-76c1e4c7f18f,quarterly-text,seeker_vehicle,"Potential Presidential pardon of Marco Bitran, founder of Origin Property Group."
+SELIM ZHERKA,STERLINGTON PLLC,2025-Q4,2025-Q4,1,295000,no,,4907c947-223d-4637-8e04-079c9798458b,registration-only,seeker,"Selim Zherka's presidential pardon application submitted on October 22, 2025."
+Binance Holdings Limited,BAKER & HOSTETLER LLP,2025-Q2,2025-Q4,3,290000,no,,e86f2395-b99a-4f6f-bad3-30f636f5596b,quarterly-text,seeker_vehicle,Executive relief.
+Anne Pramaggiore,"CROSSROADS STRATEGIES, LLC",2025-Q3,2026-Q1,3,260000,no,,e11d6fbc-a3a7-4f36-84e1-380eb0952956,quarterly-text,seeker,Advising on public policy and legislative matters relevant to the pardon process.
+Anne Pramaggiore,RRB STRATEGIES LLC,2025-Q4,2026-Q1,2,230000,no,,954fb339-9157-47de-8450-3d48c9ea0b3f,registration-only,seeker,Client is seeking Presidential Clemency.
+KOMAL PATEL,THE VOGEL GROUP,2025-Q3,2026-Q1,3,150000,no,,ea7cafe3-85cb-484f-b893-6653d7bdafa0,quarterly-text,seeker,Issues related to clemency
+JUNO EMPIRE INC,"CORCORAN & ASSOCIATES, INC. DBA CORCORAN PARTNERS",2025-Q1,2026-Q1,5,120000,no,,6c592bbb-a88a-4902-b6e7-4c684cdfe3ea,quarterly-text,seeker_vehicle,Issues related to the Pardon of Jorge Ferrer
+WILLIAM TIERNEY,THE VOGEL GROUP,2025-Q2,2026-Q1,4,100000,no,,d29bcbfc-6ce4-4cf2-af4c-798272eedad7,quarterly-text,seeker,Issues related to clemency
+Joseph Schwartz,MERKAVA STRATEGIES CORPORATION,2025-Q4,2025-Q4,1,100000,no,,63371c13-f31b-472b-a63d-319dbc4a8bee,registration-only,seeker,Petitioning for a pardon/clemency
+HEALTHICITY,THE VOGEL GROUP,2024-Q4,2025-Q1,2,100000,yes,2025-Q1,5a40e29f-2dca-4a63-b7bd-1556731bc27e,quarterly-text,seeker_vehicle,Issues related to clemency
+PHILLIP FREDERICK CAMINO,FORBES-TATE,2026-Q1,2026-Q1,1,60000,no,,250b47f3-1a80-420f-af99-1cc4a426a0a2,quarterly-text,seeker,Issues related to executive clemency.
+JOSH SMITH,"THE CARAWAY GROUP, INC.",2024-Q1,2024-Q4,3,50000,yes,2024-Q4,38f78870-75a8-4ade-bd19-c1ceae90459c,registration-only,seeker,Presidential Pardon
+RICHARD SCRUSHY,"FAHMY HUDOME INTERNATIONAL, LLC",2025-Q2,2026-Q1,4,40000,no,,a6f8da1f-34cd-4b29-bc97-3dc34421fc91,quarterly-text,seeker,Granting of Pardon
+SANTIAGO ALVAREZ,"CORCORAN & ASSOCIATES, INC. DBA CORCORAN PARTNERS",2025-Q4,2026-Q1,2,40000,no,,f1f2d818-4110-400b-8ae2-62ea34fb1ef8,quarterly-text,seeker,Advocating for pardon for Santiago Alvarez
+MAGMA POWER LLC,THE VOGEL GROUP,2025-Q1,2025-Q2,2,40000,yes,2025-Q2,ce234fbf-f8e7-4db1-9b37-bdccea78c3b6,quarterly-text,seeker_vehicle,Issues related to clemency
+"FAHMY HUDOME INTL., INC. ON BEHALF OF RICHARD SCRUSHY",VICTORY COALITION STRATEGIES LLC,2025-Q2,2025-Q4,3,35000,yes,2025-Q4,f0623d5a-a674-4a8d-8884-82e85c57607c,quarterly-text,seeker_vehicle,Granting of pardon.
+CHANGPENG ZHAO,BAKER & HOSTETLER LLP,2025-Q1,2025-Q4,4,30000,no,,a9762ad4-649e-4af2-9065-887c4773a46e,quarterly-text,seeker,Executive relief.
+YENER VAHIT BELLI,"BELTRAN LITIGATION, P.A.",2025-Q4,2026-Q1,2,20210,no,,f2265521-b419-4e7d-9959-68c075f80e1c,quarterly-text,seeker,Lobbying for pardon/commutation of sentence.
+Dr. Shallfdeen Amuwo,ADOMI ADVISORY GROUP PLLC,2024-Q4,2025-Q2,3,20000,yes,2025-Q2,de3e1965-b135-4e16-bed7-41d34ed844a2,quarterly-text,seeker,Lobbying the Biden administration for a presidential pardon
+GREG E. LINDBERG,JAVELIN ADVISORS LLC,2025-Q3,2026-Q1,3,,no,,9e571aa3-2498-4e81-933e-ab1c3a4cd5cf,quarterly-text,seeker,Executive pardon.
+RAYMOND LIDDY,MR. THOMAS MARQUEZ,2025-Q4,2025-Q4,1,,yes,2025-Q4,825867cf-98dd-4ccf-b52b-84bff0200ca9,registration-only,seeker,Legal/ pardon
+DIAMOND STREET PROPERTIES LLC,"DHI CONSULTING GROUP, LLC",2026-Q1,2026-Q1,1,,no,,044138a1-c7e7-4f8a-a8d7-d8dd4c474f55,registration-only,seeker_vehicle,"At present, their main issues are pardons for federal crimes of those they feel have served their time or have been wrongfully accused. and any federal land permits for agriculture, urbanization, civil rights/civil liber"
+"Veritaseum Inc.,",RULON & WHITE GOVERNANCE STRATEGIES,2026-Q1,2026-Q1,1,,no,,36195b37-a04c-48ae-a4ff-30c7f9dd954f,quarterly-text,seeker_vehicle,Securities Exchange Commission Emmet and Murphy Negotiations U.S Senate Tim Scott Department of Justice Department of Clemency White House Counsel Alice Johnson American Bankers Association Robert Nichols and Tab Stewart

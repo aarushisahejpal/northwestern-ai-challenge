@@ -264,6 +264,12 @@ sql_csv("pardons_registrant_firms.csv", q_registrants)
 # tagged if ANY amendment version in it was tagged; dollars come from the deduped survivor.
 # Termination is DECLARED only: senate filing_type ~ '^[1-4](T|TY|@|@Y)$' anywhere in the
 # pair's filings (corpus-profile §3) — absence of filings is never read as termination.
+# REGISTRATION-ONLY declarations (fix 2026-07-11, the Zherka case): some engagements state
+# the pardon purpose ONLY on the LD-1 registration, and their LD-2 quarterlies carry no
+# activity text at all — the quarterly just reports the income. Such a quarter is credited
+# to the engagement ONLY when the quarterly declares no text of its own (so income from
+# quarters that declare OTHER work is never re-attributed); tag_basis labels these rows
+# 'registration-only' vs 'quarterly-text'.
 q_engagements = """
 WITH tagged AS (
   SELECT DISTINCT lim.record_key AS filing_uuid
@@ -272,16 +278,29 @@ pairs AS (
   SELECT DISTINCT sf.registrant_id, sf.client_id,
          any_value(sf.registrant_name) OVER (PARTITION BY sf.registrant_id) AS registrant_name
   FROM senate_filings sf JOIN tagged t ON t.filing_uuid=sf.filing_uuid),
+reg_tagged AS (   -- pairs whose LD-1 registration carries the tag; one citable reg uuid
+  SELECT sf.registrant_id, sf.client_id, min(sf.filing_uuid) AS reg_uuid
+  FROM senate_filings sf JOIN tagged t ON t.filing_uuid=sf.filing_uuid
+  WHERE sf.filing_type LIKE 'R%' GROUP BY 1,2),
+act_n AS (SELECT filing_uuid, count(*) AS n_act FROM senate_activities GROUP BY 1),
 pf AS (   -- every senate filing of those pairs
   SELECT sf.*, (t.filing_uuid IS NOT NULL) AS is_tagged,
+         coalesce(a.n_act, 0) AS n_act,
+         (rt.registrant_id IS NOT NULL) AS pair_reg_tagged, rt.reg_uuid,
          coalesce(e.canonical_name, sf.client_name) AS player
   FROM senate_filings sf
   JOIN pairs p ON p.registrant_id=sf.registrant_id AND p.client_id=sf.client_id
   LEFT JOIN tagged t ON t.filing_uuid=sf.filing_uuid
+  LEFT JOIN act_n a ON a.filing_uuid=sf.filing_uuid
+  LEFT JOIN reg_tagged rt ON rt.registrant_id=sf.registrant_id AND rt.client_id=sf.client_id
   LEFT JOIN entity_aliases ea ON ea.raw_name=sf.client_name AND ea.kind='client' AND ea.dataset='senate'
   LEFT JOIN entities e ON e.entity_id=ea.entity_id),
 ded AS (  -- amendment-deduped quarterlies, carrying quarter-level taggedness
-  SELECT *, bool_or(is_tagged) OVER (PARTITION BY registrant_id, client_id, filing_year, filing_period) AS q_tagged
+  SELECT *,
+    bool_or(is_tagged) OVER (PARTITION BY registrant_id, client_id, filing_year, filing_period)
+      OR (pair_reg_tagged AND max(n_act) OVER (PARTITION BY registrant_id, client_id,
+            filing_year, filing_period) = 0) AS q_tagged,
+    bool_or(is_tagged) OVER (PARTITION BY registrant_id, client_id, filing_year, filing_period) AS q_text_tagged
   FROM pf WHERE filing_type NOT LIKE 'R%'
   QUALIFY row_number() OVER (PARTITION BY registrant_id, client_id, filing_year, filing_period
                              ORDER BY posted DESC, filing_uuid DESC)=1),
@@ -300,7 +319,10 @@ SELECT any_value(d.player) AS player, any_value(d.registrant_name) AS registrant
        sum(CASE WHEN d.q_tagged THEN coalesce(d.income, d.expenses) END)::BIGINT AS reported_total_tagged_quarters,
        CASE WHEN any_value(t.termination_quarter) IS NOT NULL THEN 'yes' ELSE 'no' END AS terminated,
        any_value(t.termination_quarter) AS termination_quarter,
-       max(CASE WHEN d.q_tagged THEN d.filing_uuid END) AS sample_filing_uuid
+       coalesce(max(CASE WHEN d.q_text_tagged THEN d.filing_uuid END),
+                any_value(d.reg_uuid)) AS sample_filing_uuid,
+       CASE WHEN bool_or(d.q_text_tagged) THEN 'quarterly-text'
+            ELSE 'registration-only' END AS tag_basis
 FROM ded d LEFT JOIN term t ON t.registrant_id=d.registrant_id AND t.client_id=d.client_id
 GROUP BY d.registrant_id, d.client_id
 HAVING count(DISTINCT CASE WHEN d.q_tagged THEN d.filing_year||d.filing_period END) > 0
