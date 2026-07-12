@@ -1,0 +1,631 @@
+{
+  "cycles": [
+    2024,
+    2026
+  ],
+  "api_key_source": "DEMO_KEY",
+  "committees": [
+    {
+      "committee_id": "C00835959",
+      "name": "FAIRSHAKE",
+      "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+      "affiliated": "PROTECT PROGRESS",
+      "cycles": [
+        2024,
+        2026
+      ],
+      "matched_seed": "Fairshake"
+    },
+    {
+      "committee_id": "C00836221",
+      "name": "DEFEND AMERICAN JOBS",
+      "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+      "affiliated": "NONE",
+      "cycles": [
+        2024,
+        2026
+      ],
+      "matched_seed": "Defend American Jobs"
+    },
+    {
+      "committee_id": "C00848440",
+      "name": "PROTECT PROGRESS",
+      "committee_type_full": "Super PAC (Independent Expenditure-Only)",
+      "affiliated": "FAIRSHAKE",
+      "cycles": [
+        2024,
+        2026
+      ],
+      "matched_seed": "Protect Progress"
+    }
+  ],
+  "roster_players": 535,
+  "pull_sanity_totals": null,
+  "excluded_non_contributions": {
+    "other_receipt": {
+      "total": 70496941.62999997,
+      "items": 40,
+      "examples": [
+        "AMALGAMATED BANK",
+        "COINBASE COMMERCE (EXCHANGE)",
+        "THE GIVING BLOCK"
+      ]
+    },
+    "refund_offset": {
+      "total": 2240264.4,
+      "items": 17,
+      "examples": [
+        "AERSF",
+        "KINETIC CAMPAIGNS",
+        "MAIN STREET MEDIA GROUP",
+        "RBC MEDIA LLC",
+        "SADLER LEGACY MEDIA",
+        "SCHOEN SURVEY RESEARCH",
+        "TARGETED PLATFORM MEDIA",
+        "TARGETED PLATFORM MEDIA LLC"
+      ]
+    },
+    "transfer": {
+      "total": 113100000.0,
+      "items": 18,
+      "examples": [
+        "FAIRSHAKE"
+      ]
+    }
+  },
+  "reconciliation": [
+    {
+      "player": "Coinbase, Inc.",
+      "confidence": "exact",
+      "fec_superpac": 106592470.0,
+      "fec_items": 12,
+      "ld203": 1696150.0,
+      "ld203_items": 318,
+      "delta": 104896320.0,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "COINBASE",
+          "amount": 106592470.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959",
+        "C00836221",
+        "C00848440"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4387",
+          "committee_id": "C00835959",
+          "amount": 5000000.0,
+          "date": "2023-11-03"
+        },
+        {
+          "transaction_id": "SA11AI.4390",
+          "committee_id": "C00835959",
+          "amount": 15500000.0,
+          "date": "2023-12-20"
+        },
+        {
+          "transaction_id": "C3CD323F2D5A45ACAD46",
+          "committee_id": "C00835959",
+          "amount": 24999995.0,
+          "date": "2024-05-30"
+        },
+        {
+          "transaction_id": "C5260EBEDE874B498A71",
+          "committee_id": "C00835959",
+          "amount": 23000000.0,
+          "date": "2024-12-20"
+        },
+        {
+          "transaction_id": "3C89A33859FE4D78A3FB",
+          "committee_id": "C00835959",
+          "amount": 15000000.0,
+          "date": "2025-03-14"
+        },
+        {
+          "transaction_id": "BD6600C207FF4BEB80CF",
+          "committee_id": "C00835959",
+          "amount": 5000000.0,
+          "date": "2025-04-02"
+        }
+      ]
+    },
+    {
+      "player": "Ripple Labs Inc.",
+      "confidence": "exact",
+      "fec_superpac": 96500000.0,
+      "fec_items": 8,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 96500000.0,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "RIPPLE LABS",
+          "amount": 96500000.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959",
+        "C00836221",
+        "C00848440"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4423",
+          "committee_id": "C00835959",
+          "amount": 20000000.0,
+          "date": "2023-12-15"
+        },
+        {
+          "transaction_id": "9AA66F6FEDCE4D2F92AC",
+          "committee_id": "C00835959",
+          "amount": 25000000.0,
+          "date": "2024-05-15"
+        },
+        {
+          "transaction_id": "4B7B6A735740463F9B34",
+          "committee_id": "C00835959",
+          "amount": 23000000.0,
+          "date": "2025-01-21"
+        },
+        {
+          "transaction_id": "39E6100EE2854C629E3A",
+          "committee_id": "C00835959",
+          "amount": 25000000.0,
+          "date": "2025-08-29"
+        },
+        {
+          "transaction_id": "SA11AI.4121",
+          "committee_id": "C00836221",
+          "amount": 1500000.0,
+          "date": "2023-12-15"
+        },
+        {
+          "transaction_id": "SA11AI.4522",
+          "committee_id": "C00836221",
+          "amount": 250000.0,
+          "date": "2025-01-21"
+        }
+      ]
+    },
+    {
+      "player": "AH Capital Management, LLC (dba Andreessen Horowitz)",
+      "confidence": "exact",
+      "fec_superpac": 94500000.02,
+      "fec_items": 11,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 94500000.02,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "AH CAPITAL MANAGEMENT",
+          "amount": 94500000.02,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959",
+        "C00836221",
+        "C00848440"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4392",
+          "committee_id": "C00835959",
+          "amount": 5000000.01,
+          "date": "2023-10-23"
+        },
+        {
+          "transaction_id": "SA11AI.4399",
+          "committee_id": "C00835959",
+          "amount": 14000000.0,
+          "date": "2023-12-14"
+        },
+        {
+          "transaction_id": "A4E08ACFBE284AE29245",
+          "committee_id": "C00835959",
+          "amount": 25000000.0,
+          "date": "2024-05-30"
+        },
+        {
+          "transaction_id": "2C695EA655F04B008FDF",
+          "committee_id": "C00835959",
+          "amount": 23000000.0,
+          "date": "2024-11-06"
+        },
+        {
+          "transaction_id": "5B8F6100ECC24490A002",
+          "committee_id": "C00835959",
+          "amount": 23800000.0,
+          "date": "2025-12-10"
+        },
+        {
+          "transaction_id": "SA11AI.4117",
+          "committee_id": "C00836221",
+          "amount": 1500000.01,
+          "date": "2023-12-15"
+        }
+      ]
+    },
+    {
+      "player": "JUMP CRYPTO HOLDINGS LLC",
+      "confidence": "candidate",
+      "fec_superpac": 25000000.0,
+      "fec_items": 3,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 25000000.0,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "JUMP CRYPTO",
+          "amount": 25000000.0,
+          "confidence": "candidate"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4413",
+          "committee_id": "C00835959",
+          "amount": 5000000.0,
+          "date": "2023-12-13"
+        },
+        {
+          "transaction_id": "15ACE96189DA44B0910A",
+          "committee_id": "C00835959",
+          "amount": 10000000.0,
+          "date": "2024-05-24"
+        },
+        {
+          "transaction_id": "107CBDACE9DE46AEBFCF",
+          "committee_id": "C00835959",
+          "amount": 10000000.0,
+          "date": "2024-12-24"
+        }
+      ]
+    },
+    {
+      "player": "Cornerstone Government Affairs obo Circle Internet Financial, Inc.",
+      "confidence": "candidate",
+      "fec_superpac": 1000000.0,
+      "fec_items": 1,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 1000000.0,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "CIRCLE INTERNET FINANCIAL",
+          "amount": 1000000.0,
+          "confidence": "candidate"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4427",
+          "committee_id": "C00835959",
+          "amount": 1000000.0,
+          "date": "2023-12-19"
+        }
+      ]
+    },
+    {
+      "player": "UNISWAP LABS",
+      "confidence": "candidate",
+      "fec_superpac": 999987.89,
+      "fec_items": 1,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 999987.89,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "UNIVERSAL NAVIGATION INC., DBA UNISWAP LABS",
+          "amount": 999987.89,
+          "confidence": "candidate"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "4B24849861C34CE088E4",
+          "committee_id": "C00835959",
+          "amount": 999987.89,
+          "date": "2025-01-30"
+        }
+      ]
+    },
+    {
+      "player": "ConsenSys Software Inc.",
+      "confidence": "exact",
+      "fec_superpac": 800000.0,
+      "fec_items": 1,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 800000.0,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "CONSENSYS SOFTWARE INC.",
+          "amount": 800000.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "5CF810A4EA1D4910B564",
+          "committee_id": "C00835959",
+          "amount": 800000.0,
+          "date": "2024-09-06"
+        }
+      ]
+    },
+    {
+      "player": "MULTICOIN CAPITAL",
+      "confidence": "candidate",
+      "fec_superpac": 250000.0,
+      "fec_items": 3,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 250000.0,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "MULTICOIN CAPITAL GP",
+          "amount": 225000.0,
+          "confidence": "candidate"
+        },
+        {
+          "name": "MULTICOIN CAPITAL GROUP LLC",
+          "amount": 25000.0,
+          "confidence": "candidate"
+        }
+      ],
+      "committees": [
+        "C00835959",
+        "C00836221",
+        "C00848440"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4417",
+          "committee_id": "C00835959",
+          "amount": 200000.0,
+          "date": "2023-12-15"
+        },
+        {
+          "transaction_id": "SA11AI.4148",
+          "committee_id": "C00848440",
+          "amount": 25000.0,
+          "date": "2023-12-15"
+        },
+        {
+          "transaction_id": "SA11AI.4119",
+          "committee_id": "C00836221",
+          "amount": 25000.0,
+          "date": "2023-12-15"
+        }
+      ]
+    },
+    {
+      "player": "BLOCKCHAIN (US), INC.",
+      "confidence": "candidate",
+      "fec_superpac": 100000.0,
+      "fec_items": 1,
+      "ld203": 0.0,
+      "ld203_items": 0,
+      "delta": 100000.0,
+      "ld203_client_only": true,
+      "fec_names": [
+        {
+          "name": "BLOCKCHAIN CAPITAL, LLC",
+          "amount": 100000.0,
+          "confidence": "candidate"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "C17C75142F194DBB9314",
+          "committee_id": "C00835959",
+          "amount": 100000.0,
+          "date": "2024-01-22"
+        }
+      ]
+    },
+    {
+      "player": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+      "confidence": "exact",
+      "fec_superpac": 1000000.0,
+      "fec_items": 2,
+      "ld203": 1062585.0,
+      "ld203_items": 39,
+      "delta": -62585.0,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "PAYWARD, INC.",
+          "amount": 1000000.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "3E0BAC612CAE4004B52D",
+          "committee_id": "C00835959",
+          "amount": 750000.0,
+          "date": "2024-01-12"
+        },
+        {
+          "transaction_id": "4C47D3BBB0CD431D88A7",
+          "committee_id": "C00835959",
+          "amount": 250000.0,
+          "date": "2024-03-15"
+        }
+      ]
+    },
+    {
+      "player": "Solana Policy Institute",
+      "confidence": "exact",
+      "fec_superpac": 10000.0,
+      "fec_items": 1,
+      "ld203": 104250.0,
+      "ld203_items": 37,
+      "delta": -94250.0,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "SOLANA POLICY INSTITUTE",
+          "amount": 10000.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "C85929D1AB3E4169A147",
+          "committee_id": "C00835959",
+          "amount": 10000.0,
+          "date": "2025-05-14"
+        }
+      ]
+    },
+    {
+      "player": "Paradigm Operations LP",
+      "confidence": "exact",
+      "fec_superpac": 500000.0,
+      "fec_items": 1,
+      "ld203": 1017580.0,
+      "ld203_items": 11,
+      "delta": -517580.0,
+      "ld203_client_only": false,
+      "fec_names": [
+        {
+          "name": "PARADIGM OPERATIONS",
+          "amount": 500000.0,
+          "confidence": "exact"
+        }
+      ],
+      "committees": [
+        "C00835959"
+      ],
+      "tids": [
+        {
+          "transaction_id": "SA11AI.4405",
+          "committee_id": "C00835959",
+          "amount": 500000.0,
+          "date": "2023-12-12"
+        }
+      ]
+    }
+  ],
+  "individuals_by_employer": [
+    {
+      "player": "Coinbase, Inc.",
+      "total": 1006179.52,
+      "items": 5,
+      "who": [
+        "ARMSTRONG, BRIAN DAVID",
+        "CANAVAN, MIKE",
+        "LEE, JUSTIN",
+        "POLLAK, JESSE"
+      ]
+    },
+    {
+      "player": "XAPO BANK LIMITED",
+      "total": 250000.0,
+      "items": 1,
+      "who": [
+        "CASARES, WENCES"
+      ]
+    },
+    {
+      "player": "BITWISE ASSET MANAGEMENT",
+      "total": 10000.0,
+      "items": 1,
+      "who": [
+        "HORSLEY, HUNTER"
+      ]
+    },
+    {
+      "player": "ALLIANCE FOR RETIRED AMERICANS",
+      "total": 16250.0,
+      "items": 4,
+      "who": [
+        "BRENTZ, CHARLES",
+        "OKAMOTO, MERRICK",
+        "STUBE, BRIAN"
+      ]
+    },
+    {
+      "player": "Wells Fargo & Company",
+      "total": 250.0,
+      "items": 1,
+      "who": [
+        "BOBBE, DEREK"
+      ]
+    }
+  ],
+  "unmatched_network_donors": [
+    {
+      "name": "ELECTRIC CAPITAL PARTNERS",
+      "total": 500000.0,
+      "items": 1
+    },
+    {
+      "name": "LIGHTSPARK GROUP",
+      "total": 200000.0,
+      "items": 1
+    },
+    {
+      "name": "ARK INVEST",
+      "total": 157438.44,
+      "items": 2
+    },
+    {
+      "name": "FAIRSHAKE",
+      "total": 150000.0,
+      "items": 1
+    },
+    {
+      "name": "CUMBERLAND DRW",
+      "total": 100000.0,
+      "items": 1
+    },
+    {
+      "name": "ACTION FACTORY, INC.",
+      "total": 25000.0,
+      "items": 1
+    },
+    {
+      "name": "UNOFFICIAL LLC",
+      "total": 10000.0,
+      "items": 1
+    }
+  ]
+}

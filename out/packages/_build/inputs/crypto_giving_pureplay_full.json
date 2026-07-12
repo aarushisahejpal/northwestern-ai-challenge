@@ -1,0 +1,3122 @@
+﻿{
+  "query": "105 entities from crypto_roster_pureplay.txt",
+  "resolved_entities": [
+    {
+      "entity_id": "registrant:AH CAPITAL MANAGEMENT L L C",
+      "canonical_name": "AH Capital Management, L.L.C. (d/b/a Andreessen Horowitz)"
+    },
+    {
+      "entity_id": "registrant:401104999",
+      "canonical_name": "BLOCKCHAIN ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:CHAMBER OF DIGITAL COMMERCE",
+      "canonical_name": "Chamber of Digital Commerce"
+    },
+    {
+      "entity_id": "registrant:401103593",
+      "canonical_name": "COINBASE, INC."
+    },
+    {
+      "entity_id": "registrant:401107058",
+      "canonical_name": "CRYPTO COUNCIL FOR INNOVATION"
+    },
+    {
+      "entity_id": "registrant:401106475",
+      "canonical_name": "DEFI EDUCATION FUND"
+    },
+    {
+      "entity_id": "registrant:401106760",
+      "canonical_name": "DIGITAL CURRENCY GROUP"
+    },
+    {
+      "entity_id": "registrant:401106476",
+      "canonical_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM"
+    },
+    {
+      "entity_id": "registrant:FORIS INC ITS AFFILIATED ENTITIES D B A CRYPTO COM",
+      "canonical_name": "FORIS, INC & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM"
+    },
+    {
+      "entity_id": "registrant:FORIS INC ITS AFFILIATED ENTITIES FORIS DAX INC FORIS DAX MARKETS",
+      "canonical_name": "FORIS, INC & ITS AFFILIATED ENTITIES, FORIS DAX, INC. & FORIS DAX MARKETS, INC."
+    },
+    {
+      "entity_id": "registrant:FORIS INC AND ITS AFFILIATED ENTITY FORIS DAX INC D B A CRYPTO COM",
+      "canonical_name": "FORIS, INC AND ITS AFFILIATED ENTITY, FORIS DAX, INC. D/B/A CRYPTO.COM"
+    },
+    {
+      "entity_id": "registrant:401107131",
+      "canonical_name": "FILECOIN FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:401106447",
+      "canonical_name": "GALAXY DIGITAL HOLDINGS LP"
+    },
+    {
+      "entity_id": "registrant:401109675",
+      "canonical_name": "JUMP CRYPTO HOLDINGS LLC"
+    },
+    {
+      "entity_id": "registrant:401107115",
+      "canonical_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)"
+    },
+    {
+      "entity_id": "registrant:401107839",
+      "canonical_name": "PARADIGM OPERATIONS LP"
+    },
+    {
+      "entity_id": "registrant:401105114",
+      "canonical_name": "RIPPLE"
+    },
+    {
+      "entity_id": "registrant:401109518",
+      "canonical_name": "SOLANA POLICY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401105816",
+      "canonical_name": "STELLAR DEVELOPMENT FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:401104589",
+      "canonical_name": "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)"
+    },
+    {
+      "entity_id": "registrant:401109428",
+      "canonical_name": "UNISWAP LABS"
+    }
+  ],
+  "ld203_filer_names": [
+    "BLOCKCHAIN ASSOCIATION",
+    "COINBASE, INC.",
+    "CRYPTO COUNCIL FOR INNOVATION",
+    "DEFI EDUCATION FUND",
+    "DIGITAL CURRENCY GROUP",
+    "FILECOIN FOUNDATION",
+    "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+    "GALAXY DIGITAL HOLDINGS LP",
+    "JUMP CRYPTO HOLDINGS LLC",
+    "PARADIGM OPERATIONS LP",
+    "PAYWARD",
+    "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+    "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",
+    "RIPPLE",
+    "SOLANA POLICY INSTITUTE",
+    "STELLAR DEVELOPMENT FOUNDATION",
+    "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)",
+    "UNISWAP LABS"
+  ],
+  "client_only": [
+    "A16Z CAPITAL MANAGEMENT FKA ANDREESSEN HOROWITZ",
+    "A16Z CAPITAL MANAGEMENT LLC (F/K/A AH CAPITAL MANAGEMENT L.L.C.)",
+    "A16Z CAPITAL MANAGEMENT, L.L.C. (D/B/A ANDREESSEN HOROWITZ) FKA AH CAPITAL MGMT",
+    "A16Z Capital Management, L.L.C. (d/b/a Andreessen Horowitz)",
+    "AH Capital Management, LLC (dba Andreessen Horowitz)",
+    "ANCHORAGE DIGITAL",
+    "ANCHORAGE DIGITAL BANK",
+    "ANCHORAGE DIGITAL BANK, NA",
+    "ASSOCIATION OF DIGITAL ASSET MARKETS",
+    "ATLAS CROSSING LLC O/B/O GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION",
+    "Applied Blockchain, Inc.",
+    "Athena Bitcoin",
+    "Ava Labs, Inc.",
+    "BAM TRADING SERVICES INC. DBA BINANCE.US",
+    "BAM Trading Services, Inc./Binance.US",
+    "BAUGHMAN KROUP BOSSE PLLC ON BEHALF OF GEMINI SPACE STATION, INC.",
+    "BILLMARI INC. / DBA BLACK BLOCKCHAIN SUMMIT",
+    "BINANCE HOLDING LIMITED",
+    "BITCOIN ASSOCIATION FOR BSV",
+    "BITCOIN DEPOT",
+    "BITCOIN DEPOT OPERATING LLC",
+    "BITCOIN POLICY INSTITUTE",
+    "BLOCKCHAIN (US), INC.",
+    "BLOCKCHAIN GAME PARTNERS, INC DBA GALA GAMES",
+    "BLOCKCHAIN INTELLIGENCE GROUP",
+    "BLOCKCHAINS INC.",
+    "Binance Holdings Limited",
+    "Blockchain Domain Names LLC",
+    "CHAINALYSIS GOVERNMENT SOLUTIONS",
+    "CHAMBER OF DIGITAL COMMERCE D/B/A THE DIGITAL CHAMBER",
+    "COINFLIP",
+    "COINREGTECH, LLC",
+    "CRYPTO WORLD",
+    "Chainalysis Inc.",
+    "Coinbase Global, Inc.",
+    "ConsenSys Software Inc.",
+    "Cornerstone Government Affairs obo Circle Internet Financial, Inc.",
+    "DEFI ANGELS LLC",
+    "DEFI EUDCATION FUND",
+    "DIGITAL ASSET (US) CORP",
+    "DIGITAL CHAMBER OF COMMERCE",
+    "Dapper Labs Inc.",
+    "FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",
+    "FORIS DAX MARKETS, INC. DBA CRYPTO.COM",
+    "GEMINI TRUST COMPANY, LLC",
+    "GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION D.B.A GLOBAL DCA",
+    "GOVERNMENT BLOCKCHAIN ASSOCIATION",
+    "GPD Holdings LLC d/b/a CoinFlip",
+    "GRAYSCALE INVESTMENTS, LLC",
+    "HIGH THROUGHPUT PRODUCTIONS, LLC (DBA BITBOY CRYPTO)",
+    "HIVE BLOCKCHAIN TECHNOLOGIES LTD",
+    "KUCOIN",
+    "LEDGER",
+    "Ledger SAS",
+    "MARATHON DIGITAL HOLDINGS, INC.",
+    "MAYER BROWN LLP OBO CIRCLE INTERNET FINANCIAL, INC.",
+    "MOBILECOIN FOUNDATION",
+    "MULTICOIN CAPITAL",
+    "MULTICOIN CAPITAL MANAGEMENT, LLC",
+    "Nest Services Limited (Binance)",
+    "OKCOIN USA INC.",
+    "PAYWARD INC D/B/A KRAKEN",
+    "PAYWARD, INC. DBA KRAKEN",
+    "Polygon Labs Services (Switzerland) AG",
+    "RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",
+    "Riot Blockchain, Inc.",
+    "Ripple Labs Inc.",
+    "SOLANA FOUNDATION",
+    "STANDARD CRYPTO",
+    "THE BLOCKCHAIN ASSOCIATION",
+    "THE DEFI EDUCATION FUND",
+    "THE DIGITAL CHAMBER OF COMMERCE",
+    "TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.)",
+    "UNICOIN",
+    "UNICOIN INC.UNICOIN, INC.",
+    "UNIVERSAL NAVIGATION, INC. (D/B/A UNISWAP LABS)",
+    "WAVE DIGITAL ASSETS HOLDINGS LLC",
+    "WILLIAMS AND JENSEN, PLLC ON BEHALF OF RIPPLE LABS, INC."
+  ],
+  "unresolved": [
+    "Andreessen Horowitz (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Circle (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Coin Center (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Foris DAX, Inc. d/b/a Crypto.com (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Paradigm (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)"
+  ],
+  "results": {
+    "totals": {
+      "raw_items": 649,
+      "raw_total": 6418395.0,
+      "items": 630,
+      "total": 6367725.0
+    },
+    "by_type": [
+      {
+        "contribution_type": "pic",
+        "items": 5,
+        "total": 5000000.0
+      },
+      {
+        "contribution_type": "feca",
+        "items": 611,
+        "total": 1151935.0
+      },
+      {
+        "contribution_type": "he",
+        "items": 14,
+        "total": 215790.0
+      }
+    ],
+    "by_year": [
+      {
+        "filing_year": 2022,
+        "total": 255610.0
+      },
+      {
+        "filing_year": 2023,
+        "total": 134750.0
+      },
+      {
+        "filing_year": 2024,
+        "total": 5469765.0
+      },
+      {
+        "filing_year": 2025,
+        "total": 507600.0
+      }
+    ],
+    "by_filer": [
+      {
+        "filer_type": "organization",
+        "items": 311,
+        "total": 5714510.0
+      },
+      {
+        "filer_type": "lobbyist",
+        "items": 319,
+        "total": 653215.0
+      }
+    ],
+    "recipients": [
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE, INC",
+        "items": 2,
+        "total": 2000000.0
+      },
+      {
+        "recipient": "DONALD TRUMP/ J.D. VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "SEN. PATRICK TOOMEY",
+        "items": 1,
+        "total": 53790.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS INSTITUTE, INC",
+        "items": 1,
+        "total": 50000.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER JR",
+        "items": 3,
+        "total": 50000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS",
+        "items": 5,
+        "total": 45000.0
+      },
+      {
+        "recipient": "REP. JAMES FRENCH HILL",
+        "items": 9,
+        "total": 24800.0
+      },
+      {
+        "recipient": "SEN. CYNTHIA MARIE LUMMIS",
+        "items": 5,
+        "total": 23600.0
+      },
+      {
+        "recipient": "DSCC",
+        "items": 2,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP. ANGIE CRAIG",
+        "items": 7,
+        "total": 17500.0
+      },
+      {
+        "recipient": "REP. RITCHIE TORRES",
+        "items": 7,
+        "total": 16000.0
+      },
+      {
+        "recipient": "SENATOR BILL HAGERTY",
+        "items": 3,
+        "total": 16000.0
+      },
+      {
+        "recipient": "EQUALITY PAC",
+        "items": 8,
+        "total": 15625.0
+      },
+      {
+        "recipient": "JFC REPRESENTING OVER 25 DIFFERENT COMMITTEES (LD-203 SPACE RESTRICTIONS PROHIBIT LISTING OUT OF INDIVIDUAL COMMITTEES)",
+        "items": 3,
+        "total": 15500.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE",
+        "items": 2,
+        "total": 15000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION",
+        "items": 1,
+        "total": 15000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION, SEN. LISA BLUNT ROCHESTER, REP. HAKEEM JEFFRIES, REP. GREGORY MEEKS, REP. YVETTE CLARKE, REP. ROBIN KELLY, REP. LAUREN UNDERWOOD, REP. JONATHAN JACKSON, REP. DWIGHT EVANS AND REP. GABE AMO",
+        "items": 1,
+        "total": 15000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION, REP. TROY CARTER AND REP. CLEO FIELDS",
+        "items": 1,
+        "total": 15000.0
+      },
+      {
+        "recipient": "NEW DEMOCRAT COALITION ACTION FUND",
+        "items": 6,
+        "total": 13125.0
+      },
+      {
+        "recipient": "REP. FRENCH HILL AND NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE (NRCC)",
+        "items": 1,
+        "total": 13000.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 4,
+        "total": 12500.0
+      },
+      {
+        "recipient": "BERNIE MORENO",
+        "items": 7,
+        "total": 11800.0
+      },
+      {
+        "recipient": "REP. PATRICK MCHENRY (R) AND NRCC",
+        "items": 1,
+        "total": 11600.0
+      },
+      {
+        "recipient": "JIM HIMES",
+        "items": 3,
+        "total": 10800.0
+      },
+      {
+        "recipient": "REP. GLENN THOMPSON",
+        "items": 6,
+        "total": 10750.0
+      },
+      {
+        "recipient": "REP. JOSH GOTTHEIMER",
+        "items": 7,
+        "total": 10650.0
+      },
+      {
+        "recipient": "STEIL FOR WISCONSIN, INC.; REPUBLICAN PARTY OF WISCONSIN; ON WISCONSIN PAC; NRCC",
+        "items": 4,
+        "total": 10500.0
+      },
+      {
+        "recipient": "SEN. JOHN BOOZMAN",
+        "items": 4,
+        "total": 10300.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION AND REP. STEVEN HORSFORD",
+        "items": 1,
+        "total": 10000.0
+      },
+      {
+        "recipient": "JFC REPRESENTING OVER 40 DIFFERENT COMMITTEES (LD-203 SPACE RESTRICTIONS PROHIBIT LISTING OUT OF INDIVIDUAL COMMITTEES)",
+        "items": 2,
+        "total": 9900.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY SCOTT",
+        "items": 2,
+        "total": 9900.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER, JR",
+        "items": 3,
+        "total": 9300.0
+      },
+      {
+        "recipient": "REP. THOMAS EARL EMMER",
+        "items": 2,
+        "total": 9100.0
+      },
+      {
+        "recipient": "DCCC",
+        "items": 5,
+        "total": 8500.0
+      },
+      {
+        "recipient": "REP. ANDY BARR",
+        "items": 6,
+        "total": 8500.0
+      },
+      {
+        "recipient": "SEN. JOHN BARRASSO",
+        "items": 2,
+        "total": 8300.0
+      },
+      {
+        "recipient": "REP. PATRICK TIMOTHY MCHENRY",
+        "items": 2,
+        "total": 8300.0
+      },
+      {
+        "recipient": "CANDIDATE JAKE RAKOV",
+        "items": 3,
+        "total": 8000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS PAC",
+        "items": 2,
+        "total": 7500.0
+      },
+      {
+        "recipient": "CHC BOLD PAC",
+        "items": 2,
+        "total": 7500.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE",
+        "items": 2,
+        "total": 7500.0
+      },
+      {
+        "recipient": "REP. FRENCH HILL",
+        "items": 6,
+        "total": 7250.0
+      },
+      {
+        "recipient": "RO KHANNA",
+        "items": 2,
+        "total": 7100.0
+      },
+      {
+        "recipient": "REP. BRYAN STEIL, NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE (NRCC) AND REPUBLICAN PARTY OF WISCONSIN (FEDERAL ACCOUNT)",
+        "items": 1,
+        "total": 7000.0
+      },
+      {
+        "recipient": "SEN. MIKE ROUNDS",
+        "items": 3,
+        "total": 7000.0
+      },
+      {
+        "recipient": "CYNTHIA LUMMIS",
+        "items": 3,
+        "total": 7000.0
+      },
+      {
+        "recipient": "ANGELA ALSOBROOKS",
+        "items": 5,
+        "total": 6800.0
+      },
+      {
+        "recipient": "REP. JAKE AUCHINCLOSS",
+        "items": 2,
+        "total": 6800.0
+      },
+      {
+        "recipient": "WARREN DAVIDSON",
+        "items": 3,
+        "total": 6800.0
+      },
+      {
+        "recipient": "DENNY REHBERG",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "EYE OF THE TIGER POLITICAL ACTION COMMITTEE, THE; NRCC; SCALISE FOR CONGRESS",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "CANDIDATE ERIC HOVDE",
+        "items": 3,
+        "total": 6600.0
+      },
+      {
+        "recipient": "ADAM SCHIFF",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "REP. RITCHIE TORRES (D)",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "VIVEK RAMASWAMY",
+        "items": 1,
+        "total": 6600.0
+      },
+      {
+        "recipient": "DARREN SOTO",
+        "items": 3,
+        "total": 6500.0
+      },
+      {
+        "recipient": "SENATOR RUBEN GALLEGO",
+        "items": 3,
+        "total": 6500.0
+      },
+      {
+        "recipient": "REP. BRYAN GEORGE STEIL",
+        "items": 4,
+        "total": 6000.0
+      },
+      {
+        "recipient": "SEN. KATIE BRITT",
+        "items": 2,
+        "total": 6000.0
+      },
+      {
+        "recipient": "REP. JASON SMITH",
+        "items": 3,
+        "total": 6000.0
+      },
+      {
+        "recipient": "SENATOR CYNTHIA LUMMIS",
+        "items": 3,
+        "total": 5900.0
+      },
+      {
+        "recipient": "SEN. KIRSTEN GILLIBRAND",
+        "items": 2,
+        "total": 5800.0
+      },
+      {
+        "recipient": "REP. JOSH MANDEL",
+        "items": 1,
+        "total": 5800.0
+      },
+      {
+        "recipient": "REP. JOYCE BEATTY",
+        "items": 1,
+        "total": 5800.0
+      },
+      {
+        "recipient": "REP. TIM RYAN",
+        "items": 1,
+        "total": 5800.0
+      },
+      {
+        "recipient": "REP. TOM EMMER",
+        "items": 4,
+        "total": 5500.0
+      },
+      {
+        "recipient": "FRENCH HILL",
+        "items": 5,
+        "total": 5450.0
+      },
+      {
+        "recipient": "SEN. KRISTEN GILLIBRAND",
+        "items": 2,
+        "total": 5300.0
+      },
+      {
+        "recipient": "REP. HAKEEM JEFFRIES",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "NRCC",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. KATHERINE CLARK",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "BILL HAGERTY",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. WARREN DAVIDSON",
+        "items": 3,
+        "total": 5000.0
+      },
+      {
+        "recipient": "TOMORROW IS MEANINGFUL PAC - FEDERAL; TIM SCOTT FOR AMERICA; NRSC",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN. BILL HAGERTY",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "MARK WARNER ACTION FUND",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "RONALD LEE WYDEN",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. BRIAN JACK",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN. TIM SCOTT",
+        "items": 4,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. CYNTHIA LUMMIS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION, REP. MARILYN STRICKLAND AND REP. JANELLE BYNUM",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "LUMMIS VICTORY COMMITTEE",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REPUBLICAN MAIN STREET PARTNERSHIP PAC",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. MIKE JOHNSON",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP. MIKE CAREY",
+        "items": 3,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN. MIKE CRAPO",
+        "items": 2,
+        "total": 4900.0
+      },
+      {
+        "recipient": "REP. BRITTANY PETTERSEN",
+        "items": 5,
+        "total": 4500.0
+      },
+      {
+        "recipient": "REP. STEVEN HORSFORD",
+        "items": 4,
+        "total": 4500.0
+      },
+      {
+        "recipient": "REP. DUSTY JOHNSON",
+        "items": 4,
+        "total": 4500.0
+      },
+      {
+        "recipient": "SEN. JOHN THUNE",
+        "items": 2,
+        "total": 4500.0
+      },
+      {
+        "recipient": "REP. DARREN SOTO",
+        "items": 4,
+        "total": 4500.0
+      },
+      {
+        "recipient": "DAKOTA LEADERSHIP PAC; FRIENDS OF DUSTY JOHNSON; DUSTY PAC",
+        "items": 2,
+        "total": 4500.0
+      },
+      {
+        "recipient": "SEN. DEBRA FISCHER",
+        "items": 2,
+        "total": 4300.0
+      },
+      {
+        "recipient": "REP. SAM LICCARDO",
+        "items": 3,
+        "total": 4300.0
+      },
+      {
+        "recipient": "SEN. BERNIE MORENO",
+        "items": 2,
+        "total": 4125.0
+      },
+      {
+        "recipient": "SEN. SAM BROWN",
+        "items": 2,
+        "total": 4125.0
+      },
+      {
+        "recipient": "SEN. CYNTHIA LUMMIS",
+        "items": 2,
+        "total": 4000.0
+      },
+      {
+        "recipient": "REP. YOUNG KIM",
+        "items": 2,
+        "total": 3900.0
+      },
+      {
+        "recipient": "REP. MARCUS J. MOLINARO",
+        "items": 2,
+        "total": 3900.0
+      },
+      {
+        "recipient": "SENATOR JOHN CORNYN",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. ROHIT KHANNA",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. NIKKI BUDZINSKI",
+        "items": 4,
+        "total": 3500.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION AND SEN. ANGELA ALSOBROOKS",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. PATRICK MCHENRY",
+        "items": 3,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. MIKE FLOOD",
+        "items": 3,
+        "total": 3500.0
+      },
+      {
+        "recipient": "SENATOR MARK WARNER",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "SEN. TIM SCOTT AND NATIONAL REPUBLICAN SENATORIAL COMMITTEE (NRSC)",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. ANDY BARR, CANDIDATE, U.S. SENATE",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. ASHLEY HINSON, CANDIDATE, U.S. SENATE",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "FRENCH HILL FOR ARKANSAS IN THE ARENA PAC NRCC",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "BUILDING AMERICA'S REPUBLICAN REPRESENTATION PAC, KEEP AMERICA GREAT PAC, INC., ANDY BAR FOR SENATE, INC",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. BRAD SCHNEIDER",
+        "items": 3,
+        "total": 3500.0
+      },
+      {
+        "recipient": "ANGIE CRAIG",
+        "items": 2,
+        "total": 3500.0
+      },
+      {
+        "recipient": "JIM HIMES FOR CONGRESS",
+        "items": 2,
+        "total": 3500.0
+      },
+      {
+        "recipient": "RITCHIE TORRES",
+        "items": 3,
+        "total": 3500.0
+      },
+      {
+        "recipient": "BRYAN STEIL",
+        "items": 2,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. JASON T. SMITH",
+        "items": 1,
+        "total": 3500.0
+      },
+      {
+        "recipient": "REP. GARLAND ANDY BARR",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "SEN. TIM SHEEHY",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "BYRON DONALDS",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD J. TRUMP",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "FRENCH HILL FOR ARKANSAS; IN THE ARENA PAC; NRCC",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "NRSC; SAM BROWN FOR NEVADA; DUTY FIRST PAC",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "MIKE FLOOD",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "REP. WILEY NICKEL (D)",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "SAM BROWN",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "REP. ANDY BARR (R) AND NRCC",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "SENATOR DEB FISHER",
+        "items": 1,
+        "total": 3300.0
+      },
+      {
+        "recipient": "PATRICK MCHENRY",
+        "items": 2,
+        "total": 3100.0
+      },
+      {
+        "recipient": "SENATOR TIM SCOTT",
+        "items": 2,
+        "total": 3000.0
+      },
+      {
+        "recipient": "REP. ERIN HOUCHIN",
+        "items": 3,
+        "total": 3000.0
+      },
+      {
+        "recipient": "SENATOR THOM TILLIS",
+        "items": 2,
+        "total": 3000.0
+      },
+      {
+        "recipient": "SENATOR JOHN THUNE",
+        "items": 2,
+        "total": 3000.0
+      },
+      {
+        "recipient": "DONALD TRUMP",
+        "items": 3,
+        "total": 2975.0
+      },
+      {
+        "recipient": "REP. PATRICK TIMOTHY HENRY",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP. MAXINE WATERS",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP. SEAN PATRICK MALONEY",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "SEN. CHARLES E. SCHUMER",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "SEN. RONALD LEE WYDEN",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "SEN. RONALD LEE WYDEN (CONTRIBUTION REFUNDED ON 12/31/22)",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "PATICK MCHENRY",
+        "items": 1,
+        "total": 2820.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR J.D. VANCE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SEN. TIMOTHY E. SCOTT",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REP. PETE AGUILAR",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "VALUE IN ELECTING WOMEN POLITICAL ACTION COMMITTEE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "BYRON DONALD",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "CAREY FOR CONGRESS; CARRY ON PAC; NRCC",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SEN. DEB FISCHER",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REP. EUGENE VINDMAN",
+        "items": 3,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REP. STEVE SCALISE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "TOMORROW IS MEANINGFUL PAC - FEDERAL, TIM SCOTT FOR AMERICA, NRSC",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "TOM EMMER",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR RICK SCOTT",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR TIMOTHY SCOTT",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR TUBERVILLE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "DARREN SOTO FOR CONGRESS",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "NEW YORK STATE DEMOCRATIC COMMITTEE",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR DEB FISCHER",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REPRESENTATIVE BRYAN STEIL",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SENATOR STEVE DAINES",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "BLAKE MASTERS",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "MODERATE DEMOCRATS PAC",
+        "items": 1,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REP. MIKE HARIDOPOLOS",
+        "items": 2,
+        "total": 2500.0
+      },
+      {
+        "recipient": "REP. NYDIA VELAZQUEZ",
+        "items": 3,
+        "total": 2500.0
+      },
+      {
+        "recipient": "SEN. BEN RAY LUJAN",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. DEREK TRAN",
+        "items": 3,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. GRACE MENG",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. ADAM GRAY",
+        "items": 3,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. MARC VEASEY",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. WILLIAM HUIZENGA",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. BRENDAN BOYLE",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "SEN. STEVE DAINES",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. MIKIE SHERRILL",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. JARED MOSKOWITZ",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. WILEY NICKEL",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. JANELLE BYNUM",
+        "items": 3,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. BILL HAGERTY",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. VINCENTE GONZALEZ",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "SEN. THEODORE BUDD",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. MAX MILLER",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "SEN. JONI ERNST",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. LISA BLUNT ROCHESTER",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. JASMINE CROCKETT",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "DUSTY JOHNSON",
+        "items": 1,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. ERIC SORENSEN",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "REP. TIM KENNEDY",
+        "items": 2,
+        "total": 2000.0
+      },
+      {
+        "recipient": "DONALD J. TRUMP",
+        "items": 3,
+        "total": 1580.0
+      },
+      {
+        "recipient": "REP. WILLIAM P. HUIZENGA",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "BRIAN JACK",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "SEN. JOHN BOOZMAN (CONTRIBUTION REFUNDED ON 11/22/2022)",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. THOMAS SUOZZI",
+        "items": 3,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. JIM HIMES",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. GABE VASQUEZ",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "GILLIBRAND BROWN VICTORY FUND",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. DANIEL MEUSER",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. ROB MENENDEZ",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. ABRAHAM HAMADEH",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. DAVID S. SCHWEIKERT",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "KRISTEN MCDONALD RIVET",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. NICK BEGICH",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "SENATOR CATHERINE CORTEZ MASTO",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "SHOMARI FIGURES FOR CONGRESS",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. RITCHIE JOHN TORRES",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. DON DAVIS",
+        "items": 3,
+        "total": 1500.0
+      },
+      {
+        "recipient": "REP. WILLIAM TIMMONS",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "RUBEN GALLEGO",
+        "items": 2,
+        "total": 1500.0
+      },
+      {
+        "recipient": "KATHERINE CLARK",
+        "items": 1,
+        "total": 1500.0
+      },
+      {
+        "recipient": "HON. ADAM LAXALT",
+        "items": 1,
+        "total": 1250.0
+      },
+      {
+        "recipient": "BLOCKCHAIN ASSOCIATION POLITICAL ACTION COMMITTEE",
+        "items": 3,
+        "total": 1250.0
+      },
+      {
+        "recipient": "HON. HERSCHEL WALKER",
+        "items": 1,
+        "total": 1250.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE",
+        "items": 1,
+        "total": 1250.0
+      },
+      {
+        "recipient": "GILLIBRAND FOR SENATE",
+        "items": 2,
+        "total": 1250.0
+      },
+      {
+        "recipient": "REP. TIM MOORE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "ROHIT KHANNA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. GEORGE WHITESIDES",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. GABE AMO",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. DAVE MIN",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "GOV. JAMES CONLEY JUSTICE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "RON DESANTIS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "LUMMIS FOR WYOMING INC., STEER PAC, FIRST PRINCIPLES DIGITAL, NRSC",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ANN WAGNER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ADDISON MCDOWELL",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ZOE LOFGREN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "COLORADO DEMOCRATIC PARTY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. GLENN IVEY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. TROY DOWNING",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "BENNET COLORADO VICTORY FUND",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. MICHAEL CONAWAY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. ALEX PADILLA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. HALEY STEVENS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. LAURA GILLEN",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. DAVID SCHEWEIKERT",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. JOSH GOTTENHEIMER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. JIM JUSTICE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ZACH NUNN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "CARLINA RIVERA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. ANGELA ALSOBROOKS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. JACKY ROSEN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "BRITTANY PETTERSEN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. LUCY MCBATH",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. KATIE BOYD BRITT",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. SUZAN K. DELBENE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "ALSOBROOKS VICTORY FUND",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "DEN. MICHAEL D. CRAPO",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "RYAN RHODES, CANDIDATE, U.S. HOUSE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. LISA MCCLAIN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. BETH VAN DUYNE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "ERIN HOUCHIN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. MARIA ELVIRA SALAZAR AND NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE (NRSC)",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SAM LICCARDO",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. JOHN FETTERMAN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "BECCA BALINT",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. JIMMY PANETTA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. TROY CARTER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. MICHAEL LAWLER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. MARTIN HEINRICH",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ROBERT GARCIA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. MARK WARNER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. HENRY CUELLAR",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. SUZAN DELBENE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "CITIZENS FOR WATERS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "TED CRUZ",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "CANDIDATE SHOMARI FIGURES",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "TIM SHEEHY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. BLAKE MOORE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "BRAD SCHNEIDER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "LUMMIS FOR WYOMING INC.; STEER PAC",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. MICHELLE STEEL",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "ROBERT GARCIA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "LUMMIS VICTORY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ASHLEY HINSON",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. TED LIEU",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "HON. EDUARDO MORALES",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. DAVE JOYCE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "TED LIEU",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. BRADLEY S. SCHNEIDER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. ROBERT MENENDEZ",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SENATOR LUMMIS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. RANDALL FEENSTRA",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. BRADLEY SCHNEIDER",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. CLAUDIA TENNEY",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. MARLIN A. STUTZMAN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "MENENDEZ FOR SENATE",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "EMILY RANDALL",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. JULIE FEDORCHAK",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "CANDIDATE BRIAN JACK",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "ENVINSION NY PAC",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "MIKE FLOOD FOR CONGRESS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ANDREW GARBARINO",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "JASMINE FOR US",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "CANDIDATE DARDEN COPELAND",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. JIMMY GOMEZ",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. SHERROD BROWN",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "RO FOR CONGRESS INC",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. ROBERT J. MENENDEZ",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "JULIE JOHNSON",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. SUSIE LEE",
+        "items": 2,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. CHRIS COONS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. RUBEN GALLEGO",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "REP. JAMES BANKS",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "SEN. DAVE MCCORMICK",
+        "items": 1,
+        "total": 825.0
+      },
+      {
+        "recipient": "SEN. MICHAEL J. ROGERS",
+        "items": 1,
+        "total": 825.0
+      },
+      {
+        "recipient": "NATE MORRIS, CANDIDATE, U.S. SENATE",
+        "items": 1,
+        "total": 750.0
+      },
+      {
+        "recipient": "JACK BERGMAN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. VINCENTE GONZALEZ JR",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. GABRIEL VASQUEZ",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. VALERIE HOYLE",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SEN. RAPHAEL WARNOCK",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "LAURA GILLEN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. SHOMARI FIGURES",
+        "items": 2,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. RICHARD NEAL",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. DAN GOLDMAN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. MAGGIE GOODLANDER",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "VICTORY NOW FOR CASEY",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. BRITTANY LOUISE PETTERSEN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "EMMER FOR CONGRESS",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. SARAH ELIZABETH MCBRIDE",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "WILEY NICKEL",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "JAMES LEUSCHEN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. NELLIE POU",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. STEVEN HORSFOD",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "NIKKI BUDZINSKI",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "DNC SERVICES CORP/DEMOCRATIC NATIONAL COMMITTEE",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. YADIRA CARVEO",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SENATOR ALEX PADILLA",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. KRISTEN MCDONALD RIVET",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SENATOR KATIE BRITT (R-AL)",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. NELIDA POU",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "PATRICK BRANCO",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "JEFFRIES FOR CONGRESS",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SENATOR JOHN CURTIS",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "STEIL FOR WISCONSIN, INC. REPUBLICAN PARTY OF WISCONSIN ON WISCONSIN PAC NRCC",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SENATOR ANGELA ALSOBROOKS",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "BEN MCADAMS",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REPRESENTATIVE KATHERINE CLARK",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. MARY PELTOLA",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. ADRIANO ESPAILLAT",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "GILLIBRAND VICTORY FUND",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "JANELLE BYNUM",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SEN. LISA BLUNT ROCHESTER",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "CANDIDATE CAROLEENE DOBSON",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "CANDIDATE SHANELLE JACKSON",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SENATOR GALLEGO",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SEN. ROBERT CASEY",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. YEVGENY VINDMAN",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REPRESENTATIVE BRIAN JACK",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "TEAM HILL",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. MCDONALD RIVET",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "ADAM FRISCH",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "JOHN DEATON",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. RICHIE TORRES",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "KIRSTEN GILLIBRAND",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "KATHERINE CLARK FOR CONGRESS; FAIR SHOT PAC",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. VICENTE GONZALEZ",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "NEW DEM FUNDRAISER",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "CONGRESSWOMAN KRISTEN MCDONALD RIVET",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "TERRI SEWELL",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "REP. RUBEN GALLEGO",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "NELLIE POU",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "SEN. CATHERINE CORTEZ MASTO",
+        "items": 1,
+        "total": 350.0
+      },
+      {
+        "recipient": "REP. MARK ALFORD",
+        "items": 1,
+        "total": 300.0
+      },
+      {
+        "recipient": "JOHN BRADFORD",
+        "items": 1,
+        "total": 260.0
+      },
+      {
+        "recipient": "REP. MIKE LAWLER",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "JAMES LANKFORD",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "CANDIDATE MONICA TRANEL",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "DYLAN HEWITT, CANDIDATE, U.S. HOUSE",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "SENATOR JOHN KENNEDY",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. BILL FOSTER",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "CANDIDATE JAKE LEVINE",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "HON. JANELLE BYNUM",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. ANTHONY VARGAS",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "U.S. REP. MIKE QUIGLEY",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. JOSH RILEY",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. TERRI SEWELL",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "CANDIDATE GEORGE WHITESIDES",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. ANTHONY 'TONY\" VARGAS",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. JENNIFER WEXTON",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "HON. CURTIS HERTEL",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "SEN. BOB CASEY",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. ANDY KIM",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "REP. FRANK PALLONE",
+        "items": 1,
+        "total": 250.0
+      },
+      {
+        "recipient": "STATE REPRESENTATIVE RUDY SALAS",
+        "items": 1,
+        "total": 250.0
+      }
+    ],
+    "per_entity": [
+      {
+        "registrant_name": "COINBASE, INC.",
+        "total": 1696150.0,
+        "items": 318
+      },
+      {
+        "registrant_name": "GALAXY DIGITAL HOLDINGS LP",
+        "total": 1077050.0,
+        "items": 49
+      },
+      {
+        "registrant_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+        "total": 1051335.0,
+        "items": 30
+      },
+      {
+        "registrant_name": "PARADIGM OPERATIONS LP",
+        "total": 1017580.0,
+        "items": 11
+      },
+      {
+        "registrant_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+        "total": 1003150.0,
+        "items": 10
+      },
+      {
+        "registrant_name": "BLOCKCHAIN ASSOCIATION",
+        "total": 307440.0,
+        "items": 79
+      },
+      {
+        "registrant_name": "SOLANA POLICY INSTITUTE",
+        "total": 104250.0,
+        "items": 37
+      },
+      {
+        "registrant_name": "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)",
+        "total": 55220.0,
+        "items": 32
+      },
+      {
+        "registrant_name": "STELLAR DEVELOPMENT FOUNDATION",
+        "total": 24050.0,
+        "items": 32
+      },
+      {
+        "registrant_name": "DIGITAL CURRENCY GROUP",
+        "total": 16000.0,
+        "items": 18
+      },
+      {
+        "registrant_name": "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",
+        "total": 11250.0,
+        "items": 9
+      },
+      {
+        "registrant_name": "CRYPTO COUNCIL FOR INNOVATION",
+        "total": 3750.0,
+        "items": 4
+      },
+      {
+        "registrant_name": "RIPPLE",
+        "total": 500.0,
+        "items": 1
+      }
+    ],
+    "sample": [
+      {
+        "record_key": "eed937a6-446f-45aa-9637-0035a3c0a3c4",
+        "registrant_name": "GALAXY DIGITAL HOLDINGS LP",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "President Donald Trump",
+        "date": "2024-12-18"
+      },
+      {
+        "record_key": "2a1fbf86-edb4-4cf0-ad34-54a67d5988b5",
+        "registrant_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee, Inc.",
+        "date": "2024-12-16"
+      },
+      {
+        "record_key": "0b112e4f-0586-434f-9707-37730209d735",
+        "registrant_name": "COINBASE, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee, Inc.",
+        "date": "2024-12-02"
+      },
+      {
+        "record_key": "fbbc7ba4-2af2-4a58-9037-297406c0f69e",
+        "registrant_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Donald Trump/ J.D. Vance",
+        "date": "2024-12-04"
+      },
+      {
+        "record_key": "c19f5f4c-b60c-4f82-916e-2d0c60a5d78f",
+        "registrant_name": "PARADIGM OPERATIONS LP",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee",
+        "date": "2024-12-02"
+      },
+      {
+        "record_key": "8b21ddc4-ec17-41b5-9ec3-8e2ebf9ee648",
+        "registrant_name": "BLOCKCHAIN ASSOCIATION",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 53790,
+        "recipient": "Sen. Patrick Toomey",
+        "date": "2022-11-16"
+      },
+      {
+        "record_key": "0b112e4f-0586-434f-9707-37730209d735",
+        "registrant_name": "COINBASE, INC.",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 50000,
+        "recipient": "Congressional Hispanic Caucus Institute, Inc.",
+        "date": "2024-12-18"
+      },
+      {
+        "record_key": "a5822a04-964f-48dd-be4f-9f27f7d72388",
+        "registrant_name": "BLOCKCHAIN ASSOCIATION",
+        "filer_type": "lobbyist",
+        "contribution_type": "feca",
+        "amount": 36500,
+        "recipient": "Rep. Thomas Earl Emmer Jr.",
+        "date": "2022-04-08"
+      },
+      {
+        "record_key": "c2b1e500-2002-4b68-925d-b8c3f4284ab0",
+        "registrant_name": "SOLANA POLICY INSTITUTE",
+        "filer_type": "lobbyist",
+        "contribution_type": "feca",
+        "amount": 15000,
+        "recipient": "DSCC",
+        "date": "2025-05-23"
+      },
+      {
+        "record_key": "a9c734ce-13d1-4fc1-9076-eba92dc392ac",
+        "registrant_name": "COINBASE, INC.",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 15000,
+        "recipient": "Congressional Black Caucus Foundation",
+        "date": "2025-10-24"
+      }
+    ],
+    "member_rollup": {
+      "members": [
+        {
+          "bioguide_id": "V000137",
+          "name": "J.D. Vance",
+          "chamber": "Senate",
+          "state": "OH",
+          "parties": [
+            "R"
+          ],
+          "direct": 1002500.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 2,
+          "variants": [
+            {
+              "raw": "DONALD TRUMP/ J.D. VANCE",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 1000000.0,
+              "items": 1
+            },
+            {
+              "raw": "SENATOR J.D. VANCE",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2500.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 1002500.0,
+          "party_bracket": "(R-OH)"
+        },
+        {
+          "bioguide_id": "E000294",
+          "name": "Tom Emmer",
+          "chamber": "House",
+          "state": "MN",
+          "parties": [
+            "R"
+          ],
+          "direct": 76400.0,
+          "campaign-committee": 500.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 14,
+          "variants": [
+            {
+              "raw": "REP. THOMAS EARL EMMER JR",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 50000.0,
+              "items": 3
+            },
+            {
+              "raw": "REP. THOMAS EARL EMMER, JR",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 9300.0,
+              "items": 3
+            },
+            {
+              "raw": "REP. THOMAS EARL EMMER",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 9100.0,
+              "items": 2
+            },
+            {
+              "raw": "REP. TOM EMMER",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5500.0,
+              "items": 4
+            },
+            {
+              "raw": "TOM EMMER",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2500.0,
+              "items": 1
+            },
+            {
+              "raw": "EMMER FOR CONGRESS",
+              "tier": "campaign-committee",
+              "confidence": "linked",
+              "total": 500.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 76900.0,
+          "party_bracket": "(R-MN)"
+        },
+        {
+          "bioguide_id": "T000461",
+          "name": "Patrick J. Toomey",
+          "chamber": "Senate",
+          "state": "PA",
+          "parties": [
+            "R"
+          ],
+          "direct": 53790.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 1,
+          "variants": [
+            {
+              "raw": "SEN. PATRICK TOOMEY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 53790.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 53790.0,
+          "party_bracket": "(R-PA)"
+        },
+        {
+          "bioguide_id": "L000571",
+          "name": "Cynthia M. Lummis",
+          "chamber": "Senate",
+          "state": "WY",
+          "parties": [
+            "R"
+          ],
+          "direct": 45500.0,
+          "campaign-committee": 2000.0,
+          "leadership-pac": 1000.0,
+          "jfc": 6000.0,
+          "multi": 0.0,
+          "items": 20,
+          "variants": [
+            {
+              "raw": "SEN. CYNTHIA MARIE LUMMIS",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 23600.0,
+              "items": 5
+            },
+            {
+              "raw": "CYNTHIA LUMMIS",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 7000.0,
+              "items": 3
+            },
+            {
+              "raw": "SENATOR CYNTHIA LUMMIS",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5900.0,
+              "items": 3
+            },
+            {
+              "raw": "REP. CYNTHIA LUMMIS",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "LUMMIS VICTORY COMMITTEE",
+              "tier": "jfc-shared, unallocated",
+              "confidence": "inferred",
+              "total": 5000.0,
+              "items": 2
+            },
+            {
+              "raw": "SEN. CYNTHIA LUMMIS",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 4000.0,
+              "items": 2
+            },
+            {
+              "raw": "LUMMIS VICTORY",
+              "tier": "jfc-shared, unallocated",
+              "confidence": "prefix",
+              "total": 1000.0,
+              "items": 1
+            },
+            {
+              "raw": "LUMMIS FOR WYOMING INC.; STEER PAC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 1000.0,
+              "items": 1
+            },
+            {
+              "raw": "LUMMIS FOR WYOMING INC.; STEER PAC",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 1000.0,
+              "items": 1
+            },
+            {
+              "raw": "LUMMIS FOR WYOMING INC., STEER PAC, FIRST PRINCIPLES DIGITAL, NRSC",
+              "tier": "campaign-committee",
+              "confidence": "prefix",
+              "total": 1000.0,
+              "items": 1
+            }
+          ],
+          "inferred": true,
+          "total_attributable": 48500.0,
+          "party_bracket": "(R-WY)"
+        },
+        {
+          "bioguide_id": "H001072",
+          "name": "J. French Hill",
+          "chamber": "House",
+          "state": "AR",
+          "parties": [
+            "R"
+          ],
+          "direct": 37500.0,
+          "campaign-committee": 6800.0,
+          "leadership-pac": 3300.0,
+          "jfc": 500.0,
+          "multi": 0.0,
+          "items": 24,
+          "variants": [
+            {
+              "raw": "REP. JAMES FRENCH HILL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 24800.0,
+              "items": 9
+            },
+            {
+              "raw": "REP. FRENCH HILL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 7250.0,
+              "items": 6
+            },
+            {
+              "raw": "FRENCH HILL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5450.0,
+              "items": 5
+            },
+            {
+              "raw": "FRENCH HILL FOR ARKANSAS IN THE ARENA PAC NRCC",
+              "tier": "campaign-committee",
+              "confidence": "prefix",
+              "total": 3500.0,
+              "items": 1
+            },
+            {
+              "raw": "FRENCH HILL FOR ARKANSAS; IN THE ARENA PAC; NRCC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 3300.0,
+              "items": 1
+            },
+            {
+              "raw": "FRENCH HILL FOR ARKANSAS; IN THE ARENA PAC; NRCC",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 3300.0,
+              "items": 1
+            },
+            {
+              "raw": "TEAM HILL",
+              "tier": "jfc-shared, unallocated",
+              "confidence": "inferred",
+              "total": 500.0,
+              "items": 1
+            }
+          ],
+          "inferred": true,
+          "total_attributable": 47600.0,
+          "party_bracket": "(R-AR)"
+        },
+        {
+          "bioguide_id": "S001213",
+          "name": "Bryan Steil",
+          "chamber": "House",
+          "state": "WI",
+          "parties": [
+            "R"
+          ],
+          "direct": 12000.0,
+          "campaign-committee": 11000.0,
+          "leadership-pac": 10500.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 16,
+          "variants": [
+            {
+              "raw": "STEIL FOR WISCONSIN, INC.; REPUBLICAN PARTY OF WISCONSIN; ON WISCONSIN PAC; NRCC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 10500.0,
+              "items": 4
+            },
+            {
+              "raw": "STEIL FOR WISCONSIN, INC.; REPUBLICAN PARTY OF WISCONSIN; ON WISCONSIN PAC; NRCC",
+              "tier": "leadership-pac",
+              "confidence": "compound:prefix",
+              "total": 10500.0,
+              "items": 4
+            },
+            {
+              "raw": "REP. BRYAN GEORGE STEIL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 6000.0,
+              "items": 4
+            },
+            {
+              "raw": "BRYAN STEIL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3500.0,
+              "items": 2
+            },
+            {
+              "raw": "REPRESENTATIVE BRYAN STEIL",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2500.0,
+              "items": 1
+            },
+            {
+              "raw": "STEIL FOR WISCONSIN, INC. REPUBLICAN PARTY OF WISCONSIN ON WISCONSIN PAC NRCC",
+              "tier": "campaign-committee",
+              "confidence": "prefix",
+              "total": 500.0,
+              "items": 1
+            }
+          ],
+          "inferred": true,
+          "total_attributable": 33500.0,
+          "party_bracket": "(R-WI)"
+        },
+        {
+          "bioguide_id": "S001184",
+          "name": "Tim Scott",
+          "chamber": "Senate",
+          "state": "SC",
+          "parties": [
+            "R"
+          ],
+          "direct": 22900.0,
+          "campaign-committee": 5000.0,
+          "leadership-pac": 5000.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 12,
+          "variants": [
+            {
+              "raw": "SEN. TIMOTHY SCOTT",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 9900.0,
+              "items": 2
+            },
+            {
+              "raw": "TOMORROW IS MEANINGFUL PAC - FEDERAL; TIM SCOTT FOR AMERICA; NRSC",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "TOMORROW IS MEANINGFUL PAC - FEDERAL; TIM SCOTT FOR AMERICA; NRSC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "SEN. TIM SCOTT",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5000.0,
+              "items": 4
+            },
+            {
+              "raw": "SENATOR TIM SCOTT",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3000.0,
+              "items": 2
+            },
+            {
+              "raw": "SENATOR TIMOTHY SCOTT",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2500.0,
+              "items": 1
+            },
+            {
+              "raw": "SEN. TIMOTHY E. SCOTT",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2500.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 32900.0,
+          "party_bracket": "(R-SC)"
+        },
+        {
+          "bioguide_id": "H000601",
+          "name": "Bill Hagerty",
+          "chamber": "Senate",
+          "state": "TN",
+          "parties": [
+            "R"
+          ],
+          "direct": 28000.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 7,
+          "variants": [
+            {
+              "raw": "SENATOR BILL HAGERTY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 16000.0,
+              "items": 3
+            },
+            {
+              "raw": "SEN. BILL HAGERTY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5000.0,
+              "items": 2
+            },
+            {
+              "raw": "BILL HAGERTY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "REP. BILL HAGERTY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2000.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 28000.0,
+          "party_bracket": "(R-TN)"
+        },
+        {
+          "bioguide_id": "M001242",
+          "name": "Bernie Moreno",
+          "chamber": "Senate",
+          "state": "OH",
+          "parties": [
+            "R"
+          ],
+          "direct": 15925.0,
+          "campaign-committee": 5000.0,
+          "leadership-pac": 5000.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 11,
+          "variants": [
+            {
+              "raw": "BERNIE MORENO",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 11800.0,
+              "items": 7
+            },
+            {
+              "raw": "SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "SEN. BERNIE MORENO",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 4125.0,
+              "items": 2
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 25925.0,
+          "party_bracket": "(R-OH)"
+        },
+        {
+          "bioguide_id": "M001243",
+          "name": "David McCormick",
+          "chamber": "Senate",
+          "state": "PA",
+          "parties": [
+            "R"
+          ],
+          "direct": 825.0,
+          "campaign-committee": 18200.0,
+          "leadership-pac": 6600.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 5,
+          "variants": [
+            {
+              "raw": "DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 13200.0,
+              "items": 2
+            },
+            {
+              "raw": "DAVE MCCORMICK FOR US SENATE; FRIENDS OF DAVE MCCORMICK; NRSC; PENNSYLVANIA HONOR; REPUBLICAN FEDERAL COMMITTEE OF PENNSYLVANIA",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 6600.0,
+              "items": 1
+            },
+            {
+              "raw": "SAM BROWN FOR NV;BERNIE MORENO FOR SENATE;ROGERS FOR SENATE;FRIENDS OF DAVE MCCORMICK;DUTY FIRST PAC;BEST AT BRINGING ENTREPRENEURIAL RESULTS NEVER IMAGINED OR ENVISIONED PAC;PA HONOR;MR PAC; NRSC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 5000.0,
+              "items": 1
+            },
+            {
+              "raw": "SEN. DAVE MCCORMICK",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 825.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 25625.0,
+          "party_bracket": "(R-PA)"
+        },
+        {
+          "bioguide_id": "T000486",
+          "name": "Ritchie Torres",
+          "chamber": "House",
+          "state": "NY",
+          "parties": [
+            "D"
+          ],
+          "direct": 21500.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 12,
+          "variants": [
+            {
+              "raw": "REP. RITCHIE TORRES",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 16000.0,
+              "items": 7
+            },
+            {
+              "raw": "RITCHIE TORRES",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3500.0,
+              "items": 3
+            },
+            {
+              "raw": "REP. RITCHIE JOHN TORRES",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 1500.0,
+              "items": 1
+            },
+            {
+              "raw": "REP. RICHIE TORRES",
+              "tier": "direct",
+              "confidence": "title-initial",
+              "total": 500.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 21500.0,
+          "party_bracket": "(D-NY)"
+        },
+        {
+          "bioguide_id": "C001119",
+          "name": "Angie Craig",
+          "chamber": "House",
+          "state": "MN",
+          "parties": [
+            "D"
+          ],
+          "direct": 21000.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 9,
+          "variants": [
+            {
+              "raw": "REP. ANGIE CRAIG",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 17500.0,
+              "items": 7
+            },
+            {
+              "raw": "ANGIE CRAIG",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3500.0,
+              "items": 2
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 21000.0,
+          "party_bracket": "(D-MN)"
+        },
+        {
+          "bioguide_id": "J000301",
+          "name": "Dusty Johnson",
+          "chamber": "House",
+          "state": "SD",
+          "parties": [
+            "R"
+          ],
+          "direct": 6500.0,
+          "campaign-committee": 4500.0,
+          "leadership-pac": 4500.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 9,
+          "variants": [
+            {
+              "raw": "DAKOTA LEADERSHIP PAC; FRIENDS OF DUSTY JOHNSON; DUSTY PAC",
+              "tier": "leadership-pac",
+              "confidence": "compound:linked",
+              "total": 4500.0,
+              "items": 2
+            },
+            {
+              "raw": "DAKOTA LEADERSHIP PAC; FRIENDS OF DUSTY JOHNSON; DUSTY PAC",
+              "tier": "campaign-committee",
+              "confidence": "compound:linked",
+              "total": 4500.0,
+              "items": 2
+            },
+            {
+              "raw": "REP. DUSTY JOHNSON",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 4500.0,
+              "items": 4
+            },
+            {
+              "raw": "DUSTY JOHNSON",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 2000.0,
+              "items": 1
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 15500.0,
+          "party_bracket": "(R-SD)"
+        },
+        {
+          "bioguide_id": "B001282",
+          "name": "Andy Barr",
+          "chamber": "House",
+          "state": "KY",
+          "parties": [
+            "R"
+          ],
+          "direct": 11800.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 3500.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 8,
+          "variants": [
+            {
+              "raw": "REP. ANDY BARR",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 8500.0,
+              "items": 6
+            },
+            {
+              "raw": "BUILDING AMERICA'S REPUBLICAN REPRESENTATION PAC, KEEP AMERICA GREAT PAC, INC., ANDY BAR FOR SENATE, INC",
+              "tier": "leadership-pac",
+              "confidence": "prefix",
+              "total": 3500.0,
+              "items": 1
+            },
+            {
+              "raw": "REP. GARLAND ANDY BARR",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3300.0,
+              "items": 1
+            }
+          ],
+          "inferred": true,
+          "total_attributable": 15300.0,
+          "party_bracket": "(R-KY)"
+        },
+        {
+          "bioguide_id": "M001156",
+          "name": "Patrick T. McHenry",
+          "chamber": "House",
+          "state": "NC",
+          "parties": [
+            "R"
+          ],
+          "direct": 14900.0,
+          "campaign-committee": 0.0,
+          "leadership-pac": 0.0,
+          "jfc": 0.0,
+          "multi": 0.0,
+          "items": 7,
+          "variants": [
+            {
+              "raw": "REP. PATRICK TIMOTHY MCHENRY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 8300.0,
+              "items": 2
+            },
+            {
+              "raw": "REP. PATRICK MCHENRY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3500.0,
+              "items": 3
+            },
+            {
+              "raw": "PATRICK MCHENRY",
+              "tier": "direct",
+              "confidence": "matched",
+              "total": 3100.0,
+              "items": 2
+            }
+          ],
+          "inferred": false,
+          "total_attributable": 14900.0,
+          "party_bracket": "(R-NC)"
+        }
+      ],
+      "n_members": 171,
+      "n_ambiguous_items": 1
+    }
+  }
+}

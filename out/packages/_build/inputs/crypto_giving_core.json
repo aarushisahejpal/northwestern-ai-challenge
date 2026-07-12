@@ -1,0 +1,1431 @@
+{
+  "query": "222 entities from crypto_roster_core.txt",
+  "resolved_entities": [
+    {
+      "entity_id": "registrant:401103593",
+      "canonical_name": "COINBASE, INC."
+    },
+    {
+      "entity_id": "registrant:401103770",
+      "canonical_name": "PAYPAL, INC."
+    },
+    {
+      "entity_id": "registrant:401107058",
+      "canonical_name": "CRYPTO COUNCIL FOR INNOVATION"
+    },
+    {
+      "entity_id": "registrant:401106475",
+      "canonical_name": "DEFI EDUCATION FUND"
+    },
+    {
+      "entity_id": "registrant:40156",
+      "canonical_name": "VISA INC."
+    },
+    {
+      "entity_id": "registrant:23997",
+      "canonical_name": "MASTERCARD WORLDWIDE"
+    },
+    {
+      "entity_id": "registrant:401104999",
+      "canonical_name": "BLOCKCHAIN ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401107131",
+      "canonical_name": "FILECOIN FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:401107839",
+      "canonical_name": "PARADIGM OPERATIONS LP"
+    },
+    {
+      "entity_id": "registrant:9033",
+      "canonical_name": "CME GROUP, INC."
+    },
+    {
+      "entity_id": "registrant:401105904",
+      "canonical_name": "ROBINHOOD MARKETS, INC."
+    },
+    {
+      "entity_id": "registrant:401104589",
+      "canonical_name": "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)"
+    },
+    {
+      "entity_id": "registrant:401106823",
+      "canonical_name": "ANCHOR LABS, INC."
+    },
+    {
+      "entity_id": "registrant:401103932",
+      "canonical_name": "CITIGROUP WASHINGTON, INC."
+    },
+    {
+      "entity_id": "registrant:21687",
+      "canonical_name": "NATIONAL VENTURE CAPITAL ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:15678",
+      "canonical_name": "FUTURES INDUSTRY ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:400761286",
+      "canonical_name": "TD BANK, NA"
+    },
+    {
+      "entity_id": "registrant:401106760",
+      "canonical_name": "DIGITAL CURRENCY GROUP"
+    },
+    {
+      "entity_id": "registrant:401105816",
+      "canonical_name": "STELLAR DEVELOPMENT FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:1785",
+      "canonical_name": "AMERICAN BANKERS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401104319",
+      "canonical_name": "Fidelity National Information Systems, Inc. and Subsidiaries"
+    },
+    {
+      "entity_id": "registrant:400621887",
+      "canonical_name": "NORTHERN TRUST CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106310",
+      "canonical_name": "MOODY'S CORPORATION"
+    },
+    {
+      "entity_id": "registrant:401104268",
+      "canonical_name": "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS"
+    },
+    {
+      "entity_id": "registrant:401107189",
+      "canonical_name": "WEB 3.0 TECHNOLOGIES FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:400534597",
+      "canonical_name": "BLACKROCK FUNDS SERVICES GROUP, LLC"
+    },
+    {
+      "entity_id": "registrant:48816",
+      "canonical_name": "FMR LLC"
+    },
+    {
+      "entity_id": "registrant:401107115",
+      "canonical_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)"
+    },
+    {
+      "entity_id": "registrant:323672",
+      "canonical_name": "WESTERN UNION"
+    },
+    {
+      "entity_id": "registrant:401104962",
+      "canonical_name": "ACCENTURE FEDERAL SERVICES LLC"
+    },
+    {
+      "entity_id": "registrant:401109518",
+      "canonical_name": "SOLANA POLICY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401109428",
+      "canonical_name": "UNISWAP LABS"
+    },
+    {
+      "entity_id": "registrant:11322",
+      "canonical_name": "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS"
+    },
+    {
+      "entity_id": "registrant:27115",
+      "canonical_name": "NASDAQ, INC."
+    },
+    {
+      "entity_id": "registrant:2274",
+      "canonical_name": "AMERICAN EXPRESS COMPANY"
+    },
+    {
+      "entity_id": "registrant:401104925",
+      "canonical_name": "AMERICANS FOR FINANCIAL REFORM"
+    },
+    {
+      "entity_id": "registrant:19194",
+      "canonical_name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA"
+    },
+    {
+      "entity_id": "registrant:73293",
+      "canonical_name": "CONSUMER TECHNOLOGY ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401106476",
+      "canonical_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM"
+    },
+    {
+      "entity_id": "registrant:32362",
+      "canonical_name": "PUBLIC CITIZEN"
+    },
+    {
+      "entity_id": "registrant:54494",
+      "canonical_name": "AMAZON.COM SERVICES LLC"
+    },
+    {
+      "entity_id": "registrant:4733",
+      "canonical_name": "AMERICAN ASSOCIATION FOR JUSTICE"
+    },
+    {
+      "entity_id": "registrant:313010",
+      "canonical_name": "MANAGED FUNDS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401104236",
+      "canonical_name": "JPMORGAN CHASE HOLDINGS LLC"
+    },
+    {
+      "entity_id": "registrant:401106522",
+      "canonical_name": "WESTERN ALLIANCE BANCORPORATION"
+    },
+    {
+      "entity_id": "registrant:401106447",
+      "canonical_name": "GALAXY DIGITAL HOLDINGS LP"
+    },
+    {
+      "entity_id": "registrant:1694",
+      "canonical_name": "AARP"
+    },
+    {
+      "entity_id": "registrant:26400",
+      "canonical_name": "BANK OF AMERICA CORPORATION"
+    },
+    {
+      "entity_id": "registrant:83854",
+      "canonical_name": "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES"
+    },
+    {
+      "entity_id": "registrant:401103094",
+      "canonical_name": "Electronic Transactions Association"
+    },
+    {
+      "entity_id": "registrant:48510",
+      "canonical_name": "CBOE GLOBAL MARKETS, INC."
+    },
+    {
+      "entity_id": "registrant:285494",
+      "canonical_name": "INSURED RETIREMENT INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401104951",
+      "canonical_name": "CROSS RIVER BANK"
+    },
+    {
+      "entity_id": "registrant:400531588",
+      "canonical_name": "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS"
+    },
+    {
+      "entity_id": "registrant:401103843",
+      "canonical_name": "CROWE LLP"
+    },
+    {
+      "entity_id": "registrant:25157",
+      "canonical_name": "MICHIGAN CREDIT UNION LEAGUE"
+    },
+    {
+      "entity_id": "registrant:10627",
+      "canonical_name": "CONSUMER BANKERS ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:25842",
+      "canonical_name": "MORGAN STANLEY & CO. LLC"
+    },
+    {
+      "entity_id": "registrant:83535",
+      "canonical_name": "FINANCIAL SERVICES FORUM"
+    },
+    {
+      "entity_id": "registrant:22371",
+      "canonical_name": "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS"
+    },
+    {
+      "entity_id": "registrant:401105434",
+      "canonical_name": "GLOBAL PAYMENTS, INC."
+    },
+    {
+      "entity_id": "registrant:401103625",
+      "canonical_name": "MONEYGRAM INTERNATIONAL INC."
+    },
+    {
+      "entity_id": "registrant:29620",
+      "canonical_name": "WELLS FARGO & COMPANY"
+    },
+    {
+      "entity_id": "registrant:18694",
+      "canonical_name": "HSBC TECHNOLOGY AND SERVICES USA INC."
+    },
+    {
+      "entity_id": "registrant:24863",
+      "canonical_name": "MELLON FINANCIAL SERVICES CORPORATION #1"
+    },
+    {
+      "entity_id": "registrant:77435",
+      "canonical_name": "HUNTINGTON BANCSHARES INCORPORATED"
+    },
+    {
+      "entity_id": "registrant:401105885",
+      "canonical_name": "AMERICAN SECURITIES ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401106197",
+      "canonical_name": "CHAMBER OF PROGRESS"
+    },
+    {
+      "entity_id": "registrant:38756",
+      "canonical_name": "CHAMBER OF COMMERCE OF THE U.S.A."
+    },
+    {
+      "entity_id": "registrant:23986",
+      "canonical_name": "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY"
+    },
+    {
+      "entity_id": "registrant:283914",
+      "canonical_name": "FIFTH THIRD BANCORP"
+    },
+    {
+      "entity_id": "registrant:401106233",
+      "canonical_name": "STRIPE, INC."
+    },
+    {
+      "entity_id": "registrant:5290",
+      "canonical_name": "BANK POLICY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:401107501",
+      "canonical_name": "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES"
+    },
+    {
+      "entity_id": "registrant:28925",
+      "canonical_name": "NCR VOYIX CORPORATION (FKA NCR CORPORATION)"
+    },
+    {
+      "entity_id": "registrant:401108875",
+      "canonical_name": "CLEANSPARK, INC"
+    },
+    {
+      "entity_id": "registrant:401105527",
+      "canonical_name": "ATOLLetc LLC"
+    },
+    {
+      "entity_id": "registrant:401109580",
+      "canonical_name": "PwC US Group LLP (fka PRICEWATERHOUSECOOPERS)"
+    },
+    {
+      "entity_id": "registrant:401105012",
+      "canonical_name": "BNP PARIBAS RCC, INC."
+    },
+    {
+      "entity_id": "registrant:401106701",
+      "canonical_name": "WEST REALM SHIRES SERVICES, INC. D/B/A FTX US"
+    },
+    {
+      "entity_id": "registrant:401109215",
+      "canonical_name": "EXODUS MOVEMENT, INC."
+    },
+    {
+      "entity_id": "registrant:400386789",
+      "canonical_name": "NATIONAL FOOTBALL LEAGUE"
+    },
+    {
+      "entity_id": "registrant:401105867",
+      "canonical_name": "HUMANITY FORWARD"
+    },
+    {
+      "entity_id": "registrant:28663",
+      "canonical_name": "NATIONAL TAXPAYERS UNION"
+    },
+    {
+      "entity_id": "registrant:401109113",
+      "canonical_name": "DIGITAL ENERGY COUNCIL"
+    },
+    {
+      "entity_id": "registrant:401103225",
+      "canonical_name": "AMERICANS FOR PROSPERITY"
+    },
+    {
+      "entity_id": "registrant:401107689",
+      "canonical_name": "LONDON STOCK EXCHANGE GROUP"
+    },
+    {
+      "entity_id": "registrant:401105062",
+      "canonical_name": "STANDARD CHARTERED BANK"
+    },
+    {
+      "entity_id": "registrant:401109675",
+      "canonical_name": "JUMP CRYPTO HOLDINGS LLC"
+    },
+    {
+      "entity_id": "registrant:401104412",
+      "canonical_name": "THE INSTITUTE OF INTERNAL AUDITORS"
+    },
+    {
+      "entity_id": "registrant:401109106",
+      "canonical_name": "DECENTRALIZATION RESEARCH CENTER"
+    },
+    {
+      "entity_id": "registrant:401106716",
+      "canonical_name": "TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)"
+    },
+    {
+      "entity_id": "registrant:19877",
+      "canonical_name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)"
+    },
+    {
+      "entity_id": "registrant:74534",
+      "canonical_name": "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)"
+    },
+    {
+      "entity_id": "registrant:69116",
+      "canonical_name": "TECHNOLOGY NETWORK AKA TECHNET"
+    },
+    {
+      "entity_id": "registrant:401108418",
+      "canonical_name": "SMBC AMERICAS HOLDINGS, INC."
+    },
+    {
+      "entity_id": "registrant:31667",
+      "canonical_name": "THE PNC FINANCIAL SERVICES GROUP"
+    },
+    {
+      "entity_id": "registrant:401105458",
+      "canonical_name": "FDD ACTION"
+    },
+    {
+      "entity_id": "registrant:401109630",
+      "canonical_name": "BITDEER TECHNOLOGIES GROUP"
+    },
+    {
+      "entity_id": "registrant:401109833",
+      "canonical_name": "SMARTCONTRACT INC."
+    },
+    {
+      "entity_id": "registrant:20128",
+      "canonical_name": "INVESTMENT COMPANY INSTITUTE"
+    },
+    {
+      "entity_id": "registrant:3960",
+      "canonical_name": "ACCENTURE, LLP"
+    },
+    {
+      "entity_id": "registrant:400503478",
+      "canonical_name": "ALTERNATIVE INVESTMENT MANAGEMENT ASSOCIATION"
+    },
+    {
+      "entity_id": "registrant:401103603",
+      "canonical_name": "VMWARE, INC."
+    },
+    {
+      "entity_id": "registrant:401108414",
+      "canonical_name": "WORLDPAY"
+    },
+    {
+      "entity_id": "registrant:CHAMBER OF DIGITAL COMMERCE",
+      "canonical_name": "Chamber of Digital Commerce"
+    },
+    {
+      "entity_id": "registrant:401106809",
+      "canonical_name": "CELO FOUNDATION"
+    },
+    {
+      "entity_id": "registrant:401108761",
+      "canonical_name": "PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC"
+    },
+    {
+      "entity_id": "registrant:401108118",
+      "canonical_name": "Nova Labs, Inc."
+    }
+  ],
+  "ld203_filer_names": [
+    "AARP",
+    "ACCENTURE FEDERAL SERVICES LLC",
+    "ACCENTURE, LLP",
+    "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS",
+    "ALTERNATIVE INVESTMENT MANAGEMENT ASSOCIATION",
+    "AMAZON.COM SERVICES LLC",
+    "AMERICAN ASSOCIATION FOR JUSTICE",
+    "AMERICAN BANKERS ASSOCIATION",
+    "AMERICAN EXPRESS COMPANY",
+    "AMERICAN SECURITIES ASSOCIATION",
+    "AMERICANS FOR FINANCIAL REFORM",
+    "AMERICANS FOR PROSPERITY",
+    "ANCHOR LABS, INC.",
+    "ATOLLETC LLC",
+    "BANK OF AMERICA CORPORATION",
+    "BANK POLICY INSTITUTE",
+    "BITDEER TECHNOLOGIES GROUP",
+    "BLACKROCK FUNDS SERVICES GROUP, LLC",
+    "BLOCKCHAIN ASSOCIATION",
+    "BNP PARIBAS RCC, INC.",
+    "CBOE GLOBAL MARKETS, INC.",
+    "CELO FOUNDATION",
+    "CHAMBER OF COMMERCE OF THE U.S.A.",
+    "CHAMBER OF PROGRESS",
+    "CITIGROUP WASHINGTON, INC.",
+    "CLEANSPARK, INC",
+    "CME GROUP, INC.",
+    "COINBASE, INC.",
+    "COMMUNITY BANKERS ASSOCIATION OF ILLINOIS",
+    "CONSUMER BANKERS ASSOCIATION",
+    "CONSUMER TECHNOLOGY ASSOCIATION",
+    "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS",
+    "CROSS RIVER BANK",
+    "CROWE LLP",
+    "CRYPTO COUNCIL FOR INNOVATION",
+    "DECENTRALIZATION RESEARCH CENTER",
+    "DEFI EDUCATION FUND",
+    "DIGITAL CURRENCY GROUP",
+    "DIGITAL ENERGY COUNCIL",
+    "ELECTRONIC TRANSACTIONS ASSOCIATION",
+    "EXODUS MOVEMENT, INC.",
+    "FDD ACTION",
+    "FIDELITY NATIONAL INFORMATION SYSTEMS, INC. AND SUBSIDIARIES",
+    "FIFTH THIRD BANCORP",
+    "FILECOIN FOUNDATION",
+    "FINANCIAL SERVICES FORUM",
+    "FMR LLC",
+    "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+    "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",
+    "FUTURES INDUSTRY ASSOCIATION",
+    "GALAXY DIGITAL HOLDINGS LP",
+    "GLOBAL PAYMENTS, INC.",
+    "HSBC TECHNOLOGY AND SERVICES USA INC.",
+    "HUMANITY FORWARD",
+    "HUNTINGTON BANCSHARES INCORPORATED",
+    "INDEPENDENT COMMUNITY BANKERS OF AMERICA",
+    "INSURED RETIREMENT INSTITUTE",
+    "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)",
+    "INVESTMENT COMPANY INSTITUTE",
+    "JPMORGAN CHASE HOLDINGS LLC",
+    "JUMP CRYPTO HOLDINGS LLC",
+    "LEADERSHIP CONFERENCE ON CIVIL AND HUMAN RIGHTS",
+    "LONDON STOCK EXCHANGE GROUP",
+    "MANAGED FUNDS ASSOCIATION",
+    "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+    "MASTERCARD WORLDWIDE",
+    "MELLON FINANCIAL SERVICES CORPORATION #1",
+    "MICHIGAN CREDIT UNION LEAGUE",
+    "MONEYGRAM INTERNATIONAL INC.",
+    "MOODY'S CORPORATION",
+    "MORGAN STANLEY & CO. LLC",
+    "NASDAQ, INC.",
+    "NATIONAL FOOTBALL LEAGUE",
+    "NATIONAL TAXPAYERS UNION",
+    "NATIONAL VENTURE CAPITAL ASSOCIATION",
+    "NCR VOYIX CORPORATION (FKA NCR CORPORATION)",
+    "NORTHERN TRUST CORPORATION",
+    "NOVA LABS, INC.",
+    "PARADIGM OPERATIONS LP",
+    "PAYPAL, INC.",
+    "PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC",
+    "PAYWARD",
+    "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+    "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",
+    "PUBLIC CITIZEN",
+    "PWC US GROUP LLP",
+    "ROBINHOOD MARKETS, INC.",
+    "SMARTCONTRACT INC.",
+    "SMBC AMERICAS HOLDINGS, INC.",
+    "SOLANA POLICY INSTITUTE",
+    "STANDARD CHARTERED BANK",
+    "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES",
+    "STELLAR DEVELOPMENT FOUNDATION",
+    "STRIPE, INC.",
+    "TD BANK, NA",
+    "TECHNOLOGY NETWORK AKA TECHNET",
+    "THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)",
+    "THE INSTITUTE OF INTERNAL AUDITORS",
+    "THE PNC FINANCIAL SERVICES GROUP",
+    "TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)",
+    "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)",
+    "UNISWAP LABS",
+    "VISA INC.",
+    "VMWARE, INC.",
+    "WEB 3.0 TECHNOLOGIES FOUNDATION",
+    "WELLS FARGO & COMPANY",
+    "WEST REALM SHIRES SERVICES, INC. D/B/A FTX US",
+    "WESTERN ALLIANCE BANCORPORATION",
+    "WESTERN UNION",
+    "WORLDPAY"
+  ],
+  "client_only": [
+    "Ava Labs, Inc.",
+    "Ripple Labs Inc.",
+    "A16Z CAPITAL MANAGEMENT LLC (F/K/A AH CAPITAL MANAGEMENT L.L.C.)",
+    "Chainalysis Inc.",
+    "RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",
+    "Securities Industry and Financial Markets Association (SIFMA)",
+    "Dapper Labs Inc.",
+    "Paxos Trust Company, LLC",
+    "Regions Financial Corporation",
+    "PAYWARD INC D/B/A KRAKEN",
+    "Cornerstone Government Affairs obo Circle Internet Financial, Inc.",
+    "ConsenSys Software Inc.",
+    "UNIVERSAL NAVIGATION, INC. (D/B/A UNISWAP LABS)",
+    "Binance Holdings Limited",
+    "Polygon Labs Services (Switzerland) AG",
+    "Hedera Hashgraph, LLC",
+    "ATMOSPHERE I, LLC, FORMERLY IGNEIO, LLC",
+    "GLOBAL TRADING SYSTEMS, LLC",
+    "BAM Trading Services, Inc./Binance.US",
+    "American Transaction Processors Coalition",
+    "LMAX Group",
+    "VaultLink Inc.",
+    "MARATHON DIGITAL HOLDINGS, INC.",
+    "OZONE NETWORKS, INC. D/B/A OPENSEA",
+    "AngelList",
+    "TAXBIT INC.",
+    "BITCOIN ASSOCIATION FOR BSV",
+    "LAW OFFICES OF MICHAEL JASON LEE, APLC (ON BEHALF OF TETHER OPERATIONS LIMITED)",
+    "Mastercard International Incorporated",
+    "Tether Operations, S.A. de C.V.",
+    "FIDELITY INVESTMENTS",
+    "ORCHID LABS, INC.",
+    "Credit Suisse Securities (USA) LLC",
+    "JARDEN ZINC PRODUCTS",
+    "DIGITAL ASSET (US) CORP",
+    "Sujitech, LLC",
+    "IEX Group, Inc.",
+    "GRAYSCALE INVESTMENTS, LLC",
+    "COINFLIP",
+    "FORIS DAX MARKETS, INC. DBA CRYPTO.COM",
+    "DYDX TRADING INC.",
+    "Proof of Stake Alliance",
+    "BITWISE ASSET MANAGEMENT",
+    "NEW YORK STATE BAR ASSOCIATION",
+    "COMMITTEE ON CAPITAL MARKETS REGULATION",
+    "Ledger SAS",
+    "FALCONX BRAVO INC.",
+    "Sorare SAS",
+    "Flexa Inc.",
+    "NORTH ISLAND VENTURES, LLC",
+    "COINREGTECH, LLC",
+    "SIEVAKO",
+    "CF Secured LLC",
+    "THE CLEARING HOUSE ASSOCIATION",
+    "MAYER BROWN LLP OBO CIRCLE INTERNET FINANCIAL, INC.",
+    "GPD Holdings LLC d/b/a CoinFlip",
+    "TRM LABS, INC.",
+    "CHIA NETWORKS",
+    "CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP",
+    "SWIFT, INC.",
+    "MELLON FINANCIAL SERVICES CORPORTATION #1",
+    "GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION D.B.A GLOBAL DCA",
+    "UNICOIN",
+    "BRALE INC.",
+    "TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.)",
+    "PROSUS GROUP N.V.",
+    "Securitize, Inc.",
+    "CHIA NETWORK, INC.",
+    "Charles Schwab & Co., Inc.",
+    "OKCOIN USA INC.",
+    "THE PAYMENT CHOICE COALITION",
+    "ECURRENCY",
+    "WILLIAMS AND JENSEN, PLLC ON BEHALF OF RIPPLE LABS, INC.",
+    "SOLANA FOUNDATION",
+    "ATLAS CROSSING LLC O/B/O GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION",
+    "GENRAE",
+    "SAGINT",
+    "Prometheum",
+    "GOVERNMENT BLOCKCHAIN ASSOCIATION",
+    "Visa U.S.A. Inc.",
+    "BLOCKCHAINS INC.",
+    "CRUSOE TECHNOLOGIES (FKA CRUSOE ENERGY)",
+    "MULTICOIN CAPITAL MANAGEMENT, LLC",
+    "U.S. CHAMBER OF COMMERCE - C_TEC AND CCMC",
+    "Coinbase Global, Inc.",
+    "BLOCKCHAIN (US), INC.",
+    "ANCHORAGE DIGITAL BANK",
+    "FIR TREE PARTNERS",
+    "MULTICOIN CAPITAL",
+    "WAVE DIGITAL ASSETS HOLDINGS LLC",
+    "WISDOMTREE DIGITAL MANAGEMENT",
+    "CHAMBER OF DIGITAL COMMERCE D/B/A THE DIGITAL CHAMBER",
+    "SF OPERATIONS, INC",
+    "BILLMARI INC. / DBA BLACK BLOCKCHAIN SUMMIT",
+    "LIBERLAND"
+  ],
+  "unresolved": [
+    "Block, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Foris DAX, Inc. d/b/a Crypto.com (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Coin Center (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Fiserv (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Meta Platforms, Inc. (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Electronic Payments Coalition (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Circle (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Shopify (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Cedar Innovation Foundation (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Ernst & Young LLP (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "U.S. Bancorp (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "INSTITUTE OF INTERNAL AUDITORS (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "IBM (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Paradigm (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "S&P Global (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Mastercard (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "National Association of Federally-Insured Credit Unions (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)",
+    "Association of National Advertisers (a registrant by this name exists but the exact string didn't match \u2014 check spelling / drop --exact / use --loose)"
+  ],
+  "results": {
+    "totals": {
+      "raw_items": 35007,
+      "raw_total": 123611478.0,
+      "items": 32702,
+      "total": 117082915.0
+    },
+    "by_type": [
+      {
+        "contribution_type": "feca",
+        "items": 32132,
+        "total": 83450098.0
+      },
+      {
+        "contribution_type": "he",
+        "items": 434,
+        "total": 17597897.0
+      },
+      {
+        "contribution_type": "pic",
+        "items": 14,
+        "total": 11443894.0
+      },
+      {
+        "contribution_type": "me",
+        "items": 115,
+        "total": 4360652.0
+      },
+      {
+        "contribution_type": "ple",
+        "items": 7,
+        "total": 230375.0
+      }
+    ],
+    "by_year": [
+      {
+        "filing_year": 2022,
+        "total": 26700644.0
+      },
+      {
+        "filing_year": 2023,
+        "total": 26207534.0
+      },
+      {
+        "filing_year": 2024,
+        "total": 35075270.0
+      },
+      {
+        "filing_year": 2025,
+        "total": 29099466.0
+      }
+    ],
+    "by_filer": [
+      {
+        "filer_type": "organization",
+        "items": 29404,
+        "total": 112686755.0
+      },
+      {
+        "filer_type": "lobbyist",
+        "items": 3298,
+        "total": 4396160.0
+      }
+    ],
+    "recipients": [
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL BLACK CAUCUS",
+        "items": 15,
+        "total": 3484013.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE, INC",
+        "items": 3,
+        "total": 2750000.0
+      },
+      {
+        "recipient": "DONATION FOR THE CONSTRUCTION OF THE CAPITOL VISITOR CENTER TUNNEL IN THE THOMAS JEFFERSON BUILDING (CONGRESSIONAL CROSSROADS)",
+        "items": 1,
+        "total": 2500000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL HISPANIC CAUCUS",
+        "items": 8,
+        "total": 2395000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP; VICE-PRESIDENT JD VANCE",
+        "items": 1,
+        "total": 2000000.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD J. TRUMP",
+        "items": 3,
+        "total": 1892194.0
+      },
+      {
+        "recipient": "PRESIDENT DONALD TRUMP",
+        "items": 4,
+        "total": 1001450.0
+      },
+      {
+        "recipient": "DONALD TRUMP/ J.D. VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "TRUMP VANCE INAUGURAL COMMITTEE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN NATIONAL MUSEUM OF AMERICAN LATINO. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "FOUNDING DONOR AND SPONSOR OF THE DESIGN, DEVELOPMENT, AND OPENING OF THE SMITHSONIAN AMERICAN WOMEN'S HISTORY MUSEUM. ENTITY CONTROLLED BY COVERED OFFICIALS. MULTIPLE MOCS ON BOARD OF REGENTS",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "DONALD J TRUMP AND JD VANCE",
+        "items": 1,
+        "total": 1000000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE CONGRESSIONAL ASIAN PACIFIC AMERICAN CAUCUS",
+        "items": 2,
+        "total": 800000.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 63,
+        "total": 733233.0
+      },
+      {
+        "recipient": "NRCC",
+        "items": 55,
+        "total": 715800.0
+      },
+      {
+        "recipient": "DEMOCRATIC SENATORIAL CAMPAIGN COMMITTEE",
+        "items": 52,
+        "total": 673294.0
+      },
+      {
+        "recipient": "DSCC",
+        "items": 67,
+        "total": 651500.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS FOUNDATION",
+        "items": 15,
+        "total": 643000.0
+      },
+      {
+        "recipient": "DCCC",
+        "items": 55,
+        "total": 571450.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN SENATORIAL COMMITTEE",
+        "items": 35,
+        "total": 567250.0
+      },
+      {
+        "recipient": "DEMOCRATIC CONGRESSIONAL CAMPAIGN COMMITTEE",
+        "items": 40,
+        "total": 554700.0
+      },
+      {
+        "recipient": "CONGRESSIONAL HISPANIC CAUCUS INSTITUTE",
+        "items": 11,
+        "total": 505000.0
+      },
+      {
+        "recipient": "DONALD TRUMP AND JAMES DAVID VANCE",
+        "items": 1,
+        "total": 500000.0
+      },
+      {
+        "recipient": "NATIONAL REPUBLICAN CONGRESSIONAL COMMITTEE",
+        "items": 32,
+        "total": 435000.0
+      },
+      {
+        "recipient": "MEMBERS OF THE ASIAN PACIFIC ISLANDER CAUCUS",
+        "items": 1,
+        "total": 400000.0
+      },
+      {
+        "recipient": "REP. FRENCH HILL",
+        "items": 103,
+        "total": 302950.0
+      },
+      {
+        "recipient": "ANDY BARR",
+        "items": 98,
+        "total": 287017.0
+      },
+      {
+        "recipient": "FRENCH HILL",
+        "items": 99,
+        "total": 282100.0
+      },
+      {
+        "recipient": "REPS. DON BEYER AND BILL FOSTER WERE AMONG THE HONOREES, CTA DIGITAL PATRIOTS DINNER",
+        "items": 1,
+        "total": 276989.0
+      },
+      {
+        "recipient": "EQUALITY PAC",
+        "items": 68,
+        "total": 264625.0
+      },
+      {
+        "recipient": "DONALD TRUMP",
+        "items": 5,
+        "total": 253077.0
+      },
+      {
+        "recipient": "BILL HUIZENGA",
+        "items": 91,
+        "total": 251500.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE 2025 NSO POPS SEASON",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE NSO POPS SEASON (PAYMENT 2 OF 2)",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "GAIL MCGOVERN, BOARD MEMBER, MARY BERNER, BOARD MEMBER, DAVID BRANDON, BOARD MEMBER, HERMAN BULLS, BOARD MEMBER, CHRISTINA CHIU, BOARD MEMBER, DAVID CLARK, BOARD MEMBER, STEVEN COLLIS, BOARD MEMBER",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "SPONSORSHIP OF THE GERSHWIN PRIZE",
+        "items": 1,
+        "total": 250000.0
+      },
+      {
+        "recipient": "REP. BILL HUIZENGA",
+        "items": 78,
+        "total": 239985.0
+      },
+      {
+        "recipient": "REP. HAKEEM JEFFRIES",
+        "items": 64,
+        "total": 237000.0
+      },
+      {
+        "recipient": "NEW DEMOCRAT COALITION ACTION FUND",
+        "items": 52,
+        "total": 231625.0
+      },
+      {
+        "recipient": "CONGRESSIONAL BLACK CAUCUS PAC",
+        "items": 58,
+        "total": 229399.0
+      },
+      {
+        "recipient": "REP. BILL FOSTER",
+        "items": 111,
+        "total": 229250.0
+      },
+      {
+        "recipient": "NATL REP SEN CMTE(NRSC)-FEDERAL ACCT",
+        "items": 13,
+        "total": 225000.0
+      },
+      {
+        "recipient": "2025 CONGRESSIONAL BASEBALL GAME",
+        "items": 2,
+        "total": 225000.0
+      },
+      {
+        "recipient": "PATRICK MCHENRY",
+        "items": 61,
+        "total": 218500.0
+      },
+      {
+        "recipient": "REP. ANDY BARR",
+        "items": 76,
+        "total": 217540.0
+      },
+      {
+        "recipient": "REP. ANN WAGNER",
+        "items": 82,
+        "total": 215598.0
+      },
+      {
+        "recipient": "REP. KATHERINE CLARK",
+        "items": 69,
+        "total": 214250.0
+      },
+      {
+        "recipient": "SEN. JON TESTER",
+        "items": 70,
+        "total": 206250.0
+      },
+      {
+        "recipient": "TANNIA TALENTO, REGIONAL DIRECTOR OF NORTHERN VIRGINIA FOR U.S. SENATOR MARK R. WARNER",
+        "items": 4,
+        "total": 205000.0
+      },
+      {
+        "recipient": "HOUSE PROBLEM SOLVERS CAUCUS AND SEN. JACKY ROSEN",
+        "items": 1,
+        "total": 203722.0
+      },
+      {
+        "recipient": "ELEANOR HOLMES NORTON",
+        "items": 2,
+        "total": 200000.0
+      },
+      {
+        "recipient": "CARLEEN HERRING, SECRETARY, US ECONOMIC DEVELOPMENT ADMINISTRATION",
+        "items": 2,
+        "total": 200000.0
+      },
+      {
+        "recipient": "DEM CONG CAMP CMTE(DCCC)-FEDERAL ACCT",
+        "items": 11,
+        "total": 195000.0
+      },
+      {
+        "recipient": "REP. BRYAN STEIL",
+        "items": 72,
+        "total": 194500.0
+      },
+      {
+        "recipient": "SEN. BILL HAGERTY",
+        "items": 70,
+        "total": 185500.0
+      },
+      {
+        "recipient": "RICHARD NEAL",
+        "items": 52,
+        "total": 185500.0
+      },
+      {
+        "recipient": "TOM EMMER",
+        "items": 64,
+        "total": 184000.0
+      },
+      {
+        "recipient": "REP. SUZAN DELBENE",
+        "items": 70,
+        "total": 183500.0
+      },
+      {
+        "recipient": "BOARD MEMBER - DONALD LAYTON, FREDDIE MAC, FEDERAL GSE",
+        "items": 1,
+        "total": 180000.0
+      },
+      {
+        "recipient": "SEN. MARK WARNER",
+        "items": 56,
+        "total": 178200.0
+      }
+    ],
+    "per_entity": [
+      {
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "total": 12435719.0,
+        "items": 1701
+      },
+      {
+        "registrant_name": "AARP",
+        "total": 7956043.0,
+        "items": 296
+      },
+      {
+        "registrant_name": "AMERICAN BANKERS ASSOCIATION",
+        "total": 7734883.0,
+        "items": 2999
+      },
+      {
+        "registrant_name": "CREDIT UNION NATIONAL ASSOCIATION. INC. DBA AMERICA'S CREDIT UNIONS",
+        "total": 7392200.0,
+        "items": 2327
+      },
+      {
+        "registrant_name": "AMERICAN ASSOCIATION FOR JUSTICE",
+        "total": 5556575.0,
+        "items": 1984
+      },
+      {
+        "registrant_name": "AICPA ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS",
+        "total": 5255750.0,
+        "items": 1473
+      },
+      {
+        "registrant_name": "MORGAN STANLEY & CO. LLC",
+        "total": 4788952.0,
+        "items": 621
+      },
+      {
+        "registrant_name": "VISA INC.",
+        "total": 3966844.0,
+        "items": 1135
+      },
+      {
+        "registrant_name": "INVESTMENT COMPANY INSTITUTE",
+        "total": 3440145.0,
+        "items": 1289
+      },
+      {
+        "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+        "total": 3110150.0,
+        "items": 649
+      },
+      {
+        "registrant_name": "INDEPENDENT COMMUNITY BANKERS OF AMERICA",
+        "total": 2848535.0,
+        "items": 1606
+      },
+      {
+        "registrant_name": "FMR LLC",
+        "total": 2806250.0,
+        "items": 1037
+      },
+      {
+        "registrant_name": "JPMORGAN CHASE HOLDINGS LLC",
+        "total": 2621007.0,
+        "items": 952
+      },
+      {
+        "registrant_name": "WELLS FARGO & COMPANY",
+        "total": 2546420.0,
+        "items": 942
+      },
+      {
+        "registrant_name": "THE PNC FINANCIAL SERVICES GROUP",
+        "total": 2372000.0,
+        "items": 510
+      },
+      {
+        "registrant_name": "ROBINHOOD MARKETS, INC.",
+        "total": 2325898.0,
+        "items": 160
+      },
+      {
+        "registrant_name": "MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY",
+        "total": 2276000.0,
+        "items": 542
+      },
+      {
+        "registrant_name": "BANK OF AMERICA CORPORATION",
+        "total": 2037521.0,
+        "items": 624
+      },
+      {
+        "registrant_name": "AMERICAN EXPRESS COMPANY",
+        "total": 2037350.0,
+        "items": 681
+      },
+      {
+        "registrant_name": "CME GROUP, INC.",
+        "total": 2034500.0,
+        "items": 760
+      },
+      {
+        "registrant_name": "CITIGROUP WASHINGTON, INC.",
+        "total": 2033603.0,
+        "items": 779
+      },
+      {
+        "registrant_name": "TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T)",
+        "total": 1894144.0,
+        "items": 526
+      },
+      {
+        "registrant_name": "HUNTINGTON BANCSHARES INCORPORATED",
+        "total": 1742502.0,
+        "items": 826
+      },
+      {
+        "registrant_name": "NATIONAL FOOTBALL LEAGUE",
+        "total": 1740750.0,
+        "items": 534
+      },
+      {
+        "registrant_name": "COINBASE, INC.",
+        "total": 1696150.0,
+        "items": 318
+      },
+      {
+        "registrant_name": "CONSUMER TECHNOLOGY ASSOCIATION",
+        "total": 1356956.0,
+        "items": 316
+      },
+      {
+        "registrant_name": "CHAMBER OF COMMERCE OF THE U.S.A.",
+        "total": 1356601.0,
+        "items": 907
+      },
+      {
+        "registrant_name": "PWC US GROUP LLP",
+        "total": 1237500.0,
+        "items": 338
+      },
+      {
+        "registrant_name": "MASTERCARD WORLDWIDE",
+        "total": 1221201.0,
+        "items": 473
+      },
+      {
+        "registrant_name": "MELLON FINANCIAL SERVICES CORPORATION #1",
+        "total": 1214800.0,
+        "items": 432
+      },
+      {
+        "registrant_name": "TD BANK, NA",
+        "total": 1102500.0,
+        "items": 443
+      },
+      {
+        "registrant_name": "GALAXY DIGITAL HOLDINGS LP",
+        "total": 1077050.0,
+        "items": 49
+      },
+      {
+        "registrant_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+        "total": 1051335.0,
+        "items": 30
+      },
+      {
+        "registrant_name": "PARADIGM OPERATIONS LP",
+        "total": 1017580.0,
+        "items": 11
+      },
+      {
+        "registrant_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+        "total": 1003150.0,
+        "items": 10
+      },
+      {
+        "registrant_name": "NATIONAL VENTURE CAPITAL ASSOCIATION",
+        "total": 983042.0,
+        "items": 322
+      },
+      {
+        "registrant_name": "WESTERN ALLIANCE BANCORPORATION",
+        "total": 857000.0,
+        "items": 330
+      },
+      {
+        "registrant_name": "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)",
+        "total": 752010.0,
+        "items": 8
+      },
+      {
+        "registrant_name": "ACCENTURE, LLP",
+        "total": 679184.0,
+        "items": 76
+      },
+      {
+        "registrant_name": "CBOE GLOBAL MARKETS, INC.",
+        "total": 610250.0,
+        "items": 238
+      },
+      {
+        "registrant_name": "MANAGED FUNDS ASSOCIATION",
+        "total": 605633.0,
+        "items": 321
+      },
+      {
+        "registrant_name": "INSURED RETIREMENT INSTITUTE",
+        "total": 590522.0,
+        "items": 331
+      },
+      {
+        "registrant_name": "CONSUMER BANKERS ASSOCIATION",
+        "total": 582250.0,
+        "items": 195
+      },
+      {
+        "registrant_name": "STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES",
+        "total": 532250.0,
+        "items": 217
+      },
+      {
+        "registrant_name": "FIFTH THIRD BANCORP",
+        "total": 502750.0,
+        "items": 183
+      },
+      {
+        "registrant_name": "HSBC TECHNOLOGY AND SERVICES USA INC.",
+        "total": 402012.0,
+        "items": 218
+      },
+      {
+        "registrant_name": "NASDAQ, INC.",
+        "total": 358325.0,
+        "items": 192
+      },
+      {
+        "registrant_name": "VMWARE, INC.",
+        "total": 336800.0,
+        "items": 132
+      },
+      {
+        "registrant_name": "BLOCKCHAIN ASSOCIATION",
+        "total": 307440.0,
+        "items": 79
+      },
+      {
+        "registrant_name": "MOODY'S CORPORATION",
+        "total": 295820.0,
+        "items": 40
+      },
+      {
+        "registrant_name": "PAYPAL, INC.",
+        "total": 258750.0,
+        "items": 20
+      },
+      {
+        "registrant_name": "BANK POLICY INSTITUTE",
+        "total": 232077.0,
+        "items": 142
+      },
+      {
+        "registrant_name": "LONDON STOCK EXCHANGE GROUP",
+        "total": 223348.0,
+        "items": 102
+      },
+      {
+        "registrant_name": "FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",
+        "total": 221750.0,
+        "items": 135
+      },
+      {
+        "registrant_name": "FINANCIAL SERVICES FORUM",
+        "total": 195650.0,
+        "items": 151
+      },
+      {
+        "registrant_name": "TECHNOLOGY NETWORK AKA TECHNET",
+        "total": 158000.0,
+        "items": 115
+      },
+      {
+        "registrant_name": "NORTHERN TRUST CORPORATION",
+        "total": 134250.0,
+        "items": 106
+      },
+      {
+        "registrant_name": "FIDELITY NATIONAL INFORMATION SYSTEMS, INC. AND SUBSIDIARIES",
+        "total": 123500.0,
+        "items": 37
+      },
+      {
+        "registrant_name": "AMERICAN SECURITIES ASSOCIATION",
+        "total": 113625.0,
+        "items": 58
+      },
+      {
+        "registrant_name": "GLOBAL PAYMENTS, INC.",
+        "total": 108750.0,
+        "items": 41
+      }
+    ],
+    "sample": [
+      {
+        "record_key": "2999aaaa-cc4e-44c4-b9f0-b77e1b09d5cb",
+        "registrant_name": "AARP",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 2500000,
+        "recipient": "Donation for the construction of the Capitol Visitor Center tunnel in the Thomas Jefferson Building (Congressional Crossroads).",
+        "date": "2023-04-06"
+      },
+      {
+        "record_key": "3600bcd0-b64e-47e4-96ff-349634cc73fa",
+        "registrant_name": "ROBINHOOD MARKETS, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 2000000,
+        "recipient": "President Donald Trump; Vice-President JD Vance",
+        "date": "2024-12-16"
+      },
+      {
+        "record_key": "b0d60f07-36a6-4e84-a833-5985743366a0",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1300000,
+        "recipient": "Members of the Congressional Black Caucus",
+        "date": "2023-08-23"
+      },
+      {
+        "record_key": "fbbc7ba4-2af2-4a58-9037-297406c0f69e",
+        "registrant_name": "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Donald Trump/ J.D. Vance",
+        "date": "2024-12-04"
+      },
+      {
+        "record_key": "0b112e4f-0586-434f-9707-37730209d735",
+        "registrant_name": "COINBASE, INC.",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee, Inc.",
+        "date": "2024-12-02"
+      },
+      {
+        "record_key": "2a1fbf86-edb4-4cf0-ad34-54a67d5988b5",
+        "registrant_name": "FORIS DAX, INC. & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Trump Vance Inaugural Committee, Inc.",
+        "date": "2024-12-16"
+      },
+      {
+        "record_key": "1b686c94-d6a9-4126-8e3e-cc92e67764e5",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "President Donald J. Trump",
+        "date": "2024-12-21"
+      },
+      {
+        "record_key": "1b686c94-d6a9-4126-8e3e-cc92e67764e5",
+        "registrant_name": "AMAZON.COM SERVICES LLC",
+        "filer_type": "organization",
+        "contribution_type": "he",
+        "amount": 1000000,
+        "recipient": "Members of the Congressional Black Caucus",
+        "date": "2024-11-26"
+      },
+      {
+        "record_key": "55f16f50-fbe8-49f7-85b1-a7f3c0676113",
+        "registrant_name": "BLACKROCK FUNDS SERVICES GROUP, LLC",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "Donald J Trump and JD Vance",
+        "date": "2025-01-02"
+      },
+      {
+        "record_key": "eed937a6-446f-45aa-9637-0035a3c0a3c4",
+        "registrant_name": "GALAXY DIGITAL HOLDINGS LP",
+        "filer_type": "organization",
+        "contribution_type": "pic",
+        "amount": 1000000,
+        "recipient": "President Donald Trump",
+        "date": "2024-12-18"
+      }
+    ]
+  }
+}

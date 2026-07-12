@@ -49,11 +49,12 @@
       + (a.length > 2 ? " +" + (a.length - 2) + " more" : "");
   };
 
-  /* Players bubble map */
+  /* Players map: spend × crypto-attention scatter (2026-07-11 intensity revision) */
   {
-    const { box, cardEl } = card(app, "The player map — who lobbies on crypto",
-      "Top " + DATA.players.length + " client-side players. Bubble size = total federal lobbying spend 2022–2026Q1 in dollars (all issues — filing-level disclosure can't split dollars by issue; see caveats). Color = crypto-native organization (hand-triaged) vs diversified filer lobbying on crypto. Players are selected by sustained crypto-tagged filings, so a giant all-issue budget alone doesn't buy a spot. Click a bubble to list its raw filings.",
-      "Recall-first map: an organization appears if its filings' free-text names crypto vocabulary (43 curated phrases). Most mapped players have no crypto term in their name — the industry is mostly invisible to a name search. Full list in data/crypto_players.csv; every filing behind every player, with a public lda.senate.gov link, in data/crypto_player_filings.csv.");
+    const nUnplotted = DATA.players.filter(p => !(p.spend > 0) || p.share == null).length;
+    const { box, cardEl } = card(app, "The player map — who lobbies on crypto, and how much of their attention it gets",
+      DATA.players.length + " client-side players: the top 60 by crypto-tagged filings, plus core players (≥8 filings) with a top-15 all-issue lobbying budget — so the ambient giants are placed, not hidden. Across = total federal lobbying spend 2022–2026Q1, all issues, log scale (filing-level disclosure can't split dollars by issue). Up = crypto activity share: the % of the player's senate activity blocks that are crypto-tagged — the intensity signal that separates a dedicated crypto shop from a giant with a crypto side-desk. Dot size = crypto-tagged filings. Every plotted player has a sustained crypto filing record; an all-issue budget alone still doesn't buy a spot. Click a dot to list its raw filings.",
+      "Reading it: top = crypto-dedicated (Coinbase, 94.8% share); bottom-right = ambient giants — the U.S. Chamber's $311.6M all-issue budget sits at 3.4% crypto share (19 of its 555 activity blocks; its C_TEC/CCMC arm files separately at 33%). Share is entity-grain: resolver-split families (Mastercard×3, Visa×2, a16z…) each carry their own share. Recall-first map: an organization appears if its filings' free-text names crypto vocabulary (43 curated phrases); most mapped players have no crypto term in their name." + (nUnplotted ? " " + nUnplotted + " selected player(s) with no reported spend or no non-registration activity blocks are in the table view, not plotted." : "") + " Full list in data/crypto_players.csv; every filing behind every player, with a public lda.senate.gov link, in data/crypto_player_filings.csv.");
     moreOptions(cardEl, QI.players);
     const lg = legend(cardEl, [
       { name: "Crypto-native (Coinbase, Kraken, Blockchain Assn…)", color: SLOT[0] },
@@ -61,22 +62,28 @@
     ]);
     cardEl.insertBefore(lg, box);
     const filingsPanel = div("filings-panel", null);
-    bubblePack(box, {
+    scatterXY(box, {
       items: DATA.players.map(p => ({
-        label: p.name, short: p.short, r0: p.spend || 0,
-        slot: p.vis ? 0 : 2, extra: p
+        label: p.name, short: p.short, x: p.spend || 0, y: p.share,
+        size: p.filings, slot: p.vis ? 0 : 2, extra: p
       })),
-      height: 470, fmtSize: "$",
+      height: 480, yMax: 100, labelTop: 16,
+      rules: [
+        { y: 5, label: "ambient <5%", labelAt: 2 },
+        { y: 25, label: "engaged 5–25%", labelAt: 14 },
+        { y: 25, noLine: true, label: "dedicated ≥25%", labelAt: 60 }
+      ],
       ttRows: d => [
         { color: SLOT[d.slot], value: fmtMoney(d.extra.spend), name: "total lobbying spend (all issues)" },
+        { color: null, value: fmtPct(d.extra.share), name: "crypto activity share (" + fmtNum(d.extra.cblocks) + " of " + fmtNum(d.extra.ablocks) + " senate activity blocks)" },
         { color: null, value: fmtNum(d.extra.filings), name: "crypto-tagged senate filings" },
-        { color: null, value: d.extra.tier, name: "tier (core ≥8 · active 3–7 · peripheral ≤2)" },
+        { color: null, value: d.extra.tier + " · " + d.extra.band, name: "tier (filings) · intensity band (share)" },
         { color: null, value: "click", name: "list this player's raw filings" }
       ],
       onClick: d => showFilings(d.extra)
     });
     cardEl.insertBefore(filingsPanel, box.nextSibling);
-    filingsPanel.textContent = "Click a bubble to list that player's crypto-tagged filings here — each links to the raw record on lda.senate.gov and shows the matched phrase that tagged it.";
+    filingsPanel.textContent = "Click a dot to list that player's crypto-tagged filings here — each links to the raw record on lda.senate.gov and shows the matched phrase that tagged it.";
     function showFilings(p) {
       const rows = (DATA.playerFilings && DATA.playerFilings[p.name]) || null;
       filingsPanel.textContent = "";
@@ -114,9 +121,9 @@
       div("note", filingsPanel,
         "Raw records on lda.senate.gov (needs internet). Same list offline: data/crypto_player_filings.csv.");
     }
-    tableView(cardEl, ["Player", "Total spend (all issues)", "Crypto filings (senate)", "Tier", "Crypto-native"],
-      DATA.players.map(p => [p.name, p.spend, p.filings, p.tier, p.vis ? "yes" : "no"]),
-      ["s", "$", "#", "s", "s"]);
+    tableView(cardEl, ["Player", "Total spend (all issues)", "Crypto activity share %", "Intensity band", "Crypto filings (senate)", "Tier", "Crypto-native"],
+      DATA.players.map(p => [p.name, p.spend, p.share, p.band, p.filings, p.tier, p.vis ? "yes" : "no"]),
+      ["s", "$", "%", "s", "#", "s", "s"]);
   }
 
   /* Trend */
@@ -178,8 +185,8 @@
   /* Top spenders — native vs diversified, side by side */
   {
     const { box, cardEl } = card(app, "The money — two different industries lobby on crypto",
-      "Total canonical lobbying spend 2022–2026Q1 (all issues). Left: crypto-native organizations — for them this is essentially crypto money. Right: diversified core players (≥8 crypto filings) whose budgets span many issues; crypto is one desk.",
-      "The comparison is the story: Coinbase's entire five-year lobbying budget ($15M) is smaller than what Visa ($39M) or Mastercard ($20M) spends across all its issues — but the crypto-native side is the one whose money is all-in on this fight. Known name-variant families (Crypto.com/Foris, Kraken/Payward, a16z/AH Capital) are combined here; per-variant rows are in data/crypto_players.csv.");
+      "Total canonical lobbying spend 2022–2026Q1 (all issues). Left: crypto-native organizations — for them this is essentially crypto money. Right: diversified CRYPTO-FORWARD players (≥8 crypto filings AND ≥5% crypto activity share) whose budgets span many issues; crypto is one desk, but a real one.",
+      "The comparison is the story: Coinbase's entire five-year lobbying budget ($15M) is smaller than what Visa ($39M) or Mastercard ($20M) spends across all its issues — but the crypto-native side is the one whose money is all-in on this fight. The ≥5% share gate keeps ambient giants out of this list: the U.S. Chamber ($311.6M all-issue, 3.4% crypto share) and AARP ($77.1M, 2.5%) are on the player map and in the CSVs, not here. Known name-variant families (Crypto.com/Foris, Kraken/Payward, a16z/AH Capital) are combined here; per-variant rows are in data/crypto_players.csv.");
     moreOptions(cardEl, QI.money);
     const mPanel = recPanel(cardEl, box,
       "Click a bar to see the quarter-by-quarter spend behind it (v_client_canonical_spend) and the player's crypto-tagged filings.");
@@ -211,7 +218,7 @@
       fmt: "$", labelW: 190, rowH: 27, width: 480, color: SLOT[0], valueName: "total lobbying spend",
       onClick: showSpend
     });
-    div("sub", right, "Diversified, active on crypto (≥8 crypto filings)");
+    div("sub", right, "Diversified crypto-forward (≥8 crypto filings & ≥5% crypto share)");
     hbars(div(null, right), {
       items: DATA.diversSpend.map(d => ({ label: d.name, value: d.spend, note: fmtNum(d.filings) + " crypto-tagged filings" })),
       fmt: "$", labelW: 190, rowH: 27, width: 480, color: SLOT[2], valueName: "total lobbying spend (all issues)",
@@ -224,33 +231,36 @@
       ["s", "$", "s", "s", "$"]);
   }
 
-  /* Giving — LD-203, split crypto-native vs diversified */
+  /* Giving — LD-203, three-tier giver split (>=5% intensity gate, 2026-07-11) */
   {
     const { box, cardEl } = card(app, "Who gets the money — and whether it comes from crypto natives or the incumbents (disclosed LD-203)",
-      "Every recipient shows two bars: giving by 105 hand-triaged crypto-NATIVE organizations (exchanges, protocols, miners, crypto VCs, trade groups) vs giving by the 162 DIVERSIFIED core players (banks, card networks, asset managers and other incumbents with a sustained crypto lobbying record). 2022–2025, amendment-deduplicated.",
-      "Attribution caveat: LD-203 giving is organization-level — a bank PAC's contribution to a Financial Services member is not necessarily crypto-motivated; the split shows WHO funds each recipient, not why. Disclosed LD-203 only (Fairshake Super-PAC money is the next chart). Party/state from the corpus members table; retired members hand-mapped and flagged in the CSV. Person-name and Trump-inaugural variants combined; raw variants in data/crypto_ld203_recipients_split.csv.");
+      "Every recipient shows two bars: giving by 105 hand-triaged crypto-NATIVE organizations (exchanges, protocols, miners, crypto VCs, trade groups) vs giving by the 147 CRYPTO-FORWARD diversified players — banks, card networks, asset managers with a sustained crypto record AND ≥5% crypto activity share. Giving by the 15 AMBIENT core players below the gate (AARP, U.S. Chamber, Amazon, Meta, Wells Fargo…) is deliberately NOT drawn as a bar in a crypto chart — it shows in the hover, the click-through list, the table view, and the CSV. 2022–2025, amendment-deduplicated.",
+      "Attribution caveat: LD-203 giving is organization-level — a bank PAC's contribution to a Financial Services member is not necessarily crypto-motivated; the split shows WHO funds each recipient, not why. The 5% gate is an editorial cut (disclosed here and in the README); the ambient slice totals $38.8M of the old $110.7M \"diversified\" figure and is dominated by non-crypto money (AARP's caucus and Capitol-fund giving alone). Disclosed LD-203 only (Fairshake Super-PAC money is the next chart). Party/state from the corpus members table; retired members hand-mapped and flagged in the CSV. Person-name and Trump-inaugural variants combined; raw variants in data/crypto_ld203_recipients_split.csv.");
     moreOptions(cardEl, QI.giving);
     const lg = legend(cardEl, [
       { name: "From crypto-native orgs", color: SLOT[0] },
-      { name: "From diversified core players (banks, cards, asset mgrs…)", color: SLOT[2] }
+      { name: "From crypto-forward diversified (≥5% crypto share)", color: SLOT[2] }
     ]);
     cardEl.insertBefore(lg, box);
     const gPanel = recPanel(cardEl, box,
       "Click a recipient's bars to list the LD-203 items behind them — each links to the filed contribution report on lda.senate.gov.");
+    const AMB = "ambient <5%-share givers (not charted)";
     const showItems = d => {
-      const e = (DATA.givingItems && DATA.givingItems[d.label]) || { native: [], diversified: [] };
+      const e = (DATA.givingItems && DATA.givingItems[d.label]) || { native: [], forward: [], ambient: [] };
       const mk = rows => rows.map(r => ({ href: LDA_C(r[0]), text: r[1],
         tail: " · " + (r[3] != null ? fmtMoney(r[3]) : "·") + " [" + r[4] + "] " + (r[2] || "·") + (r[5] > 1 ? " · " + r[5] + " versions collapsed" : "") }));
       gPanel.show(
-        d.label + " — " + fmtMoney(d.a) + " crypto-native + " + fmtMoney(d.b) + " diversified (chart figures; the items below sum to them)",
+        d.label + " — " + fmtMoney(d.a) + " crypto-native + " + fmtMoney(d.b) + " crypto-forward (chart figures) + " + fmtMoney(d.c || 0) + " ambient (context, not charted)",
         "Amendment-deduplicated LD-203 items; link opens the filed report (one version where amendments collapsed). As-filed recipient strings + full detail: data/crypto_ld203_items.csv.",
         [["From crypto-native orgs (" + fmtNum(e.native.length) + " items)", mk(e.native)],
-         ["From diversified core players (" + fmtNum(e.diversified.length) + " items)", mk(e.diversified)]]);
+         ["From crypto-forward diversified, ≥5% share (" + fmtNum(e.forward.length) + " items)", mk(e.forward)],
+         ["From ambient <5%-share givers — context, not charted (" + fmtNum(e.ambient.length) + " items)", mk(e.ambient)]]);
     };
-    div("sub", box, "Top recipients overall");
+    div("sub", box, "Top recipients overall (ranked by charted giving: native + crypto-forward)");
     groupedHBars(div(null, box), {
-      items: DATA.givingTop.map(d => ({ label: d.name, a: d.a, b: d.b })),
-      aName: "from crypto-native orgs", bName: "from diversified core players",
+      items: DATA.givingTop.map(d => ({ label: d.name, a: d.a, b: d.b, c: d.c })),
+      aName: "from crypto-native orgs", bName: "from crypto-forward diversified (≥5% share)",
+      cName: AMB,
       aColor: SLOT[0], bColor: SLOT[2], labelW: 330,
       onClick: showItems
     });
@@ -259,27 +269,29 @@
     const mleft = div(null, mgrid), mright = div(null, mgrid);
     div("sub", mleft, "Top by CRYPTO-NATIVE giving");
     groupedHBars(div(null, mleft), {
-      items: DATA.givingMembersNative.map(d => ({ label: d.name, a: d.a, b: d.b })),
-      aName: "from crypto-native orgs", bName: "from diversified core players",
+      items: DATA.givingMembersNative.map(d => ({ label: d.name, a: d.a, b: d.b, c: d.c })),
+      aName: "from crypto-native orgs", bName: "from crypto-forward diversified (≥5% share)",
+      cName: AMB,
       aColor: SLOT[0], bColor: SLOT[2], labelW: 185, width: 480,
       onClick: showItems
     });
-    div("sub", mright, "Top by DIVERSIFIED-incumbent giving");
+    div("sub", mright, "Top by CRYPTO-FORWARD diversified giving");
     groupedHBars(div(null, mright), {
-      items: DATA.givingMembersDiv.map(d => ({ label: d.name, a: d.a, b: d.b })),
-      aName: "from crypto-native orgs", bName: "from diversified core players",
+      items: DATA.givingMembersDiv.map(d => ({ label: d.name, a: d.a, b: d.b, c: d.c })),
+      aName: "from crypto-native orgs", bName: "from crypto-forward diversified (≥5% share)",
+      cName: AMB,
       aColor: SLOT[0], bColor: SLOT[2], labelW: 185, width: 480,
       onClick: showItems
     });
-    tableView(cardEl, ["Recipient", "From crypto-native", "From diversified core"],
-      DATA.givingRecipientsRaw.map(d => [d.name, d.a, d.b]), ["s", "$", "$"]);
+    tableView(cardEl, ["Recipient", "From crypto-native", "From crypto-forward diversified (≥5% share)", "From ambient <5%-share givers (not charted)"],
+      DATA.givingRecipientsRaw.map(d => [d.name, d.a, d.b, d.c]), ["s", "$", "$", "$"]);
   }
 
   /* FEC vs LD-203 */
   {
     const { box, cardEl } = card(app, "The disclosed-lobbying view understates the political money ~60×",
       "Same players, two disclosure regimes: contributions into the Fairshake Super-PAC network (FEC, 2024+2026 cycles) vs their disclosed LD-203 giving.",
-      "Fairshake + Defend American Jobs + Protect Progress (committees resolved live from openFEC; itemized line-11 contributions only, memo/attribution rows and crypto-sale proceeds excluded). FEC↔LDA name matches are candidates for human confirmation, shown as reported. LD-203 legally cannot capture Super-PAC money — the gap is the point, not an error.");
+      "Fairshake + Defend American Jobs + Protect Progress (committees resolved live from openFEC; itemized line-11 contributions only, memo/attribution rows and crypto-sale proceeds excluded). FEC↔LDA name matches are candidates for human confirmation, shown as reported. LD-203 legally cannot capture Super-PAC money — the gap is the point, not an error. One more thing this chart shows: because the Fairshake network is single-issue, it is the ONLY issue-attributable crypto money on this page — and every nonzero network contributor is crypto-NATIVE. No bank, card network, or trade-association mega-filer appears; the diversified slice's giving is organization-level and never crypto-attributable.");
     moreOptions(cardEl, QI.fec);
     const lg = legend(cardEl, [
       { name: "FEC Super-PAC contributions (Fairshake network)", color: SLOT[0] },

@@ -31,8 +31,11 @@ Every match carries `confidence` + `source` (the audit convention from the
 
 Person-match semantics are the proven 2026-07-08 package matcher (title-strip,
 suffix-strip, last-name key, nickname/initial-aware firsts), promoted from
-out/packages/*/_build/enhance_giving.py, plus two labeled extensions:
+out/packages/*/_build/enhance_giving.py, plus three labeled extensions:
     confidence='inverted'  "EMMER, TOM"-style comma-inverted names
+    confidence='alias'     curated full-string spellings from member_aliases.json
+                           (misspellings, dropped double-surnames — each entry
+                           carries its source in member_aliases_sources)
     kind='compound'        multi-recipient strings ("A; B; NRSC") resolved per part
 
 Requires the tables from build_members.py (members_all / member_terms /
@@ -161,6 +164,18 @@ class MemberResolver:
                 {"m": m, "toks": toks, "last_words": last_words,
                  "firsts": firsts})
 
+        # curated FULL-STRING person aliases (member_aliases.json): a filed
+        # spelling the token rules can't reach (misspelled or dropped surname
+        # words fail the last-words gate) maps to its member by exact
+        # normalized-string equality — precision over recall, one string each
+        self.person_alias = {}
+        for bio, spellings in self.lex["member_aliases"].items():
+            m = self.by_bio.get(bio)
+            if not m:
+                continue
+            for s in spellings:
+                self.person_alias[re.sub(r"[^A-Z]", "", s.upper())] = m
+
         # committee index: exact normalized name (+ curated aliases) -> rows
         self.cmte_by_norm = {}
         for c in self.cmtes:
@@ -224,6 +239,12 @@ class MemberResolver:
                 break
             core = stripped
         core = re.sub(r"[^A-Z\s.]", " ", core)
+        # curated full-string alias (member_aliases.json): checked before the
+        # token rules, since these spellings exist precisely because the
+        # last-words gate below cannot reach them
+        m_alias = self.person_alias.get(re.sub(r"[^A-Z]", "", core))
+        if m_alias is not None:
+            return [{"m": m_alias}], "alias"
         toks = [t for t in core.split() if t and t.strip(".") not in SUFFIXES]
         if not (2 <= len(toks) <= 4):
             return [], None
@@ -322,7 +343,7 @@ class MemberResolver:
         if cands:
             conf = {"name": "matched", "title-initial": "title-initial",
                     "title-chamber": "title-chamber", "inverted": "inverted",
-                    "ambiguous": "ambiguous"}[how]
+                    "alias": "alias", "ambiguous": "ambiguous"}[how]
             for e in cands:
                 rep["matches"].append(self._match(e["m"], "direct", conf,
                                                   "person-name", when=when))

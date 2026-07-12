@@ -1,6 +1,6 @@
 # Data dictionary — crypto lobbying package
 
-Generated 2026-07-10 from the live database schema (`db/lda_full.duckdb`) and the CSV headers in `data/` — regenerate with `_build/export_data_dictionary.py` after any schema/export change.
+Generated 2026-07-11 from the live database schema (`db/lda_full.duckdb`) and the CSV headers in `data/` — regenerate with `_build/export_data_dictionary.py` after any schema/export change.
 
 Two sections: **the database tables/views** referenced by the dashboard's queries (every widget's "View query info" shows the SQL; this file defines what the tables and columns mean), then **every CSV in `data/`**.
 
@@ -63,7 +63,7 @@ One row per itemized contribution on an LD-203 report. The giving analyses use r
 | `src_file` | VARCHAR | Raw-record pointer: source file |
 | `src_index` | INTEGER | Raw-record pointer: index within src_file |
 
-### `lobbying_issue_mentions` — 31,498 rows
+### `lobbying_issue_mentions` — 55,575 rows
 
 SERVING table (P4 industry map): deterministic tags over the lobbying free-text from the curated industry lexicon (skills/lead-scanner/scripts/industry_lexicon.json). One row per (text block × matched keyword). tag='CRYPTO' rows define the crypto map; count DISTINCT record_key for filings.
 
@@ -297,7 +297,7 @@ Giving-widget click-through: the amendment-deduped LD-203 items behind every DIS
 | column | meaning |
 |---|---|
 | `display_row` | The dashboard giving-chart row this item rolls into (member-merged / variant-merged label) |
-| `giver_slice` | Which giver roster the money came from (crypto_native / diversified_core) |
+| `giver_slice` | Which giver roster the money came from: crypto_native / diversified_forward (≥5% crypto activity share) / ambient_lowshare (<5%) — the 2026-07-11 three-tier cut; forward + ambient partition the old diversified_core exactly |
 | `recipient_raw` | Raw honoree/payee string as filed (lightly normalized for grouping, NOT entity-resolved) |
 | `ld203_filer_org` | The LD-203 filer (registrant) the giving is filed under |
 | `filer_type` | 'organization' = the registrant's own LD-203 report · 'lobbyist' = an individual lobbyist's report |
@@ -311,13 +311,13 @@ Giving-widget click-through: the amendment-deduped LD-203 items behind every DIS
 
 ### `data/crypto_ld203_member_variant_audit.csv`
 
-QA audit for the 2026-07-08 member merge: every raw filed recipient string behind every merged member row, per giver slice.
+QA audit for the member merge (regenerated 2026-07-11 at the three-slice grain, exhaustive inputs): every raw filed recipient string behind every merged member row, per giver slice.
 
 | column | meaning |
 |---|---|
 | `member (merged row in the split CSV)` | The member row the raw string was merged into (display name + party bracket) |
 | `party_source` | Where the party/state annotation came from (members-table vs manual hand-mapping in the 2026-07-08 build; member_terms in P6 files) |
-| `giver_slice` | Which giver roster the money came from (crypto_native / diversified_core) |
+| `giver_slice` | Which giver roster the money came from: crypto_native / diversified_forward (≥5% crypto activity share) / ambient_lowshare (<5%) — the 2026-07-11 three-tier cut; forward + ambient partition the old diversified_core exactly |
 | `raw_recipient_string_as_filed` | The exact recipient string on the LD-203 item(s) |
 | `total` | Dollar total (amendment-deduplicated) |
 | `items` | Number of itemized contributions behind the total |
@@ -329,10 +329,10 @@ P6 re-derivation of the audit with the shared member resolver — adds tier/conf
 | column | meaning |
 |---|---|
 | `member` | Member display name (+ party bracket where present) |
-| `giver_slice` | Which giver roster the money came from (crypto_native / diversified_core) |
+| `giver_slice` | Which giver roster the money came from: crypto_native / diversified_forward (≥5% crypto activity share) / ambient_lowshare (<5%) — the 2026-07-11 three-tier cut; forward + ambient partition the old diversified_core exactly |
 | `raw_recipient_string_as_filed` | The exact recipient string on the LD-203 item(s) |
 | `tier` | core = ≥8 crypto filings · active = 3–7 · peripheral = ≤2 (in the audit_p6/rollup files: the support tier — direct / campaign-committee / leadership-pac / jfc-shared / multi-honoree) |
-| `confidence` | Match confidence label (matched / title-chamber / title-initial / inverted / linked / inferred / prefix / compound:*) — inferred rows need human confirmation |
+| `confidence` | Match confidence label (matched / title-chamber / title-initial / inverted / alias / linked / inferred / prefix / compound:*) — inferred rows need human confirmation; alias = curated full-string spelling from member_aliases.json (source recorded there) |
 | `source` | Which resolution path produced the match (person-name / committee-exact / committee-prefix + FEC link source) |
 | `total` | Dollar total (amendment-deduplicated) |
 | `items` | Number of itemized contributions behind the total |
@@ -368,7 +368,7 @@ As top_recipients, pure-play roster.
 
 ### `data/crypto_ld203_recipients_split.csv`
 
-Giving recipients split by giver type (crypto-native vs diversified core); person/Trump-inaugural name variants merged; top 400 rows.
+Giving recipients split THREE ways by giver type (2026-07-11 intensity gate): crypto-native / crypto-forward diversified (≥5% activity share) / ambient (<5%, context — not charted); person/Trump-inaugural name variants merged; top 400 rows. Built from EXHAUSTIVE per-slice runs — the 2026-07-08 build merged only each run's top-400 recipient rows, so diversified member figures here recover sub-cutoff variants (native column unchanged).
 
 | column | meaning |
 |---|---|
@@ -377,8 +377,10 @@ Giving recipients split by giver type (crypto-native vs diversified core); perso
 | `party_source` | Where the party/state annotation came from (members-table vs manual hand-mapping in the 2026-07-08 build; member_terms in P6 files) |
 | `from_crypto_native` | Disclosed LD-203 giving from the 105 hand-triaged crypto-native orgs |
 | `native_items` | Item count behind that figure |
-| `from_diversified_core` | Disclosed LD-203 giving from the 162 diversified core players (banks, card networks, asset managers…) |
-| `diversified_items` | Item count behind that figure |
+| `from_diversified_forward` | Disclosed LD-203 giving from the 147 CRYPTO-FORWARD diversified core players (≥8 crypto filings AND ≥5% crypto activity share) — the 2026-07-11 intensity gate |
+| `forward_items` | Item count behind that figure |
+| `from_ambient_lowshare` | Disclosed LD-203 giving from the 15 ambient core players BELOW the 5% share gate (AARP, U.S. Chamber, Amazon, Meta, Wells Fargo…) — context: shown in tooltip/click-through/table, never drawn as a bar in a crypto chart. forward + ambient partition the old diversified-core slice exactly (asserted per raw recipient at build time) |
+| `ambient_items` | Item count behind that figure |
 | `name_variants_combined` | How many distinct filed spellings merged into this row |
 
 ### `data/crypto_ld203_top_recipients.csv`
@@ -393,14 +395,15 @@ Top raw recipients — FULL recall roster.
 
 ### `data/crypto_member_support_rollup.csv`
 
-P6 member support rollup: per member, direct giving per slice + tier-labeled committee support; JFC/multi-honoree money kept separate (never summed in).
+P6 member support rollup (regenerated 2026-07-11 at the three-slice grain): per member, direct giving per slice + tier-labeled committee support; JFC/multi-honoree money kept separate (never summed in).
 
 | column | meaning |
 |---|---|
 | `member` | Member display name (+ party bracket where present) |
 | `bioguide_id` | Member's bioguide id (members_all key) |
 | `direct_crypto_native` | Direct gifts (member named as honoree) from the crypto-native slice |
-| `direct_diversified_core` | Direct gifts from the diversified-core slice |
+| `direct_diversified_forward` | Direct gifts from the crypto-forward diversified slice (≥5% crypto activity share) |
+| `direct_ambient_lowshare` | Direct gifts from the ambient (<5% share) slice — context, not crypto-attributable |
 | `campaign_committee` | Giving to the member's FEC-designated principal/authorized campaign committee(s) |
 | `leadership_pac` | Giving to the member's leadership PAC (FEC designation D, sponsor-linked) |
 | `total_attributable` | direct + campaign_committee + leadership_pac (the defensible member total) |
@@ -428,7 +431,7 @@ Raw-filing index — one row per (player, crypto-tagged senate filing); per-play
 
 ### `data/crypto_players.csv`
 
-MASTER TABLE — one row per entity-resolved client-side player with ≥1 crypto-tagged senate filing.
+MASTER TABLE — one row per entity-resolved client-side player with ≥1 crypto-tagged senate filing. 2026-07-11: carries the crypto ACTIVITY-SHARE intensity metric (healthcare-parity semantics) + share band; the ≥5% band edge is the giving/money-list gate.
 
 | column | meaning |
 |---|---|
@@ -440,6 +443,10 @@ MASTER TABLE — one row per entity-resolved client-side player with ≥1 crypto
 | `total_all_issue_spend` | Client's TOTAL federal lobbying spend 2022–2026Q1 across ALL issues (sum of v_client_canonical_spend) — a size signal; dollars cannot be split by issue |
 | `crypto_term_in_name` | 'yes' if a crypto term appears in the org's own name (the 8% that a name search would find) |
 | `tier` | core = ≥8 crypto filings · active = 3–7 · peripheral = ≤2 (in the audit_p6/rollup files: the support tier — direct / campaign-committee / leadership-pac / jfc-shared / multi-honoree) |
+| `crypto_activity_blocks` | DISTINCT crypto-tagged senate free-text activity blocks for this client — the activity-share numerator (curated-lexicon tags; registrations excluded) |
+| `all_activity_blocks` | ALL the client's senate free-text activity blocks — the activity-share denominator (non-registration filings; amendments on both sides of the ratio — same semantics as the healthcare package's activity share) |
+| `crypto_activity_share_pct` | crypto_activity_blocks ÷ all_activity_blocks × 100 — the INTENSITY metric (added 2026-07-11): how much of the filer's declared lobbying attention is crypto. A count ratio, NEVER a dollar split. Entity-grain: resolver-split families (Mastercard ×3 at 58/18/9%) each carry their own share |
+| `crypto_share_band` | Intensity band from the share: dedicated ≥25% · engaged 5–25% · ambient <5% · 'n/a (registrations only)' when the client has no non-registration senate blocks. The ≥5% line is the giving/money-list gate (editorial cut, disclosed on-chart) |
 
 ### `data/crypto_press_quarterly.csv`
 

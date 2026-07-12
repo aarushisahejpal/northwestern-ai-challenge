@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "updated": "2026-07-09",
+  "version": "1.1",
+  "updated": "2026-07-11",
   "note": "Curated additions for member/committee name resolution (P6). Same convention as bill_aliases.json / industry_lexicon.json: human-added entries with a source, versioned, precision over recall. nickname_pairs are GENERIC American first-name equivalences (promoted from the proven 2026-07-08 package matcher, out/packages/*/_build/enhance_giving.py); member_aliases maps a bioguide_id to extra full-name spellings seen in filings; committee_aliases maps a normalized recipient string (A-Z0-9 only) to an FEC committee_id when the filed string can't be matched mechanically.",
   "nickname_pairs": [
     ["TOM", "THOMAS"], ["CHUCK", "CHARLES"], ["JIM", "JAMES"], ["PAT", "PATRICK"],
@@ -19,6 +19,13 @@
     ["ALEX", "ALEXANDER"], ["WILL", "WILLIAM"], ["RAY", "RAYMOND"], ["LOU", "LOUIS"],
     ["VICKY", "VICTORIA"], ["CINDY", "CYNTHIA"]
   ],
-  "member_aliases": {},
+  "member_aliases": {
+    "B001303": ["LISA ROCHESTER"],
+    "M001232": ["APRIL MCLAIN DELANEY"]
+  },
+  "member_aliases_sources": {
+    "B001303": "v1.1 2026-07-11: LD-203 filed honoree string 'LISA ROCHESTER' (drops 'Blunt'; unambiguous — no other Rochester in members_all); crypto diversified slice, $9,000/2 items",
+    "M001232": "v1.1 2026-07-11: LD-203 filed honoree string 'APRIL MCLAIN DELANEY' (misspells McClain; unambiguous full-person string); crypto ambient slice, $1,500/1 item"
+  },
   "committee_aliases": {}
 }

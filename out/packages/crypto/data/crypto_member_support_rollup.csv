@@ -1,234 +1,654 @@
-﻿member,bioguide_id,direct_crypto_native,direct_diversified_core,campaign_committee,leadership_pac,total_attributable,jfc_shared_unallocated,multi_honoree_shared_unallocated,n_variant_rows,confidence_flags
-Sen. J.D. Vance (R-OH),V000137,1002500.0,0.0,0.0,0.0,1002500.0,0.0,0.0,2,
-Rep. J. French Hill (R-AR),H001072,37500.0,936350.0,6800.0,3300.0,983950.0,500.0,0.0,12,compound:linked;inferred;inverted;prefix
-Rep. Bill Huizenga (R-MI),H001058,3500.0,819485.0,0.0,0.0,822985.0,0.0,0.0,7,inverted
-Rep. Andy Barr (R-KY),B001282,11800.0,798057.0,0.0,3500.0,813357.0,0.0,0.0,8,inverted;prefix
-Rep. Tom Emmer (R-MN),E000294,76400.0,640500.0,500.0,0.0,717400.0,0.0,0.0,12,inverted
-Rep. Ann Wagner (R-MO),W000812,1000.0,614098.0,0.0,0.0,615098.0,0.0,0.0,5,
-Rep. Hakeem S. Jeffries (D-NY),J000294,5000.0,606100.0,500.0,0.0,611600.0,0.0,15000.0,7,compound:matched
-Rep. Patrick T. McHenry (R-NC),M001156,14900.0,590650.0,0.0,0.0,605550.0,0.0,0.0,7,
-Rep. Richard E. Neal (D-MA),N000015,500.0,588000.0,0.0,0.0,588500.0,0.0,0.0,6,inverted
-Rep. Bryan Steil (R-WI),S001213,12000.0,534500.0,11000.0,10500.0,568000.0,0.0,0.0,10,compound:linked;compound:prefix;prefix
-Sen. Tim Scott (R-SC),S001184,22900.0,530250.0,5000.0,5000.0,563150.0,0.0,0.0,11,compound:linked
-Rep. Jason Smith (R-MO),S001195,9500.0,522500.0,0.0,0.0,532000.0,0.0,0.0,7,inverted
-Rep. Bill Foster (D-IL),F000454,250.0,485000.0,0.0,0.0,485250.0,0.0,0.0,4,
-Rep. Josh Gottheimer (D-NJ),G000583,10650.0,468000.0,0.0,0.0,478650.0,0.0,0.0,5,title-initial
-Sen. Mark R. Warner (D-VA),W000805,4500.0,474050.0,0.0,0.0,478550.0,5000.0,0.0,7,inferred
-Rep. James A. Himes (D-CT),H001047,12300.0,454500.0,0.0,0.0,466800.0,0.0,0.0,6,
-Sen. John Thune (R-SD),T000250,7500.0,438095.0,0.0,0.0,445595.0,0.0,0.0,6,
-Sen. Thom Tillis (R-NC),T000476,3000.0,442500.0,0.0,0.0,445500.0,0.0,0.0,5,title-initial
-Rep. Gregory W. Meeks (D-NY),M001137,0.0,434700.0,0.0,0.0,434700.0,0.0,15000.0,5,compound:matched
-Rep. Young Kim (R-CA),K000397,3900.0,415885.0,0.0,0.0,419785.0,0.0,0.0,5,
-Sen. Bill Hagerty (R-TN),H000601,28000.0,391250.0,0.0,0.0,419250.0,0.0,0.0,7,
-Rep. Steve Scalise (R-LA),S001176,2500.0,407000.0,6600.0,0.0,416100.0,0.0,0.0,6,compound:linked;inverted
-Rep. Andrew R. Garbarino (R-NY),G000597,1000.0,408590.0,0.0,0.0,409590.0,0.0,0.0,5,
-Rep. Joyce Beatty (D-OH),B001281,5800.0,390000.0,0.0,0.0,395800.0,0.0,0.0,4,
-Sen. Mike Rounds (R-SD),R000605,7000.0,380000.0,0.0,0.0,387000.0,0.0,0.0,5,
-Rep. Katherine M. Clark (D-MA),C001101,7000.0,372750.0,500.0,500.0,380750.0,0.0,0.0,8,compound:linked
-Sen. Steve Daines (R-MT),D000618,4500.0,363000.0,0.0,0.0,367500.0,0.0,0.0,6,
-Rep. Mike Johnson (R-LA),J000299,5000.0,358533.0,0.0,0.0,363533.0,0.0,0.0,4,
-Rep. Steny H. Hoyer (D-MD),H000874,0.0,363300.0,0.0,0.0,363300.0,0.0,0.0,4,
-Rep. Pete Aguilar (D-CA),A000371,2500.0,343000.0,0.0,0.0,345500.0,0.0,0.0,4,
-Rep. Suzan K. DelBene (D-WA),D000617,2000.0,337000.0,0.0,0.0,339000.0,0.0,0.0,5,
-Sen. Jon Tester (D-MT),T000464,0.0,330200.0,0.0,0.0,330200.0,0.0,0.0,2,
-Rep. Blaine Luetkemeyer (R-MO),L000569,0.0,319300.0,0.0,0.0,319300.0,0.0,0.0,3,
-Sen. Mike Crapo (R-ID),C000880,5900.0,297000.0,0.0,0.0,302900.0,0.0,0.0,6,
-Rep. Sean Casten (D-IL),C001117,0.0,300000.0,0.0,0.0,300000.0,0.0,0.0,3,
-Sen. Katie Boyd Britt (R-AL),B001319,7000.0,288750.0,0.0,0.0,295750.0,0.0,0.0,5,
-Rep. Terri A. Sewell (D-AL),S001185,750.0,291500.0,0.0,0.0,292250.0,0.0,0.0,5,
-Rep. Darin LaHood (R-IL),L000585,0.0,290185.0,0.0,0.0,290185.0,0.0,0.0,3,
-Rep. Steven Horsford (D-NV),H001066,4500.0,285000.0,0.0,0.0,289500.0,0.0,0.0,4,
-Rep. Ritchie Torres (D-NY),T000486,21500.0,261400.0,0.0,0.0,282900.0,0.0,0.0,7,title-initial
-Sen. Sherrod Brown (D-OH),B000944,1000.0,281150.0,0.0,0.0,282150.0,0.0,0.0,5,
-Rep. Kevin McCarthy (R-CA),M001165,0.0,278500.0,0.0,0.0,278500.0,0.0,0.0,4,
-Sen. John Cornyn (R-TX),C001056,3500.0,267041.0,0.0,0.0,270541.0,0.0,0.0,5,
-Rep. James E. Clyburn (D-SC),C000537,0.0,267000.0,0.0,0.0,267000.0,0.0,0.0,4,
-Sen. John Boozman (R-AR),B001236,10300.0,256500.0,0.0,0.0,266800.0,0.0,0.0,5,
-Rep. Brad Sherman (D-CA),S000344,0.0,263500.0,0.0,0.0,263500.0,0.0,0.0,2,
-Sen. Gary C. Peters (D-MI),P000595,0.0,239550.0,0.0,0.0,239550.0,0.0,0.0,3,
-Rep. David Scott (D-GA),S001157,0.0,233500.0,0.0,0.0,233500.0,0.0,0.0,3,
-Rep. Brittany Pettersen (D-CO),P000620,6000.0,210250.0,0.0,0.0,216250.0,0.0,0.0,5,
-Rep. Bradley Scott Schneider (D-IL),S001190,6500.0,209500.0,0.0,0.0,216000.0,0.0,0.0,6,
-Sen. John Barrasso (R-WY),B001261,8300.0,202500.0,0.0,0.0,210800.0,0.0,0.0,4,
-Sen. Kyrsten Sinema (I-AZ),S001191,0.0,208590.0,0.0,0.0,208590.0,0.0,0.0,2,
-Rep. Brian K. Fitzpatrick (R-PA),F000466,0.0,207500.0,0.0,0.0,207500.0,0.0,0.0,3,
-Rep. Eleanor Holmes Norton (D-DC),N000147,0.0,200000.0,0.0,0.0,200000.0,0.0,0.0,1,
-Sen. Charles E. Schumer (D-NY),S000148,2900.0,196000.0,0.0,0.0,198900.0,0.0,0.0,4,
-Sen. Christopher A. Coons (D-DE),C001088,1000.0,196500.0,0.0,0.0,197500.0,0.0,0.0,4,
-Sen. Lisa Blunt Rochester (D-DE),B001303,2500.0,193250.0,0.0,0.0,195750.0,0.0,15000.0,5,compound:matched
-Rep. Warren Davidson (R-OH),D000626,11800.0,182700.0,0.0,0.0,194500.0,0.0,0.0,4,
-Rep. Zachary Nunn (R-IA),N000193,1000.0,189500.0,0.0,0.0,190500.0,0.0,0.0,3,
-Sen. Catherine Cortez Masto (D-NV),C001113,1850.0,185334.0,0.0,0.0,187184.0,0.0,0.0,4,
-Rep. Erin Houchin (R-IN),H001093,4000.0,175250.0,0.0,0.0,179250.0,0.0,0.0,4,
-Sen. Todd Young (R-IN),Y000064,0.0,173500.0,0.0,0.0,173500.0,0.0,0.0,3,
-Rep. Mike Thompson (D-CA),T000460,0.0,170000.0,0.0,0.0,170000.0,0.0,0.0,2,
-Sen. Kevin Cramer (R-ND),C001096,0.0,167500.0,0.0,0.0,167500.0,0.0,0.0,2,
-Sen. Jacky Rosen (D-NV),R000608,1000.0,166281.0,0.0,0.0,167281.0,0.0,0.0,3,
-Rep. Ron Estes (R-KS),E000298,0.0,165750.0,0.0,0.0,165750.0,0.0,0.0,2,
-Rep. Daniel Meuser (R-PA),M001204,1500.0,160750.0,0.0,0.0,162250.0,0.0,0.0,3,
-Rep. Vicente Gonzalez (D-TX),G000581,3000.0,156090.0,0.0,0.0,159090.0,0.0,0.0,5,title-initial
-Rep. Madeleine Dean (D-PA),D000631,0.0,159000.0,0.0,0.0,159000.0,0.0,0.0,2,
-Rep. Frank D. Lucas (R-OK),L000491,0.0,151500.0,0.0,0.0,151500.0,0.0,0.0,2,
-Rep. Mike Carey (R-OH),C001126,5000.0,140700.0,2500.0,2500.0,150700.0,0.0,0.0,4,compound:linked
-Rep. Michael Lawler (R-NY),L000599,1250.0,145260.0,0.0,0.0,146510.0,0.0,0.0,4,
-Rep. Richard Hudson (R-NC),H001067,0.0,144500.0,0.0,0.0,144500.0,0.0,0.0,2,
-Sen. Mitch McConnell (R-KY),M000355,0.0,144000.0,0.0,0.0,144000.0,0.0,0.0,2,
-Sen. Jerry Moran (R-KS),M000934,0.0,134750.0,0.0,0.0,134750.0,0.0,0.0,2,
-Rep. William R. Timmons IV (R-SC),T000480,1500.0,132500.0,0.0,0.0,134000.0,0.0,0.0,3,
-Sen. Margaret Wood Hassan (D-NH),H001076,0.0,130334.0,0.0,0.0,130334.0,0.0,0.0,2,
-Rep. Kevin Hern (R-OK),H001082,0.0,128000.0,0.0,0.0,128000.0,0.0,0.0,2,
-Rep. Randy Feenstra (R-IA),F000446,1000.0,125095.0,0.0,0.0,126095.0,0.0,0.0,3,
-Rep. Guy Reschenthaler (R-PA),R000610,0.0,123000.0,0.0,0.0,123000.0,0.0,0.0,2,
-Rep. Barry Loudermilk (R-GA),L000583,0.0,114550.0,0.0,0.0,114550.0,0.0,0.0,2,
-Rep. Mike Flood (R-NE),F000474,6800.0,99500.0,1000.0,0.0,107300.0,0.0,0.0,4,
-Sen. Cynthia M. Lummis (R-WY),L000571,45500.0,56000.0,2000.0,1000.0,104500.0,6000.0,0.0,11,compound:linked;inferred;prefix
-Rep. Vern Buchanan (R-FL),B001260,0.0,102090.0,0.0,0.0,102090.0,0.0,0.0,1,
-Sen. Tina Smith (D-MN),S001203,0.0,94000.0,0.0,0.0,94000.0,0.0,0.0,1,title-chamber
-Sen. David McCormick (R-PA),M001243,825.0,67600.0,18200.0,6600.0,93225.0,0.0,0.0,6,compound:linked
-Rep. Maxine Waters (D-CA),W000187,2900.0,89000.0,1000.0,0.0,92900.0,0.0,0.0,3,
-Rep. Dusty Johnson (R-SD),J000301,6500.0,77095.0,4500.0,4500.0,92595.0,0.0,0.0,5,compound:linked
-Rep. Ashley Hinson (R-IA),H001091,1000.0,88095.0,0.0,0.0,89095.0,0.0,0.0,2,
-Rep. Roger Williams (R-TX),W000816,0.0,85250.0,0.0,0.0,85250.0,0.0,0.0,1,
-Rep. Claudia Tenney (R-NY),T000478,1000.0,83000.0,0.0,0.0,84000.0,0.0,0.0,2,
-Sen. Tim Kaine (D-VA),K000384,0.0,83750.0,0.0,0.0,83750.0,0.0,0.0,1,
-Rep. Lisa C. McClain (R-MI),M001136,1000.0,82500.0,0.0,0.0,83500.0,0.0,0.0,2,
-Rep. Troy Balderson (R-OH),B001306,0.0,82095.0,0.0,0.0,82095.0,0.0,0.0,1,
-Rep. Jimmy Panetta (D-CA),P000613,1000.0,81000.0,0.0,0.0,82000.0,0.0,0.0,2,
-Rep. Cathy McMorris Rodgers (R-WA),M001159,0.0,81000.0,0.0,0.0,81000.0,0.0,0.0,1,
-Rep. Scott Fitzgerald (R-WI),F000471,0.0,80750.0,0.0,0.0,80750.0,0.0,0.0,1,
-Rep. Gwen Moore (D-WI),M001160,0.0,79500.0,0.0,0.0,79500.0,0.0,0.0,1,
-Rep. David Kustoff (R-TN),K000392,0.0,78000.0,0.0,0.0,78000.0,0.0,0.0,1,
-Rep. Joseph D. Morelle (D-NY),M001206,0.0,77500.0,0.0,0.0,77500.0,0.0,0.0,1,
-Rep. Angie Craig (D-MN),C001119,21000.0,55590.0,0.0,0.0,76590.0,0.0,0.0,3,
-Rep. Robin L. Kelly (D-IL),K000385,0.0,75133.0,0.0,0.0,75133.0,0.0,15000.0,2,compound:matched
-Rep. Joe Neguse (D-CO),N000191,0.0,75000.0,0.0,0.0,75000.0,0.0,0.0,1,
-Rep. Susie Lee (D-NV),L000590,1000.0,70185.0,0.0,0.0,71185.0,0.0,0.0,2,
-Sen. Kirsten E. Gillibrand (D-NY),G000555,11600.0,57000.0,1250.0,0.0,69850.0,500.0,0.0,6,inferred;title-initial
-Rep. Haley M. Stevens (D-MI),S001215,1000.0,67500.0,0.0,0.0,68500.0,0.0,0.0,2,
-Sen. Marsha Blackburn (R-TN),B001243,0.0,68500.0,0.0,0.0,68500.0,0.0,0.0,1,
-Sen. Pete Ricketts (R-NE),R000618,0.0,68000.0,0.0,0.0,68000.0,0.0,0.0,1,
-Sen. Patty Murray (D-WA),M001111,0.0,67500.0,0.0,0.0,67500.0,0.0,0.0,1,
-Rep. John B. Larson (D-CT),L000557,0.0,66000.0,0.0,0.0,66000.0,0.0,0.0,1,
-Rep. Derek Kilmer (D-WA),K000381,0.0,65500.0,0.0,0.0,65500.0,0.0,0.0,1,
-Rep. Rick Larsen (D-WA),L000560,0.0,64500.0,0.0,0.0,64500.0,0.0,0.0,1,
-Rep. Donald Norcross (D-NJ),N000188,0.0,64000.0,0.0,0.0,64000.0,0.0,0.0,1,
-Rep. Sharice Davids (D-KS),D000629,0.0,62590.0,0.0,0.0,62590.0,0.0,0.0,1,
-Rep. Judy Chu (D-CA),C001080,0.0,62500.0,0.0,0.0,62500.0,0.0,0.0,1,
-Rep. Blake D. Moore (R-UT),M001213,1000.0,61185.0,0.0,0.0,62185.0,0.0,0.0,2,
-Rep. Sylvia R. Garcia (D-TX),G000587,0.0,62000.0,0.0,0.0,62000.0,0.0,0.0,1,
-Rep. Matt Cartwright (D-PA),C001090,0.0,61500.0,0.0,0.0,61500.0,0.0,0.0,1,
-Sen. Eric Schmitt (R-MO),S001227,0.0,61000.0,0.0,0.0,61000.0,0.0,0.0,1,
-Sen. John R. Curtis (R-UT),C001114,500.0,60000.0,0.0,0.0,60500.0,0.0,0.0,2,
-Rep. Nicole Malliotakis (R-NY),M000317,0.0,60000.0,0.0,0.0,60000.0,0.0,0.0,1,
-Sen. Martin Heinrich (D-NM),H001046,1000.0,58500.0,0.0,0.0,59500.0,0.0,0.0,2,
-Rep. Juan Vargas (D-CA),V000130,0.0,59500.0,0.0,0.0,59500.0,0.0,0.0,1,
-Rep. Zoe Lofgren (D-CA),L000397,1000.0,58100.0,0.0,0.0,59100.0,0.0,0.0,2,
-Rep. Michelle Steel (R-CA),S001135,1000.0,57595.0,0.0,0.0,58595.0,0.0,0.0,2,
-Rep. Tim Walberg (R-MI),W000798,0.0,58521.0,0.0,0.0,58521.0,0.0,0.0,1,
-"Rep. Frank Pallone, Jr. (D-NJ)",P000034,250.0,57500.0,0.0,0.0,57750.0,0.0,0.0,2,
-Rep. Nikema Williams (D-GA),W000788,0.0,57500.0,0.0,0.0,57500.0,0.0,0.0,1,
-Sen. Joni Ernst (R-IA),E000295,2000.0,55000.0,0.0,0.0,57000.0,0.0,0.0,2,
-Sen. Ted Budd (R-NC),B001305,2000.0,55000.0,0.0,0.0,57000.0,0.0,0.0,2,title-initial
-Rep. Julia Letlow (R-LA),L000595,0.0,56500.0,0.0,0.0,56500.0,0.0,0.0,1,
-Rep. Mike Quigley (D-IL),Q000023,0.0,56500.0,0.0,0.0,56500.0,0.0,0.0,1,
-Rep. Adrian Smith (R-NE),S001172,0.0,55900.0,0.0,0.0,55900.0,0.0,0.0,1,
-Rep. Adam Smith (D-WA),S000510,0.0,54500.0,0.0,0.0,54500.0,0.0,0.0,1,
-Rep. Brett Guthrie (R-KY),G000558,0.0,54000.0,0.0,0.0,54000.0,0.0,0.0,1,
-Rep. Veronica Escobar (D-TX),E000299,0.0,54000.0,0.0,0.0,54000.0,0.0,0.0,1,
-Rep. Deborah K. Ross (D-NC),R000305,0.0,54000.0,0.0,0.0,54000.0,0.0,0.0,1,
-Sen. Patrick J. Toomey (R-PA),T000461,53790.0,0.0,0.0,0.0,53790.0,0.0,0.0,1,
-Sen. Lisa Murkowski (R-AK),M001153,0.0,53500.0,0.0,0.0,53500.0,0.0,0.0,1,
-Sen. Chris Van Hollen (D-MD),V000128,0.0,52900.0,0.0,0.0,52900.0,0.0,0.0,1,
-Sen. James Lankford (R-OK),L000575,250.0,52500.0,0.0,0.0,52750.0,0.0,0.0,2,
-Sen. Bernie Moreno (R-OH),M001242,15925.0,0.0,5000.0,5000.0,25925.0,0.0,0.0,4,compound:linked
-Rep. Darren Soto (D-FL),S001200,11000.0,0.0,2500.0,0.0,13500.0,0.0,0.0,3,
-Rep. Ro Khanna (D-CA),K000389,10600.0,0.0,1000.0,0.0,11600.0,0.0,0.0,3,title-initial
-Rep. Glenn Thompson (R-PA),T000467,10750.0,0.0,0.0,0.0,10750.0,0.0,0.0,1,title-initial
-Sen. Ruben Gallego (D-AZ),G000574,9500.0,0.0,0.0,0.0,9500.0,0.0,0.0,4,
-Sen. Deb Fischer (R-NE),F000463,9300.0,0.0,0.0,0.0,9300.0,0.0,0.0,3,
-Sen. Angela D. Alsobrooks (D-MD),A000382,8300.0,0.0,0.0,0.0,8300.0,1000.0,0.0,4,inferred
-Sen. Ron Wyden (D-OR),W000779,7900.0,0.0,0.0,0.0,7900.0,0.0,0.0,2,
-Rep. Brian Jack (R-GA),J000311,7000.0,0.0,0.0,0.0,7000.0,0.0,0.0,3,
-Rep. Jake Auchincloss (D-MA),A000148,6800.0,0.0,0.0,0.0,6800.0,0.0,0.0,1,
-Sen. Adam B. Schiff (D-CA),S001150,6600.0,0.0,0.0,0.0,6600.0,0.0,0.0,1,
-Rep. Tim Ryan (D-OH),R000577,5800.0,0.0,0.0,0.0,5800.0,0.0,0.0,1,
-Rep. Sam T. Liccardo (D-CA),L000607,5300.0,0.0,0.0,0.0,5300.0,0.0,0.0,2,
-Sen. Tim Sheehy (R-MT),S001232,4300.0,0.0,0.0,0.0,4300.0,0.0,0.0,2,
-Rep. Nikki Budzinski (D-IL),B001315,4000.0,0.0,0.0,0.0,4000.0,0.0,0.0,2,
-Rep. Marcus J. Molinaro (R-NY),M001221,3900.0,0.0,0.0,0.0,3900.0,0.0,0.0,1,
-Rep. Byron Donalds (R-FL),D000032,3300.0,0.0,0.0,0.0,3300.0,0.0,0.0,1,
-Rep. Jasmine Crockett (D-TX),C001130,2000.0,0.0,1000.0,0.0,3000.0,0.0,0.0,2,
-Rep. Kristen McDonald Rivet (D-MI),M001237,3000.0,0.0,0.0,0.0,3000.0,0.0,0.0,4,
-Rep. Sean Patrick Maloney (D-NY),M001185,2900.0,0.0,0.0,0.0,2900.0,0.0,0.0,1,
-Rep. Janelle S. Bynum (D-OR),B001326,2750.0,0.0,0.0,0.0,2750.0,0.0,0.0,3,
-Rep. Eugene Simon Vindman (D-VA),V000138,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
-Rep. Mike Haridopolos (R-FL),H001099,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
-Sen. Rick Scott (R-FL),S001217,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
-Rep. Wiley Nickel (D-NC),N000194,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,2,
-Rep. Robert Menendez (D-NJ),M001226,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,2,title-chamber
-Rep. Eric Sorensen (D-IL),S001225,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Derek Tran (D-CA),T000491,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Mikie Sherrill (D-NJ),S001207,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Brendan F. Boyle (D-PA),B001296,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Timothy M. Kennedy (D-NY),K000402,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Adam Gray (D-CA),G000605,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Jared Moskowitz (D-FL),M001217,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Grace Meng (D-NY),M001188,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Marc A. Veasey (D-TX),V000131,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Max L. Miller (R-OH),M001222,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,
-Rep. Gabe Vasquez (D-NM),V000136,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,2,
-Sen. Robert Menendez (D-NJ),M000639,1000.0,0.0,1000.0,0.0,2000.0,0.0,0.0,2,title-chamber
-Rep. Ted Lieu (D-CA),L000582,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,2,
-Rep. Nicholas J. Begich III (R-AK),B001323,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,1,
-Rep. Abraham J. Hamadeh (R-AZ),H001098,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,1,
-Rep. Thomas R. Suozzi (D-NY),S001201,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,1,
-Rep. Donald G. Davis (D-NC),D000230,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,1,
-Rep. David Schweikert (R-AZ),S001183,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,1,
-Rep. Laura Gillen (D-NY),G000602,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,2,
-Sen. Alex Padilla (D-CA),P000145,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,2,
-Rep. Nellie Pou (D-NJ),P000621,1500.0,0.0,0.0,0.0,1500.0,0.0,0.0,3,title-initial
-Rep. Troy A. Carter (D-LA),C001125,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Troy Downing (R-MT),D000634,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Sen. James C. Justice (R-WV),J000312,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Sen. Ted Cruz (R-TX),C001098,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Addison P. McDowell (R-NC),M001240,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Lucy McBath (D-GA),M001208,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Marlin A. Stutzman (R-IN),S001188,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Dave Min (D-CA),M001241,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Sen. John Fetterman (D-PA),F000479,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Gabe Amo (D-RI),A000380,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Emily Randall (D-WA),R000621,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Glenn Ivey (D-MD),I000058,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Sen. Jim Banks (R-IN),B001299,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. David P. Joyce (R-OH),J000295,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. K. Michael Conaway (R-TX),C001062,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Henry Cuellar (D-TX),C001063,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Robert Garcia (D-CA),G000598,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,title-initial
-Rep. Becca Balint (D-VT),B001318,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Beth Van Duyne (R-TX),V000134,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. George Whitesides (D-CA),W000830,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Tim Moore (R-NC),M001236,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Julie Fedorchak (R-ND),F000482,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Jimmy Gomez (D-CA),G000585,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Julie Johnson (D-TX),J000310,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
-Rep. Mike Rogers (R-AL),R000575,825.0,0.0,0.0,0.0,825.0,0.0,0.0,1,
-"Sen. Robert P. Casey, Jr. (D-PA)",C001070,750.0,0.0,0.0,0.0,750.0,500.0,0.0,3,inferred
-Rep. Val T. Hoyle (D-OR),H001094,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Daniel S. Goldman (D-NY),G000599,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Mary Sattler Peltola (D-AK),P000619,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Ben McAdams (D-UT),M001209,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Sen. Raphael G. Warnock (D-GA),W000790,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Jack Bergman (R-MI),B001301,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Adriano Espaillat (D-NY),E000297,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Sarah McBride (D-DE),M001238,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Maggie Goodlander (D-NH),G000604,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Shomari Figures (D-AL),F000481,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
-Rep. Mark Alford (R-MO),A000379,300.0,0.0,0.0,0.0,300.0,0.0,0.0,1,
-Rep. Jennifer Wexton (D-VA),W000825,250.0,0.0,0.0,0.0,250.0,0.0,0.0,1,
-Sen. John Kennedy (R-LA),K000393,250.0,0.0,0.0,0.0,250.0,0.0,0.0,1,
-Sen. Andy Kim (D-NJ),K000394,250.0,0.0,0.0,0.0,250.0,0.0,0.0,1,
-Rep. Josh Riley (D-NY),R000622,250.0,0.0,0.0,0.0,250.0,0.0,0.0,1,
-Rep. Yvette D. Clarke (D-NY),C001067,0.0,0.0,0.0,0.0,0.0,0.0,15000.0,1,compound:matched
-Rep. Lauren Underwood (D-IL),U000040,0.0,0.0,0.0,0.0,0.0,0.0,15000.0,1,compound:matched
-Rep. Jonathan L. Jackson (D-IL),J000309,0.0,0.0,0.0,0.0,0.0,0.0,15000.0,1,compound:matched
-Sen. Michael F. Bennet (D-CO),B001267,0.0,0.0,0.0,0.0,0.0,1000.0,0.0,1,inferred
+﻿member,bioguide_id,direct_crypto_native,direct_diversified_forward,direct_ambient_lowshare,campaign_committee,leadership_pac,total_attributable,jfc_shared_unallocated,multi_honoree_shared_unallocated,n_variant_rows,confidence_flags
+Rep. J. French Hill (R-AR),H001072,37500.0,864450.0,137300.0,7800.0,11800.0,1058850.0,5500.0,0.0,28,compound:linked;inferred;inverted;prefix
+Sen. J.D. Vance (R-OH),V000137,1002500.0,39000.0,2000.0,0.0,0.0,1043500.0,0.0,0.0,14,inverted
+Rep. Andy Barr (R-KY),B001282,11800.0,816967.0,108107.0,4500.0,3500.0,944874.0,0.0,1500.0,29,compound:matched;inverted;prefix
+Rep. Bill Huizenga (R-MI),H001058,3500.0,782550.0,90685.0,0.0,1000.0,877735.0,0.0,0.0,20,inverted
+Rep. Tom Emmer (R-MN),E000294,76400.0,614000.0,133500.0,3000.0,0.0,826900.0,0.0,0.0,29,inverted
+Rep. Ann Wagner (R-MO),W000812,1000.0,597098.0,79000.0,0.0,0.0,677098.0,0.0,1900.0,13,compound:matched;inverted
+Rep. Patrick T. McHenry (R-NC),M001156,14900.0,593300.0,68850.0,0.0,0.0,677050.0,1000.0,5000.0,19,compound:matched;inferred;inverted
+Rep. Richard E. Neal (D-MA),N000015,500.0,536350.0,117500.0,0.0,0.0,654350.0,0.0,0.0,17,inverted;title-initial
+Rep. Hakeem S. Jeffries (D-NY),J000294,5000.0,473100.0,170500.0,4000.0,0.0,652600.0,0.0,15000.0,15,compound:matched;inverted
+Rep. Bryan Steil (R-WI),S001213,12000.0,535500.0,76000.0,11000.0,10500.0,645000.0,0.0,0.0,19,compound:linked;compound:prefix;inverted;prefix
+Sen. Tim Scott (R-SC),S001184,22900.0,500300.0,103950.0,6500.0,5000.0,638650.0,0.0,0.0,26,compound:linked;inverted
+Sen. Mark R. Warner (D-VA),W000805,4500.0,424650.0,130100.0,10000.0,0.0,569250.0,5000.0,0.0,21,inferred;inverted
+Rep. James A. Himes (D-CT),H001047,12300.0,452500.0,87500.0,0.0,0.0,552300.0,0.0,0.0,18,inverted
+Rep. Jason Smith (R-MO),S001195,9500.0,400000.0,130000.0,0.0,9500.0,549000.0,0.0,0.0,13,inverted
+Rep. Gregory W. Meeks (D-NY),M001137,0.0,463500.0,81000.0,0.0,1000.0,545500.0,0.0,15000.0,20,compound:matched;inverted
+Sen. Bill Hagerty (R-TN),H000601,28000.0,429000.0,80250.0,7000.0,0.0,544250.0,3500.0,0.0,26,inferred;inverted
+Rep. Bill Foster (D-IL),F000454,250.0,474000.0,68500.0,0.0,0.0,542750.0,0.0,0.0,11,inverted
+Sen. John Thune (R-SD),T000250,7500.0,386000.0,130095.0,5000.0,3500.0,532095.0,0.0,0.0,20,inverted
+Rep. Josh Gottheimer (D-NJ),G000583,10650.0,410000.0,93000.0,0.0,2500.0,516150.0,0.0,0.0,14,inverted;title-initial
+Sen. Thom Tillis (R-NC),T000476,3000.0,396750.0,88841.0,0.0,0.0,488591.0,0.0,0.0,13,inverted;title-initial
+Rep. Steve Scalise (R-LA),S001176,2500.0,350500.0,117000.0,6600.0,0.0,476600.0,0.0,0.0,14,compound:linked;inverted
+Rep. Young Kim (R-CA),K000397,3900.0,414483.0,53435.0,1500.0,0.0,473318.0,0.0,0.0,14,inverted
+Sen. Steve Daines (R-MT),D000618,4500.0,399000.0,63000.0,0.0,0.0,466500.0,0.0,0.0,18,inverted
+Rep. Andrew R. Garbarino (R-NY),G000597,1000.0,376500.0,69590.0,8500.0,0.0,455590.0,0.0,1500.0,15,compound:matched;inverted;title-initial
+Rep. Joyce Beatty (D-OH),B001281,5800.0,392500.0,51000.0,0.0,0.0,449300.0,0.0,50000.0,14,compound:matched;inverted
+Rep. Katherine M. Clark (D-MA),C001101,7000.0,326000.0,115250.0,500.0,500.0,449250.0,5000.0,0.0,17,compound:linked;inferred;inverted
+Sen. Mike Crapo (R-ID),C000880,5900.0,369000.0,62000.0,0.0,0.0,436900.0,2500.0,0.0,17,inferred;inverted
+Sen. Mike Rounds (R-SD),R000605,7000.0,346000.0,79000.0,2000.0,0.0,434000.0,0.0,0.0,15,inverted
+Rep. Darin LaHood (R-IL),L000585,0.0,347500.0,65685.0,8000.0,0.0,421185.0,0.0,0.0,14,inverted
+Rep. Suzan K. DelBene (D-WA),D000617,2000.0,287000.0,131800.0,0.0,0.0,420800.0,0.0,0.0,13,inverted
+Rep. Pete Aguilar (D-CA),A000371,2500.0,298000.0,117000.0,0.0,0.0,417500.0,0.0,0.0,12,inverted;title-initial
+Rep. Mike Johnson (R-LA),J000299,5000.0,308000.0,99566.0,0.0,0.0,412566.0,0.0,20000.0,13,compound:matched;inverted
+Rep. Steny H. Hoyer (D-MD),H000874,0.0,305000.0,105800.0,0.0,0.0,410800.0,0.0,0.0,12,inverted
+Sen. Jon Tester (D-MT),T000464,0.0,314250.0,89450.0,0.0,0.0,403700.0,0.0,0.0,8,inverted
+Rep. James E. Clyburn (D-SC),C000537,0.0,227500.0,175000.0,0.0,0.0,402500.0,0.0,5000.0,15,compound:matched;inverted
+Sen. Katie Boyd Britt (R-AL),B001319,7000.0,319750.0,64500.0,0.0,5000.0,396250.0,0.0,0.0,18,inverted
+Rep. Steven Horsford (D-NV),H001066,4500.0,278800.0,112200.0,0.0,0.0,395500.0,0.0,0.0,16,inverted
+Rep. Blaine Luetkemeyer (R-MO),L000569,0.0,353900.0,35400.0,0.0,0.0,389300.0,0.0,0.0,8,inverted
+Rep. Brad Sherman (D-CA),S000344,0.0,329000.0,59000.0,0.0,0.0,388000.0,0.0,0.0,9,inverted;title-initial
+Rep. Terri A. Sewell (D-AL),S001185,750.0,294500.0,79500.0,0.0,0.0,374750.0,0.0,50000.0,13,compound:matched;inverted;title-initial
+Rep. Bradley Scott Schneider (D-IL),S001190,6500.0,298500.0,65500.0,0.0,0.0,370500.0,0.0,0.0,18,inverted
+Rep. Ritchie Torres (D-NY),T000486,21500.0,292400.0,46500.0,0.0,0.0,360400.0,0.0,0.0,15,inverted;title-initial
+Sen. Lisa Blunt Rochester (D-DE),B001303,2500.0,294000.0,60750.0,0.0,1000.0,358250.0,0.0,20000.0,17,alias;compound:matched;inverted
+Rep. Richard Hudson (R-NC),H001067,0.0,275750.0,61500.0,0.0,0.0,337250.0,0.0,0.0,17,inverted
+Sen. Charles E. Schumer (D-NY),S000148,2900.0,254500.0,75500.0,0.0,0.0,332900.0,0.0,0.0,17,inverted
+Rep. Brittany Pettersen (D-CO),P000620,6000.0,258250.0,60800.0,0.0,0.0,325050.0,0.0,0.0,17,inverted
+Rep. Sean Casten (D-IL),C001117,0.0,273500.0,50500.0,0.0,0.0,324000.0,0.0,0.0,6,inverted
+Rep. Kevin McCarthy (R-CA),M001165,0.0,258500.0,62500.0,1000.0,0.0,322000.0,0.0,0.0,13,inverted
+Sen. Gary C. Peters (D-MI),P000595,0.0,267500.0,48550.0,0.0,2500.0,318550.0,0.0,0.0,16,inverted
+Sen. Sherrod Brown (D-OH),B000944,1000.0,270250.0,41150.0,0.0,0.0,312400.0,0.0,0.0,11,inverted
+Sen. John Cornyn (R-TX),C001056,3500.0,232500.0,70291.0,0.0,5000.0,311291.0,0.0,0.0,17,inverted;title-initial
+Sen. John Barrasso (R-WY),B001261,8300.0,229000.0,67500.0,0.0,0.0,304800.0,0.0,5000.0,19,compound:matched;inverted
+Rep. David Scott (D-GA),S001157,0.0,258000.0,44000.0,0.0,0.0,302000.0,0.0,1900.0,13,compound:matched;inverted
+Sen. John Boozman (R-AR),B001236,10300.0,216500.0,73500.0,0.0,0.0,300300.0,0.0,0.0,11,inverted
+Rep. Michael Lawler (R-NY),L000599,1250.0,235000.0,59310.0,2000.0,0.0,297560.0,0.0,0.0,17,inverted;prefix
+Sen. Kevin Cramer (R-ND),C001096,0.0,254000.0,37500.0,0.0,0.0,291500.0,0.0,0.0,12,inverted
+Sen. Christopher A. Coons (D-DE),C001088,1000.0,197000.0,86500.0,0.0,0.0,284500.0,0.0,0.0,12,inverted
+Sen. Margaret Wood Hassan (D-NH),H001076,0.0,219834.0,61850.0,1000.0,1000.0,283684.0,0.0,0.0,20,inverted
+Rep. Mike Thompson (D-CA),T000460,0.0,216500.0,64500.0,0.0,0.0,281000.0,0.0,1195.0,10,compound:matched;inverted
+Rep. Brian K. Fitzpatrick (R-PA),F000466,0.0,221000.0,53000.0,0.0,0.0,274000.0,0.0,20000.0,12,compound:matched;inverted
+Rep. Warren Davidson (R-OH),D000626,11800.0,236600.0,23600.0,0.0,0.0,272000.0,0.0,0.0,10,inverted
+Rep. Vern Buchanan (R-FL),B001260,0.0,211500.0,55990.0,0.0,0.0,267490.0,0.0,0.0,10,inverted;title-initial
+Sen. Todd Young (R-IN),Y000064,0.0,216000.0,44500.0,2900.0,2100.0,265500.0,0.0,0.0,13,inverted
+Sen. Tim Kaine (D-VA),K000384,0.0,172750.0,87500.0,5000.0,0.0,265250.0,1500.0,1603.0,16,compound:matched;inferred;inverted
+Sen. Kyrsten Sinema (I-AZ),S001191,0.0,221000.0,38090.0,3500.0,2000.0,264590.0,0.0,0.0,12,inverted;title-initial
+Sen. Catherine Cortez Masto (D-NV),C001113,1850.0,201359.0,51750.0,2500.0,4516.0,261975.0,0.0,0.0,16,inverted
+Rep. Zachary Nunn (R-IA),N000193,1000.0,220500.0,37500.0,0.0,0.0,259000.0,0.0,0.0,12,inverted;title-initial
+Rep. William R. Timmons IV (R-SC),T000480,1500.0,226750.0,28500.0,1250.0,0.0,258000.0,0.0,0.0,19,inverted
+Rep. Daniel Meuser (R-PA),M001204,1500.0,207250.0,45000.0,0.0,0.0,253750.0,0.0,0.0,13,inverted
+Rep. Frank D. Lucas (R-OK),L000491,0.0,231650.0,21000.0,0.0,0.0,252650.0,0.0,0.0,11,inverted
+Rep. Jimmy Panetta (D-CA),P000613,1000.0,194000.0,57500.0,0.0,0.0,252500.0,0.0,0.0,12,inverted;title-initial
+Rep. Mike Carey (R-OH),C001126,5000.0,199000.0,42700.0,2500.0,2500.0,251700.0,0.0,0.0,13,compound:linked;inverted
+Rep. Vicente Gonzalez (D-TX),G000581,3000.0,197500.0,50590.0,0.0,0.0,251090.0,0.0,0.0,13,inverted;title-initial
+Sen. Jerry Moran (R-KS),M000934,0.0,198750.0,44250.0,2500.0,0.0,245500.0,0.0,0.0,14,inverted
+Rep. Mike Flood (R-NE),F000474,6800.0,212250.0,23595.0,1000.0,300.0,243945.0,0.0,0.0,16,inverted;title-initial
+Sen. Jacky Rosen (D-NV),R000608,1000.0,148281.0,90000.0,0.0,0.0,239281.0,500.0,0.0,15,inferred;inverted;title-initial
+Rep. Randy Feenstra (R-IA),F000446,1000.0,199000.0,34595.0,0.0,0.0,234595.0,0.0,0.0,13,inverted
+Rep. Emanuel Cleaver (D-MO),C001061,0.0,204000.0,24000.0,0.0,0.0,228000.0,0.0,0.0,14,inverted;title-initial
+Rep. Madeleine Dean (D-PA),D000631,0.0,183000.0,44500.0,0.0,0.0,227500.0,0.0,0.0,8,inverted;title-initial
+Rep. Ron Estes (R-KS),E000298,0.0,178500.0,47500.0,0.0,0.0,226000.0,0.0,0.0,9,inverted
+Sen. Cynthia M. Lummis (R-WY),L000571,45500.0,131000.0,43500.0,2000.0,1000.0,223000.0,6000.0,5000.0,24,compound:linked;compound:matched;inferred;inverted;prefix
+Rep. Erin Houchin (R-IN),H001093,4000.0,191750.0,27000.0,0.0,0.0,222750.0,0.0,1500.0,10,compound:matched;inverted
+Rep. John B. Larson (D-CT),L000557,0.0,188000.0,34000.0,0.0,0.0,222000.0,0.0,0.0,9,inverted
+Rep. Scott Fitzgerald (R-WI),F000471,0.0,179708.0,39750.0,0.0,0.0,219458.0,0.0,0.0,12,inverted
+Sen. David McCormick (R-PA),M001243,825.0,152500.0,38802.0,18200.0,6600.0,216927.0,0.0,0.0,19,compound:linked;inverted
+Rep. Ashley Hinson (R-IA),H001091,1000.0,156500.0,57595.0,0.0,0.0,215095.0,0.0,0.0,10,inverted
+Sen. Marsha Blackburn (R-TN),B001243,0.0,175700.0,35000.0,0.0,0.0,210700.0,5000.0,0.0,13,inferred;inverted
+Rep. David Kustoff (R-TN),K000392,0.0,181500.0,26500.0,500.0,0.0,208500.0,0.0,0.0,9,inverted
+Rep. Gwen Moore (D-WI),M001160,0.0,156500.0,51500.0,0.0,0.0,208000.0,0.0,0.0,10,inverted;title-initial
+Sen. Roger F. Wicker (R-MS),W000437,0.0,163000.0,41095.0,0.0,0.0,204095.0,0.0,0.0,11,inverted
+Rep. Eleanor Holmes Norton (D-DC),N000147,0.0,200000.0,3000.0,0.0,0.0,203000.0,0.0,0.0,3,
+Sen. Mitch McConnell (R-KY),M000355,0.0,165500.0,37000.0,0.0,0.0,202500.0,0.0,0.0,8,inverted
+"Sen. Robert P. Casey, Jr. (D-PA)",C001070,750.0,132000.0,68950.0,0.0,0.0,201700.0,500.0,0.0,22,inferred;inverted
+Rep. Maxine Waters (D-CA),W000187,2900.0,157250.0,34500.0,1000.0,0.0,195650.0,0.0,0.0,7,inverted
+Sen. Patty Murray (D-WA),M001111,0.0,118634.0,77000.0,0.0,0.0,195634.0,0.0,0.0,10,inverted;title-initial
+Rep. Barry Loudermilk (R-GA),L000583,0.0,184050.0,10000.0,0.0,0.0,194050.0,0.0,0.0,7,inverted
+Rep. Joseph D. Morelle (D-NY),M001206,0.0,143500.0,50500.0,0.0,0.0,194000.0,0.0,0.0,11,inverted
+Rep. Kevin Hern (R-OK),H001082,0.0,153000.0,40000.0,0.0,0.0,193000.0,0.0,0.0,9,inverted
+Rep. Roger Williams (R-TX),W000816,0.0,172500.0,18250.0,0.0,0.0,190750.0,0.0,0.0,6,inverted
+Sen. James Lankford (R-OK),L000575,250.0,147500.0,42000.0,0.0,0.0,189750.0,0.0,0.0,11,inverted
+Rep. David P. Joyce (R-OH),J000295,1000.0,161300.0,24750.0,0.0,0.0,187050.0,0.0,0.0,13,inverted
+Rep. Thomas R. Suozzi (D-NY),S001201,1500.0,148000.0,35000.0,0.0,0.0,184500.0,0.0,0.0,16,inverted
+Rep. A. Drew Ferguson IV (R-GA),F000465,0.0,161500.0,23000.0,0.0,0.0,184500.0,0.0,0.0,17,inverted
+Rep. Blake D. Moore (R-UT),M001213,1000.0,145500.0,32685.0,0.0,0.0,179185.0,0.0,0.0,11,inverted
+Sen. Susan M. Collins (R-ME),C001035,0.0,119000.0,52000.0,1000.0,5000.0,177000.0,0.0,0.0,13,inverted
+Sen. Joni Ernst (R-IA),E000295,2000.0,105000.0,63500.0,5000.0,0.0,175500.0,0.0,0.0,11,inverted
+Sen. Ruben Gallego (D-AZ),G000574,9500.0,116000.0,44500.0,0.0,5000.0,175000.0,0.0,0.0,16,inverted
+Sen. Deb Fischer (R-NE),F000463,9300.0,119500.0,40000.0,0.0,0.0,168800.0,0.0,0.0,16,inverted
+Rep. Cathy McMorris Rodgers (R-WA),M001159,0.0,108500.0,60000.0,0.0,0.0,168500.0,0.0,0.0,10,inverted;title-initial
+Rep. Adrian Smith (R-NE),S001172,0.0,133000.0,34900.0,0.0,0.0,167900.0,0.0,0.0,11,inverted
+Rep. Lisa C. McClain (R-MI),M001136,1000.0,135500.0,31000.0,0.0,0.0,167500.0,0.0,1500.0,11,compound:matched;inverted
+Rep. Michelle Steel (R-CA),S001135,1000.0,123500.0,40095.0,500.0,0.0,165095.0,0.0,0.0,12,inverted
+Sen. Ted Budd (R-NC),B001305,2000.0,136000.0,26090.0,1000.0,0.0,165090.0,0.0,0.0,14,inverted;title-initial
+Sen. Ron Wyden (D-OR),W000779,7900.0,117500.0,38500.0,0.0,0.0,163900.0,0.0,0.0,12,inverted
+Rep. Beth Van Duyne (R-TX),V000134,1000.0,132000.0,29750.0,1000.0,0.0,163750.0,0.0,0.0,13,inverted
+"Rep. Donald S. Beyer, Jr. (D-VA)",B001292,0.0,106000.0,56750.0,500.0,0.0,163250.0,0.0,0.0,17,inverted
+Rep. Mike Quigley (D-IL),Q000023,0.0,123500.0,36500.0,0.0,0.0,160000.0,0.0,0.0,10,inverted
+Rep. Jodey C. Arrington (R-TX),A000375,0.0,137000.0,22000.0,0.0,0.0,159000.0,0.0,0.0,10,inverted
+Rep. Juan Vargas (D-CA),V000130,0.0,126000.0,32500.0,0.0,0.0,158500.0,0.0,0.0,9,inverted
+Rep. Elise M. Stefanik (R-NY),S001196,0.0,112000.0,46400.0,0.0,0.0,158400.0,0.0,0.0,10,inverted
+Sen. Shelley Moore Capito (R-WV),C001047,0.0,121500.0,36000.0,0.0,0.0,157500.0,0.0,0.0,13,inverted;title-initial
+Rep. Nikema Williams (D-GA),W000788,0.0,119000.0,37500.0,0.0,0.0,156500.0,0.0,0.0,7,inverted
+Rep. Guy Reschenthaler (R-PA),R000610,0.0,106000.0,50000.0,0.0,0.0,156000.0,0.0,0.0,9,inverted
+Sen. Lisa Murkowski (R-AK),M001153,0.0,98500.0,55000.0,2500.0,0.0,156000.0,0.0,0.0,11,inverted
+Rep. Joe Neguse (D-CO),N000191,0.0,110000.0,44000.0,0.0,0.0,154000.0,0.0,0.0,10,inverted
+Sen. John R. Curtis (R-UT),C001114,500.0,122000.0,31095.0,0.0,0.0,153595.0,0.0,0.0,14,
+Rep. Brett Guthrie (R-KY),G000558,0.0,110000.0,40000.0,1500.0,0.0,151500.0,0.0,0.0,9,inverted
+Sen. Jim Banks (R-IN),B001299,1000.0,139750.0,10500.0,0.0,0.0,151250.0,0.0,0.0,15,inverted
+Rep. Steve Womack (R-AR),W000809,0.0,126000.0,24500.0,0.0,0.0,150500.0,0.0,0.0,11,inverted
+Rep. Dusty Johnson (R-SD),J000301,6500.0,108500.0,25095.0,4500.0,4500.0,149095.0,0.0,0.0,13,compound:linked;inverted;title-initial
+Sen. Pete Ricketts (R-NE),R000618,0.0,127000.0,22000.0,0.0,0.0,149000.0,0.0,0.0,8,inverted
+Rep. Tom Cole (R-OK),C001053,0.0,119500.0,29421.0,0.0,0.0,148921.0,0.0,0.0,10,inverted
+Rep. Claudia Tenney (R-NY),T000478,1000.0,113500.0,32000.0,0.0,0.0,146500.0,0.0,0.0,8,inverted
+"Rep. Frank Pallone, Jr. (D-NJ)",P000034,250.0,89500.0,55500.0,0.0,0.0,145250.0,0.0,0.0,11,
+Rep. Angie Craig (D-MN),C001119,21000.0,77500.0,45790.0,0.0,0.0,144290.0,0.0,0.0,13,inverted;title-initial
+Sen. Bernie Moreno (R-OH),M001242,15925.0,108000.0,7010.0,5400.0,7500.0,143835.0,13003.0,0.0,17,compound:linked;inferred;inverted;prefix;title-initial
+Rep. Lloyd Smucker (R-PA),S001199,0.0,109500.0,33595.0,0.0,0.0,143095.0,0.0,0.0,11,inverted
+Rep. Nicole Malliotakis (R-NY),M000317,0.0,108000.0,34500.0,0.0,0.0,142500.0,0.0,1500.0,9,compound:matched;inverted
+Sen. Chris Van Hollen (D-MD),V000128,0.0,103400.0,39000.0,0.0,0.0,142400.0,0.0,0.0,15,inverted
+Rep. Troy Balderson (R-OH),B001306,0.0,125000.0,17095.0,0.0,0.0,142095.0,0.0,0.0,6,inverted
+Rep. Haley M. Stevens (D-MI),S001215,1000.0,93750.0,40750.0,4000.0,5.0,139505.0,0.0,0.0,11,inferred
+Rep. Tim Walberg (R-MI),W000798,0.0,111500.0,24521.0,500.0,0.0,136521.0,0.0,0.0,8,inverted
+Rep. Robin L. Kelly (D-IL),K000385,0.0,80483.0,55650.0,250.0,0.0,136383.0,0.0,65000.0,12,compound:matched
+Rep. Pete Sessions (R-TX),S000250,0.0,115000.0,20340.0,1000.0,0.0,136340.0,0.0,0.0,9,inverted;title-initial
+Rep. Mike Rogers (R-AL),R000575,825.0,103500.0,30000.0,0.0,0.0,134325.0,0.0,0.0,16,inverted
+Rep. Carol D. Miller (R-WV),M001205,0.0,109000.0,24075.0,0.0,0.0,133075.0,0.0,0.0,9,inverted
+Rep. Scott H. Peters (D-CA),P000608,0.0,102000.0,29090.0,0.0,0.0,131090.0,0.0,0.0,9,inverted
+Sen. Marco Rubio (R-FL),R000595,0.0,108250.0,21250.0,1000.0,0.0,130500.0,1562.0,0.0,11,inverted
+Rep. Sylvia R. Garcia (D-TX),G000587,0.0,101000.0,28500.0,0.0,0.0,129500.0,0.0,0.0,7,inverted
+Rep. Daniel T. Kildee (D-MI),K000380,0.0,106000.0,22500.0,0.0,0.0,128500.0,0.0,0.0,8,inverted
+"Rep. Sanford D. Bishop, Jr. (D-GA)",B000490,0.0,99500.0,26500.0,0.0,0.0,126000.0,0.0,0.0,12,inverted
+Rep. Brad R. Wenstrup (R-OH),W000815,0.0,102500.0,21000.0,0.0,0.0,123500.0,0.0,0.0,8,inverted
+Rep. Brendan F. Boyle (D-PA),B001296,2000.0,79000.0,42000.0,0.0,0.0,123000.0,0.0,0.0,9,inverted
+Rep. Mike Kelly (R-PA),K000376,0.0,101000.0,22000.0,0.0,0.0,123000.0,0.0,0.0,9,inverted
+Rep. Julia Letlow (R-LA),L000595,0.0,106000.0,17000.0,0.0,0.0,123000.0,0.0,1500.0,7,compound:matched;inverted
+Rep. Virginia Foxx (R-NC),F000450,0.0,88000.0,34000.0,0.0,0.0,122000.0,0.0,1900.0,10,compound:matched;inverted
+Sen. Eric Schmitt (R-MO),S001227,0.0,98500.0,22750.0,0.0,0.0,121250.0,0.0,0.0,10,inverted
+Sen. Dan Sullivan (R-AK),S001198,0.0,77500.0,42000.0,0.0,1500.0,121000.0,0.0,0.0,13,inverted
+Rep. Glenn Thompson (R-PA),T000467,10750.0,87000.0,23095.0,0.0,0.0,120845.0,0.0,0.0,11,title-initial
+Rep. Byron Donalds (R-FL),D000032,3300.0,112700.0,4500.0,0.0,0.0,120500.0,0.0,0.0,9,inverted
+Rep. Susie Lee (D-NV),L000590,1000.0,68000.0,50685.0,0.0,0.0,119685.0,0.0,0.0,9,
+Sen. Angela D. Alsobrooks (D-MD),A000382,8300.0,68575.0,42523.0,0.0,0.0,119398.0,2000.0,0.0,14,inferred;inverted
+Rep. Jake Auchincloss (D-MA),A000148,6800.0,82250.0,30000.0,0.0,0.0,119050.0,0.0,0.0,12,inverted;title-initial
+Sen. Bill Cassidy (R-LA),C001075,0.0,90500.0,28500.0,0.0,0.0,119000.0,0.0,1603.0,11,compound:matched;inverted
+Sen. Tina Smith (D-MN),S001203,0.0,78000.0,37500.0,0.0,2500.0,118000.0,0.0,0.0,4,title-chamber
+Sen. Tammy Duckworth (D-IL),D000622,0.0,94000.0,23000.0,0.0,1000.0,118000.0,0.0,0.0,10,inverted
+Sen. John Kennedy (R-LA),K000393,250.0,105300.0,11500.0,0.0,0.0,117050.0,0.0,0.0,9,inverted
+Rep. Sam T. Liccardo (D-CA),L000607,5300.0,87000.0,24000.0,0.0,0.0,116300.0,0.0,0.0,12,inverted
+Rep. Darren Soto (D-FL),S001200,11000.0,70000.0,27000.0,7500.0,0.0,115500.0,0.0,50000.0,14,compound:matched;inverted
+Rep. Robert E. Latta (R-OH),L000566,0.0,87233.0,27500.0,0.0,0.0,114733.0,0.0,0.0,12,
+Sen. Mike Lee (R-UT),L000577,0.0,70000.0,44000.0,0.0,0.0,114000.0,0.0,0.0,7,title-chamber
+Rep. Donald Norcross (D-NJ),N000188,0.0,90000.0,23500.0,0.0,0.0,113500.0,0.0,0.0,7,inverted
+Sen. Martin Heinrich (D-NM),H001046,1000.0,75500.0,35000.0,0.0,0.0,111500.0,0.0,0.0,8,inverted
+Rep. Shontel M. Brown (D-OH),B001313,0.0,71500.0,40000.0,0.0,0.0,111500.0,0.0,0.0,13,inverted
+Rep. Don Bacon (R-NE),B001298,0.0,87500.0,23095.0,0.0,0.0,110595.0,0.0,0.0,11,inverted
+Rep. Juan Ciscomani (R-AZ),C001133,0.0,72500.0,37595.0,0.0,0.0,110095.0,0.0,0.0,9,inverted
+Rep. Wiley Nickel (D-NC),N000194,2500.0,80500.0,26500.0,0.0,0.0,109500.0,0.0,0.0,13,inverted
+Rep. Sharice Davids (D-KS),D000629,0.0,58500.0,49640.0,0.0,0.0,108140.0,0.0,0.0,8,inverted
+Rep. Donald G. Davis (D-NC),D000230,1500.0,75750.0,30500.0,0.0,0.0,107750.0,0.0,0.0,9,inverted
+Rep. Derek Kilmer (D-WA),K000381,0.0,79000.0,28500.0,0.0,0.0,107500.0,0.0,0.0,6,inverted
+Sen. Chuck Grassley (R-IA),G000386,0.0,80000.0,26500.0,1000.0,0.0,107500.0,0.0,0.0,13,inverted
+Rep. David G. Valadao (R-CA),V000129,0.0,64500.0,42595.0,0.0,0.0,107095.0,0.0,0.0,9,
+Rep. Deborah K. Ross (D-NC),R000305,0.0,80500.0,26500.0,0.0,0.0,107000.0,0.0,0.0,7,
+Rep. Chrissy Houlahan (D-PA),H001085,0.0,80000.0,26090.0,0.0,0.0,106090.0,0.0,0.0,9,inverted;title-initial
+Sen. Jack Reed (D-RI),R000122,0.0,46500.0,59250.0,0.0,0.0,105750.0,0.0,0.0,14,inverted
+Sen. Kirsten E. Gillibrand (D-NY),G000555,11600.0,66500.0,25500.0,1250.0,0.0,104850.0,500.0,0.0,10,inferred;title-initial
+Rep. Marc A. Veasey (D-TX),V000131,2000.0,56500.0,45500.0,0.0,0.0,104000.0,0.0,0.0,12,inverted
+Rep. Alma S. Adams (D-NC),A000370,0.0,71250.0,32000.0,0.0,0.0,103250.0,0.0,0.0,12,inverted
+Sen. Tom Cotton (R-AR),C001095,0.0,78500.0,24500.0,0.0,0.0,103000.0,0.0,0.0,9,inverted
+Rep. Nikki Budzinski (D-IL),B001315,4000.0,66750.0,31000.0,0.0,0.0,101750.0,0.0,0.0,15,inverted
+Rep. David Schweikert (R-AZ),S001183,1500.0,71000.0,29000.0,250.0,0.0,101750.0,0.0,0.0,12,inverted
+Rep. Zoe Lofgren (D-CA),L000397,1000.0,50000.0,48100.0,2000.0,0.0,101100.0,0.0,0.0,8,
+Sen. Tim Sheehy (R-MT),S001232,4300.0,67000.0,27500.0,0.0,0.0,98800.0,0.0,0.0,10,inverted
+Rep. Judy Chu (D-CA),C001080,0.0,76000.0,21500.0,0.0,0.0,97500.0,0.0,0.0,7,inverted
+Rep. Ann M. Kuster (D-NH),K000382,0.0,70500.0,25000.0,0.0,0.0,95500.0,0.0,0.0,11,inverted;title-initial
+Rep. Rick Larsen (D-WA),L000560,0.0,33500.0,62000.0,0.0,0.0,95500.0,0.0,0.0,8,inverted
+Rep. James Comer (R-KY),C001108,0.0,57000.0,38095.0,0.0,0.0,95095.0,0.0,5000.0,13,compound:matched;inverted
+Rep. Monica De La Cruz (R-TX),D000594,0.0,89500.0,5250.0,0.0,0.0,94750.0,0.0,0.0,5,
+Rep. Nancy Pelosi (D-CA),P000197,0.0,59500.0,35000.0,0.0,0.0,94500.0,0.0,0.0,7,inverted
+Rep. Jimmy Gomez (D-CA),G000585,1000.0,50500.0,42500.0,0.0,0.0,94000.0,0.0,0.0,7,inverted
+Rep. Stephanie I. Bice (R-OK),B000740,0.0,63000.0,31000.0,0.0,0.0,94000.0,0.0,0.0,7,inverted
+Rep. Hillary J. Scholten (D-MI),S001221,0.0,59500.0,34500.0,0.0,0.0,94000.0,0.0,0.0,9,inverted
+Sen. John Hoeven (R-ND),H001061,0.0,78500.0,14590.0,0.0,0.0,93090.0,0.0,0.0,10,inverted
+Rep. Michelle Fischbach (R-MN),F000470,0.0,77000.0,15595.0,0.0,0.0,92595.0,0.0,0.0,6,inverted
+Rep. Emilia Strong Sykes (D-OH),S001223,0.0,62250.0,30000.0,0.0,0.0,92250.0,0.0,0.0,8,
+Rep. Julie Johnson (D-TX),J000310,1000.0,59750.0,31300.0,0.0,0.0,92050.0,0.0,0.0,8,title-initial
+Rep. Marilyn Strickland (D-WA),S001159,0.0,48000.0,43500.0,0.0,0.0,91500.0,0.0,0.0,6,inverted
+Rep. Stephen F. Lynch (D-MA),L000562,0.0,78500.0,12500.0,0.0,0.0,91000.0,0.0,0.0,9,inverted
+Rep. Gus M. Bilirakis (R-FL),B001257,0.0,69500.0,21090.0,0.0,0.0,90590.0,0.0,0.0,9,
+Rep. Ted Lieu (D-CA),L000582,2000.0,44500.0,39000.0,5000.0,0.0,90500.0,0.0,0.0,11,inverted
+Rep. John R. Moolenaar (R-MI),M001194,0.0,85000.0,5500.0,0.0,0.0,90500.0,0.0,0.0,8,inverted
+Rep. Debbie Wasserman Schultz (D-FL),W000797,0.0,68000.0,22500.0,0.0,0.0,90500.0,0.0,0.0,8,inverted
+"Sen. Angus S. King, Jr. (I-ME)",K000383,0.0,61500.0,29000.0,0.0,0.0,90500.0,0.0,0.0,7,title-chamber
+Rep. Matt Cartwright (D-PA),C001090,0.0,34500.0,56000.0,0.0,0.0,90500.0,0.0,0.0,11,inverted
+Sen. Tammy Baldwin (D-WI),B001230,0.0,34000.0,55833.0,500.0,0.0,90333.0,0.0,0.0,13,inverted
+Rep. Henry Cuellar (D-TX),C001063,1000.0,70500.0,18250.0,0.0,0.0,89750.0,0.0,0.0,8,inverted
+Sen. Jon Husted (R-OH),H001104,0.0,64500.0,25000.0,0.0,0.0,89500.0,0.0,0.0,8,inverted
+Rep. Maria Elvira Salazar (R-FL),S000168,0.0,71000.0,18500.0,0.0,0.0,89500.0,0.0,0.0,9,inverted
+Rep. Bennie G. Thompson (D-MS),T000193,0.0,41000.0,46480.0,0.0,0.0,87480.0,0.0,0.0,11,
+Rep. Tony Gonzales (R-TX),G000594,0.0,69500.0,15500.0,2000.0,0.0,87000.0,0.0,0.0,11,inverted
+Rep. Brian Higgins (D-NY),H001038,0.0,68500.0,18500.0,0.0,0.0,87000.0,0.0,0.0,8,inverted
+Sen. Markwayne Mullin (R-OK),M001190,0.0,63500.0,21500.0,0.0,0.0,85000.0,0.0,0.0,6,inverted
+Rep. Troy A. Carter (D-LA),C001125,1000.0,22000.0,60463.0,0.0,0.0,83463.0,0.0,50000.0,13,compound:matched;inverted
+Rep. Chris Pappas (D-NH),P000614,0.0,56500.0,26700.0,0.0,0.0,83200.0,0.0,0.0,6,inverted
+"Sen. Joe Manchin, III (I-WV)",M001183,0.0,64500.0,18590.0,0.0,0.0,83090.0,2500.0,0.0,15,inferred;inverted
+Rep. Mariannette Miller-Meeks (R-IA),M001215,0.0,63000.0,19500.0,0.0,0.0,82500.0,0.0,0.0,10,inverted;title-initial
+Rep. Aaron Bean (R-FL),B001314,0.0,54000.0,28320.0,0.0,0.0,82320.0,0.0,0.0,10,inverted
+Rep. Raja Krishnamoorthi (D-IL),K000391,0.0,49000.0,22500.0,10500.0,0.0,82000.0,0.0,0.0,10,inverted
+Rep. Doris O. Matsui (D-CA),M001163,0.0,21500.0,60500.0,0.0,0.0,82000.0,0.0,0.0,7,
+Rep. Jack Bergman (R-MI),B001301,500.0,78000.0,2595.0,0.0,0.0,81095.0,0.0,0.0,7,inverted
+Rep. W. Gregory Steube (R-FL),S001214,0.0,58500.0,20750.0,1000.0,0.0,80250.0,0.0,0.0,9,inverted
+Rep. Dwight Evans (D-PA),E000296,0.0,55000.0,25000.0,0.0,0.0,80000.0,0.0,0.0,7,inverted
+Rep. Jamie Raskin (D-MD),R000606,0.0,37500.0,42000.0,0.0,0.0,79500.0,0.0,0.0,6,
+Sen. Brian Schatz (D-HI),S001194,0.0,38500.0,41000.0,0.0,0.0,79500.0,0.0,0.0,7,inverted
+Rep. Jim Jordan (R-OH),J000289,0.0,69500.0,9750.0,0.0,0.0,79250.0,2500.0,0.0,11,inferred;inverted
+Sen. Adam B. Schiff (D-CA),S001150,6600.0,46000.0,26500.0,0.0,0.0,79100.0,0.0,0.0,8,
+Rep. Gregory F. Murphy (R-NC),M001210,0.0,72500.0,6500.0,0.0,0.0,79000.0,0.0,0.0,7,
+Rep. Austin Scott (R-GA),S001189,0.0,78000.0,1000.0,0.0,0.0,79000.0,0.0,0.0,5,inverted
+Rep. Michael T. McCaul (R-TX),M001157,0.0,59000.0,19500.0,0.0,0.0,78500.0,0.0,0.0,11,inverted
+Sen. John W. Hickenlooper (D-CO),H000273,0.0,58500.0,9000.0,0.0,11000.0,78500.0,0.0,0.0,8,inverted
+"Rep. Henry C. ""Hank"" Johnson, Jr. (D-GA)",J000288,0.0,37000.0,41470.0,0.0,0.0,78470.0,0.0,0.0,11,
+Rep. Sean Patrick Maloney (D-NY),M001185,2900.0,58500.0,17000.0,0.0,0.0,78400.0,0.0,0.0,9,inverted
+Rep. Tim Moore (R-NC),M001236,1000.0,65750.0,11000.0,0.0,0.0,77750.0,0.0,0.0,7,inverted
+Rep. Veronica Escobar (D-TX),E000299,0.0,48500.0,29000.0,0.0,0.0,77500.0,0.0,25000.0,7,compound:matched
+Rep. David Rouzer (R-NC),R000603,0.0,58500.0,18545.0,0.0,0.0,77045.0,0.0,0.0,7,inverted
+Rep. Troy Downing (R-MT),D000634,1000.0,64500.0,11500.0,0.0,0.0,77000.0,0.0,0.0,9,inverted
+Sen. Alex Padilla (D-CA),P000145,1500.0,48500.0,27000.0,0.0,0.0,77000.0,0.0,25000.0,10,compound:matched;inverted
+Rep. Mary Gay Scanlon (D-PA),S001205,0.0,46000.0,30500.0,0.0,0.0,76500.0,0.0,0.0,7,
+Rep. Darrell Issa (R-CA),I000056,0.0,55250.0,21090.0,0.0,0.0,76340.0,0.0,0.0,10,
+Rep. Dan Crenshaw (R-TX),C001120,0.0,69000.0,7250.0,0.0,0.0,76250.0,0.0,0.0,11,inverted
+Rep. Brad Finstad (R-MN),F000475,0.0,68250.0,7095.0,0.0,0.0,75345.0,0.0,0.0,6,inverted
+Rep. Mike Gallagher (R-WI),G000579,0.0,55500.0,19000.0,0.0,0.0,74500.0,0.0,0.0,11,inverted
+Rep. Gabe Amo (D-RI),A000380,1000.0,41700.0,31250.0,250.0,0.0,74200.0,0.0,0.0,16,
+Rep. Kat Cammack (R-FL),C001039,0.0,59000.0,14100.0,1000.0,0.0,74100.0,0.0,0.0,8,inverted;title-initial
+Rep. Gerald E. Connolly (D-VA),C001078,0.0,34500.0,35000.0,4500.0,0.0,74000.0,0.0,0.0,8,title-initial
+Rep. Janelle S. Bynum (D-OR),B001326,2750.0,47500.0,23500.0,0.0,0.0,73750.0,0.0,0.0,9,inverted
+Rep. Morgan McGarvey (D-KY),M001220,0.0,46500.0,27000.0,0.0,0.0,73500.0,0.0,0.0,6,inverted
+Rep. Jasmine Crockett (D-TX),C001130,2000.0,33000.0,37000.0,1000.0,0.0,73000.0,0.0,0.0,9,inverted
+Rep. Frank J. Mrvan (D-IN),M001214,0.0,32500.0,40500.0,0.0,0.0,73000.0,0.0,0.0,11,inverted
+Rep. Eric Swalwell (D-CA),S001193,0.0,32000.0,40750.0,0.0,0.0,72750.0,0.0,0.0,10,
+Rep. Mike Haridopolos (R-FL),H001099,2500.0,50500.0,19500.0,0.0,0.0,72500.0,0.0,0.0,11,inverted
+Rep. Mark E. Amodei (R-NV),A000369,0.0,70000.0,2185.0,0.0,0.0,72185.0,0.0,0.0,6,
+Rep. Dan Newhouse (R-WA),N000189,0.0,50500.0,20595.0,1000.0,0.0,72095.0,0.0,0.0,8,
+Sen. Ted Cruz (R-TX),C001098,1000.0,35000.0,36000.0,0.0,0.0,72000.0,2500.0,0.0,9,inferred
+Rep. Rudy Yakym III (R-IN),Y000067,0.0,55000.0,16500.0,0.0,0.0,71500.0,0.0,0.0,10,inverted;title-initial
+Rep. Yvette D. Clarke (D-NY),C001067,0.0,39525.0,31500.0,0.0,0.0,71025.0,0.0,15000.0,10,compound:matched
+Rep. Adam Smith (D-WA),S000510,0.0,41000.0,30000.0,0.0,0.0,71000.0,0.0,0.0,5,
+"Rep. Bill Pascrell, Jr. (D-NJ)",P000096,0.0,47000.0,23500.0,0.0,0.0,70500.0,0.0,0.0,16,inverted
+Rep. Jay Obernolte (R-CA),O000019,0.0,59000.0,9595.0,1000.0,0.0,69595.0,0.0,0.0,8,inverted
+Rep. H. Morgan Griffith (R-VA),G000568,0.0,32500.0,36595.0,0.0,0.0,69095.0,0.0,0.0,4,
+Rep. Greg Stanton (D-AZ),S001211,0.0,34000.0,35090.0,0.0,0.0,69090.0,0.0,0.0,5,
+Sen. Patrick J. Toomey (R-PA),T000461,53790.0,15000.0,0.0,0.0,0.0,68790.0,0.0,0.0,3,
+Rep. Grace Meng (D-NY),M001188,2000.0,39000.0,27500.0,0.0,0.0,68500.0,0.0,0.0,6,inverted
+Rep. Jim Costa (D-CA),C001059,0.0,48000.0,20500.0,0.0,0.0,68500.0,0.0,0.0,9,inverted
+Rep. August Pfluger (R-TX),P000048,0.0,58500.0,9095.0,0.0,0.0,67595.0,0.0,0.0,12,
+Rep. Mike Bost (R-IL),B001295,0.0,57000.0,8000.0,2000.0,0.0,67000.0,0.0,0.0,10,inverted
+Rep. Rick W. Allen (R-GA),A000372,0.0,50500.0,16500.0,0.0,0.0,67000.0,0.0,0.0,7,inverted
+Rep. Debbie Dingell (D-MI),D000624,0.0,38500.0,28500.0,0.0,0.0,67000.0,0.0,0.0,7,
+Rep. Ken Calvert (R-CA),C000059,0.0,42000.0,24685.0,0.0,0.0,66685.0,0.0,0.0,7,
+Rep. Sarah McBride (D-DE),M001238,500.0,45500.0,20500.0,0.0,0.0,66500.0,0.0,0.0,7,inverted
+Rep. Ami Bera (D-CA),B001287,0.0,49500.0,17000.0,0.0,0.0,66500.0,0.0,0.0,6,inverted;title-initial
+Rep. Marcy Kaptur (D-OH),K000009,0.0,33500.0,33000.0,0.0,0.0,66500.0,0.0,0.0,4,title-initial
+Rep. Max L. Miller (R-OH),M001222,2000.0,53000.0,11000.0,250.0,0.0,66250.0,1000.0,0.0,11,inferred;inverted
+Rep. Michael R. Turner (R-OH),T000463,0.0,47000.0,19250.0,0.0,0.0,66250.0,0.0,0.0,10,
+Sen. Raphael G. Warnock (D-GA),W000790,500.0,38965.0,26600.0,0.0,0.0,66065.0,0.0,0.0,13,title-initial
+Sen. Thomas R. Carper (D-DE),C000174,0.0,56000.0,10000.0,0.0,0.0,66000.0,0.0,0.0,9,inverted
+Sen. Lindsey Graham (R-SC),G000359,0.0,44500.0,20500.0,0.0,0.0,65000.0,7000.0,0.0,7,inferred;inverted
+Rep. Norma J. Torres (D-CA),T000474,0.0,42000.0,23000.0,0.0,0.0,65000.0,0.0,25000.0,7,compound:matched
+Rep. Seth Magaziner (D-RI),M001223,0.0,45500.0,19000.0,0.0,0.0,64500.0,0.0,0.0,10,
+Sen. Mark Kelly (D-AZ),K000377,0.0,32500.0,32000.0,0.0,0.0,64500.0,0.0,0.0,7,
+Rep. Jared Moskowitz (D-FL),M001217,2000.0,31500.0,30500.0,0.0,0.0,64000.0,0.0,0.0,10,inverted
+Rep. Rodney Davis (R-IL),D000619,0.0,50500.0,13090.0,0.0,0.0,63590.0,0.0,0.0,11,inverted
+Rep. John W. Rose (R-TN),R000612,0.0,58300.0,5000.0,0.0,0.0,63300.0,0.0,0.0,8,inverted
+Sen. Jeanne Shaheen (D-NH),S001181,0.0,47500.0,15250.0,0.0,0.0,62750.0,0.0,0.0,6,inverted
+Rep. Jared F. Golden (D-ME),G000592,0.0,31000.0,31685.0,0.0,0.0,62685.0,0.0,0.0,5,
+Rep. Robert J. Wittman (R-VA),W000804,0.0,40000.0,22595.0,0.0,0.0,62595.0,0.0,0.0,9,inverted
+Rep. Lori Trahan (D-MA),T000482,0.0,37500.0,24500.0,0.0,0.0,62000.0,0.0,0.0,5,
+Rep. Andrea Salinas (D-OR),S001226,0.0,40500.0,21500.0,0.0,0.0,62000.0,0.0,0.0,6,inverted
+Rep. Marlin A. Stutzman (R-IN),S001188,1000.0,52000.0,8800.0,0.0,0.0,61800.0,0.0,0.0,10,inverted
+Sen. James E. Risch (R-ID),R000584,0.0,52500.0,9000.0,0.0,0.0,61500.0,0.0,0.0,7,
+Rep. Timothy M. Kennedy (D-NY),K000402,2000.0,37009.0,22000.0,250.0,0.0,61259.0,0.0,0.0,11,
+Rep. Tracey Mann (R-KS),M000871,0.0,52500.0,8500.0,0.0,0.0,61000.0,0.0,0.0,10,inverted;title-initial
+Sen. Roger Marshall (R-KS),M001198,0.0,58500.0,2500.0,0.0,0.0,61000.0,0.0,0.0,5,inverted
+Rep. Daniel S. Goldman (D-NY),G000599,500.0,39000.0,21000.0,0.0,0.0,60500.0,0.0,0.0,9,
+Rep. Russell Fry (R-SC),F000478,0.0,35500.0,25000.0,0.0,0.0,60500.0,0.0,0.0,8,
+Rep. Brian Jack (R-GA),J000311,7000.0,39750.0,12500.0,0.0,0.0,59250.0,0.0,0.0,12,inverted
+Rep. Ed Case (D-HI),C001055,0.0,37000.0,22000.0,0.0,0.0,59000.0,0.0,0.0,9,inverted
+Rep. Salud O. Carbajal (D-CA),C001112,0.0,35500.0,23000.0,0.0,0.0,58500.0,0.0,25000.0,8,compound:matched;inverted
+Rep. Jahana Hayes (D-CT),H001081,0.0,23500.0,33500.0,0.0,0.0,57000.0,0.0,0.0,5,inverted
+Rep. Suzanne Bonamici (D-OR),B001278,0.0,35000.0,21500.0,0.0,0.0,56500.0,0.0,0.0,6,inverted
+Sen. Mazie K. Hirono (D-HI),H001042,0.0,21000.0,35135.0,0.0,0.0,56135.0,0.0,0.0,6,
+Rep. Val T. Hoyle (D-OR),H001094,500.0,25500.0,30000.0,0.0,0.0,56000.0,0.0,0.0,8,
+Rep. John Joyce (R-PA),J000302,0.0,32500.0,23500.0,0.0,0.0,56000.0,0.0,0.0,4,
+Rep. Trent Kelly (R-MS),K000388,0.0,51000.0,5000.0,0.0,0.0,56000.0,0.0,0.0,5,inverted
+"Rep. Earl L. ""Buddy"" Carter (R-GA)",C001103,0.0,47500.0,8500.0,0.0,0.0,56000.0,0.0,0.0,7,inverted
+Rep. Marcus J. Molinaro (R-NY),M001221,3900.0,36500.0,15500.0,0.0,0.0,55900.0,0.0,0.0,10,inverted
+Rep. Eric Sorensen (D-IL),S001225,2000.0,30750.0,23000.0,0.0,0.0,55750.0,0.0,0.0,8,inverted
+Rep. Janice D. Schakowsky (D-IL),S001145,0.0,8250.0,47500.0,0.0,0.0,55750.0,0.0,0.0,6,
+Sen. Andy Kim (D-NJ),K000394,250.0,34000.0,21250.0,0.0,0.0,55500.0,0.0,0.0,10,inverted
+Rep. Rosa L. DeLauro (D-CT),D000216,0.0,32000.0,23500.0,0.0,0.0,55500.0,0.0,0.0,7,
+Sen. Rick Scott (R-FL),S001217,2500.0,52825.0,0.0,0.0,0.0,55325.0,0.0,0.0,6,inverted
+Rep. Kelly Armstrong (R-ND),A000377,0.0,43000.0,12000.0,0.0,0.0,55000.0,0.0,0.0,8,inverted
+Rep. Mikie Sherrill (D-NJ),S001207,2000.0,33500.0,19000.0,0.0,0.0,54500.0,0.0,0.0,6,inverted
+Rep. Garret Graves (R-LA),G000577,0.0,44000.0,10500.0,0.0,0.0,54500.0,0.0,0.0,9,inverted
+Sen. Robert Menendez (D-NJ),M000639,1000.0,42000.0,10000.0,1000.0,0.0,54000.0,0.0,0.0,7,title-chamber
+Rep. Kathy Castor (D-FL),C001066,0.0,24000.0,30000.0,0.0,0.0,54000.0,0.0,0.0,7,title-initial
+Rep. Pramila Jayapal (D-WA),J000298,0.0,11500.0,42250.0,0.0,0.0,53750.0,0.0,0.0,3,
+Rep. Michael Guest (R-MS),G000591,0.0,49500.0,4000.0,0.0,0.0,53500.0,0.0,0.0,6,inverted
+Rep. Jerrold Nadler (D-NY),N000002,0.0,31000.0,22500.0,0.0,0.0,53500.0,0.0,0.0,8,title-initial
+Rep. Mark Pocan (D-WI),P000607,0.0,30500.0,23000.0,0.0,0.0,53500.0,0.0,0.0,5,inverted
+Rep. Kay Granger (R-TX),G000377,0.0,31000.0,22000.0,0.0,0.0,53000.0,0.0,0.0,6,
+Rep. Mark Alford (R-MO),A000379,300.0,49000.0,3000.0,500.0,0.0,52800.0,0.0,0.0,8,inverted
+Rep. Michael K. Simpson (R-ID),S001148,0.0,47500.0,5090.0,0.0,0.0,52590.0,0.0,0.0,7,
+Rep. Nathaniel Moran (R-TX),M001224,0.0,43500.0,9000.0,0.0,0.0,52500.0,0.0,0.0,8,inverted
+Rep. Pete Stauber (R-MN),S001212,0.0,43500.0,8095.0,0.0,0.0,51595.0,0.0,0.0,7,inverted;title-initial
+Rep. Glenn Ivey (D-MD),I000058,1000.0,26500.0,24000.0,0.0,0.0,51500.0,0.0,50000.0,9,compound:matched
+Sen. Debbie Stabenow (D-MI),S000770,0.0,36500.0,12000.0,0.0,2500.0,51000.0,0.0,0.0,10,inverted
+Rep. Brad Knott (R-NC),K000405,0.0,37000.0,14000.0,0.0,0.0,51000.0,0.0,0.0,9,inverted
+Rep. Joe Courtney (D-CT),C001069,0.0,32050.0,18500.0,0.0,0.0,50550.0,0.0,0.0,8,
+Rep. Dina Titus (D-NV),T000468,0.0,22000.0,28500.0,0.0,0.0,50500.0,0.0,0.0,6,
+Sen. Richard Blumenthal (D-CT),B001277,0.0,32000.0,18500.0,0.0,0.0,50500.0,0.0,0.0,5,inverted
+Rep. Jennifer L. McClellan (D-VA),M001227,0.0,26000.0,24500.0,0.0,0.0,50500.0,0.0,0.0,6,
+Rep. Shomari Figures (D-AL),F000481,500.0,30000.0,19600.0,0.0,0.0,50100.0,0.0,0.0,9,inverted
+Rep. Steve Chabot (R-OH),C000266,0.0,46000.0,4090.0,0.0,0.0,50090.0,0.0,0.0,9,inverted
+Rep. Bruce Westerman (R-AR),W000821,0.0,27000.0,23000.0,0.0,0.0,50000.0,0.0,0.0,6,
+Rep. Michael Waltz (R-FL),W000823,0.0,33000.0,17000.0,0.0,0.0,50000.0,0.0,0.0,5,
+Rep. Vince Fong (R-CA),F000480,0.0,38000.0,11750.0,0.0,0.0,49750.0,0.0,0.0,7,title-initial
+Rep. Sydney Kamlager-Dove (D-CA),K000400,0.0,6000.0,43250.0,0.0,0.0,49250.0,0.0,0.0,9,
+Sen. Mitt Romney (R-UT),R000615,0.0,32500.0,11500.0,0.0,5000.0,49000.0,0.0,0.0,5,
+Rep. Sam Graves (R-MO),G000546,0.0,23500.0,25500.0,0.0,0.0,49000.0,0.0,0.0,9,
+Rep. Lance Gooden (R-TX),G000589,0.0,40000.0,8750.0,0.0,0.0,48750.0,0.0,0.0,6,inverted
+Rep. Bill Posey (R-FL),P000599,0.0,46500.0,2000.0,0.0,0.0,48500.0,0.0,0.0,5,inverted
+Sen. Ashley Moody (R-FL),M001244,0.0,29760.0,18500.0,0.0,0.0,48260.0,0.0,0.0,5,
+Rep. Robert Garcia (D-CA),G000598,1000.0,19000.0,27500.0,500.0,0.0,48000.0,0.0,0.0,6,title-initial
+Rep. Burgess Owens (R-UT),O000086,0.0,37000.0,11000.0,0.0,0.0,48000.0,0.0,0.0,5,
+Sen. Amy Klobuchar (D-MN),K000367,0.0,12500.0,35333.0,0.0,0.0,47833.0,0.0,0.0,6,inverted
+Rep. Diana Harshbarger (R-TN),H001086,0.0,33000.0,14595.0,0.0,0.0,47595.0,0.0,1500.0,9,compound:matched;inverted;title-initial
+Rep. Dale W. Strong (R-AL),S001220,0.0,40500.0,7095.0,0.0,0.0,47595.0,0.0,0.0,9,inverted
+Rep. Jonathan L. Jackson (D-IL),J000309,0.0,27500.0,20000.0,0.0,0.0,47500.0,0.0,15000.0,9,compound:matched;inverted
+Rep. Adam Gray (D-CA),G000605,2000.0,22500.0,22500.0,0.0,0.0,47000.0,0.0,0.0,8,inverted
+Rep. Chuck Edwards (R-NC),E000246,0.0,40500.0,6500.0,0.0,0.0,47000.0,0.0,0.0,5,
+Rep. Mario Diaz-Balart (R-FL),D000600,0.0,25000.0,22000.0,0.0,0.0,47000.0,0.0,0.0,6,inverted
+Rep. John James (R-MI),J000307,0.0,37000.0,10000.0,0.0,0.0,47000.0,1000.0,0.0,9,inferred;inverted
+Rep. Victoria Spartz (R-IN),S000929,0.0,35500.0,11500.0,0.0,0.0,47000.0,0.0,0.0,7,inverted
+Rep. Michael A. Rulli (R-OH),R000619,0.0,37000.0,10000.0,0.0,0.0,47000.0,0.0,0.0,9,
+Rep. Danny K. Davis (D-IL),D000096,0.0,32500.0,14500.0,0.0,0.0,47000.0,0.0,0.0,10,inverted
+Rep. Ben Cline (R-VA),C001118,0.0,29500.0,17000.0,0.0,0.0,46500.0,0.0,0.0,6,
+Rep. Wesley Hunt (R-TX),H001095,0.0,39000.0,7500.0,0.0,0.0,46500.0,0.0,0.0,5,
+Rep. Lucy McBath (D-GA),M001208,1000.0,17500.0,27500.0,0.0,0.0,46000.0,0.0,50000.0,9,compound:matched;inverted;title-initial
+Rep. Mark Takano (D-CA),T000472,0.0,20000.0,26000.0,0.0,0.0,46000.0,0.0,0.0,6,
+Rep. Diana DeGette (D-CO),D000197,0.0,9500.0,36000.0,0.0,0.0,45500.0,0.0,15000.0,5,compound:matched
+Rep. Mike Levin (D-CA),L000593,0.0,16500.0,29000.0,0.0,0.0,45500.0,0.0,0.0,5,
+Rep. Kweisi Mfume (D-MD),M000687,0.0,20500.0,25000.0,0.0,0.0,45500.0,0.0,0.0,6,inverted
+Sen. Sheldon Whitehouse (D-RI),W000802,0.0,18500.0,26500.0,0.0,0.0,45000.0,0.0,0.0,2,
+Rep. Seth Moulton (D-MA),M001196,0.0,34500.0,10500.0,0.0,0.0,45000.0,0.0,0.0,7,inverted
+Rep. Patrick Ryan (D-NY),R000579,0.0,27500.0,17500.0,0.0,0.0,45000.0,0.0,0.0,6,
+Rep. Ralph Norman (R-SC),N000190,0.0,44500.0,0.0,0.0,0.0,44500.0,0.0,0.0,3,inverted
+Rep. Carolyn B. Maloney (D-NY),M000087,0.0,37500.0,7000.0,0.0,0.0,44500.0,0.0,0.0,8,inverted
+Rep. Jill N. Tokuda (D-HI),T000487,0.0,29500.0,15000.0,0.0,0.0,44500.0,0.0,0.0,7,inverted
+Rep. Lori Chavez-DeRemer (R-OR),C001135,0.0,35500.0,8595.0,0.0,0.0,44095.0,0.0,0.0,4,inverted
+Rep. Tim Ryan (D-OH),R000577,5800.0,25750.0,11580.0,0.0,0.0,43130.0,0.0,0.0,8,
+Rep. Ryan K. Zinke (R-MT),Z000018,0.0,33500.0,9500.0,0.0,0.0,43000.0,0.0,0.0,8,inverted
+Rep. Laura Gillen (D-NY),G000602,1500.0,18000.0,23000.0,0.0,0.0,42500.0,0.0,0.0,8,
+Rep. Earl Blumenauer (D-OR),B000574,0.0,23000.0,19500.0,0.0,0.0,42500.0,0.0,0.0,5,inverted
+Rep. Robert B. Aderholt (R-AL),A000055,0.0,41000.0,1185.0,0.0,0.0,42185.0,0.0,15000.0,9,compound:matched;inverted
+Rep. Jake LaTurner (R-KS),L000266,0.0,34000.0,8000.0,0.0,0.0,42000.0,0.0,0.0,6,inverted
+Sen. Elissa Slotkin (D-MI),S001208,0.0,23750.0,18090.0,0.0,0.0,41840.0,0.0,0.0,6,inverted
+Rep. Gabe Vasquez (D-NM),V000136,2000.0,10500.0,29000.0,0.0,0.0,41500.0,0.0,0.0,9,inverted
+Rep. Robert Menendez (D-NJ),M001226,2500.0,18000.0,21000.0,0.0,0.0,41500.0,0.0,0.0,11,title-chamber
+Rep. Julie Fedorchak (R-ND),F000482,1000.0,29500.0,11000.0,0.0,0.0,41500.0,0.0,0.0,7,
+"Rep. Thomas H. Kean, Jr. (R-NJ)",K000398,0.0,21000.0,20095.0,0.0,0.0,41095.0,0.0,0.0,9,
+Rep. Kristen McDonald Rivet (D-MI),M001237,3000.0,19500.0,18500.0,0.0,0.0,41000.0,0.0,0.0,9,
+Rep. Julia Brownley (D-CA),B001285,0.0,19000.0,22000.0,0.0,0.0,41000.0,0.0,0.0,2,
+Rep. Raul Ruiz (D-CA),R000599,0.0,13000.0,28000.0,0.0,0.0,41000.0,0.0,0.0,5,
+"Rep. Robert C. ""Bobby"" Scott (D-VA)",S000185,0.0,7500.0,33500.0,0.0,0.0,41000.0,0.0,0.0,9,
+Sen. Ron Johnson (R-WI),J000293,0.0,35000.0,5000.0,0.0,0.0,40000.0,0.0,0.0,5,inverted
+Rep. Joe Wilson (R-SC),W000795,0.0,35000.0,5000.0,0.0,0.0,40000.0,0.0,0.0,6,inverted
+Rep. André Carson (D-IN),C001072,0.0,9500.0,30500.0,0.0,0.0,40000.0,0.0,0.0,6,title-initial
+Rep. William R. Keating (D-MA),K000375,0.0,32600.0,7000.0,0.0,0.0,39600.0,0.0,0.0,6,
+Rep. Greg Landsman (D-OH),L000601,0.0,14500.0,25000.0,0.0,0.0,39500.0,0.0,0.0,6,
+Rep. Adriano Espaillat (D-NY),E000297,500.0,19000.0,19250.0,0.0,0.0,38750.0,0.0,25000.0,6,compound:matched
+Rep. Jennifer A. Kiggans (R-VA),K000399,0.0,32000.0,6595.0,0.0,0.0,38595.0,0.0,0.0,6,title-initial
+Rep. Nancy Mace (R-SC),M000194,0.0,26500.0,12090.0,0.0,0.0,38590.0,0.0,0.0,7,inverted
+Rep. Carlos A. Gimenez (R-FL),G000593,0.0,32000.0,6500.0,0.0,0.0,38500.0,0.0,0.0,6,
+Rep. Becca Balint (D-VT),B001318,1000.0,13957.0,23250.0,0.0,0.0,38207.0,0.0,0.0,7,
+Rep. Lloyd Doggett (D-TX),D000399,0.0,13500.0,24500.0,0.0,0.0,38000.0,0.0,0.0,5,
+Rep. Mary Sattler Peltola (D-AK),P000619,500.0,16000.0,20000.0,0.0,0.0,36500.0,0.0,0.0,7,
+Rep. Tom McClintock (R-CA),M001177,0.0,36500.0,0.0,0.0,0.0,36500.0,0.0,0.0,3,
+Rep. Celeste Maloy (R-UT),M001228,0.0,36000.0,500.0,0.0,0.0,36500.0,0.0,0.0,5,inverted
+"Rep. Eric A. ""Rick"" Crawford (R-AR)",C001087,0.0,32000.0,4500.0,0.0,0.0,36500.0,0.0,0.0,7,inverted
+Rep. Mike Ezell (R-MS),E000235,0.0,36000.0,95.0,0.0,0.0,36095.0,0.0,0.0,4,
+Rep. Derek Schmidt (R-KS),S001228,0.0,28000.0,7500.0,0.0,0.0,35500.0,0.0,0.0,7,
+Rep. Marie Gluesenkamp Perez (D-WA),G000600,0.0,19500.0,16000.0,0.0,0.0,35500.0,0.0,0.0,6,inverted
+Rep. Andrew Ogles (R-TN),O000175,0.0,33000.0,2000.0,0.0,0.0,35000.0,0.0,0.0,5,inverted
+Rep. Josh Harder (D-CA),H001090,0.0,13500.0,21500.0,0.0,0.0,35000.0,0.0,0.0,4,inverted
+Rep. Stacey E. Plaskett (D-VI),P000610,0.0,33750.0,1000.0,0.0,0.0,34750.0,0.0,50000.0,5,compound:matched;inverted
+Rep. Jeff Hurd (R-CO),H001100,0.0,22000.0,12500.0,0.0,0.0,34500.0,0.0,0.0,7,
+Rep. Kevin Kiley (I-CA),K000401,0.0,23500.0,10230.0,250.0,0.0,33980.0,0.0,0.0,9,
+Rep. Derrick Van Orden (R-WI),V000135,0.0,27750.0,6095.0,0.0,0.0,33845.0,0.0,0.0,7,inverted
+Rep. Derek Tran (D-CA),T000491,2000.0,7000.0,24500.0,0.0,0.0,33500.0,0.0,0.0,6,inverted
+Rep. Lois Frankel (D-FL),F000462,0.0,11500.0,22000.0,0.0,0.0,33500.0,0.0,0.0,5,
+Rep. Delia C. Ramirez (D-IL),R000617,0.0,24500.0,8500.0,0.0,0.0,33000.0,0.0,25000.0,6,compound:matched
+Rep. Jason Crow (D-CO),C001121,0.0,15500.0,17500.0,0.0,0.0,33000.0,0.0,0.0,2,
+Sen. Cindy Hyde-Smith (R-MS),H001079,0.0,23000.0,10000.0,0.0,0.0,33000.0,0.0,0.0,6,inverted
+Rep. Steve Cohen (D-TN),C001068,0.0,11000.0,22000.0,0.0,0.0,33000.0,0.0,0.0,7,
+Rep. Gary J. Palmer (R-AL),P000609,0.0,32500.0,0.0,0.0,0.0,32500.0,0.0,0.0,4,inverted
+Rep. Anthony D’Esposito (R-NY),D000632,0.0,22500.0,10000.0,0.0,0.0,32500.0,0.0,0.0,4,
+Sen. Edward J. Markey (D-MA),M000133,0.0,0.0,32500.0,0.0,0.0,32500.0,0.0,0.0,3,
+Rep. Brian J. Mast (R-FL),M001199,0.0,31000.0,1000.0,0.0,0.0,32000.0,0.0,0.0,3,
+Rep. John S. Duarte (R-CA),D000633,0.0,23500.0,8500.0,0.0,0.0,32000.0,0.0,0.0,5,inverted
+Rep. Addison P. McDowell (R-NC),M001240,1000.0,22750.0,8000.0,0.0,10.0,31760.0,0.0,0.0,7,prefix
+Rep. Larry Bucshon (R-IN),B001275,0.0,26000.0,5000.0,0.0,0.0,31000.0,0.0,0.0,5,inverted
+Rep. Anna G. Eshoo (D-CA),E000215,0.0,18500.0,12500.0,0.0,0.0,31000.0,0.0,0.0,5,
+Rep. Valerie P. Foushee (D-NC),F000477,0.0,17500.0,13500.0,0.0,0.0,31000.0,0.0,0.0,6,
+Rep. Wesley Bell (D-MO),B001324,0.0,23500.0,7500.0,0.0,0.0,31000.0,0.0,0.0,4,
+"Rep. Charles J. ""Chuck"" Fleischmann (R-TN)",F000459,0.0,28000.0,3000.0,0.0,0.0,31000.0,0.0,0.0,5,
+Rep. John R. Carter (R-TX),C001051,0.0,23000.0,7345.0,500.0,0.0,30845.0,0.0,15000.0,8,compound:matched
+Sen. Michael F. Bennet (D-CO),B001267,0.0,15500.0,15000.0,0.0,0.0,30500.0,1000.0,0.0,8,inferred;inverted
+Rep. Jennifer Wexton (D-VA),W000825,250.0,18000.0,12000.0,0.0,0.0,30250.0,0.0,0.0,7,inverted
+Rep. Peter Meijer (R-MI),M001186,0.0,18500.0,11590.0,0.0,0.0,30090.0,0.0,0.0,6,inverted
+Rep. Cori Bush (D-MO),B001224,0.0,30000.0,0.0,0.0,0.0,30000.0,0.0,0.0,1,
+Rep. Neal P. Dunn (R-FL),D000628,0.0,29000.0,1000.0,0.0,0.0,30000.0,0.0,0.0,5,inverted
+Rep. Susan Wild (D-PA),W000826,0.0,17000.0,13000.0,0.0,0.0,30000.0,0.0,0.0,4,
+Rep. Sheila Cherfilus-McCormick (D-FL),C001127,0.0,5000.0,25000.0,0.0,0.0,30000.0,0.0,0.0,4,
+Rep. Scott Franklin (R-FL),F000472,0.0,26500.0,3250.0,0.0,0.0,29750.0,0.0,0.0,6,
+Rep. Sarah Elfreth (D-MD),E000301,0.0,14000.0,15500.0,0.0,0.0,29500.0,0.0,0.0,5,
+Rep. Bill Johnson (R-OH),J000292,0.0,28000.0,1000.0,0.0,0.0,29000.0,0.0,0.0,5,
+Rep. Mike Garcia (R-CA),G000061,0.0,16000.0,12685.0,0.0,0.0,28685.0,0.0,0.0,5,
+Rep. Lauren Underwood (D-IL),U000040,0.0,16000.0,12500.0,0.0,0.0,28500.0,0.0,15000.0,5,compound:matched
+Rep. Craig A. Goldman (R-TX),G000601,0.0,21000.0,7500.0,0.0,0.0,28500.0,0.0,0.0,5,
+Rep. Pat Harrigan (R-NC),H001101,0.0,23500.0,5000.0,0.0,0.0,28500.0,0.0,0.0,5,
+Rep. Lizzie Fletcher (D-TX),F000468,0.0,17000.0,11000.0,0.0,0.0,28000.0,0.0,0.0,5,
+Rep. Kim Schrier (D-WA),S001216,0.0,10500.0,17500.0,0.0,0.0,28000.0,0.0,0.0,4,inverted
+Rep. Jake Ellzey (R-TX),E000071,0.0,22000.0,5750.0,0.0,0.0,27750.0,0.0,0.0,8,inverted
+Rep. Jared Huffman (D-CA),H001068,0.0,7500.0,20000.0,0.0,0.0,27500.0,0.0,0.0,3,
+Rep. Glenn Grothman (R-WI),G000576,0.0,19500.0,7595.0,0.0,0.0,27095.0,0.0,0.0,5,inverted
+Sen. John Fetterman (D-PA),F000479,1000.0,21025.0,5000.0,0.0,0.0,27025.0,0.0,0.0,6,
+Rep. Ryan Mackenzie (R-PA),M001230,0.0,11000.0,16021.0,0.0,0.0,27021.0,0.0,0.0,5,
+Rep. Jeff Crank (R-CO),C001137,0.0,18250.0,8500.0,260.0,0.0,27010.0,0.0,0.0,7,
+Rep. Barry Moore (R-AL),M001212,0.0,26000.0,1000.0,0.0,0.0,27000.0,0.0,0.0,5,inverted
+Rep. Kevin Mullin (D-CA),M001225,0.0,11000.0,16000.0,0.0,0.0,27000.0,0.0,0.0,5,
+Rep. Chellie Pingree (D-ME),P000597,0.0,9500.0,17500.0,0.0,0.0,27000.0,0.0,0.0,3,
+Rep. Paul Tonko (D-NY),T000469,0.0,6500.0,20500.0,0.0,0.0,27000.0,0.0,0.0,5,
+Rep. Tom Barrett (R-MI),B001321,0.0,10260.0,16500.0,0.0,0.0,26760.0,0.0,0.0,4,
+Rep. Cliff Bentz (R-OR),B000668,0.0,22500.0,4000.0,0.0,0.0,26500.0,0.0,0.0,6,
+Rep. Cynthia Axne (D-IA),A000378,0.0,16500.0,10000.0,0.0,0.0,26500.0,0.0,0.0,4,inverted
+Rep. Nick LaLota (R-NY),L000598,0.0,23000.0,3500.0,0.0,0.0,26500.0,0.0,0.0,8,inverted
+Rep. Emily Randall (D-WA),R000621,1000.0,13000.0,12000.0,100.0,0.0,26100.0,0.0,0.0,7,
+Rep. Tom O’Halleran (D-AZ),O000171,0.0,12500.0,13590.0,0.0,0.0,26090.0,0.0,0.0,4,inverted
+Rep. Teresa Leger Fernandez (D-NM),L000273,0.0,11000.0,15000.0,0.0,0.0,26000.0,0.0,0.0,3,
+Rep. George Latimer (D-NY),L000606,0.0,14500.0,11000.0,0.0,0.0,25500.0,0.0,0.0,4,
+Sen. Richard J. Durbin (D-IL),D000563,0.0,13000.0,12500.0,0.0,0.0,25500.0,0.0,0.0,5,inverted
+Rep. Colin Z. Allred (D-TX),A000376,0.0,2750.0,22690.0,0.0,0.0,25440.0,0.0,0.0,5,
+Rep. Brian Babin (R-TX),B001291,0.0,23000.0,2250.0,0.0,0.0,25250.0,0.0,0.0,6,inverted
+Rep. Morgan Luttrell (R-TX),L000603,0.0,21000.0,4250.0,0.0,0.0,25250.0,0.0,0.0,7,
+Rep. April McClain Delaney (D-MD),M001232,0.0,11250.0,14000.0,0.0,0.0,25250.0,0.0,0.0,9,alias;title-initial
+Rep. Suhas Subramanyam (D-VA),S001230,0.0,7500.0,17500.0,0.0,0.0,25000.0,0.0,0.0,5,
+Rep. Frederica S. Wilson (D-FL),W000808,0.0,7500.0,17000.0,0.0,0.0,24500.0,0.0,50000.0,6,compound:matched;inverted
+Rep. Cory Mills (R-FL),M001216,0.0,24500.0,0.0,0.0,0.0,24500.0,0.0,0.0,3,
+Rep. Mike Kennedy (R-UT),K000403,0.0,22500.0,2000.0,0.0,0.0,24500.0,0.0,0.0,3,title-initial
+"Rep. Al Lawson, Jr. (D-FL)",L000586,0.0,15500.0,9000.0,0.0,0.0,24500.0,0.0,0.0,7,inverted
+Rep. Jerry L. Carl (R-AL),C001054,0.0,17500.0,6595.0,0.0,0.0,24095.0,0.0,0.0,5,
+Rep. Richard McCormick (R-GA),M001218,0.0,23500.0,0.0,0.0,0.0,23500.0,0.0,0.0,5,inverted
+Sen. Ben Sasse (R-NE),S001197,0.0,13500.0,10000.0,0.0,0.0,23500.0,0.0,0.0,5,inverted
+Rep. Shri Thanedar (D-MI),T000488,0.0,14000.0,9500.0,0.0,0.0,23500.0,0.0,0.0,6,
+Rep. Maxwell Frost (D-FL),F000476,0.0,13500.0,10000.0,0.0,0.0,23500.0,0.0,0.0,5,
+Rep. Christopher R. Deluzio (D-PA),D000530,0.0,1000.0,22500.0,0.0,0.0,23500.0,0.0,0.0,3,
+"Rep. Robert P. Bresnahan, Jr. (R-PA)",B001327,0.0,9500.0,13500.0,0.0,0.0,23000.0,0.0,0.0,5,inverted
+Rep. Eric Burlison (R-MO),B001316,0.0,16500.0,6250.0,0.0,0.0,22750.0,0.0,0.0,6,inverted
+"Rep. Johnny Olszewski, Jr. (D-MD)",O000176,0.0,9000.0,13500.0,0.0,0.0,22500.0,0.0,0.0,8,title-initial
+Rep. Jeff Jackson (D-NC),J000308,0.0,5000.0,17500.0,0.0,0.0,22500.0,0.0,0.0,3,
+Rep. Kathy E. Manning (D-NC),M001135,0.0,12500.0,9500.0,0.0,0.0,22000.0,0.0,0.0,4,
+Rep. Nicholas A. Langworthy (R-NY),L000600,0.0,18500.0,2500.0,1000.0,0.0,22000.0,0.0,0.0,8,inverted
+Rep. Maggie Goodlander (D-NH),G000604,500.0,11250.0,10000.0,0.0,0.0,21750.0,0.0,0.0,7,
+Rep. Dave Min (D-CA),M001241,1000.0,1000.0,19500.0,0.0,0.0,21500.0,0.0,0.0,4,inverted
+Rep. LaMonica McIver (D-NJ),M001229,0.0,12000.0,9500.0,0.0,0.0,21500.0,0.0,0.0,6,
+Rep. John Garamendi (D-CA),G000559,0.0,5000.0,16500.0,0.0,0.0,21500.0,0.0,0.0,4,
+Rep. Chip Roy (R-TX),R000614,0.0,21000.0,0.0,0.0,0.0,21000.0,0.0,0.0,3,inverted
+Rep. George Whitesides (D-CA),W000830,1000.0,3500.0,16000.0,0.0,0.0,20500.0,0.0,0.0,6,inverted
+Rep. Ronny Jackson (R-TX),J000304,0.0,20500.0,0.0,0.0,0.0,20500.0,0.0,0.0,3,inverted
+Rep. Jaime Herrera Beutler (R-WA),H001056,0.0,9500.0,11000.0,0.0,0.0,20500.0,0.0,0.0,6,inverted
+Sen. Christopher Murphy (D-CT),M001169,0.0,17500.0,3000.0,0.0,0.0,20500.0,0.0,5000.0,7,compound:matched;inverted
+"Rep. Robert F. Onder, Jr. (R-MO)",O000177,0.0,12500.0,8000.0,0.0,0.0,20500.0,0.0,0.0,9,
+Rep. Melanie A. Stansbury (D-NM),S001218,0.0,6000.0,14500.0,0.0,0.0,20500.0,0.0,0.0,3,
+Rep. Joaquin Castro (D-TX),C001091,0.0,5500.0,15000.0,0.0,0.0,20500.0,0.0,0.0,3,
+Rep. Nellie Pou (D-NJ),P000621,1500.0,5000.0,13500.0,0.0,0.0,20000.0,0.0,0.0,6,title-initial
+Rep. Laurel M. Lee (R-FL),L000597,0.0,12500.0,7500.0,0.0,0.0,20000.0,0.0,0.0,5,title-initial
+"Rep. Donald M. Payne, Jr. (D-NJ)",P000604,0.0,6000.0,14000.0,0.0,0.0,20000.0,0.0,0.0,6,
+Rep. J. Luis Correa (D-CA),C001110,0.0,11000.0,8500.0,0.0,0.0,19500.0,0.0,0.0,3,inverted
+Rep. Greg Casar (D-TX),C001131,0.0,9500.0,10000.0,0.0,0.0,19500.0,0.0,0.0,4,
+Rep. Kurt Schrader (D-OR),S001180,0.0,15000.0,4500.0,0.0,0.0,19500.0,0.0,0.0,7,inverted
+Rep. Lateefah Simon (D-CA),S001231,0.0,11000.0,8500.0,0.0,0.0,19500.0,0.0,0.0,5,
+Rep. James R. Walkinshaw (D-VA),W000831,0.0,11200.0,8050.0,0.0,0.0,19250.0,0.0,0.0,5,
+Rep. John H. Rutherford (R-FL),R000609,0.0,16000.0,3000.0,0.0,0.0,19000.0,0.0,0.0,5,
+Rep. Russ Fulcher (R-ID),F000469,0.0,16000.0,3000.0,0.0,0.0,19000.0,0.0,0.0,5,
+Rep. Jeff Duncan (R-SC),D000615,0.0,16500.0,2500.0,0.0,0.0,19000.0,0.0,0.0,5,inverted
+Rep. Abigail Davis Spanberger (D-VA),S001209,0.0,4500.0,14500.0,0.0,0.0,19000.0,0.0,0.0,5,inverted
+Sen. Maria Cantwell (D-WA),C000127,0.0,5000.0,13700.0,0.0,0.0,18700.0,0.0,0.0,4,
+Rep. Clay Higgins (R-LA),H001077,0.0,18500.0,0.0,0.0,0.0,18500.0,0.0,0.0,1,
+Rep. Summer L. Lee (D-PA),L000602,0.0,5500.0,13000.0,0.0,0.0,18500.0,0.0,0.0,6,
+Rep. James P. McGovern (D-MA),M000312,0.0,7500.0,11000.0,0.0,0.0,18500.0,0.0,0.0,3,
+Rep. Yassamin Ansari (D-AZ),A000381,0.0,8500.0,10000.0,0.0,0.0,18500.0,0.0,0.0,4,
+Rep. Greg Pence (R-IN),P000615,0.0,13000.0,5084.0,0.0,0.0,18084.0,0.0,0.0,6,
+Rep. Al Green (D-TX),G000553,0.0,9500.0,8500.0,0.0,0.0,18000.0,0.0,0.0,5,
+Rep. Alexander X. Mooney (R-WV),M001195,0.0,16000.0,2000.0,0.0,0.0,18000.0,0.0,0.0,6,inverted
+Rep. James R. Baird (R-IN),B001307,0.0,17500.0,0.0,0.0,0.0,17500.0,0.0,0.0,3,inverted
+Rep. Steven M. Palazzo (R-MS),P000601,0.0,17500.0,0.0,0.0,0.0,17500.0,0.0,0.0,2,
+"Rep. Randy K. Weber, Sr. (R-TX)",W000814,0.0,17500.0,0.0,0.0,0.0,17500.0,0.0,0.0,3,
+Rep. Cleo Fields (D-LA),F000110,0.0,17500.0,0.0,0.0,0.0,17500.0,0.0,0.0,4,inverted
+Rep. Riley M. Moore (R-WV),M001235,0.0,15500.0,2000.0,0.0,0.0,17500.0,0.0,0.0,7,
+Rep. Maxine Dexter (D-OR),D000635,0.0,7500.0,10000.0,0.0,0.0,17500.0,0.0,0.0,4,
+Rep. David J. Taylor (R-OH),T000490,0.0,17500.0,0.0,0.0,0.0,17500.0,0.0,0.0,5,
+Rep. Jamaal Bowman (D-NY),B001223,0.0,5000.0,12500.0,0.0,0.0,17500.0,0.0,0.0,2,
+Rep. Harold Rogers (R-KY),R000395,0.0,13500.0,3500.0,0.0,0.0,17000.0,0.0,0.0,5,
+Sen. Jon Ossoff (D-GA),O000174,0.0,11000.0,5000.0,1000.0,0.0,17000.0,0.0,0.0,5,prefix
+Rep. Abraham J. Hamadeh (R-AZ),H001098,1500.0,12500.0,2500.0,0.0,0.0,16500.0,0.0,0.0,4,
+Rep. Michael Baumgartner (R-WA),B001322,0.0,11000.0,5500.0,0.0,0.0,16500.0,0.0,0.0,5,inverted
+Sen. Peter Welch (D-VT),W000800,0.0,2500.0,13750.0,0.0,0.0,16250.0,0.0,0.0,4,
+Rep. Eugene Simon Vindman (D-VA),V000138,2500.0,9000.0,4500.0,0.0,0.0,16000.0,0.0,0.0,5,
+Sen. James C. Justice (R-WV),J000312,1000.0,15000.0,0.0,0.0,0.0,16000.0,0.0,0.0,4,
+"Rep. Gilbert Ray Cisneros, Jr. (D-CA)",C001123,0.0,5000.0,11000.0,0.0,0.0,16000.0,0.0,25000.0,6,compound:matched;title-initial
+Rep. Yadira Caraveo (D-CO),C001134,0.0,11000.0,5000.0,0.0,0.0,16000.0,0.0,0.0,4,inverted
+Rep. Tony Wied (R-WI),W000829,0.0,13500.0,2500.0,0.0,0.0,16000.0,0.0,0.0,5,inverted
+Rep. Luz M. Rivas (D-CA),R000620,0.0,6000.0,10000.0,0.0,0.0,16000.0,0.0,0.0,4,
+Rep. Laura Friedman (D-CA),F000483,0.0,6000.0,10000.0,0.0,0.0,16000.0,0.0,0.0,5,
+Rep. Bonnie Watson Coleman (D-NJ),W000822,0.0,3500.0,12500.0,0.0,0.0,16000.0,0.0,0.0,2,
+Sen. Kamala D. Harris (D-CA),H001075,0.0,7304.0,8482.0,0.0,0.0,15786.0,0.0,0.0,2,
+Rep. Nicholas J. Begich III (R-AK),B001323,1500.0,8000.0,6000.0,0.0,100.0,15600.0,0.0,0.0,8,
+Sen. Tommy Tuberville (R-AL),T000278,0.0,9000.0,6500.0,0.0,0.0,15500.0,0.0,0.0,5,inverted;title-initial
+Rep. Doug LaMalfa (R-CA),L000578,0.0,13000.0,2500.0,0.0,0.0,15500.0,0.0,0.0,5,inverted
+Rep. Mondaire Jones (D-NY),J000306,0.0,3000.0,12500.0,0.0,0.0,15500.0,0.0,0.0,4,
+Sen. Rob Portman (R-OH),P000449,0.0,15000.0,0.0,0.0,0.0,15000.0,0.0,0.0,2,inverted
+Sen. Rand Paul (R-KY),P000603,0.0,15000.0,0.0,0.0,0.0,15000.0,0.0,0.0,3,
+Rep. A. Donald McEachin (D-VA),M001200,0.0,5000.0,10000.0,0.0,0.0,15000.0,0.0,0.0,2,
+Rep. Christopher H. Smith (R-NJ),S000522,0.0,7000.0,8000.0,0.0,0.0,15000.0,0.0,0.0,5,
+Rep. Mark DeSaulnier (D-CA),D000623,0.0,0.0,15000.0,0.0,0.0,15000.0,0.0,0.0,2,
+Rep. Mark E. Green (R-TN),G000590,0.0,12500.0,2000.0,0.0,0.0,14500.0,0.0,0.0,5,
+Rep. Mark B. Messmer (R-IN),M001233,0.0,11000.0,3500.0,0.0,0.0,14500.0,0.0,0.0,4,
+Rep. Betty McCollum (D-MN),M001143,0.0,1000.0,13500.0,0.0,0.0,14500.0,0.0,0.0,3,
+Rep. Ro Khanna (D-CA),K000389,10600.0,0.0,2500.0,1000.0,0.0,14100.0,0.0,0.0,5,title-initial
+Rep. Michael Cloud (R-TX),C001115,0.0,14000.0,0.0,0.0,0.0,14000.0,0.0,0.0,3,inverted
+Rep. John W. Mannion (D-NY),M001231,0.0,4000.0,10000.0,0.0,0.0,14000.0,0.0,0.0,3,
+Rep. Sheila Jackson Lee (D-TX),J000032,0.0,0.0,14000.0,0.0,0.0,14000.0,0.0,0.0,2,
+Rep. Tom Rice (R-SC),R000597,0.0,11000.0,2590.0,0.0,0.0,13590.0,0.0,0.0,6,inverted
+Rep. Kelly Morrison (D-MN),M001234,0.0,11000.0,2500.0,0.0,0.0,13500.0,0.0,0.0,4,
+Rep. Sara Jacobs (D-CA),J000305,0.0,6000.0,7500.0,0.0,0.0,13500.0,0.0,0.0,2,
+Rep. Elaine G. Luria (D-VA),L000591,0.0,6000.0,7000.0,0.0,0.0,13000.0,0.0,0.0,3,
+Rep. Jimmy Patronis (R-FL),P000622,0.0,12500.0,0.0,0.0,0.0,12500.0,0.0,0.0,4,
+Rep. Jackie Walorski (R-IN),W000813,0.0,9500.0,3000.0,0.0,0.0,12500.0,0.0,0.0,5,inverted;title-initial
+Rep. Troy E. Nehls (R-TX),N000026,0.0,10500.0,2000.0,0.0,0.0,12500.0,0.0,0.0,6,
+Rep. Randy Fine (R-FL),F000484,0.0,7500.0,4500.0,0.0,0.0,12000.0,0.0,0.0,2,
+Rep. C. A. Dutch Ruppersberger (D-MD),R000576,0.0,1000.0,11000.0,0.0,0.0,12000.0,0.0,0.0,4,
+Rep. Barbara Lee (D-CA),L000551,0.0,2100.0,9500.0,0.0,0.0,11600.0,0.0,0.0,3,
+Rep. Tim Burchett (R-TN),B001309,0.0,11000.0,0.0,0.0,0.0,11000.0,0.0,0.0,1,
+Rep. Van Taylor (R-TX),T000479,0.0,9500.0,1500.0,0.0,0.0,11000.0,0.0,0.0,4,title-initial
+Sen. Josh Hawley (R-MO),H001089,0.0,7500.0,3500.0,0.0,0.0,11000.0,0.0,0.0,4,inverted
+Sen. Ben Ray Luján (D-NM),L000570,0.0,5000.0,6000.0,0.0,0.0,11000.0,0.0,0.0,2,
+"Rep. Herbert C. Conaway, Jr. (D-NJ)",C001136,0.0,5000.0,6000.0,0.0,0.0,11000.0,0.0,0.0,3,title-initial
+Rep. David N. Cicilline (D-RI),C001084,0.0,6000.0,5000.0,0.0,0.0,11000.0,0.0,0.0,3,
+Rep. Jefferson Shreve (R-IN),S001229,0.0,5000.0,6000.0,0.0,0.0,11000.0,0.0,0.0,3,
+Rep. Debbie Mucarsel-Powell (D-FL),M001207,0.0,0.0,11000.0,0.0,0.0,11000.0,0.0,0.0,2,
+Rep. Gabe Evans (R-CO),E000300,0.0,7250.0,3500.0,0.0,0.0,10750.0,0.0,20000.0,6,compound:matched
+Rep. Ken Buck (R-CO),B001297,0.0,10500.0,0.0,0.0,0.0,10500.0,0.0,0.0,3,
+Rep. Thomas P. Tiffany (R-WI),T000165,0.0,8500.0,2000.0,0.0,0.0,10500.0,0.0,0.0,4,inverted
+Rep. Brandon Gill (R-TX),G000603,0.0,2500.0,8000.0,0.0,0.0,10500.0,0.0,0.0,2,
+Rep. Adelita S. Grijalva (D-AZ),G000606,0.0,10000.0,0.0,0.0,0.0,10000.0,0.0,0.0,1,
+Rep. Chris Stewart (R-UT),S001192,0.0,9000.0,1000.0,0.0,0.0,10000.0,0.0,0.0,3,
+Sen. Laphonza R. Butler (D-CA),B001320,0.0,0.0,10000.0,0.0,0.0,10000.0,0.0,0.0,1,
+Sen. Jeff Merkley (D-OR),M001176,0.0,0.0,10000.0,0.0,0.0,10000.0,0.0,0.0,1,
+Rep. Christian D. Menefee (D-TX),M001245,0.0,0.0,10000.0,0.0,0.0,10000.0,0.0,0.0,1,
+Rep. Josh Riley (D-NY),R000622,250.0,0.0,9250.0,0.0,0.0,9500.0,0.0,0.0,5,title-initial
+Rep. Keith Self (R-TX),S001224,0.0,9500.0,0.0,0.0,0.0,9500.0,0.0,0.0,4,
+Rep. Pat Fallon (R-TX),F000246,0.0,5500.0,4000.0,0.0,0.0,9500.0,0.0,0.0,4,
+Rep. Mark Harris (R-NC),H001102,0.0,7000.0,2500.0,0.0,0.0,9500.0,0.0,0.0,6,inverted
+Rep. Brandon Williams (R-NY),W000828,0.0,8000.0,1000.0,0.0,0.0,9000.0,0.0,0.0,3,
+Rep. Matt Van Epps (R-TN),V000139,0.0,6500.0,2500.0,0.0,0.0,9000.0,0.0,0.0,3,
+Rep. Katie Porter (D-CA),P000618,0.0,4000.0,5000.0,0.0,0.0,9000.0,0.0,0.0,2,title-initial
+Rep. Rashida Tlaib (D-MI),T000481,0.0,9000.0,0.0,0.0,0.0,9000.0,0.0,0.0,3,
+Rep. Daniel Webster (R-FL),W000806,0.0,8500.0,0.0,0.0,0.0,8500.0,0.0,0.0,2,
+Rep. Josh Brecheen (R-OK),B001317,0.0,8500.0,0.0,0.0,0.0,8500.0,0.0,0.0,2,
+Rep. Mike Collins (R-GA),C001129,0.0,8500.0,0.0,0.0,0.0,8500.0,0.0,0.0,3,title-chamber
+Rep. Michael C. Burgess (R-TX),B001248,0.0,5000.0,3000.0,0.0,0.0,8000.0,0.0,0.0,5,
+Rep. Liz Cheney (R-WY),C001109,0.0,2500.0,5500.0,0.0,0.0,8000.0,0.0,0.0,4,
+Rep. Dan Bishop (R-NC),B001311,0.0,7500.0,0.0,0.0,0.0,7500.0,0.0,0.0,2,title-initial
+Rep. Ron Kind (D-WI),K000188,0.0,7500.0,0.0,0.0,0.0,7500.0,0.0,0.0,2,inverted
+Rep. Raúl M. Grijalva (D-AZ),G000551,0.0,0.0,7500.0,0.0,0.0,7500.0,0.0,0.0,1,title-initial
+Rep. Sheri Biggs (R-SC),B001325,0.0,6000.0,1000.0,260.0,0.0,7260.0,0.0,0.0,4,
+Rep. Bob Good (R-VA),G000595,0.0,6000.0,1000.0,0.0,0.0,7000.0,0.0,0.0,3,
+Rep. Harriet M. Hageman (R-WY),H001096,0.0,5000.0,1000.0,0.0,0.0,6000.0,0.0,5000.0,4,compound:matched
+Rep. Mayra Flores (R-TX),F000473,0.0,5000.0,800.0,0.0,0.0,5800.0,0.0,0.0,3,inverted
+Rep. Sylvester Turner (D-TX),T000489,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,
+Rep. Marcia L. Fudge (D-OH),F000455,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,inverted
+Rep. Rob Bishop (R-UT),B001250,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,inverted
+Rep. Trey Hollingsworth (R-IN),H001074,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,inverted
+Rep. Ayanna Pressley (D-MA),P000617,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,
+Rep. Thomas Massie (R-KY),M001184,0.0,5000.0,0.0,0.0,0.0,5000.0,0.0,0.0,1,
+Rep. Mary E. Miller (R-IL),M001211,0.0,3000.0,2000.0,0.0,0.0,5000.0,0.0,0.0,2,inverted
+Rep. Grace F. Napolitano (D-CA),N000179,0.0,1000.0,4000.0,0.0,0.0,5000.0,0.0,0.0,2,
+Rep. Tom Malinowski (D-NJ),M001203,0.0,0.0,5000.0,0.0,0.0,5000.0,0.0,0.0,1,
+Sen. Patrick J. Leahy (D-VT),L000174,0.0,0.0,5000.0,0.0,0.0,5000.0,0.0,0.0,1,
+Rep. Max Rose (D-NY),R000613,0.0,0.0,5000.0,0.0,0.0,5000.0,0.0,0.0,1,
+Sen. Benjamin L. Cardin (D-MD),C000141,0.0,4500.0,0.0,0.0,0.0,4500.0,0.0,0.0,2,
+"Rep. Matthew M. Rosendale, Sr. (R-MT)",R000103,0.0,4500.0,0.0,0.0,0.0,4500.0,0.0,0.0,2,inverted
+Rep. Ilhan Omar (D-MN),O000173,0.0,2000.0,2500.0,0.0,0.0,4500.0,0.0,0.0,2,
+Rep. Scott DesJarlais (R-TN),D000616,0.0,3500.0,0.0,0.0,0.0,3500.0,0.0,0.0,2,inverted
+Rep. John J. McGuire III (R-VA),M001239,0.0,2500.0,1000.0,0.0,0.0,3500.0,0.0,0.0,3,
+Rep. Debbie Lesko (R-AZ),L000589,0.0,2500.0,1000.0,0.0,0.0,3500.0,0.0,0.0,3,
+Rep. Jefferson Van Drew (R-NJ),V000133,0.0,1000.0,2500.0,0.0,0.0,3500.0,0.0,0.0,2,inverted
+Rep. Kathleen M. Rice (D-NY),R000602,0.0,0.0,3000.0,0.0,0.0,3000.0,0.0,0.0,1,
+Rep. Anthony Gonzalez (R-OH),G000588,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,2,inverted
+Rep. Andrew S. Clyde (R-GA),C001116,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Brenda L. Lawrence (D-MI),L000581,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Fred Keller (R-PA),K000395,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Jim Cooper (D-TN),C000754,0.0,2500.0,0.0,0.0,0.0,2500.0,1500.0,0.0,2,inferred;inverted
+Rep. Yvette Herrell (R-NM),H001084,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Anna Paulina Luna (R-FL),L000596,0.0,2500.0,0.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. David B. McKinley (R-WV),M001180,0.0,0.0,2500.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Fred Upton (R-MI),U000031,0.0,0.0,2500.0,0.0,0.0,2500.0,0.0,0.0,1,
+Rep. Don Young (R-AK),Y000033,0.0,0.0,2500.0,0.0,0.0,2500.0,0.0,0.0,1,
+Sen. Mike Braun (R-IN),B001310,0.0,2000.0,0.0,0.0,0.0,2000.0,0.0,0.0,1,inverted
+Rep. Ben McAdams (D-UT),M001209,500.0,500.0,0.0,500.0,0.0,1500.0,0.0,0.0,3,
+Rep. K. Michael Conaway (R-TX),C001062,1000.0,0.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
+Rep. Andy Harris (R-MD),H001052,0.0,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
+Rep. Marie Newman (D-IL),N000192,0.0,0.0,0.0,1000.0,0.0,1000.0,0.0,0.0,1,
+Rep. Bob Gibbs (R-OH),G000563,0.0,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
+Rep. Chris Jacobs (R-NY),J000020,0.0,1000.0,0.0,0.0,0.0,1000.0,0.0,0.0,1,
+Rep. Analilia Mejia (D-NJ),M001246,0.0,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
+Rep. Will Hurd (R-TX),H001073,0.0,500.0,0.0,0.0,0.0,500.0,0.0,0.0,1,
+Rep. Val Butler Demings (D-FL),D000627,0.0,0.0,500.0,0.0,0.0,500.0,0.0,0.0,1,
+Rep. Andy Levin (D-MI),L000592,0.0,250.0,0.0,0.0,0.0,250.0,0.0,0.0,1,
+Rep. Kendra S. Horn (D-OK),H001083,0.0,100.0,0.0,0.0,0.0,100.0,0.0,0.0,1,
+Sen. Cory A. Booker (D-NJ),B001288,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,
+Rep. Ed Perlmutter (D-CO),P000593,0.0,-10000.0,0.0,0.0,0.0,-10000.0,0.0,0.0,1,title-initial

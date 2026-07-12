@@ -35,8 +35,12 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 PACKAGES = {
     "crypto": {
+        # 2026-07-11 intensity re-cut (Rob-approved >=5% activity-share gate): the
+        # diversified slice splits into forward/ambient, and slice inputs are the
+        # EXHAUSTIVE (--top 999999) runs — the audit baseline regenerated the same day.
         "slices": [("crypto_native", "crypto_giving_pureplay.json"),
-                   ("diversified_core", "crypto_giving_div.json")],
+                   ("diversified_forward", "crypto_giving_div_forward.json"),
+                   ("ambient_lowshare", "crypto_giving_div_ambient.json")],
         "audit": "crypto_ld203_member_variant_audit.csv",
     },
     "healthcare": {
@@ -146,10 +150,14 @@ def main():
                         print(f"  LOSS: {key} was merged into {old_member!r}, "
                               "now unresolved")
                 elif bio_of(old_member) not in (hit[0], None):
-                    # a title-resolved re-attribution is a CORRECTION of the old
-                    # matcher's conflation (chamber pairs like the Menendezes;
-                    # middle-initial over-matches like Dan/Sanford D. Bishop)
-                    if hit[2] in ("title-chamber", "title-initial"):
+                    # a re-attribution is a CORRECTION of the old matcher's
+                    # conflation when the new evidence is strictly stronger:
+                    # title-resolved (the Menendezes; Dan/Sanford D. Bishop),
+                    # a full-name 'matched' hit (the old single-initial fallback
+                    # merged 'SEN CINDY HYDE SMITH' into Christopher Smith), or
+                    # a curated 'alias' entry (sourced in member_aliases.json)
+                    if hit[2] in ("title-chamber", "title-initial",
+                                  "matched", "alias"):
                         n_amb += 1
                         print(f"  correction (explained): {key[1]!r}: "
                               f"{old_member!r} -> {hit[1]!r} [{hit[2]}]")

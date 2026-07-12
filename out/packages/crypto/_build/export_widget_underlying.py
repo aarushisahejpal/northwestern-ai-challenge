@@ -153,10 +153,11 @@ def norm_key(recipient):
 split = rd("crypto_ld203_recipients_split.csv")
 for r in split:
     r["_a"] = float(r["from_crypto_native"] or 0)
-    r["_b"] = float(r["from_diversified_core"] or 0)
+    r["_b"] = float(r["from_diversified_forward"] or 0)
+    r["_c"] = float(r["from_ambient_lowshare"] or 0)
 members = [r for r in split if r["party"]]
 displayed = {r["recipient"]: r for r in
-             sorted(split, key=lambda r: -(r["_a"] + r["_b"]))[:10]
+             sorted(split, key=lambda r: -(r["_a"] + r["_b"] + r["_c"]))[:10]
              + sorted(members, key=lambda r: -r["_a"])[:10]
              + sorted(members, key=lambda r: -r["_b"])[:10]}
 print(f"  giving: {len(displayed)} displayed rows")
@@ -170,7 +171,8 @@ for row in aud:
         variants.setdefault((disp, row["giver_slice"]), set()).add(
             row["raw_recipient_string_as_filed"])
 J = {"crypto_native": loadj("crypto_giving_pureplay.json"),
-     "diversified_core": loadj("crypto_giving_div.json")}
+     "diversified_forward": loadj("crypto_giving_div_forward.json"),
+     "ambient_lowshare": loadj("crypto_giving_div_ambient.json")}
 org_rows = {d: r for d, r in displayed.items() if not r["party"]}
 for disp, r in org_rows.items():
     if disp.startswith("Trump-Vance Inaugural"):
@@ -227,7 +229,8 @@ for r in items:
     sums[(r[0], r[1])] = sums.get((r[0], r[1]), 0) + (r[7] or 0)
 mism = 0
 for disp, r in displayed.items():
-    for sl, want in (("crypto_native", r["_a"]), ("diversified_core", r["_b"])):
+    for sl, want in (("crypto_native", r["_a"]), ("diversified_forward", r["_b"]),
+                     ("ambient_lowshare", r["_c"])):
         got = sums.get((disp, sl), 0)
         if abs(got - want) > 1:
             mism += 1

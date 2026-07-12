@@ -62,6 +62,8 @@ SHORTS = {
     "LOCKHEED MARTIN CORPORATION": "Lockheed",
     "GENERAL MOTORS COMPANY": "GM",
     "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE": "AIPAC",
+    "INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM)": "IBM",
+    "AMERICAN ASSOCIATION FOR JUSTICE": "Assn for Justice",
     "MASTERCARD WORLDWIDE": "Mastercard",
     "FORIS DAX, INC. D/B/A CRYPTO.COM": "Crypto.com",
     "AH CAPITAL MANAGEMENT, LLC (DBA ANDREESSEN HOROWITZ)": "a16z",
@@ -136,8 +138,21 @@ players = []
 for r in players_csv:
     sp = num(r["total_all_issue_spend"])
     players.append({"name": r["player"], "filings": int(r["crypto_filings_senate"]),
-                    "tier": r["tier"], "spend": sp, "vis": r["player"].upper().strip() in pure})
+                    "tier": r["tier"], "spend": sp, "vis": r["player"].upper().strip() in pure,
+                    # 2026-07-11 intensity metric (healthcare-parity activity share)
+                    "share": num(r["crypto_activity_share_pct"]),
+                    "band": r["crypto_share_band"],
+                    "cblocks": int(r["crypto_activity_blocks"]) if r["crypto_activity_blocks"] else None,
+                    "ablocks": int(r["all_activity_blocks"]) if r["all_activity_blocks"] else None})
 top_players = sorted(players, key=lambda p: -p["filings"])[:60]
+# ... plus core players (sustained, >=8 filings) with a top-15 all-issue budget:
+# the scatter's ambient-giant region (bottom-right) exists precisely to place the
+# U.S. Chamber ($311.6M, 3.4% share, 14 filings — rank 114 by filings) and AARP
+# correctly; a filings-only cut silently hides them
+for p in sorted([p for p in players if p["tier"] == "core" and p["spend"]],
+                key=lambda p: -p["spend"])[:15]:
+    if p not in top_players:
+        top_players.append(p)
 for p in top_players:
     p["short"] = shorten(p["name"])
 # combine known resolver-split name families for the display list (per-variant rows stay in the CSV)
@@ -162,7 +177,11 @@ for p in players:
     m["spend"] += p["spend"]
     m["filings"] += p["filings"]
 native_spend = sorted(merged.values(), key=lambda p: -p["spend"])[:12]
-divers_spend = sorted([p for p in players if not p["vis"] and p["spend"] and p["tier"] == "core"],
+# the diversified money list carries the 2026-07-11 intensity gate: >=5% crypto
+# activity share, so ambient giants (U.S. Chamber 3.4%, AARP 2.5%) stay off the
+# money bars — they remain on the player map (bottom-right) and in every CSV
+divers_spend = sorted([p for p in players if not p["vis"] and p["spend"] and p["tier"] == "core"
+                       and (p["share"] or 0) >= 5],
                       key=lambda p: -p["spend"])[:12]
 trend = rd("crypto", "crypto_quarterly_trend.csv")
 tq = [q_label(r["filing_year"], r["filing_period"]) for r in trend]
@@ -170,11 +189,12 @@ scatter = rd("crypto", "crypto_issue_code_scatter.csv")[:12]
 press = rd("crypto", "crypto_press_quarterly.csv")
 recip = rd("crypto", "crypto_ld203_pureplay_recipients.csv")
 split = rd("crypto", "crypto_ld203_recipients_split.csv")
+# three-tier split (2026-07-11 intensity gate): a=native, b=crypto-forward
+# diversified (>=5% activity share), c=ambient (<5% — context only: never drawn
+# as a bar in a crypto chart; carried into tooltip, click panel, table, CSV)
 split_rows = [{"name": r["recipient"], "a": num(r["from_crypto_native"]) or 0,
-               # compat shim 2026-07-11: the split CSV moved to a three-way tier
-               # (native / diversified_forward / ambient_lowshare); until the crypto
-               # section is reworked for it, "diversified" = the forward tier.
-               "b": num(r.get("from_diversified_core") or r.get("from_diversified_forward")) or 0,
+               "b": num(r["from_diversified_forward"]) or 0,
+               "c": num(r["from_ambient_lowshare"]) or 0,
                "party": r["party"]} for r in split]
 giv_top = sorted(split_rows, key=lambda r: -(r["a"] + r["b"]))[:10]
 member_rows = [r for r in split_rows if r["party"]]
@@ -265,14 +285,17 @@ for bar, members in bar_players.items():
     rows_.sort(key=lambda x: (x[0][:4], Q_ORDER.get(x[0][5:7], 9), x[1]))
     spend_quarters[bar] = rows_
 
-# giving: displayed recipient row -> the LD-203 items behind it
+# giving: displayed recipient row -> the LD-203 items behind it (three slices)
+_SLICE_KEY = {"crypto_native": "native", "diversified_forward": "forward",
+              "ambient_lowshare": "ambient"}
 giving_items = {}
 for r in rd("crypto", "crypto_ld203_items.csv"):
-    e = giving_items.setdefault(r["display_row"], {"native": [], "diversified": []})
-    key = "native" if r["giver_slice"] == "crypto_native" else "diversified"
-    e[key].append([r["filing_uuid"], tcase(r["ld203_filer_org"]) or r["ld203_filer_org"],
-                   r["date"], num(r["amount"]), r["contribution_type"],
-                   int(r["n_amendment_versions"])])
+    e = giving_items.setdefault(r["display_row"],
+                                {"native": [], "forward": [], "ambient": []})
+    e[_SLICE_KEY[r["giver_slice"]]].append(
+        [r["filing_uuid"], tcase(r["ld203_filer_org"]) or r["ld203_filer_org"],
+         r["date"], num(r["amount"]), r["contribution_type"],
+         int(r["n_amendment_versions"])])
 
 # press: quarter -> the matching releases (counts reconcile with the chart)
 press_releases = {}
@@ -321,16 +344,19 @@ crypto_data = {
     "givingMembersDiv": giv_members_div,
     "givingRecipientsRaw": [{"name": r["recipient"], "party": r["party"],
                              "a": num(r["from_crypto_native"]) or 0,
-                             "b": num(r.get("from_diversified_core") or r.get("from_diversified_forward")) or 0} for r in split[:40]],
+                             "b": num(r["from_diversified_forward"]) or 0,
+                             "c": num(r["from_ambient_lowshare"]) or 0} for r in split[:40]],
     "fec": fec,
     "press": {"q": [r["quarter"] for r in press], "share": [num(r["crypto_share_pct"]) for r in press],
               "n": [int(r["crypto_releases"]) for r in press], "all": [int(r["all_releases"]) for r in press]},
     "queryInfo": None,  # filled below (extracted from the export scripts)
     "caveats": [
         "Recall-first map: any client whose filing free-text names one of 43 curated crypto phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
-        "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue.",
-        "Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated.",
-        "LD-203 'disclosed giving' is the lobbyist-side regime only. Super-PAC money (Fairshake network) legally lives in FEC data — the two never sum.",
+        "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue. The crypto activity share (crypto-tagged senate activity blocks ÷ all the client's senate activity blocks) is the intensity companion: it says how much of the filer's declared attention is crypto, never how its dollars split.",
+        "The ≥5% activity-share gate (diversified money list, giving split) is an EDITORIAL cut, chosen to track the healthcare package's precedent (the U.S. Chamber reads 5.4% health there and was classed a side-desk, not a player). The 15 gated-out ambient givers and their $38.8M stay in every CSV, the giving tooltip/click-through, and the table views — excluded from crypto-titled charts, never from the data.",
+        "Share is computed per resolved entity: known resolver-split families (Mastercard ×3 entities at 58/18/9%, Visa ×2, a16z, Kraken/Payward) each carry their own share; the spend bars combine families, the map plots entities. Per-variant rows are in data/crypto_players.csv.",
+        "Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated; share denominators exclude LD-1 registrations.",
+        "LD-203 'disclosed giving' is the lobbyist-side regime only, and it is organization-level: the giver split shows WHO funds a recipient, never why. Super-PAC money (Fairshake network) legally lives in FEC data — the two never sum.",
         "FEC↔lobbying name matches are candidates for human confirmation (shown with confidence labels). Entity resolution is the ceiling: a few companies (Kraken/Payward, a16z) file under multiple names and are recovered manually.",
         "Everything is self-reported disclosure data. 'Disclosed' never means 'total': 501(c)(4) dark money and state lobbying are outside every number here."
     ]
@@ -379,8 +405,11 @@ crypto_data["queryInfo"] = {
         [("quarterly-trend SQL · _build/export_crypto.py → data/crypto_quarterly_trend.csv",
           q_trend_sql)]),
     "players": _qi("Player map — the queries behind it",
-        "Bubbles = data/crypto_players.csv (SQL 1: crypto-tagged senate filings resolved to "
-        "client entities; spend column sums v_client_canonical_spend). Click-through filing "
+        "Dots = data/crypto_players.csv (SQL 1: crypto-tagged senate filings resolved to "
+        "client entities; spend column sums v_client_canonical_spend; the acts CTE computes "
+        "the crypto ACTIVITY SHARE — crypto-tagged senate free-text blocks ÷ all the "
+        "client's senate blocks, registrations excluded — mirroring the healthcare "
+        "package's activity-share semantics). Click-through filing "
         "lists = data/crypto_player_filings.csv (SQL 2; one lda.senate.gov URL per "
         "filing_uuid: https://lda.senate.gov/filings/public/filing/<uuid>/print/). " + _DB,
         [("SQL 1 — players · _build/export_crypto.py → data/crypto_players.csv", q_players_sql),
@@ -400,19 +429,28 @@ crypto_data["queryInfo"] = {
         "v_client_canonical_spend — the rollup-corrected client-spend view (SQL 2): per "
         "(client, quarter) canonical = greatest(in-house, outside), never their sum. "
         "Left list restricted to the hand-triaged roster out/crypto_roster_pureplay.txt; "
-        "known name families (Foris/Crypto.com, Payward/Kraken, a16z) combined for display. " + _DB,
+        "right list gated to diversified core players with ≥5% crypto activity share "
+        "(the 2026-07-11 intensity gate — ambient giants like the U.S. Chamber stay on the "
+        "map and in the CSVs, not on these bars); known name families (Foris/Crypto.com, "
+        "Payward/Kraken, a16z) combined for display. " + _DB,
         [("SQL 1 — players · _build/export_crypto.py → data/crypto_players.csv", q_players_sql),
          ("SQL 2 — CREATE VIEW v_client_canonical_spend · skills/lda-entity-resolver/scripts/resolve_entities.py",
           q_canon_view)]),
     "giving": _qi("LD-203 giving — how these numbers are produced",
-        "Produced by a tool run, not one SQL: skills/lead-scanner/scripts/lda_ld203_giving.py "
-        "--json --names-file out/crypto_roster_pureplay.txt (105 crypto-native) and "
-        "--names-file out/crypto_roster_core_diversified.txt (162 diversified core), then "
-        "member-merged by _build/enhance_giving.py (name variants → one member; every merge "
-        "auditable in data/crypto_ld203_member_variant_audit.csv). Citeable SQL blocks: "
-        "queries/ld203_giving.sql G1a–G1d. The tool's core de-dup CTE is below — LD-203 "
-        "amendments collapse on the full contribution identity; _reg holds the resolved "
-        "LD-203 filer names for the roster.",
+        "Produced by tool runs, not one SQL: skills/lead-scanner/scripts/lda_ld203_giving.py "
+        "--json --top 999999 (exhaustive recipient lists) for three rosters — "
+        "out/crypto_roster_pureplay.txt (105 crypto-native), out/crypto_roster_div_forward.txt "
+        "(147 diversified core with ≥5% crypto activity share) and "
+        "out/crypto_roster_div_ambient.txt (15 below the gate; forward+ambient partition the "
+        "old 162-name diversified roster exactly, asserted per raw recipient string at build "
+        "time by _build/enhance_giving.py). Slices are then member-merged by "
+        "_build/enhance_giving.py (name variants → one member; every merge auditable in "
+        "data/crypto_ld203_member_variant_audit.csv; the earlier build merged only each "
+        "run's top-400 recipient rows, so per-member diversified figures here RECOVER "
+        "sub-cutoff variants — a correction, itemized in the audit CSV). Citeable SQL "
+        "blocks: queries/ld203_giving.sql G1a–G1d. The tool's core de-dup CTE is below — "
+        "LD-203 amendments collapse on the full contribution identity; _reg holds the "
+        "resolved LD-203 filer names for the roster.",
         [("amendment-dedup CTE · skills/lead-scanner/scripts/lda_ld203_giving.py", q_ld203_base)]),
     "fec": _qi("FEC vs LD-203 — pipeline (external openFEC API, not DB SQL)",
         "FEC side: skills/lead-scanner/scripts/fec_enrich.py --names-file out/crypto_roster.txt "
@@ -432,7 +470,7 @@ crypto_data["queryInfo"] = {
 # click-through provenance, per widget (the lists reconcile to the chart numbers
 # at export time — _build/export_player_filings.py / export_widget_underlying.py)
 _CLICK = {
-    "players": "CLICK-THROUGH: click a bubble to list its raw filings (full index: data/crypto_player_filings.csv).",
+    "players": "CLICK-THROUGH: click a dot to list its raw filings (full index: data/crypto_player_filings.csv).",
     "trend": "CLICK-THROUGH: click a quarter to list exactly the deduped filings it counts (data/crypto_trend_filings.csv — per-quarter counts reconcile with this chart at export time).",
     "scatter": "CLICK-THROUGH: click a code bar to list the senate filings behind its blocks (data/crypto_issue_code_filings.csv; top 150 by amount embedded).",
     "money": "CLICK-THROUGH: click a bar for its quarter-by-quarter v_client_canonical_spend rows (data/crypto_spend_quarters.csv — per-player sums reconcile with the bars) plus its crypto-tagged filings.",
