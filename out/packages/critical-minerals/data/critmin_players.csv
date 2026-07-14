@@ -132,7 +132,7 @@ Equinor US Operations LLC,client:102168,15,2024,2026,5061000,no,core
 CMS ENERGY CORP,client:113699,15,2022,2026,4490000,no,core
 Puget Sound Energy,client:140684,15,2022,2026,4210000,no,core
 "Samsung SDI America, Inc.",client:51972,15,2023,2026,2420000,no,core
-LEEWARD RENEWABLE ENERGY,client:210205,15,2022,2026,1770000,no,core
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,15,2022,2026,1770000,no,core
 "CHARGEPOINT, INC.",client:104655,15,2022,2023,1080000,no,core
 US Strategic Metals,client:58861,15,2024,2026,1000000,no,core
 Energy Fuels Resources Inc.,client:204142,15,2022,2026,990000,no,core
@@ -674,7 +674,7 @@ STATE OF NEVADA,client:112674,2,2022,2022,1020000,no,peripheral
 "With Honor Action, Inc.",client:196649,2,2025,2026,1020000,no,peripheral
 ALABAMA FARMERS FEDERATION,client:101337,2,2023,2023,852000,no,peripheral
 Smiths Group plc,client:127279,2,2025,2026,840000,no,peripheral
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2,2025,2025,773123,no,peripheral
+OMAHA PUBLIC POWER DISTRICT,client:188236,2,2025,2025,773123,no,peripheral
 The University of Rhode Island Research Foundation,client:54160,2,2025,2025,650000,no,peripheral
 ELECTRIC HYDROGEN CO.,client:55272,2,2024,2024,570000,no,peripheral
 Fuel Cell and Hydrogen Energy Association,client:194992,2,2025,2025,520000,no,peripheral

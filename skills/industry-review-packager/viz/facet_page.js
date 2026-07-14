@@ -216,17 +216,24 @@
       DATA.scatter.map(d => [d.code + (d.name ? " — " + d.name : ""), d.docs, d.pct]), ["s", "#", "%"]);
   }
 
-  /* Vocabulary */
+  /* Vocabulary — the definition of the facet, including what was kept OUT */
   {
     const w = W("keywords");
-    const { box, cardEl } = card(app, w.title || "Which words carried the signal",
-      w.sub || "Distinct filings matched by each curated lexicon phrase (whole-word, case-insensitive).",
-      w.foot || "");
+    const vm = DATA.vocabMeta || {};
+    const { box, cardEl } = card(app, w.title || "The vocabulary that defines this map",
+      w.sub || ("Curated lexicon" + (vm.version ? " v" + vm.version : "") +
+        ": a filing is in this package only when its free-text contains one of these whole-word phrases " +
+        "(case-insensitive). Discovery tools (FTS, keyness, semantic search) only propose candidates; " +
+        "each phrase is triaged against raw filings before it tags anything."),
+      w.foot || "One filing can match several phrases, so counts overlap and never sum to the package total.");
     moreOptions(cardEl, QI.keywords);
     hbars(box, {
       items: DATA.keywords.map(d => ({ label: d.kw, value: d.filings })),
       fmt: "#", labelW: 240, valueName: "distinct filings matched"
     });
+    if (vm.rejected && vm.rejected.length)
+      div("note", cardEl, "Considered and REJECTED after collision checks (kept out of every count on this page): " +
+        vm.rejected.map(r => r.term + " — " + r.why).join("  ·  "));
   }
 
   /* Registrant firms */
