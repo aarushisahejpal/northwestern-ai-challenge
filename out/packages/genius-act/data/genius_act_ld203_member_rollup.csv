@@ -1,16 +1,16 @@
 ﻿member,bioguide_id,chamber,state,party_bracket,direct,campaign_committee,leadership_pac,total_attributable,jfc_shared_unallocated,multi_honoree_unallocated,items,n_filed_variants,inferred_flag
 J.D. Vance,V000137,Senate,OH,(R-OH),1051900.0,5000.0,5000.0,1061900.0,0.0,0.0,26,11,
-J. French Hill,H001072,House,AR,(R-AR),821314.0,7800.0,11800.0,840914.0,1000.0,0.0,294,17,inferred
-Andy Barr,B001282,House,KY,(R-KY),740537.06,4500.0,3500.0,748537.06,0.0,0.0,271,17,inferred
-Tom Emmer,E000294,House,MN,(R-MN),717914.0,8000.0,5000.0,730914.0,0.0,0.0,244,19,inferred
-Bill Huizenga,H001058,House,MI,(R-MI),664049.0,0.0,0.0,664049.0,0.0,0.0,257,14,
-Hakeem S. Jeffries,J000294,House,NY,(D-NY),623600.0,500.0,0.0,624100.0,0.0,79900.0,180,12,
-Patrick T. McHenry,M001156,House,NC,(R-NC),590514.0,0.0,0.0,590514.0,2500.0,0.0,183,11,inferred
-Tim Scott,S001184,Senate,SC,(R-SC),551764.0,6500.0,5000.0,563264.0,0.0,0.0,175,17,
-Richard E. Neal,N000015,House,MA,(D-MA),558500.0,0.0,0.0,558500.0,0.0,0.0,170,12,
-John Thune,T000250,Senate,SD,(R-SD),532209.0,0.0,0.0,532209.0,1500.0,0.0,160,10,inferred
-Jason Smith,S001195,House,MO,(R-MO),516614.0,0.0,9500.0,526114.0,0.0,0.0,165,10,
-Bryan Steil,S001213,House,WI,(R-WI),503875.52,11000.0,10500.0,525375.52,0.0,0.0,243,13,inferred
-Steve Scalise,S001176,House,LA,(R-LA),482614.0,6600.0,0.0,489214.0,0.0,0.0,131,12,
-Ann Wagner,W000812,House,MO,(R-MO),482614.0,0.0,0.0,482614.0,0.0,0.0,180,8,
-Josh Gottheimer,G000583,House,NJ,(D-NJ),478150.0,0.0,2500.0,480650.0,0.0,0.0,184,10,
+J. French Hill,H001072,House,AR,(R-AR),880564.0,7800.0,11800.0,900164.0,1000.0,0.0,316,18,inferred
+Andy Barr,B001282,House,KY,(R-KY),821037.06,4500.0,3500.0,829037.06,0.0,1500.0,299,18,inferred
+Tom Emmer,E000294,House,MN,(R-MN),770414.0,8000.0,5000.0,783414.0,0.0,0.0,259,20,inferred
+Bill Huizenga,H001058,House,MI,(R-MI),734549.0,0.0,0.0,734549.0,0.0,0.0,283,14,
+Hakeem S. Jeffries,J000294,House,NY,(D-NY),656600.0,500.0,0.0,657100.0,0.0,79900.0,191,12,
+Patrick T. McHenry,M001156,House,NC,(R-NC),629014.0,0.0,0.0,629014.0,2500.0,0.0,192,12,inferred
+Richard E. Neal,N000015,House,MA,(D-MA),614500.0,0.0,0.0,614500.0,0.0,0.0,186,13,
+Tim Scott,S001184,Senate,SC,(R-SC),591764.0,6500.0,5000.0,603264.0,0.0,0.0,184,17,
+Bryan Steil,S001213,House,WI,(R-WI),557875.52,11000.0,10500.0,579375.52,0.0,0.0,261,13,inferred
+Jason Smith,S001195,House,MO,(R-MO),550614.0,0.0,9500.0,560114.0,0.0,0.0,175,10,
+Ann Wagner,W000812,House,MO,(R-MO),546212.11,0.0,0.0,546212.11,0.0,0.0,204,8,
+John Thune,T000250,Senate,SD,(R-SD),539709.0,0.0,0.0,539709.0,1500.0,0.0,163,11,inferred
+Steve Scalise,S001176,House,LA,(R-LA),517614.0,6600.0,0.0,524214.0,0.0,0.0,140,12,
+Josh Gottheimer,G000583,House,NJ,(D-NJ),506650.0,0.0,2500.0,509150.0,0.0,0.0,197,11,

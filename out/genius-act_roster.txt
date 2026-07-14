@@ -1,40 +1,45 @@
 Visa Inc.
 Coinbase, Inc.
+PayPal, Inc.
 Tether Operations, S.A. de C.V.
 Filecoin Foundation
-PayPal, Inc.
-Solana Policy Institute
 Block, Inc.
+Solana Policy Institute
+Citigroup Washington, Inc.
+Crypto Council for Innovation
+JPMorgan Chase Holdings LLC
 American Airlines, Inc.
 PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)
 PAYWARD INTERACTIVE, INC. D/B/A KRAKEN
+TREA SENIOR CITIZENS LEAGUE
 WISDOMTREE DIGITAL MANAGEMENT
 Ava Labs, Inc.
 Blockchain Association
-Citigroup Washington, Inc.
+NORTHERN TRUST CORPORATION
 Paradigm Operations LP
 Securities Industry and Financial Markets Association (SIFMA)
 Stripe, Inc.
 THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE)
-American Association for Justice
-Crypto Council for Innovation
-MYSTEN LABS, INC.
-NORTHERN TRUST CORPORATION
-PwC US Group LLP
 Visa U.S.A. Inc.
+American Association for Justice
+Electronic Payments Coalition
+MYSTEN LABS, INC.
+PwC US Group LLP
 American Bankers Association
 American Express Company
 Bank Policy Institute
+Bank of America Corporation
 CF Secured LLC
 COMMON CAUSE
 Circle
 Cornerstone Government Affairs obo Circle Internet Financial, Inc.
 Cornerstone Government Affairs obo Stripe, Inc.
 Digital Currency Group
-Electronic Payments Coalition
 Ernst & Young LLP
 FEDERATED HERMES, INC. (FORMERLY KNOWN AS FEDERATED INVESTORS, INC.)
 FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES
+Financial Services Forum
+GOWEST CREDIT UNION ASSOCIATION
 KeyCorp
 MAYER BROWN LLP OBO CIRCLE INTERNET FINANCIAL, INC.
 Satoshi Action Fund
@@ -50,14 +55,15 @@ COINFLIP
 COMMUNITY BANKERS ASSOCIATION OF ILLINOIS
 Consumer Bankers Association
 DeFi Education Fund
+Defense Credit Union Council
 Fiserv
 Flexa Inc.
 Food Marketplace Inc.
 GARRISON FATHOM
-GOWEST CREDIT UNION ASSOCIATION
+H&R Block Management, LLC
+HSBC TECHNOLOGY AND SERVICES USA INC.
 INDEPENDENT COMMUNITY BANKERS OF AMERICA
 International Franchise Association
-JPMorgan Chase Holdings LLC
 LIVE OAK BANK
 LMAX Group
 MOONPAY USA LLC
@@ -66,13 +72,14 @@ National Venture Capital Association
 PAYWARD INC D/B/A KRAKEN
 Pathward, N.A.
 Pilot Travel Centers LLC
+Ripple Labs Inc.
+STANDARD CHARTERED BANK
 TETHER HOLDINGS, S.A. DE C.V.(FORMERLY KNOWN AS TETHER OPERATIONS, S.A. DE C.V.)
 TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT)
 The PNC Financial Services Group
 Veritaseum Inc.,
 AMERICAN FEDERATION OF TEACHERS
 Americans for Financial Reform
-Bank of America Corporation
 CALIFORNIA AND NEVADA CREDIT UNION LEAGUES
 CHAMBER OF DIGITAL COMMERCE D/B/A THE DIGITAL CHAMBER
 CITIZENS FINANCIAL GROUP INC
@@ -84,14 +91,14 @@ Chamber of Progress
 ConsenSys Software Inc.
 DEFI EUDCATION FUND
 DEMOCRACY DEFENDERS ACTION
-Defense Credit Union Council
 EXODUS MOVEMENT, INC.
 FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE
 FIDELITY INVESTMENTS
 FORIS DAX, INC & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM
 Fidelity National Information Systems, Inc. and Subsidiaries
-H&R Block Management, LLC
+HUNTINGTON BANCSHARES INCORPORATED
 INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS
+KPMG LLP
 MIZUHO BANK, LTD.
 MODERN TREASURY CORP.
 Moody's Corporation
@@ -121,7 +128,6 @@ FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT)
 FEDERAL MONEY SERVICES BUSINESS ASSOCIATION INC.
 FMR LLC
 FTI CONSULTING ON BEHALF OF TETHER OPERATIONS, S.A. DE C.V.
-HUNTINGTON BANCSHARES INCORPORATED
 INTERNATIONAL SWAPS AND DERIVATIVES ASSOCIATION
 Idemia Identity & Security USA LLC
 Institute of International Bankers
@@ -135,7 +141,6 @@ Metrika, Inc.
 National Restaurant Association
 P STREET PROJECT, INC.
 Polygon Labs Services (Switzerland) AG
-STANDARD CHARTERED BANK
 SmartContract Inc.
 SoFi Technologies, Inc.
 Southwest Airlines
@@ -144,25 +149,28 @@ THE CLEARING HOUSE ASSOCIATION
 WAKEFERN FOOD CORP.
 WESTERN ALLIANCE BANCORPORATION
 AFL-CIO
+AICPA Association of International Certified Professional Accountants
 ALLIANCE DEFENDING FREEDOM
 BNP PARIBAS RCC, INC.
 BPCE SA
 CALIFORNIA/NEVADA CREDIT UNION LEAGUE
 CCOF (CA CERTIFIED ORGANIC FARMERS)
 CHAMBER OF COMMERCE OF THE U.S.A.
+CROWE LLP
 CRYPTEX FINANCE
 ELEVANTA
 Earthjustice Action
-Financial Services Forum
+FDD ACTION
 Foris DAX, Inc. d/b/a Crypto.com
 GIFDA
 GLOBAL PAYMENTS, INC.
 INDEPENDENT BANKERS ASSOCIATION OF TEXAS
 JP Morgan Chase Holdings
-KPMG LLP
+LONDON STOCK EXCHANGE GROUP
 Lowe's Companies Inc.
 NATIXIS NORTH AMERICA LLC
 NFIB (National Federation of Independent Business)
+National Association of College Stores
 National Association of Convenience Stores
 PACIFIC LIFE INSURANCE COMPANY
 Public Citizen
