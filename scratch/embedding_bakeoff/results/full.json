@@ -1,0 +1,923 @@
+{
+  "sample": 10000,
+  "models": {
+    "bge-small": {
+      "docs_per_sec": 216,
+      "probes": [
+        {
+          "query": "cryptocurrency and digital asset market regulation",
+          "overlap_bm25": 4,
+          "semantic_top": [
+            {
+              "score": 0.897510290145874,
+              "txt": "Digital asset market regulation",
+              "example_key": "0a8537b7-75e3-4247-ad9d-5f02f4291d3c"
+            },
+            {
+              "score": 0.8582258224487305,
+              "txt": "Digital assets regulation",
+              "example_key": "0e355120-f2a1-49d6-a122-edbbc9887ee3"
+            },
+            {
+              "score": 0.8562554121017456,
+              "txt": "Regulation of digital assets",
+              "example_key": "301538805"
+            },
+            {
+              "score": 0.8393701314926147,
+              "txt": "Issues related to decentralized finance and cryptocurrency Digital Commodities Consumer Protection Act Issues related to digital asset market structure legislation",
+              "example_key": "fd6eee28-7735-47b5-81fe-731dc97d4b36"
+            },
+            {
+              "score": 0.8239521384239197,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec",
+              "example_key": "301841294"
+            },
+            {
+              "score": 0.8149161338806152,
+              "txt": "Issues related to decentralized finance\nIssues related to digital asset market structure legislation",
+              "example_key": "301491696"
+            },
+            {
+              "score": 0.7943130135536194,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation. Digital Commodity Exchange Act, (HR 7614). Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602). Lummis-Gillibrand Responsible Financial Innovation Act (S.4356).",
+              "example_key": "67d9742c-ca0a-42d3-a561-20295a88c21b"
+            },
+            {
+              "score": 0.7926430702209473,
+              "txt": "Issues related to decentralized finance, decentralized and peer-to-peer economic activities and related assets, digital rights, and decentralized web applications using blockchain and related distributed ledger technologies (H.R.3633 - Digital Asset Market Clarity Act of 2025; H.R.3533 - Blockchain ",
+              "example_key": "301832491"
+            },
+            {
+              "score": 0.7920925617218018,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation; Digital Commodity Exchange Act. Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602).",
+              "example_key": "a7648c37-8992-40e5-b750-a71f600a393e"
+            },
+            {
+              "score": 0.7886252403259277,
+              "txt": "Trade policy and ancillary issues impacting the cryptocurrency industry",
+              "example_key": "21cbcd26-8d1d-4592-abc0-10ab4ad3564a"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 11.397666460689342,
+              "txt": "Digital asset market regulation"
+            },
+            {
+              "score": 10.133355213553633,
+              "txt": "Issues related to decentralized finance and cryptocurrency Digital Commodities Consumer Protection Act Issues related to digital asset market structure legislation"
+            },
+            {
+              "score": 9.085490609519365,
+              "txt": "Issues related to decentralized finance and cryptocurrency;\nIssues related to digital asset market structure legislation;\nS. 2281, Lummis-Gillibrand Responsible Financial Innovation Act;\nDigital Commodities Consumer Protection Act"
+            },
+            {
+              "score": 7.980882847074252,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec"
+            },
+            {
+              "score": 7.962089507124632,
+              "txt": "Issues related to banking digital asset companies; exchange traded products in the US and internationally; issues related to digital asset market structure; proof of reserves"
+            },
+            {
+              "score": 7.795538496792245,
+              "txt": "Regulation of brokers-dealers, securities industry and markets, self-regulatory organizations, data security, digital asset market structure, social media, privacy, research and statistics as well as investor protection and education. HR 3633 - Digital Asset Market Clarity Act of 2025, HR 3339 - Equ"
+            },
+            {
+              "score": 7.789669732326259,
+              "txt": "Issues related to financial services, financial technologies, and blockchain technology, including the following: \"a bill to provide for the regulation of payment stablecoins;\" and \"the digital asset market structure\" discussion drafts."
+            },
+            {
+              "score": 7.740948796456662,
+              "txt": "Digital Asset Market Structure discussion draft; provisions related to Titles I & II\n\nGeneral Discussions related to digital assets and digital asset products and services, and cloud storage products and services"
+            },
+            {
+              "score": 7.515469807937249,
+              "txt": "Issues related to decentralized finance\nIssues related to digital asset market structure legislation"
+            },
+            {
+              "score": 6.8397737037134085,
+              "txt": "H.R. 3633, Digital Asset Market Clarity Act of 2025, provisions related to Titles I & II\n\nS. (draft) Responsible Financial Innovation Act of 2025, provisions related to definitions in Title I, and all provisions of Section504\n\nGeneral Discussions related to digital assets and digital asset products "
+            }
+          ]
+        },
+        {
+          "query": "router security and restrictions on Chinese network equipment",
+          "overlap_bm25": 2,
+          "semantic_top": [
+            {
+              "score": 0.7223936915397644,
+              "txt": "Implementation of PL 117-58 CHIPS and Science Act.\nData privacy, Cyber security.\nIssues related to internet platform regulation.\nS. 686 - RESTRICT ACT.\nIssues related to global supply chains.\nIssues related to Artificial Intelligence (AI).\nIssues related to technology competitiveness with China.\nIss",
+              "example_key": "301507843"
+            },
+            {
+              "score": 0.7079893946647644,
+              "txt": "Funding for the Secure and Trusted Communications Networks Reimbursement Program (SCRP); potential revisions to the Build America Buy America guidelines for Broadband Equity Access and Deployment Program; draft Guard Act; authorizing legislation for the International Development Finance Corporation;",
+              "example_key": "301538918"
+            },
+            {
+              "score": 0.7074437737464905,
+              "txt": "Reforms to BEAD program ICT Cybersecurity Subsea Cable security China competitiveness",
+              "example_key": "3824f680-25c0-4edb-8a74-ba3ffda21903"
+            },
+            {
+              "score": 0.6930084228515625,
+              "txt": "Section 301 Investigation of Chinas Targeting the Maritime, Logistics, and Shipbuilding Sectors for Dominance: Issues related to the Maritime Security Program.",
+              "example_key": "253b8c79-d674-4691-b5ae-c28323e92d32"
+            },
+            {
+              "score": 0.687393307685852,
+              "txt": "Issues pertaining to increased outbound investment restrictions into China.",
+              "example_key": "301619808"
+            },
+            {
+              "score": 0.6848374605178833,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022",
+              "example_key": "301371967"
+            },
+            {
+              "score": 0.6838580369949341,
+              "txt": "issues pertaining to defense-related communications equipment",
+              "example_key": "1440401d-d6eb-482a-9d53-5cca82ef8441"
+            },
+            {
+              "score": 0.6818142533302307,
+              "txt": "Robocalling. Robotexting. H.R 1027, QUIET Act. Telecom Network Security. H.R. 866, S. 244, ROUTERS Act. Accessibility. Subsea Cables. H.R. 261 Undersea Cable Protection Act of 2025.",
+              "example_key": "38aab9ec-4c60-42a8-a44c-69f20c65b0b4"
+            },
+            {
+              "score": 0.6788895130157471,
+              "txt": "Reforming government access to data and cyber-security. Internet of Things, encryption, Federal IT reform/procurement issues. Issues related to global supply chains. Monitor issues impacting tech, supply chain, and cybersecurity. Issues related to Artificial Intelligence (AI). Issues related to tech",
+              "example_key": "78f2c573-dd92-4f7f-a310-ae3421e88959"
+            },
+            {
+              "score": 0.6788114905357361,
+              "txt": "H.R. 9051, Defending Memory Chip Supply Chains from the Chinese Communist Party Act, all provisions. H.R. 9256, U.S.-Israel Anti-Killer Drone Act of 2022, all provisions. H.R.5326, Chinese Military and Surveillance Company Sanctions Act of 2021, all provisions. S. 5050, Defending Memory Chip Supply ",
+              "example_key": "28b67f2f-d40d-4202-9f22-d647e3825ec5"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 5.914763137896385,
+              "txt": "DETERRENT Act (H.R. 1048/S. 1296) - all provisions DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act (H.R. 881) - provisions relating to university partnerships"
+            },
+            {
+              "score": 4.35164112267403,
+              "txt": "Trade Issues, including export controls and outbound investment restrictions  \n\nHR 8152: Remote Access Security Act"
+            },
+            {
+              "score": 4.062329427253506,
+              "txt": "Support Logos programs related to intelligence, surveillance and reconnaissance equipment provided to the Department of Homeland Security.\nFY26 Department of Homeland Security Appropriations, H.R. 4213"
+            },
+            {
+              "score": 4.016131682272891,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.4663, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. H.R.8257/S.4678, Homeland Security Appro"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.____, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. \n\nH.R.8257/S.____, Homeland Security App"
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Robocalling. Robotexting. H.R 1027, QUIET Act. Telecom Network Security. H.R. 866, S. 244, ROUTERS Act. Accessibility. Subsea Cables. H.R. 261 Undersea Cable Protection Act of 2025."
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Cybersecurity and network security of healthcare networks, Pandemic and All-Hazards Preparedness Act (PAHPA) reauthorization, Preparedness and Response Reauthorization Act (HR 4420)."
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "USMCA Tariffs\nRetaliatory Tariffs\nChinese Tariffs \nHR1"
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "Drones for First Responders Act, tariffs on Chinese drone imports."
+            }
+          ]
+        },
+        {
+          "query": "pharmacy middlemen taking a cut of drug prices",
+          "overlap_bm25": 1,
+          "semantic_top": [
+            {
+              "score": 0.6997692584991455,
+              "txt": "Issues related to prescription drug coverage, supply chain, and pharmacy benefits.\n\nS. 1967, The Patients Before Middlemen Act - Issues related to delinking and limiting PBMS ability to manage pharmacy benefits in Medicare.",
+              "example_key": "301490438"
+            },
+            {
+              "score": 0.6733173131942749,
+              "txt": "Prescription drug pricing generally Pharmacy Benefit Manager (PBM) reform generally H.R.2484 (Seniors Access to Critical Medications Act of 2025), regarding Pharmacy Benefit Manager (PBM) reform",
+              "example_key": "981a0fc3-f0e6-4189-b4be-3dcd5bb8780d"
+            },
+            {
+              "score": 0.6724163889884949,
+              "txt": "Issues related to drug pricing, generally.",
+              "example_key": "301364083"
+            },
+            {
+              "score": 0.6722152829170227,
+              "txt": "Prescription drug pricing.\nImplementation of PL 117-169 (Inflation Reduction Act). \nPharmacy Benefit Manager Reform. \nH.R. 5378 - The Lower Costs, More Transparency Act.\nModernizing and Ensuring PBM Accountability (MEPA) Act.\nPL 118-42/H.R. 4366 - Consolidated Appropriations Act, 2024.\nPL 118-47/H.R",
+              "example_key": "301567087"
+            },
+            {
+              "score": 0.6709151864051819,
+              "txt": "Advocating to remove non-payer discounts from the ASP calculation for Medicare Part B Promoting a resilient pharmaceutical supply chain Advocating to emaned Hatch-Waxmen to limit brand companies from serially suing generic companies over the same molecule.",
+              "example_key": "fe4876fd-b530-42ab-a48d-cb62dbe68041"
+            },
+            {
+              "score": 0.6696617603302002,
+              "txt": "H.R. 384 (One Agency Act) S. 1040 (Drug Competition Enhancement Act) S. 1096 (Preserve Access to Affordable Generics and Biosimilars Act) S. 527 (Prescription Pricing for the People Act) Seeking ways to lower prescription drug prices by promoting competition without expropriating patent rights",
+              "example_key": "5ad581d1-e060-4fd9-b402-66991b7a5e37"
+            },
+            {
+              "score": 0.6667318344116211,
+              "txt": "Prescription drug pricing. H.R.5376 - Build Back Better Act.",
+              "example_key": "59a69b78-34a5-4f20-82b1-6caa7d998508"
+            },
+            {
+              "score": 0.6641672253608704,
+              "txt": "Issues related to Medicaid drug pricing.",
+              "example_key": "301356928"
+            },
+            {
+              "score": 0.6640706062316895,
+              "txt": "Pharmacist provider status\nIssues related to drug pricing\nIssues related to access and distribution of pharmaceutical products",
+              "example_key": "301550145"
+            },
+            {
+              "score": 0.6632733345031738,
+              "txt": "Anti-Kickback Statute policy issues ASP reporting policy issues Center for Medicare and Medicaid Innovation (CMMI) policy issues Drug Pricing H.R. 1613/S. 1038, Drug Price Transparency in Medicaid Act of 2023 H.R. 5376, Inflation Reduction Act H.R. 2666, Medicaid for VBPs for Patients (MVP) Act H.R.",
+              "example_key": "fb508854-15e6-410f-bd45-ed83ef6250e4"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 8.40543227696855,
+              "txt": "Pharmacy Benefit Manager reform Transparency in prescription drug markets Prescription drug prices"
+            },
+            {
+              "score": 7.810972010046488,
+              "txt": "Issues related to prescription drug coverage, supply chain, and pharmacy benefits.\n\nS. 1967, The Patients Before Middlemen Act - Issues related to delinking and limiting PBMS ability to manage pharmacy benefits in Medicare."
+            },
+            {
+              "score": 6.006899782608197,
+              "txt": "Drug Patent Reform Pharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking Drug Act (H.R. 2214) Robinson-Patman Act Reform Modernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) Pharmacy Benefit Manager Transparency Act of 2025 (S. 526) Pharmacy B"
+            },
+            {
+              "score": 5.860700167435434,
+              "txt": "Drug Patent Reform\nPharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking\nDrug Act (H.R. 2214)\nRobinson-Patman Act Reform\nModernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) \nPharmacy Benefit Manager Transparency Act of 2025 (S. 526)\nPharmacy "
+            },
+            {
+              "score": 5.4330058167629485,
+              "txt": "Drug Shortages and Medicaid Specialty Drug Pharmacy Payment Reform"
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. S.150 Affordable Prescriptions for Patients Act. S.935 Fair Accountability and Innovative Research Drug Pricing Act. S.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. \nS.150/H.R.9070 Affordable Prescriptions for Patients Act.\nS.935 Fair Accountability and Innovative Research Drug Pricing Act. \nS.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 4.821482893106315,
+              "txt": "Monitoring biotech legislation; prescription drug prices; COVID- Relief legislation; Infrastructure Legislation; FY22 Appropriations bills"
+            },
+            {
+              "score": 4.761203224625016,
+              "txt": "Pharmacy Benefit Manager (PBM) Reform\nPharmacy Direct and Indirect Remuneration (DIR) Reform\nPharmacy Reimbursement and Scope of Practice\nModernizing and Ensuring PBM Accountability (MEPA) Act, S. 2973\nPATIENT Act of 2023, H.R. 3561\nLower Costs, More Transparency Act, H.R. 5378\nTransparency and Fair"
+            },
+            {
+              "score": 4.645814503036838,
+              "txt": "Prescription drug pricing generally\nPharmacy Benefit Manager (PBM) reform generally\nS. 2973 (Modernizing and Ensuring PBM Accountability Act), all provisions\nS. 1339 (Pharmacy Benefit Manager Reform Act), regarding Pharmacy Benefit Manager (PBM) reform\nS. 3430 (Better Mental Health Care, Lower-Cost "
+            }
+          ]
+        }
+      ],
+      "CRYPTO_scores": {
+        "p@50": 45,
+        "recall@100": 0.534,
+        "recall@250": 0.687,
+        "recall@500": 0.794,
+        "avg_precision": 0.629
+      }
+    },
+    "nomic": {
+      "docs_per_sec": 45,
+      "probes": [
+        {
+          "query": "cryptocurrency and digital asset market regulation",
+          "overlap_bm25": 4,
+          "semantic_top": [
+            {
+              "score": 0.8392893671989441,
+              "txt": "Digital asset market regulation",
+              "example_key": "0a8537b7-75e3-4247-ad9d-5f02f4291d3c"
+            },
+            {
+              "score": 0.8119717240333557,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation; Digital Commodity Exchange Act.   (HR 7614).  Lummis-Gillibrand Responsible Financial Innovation Act (S.4356).",
+              "example_key": "301386209"
+            },
+            {
+              "score": 0.8093944191932678,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation. Digital Commodity Exchange Act, (HR 7614). Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602). Lummis-Gillibrand Responsible Financial Innovation Act (S.4356).",
+              "example_key": "67d9742c-ca0a-42d3-a561-20295a88c21b"
+            },
+            {
+              "score": 0.8073770403862,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation. Digital Commodity Exchange Act, (HR 7614). Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602). Lummis-Gillibrand Responsible Financial Innovation Act (S.4356). S.4760, the Digital Commodities Consu",
+              "example_key": "0ad1148d-11ba-4a9c-970d-92315b6882f4"
+            },
+            {
+              "score": 0.8028856515884399,
+              "txt": "Issues related to decentralized finance and cryptocurrency;\nIssues related to digital asset market structure legislation;\nS. 2281, Lummis-Gillibrand Responsible Financial Innovation Act;\nDigital Commodities Consumer Protection Act",
+              "example_key": "301513558"
+            },
+            {
+              "score": 0.7968437671661377,
+              "txt": "Digital assets regulation",
+              "example_key": "0e355120-f2a1-49d6-a122-edbbc9887ee3"
+            },
+            {
+              "score": 0.7894055247306824,
+              "txt": "Issues related to decentralized finance and cryptocurrency Digital Commodities Consumer Protection Act Issues related to digital asset market structure legislation",
+              "example_key": "fd6eee28-7735-47b5-81fe-731dc97d4b36"
+            },
+            {
+              "score": 0.7892277240753174,
+              "txt": "Regulation of digital assets",
+              "example_key": "301538805"
+            },
+            {
+              "score": 0.7884272336959839,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation; Digital Commodity Exchange Act. Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602).",
+              "example_key": "a7648c37-8992-40e5-b750-a71f600a393e"
+            },
+            {
+              "score": 0.7875378131866455,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec",
+              "example_key": "301841294"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 11.397666460689342,
+              "txt": "Digital asset market regulation"
+            },
+            {
+              "score": 10.133355213553633,
+              "txt": "Issues related to decentralized finance and cryptocurrency Digital Commodities Consumer Protection Act Issues related to digital asset market structure legislation"
+            },
+            {
+              "score": 9.085490609519365,
+              "txt": "Issues related to decentralized finance and cryptocurrency;\nIssues related to digital asset market structure legislation;\nS. 2281, Lummis-Gillibrand Responsible Financial Innovation Act;\nDigital Commodities Consumer Protection Act"
+            },
+            {
+              "score": 7.980882847074252,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec"
+            },
+            {
+              "score": 7.962089507124633,
+              "txt": "Issues related to banking digital asset companies; exchange traded products in the US and internationally; issues related to digital asset market structure; proof of reserves"
+            },
+            {
+              "score": 7.795538496792245,
+              "txt": "Regulation of brokers-dealers, securities industry and markets, self-regulatory organizations, data security, digital asset market structure, social media, privacy, research and statistics as well as investor protection and education. HR 3633 - Digital Asset Market Clarity Act of 2025, HR 3339 - Equ"
+            },
+            {
+              "score": 7.789669732326259,
+              "txt": "Issues related to financial services, financial technologies, and blockchain technology, including the following: \"a bill to provide for the regulation of payment stablecoins;\" and \"the digital asset market structure\" discussion drafts."
+            },
+            {
+              "score": 7.740948796456662,
+              "txt": "Digital Asset Market Structure discussion draft; provisions related to Titles I & II\n\nGeneral Discussions related to digital assets and digital asset products and services, and cloud storage products and services"
+            },
+            {
+              "score": 7.515469807937249,
+              "txt": "Issues related to decentralized finance\nIssues related to digital asset market structure legislation"
+            },
+            {
+              "score": 6.8397737037134085,
+              "txt": "H.R. 3633, Digital Asset Market Clarity Act of 2025, provisions related to Titles I & II\n\nS. (draft) Responsible Financial Innovation Act of 2025, provisions related to definitions in Title I, and all provisions of Section504\n\nGeneral Discussions related to digital assets and digital asset products "
+            }
+          ]
+        },
+        {
+          "query": "router security and restrictions on Chinese network equipment",
+          "overlap_bm25": 1,
+          "semantic_top": [
+            {
+              "score": 0.7067500352859497,
+              "txt": "H.R. 9051, Defending Memory Chip Supply Chains from the Chinese Communist Party Act, all provisions. H.R. 9256, U.S.-Israel Anti-Killer Drone Act of 2022, all provisions. H.R.5326, Chinese Military and Surveillance Company Sanctions Act of 2021, all provisions. S. 5050, Defending Memory Chip Supply ",
+              "example_key": "28b67f2f-d40d-4202-9f22-d647e3825ec5"
+            },
+            {
+              "score": 0.6706628799438477,
+              "txt": "Monitor issues related to China trade. H.R. 7776 (P.L.117-268), James M. Inhofe National Defense Authorization Act for Fiscal Year 2023, as it relates to China. Monitor issues related to trade with Russia.",
+              "example_key": "301437032"
+            },
+            {
+              "score": 0.6687209606170654,
+              "txt": "Reforms to BEAD program ICT Cybersecurity Subsea Cable security China competitiveness",
+              "example_key": "3824f680-25c0-4edb-8a74-ba3ffda21903"
+            },
+            {
+              "score": 0.6684812307357788,
+              "txt": "Implementation of PL 117-58 CHIPS and Science Act.\nData privacy, Cyber security.\nIssues related to internet platform regulation.\nS. 686 - RESTRICT ACT.\nIssues related to global supply chains.\nIssues related to Artificial Intelligence (AI).\nIssues related to technology competitiveness with China.\nIss",
+              "example_key": "301507843"
+            },
+            {
+              "score": 0.6676368117332458,
+              "txt": "Issues regarding cybersecurity and privacy as related to the automotive industry as well as global supply chains; Discussions regarding the Department of Commerce ANPRM, NPRM and Final Rule - Securing the Information and Communications Technology and Services Supply Chain: Connected Vehicles; Issues",
+              "example_key": "301749625"
+            },
+            {
+              "score": 0.6607054471969604,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022",
+              "example_key": "301371967"
+            },
+            {
+              "score": 0.6600625514984131,
+              "txt": "Issues related to the availability and appropriate uses of commercial spectrum, the integrity and security of commercial networks, broadband availability, pricing and permitting, universal service, privacy, telecommunications supply chain security, implementation of the Nationwide Broadband Public S",
+              "example_key": "4eb23b91-7c7d-43d2-b370-bdab7c83fe22"
+            },
+            {
+              "score": 0.6527151465415955,
+              "txt": "-HR 7521 - Protecting Americans from Foreign Adversary Controlled Applications Act - all provisions related to cable. -HR 8070 - Servicemember Quality of Life Improvement and National Defense Authorization Act for Fiscal Year 2025 - all provisions related to cable. -S 4638 - National Defense Authori",
+              "example_key": "96dcb900-3cc3-400e-8067-64c12f6ab540"
+            },
+            {
+              "score": 0.6519471406936646,
+              "txt": "U.S. trade policy, including digital trade policy. U.S. - China relations. U.S. export controls. U.S. outbound investment policy, including H.R.2670/S. 2226, the National Defense Authorization Act for Fiscal Year 2024 and H.R. 760, Chinese Military and Surveillance Company Sanctions Act of 2023. S.6",
+              "example_key": "905ac670-c61c-425f-be93-19a487b3b4e5"
+            },
+            {
+              "score": 0.6489080190658569,
+              "txt": "Issues related to export controls, including the Remote Access Security Act (RASA): \n H.R. 2683 and the Chip Security Act:  S. 1705/H.R. 3447.\nIssues related to outbound investment, including the Foreign Investment Guardrails to Help Thwart (FIGHT) China Act of 2025: S. 1053/H.R. 2246.\nIssues relate",
+              "example_key": "301787567"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 5.914763137896385,
+              "txt": "DETERRENT Act (H.R. 1048/S. 1296) - all provisions DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act (H.R. 881) - provisions relating to university partnerships"
+            },
+            {
+              "score": 4.35164112267403,
+              "txt": "Trade Issues, including export controls and outbound investment restrictions  \n\nHR 8152: Remote Access Security Act"
+            },
+            {
+              "score": 4.062329427253506,
+              "txt": "Support Logos programs related to intelligence, surveillance and reconnaissance equipment provided to the Department of Homeland Security.\nFY26 Department of Homeland Security Appropriations, H.R. 4213"
+            },
+            {
+              "score": 4.016131682272891,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.4663, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. H.R.8257/S.4678, Homeland Security Appro"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.____, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. \n\nH.R.8257/S.____, Homeland Security App"
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Robocalling. Robotexting. H.R 1027, QUIET Act. Telecom Network Security. H.R. 866, S. 244, ROUTERS Act. Accessibility. Subsea Cables. H.R. 261 Undersea Cable Protection Act of 2025."
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Cybersecurity and network security of healthcare networks, Pandemic and All-Hazards Preparedness Act (PAHPA) reauthorization, Preparedness and Response Reauthorization Act (HR 4420)."
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "USMCA Tariffs\nRetaliatory Tariffs\nChinese Tariffs \nHR1"
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "Drones for First Responders Act, tariffs on Chinese drone imports."
+            }
+          ]
+        },
+        {
+          "query": "pharmacy middlemen taking a cut of drug prices",
+          "overlap_bm25": 3,
+          "semantic_top": [
+            {
+              "score": 0.7096215486526489,
+              "txt": "Issues related to prescription drug coverage, supply chain, and pharmacy benefits.\n\nS. 1967, The Patients Before Middlemen Act - Issues related to delinking and limiting PBMS ability to manage pharmacy benefits in Medicare.",
+              "example_key": "301490438"
+            },
+            {
+              "score": 0.6989535689353943,
+              "txt": "Prescription Drug Pricing Reform; Pharmacy Benefit Managers; Delinking PBM language; Prior Authorization S. 1339 - Pharmacy Benefit Manager Reform Act To provide for increased oversight of entities that provide pharmacy benefit management services on behalf of group health plans and health insurance",
+              "example_key": "c8b572a7-46be-4d79-a1ad-2cbf2c27a5f3"
+            },
+            {
+              "score": 0.6941068172454834,
+              "txt": "Pharmacy Benefit Manager reform Transparency in prescription drug markets Prescription drug prices",
+              "example_key": "4fd87396-cfc3-48be-a87b-a99f5ea70e8c"
+            },
+            {
+              "score": 0.693185031414032,
+              "txt": "Prescription drug pricing.\nImplementation of PL 117-169 (Inflation Reduction Act). \nPharmacy Benefit Manager Reform. \nH.R. 5378 - The Lower Costs, More Transparency Act.\nModernizing and Ensuring PBM Accountability (MEPA) Act.\nPL 118-42/H.R. 4366 - Consolidated Appropriations Act, 2024.\nPL 118-47/H.R",
+              "example_key": "301567087"
+            },
+            {
+              "score": 0.6865966320037842,
+              "txt": "Inflation Reduction Act, Drug Price Negotiation, 340B, PBM Reform",
+              "example_key": "301529371"
+            },
+            {
+              "score": 0.683211088180542,
+              "txt": "Prescription drug pricing.\nMedicare sequester.\nImplementation of Inflation Reduction Act (H.R. 5376) Public Law No. 117-169.\nH.R. 2617 - Consolidated Appropriations Act, 2023",
+              "example_key": "301438639"
+            },
+            {
+              "score": 0.6776671409606934,
+              "txt": "Prescription drug pricing generally\nPharmacy Benefit Manager (PBM) reform generally\nS. 2973 (Modernizing and Ensuring PBM Accountability Act), all provisions\nS. 1339 (Pharmacy Benefit Manager Reform Act), regarding Pharmacy Benefit Manager (PBM) reform\nS. 3430 (Better Mental Health Care, Lower-Cost ",
+              "example_key": "301622063"
+            },
+            {
+              "score": 0.676247239112854,
+              "txt": "21st Century Cures Act 2.0 340B Contract Pharmacy Policy 340B Drug Discount Program Accelerated Approval Alternative Funding Programs Buy American Executive Order Cancer Moonshot CBO modeling Cell, gene and radioligand therapies Co-pay accumulator programs COVID-19 Diversity in Clinical Trials Drug ",
+              "example_key": "d98e13a1-8ed1-42cc-8f91-16ebc2ff5db5"
+            },
+            {
+              "score": 0.6762349605560303,
+              "txt": "Prescription drug pricing generally Pharmacy Benefit Manager (PBM) reform generally H.R.2484 (Seniors Access to Critical Medications Act of 2025), regarding Pharmacy Benefit Manager (PBM) reform",
+              "example_key": "981a0fc3-f0e6-4189-b4be-3dcd5bb8780d"
+            },
+            {
+              "score": 0.6760081648826599,
+              "txt": "Advocating to remove non-payer discounts from the ASP calculation for Medicare Part B Promoting a resilient pharmaceutical supply chain Advocating to emaned Hatch-Waxmen to limit brand companies from serially suing generic companies over the same molecule.",
+              "example_key": "fe4876fd-b530-42ab-a48d-cb62dbe68041"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 8.40543227696855,
+              "txt": "Pharmacy Benefit Manager reform Transparency in prescription drug markets Prescription drug prices"
+            },
+            {
+              "score": 7.810972010046488,
+              "txt": "Issues related to prescription drug coverage, supply chain, and pharmacy benefits.\n\nS. 1967, The Patients Before Middlemen Act - Issues related to delinking and limiting PBMS ability to manage pharmacy benefits in Medicare."
+            },
+            {
+              "score": 6.006899782608197,
+              "txt": "Drug Patent Reform Pharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking Drug Act (H.R. 2214) Robinson-Patman Act Reform Modernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) Pharmacy Benefit Manager Transparency Act of 2025 (S. 526) Pharmacy B"
+            },
+            {
+              "score": 5.860700167435434,
+              "txt": "Drug Patent Reform\nPharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking\nDrug Act (H.R. 2214)\nRobinson-Patman Act Reform\nModernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) \nPharmacy Benefit Manager Transparency Act of 2025 (S. 526)\nPharmacy "
+            },
+            {
+              "score": 5.4330058167629485,
+              "txt": "Drug Shortages and Medicaid Specialty Drug Pharmacy Payment Reform"
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. \nS.150/H.R.9070 Affordable Prescriptions for Patients Act.\nS.935 Fair Accountability and Innovative Research Drug Pricing Act. \nS.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. S.150 Affordable Prescriptions for Patients Act. S.935 Fair Accountability and Innovative Research Drug Pricing Act. S.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 4.821482893106315,
+              "txt": "Monitoring biotech legislation; prescription drug prices; COVID- Relief legislation; Infrastructure Legislation; FY22 Appropriations bills"
+            },
+            {
+              "score": 4.761203224625016,
+              "txt": "Pharmacy Benefit Manager (PBM) Reform\nPharmacy Direct and Indirect Remuneration (DIR) Reform\nPharmacy Reimbursement and Scope of Practice\nModernizing and Ensuring PBM Accountability (MEPA) Act, S. 2973\nPATIENT Act of 2023, H.R. 3561\nLower Costs, More Transparency Act, H.R. 5378\nTransparency and Fair"
+            },
+            {
+              "score": 4.645814503036838,
+              "txt": "Prescription drug pricing generally\nPharmacy Benefit Manager (PBM) reform generally\nS. 2973 (Modernizing and Ensuring PBM Accountability Act), all provisions\nS. 1339 (Pharmacy Benefit Manager Reform Act), regarding Pharmacy Benefit Manager (PBM) reform\nS. 3430 (Better Mental Health Care, Lower-Cost "
+            }
+          ]
+        }
+      ],
+      "CRYPTO_scores": {
+        "p@50": 50,
+        "recall@100": 0.634,
+        "recall@250": 0.794,
+        "recall@500": 0.893,
+        "avg_precision": 0.767
+      }
+    },
+    "gemma": {
+      "docs_per_sec": 40,
+      "probes": [
+        {
+          "query": "cryptocurrency and digital asset market regulation",
+          "overlap_bm25": 3,
+          "semantic_top": [
+            {
+              "score": 0.7430791854858398,
+              "txt": "Digital asset market regulation",
+              "example_key": "0a8537b7-75e3-4247-ad9d-5f02f4291d3c"
+            },
+            {
+              "score": 0.6853944063186646,
+              "txt": "Digital assets regulation",
+              "example_key": "0e355120-f2a1-49d6-a122-edbbc9887ee3"
+            },
+            {
+              "score": 0.6536096334457397,
+              "txt": "Regulation of digital assets",
+              "example_key": "301538805"
+            },
+            {
+              "score": 0.5583876371383667,
+              "txt": "Regulation of brokers-dealers, securities industry and markets, self-regulatory organizations, data security, digital asset market structure, social media, privacy, research and statistics as well as investor protection and education. HR 3633 - Digital Asset Market Clarity Act of 2025, HR 3339 - Equ",
+              "example_key": "301834645"
+            },
+            {
+              "score": 0.5536690354347229,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation; Digital Commodity Exchange Act.   (HR 7614).  Lummis-Gillibrand Responsible Financial Innovation Act (S.4356).",
+              "example_key": "301386209"
+            },
+            {
+              "score": 0.5456507205963135,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation; Digital Commodity Exchange Act. Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602).",
+              "example_key": "a7648c37-8992-40e5-b750-a71f600a393e"
+            },
+            {
+              "score": 0.5423966646194458,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec",
+              "example_key": "301841294"
+            },
+            {
+              "score": 0.5398222208023071,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation. Digital Commodity Exchange Act, (HR 7614). Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602). Lummis-Gillibrand Responsible Financial Innovation Act (S.4356).",
+              "example_key": "67d9742c-ca0a-42d3-a561-20295a88c21b"
+            },
+            {
+              "score": 0.5392534732818604,
+              "txt": "Digital Assets, crypto currencies, blockchain and related legislation. Digital Commodity Exchange Act, (HR 7614). Securities Clarity Act (HR 4451) and Eliminate Barriers to Innovation Act (HR1602). Lummis-Gillibrand Responsible Financial Innovation Act (S.4356). S.4760, the Digital Commodities Consu",
+              "example_key": "0ad1148d-11ba-4a9c-970d-92315b6882f4"
+            },
+            {
+              "score": 0.5246015191078186,
+              "txt": "H.R. 4763, Financial Innovation and Technology for the 21st Century Act; All Provisions\nH.R. 4766, Clarity for Payment Stablecoins Act of 2023; Provisions related regulatory framework for digital assets\nS.2355 Crypto-Asset National Security Enhancement and Enforcement Act of 2023; All Provisions \nS.",
+              "example_key": "301516014"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 11.397666460689344,
+              "txt": "Digital asset market regulation"
+            },
+            {
+              "score": 10.133355213553633,
+              "txt": "Issues related to decentralized finance and cryptocurrency Digital Commodities Consumer Protection Act Issues related to digital asset market structure legislation"
+            },
+            {
+              "score": 9.085490609519367,
+              "txt": "Issues related to decentralized finance and cryptocurrency;\nIssues related to digital asset market structure legislation;\nS. 2281, Lummis-Gillibrand Responsible Financial Innovation Act;\nDigital Commodities Consumer Protection Act"
+            },
+            {
+              "score": 7.980882847074252,
+              "txt": "Increasing the regulatory clarity pertaining to crypto assets and crypto facilities; Development of a legislative framework for stablecoins; Illicit finance\nand KYC/AML matters Cryptocurrency and application of blockchain and distributed ledger technology to financial services and other economic\nsec"
+            },
+            {
+              "score": 7.962089507124633,
+              "txt": "Issues related to banking digital asset companies; exchange traded products in the US and internationally; issues related to digital asset market structure; proof of reserves"
+            },
+            {
+              "score": 7.795538496792245,
+              "txt": "Regulation of brokers-dealers, securities industry and markets, self-regulatory organizations, data security, digital asset market structure, social media, privacy, research and statistics as well as investor protection and education. HR 3633 - Digital Asset Market Clarity Act of 2025, HR 3339 - Equ"
+            },
+            {
+              "score": 7.789669732326258,
+              "txt": "Issues related to financial services, financial technologies, and blockchain technology, including the following: \"a bill to provide for the regulation of payment stablecoins;\" and \"the digital asset market structure\" discussion drafts."
+            },
+            {
+              "score": 7.740948796456662,
+              "txt": "Digital Asset Market Structure discussion draft; provisions related to Titles I & II\n\nGeneral Discussions related to digital assets and digital asset products and services, and cloud storage products and services"
+            },
+            {
+              "score": 7.515469807937251,
+              "txt": "Issues related to decentralized finance\nIssues related to digital asset market structure legislation"
+            },
+            {
+              "score": 6.8397737037134085,
+              "txt": "H.R. 3633, Digital Asset Market Clarity Act of 2025, provisions related to Titles I & II\n\nS. (draft) Responsible Financial Innovation Act of 2025, provisions related to definitions in Title I, and all provisions of Section504\n\nGeneral Discussions related to digital assets and digital asset products "
+            }
+          ]
+        },
+        {
+          "query": "router security and restrictions on Chinese network equipment",
+          "overlap_bm25": 1,
+          "semantic_top": [
+            {
+              "score": 0.3870452046394348,
+              "txt": "spectrum issues; rural broad band infrastructure; cyber security",
+              "example_key": "00ddb0cf-1373-4f85-8536-74e63c525505"
+            },
+            {
+              "score": 0.38041651248931885,
+              "txt": "Tax credits guardrails to keep them in the US;\nResearch guardrails to protect US taxpayer research from benefiting China;\nUFLPA enforcement actions;\nUFLPA oversight.",
+              "example_key": "301489450"
+            },
+            {
+              "score": 0.3588842749595642,
+              "txt": "issues pertaining to defense-related communications equipment",
+              "example_key": "1440401d-d6eb-482a-9d53-5cca82ef8441"
+            },
+            {
+              "score": 0.34016847610473633,
+              "txt": "security and risk assessments",
+              "example_key": "301345078"
+            },
+            {
+              "score": 0.3271852135658264,
+              "txt": "net neutrality issues; privacy issues; rural broadband issues; infrastructure issues",
+              "example_key": "0abeff20-f7b1-44ae-a006-7d84c2c874eb"
+            },
+            {
+              "score": 0.3229728937149048,
+              "txt": "China trade policy, multi-lateral agreements (no legislation); trade enforcement cases (no legislation); export control policy; customs classification",
+              "example_key": "301523301"
+            },
+            {
+              "score": 0.32051125168800354,
+              "txt": "issues relating to 5G infrastructure and rural broadband",
+              "example_key": "301367923"
+            },
+            {
+              "score": 0.3146457076072693,
+              "txt": "Maintaining market access and global supply chains; ensuring cross-border data flows and open markets for high performance computers. US-China trade & export restrictions. Leveraging the strengths of DOE labs to advance innovation. Indo-Pacific Economic Framework.",
+              "example_key": "ce11d1f1-58da-493f-b125-2b974add9f97"
+            },
+            {
+              "score": 0.31406617164611816,
+              "txt": "US-China trade policy",
+              "example_key": "301486863"
+            },
+            {
+              "score": 0.31165453791618347,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022",
+              "example_key": "301371967"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 5.914763137896385,
+              "txt": "DETERRENT Act (H.R. 1048/S. 1296) - all provisions DHS Restrictions on Confucius Institutes and Chinese Entities of Concern Act (H.R. 881) - provisions relating to university partnerships"
+            },
+            {
+              "score": 4.35164112267403,
+              "txt": "Trade Issues, including export controls and outbound investment restrictions  \n\nHR 8152: Remote Access Security Act"
+            },
+            {
+              "score": 4.062329427253506,
+              "txt": "Support Logos programs related to intelligence, surveillance and reconnaissance equipment provided to the Department of Homeland Security.\nFY26 Department of Homeland Security Appropriations, H.R. 4213"
+            },
+            {
+              "score": 4.016131682272891,
+              "txt": "Network security and cyber security; \nSpectrum issues; \nIssues related to 5G networks; \nS. 1260 / H.R. 2731, Endless Frontier Act; \nS. 2731, United States Innovation and Competition Act of 2021;\nH.R. 4521, America COMPETES Act of 2022"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.____, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. \n\nH.R.8257/S.____, Homeland Security App"
+            },
+            {
+              "score": 4.004804526085383,
+              "txt": "H.R.8236/S.4663, Department of Defense Appropriations Bill, 2023 - Title IV, all provisions related to autonomous medical unmanned aerial vehicles and all provisions related to PFAS remediation. Title III, all provisions related to Army facilities management. H.R.8257/S.4678, Homeland Security Appro"
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Cybersecurity and network security of healthcare networks, Pandemic and All-Hazards Preparedness Act (PAHPA) reauthorization, Preparedness and Response Reauthorization Act (HR 4420)."
+            },
+            {
+              "score": 3.8615543223029736,
+              "txt": "Robocalling. Robotexting. H.R 1027, QUIET Act. Telecom Network Security. H.R. 866, S. 244, ROUTERS Act. Accessibility. Subsea Cables. H.R. 261 Undersea Cable Protection Act of 2025."
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "Drones for First Responders Act, tariffs on Chinese drone imports."
+            },
+            {
+              "score": 3.8238001868022744,
+              "txt": "USMCA Tariffs\nRetaliatory Tariffs\nChinese Tariffs \nHR1"
+            }
+          ]
+        },
+        {
+          "query": "pharmacy middlemen taking a cut of drug prices",
+          "overlap_bm25": 3,
+          "semantic_top": [
+            {
+              "score": 0.5574047565460205,
+              "txt": "pharmacy rebates and discounts pharmacy R&D",
+              "example_key": "20e4ddee-e757-4727-b262-ae0417a3a4f1"
+            },
+            {
+              "score": 0.46103498339653015,
+              "txt": "Issues related to drug pricing, generally.",
+              "example_key": "301364083"
+            },
+            {
+              "score": 0.4505486488342285,
+              "txt": "Pharmacy Benefit Manager reform Transparency in prescription drug markets Prescription drug prices",
+              "example_key": "4fd87396-cfc3-48be-a87b-a99f5ea70e8c"
+            },
+            {
+              "score": 0.44893983006477356,
+              "txt": "Rebate reform, any willing pharmacy, PBM reform, IRA Medicare Direct Negotiation, DIR fees",
+              "example_key": "301603200"
+            },
+            {
+              "score": 0.442337304353714,
+              "txt": "IRA implementation, drug safety, prescription drug abuse, drug pricing",
+              "example_key": "1dd774c1-a35c-4c41-943f-fe6da5bdb053"
+            },
+            {
+              "score": 0.4390484690666199,
+              "txt": "PBM and Drug Pricing Reforms\nDrug Pricing",
+              "example_key": "301633039"
+            },
+            {
+              "score": 0.4343833327293396,
+              "txt": "340B Drug Pricing Program",
+              "example_key": "0840715d-0aec-4e72-a9c9-bb2ca380d3ef"
+            },
+            {
+              "score": 0.4320452809333801,
+              "txt": "Medicaid pharmacy issues.",
+              "example_key": "301459813"
+            },
+            {
+              "score": 0.42546629905700684,
+              "txt": "Pharmacy Benefit Manager (PBM) Reform\nPharmacy Direct and Indirect Remuneration (DIR) Reform\nPharmacy Reimbursement and Scope of Practice\nModernizing and Ensuring PBM Accountability (MEPA) Act, S. 2973\nPATIENT Act of 2023, H.R. 3561\nLower Costs, More Transparency Act, H.R. 5378\nTransparency and Fair",
+              "example_key": "301512035"
+            },
+            {
+              "score": 0.4189141094684601,
+              "txt": "Prescription drug pricing generally\nPharmacy Benefit Manager (PBM) reform generally\nS. 2973 (Modernizing and Ensuring PBM Accountability Act), all provisions\nS. 1339 (Pharmacy Benefit Manager Reform Act), regarding Pharmacy Benefit Manager (PBM) reform\nS. 3430 (Better Mental Health Care, Lower-Cost ",
+              "example_key": "301622063"
+            }
+          ],
+          "bm25_top": [
+            {
+              "score": 8.40543227696855,
+              "txt": "Pharmacy Benefit Manager reform Transparency in prescription drug markets Prescription drug prices"
+            },
+            {
+              "score": 7.810972010046488,
+              "txt": "Issues related to prescription drug coverage, supply chain, and pharmacy benefits.\n\nS. 1967, The Patients Before Middlemen Act - Issues related to delinking and limiting PBMS ability to manage pharmacy benefits in Medicare."
+            },
+            {
+              "score": 6.006899782608198,
+              "txt": "Drug Patent Reform Pharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking Drug Act (H.R. 2214) Robinson-Patman Act Reform Modernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) Pharmacy Benefit Manager Transparency Act of 2025 (S. 526) Pharmacy B"
+            },
+            {
+              "score": 5.860700167435434,
+              "txt": "Drug Patent Reform\nPharmacy Benefit Manager (PBM) operations and practices, Spread Pricing, Rebates, Delinking\nDrug Act (H.R. 2214)\nRobinson-Patman Act Reform\nModernizing and Ensuring PBM Accountability (MEPA) Act (118th Congress) \nPharmacy Benefit Manager Transparency Act of 2025 (S. 526)\nPharmacy "
+            },
+            {
+              "score": 5.4330058167629485,
+              "txt": "Drug Shortages and Medicaid Specialty Drug Pharmacy Payment Reform"
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. S.150 Affordable Prescriptions for Patients Act. S.935 Fair Accountability and Innovative Research Drug Pricing Act. S.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 5.024876312584605,
+              "txt": "Issues related to prescription drug prices. \nS.150/H.R.9070 Affordable Prescriptions for Patients Act.\nS.935 Fair Accountability and Innovative Research Drug Pricing Act. \nS.1250/H.R.5958 Drug Price Transparency for Consumers Act."
+            },
+            {
+              "score": 4.821482893106315,
+              "txt": "Monitoring biotech legislation; prescription drug prices; COVID- Relief legislation; Infrastructure Legislation; FY22 Appropriations bills"
+            },
+            {
+              "score": 4.761203224625016,
+              "txt": "Pharmacy Benefit Manager (PBM) Reform\nPharmacy Direct and Indirect Remuneration (DIR) Reform\nPharmacy Reimbursement and Scope of Practice\nModernizing and Ensuring PBM Accountability (MEPA) Act, S. 2973\nPATIENT Act of 2023, H.R. 3561\nLower Costs, More Transparency Act, H.R. 5378\nTransparency and Fair"
+            },
+            {
+              "score": 4.645814503036838,
+              "txt": "Prescription drug pricing generally\nPharmacy Benefit Manager (PBM) reform generally\nS. 2973 (Modernizing and Ensuring PBM Accountability Act), all provisions\nS. 1339 (Pharmacy Benefit Manager Reform Act), regarding Pharmacy Benefit Manager (PBM) reform\nS. 3430 (Better Mental Health Care, Lower-Cost "
+            }
+          ]
+        }
+      ],
+      "CRYPTO_scores": {
+        "p@50": 50,
+        "recall@100": 0.695,
+        "recall@250": 0.84,
+        "recall@500": 0.924,
+        "avg_precision": 0.825
+      }
+    }
+  }
+}
