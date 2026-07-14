@@ -51,30 +51,42 @@ if hasattr(sys.stdout, "reconfigure"):
 # Gemma fp16 emits NaNs (Gemma3 activation overflow; Turing has no bf16), so
 # it runs fp32 with a small batch. Unlisted models get conservative defaults.
 MODEL_SETTINGS = {
-    "google/embeddinggemma-300m": {"batch": 8, "fp16": False,
+    "google/embeddinggemma-300m": {"batch": 8, "dtype": "fp32",  # fp16 NaNs (no bf16 on Turing)
                                    "prompt_query": "query", "prompt_doc": "document"},
-    "nomic-ai/nomic-embed-text-v1.5": {"batch": 64, "fp16": False,
+    "nomic-ai/nomic-embed-text-v1.5": {"batch": 64, "dtype": "fp32",
                                        "query_prefix": "search_query: ",
                                        "doc_prefix": "search_document: ",
                                        "trust_remote_code": True},
-    "BAAI/bge-small-en-v1.5": {"batch": 64, "fp16": False,
+    "BAAI/bge-small-en-v1.5": {"batch": 64, "dtype": "fp32",
                                "query_prefix": "Represent this sentence for "
                                                "searching relevant passages: ",
                                "doc_prefix": ""},
+    "Qwen/Qwen3-Embedding-0.6B": {"batch": 16, "dtype": "fp16",
+                                  "prompt_query": "query"},
 }
 DEFAULT_MODEL = "google/embeddinggemma-300m"
 
 
-def load_model(name, device=None):
+def load_model(name, device=None, batch=None, dtype=None):
+    """Batch/dtype defaults were tuned on a 4GB GTX 1650 Ti; on bigger
+    hardware (e.g. Apple Silicon with lots of unified memory) raise --batch
+    substantially. The NaN guard in main() catches a wrong dtype choice."""
     import torch
     from sentence_transformers import SentenceTransformer
-    cfg = MODEL_SETTINGS.get(name, {"batch": 16, "fp16": False})
+    cfg = dict(MODEL_SETTINGS.get(name, {"batch": 16, "dtype": "fp32"}))
+    if batch:
+        cfg["batch"] = batch
+    if dtype:
+        cfg["dtype"] = dtype
     kw = {}
     if cfg.get("trust_remote_code"):
         kw["trust_remote_code"] = True
-    if cfg.get("fp16"):
-        kw["model_kwargs"] = {"torch_dtype": torch.float16}
-    device = device or ("cuda" if torch.cuda.is_available() else "cpu")
+    dt = {"fp16": torch.float16, "bf16": torch.bfloat16}.get(cfg.get("dtype"))
+    if dt:
+        kw["model_kwargs"] = {"torch_dtype": dt}
+    device = device or ("cuda" if torch.cuda.is_available()
+                        else "mps" if torch.backends.mps.is_available()
+                        else "cpu")
     model = SentenceTransformer(name, device=device, **kw)
     model.max_seq_length = 512  # p99 lobbying text ~370 tokens
     return model, cfg, device
@@ -102,6 +114,12 @@ def main():
                     "texts (deterministic hash order) — smoke/testing")
     ap.add_argument("--batch-flush", type=int, default=5000,
                     help="rows per DB write")
+    ap.add_argument("--device", choices=["cuda", "mps", "cpu"],
+                    help="override auto-detection (cuda > mps > cpu)")
+    ap.add_argument("--batch", type=int, help="override the model's default "
+                    "encode batch size (raise on big-memory hardware)")
+    ap.add_argument("--dtype", choices=["fp32", "fp16", "bf16"],
+                    help="override the model's default dtype")
     args = ap.parse_args()
 
     con = duckdb.connect(str(args.db))
@@ -122,7 +140,8 @@ def main():
           f"({con.execute('SELECT count(*) FROM lobbying_text_map').fetchone()[0]:,} doc rows mapped)")
 
     print(f"Loading {args.model} ...")
-    model, cfg, device = load_model(args.model)
+    model, cfg, device = load_model(args.model, device=args.device,
+                                    batch=args.batch, dtype=args.dtype)
     dim = (model.get_embedding_dimension()
            if hasattr(model, "get_embedding_dimension")
            else model.get_sentence_embedding_dimension())
