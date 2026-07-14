@@ -1,0 +1,141 @@
+{
+  "_meta": "Spec for the GENIUS Act review package — a bill-scoped slice of the crypto industry (facet GENIUS, industry_lexicon.json v1.3), built 2026-07-13 on request. Maps who lobbied the stablecoin regulatory bill (S.1582, signed into law July 2025) from the filings' own free-text. 'genius act' and the statute's full official name are shared with the CRYPTO facet by design (a bill-scoped sub-facet of the broader industry, see industry_lexicon.json _meta.discipline); the S.1582/S.1582 bare-number citation forms are GENIUS-only. KPI values are human-verified copy, reconciled against the CSVs from the 2026-07-13 build — reconcile again after a corpus refresh.",
+  "id": "genius-act",
+  "title": "The GENIUS Act — Who Lobbied the Stablecoin Bill",
+  "subtitle": "Who lobbied Washington on the GENIUS Act (S.1582), the 2025 stablecoin regulatory framework signed into law — mapped from the filings' own free-text, a bill-scoped slice inside the broader crypto industry.",
+  "extra_sources": "",
+  "gendate": "2026-07-13",
+  "lens": {
+    "type": "facet",
+    "tag": "GENIUS",
+    "file_prefix": "genius_act",
+    "col_token": "genius",
+    "spend_col": "canonical_spend_tagged_clients"
+  },
+  "press": {
+    "regex": "\\b(genius act|s\\.\\s?1582)\\b",
+    "col_token": "genius"
+  },
+  "players": {
+    "name_visibility_regex": "(?i)\\b(crypto|cryptocurrenc|blockchain|bitcoin|digital asset|stablecoin|defi|web3|digital currenc|genius)",
+    "tiers": {
+      "core": 8,
+      "active": 3
+    }
+  },
+  "modules": {
+    "trend_spend": true,
+    "spend_quarters": true,
+    "bills": {
+      "limit": 40
+    },
+    "registrants_limit": 40
+  },
+  "roster": {
+    "path": "out/genius-act_roster.txt",
+    "top": 200
+  },
+  "giving": [
+    {
+      "roster": "out/genius-act_roster.txt",
+      "args": ["--top", "400"],
+      "chart": true,
+      "files": {
+        "by_org": "genius_act_ld203_by_org.csv",
+        "recipients": "genius_act_ld203_recipients.csv",
+        "by_year": "genius_act_ld203_by_year.csv",
+        "member_rollup": "genius_act_ld203_member_rollup.csv"
+      }
+    }
+  ],
+  "assembly": "facet",
+  "page_js": "facet_page.js",
+  "zip": true,
+  "readme": {
+    "write": true,
+    "overview": [
+      "This package maps the federal lobbying field around the GENIUS Act (S.1582, the Guiding and Establishing National Innovation for U.S. Stablecoins Act), the stablecoin regulatory framework signed into law in July 2025 — the single most distinctive crypto legislative vehicle in the corpus window. It is a bill-scoped SLICE of the broader crypto industry map (facet CRYPTO): every filing here also carries the CRYPTO tag, but the reverse is not true — this package is deliberately narrower, built from filings that name the bill itself (its popular name, its full official name, or an S.1582/S.1582 citation), not the wider stablecoin/crypto vocabulary.",
+      "170 client-side players sit on the map, 94.7% (161) with no crypto-related term anywhere in their name — the same 'hidden industry' pattern the crypto map demonstrated, here at bill scale. The recall win runs beyond the usual fintech suspects: American Airlines shows up eight times across four straight quarters ('Issues related to credit cards. S.1582 - GENIUS Act.') — its co-branded card economics ride on the same payment-rail rules the bill rewrites. Labor unions (IBEW, AFT) appear too, monitoring the bill's spillover into retirement-plan exposure rather than lobbying for it — a second population sharing the vocabulary, the same two-audience pattern the pardons package documented for a different bill-adjacent field.",
+      "Filings tagging the bill more than doubled from its first tracked quarter to its passage quarter (64 in 2025-Q1 to a peak of 156 in 2025-Q3, the quarter it was signed into law), then eased off — a clean legislative-calendar shape. It rarely travels alone: HR3633 (the CLARITY Act, digital-asset market structure) is the tightest companion, co-cited in 289 of the roster's filings across 97 clients, with HR2392 (a rival stablecoin bill) and the earlier S.394/S.919 stablecoin vehicles close behind."
+    ],
+    "notes": [
+      "This is unverified research output for team review. Headline numbers are candidates with record anchors, not locked findings.",
+      "Known false positive, left in and documented rather than silently dropped: one 2023 filing (CCOF, California Certified Organic Farmers) matches 'S. 1582' but is actually the 118th Congress's 'Opportunities in Organic Act' — bill numbers reset every Congress, and this corpus spans two of them (118th 2023-2024, 119th 2025-2026). It lands in the peripheral tier (1 filing, no name hit) exactly where a single-mention false positive should surface for human triage — the map's built-in behavior, not a special case."
+    ]
+  },
+  "kpis": [
+    {
+      "label": "Client-side players on the GENIUS Act map",
+      "value": "170",
+      "note": "94.7% (161) carry no crypto-related term in their name — found only by what they say they lobby on"
+    },
+    {
+      "label": "Tagged filings more than doubled into passage",
+      "value": "64 -> 156",
+      "note": "2025-Q1 to 2025-Q3 (the quarter GENIUS was signed into law), +144%; eased to 90 by 2026-Q1"
+    },
+    {
+      "label": "Tightest bill companion: the CLARITY Act",
+      "value": "HR3633, 289 filings",
+      "note": "97 of the roster's clients co-cite the digital-asset market-structure bill alongside GENIUS; HR2392 (rival stablecoin bill) follows at 292 filings/82 clients"
+    },
+    {
+      "label": "Disclosed LD-203 giving, roster's registrant orgs",
+      "value": "$120.8M (2022-2025)",
+      "note": "dominated by the roster's large multi-issue givers (IBEW, AFT, ABA), not stablecoin-specific money — Visa is the top crypto-native giver at $3.97M"
+    }
+  ],
+  "copy": {
+    "players": {
+      "title": "The player map — who lobbied the GENIUS Act",
+      "sub": "All {n} client-side players with GENIUS-tagged senate filings, sized by tagged filing count. Color = whether a crypto-related term appears anywhere in the player's own name. Click a bubble to list its tagged filings.",
+      "foot": "94.7% of players carry no crypto term in their name. The recall win reaches past fintech into unrelated-looking payment and labor interests: American Airlines (co-branded card economics), Southwest Airlines, and both IBEW and the American Federation of Teachers (retirement-plan exposure monitoring, not industry advocacy) all tagged multiple quarters running. One peripheral-tier entry (CCOF, 1 filing) is a documented false positive — a different bill that reused the same number in an earlier Congress — left in as the map's own recall-first/triage discipline intends, not filtered out."
+    },
+    "trend": {
+      "title": "A bill that lobbied hardest the quarter it passed",
+      "sub": "GENIUS-tagged senate filings and distinct clients per quarter (amendment-deduped, registrations excluded). Click a quarter to list exactly the filings it counts.",
+      "foot": "64 filings in 2025-Q1 climbs to a peak of 156 in 2025-Q3 — the quarter the GENIUS Act was signed into law — before easing to 90 by 2026-Q1 as attention shifts to the still-pending CLARITY Act market-structure bill. Tagged-client spend follows a similar arc: $21.3M -> $49.1M -> $46.3M -> $38.6M -> $55.0M (the 2026-Q1 uptick reflects Q1 filing-cycle timing more than renewed GENIUS-specific activity)."
+    },
+    "scatter": {
+      "title": "Even a squarely financial bill leaks past its own code",
+      "sub": "Issue codes the registrants filed their GENIUS-tagged free-text under (senate + house text blocks).",
+      "foot": "FIN (48.4%) and BAN (34.4%) together hold 82.8% — far more concentrated than the wider crypto map, since GENIUS is a banking-committee bill by design. The remaining 17% scatters into Science & Technology, Taxation, Commodities Trading, Consumer Safety, Accounting, and a dozen-code tail — the same 'hidden under other codes' pattern at smaller scale."
+    },
+    "keywords": {
+      "title": "Which words carried the signal",
+      "sub": "Distinct filings matched by each of the 4 curated lexicon phrases (whole-word, case-insensitive; industry_lexicon.json v1.3 facet GENIUS).",
+      "foot": "The popular name carries almost everything (1,054 of 1,178 tagged filings); the S.1582/S.1582 bill-number citation forms add filings that cite the number without the name (295 + 157, overlapping with the popular name in most cases), and the full official statute name adds 72 more, 22 of them the SOLE match in their filing."
+    },
+    "registrants": {
+      "title": "The firms carrying the bill's lobbying",
+      "sub": "Outside lobbying firms on GENIUS-tagged filings (self-filers excluded), ranked by tagged filings.",
+      "foot": "Invariant LLC leads (33 filings across 10 clients), followed by PhronesisDC and Crossroads Strategies — the same firm roster that shows up across the broader crypto map, unsurprising given GENIUS is that map's central legislative vehicle."
+    },
+    "spendTop": {
+      "show": true,
+      "title": "The biggest lobbying budgets on the map",
+      "sub": "Mapped players ranked by TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal, not GENIUS-Act-only dollars.",
+      "foot": "Visa ($39.3M) and Coinbase ($15.1M) top the list, but American Airlines ($20.3M) and Citigroup ($20.9M) sit right alongside them — reminders that a player's budget mostly funds work that has nothing to do with this bill."
+    },
+    "giving": {
+      "title": "Disclosed LD-203 giving of the GENIUS Act roster",
+      "sub": "The roster organizations' own disclosed LD-203 political giving (registrant-filed regime; amendment-deduped), with the per-member rollup (name variants + support committees merged; JFC/multi-honoree dollars stay unallocated).",
+      "foot": "$120.8M total, but led by the roster's large multi-issue unions and trade groups (IBEW $14.2M, AFT $12.5M, American Bankers Association $7.7M) whose giving reflects their whole portfolio, not GENIUS-specific asks. The member rollup is a cleaner tell: J.D. Vance, House Financial Services Chair French Hill, Andy Barr, Tom Emmer, Bill Huizenga, former Chair Patrick McHenry, and Senate Banking Chair Tim Scott dominate — exactly the committee-of-jurisdiction leadership this roster's registrants would be expected to court."
+    },
+    "press": {
+      "title": "Congress talked about it right when it passed",
+      "sub": "Share of ALL member press releases mentioning GENIUS Act vocabulary, by quarter. Click a quarter to list the releases.",
+      "foot": "Near-silent at introduction (7 releases, 0.05% of all releases, 2025-Q1), the press share peaks at passage — 44 releases in 2025-Q2, 46 in 2025-Q3 (0.34%/0.41%) — then drops back to a near-zero floor (5, then 4) once the bill is law. The say-side runs on the signing ceremony; the filing-side lobbying (previous chart) runs on the whole legislative calendar."
+    }
+  },
+  "caveats": [
+    "Recall boundary: only filings whose free-text uses the curated GENIUS Act vocabulary (industry_lexicon.json facet GENIUS) appear — 'genius act', the bill's full official name, and the S.1582/S.1582 citation forms. A filing that discusses the same stablecoin legislation without naming the bill (e.g. only 'stablecoin regulation') is invisible here by design (precision over recall); those generic terms were checked and excluded as ambiguous (could mean the CLARITY Act or a state proposal) — see the lexicon's display_only block.",
+    "Known cross-Congress collision, left in and documented: bill numbers reset every Congress, and this corpus spans two (118th 2023-2024, 119th 2025-2026). One 2023 filing (CCOF, California Certified Organic Farmers) matches 'S. 1582' but is the 118th Congress's unrelated 'Opportunities in Organic Act' — it lands in the peripheral tier (1 filing, no name hit), exactly where a single-mention false positive should surface for a human to triage, not a silent gap.",
+    "'genius act' and the statute's full official name are shared with the broader CRYPTO facet (a bill-scoped sub-facet, not a separate vocabulary) — every player and filing here is also part of the crypto industry map; this package is that map's GENIUS-Act-specific slice, not a disjoint population.",
+    "Player 'total lobbying spend' is ALL-ISSUE canonical spend (v_client_canonical_spend) — a size signal, not GENIUS-Act-only dollars. Filing-level disclosure cannot split dollars by issue.",
+    "Senate filings are primary; house versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated on filing_period, latest by posted; registrations excluded from dollar work (the CCOF false positive is a registration and does not appear in the trend/spend charts for this reason).",
+    "The bills co-occurrence table (HR3633/HR2392/S394/S919/...) counts every bill mentioned ANYWHERE in a GENIUS-tagged filing, not bills mentioned in the same sentence — a large generic vehicle like HR1 can appear simply because a diversified client's filing touches many issues at once. Read the crypto/stablecoin-specific bills (HR3633, HR2392, S394, S919) as the genuine companions; treat the broader tail with more caution.",
+    "LD-203 'disclosed giving' is the lobbyist/registrant-side regime only, organization-level, and never GENIUS-Act-attributable — a diversified filer's giving reflects its whole portfolio. Super-PAC money legally lives in FEC data and is not in this package.",
+    "Everything is self-reported disclosure data. 'Disclosed' never means 'total': 501(c)(4) dark money and state lobbying are outside every number here."
+  ]
+}

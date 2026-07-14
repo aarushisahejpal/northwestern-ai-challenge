@@ -57,6 +57,7 @@ descriptions of what it lobbied on, in their words, with citation keys.
 | `data/israel_policy_players.csv` | The wider field (exploratory scan, ≥2 filings) |
 | `data/aipac_press_coupling.csv` | Quarterly spend vs Israel-topic press share |
 | `data/aipac_ld203_*.csv` | Disclosed giving: recipients (with party/state + source columns, member name variants merged), by-year, sample records |
+| `data/aipac_press_releases.csv`, `aipac_gov_entity_filings.csv`, `aipac_bill_filings.csv`, `aipac_colobby_filings.csv`, `aipac_israel_player_filings.csv`, `aipac_lobbyist_filings.csv`, `aipac_giving_items.csv` | **Raw-record indexes** behind every dashboard widget's click-through (each row links to the filing/contribution on lda.senate.gov) |
 
 ## How to QA a number
 

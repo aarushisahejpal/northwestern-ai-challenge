@@ -118,6 +118,30 @@ function statTiles(root, tiles) {
   return k;
 }
 
+/* ---- open-findings card: candidate leads from LEDGER.md touching this
+   package's data, shown at the bottom of every package dashboard so a human
+   reviewer sees what's still open without leaving the page. findings = [{id,
+   status, title, hypothesis, actors?, next?}] — copy is hand-curated from the
+   ledger row, not auto-derived (same convention as this page's KPI/caveat text). */
+function findingsCard(root, findings, sub) {
+  if (!findings || !findings.length) return;
+  const c = div("card", root);
+  const h = document.createElement("h2");
+  h.textContent = "Findings still open for human review";
+  c.appendChild(h);
+  div("sub", c, sub || "Candidate leads from the investigation ledger touching this package's data — unverified, for human triage before any use in a story.");
+  for (const f of findings) {
+    const item = div("finding-item", c);
+    const head = document.createElement("strong");
+    head.textContent = f.id + " · " + f.status + " — " + f.title;
+    item.appendChild(head);
+    div(null, item, f.hypothesis);
+    if (f.actors) div("note", item, "Named actors: " + f.actors);
+    if (f.next) div("note", item, "Next action: " + f.next);
+  }
+  div("foot", c, "Full history, evidence record IDs, and status changes: LEDGER.md in the repo root.");
+}
+
 /* ---- per-widget "more options" → query-info panel (debugging aid) ----
    info = { title, note, blocks: [{label, text}] } — text is the ACTUAL SQL /
    pipeline the widget's numbers came from (extracted from the build scripts). */
@@ -330,9 +354,11 @@ function columns(box, cfg) {
         name: s.name
       }));
       if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
       ttShow(ev.clientX, ev.clientY, lab, rows);
     });
     hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(i, lab));
   });
 }
 

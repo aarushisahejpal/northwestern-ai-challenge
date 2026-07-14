@@ -1,15 +1,17 @@
 {
   "_meta": {
-    "version": "1.2",
+    "version": "1.3",
     "generated": "2026-07-07",
-    "changelog": "1.2 (2026-07-11): added CRITMIN facet (critical minerals / battery-materials supply chain, serving ledger L024/BATT), phrases sized + collision-triaged over lobbying_freetext whole-word counts; CRYPTO and PARDONS facets unchanged, so their tag rows reproduce identically on rebuild. 1.1 (2026-07-10): added PARDONS facet (presidential pardons / executive clemency), phrases triaged via lda_freetext_discovery.py --search + whole-word precision counts over lobbying_freetext; crypto facet unchanged, so CRYPTO tag rows reproduce byte-identically on rebuild.",
+    "changelog": "1.3 (2026-07-13): added GENIUS facet (the GENIUS Act stablecoin bill, S.1582, carved out of CRYPTO's 'genius act' phrase for its own bill-scoped review package). 'genius act' and the statute's full official name now deliberately map to BOTH the CRYPTO and GENIUS tags — the matcher/build_tags in lda_industry_map.py was generalized from one-tag-per-phrase to a phrase->tags list so this doesn't collide. PARDONS/CRITMIN tag rows reproduce byte-identically on rebuild; CRYPTO's tagged-FILING set is verified IDENTICAL (same 9,768 filings, set-compared) though the raw row count grew 30,922->30,940: 94 rows shifted keyword label (mostly generic 'stablecoins' -> the more specific 'guiding and establishing national innovation for u.s. stablecoins act', the longest-match-wins precision rule already used inside CRYPTO, e.g. 'digital asset market structure' over 'digital asset') and a further 18 gained an additional keyword-citation row on a filing that already carried other CRYPTO keywords — never a lost filing. Two candidate phrases were caught colliding and handled by the discipline's new TRAP rule: 'genius act of 2025' was DROPPED (a pure superstring of 'genius act' with zero added recall, so removing it was strictly safer than promoting it); the long official statute name was PROMOTED into CRYPTO's own phrase list instead of dropped, because it was the sole match for 22 GENIUS-tagged filings and dropping it would have cost real recall. 1.2 (2026-07-11): added CRITMIN facet (critical minerals / battery-materials supply chain, serving ledger L024/BATT), phrases sized + collision-triaged over lobbying_freetext whole-word counts; CRYPTO and PARDONS facets unchanged, so their tag rows reproduce identically on rebuild. 1.1 (2026-07-10): added PARDONS facet (presidential pardons / executive clemency), phrases triaged via lda_freetext_discovery.py --search + whole-word precision counts over lobbying_freetext; crypto facet unchanged, so CRYPTO tag rows reproduce byte-identically on rebuild.",
     "purpose": "Curated industry -> distinctive-phrase vocabulary for the lobbying free-text discovery/serving layer (lda_industry_map.py). Fixes cleanup-note B: an industry hidden under many issue codes and vague categories ('lobbying related to taxation') can only be mapped by the VOCABULARY it uses in the free-text, not by issue-code filtering. Each facet's 'phrases' are matched, whole-word and case-insensitively, against lobbying_freetext (senate activity descriptions + house specific_issues) to build the deterministic, cited serving table lobbying_issue_mentions. Same precision-over-recall discipline as bill_aliases.json.",
     "discipline": [
       "Precision over recall, same rule as build_db.py's ISSUE_KEYWORDS and bill_aliases.json. Every 'phrases' string is a distinctive, whole-word-matchable term, never a bare topic word.",
       "'phrases' are the ONLY strings used for tagging. 'display_only' terms are recorded (with the reason) but NOT matched: they are either ambiguous (bare 'token', 'mining', 'wallet', 'coin') or catch unrelated filings (bare 'clarity act' matched an athletic-training filing; the distinctive form 'digital asset market clarity' is used instead).",
       "A facet gets its OWN tag, deliberately NOT folded into an ALI issue code. Crypto scatters across 15+ issue codes (FIN/BAN/TAX/SCI/CPI/CDT/AGR/...), only ~40% under FIN, so the ALI code is not the industry. The tag namespace ('CRYPTO') is separate from the ~79 ALI codes.",
       "The vocabulary is versioned and grows by human triage of the discovery loop (lda_freetext_discovery.py: FTS + keyness + quarterly emergence + untagged mining). Never auto-commit a discovered term; a human adds it here with a source, and the serving table is rebuilt. Bump 'version' and note the change when phrases change so a tagged set stays reproducible.",
-      "The industry player list emitted from a facet is entity-resolved through lda-entity-resolver (entities/entity_aliases) so it plugs unchanged into lda_ld203_giving.py --names-file (who they give to) and v_client_canonical_spend (what they spend)."
+      "The industry player list emitted from a facet is entity-resolved through lda-entity-resolver (entities/entity_aliases) so it plugs unchanged into lda_ld203_giving.py --names-file (who they give to) and v_client_canonical_spend (what they spend).",
+      "A phrase MAY belong to more than one facet's 'phrases' list when one is a bill-scoped sub-facet of a broader industry (GENIUS is the S.1582 stablecoin bill nested inside CRYPTO's wider vocabulary) — the doc gets a tag row under each matching facet, never a forced either/or choice. This is the only case it should happen; two unrelated facets sharing a phrase is a precision bug, not this pattern.",
+      "TRAP: never add a phrase that is a strict superstring of a phrase shared across facets with a DIFFERENT (narrower) tag set — the matcher is longest-match-wins over a single alternation, so the longer phrase steals the match position, and if its tag set doesn't cover the shorter phrase's tags too, those tags silently lose that occurrence. GENIUS v1.3 hit this twice while adding bill-number phrases whose text happens to contain existing CRYPTO vocabulary ('genius act of 2025' contains 'genius act'; the statute's full name contains 'stablecoins') — both caught by a byte-diff regression check against the pre-change CRYPTO row set. Two valid fixes, chosen per-phrase by whether recall would actually be lost: (a) DROP the longer phrase if it adds no recall beyond what the shorter shared phrase already catches ('genius act of 2025' — every occurrence already had 'genius act'); (b) PROMOTE the longer phrase into the union of every tag its substrings carry, so it keeps its own more-specific citation label instead of stealing someone else's tag (the full statute name — 22 filings had no other GENIUS-phrase match, so it was added to CRYPTO's own phrase list too). Never leave it un-fixed: a silent tag loss on a byte-diff-checked facet is exactly the failure this check exists to catch."
     ],
     "corpus_window": "Phrases are calibrated on filings/press 2022-2026 Q1. Bill-name phrases (GENIUS Act, FIT21) are 118th/119th-Congress crypto vehicles; verified distinctive in-window, but re-check when the corpus advances."
   },
@@ -36,6 +38,7 @@
         "digital token", "digital tokens",
         "proof of stake", "proof of work",
         "genius act",
+        "guiding and establishing national innovation for u.s. stablecoins act",
         "financial innovation and technology", "fit21"
       ],
       "display_only": {
@@ -46,7 +49,7 @@
         "clarity act": "bare phrase matched an unrelated athletic-training filing; use 'digital asset market clarity'.",
         "ripple": "'ripple effect' collision; excluded despite being a crypto firm/coin."
       },
-      "seed_note": "The active crypto Enterprise-Map story: an industry hidden under 'taxation' and a dozen other codes, plus diversified filers (Robinhood, PayPal, Fidelity, Stripe, banks) that lobby on crypto without 'crypto' in their name. The vocabulary catches them via what they SAY they lobby on. GENIUS Act (S.1582/S.394, 2025 stablecoin) and FIT21 / the Financial Innovation and Technology for the 21st Century Act (H.R.4763, 118th; market structure) are distinctive crypto bill names and included as phrases; the CLARITY Act appears only via 'digital asset market clarity'.",
+      "seed_note": "The active crypto Enterprise-Map story: an industry hidden under 'taxation' and a dozen other codes, plus diversified filers (Robinhood, PayPal, Fidelity, Stripe, banks) that lobby on crypto without 'crypto' in their name. The vocabulary catches them via what they SAY they lobby on. GENIUS Act (S.1582/S.394, 2025 stablecoin) and FIT21 / the Financial Innovation and Technology for the 21st Century Act (H.R.4763, 118th; market structure) are distinctive crypto bill names and included as phrases; the CLARITY Act appears only via 'digital asset market clarity'. v1.3 (2026-07-13) added the GENIUS Act's full official name ('guiding and establishing national innovation for u.s. stablecoins act') to this list too, alongside the bill-scoped GENIUS facet it seeds — required by the discipline's superstring-tag-union rule (it contains 'stablecoins'), and 22 of its filings had no other GENIUS-facet phrase.",
       "sources": [
         "https://www.congress.gov/bill/119th-congress/senate-bill/1582 (GENIUS Act, stablecoins)",
         "https://www.congress.gov/bill/118th-congress/house-bill/4763 (FIT21, digital-asset market structure)",
@@ -112,6 +115,29 @@
         "Vocabulary sized + precision-triaged over lobbying_freetext whole-word counts, 2026-07-11 (critical minerals 4,339 filings / energy storage 2,883 / 45X 1,292 / rare earth 1,311 / 30D 879 / battery manufacturing 726 / critical materials 538 / battery recycling 281 / battery materials 264 / graphite 226 / battery supply chain 171 / foreign entity of concern 133 / anode 74; collision samples for battery/lithium/nickel/cobalt/lithium-ion recorded in display_only)"
       ],
       "confidence": "high on the mineral/materials phrases and the statutory terms (45X/30D/foreign entity of concern); medium on energy storage (includes non-battery storage: hydrogen, pumped hydro) and advanced batteries (36 filings)."
+    },
+    {
+      "id": "genius-act",
+      "tag": "GENIUS",
+      "label": "GENIUS Act (stablecoin regulatory framework, S.1582)",
+      "phrases": [
+        "genius act",
+        "s. 1582",
+        "s.1582",
+        "guiding and establishing national innovation for u.s. stablecoins act"
+      ],
+      "display_only": {
+        "stablecoin legislation": "generic — could name the GENIUS Act, the CLARITY Act market-structure bill, or a state-level proposal; 366 whole-word docs, not GENIUS-distinctive; excluded.",
+        "stablecoin regulation": "same ambiguity as 'stablecoin legislation' (99 docs); excluded.",
+        "stablecoin bill": "same ambiguity, lower volume (22 docs); excluded.",
+        "1582": "bare bill number collides with section/page references outside a bill-number context; only the 'S. 1582' / 'S.1582' forms are distinctive."
+      },
+      "seed_note": "Carved out of the CRYPTO facet's 'genius act' phrase (present since lexicon v1.0) as its own bill-scoped facet so the GENIUS Act — the Guiding and Establishing National Innovation for U.S. Stablecoins Act, S.1582, 119th Congress, signed into law July 2025, the single most distinctive crypto legislative vehicle in-window — supports its own review package rather than only living inside the broader crypto map. 'genius act' deliberately maps to BOTH the CRYPTO and GENIUS tags (see _meta.discipline); this facet adds the bill-number citation forms (S. 1582 / S.1582 / the statute's full name) that lift recall beyond the bare popular name. NOTE: 'genius act of 2025' was tried and DROPPED — as a strict superstring of the shared phrase 'genius act', longest-match-wins made it steal the match position at every occurrence, which (since it mapped to GENIUS only) silently dropped the CRYPTO tag for those spans — a 413-row/41-filing CRYPTO regression caught by the byte-diff regression check and reverted same day. 'genius act' alone already has full recall for 'GENIUS Act of 2025' mentions. The full statute name phrase hit the same trap (it contains CRYPTO's 'stablecoins') but 22 of its filings were GENIUS-only, so it was PROMOTED into CRYPTO's own phrase list instead (see CRYPTO facet seed_note) rather than dropped. The lesson is recorded in _meta.discipline.",
+      "sources": [
+        "https://www.congress.gov/bill/119th-congress/senate-bill/1582 (GENIUS Act, stablecoins)",
+        "Vocabulary triaged by whole-word LIKE counts over lobbying_freetext, 2026-07-13 (genius act 1,066 docs; s. 1582 293 rows / s.1582 157 rows before de-dup; full statute name 72; combined recall ~1,178 distinct docs after the superstring-collision fix); ambiguous generic terms spot-checked and recorded display_only."
+      ],
+      "confidence": "high — every phrase form spot-checked against raw free-text context; ambiguous generic terms (stablecoin legislation/regulation/bill) deliberately excluded as display_only rather than risk pulling in CLARITY Act or state-level stablecoin coverage."
     }
   ]
 }

@@ -110,6 +110,12 @@ table.dt th { color: var(--ink-2); font-weight: 600; }
 .caveats li { margin: 4px 0 4px 18px; }
 footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
 
+/* open-findings card (ledger leads touching this package, shown for human review) */
+.finding-item { padding: 9px 0; border-top: 1px solid var(--border); font-size: 13px; }
+.finding-item:first-of-type { border-top: none; padding-top: 0; }
+.finding-item strong { display: block; margin-bottom: 3px; }
+.finding-item .note { margin-top: 2px; }
+
 /* per-player raw-filings panel (crypto player map click-through) */
 .filings-panel {
   font-size: 12.5px; color: var(--ink-2); margin: 10px 0 4px;

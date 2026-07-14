@@ -332,4 +332,6 @@
     const ul = document.createElement("ul"); ul.className = "caveats"; c.appendChild(ul);
     DATA.caveats.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
   }
+
+  findingsCard(app, DATA.findings);
 })();

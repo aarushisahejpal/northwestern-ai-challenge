@@ -77,12 +77,12 @@
         "total": 37100.0
       },
       {
-        "recipient": "REP CHUCK FLEISCHMANN",
+        "recipient": "REP RITCHIE TORRES",
         "items": 8,
         "total": 35000.0
       },
       {
-        "recipient": "REP RITCHIE TORRES",
+        "recipient": "REP CHUCK FLEISCHMANN",
         "items": 8,
         "total": 35000.0
       },
@@ -97,41 +97,6 @@
         "total": 33900.0
       },
       {
-        "recipient": "SEN DAN SULLIVAN",
-        "items": 2,
-        "total": 30000.0
-      },
-      {
-        "recipient": "REP TONY GONZALES II",
-        "items": 7,
-        "total": 30000.0
-      },
-      {
-        "recipient": "REP MICHAEL MCCAUL",
-        "items": 7,
-        "total": 30000.0
-      },
-      {
-        "recipient": "REP JIM COSTA",
-        "items": 7,
-        "total": 30000.0
-      },
-      {
-        "recipient": "REP KEVIN HERN",
-        "items": 7,
-        "total": 30000.0
-      },
-      {
-        "recipient": "REP RON ESTES",
-        "items": 7,
-        "total": 30000.0
-      },
-      {
-        "recipient": "NRCC",
-        "items": 2,
-        "total": 30000.0
-      },
-      {
         "recipient": "REP ADAM SMITH",
         "items": 7,
         "total": 30000.0
@@ -142,19 +107,44 @@
         "total": 30000.0
       },
       {
+        "recipient": "NRCC",
+        "items": 2,
+        "total": 30000.0
+      },
+      {
+        "recipient": "SEN DAN SULLIVAN",
+        "items": 2,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP RON ESTES",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP KEVIN HERN",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP MICHAEL MCCAUL",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP TONY GONZALES II",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
+        "recipient": "REP JIM COSTA",
+        "items": 7,
+        "total": 30000.0
+      },
+      {
         "recipient": "REP STEVE WOMACK",
         "items": 8,
         "total": 28000.0
-      },
-      {
-        "recipient": "REP BRIAN BABIN",
-        "items": 7,
-        "total": 27900.0
-      },
-      {
-        "recipient": "REP LANCE GOODEN",
-        "items": 6,
-        "total": 27900.0
       },
       {
         "recipient": "REP NANCY MACE",
@@ -162,17 +152,7 @@
         "total": 27900.0
       },
       {
-        "recipient": "REP GREGORY F MURPHY",
-        "items": 6,
-        "total": 27900.0
-      },
-      {
         "recipient": "REP VIRGINIA FOXX",
-        "items": 6,
-        "total": 27900.0
-      },
-      {
-        "recipient": "REP DAVID ROUZER",
         "items": 6,
         "total": 27900.0
       },
@@ -192,6 +172,26 @@
         "total": 27900.0
       },
       {
+        "recipient": "REP DAVID ROUZER",
+        "items": 6,
+        "total": 27900.0
+      },
+      {
+        "recipient": "REP GREGORY F MURPHY",
+        "items": 6,
+        "total": 27900.0
+      },
+      {
+        "recipient": "REP LANCE GOODEN",
+        "items": 6,
+        "total": 27900.0
+      },
+      {
+        "recipient": "REP BRIAN BABIN",
+        "items": 7,
+        "total": 27900.0
+      },
+      {
         "recipient": "REP FREDERICA S WILSON",
         "items": 8,
         "total": 27500.0
@@ -202,12 +202,12 @@
         "total": 27100.0
       },
       {
-        "recipient": "REP JOE NEGUSE",
+        "recipient": "REP SAM GRAVES",
         "items": 7,
         "total": 27100.0
       },
       {
-        "recipient": "REP SAM GRAVES",
+        "recipient": "REP JOE NEGUSE",
         "items": 7,
         "total": 27100.0
       },
@@ -222,13 +222,13 @@
         "total": 26300.0
       },
       {
-        "recipient": "REP ROB WITTMAN",
-        "items": 8,
+        "recipient": "REP TOM EMMER JR",
+        "items": 7,
         "total": 26000.0
       },
       {
-        "recipient": "REP TOM EMMER JR",
-        "items": 7,
+        "recipient": "REP ROB WITTMAN",
+        "items": 8,
         "total": 26000.0
       },
       {
@@ -242,27 +242,7 @@
         "total": 25800.0
       },
       {
-        "recipient": "REP RUDY YAKYM III",
-        "items": 5,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP DARIN LAHOOD",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP BRYAN STEIL",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP BRIAN MAST",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP GUY RESCHENTHALER",
+        "recipient": "REP DANIEL WEBSTER",
         "items": 6,
         "total": 25000.0
       },
@@ -272,32 +252,22 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP CAROL MILLER",
+        "recipient": "REP TOM KEAN JR",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP BRENDAN BOYLE",
         "items": 6,
         "total": 25000.0
       },
       {
-        "recipient": "REP TED LIEU",
+        "recipient": "REP GUS BILIRAKIS",
         "items": 6,
         "total": 25000.0
       },
       {
-        "recipient": "REP SUZAN DELBENE",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP HALEY STEVENS",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP DARREN SOTO",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP VICTORIA SPARTZ",
+        "recipient": "REP KATHERINE CLARK",
         "items": 6,
         "total": 25000.0
       },
@@ -307,7 +277,17 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP MIKE LAWLER",
+        "recipient": "REP RUDY YAKYM III",
+        "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP SCOTT FITZGERALD",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP EMILIA SYKES",
         "items": 5,
         "total": 25000.0
       },
@@ -317,13 +297,43 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP BRENDAN BOYLE",
+        "recipient": "REP VICTORIA SPARTZ",
         "items": 6,
         "total": 25000.0
       },
       {
-        "recipient": "REP TOM KEAN JR",
+        "recipient": "REP BRIAN MAST",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP SHEILA CHERFILUSMCCORMICK",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP GUY RESCHENTHALER",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP CAROL MILLER",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP MIKE LAWLER",
         "items": 5,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP RICK W ALLEN",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP KATHY CASTOR",
+        "items": 6,
         "total": 25000.0
       },
       {
@@ -332,7 +342,17 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP KATHY CASTOR",
+        "recipient": "REP DARREN SOTO",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP HALEY STEVENS",
+        "items": 6,
+        "total": 25000.0
+      },
+      {
+        "recipient": "REP TED LIEU",
         "items": 6,
         "total": 25000.0
       },
@@ -347,27 +367,12 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP SHEILA CHERFILUSMCCORMICK",
+        "recipient": "REP SUZAN DELBENE",
         "items": 6,
         "total": 25000.0
       },
       {
-        "recipient": "REP EMILIA SYKES",
-        "items": 5,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP SCOTT FITZGERALD",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP DANIEL WEBSTER",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
-        "recipient": "REP GUS BILIRAKIS",
+        "recipient": "REP DARIN LAHOOD",
         "items": 6,
         "total": 25000.0
       },
@@ -377,7 +382,7 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP KATHERINE CLARK",
+        "recipient": "REP BRYAN STEIL",
         "items": 6,
         "total": 25000.0
       },
@@ -387,18 +392,63 @@
         "total": 25000.0
       },
       {
-        "recipient": "REP RICK W ALLEN",
-        "items": 6,
-        "total": 25000.0
-      },
-      {
         "recipient": "REP DIANA HARSHBARGER",
         "items": 7,
         "total": 23000.0
       },
       {
-        "recipient": "REP STEVEN HORSFORD",
+        "recipient": "REP JEFFERSON VAN DREW",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP DAVID SCOTT",
         "items": 6,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP LUCY MCBATH",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP SYLVIA GARCIA",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP DONALD NORCROSS",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP AUGUST PFLUGER II",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP ASHLEY HINSON",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP LLOYD SMUCKER",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP BOB LATTA",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP JARED GOLDEN",
+        "items": 5,
+        "total": 22900.0
+      },
+      {
+        "recipient": "REP MIKE SIMPSON",
+        "items": 5,
         "total": 22900.0
       },
       {
@@ -412,7 +462,7 @@
         "total": 22900.0
       },
       {
-        "recipient": "REP BOB LATTA",
+        "recipient": "REP FRANK PALLONE JR",
         "items": 5,
         "total": 22900.0
       },
@@ -422,7 +472,7 @@
         "total": 22900.0
       },
       {
-        "recipient": "REP DARRELL ISSA",
+        "recipient": "REP JOHN CARTER",
         "items": 5,
         "total": 22900.0
       },
@@ -432,62 +482,17 @@
         "total": 22900.0
       },
       {
-        "recipient": "REP DINA TITUS",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP JARED GOLDEN",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP FRANK PALLONE JR",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP AUGUST PFLUGER II",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP YOUNG KIM",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP JOHN CARTER",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP SYLVIA GARCIA",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP LUCY MCBATH",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP DAVID SCOTT",
+        "recipient": "REP STEVEN HORSFORD",
         "items": 6,
         "total": 22900.0
       },
       {
-        "recipient": "REP DONALD NORCROSS",
+        "recipient": "REP SHONTEL BROWN",
         "items": 5,
         "total": 22900.0
       },
       {
-        "recipient": "REP JEFFERSON VAN DREW",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
-        "recipient": "REP ASHLEY HINSON",
+        "recipient": "REP DINA TITUS",
         "items": 5,
         "total": 22900.0
       },
@@ -497,17 +502,17 @@
         "total": 22900.0
       },
       {
-        "recipient": "REP LLOYD SMUCKER",
+        "recipient": "REP TROY BALDERSON",
         "items": 5,
         "total": 22900.0
       },
       {
-        "recipient": "REP SHONTEL BROWN",
+        "recipient": "REP DARRELL ISSA",
         "items": 5,
         "total": 22900.0
       },
       {
-        "recipient": "REP MIKE SIMPSON",
+        "recipient": "REP YOUNG KIM",
         "items": 5,
         "total": 22900.0
       },
@@ -517,22 +522,7 @@
         "total": 22900.0
       },
       {
-        "recipient": "REP TROY BALDERSON",
-        "items": 5,
-        "total": 22900.0
-      },
-      {
         "recipient": "REP DEBBIE WASSERMAN SCHULTZ",
-        "items": 6,
-        "total": 22100.0
-      },
-      {
-        "recipient": "REP MARILYN STRICKLAND",
-        "items": 6,
-        "total": 22100.0
-      },
-      {
-        "recipient": "REP GARRET GRAVES",
         "items": 6,
         "total": 22100.0
       },
@@ -542,14 +532,14 @@
         "total": 22100.0
       },
       {
-        "recipient": "REP JOHN MOOLENAAR",
+        "recipient": "REP GARRET GRAVES",
         "items": 6,
-        "total": 21000.0
+        "total": 22100.0
       },
       {
-        "recipient": "REP TIM WALBERG",
+        "recipient": "REP MARILYN STRICKLAND",
         "items": 6,
-        "total": 21000.0
+        "total": 22100.0
       },
       {
         "recipient": "REP MICHELLE FISCHBACH",
@@ -558,6 +548,16 @@
       },
       {
         "recipient": "REP JOHN RUTHERFORD",
+        "items": 6,
+        "total": 21000.0
+      },
+      {
+        "recipient": "REP JOHN MOOLENAAR",
+        "items": 6,
+        "total": 21000.0
+      },
+      {
+        "recipient": "REP TIM WALBERG",
         "items": 6,
         "total": 21000.0
       },
@@ -572,97 +572,7 @@
         "total": 20800.0
       },
       {
-        "recipient": "REP STEPHANIE BICE",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP GRACE MENG",
-        "items": 7,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JIM BAIRD",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP SCOTT FRANKLIN",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JIM JORDAN",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP EMANUEL CLEAVER II",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP DAVID KUSTOFF",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP ELISE STEFANIK",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP VERN BUCHANAN",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JOYCE BEATTY",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP VICENTE GONZALEZ",
-        "items": 6,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP MIKE ROGERS",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP AARON BEAN",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP GREG STEUBE",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP MIKE JOHNSON",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP LOIS FRANKEL",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JIMMY PANETTA",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JOSH BRECHEEN",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JAKE LATURNER",
+        "recipient": "REP JOE WILSON",
         "items": 5,
         "total": 20000.0
       },
@@ -672,87 +582,12 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP JARED MOSKOWITZ",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP CHUCK EDWARDS",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP ADRIANO ESPAILLAT",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JULIA LETLOW",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP BEN CLINE",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP BRAD SHERMAN",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP NICHOLAS A LANGWORTHY",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP GREG STANTON",
-        "items": 5,
+        "recipient": "REP VICENTE GONZALEZ",
+        "items": 6,
         "total": 20000.0
       },
       {
         "recipient": "REP BILL HUIZENGA",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP MIKE QUIGLEY",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP CLAUDIA TENNEY",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP ROGER WILLIAMS",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP MIKE EZELL",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "SEN MARKWAYNE MULLIN",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP BLAKE MOORE",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP PAT RYAN",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP JOE WILSON",
         "items": 5,
         "total": 20000.0
       },
@@ -762,22 +597,37 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP MIKE CAREY",
+        "recipient": "REP JOSH BRECHEEN",
         "items": 4,
         "total": 20000.0
       },
       {
-        "recipient": "REP RICK LARSEN",
+        "recipient": "REP JOYCE BEATTY",
         "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP DAN NEWHOUSE",
-        "items": 6,
+        "recipient": "REP WILLIAM TIMMONS IV",
+        "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP GLENN GROTHMAN",
+        "recipient": "REP JIM BAIRD",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP DAVID SCHWEIKERT",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP ADRIANO ESPAILLAT",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP VERN BUCHANAN",
         "items": 5,
         "total": 20000.0
       },
@@ -787,12 +637,177 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP DAVID SCHWEIKERT",
+        "recipient": "REP DAN NEWHOUSE",
+        "items": 6,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP JULIA LETLOW",
         "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP LISA MCCLAIN",
+        "recipient": "REP MIKE CAREY",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP KIM SCHRIER",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP GLENN GROTHMAN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP NICHOLAS A LANGWORTHY",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP MIKE JOHNSON",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "KWEISI MFUME",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP GREG STANTON",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP DAVID KUSTOFF",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP PAT RYAN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP GREG STEUBE",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP MIKE ROGERS",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP ZACH NUNN",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP RICK LARSEN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP GRACE MENG",
+        "items": 7,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP SCOTT FRANKLIN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP MARIE GLUESENKAMP PEREZ",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP STEPHANIE BICE",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP AARON BEAN",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP ELISE STEFANIK",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP CLAUDIA TENNEY",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP BRAD FINSTAD",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP JIMMY PANETTA",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP CELESTE MALOY",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP ANDY OGLES",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP CHUCK EDWARDS",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP MIKE EZELL",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP BLAKE MOORE",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP ROGER WILLIAMS",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP CHRIS PAPPAS",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP MORGAN GRIFFITH",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP BRAD SHERMAN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP LOIS FRANKEL",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP BEN CLINE",
         "items": 5,
         "total": 20000.0
       },
@@ -807,37 +822,32 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP KIM SCHRIER",
+        "recipient": "REP LISA MCCLAIN",
         "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP MARIE GLUESENKAMP PEREZ",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP ANDY OGLES",
+        "recipient": "REP MIKE QUIGLEY",
         "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP ZACH NUNN",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP CELESTE MALOY",
-        "items": 4,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP MORGAN GRIFFITH",
+        "recipient": "REP EMANUEL CLEAVER II",
         "items": 5,
         "total": 20000.0
       },
       {
-        "recipient": "REP BRAD FINSTAD",
+        "recipient": "SEN MARKWAYNE MULLIN",
+        "items": 4,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP JIM JORDAN",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP JARED MOSKOWITZ",
         "items": 4,
         "total": 20000.0
       },
@@ -847,27 +857,12 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP PETE AGUILAR",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "KWEISI MFUME",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP WILLIAM TIMMONS IV",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
-        "recipient": "REP CHRIS PAPPAS",
-        "items": 5,
-        "total": 20000.0
-      },
-      {
         "recipient": "REP MARIO DIAZBALART",
+        "items": 5,
+        "total": 20000.0
+      },
+      {
+        "recipient": "REP JAKE LATURNER",
         "items": 5,
         "total": 20000.0
       },
@@ -877,9 +872,9 @@
         "total": 20000.0
       },
       {
-        "recipient": "REP TOM MCCLINTOCK",
+        "recipient": "REP PETE AGUILAR",
         "items": 5,
-        "total": 18900.0
+        "total": 20000.0
       },
       {
         "recipient": "REP DAVE JOYCE",
@@ -887,27 +882,12 @@
         "total": 18900.0
       },
       {
-        "recipient": "REP JODEY ARRINGTON",
-        "items": 4,
-        "total": 17900.0
+        "recipient": "REP TOM MCCLINTOCK",
+        "items": 5,
+        "total": 18900.0
       },
       {
-        "recipient": "REP DOUG LAMALFA",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP RICK CRAWFORD",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP MIKE KELLY JR",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP GLENN THOMPSON JR",
+        "recipient": "REP BRETT GUTHRIE",
         "items": 4,
         "total": 17900.0
       },
@@ -917,137 +897,7 @@
         "total": 17900.0
       },
       {
-        "recipient": "REP JOSH HARDER",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BARRY MOORE",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP FRENCH HILL",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP FRANK MRVAN",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP RAUL RUIZ",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP LOU CORREA",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP RANDY FEENSTRA",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP ADRIAN SMITH",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP SANFORD D BISHOP JR",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BRUCE WESTERMAN",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP PETE SESSIONS",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BARRY LOUDERMILK",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP JAMES COMER JR",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP RUSS FULCHER",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP DAVID VALADAO",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP LINDA SANCHEZ",
-        "items": 5,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP JULIA BROWNLEY",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP TERRI SEWELL",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BRAD WENSTRUP",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BUDDY CARTER",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BRETT GUTHRIE",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP MARK AMODEI",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP MICHAEL GUEST",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP NEAL DUNN",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP BETH VAN DUYNE",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP MICHELLE STEEL",
-        "items": 4,
-        "total": 17900.0
-      },
-      {
-        "recipient": "REP JIMMY GOMEZ",
+        "recipient": "REP RICK CRAWFORD",
         "items": 4,
         "total": 17900.0
       },
@@ -1057,7 +907,27 @@
         "total": 17900.0
       },
       {
+        "recipient": "REP TERRI SEWELL",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
         "recipient": "REP TRENT KELLY",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BUDDY CARTER",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP JIMMY GOMEZ",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BARRY LOUDERMILK",
         "items": 4,
         "total": 17900.0
       },
@@ -1067,14 +937,134 @@
         "total": 17900.0
       },
       {
-        "recipient": "REP BRIAN HIGGINS",
-        "items": 5,
-        "total": 17100.0
+        "recipient": "REP PETE SESSIONS",
+        "items": 4,
+        "total": 17900.0
       },
       {
-        "recipient": "REP STENY HOYER",
+        "recipient": "REP JOSH HARDER",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP SANFORD D BISHOP JR",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP FRENCH HILL",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BETH VAN DUYNE",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BRAD WENSTRUP",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP MICHELLE STEEL",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP MARK AMODEI",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP DOUG LAMALFA",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BRUCE WESTERMAN",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP RUSS FULCHER",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP BARRY MOORE",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP FRANK MRVAN",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP MICHAEL GUEST",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP RAUL RUIZ",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP JAMES COMER JR",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP JULIA BROWNLEY",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP LINDA SANCHEZ",
         "items": 5,
-        "total": 17100.0
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP JODEY ARRINGTON",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP GLENN THOMPSON JR",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP MIKE KELLY JR",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP NEAL DUNN",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP LOU CORREA",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP ADRIAN SMITH",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP DAVID VALADAO",
+        "items": 4,
+        "total": 17900.0
+      },
+      {
+        "recipient": "REP RANDY FEENSTRA",
+        "items": 4,
+        "total": 17900.0
       },
       {
         "recipient": "REP MARIA SALAZAR",
@@ -1087,9 +1077,24 @@
         "total": 17100.0
       },
       {
+        "recipient": "REP STENY HOYER",
+        "items": 5,
+        "total": 17100.0
+      },
+      {
+        "recipient": "REP BRIAN HIGGINS",
+        "items": 5,
+        "total": 17100.0
+      },
+      {
         "recipient": "REP JOHN LARSON",
         "items": 5,
         "total": 17000.0
+      },
+      {
+        "recipient": "REP ANN WAGNER",
+        "items": 5,
+        "total": 16500.0
       },
       {
         "recipient": "REP GABE AMO JR",
@@ -1097,9 +1102,9 @@
         "total": 16500.0
       },
       {
-        "recipient": "REP ANN WAGNER",
-        "items": 5,
-        "total": 16500.0
+        "recipient": "REP KEITH SELF",
+        "items": 4,
+        "total": 16000.0
       },
       {
         "recipient": "REP JOE COURTNEY",
@@ -1112,123 +1117,23 @@
         "total": 16000.0
       },
       {
-        "recipient": "REP KEITH SELF",
-        "items": 4,
-        "total": 16000.0
-      },
-      {
-        "recipient": "REP GREG LANDSMAN",
+        "recipient": "REP NICK LANGWORTHY",
         "items": 3,
         "total": 15000.0
       },
       {
-        "recipient": "REP BLAINE LUETKEMEYER",
-        "items": 5,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP NATHANIEL MORAN",
+        "recipient": "REP DEBORAH ROSS",
         "items": 3,
         "total": 15000.0
       },
       {
-        "recipient": "REP BRITTANY PETTERSEN",
-        "items": 5,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP BURGESS OWENS",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "NRSC",
-        "items": 1,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP GREGORY MEEKS",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP WESLEY HUNT",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP CARLOS GIMENEZ",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP LORI CHAVEZDEREMER",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP STEVE SCALISE",
+        "recipient": "REP TRACEY MANN",
         "items": 4,
         "total": 15000.0
       },
       {
         "recipient": "REP GARY PALMER",
         "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP NICK LANGWORTHY",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP NICK LALOTA",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP DAN CRENSHAW",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "SEN AMY KLOBUCHAR",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP TIM BURCHETT",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP RICH MCCORMICK",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP DON BACON",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP ANDY BARR IV",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP ERIN HOUCHIN",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP MONICA DE LA CRUZ",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP JONATHAN JACKSON",
-        "items": 3,
         "total": 15000.0
       },
       {
@@ -1242,112 +1147,22 @@
         "total": 15000.0
       },
       {
-        "recipient": "REP DEBORAH ROSS",
+        "recipient": "REP JONATHAN JACKSON",
         "items": 3,
         "total": 15000.0
       },
       {
-        "recipient": "REP DEREK L SCHMIDT",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP CHRISSY HOULAHAN",
+        "recipient": "REP DON BACON",
         "items": 4,
         "total": 15000.0
       },
       {
-        "recipient": "REP MICHAEL RULLI",
-        "items": 3,
+        "recipient": "REP BRITTANY PETTERSEN",
+        "items": 5,
         "total": 15000.0
       },
       {
-        "recipient": "REP TOM TIFFANY",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP TRACEY MANN",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP DAN GOLDMAN",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "SEN TED CRUZ",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "SEN TOM COTTON",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP TROY CARTER",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP CHRIS SMITH",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP DEBBIE LESKO",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP ERIC SWALWELL",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP ROBERT B ADERHOLT",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP ROB MENENDEZ",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP LAUREL LEE",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP SETH MAGAZINER",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "SEN RICK SCOTT",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP JASON SMITH",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP HAL ROGERS",
-        "items": 4,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP TOM SUOZZI",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "SEN DEB FISCHER",
+        "recipient": "REP BRIAN T JACK",
         "items": 3,
         "total": 15000.0
       },
@@ -1357,17 +1172,17 @@
         "total": 15000.0
       },
       {
-        "recipient": "REP BRIAN T JACK",
-        "items": 3,
-        "total": 15000.0
-      },
-      {
-        "recipient": "REP CLAY HIGGINS",
+        "recipient": "REP HAL ROGERS",
         "items": 4,
         "total": 15000.0
       },
       {
-        "recipient": "REP BRANDON WILLIAMS",
+        "recipient": "REP LAUREL LEE",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP DERRICK VAN ORDEN",
         "items": 3,
         "total": 15000.0
       },
@@ -1382,17 +1197,122 @@
         "total": 15000.0
       },
       {
-        "recipient": "REP MARLIN A STUTZMAN",
+        "recipient": "REP TIM BURCHETT",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP JASON SMITH",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "SEN AMY KLOBUCHAR",
         "items": 3,
         "total": 15000.0
       },
       {
-        "recipient": "REP DERRICK VAN ORDEN",
+        "recipient": "REP MICHAEL RULLI",
         "items": 3,
         "total": 15000.0
       },
       {
-        "recipient": "REP SETH MOULTON",
+        "recipient": "REP DEREK L SCHMIDT",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP ANDY BARR IV",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP DAN GOLDMAN",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP NICK LALOTA",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP ERIC SWALWELL",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "SEN RICK SCOTT",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP BURGESS OWENS",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP NATHANIEL MORAN",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP CHRIS SMITH",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "SEN TOM COTTON",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP ERIN HOUCHIN",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP BLAINE LUETKEMEYER",
+        "items": 5,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP CHRISSY HOULAHAN",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP TOM TIFFANY",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP MONICA DE LA CRUZ",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "SEN DEB FISCHER",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP GREG LANDSMAN",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP RICH MCCORMICK",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP TROY CARTER",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP DAN CRENSHAW",
         "items": 3,
         "total": 15000.0
       },
@@ -1402,9 +1322,99 @@
         "total": 15000.0
       },
       {
+        "recipient": "REP DEBBIE LESKO",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP TOM SUOZZI",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "SEN TED CRUZ",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP ROBERT B ADERHOLT",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "NRSC",
+        "items": 1,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP ROB MENENDEZ",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP GREGORY MEEKS",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP SETH MOULTON",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP WESLEY HUNT",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP CARLOS GIMENEZ",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP STEVE SCALISE",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP LORI CHAVEZDEREMER",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP BRANDON WILLIAMS",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP MARLIN A STUTZMAN",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP CLAY HIGGINS",
+        "items": 4,
+        "total": 15000.0
+      },
+      {
+        "recipient": "REP SETH MAGAZINER",
+        "items": 3,
+        "total": 15000.0
+      },
+      {
         "recipient": "REP BILL POSEY",
         "items": 5,
         "total": 13900.0
+      },
+      {
+        "recipient": "REP SHARICE DAVIDS",
+        "items": 3,
+        "total": 12900.0
+      },
+      {
+        "recipient": "REP SHEILA JACKSON LEE",
+        "items": 3,
+        "total": 12900.0
       },
       {
         "recipient": "GLENN IVEY",
@@ -1417,12 +1427,7 @@
         "total": 12900.0
       },
       {
-        "recipient": "REP BILL JOHNSON",
-        "items": 3,
-        "total": 12900.0
-      },
-      {
-        "recipient": "REP SHEILA JACKSON LEE",
+        "recipient": "REP AMI BERA",
         "items": 3,
         "total": 12900.0
       },
@@ -1432,17 +1437,12 @@
         "total": 12900.0
       },
       {
-        "recipient": "REP AMI BERA",
+        "recipient": "REP BILL JOHNSON",
         "items": 3,
         "total": 12900.0
       },
       {
         "recipient": "REP BILL PASCRELL JR",
-        "items": 3,
-        "total": 12900.0
-      },
-      {
-        "recipient": "REP SHARICE DAVIDS",
         "items": 3,
         "total": 12900.0
       },
@@ -1457,6 +1457,11 @@
         "total": 12100.0
       },
       {
+        "recipient": "REP YVETTE D CLARKE",
+        "items": 4,
+        "total": 11000.0
+      },
+      {
         "recipient": "REP HILLARY SCHOLTEN",
         "items": 3,
         "total": 11000.0
@@ -1464,11 +1469,6 @@
       {
         "recipient": "REP ERIC BURLISON",
         "items": 3,
-        "total": 11000.0
-      },
-      {
-        "recipient": "REP YVETTE D CLARKE",
-        "items": 4,
         "total": 11000.0
       },
       {
@@ -1492,308 +1492,13 @@
         "total": 10500.0
       },
       {
-        "recipient": "REP CATHY MCMORRIS RODGERS",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "CHUCK EDWARDS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MAGGIE GOODLANDER",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP KEVIN MULLIN",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JUAN CISCOMANI",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MICHAEL HARIDOPOLOS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MARIANNETTE MILLERMEEKS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "JOHN MCGUIRE",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "STEVEN M WELLS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MICHAEL S KENNEDY",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JOHN DUARTE",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP KEN BUCK",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN JOSH HAWLEY",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP SARAH MCBRIDE",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP DALE W STRONG",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP NANCY PELOSI",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MIKE GALLAGHER",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP CARLOS A GIMENEZ",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN JOHN CORNYN III",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP ERIC SORENSEN",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP DALE STRONG",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JEN KIGGANS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP SHRI THANEDAR",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JARED EVAN MOSKOWITZ",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP RICHARD NEAL",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JAIME HERRERA BEUTLER",
-        "items": 4,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JIM BANKS",
+        "recipient": "REP MARY SATTLER PELTOLA",
         "items": 3,
         "total": 10000.0
       },
       {
         "recipient": "REP JENNIFER MCCLELLAN",
         "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN KEVIN CRAMER",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP CHRIS STEWART",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JEFFERSON SHREVE",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MICHAEL BAUMGARTNER",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP KATHY MANNING",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MARIA ELVIRA SALAZAR",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "LUZ RIVAS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP GREGORY W MEEKS",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MIKE FLOOD",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP RICHARD D MCCORMICK",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP ANTHONY DESPOSITO",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JERRY L CARL JR",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP A DONALD MCEACHIN",
-        "items": 4,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP TIMOTHY M KENNEDY",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MORGAN LUTTRELL",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP ADDISON MCDOWELL",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN KIRSTEN GILLIBRAND",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP ANNA PAULINA LUNA",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JIMMY PATRONIS JR",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP APRIL MCCLAIN DELANEY",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP CLIFF BENTZ",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP NANETTE DIAZ BARRAGAN",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JOHN JAMES",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN MARSHA BLACKBURN",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN JON TESTER",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "SEN BOB CASEY",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP TONY CARDENAS",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP JAMES E CLYBURN",
-        "items": 5,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP ANDREA SALINAS",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP SCOTT DESJARLAIS",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP SUSAN WILD",
-        "items": 3,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP WILEY NICKEL",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP MARY SATTLER PELTOLA",
-        "items": 3,
         "total": 10000.0
       },
       {
@@ -1807,7 +1512,17 @@
         "total": 10000.0
       },
       {
-        "recipient": "REP LIZZIE FLETCHER",
+        "recipient": "REP DEREK SCHMIDT",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP CLIFF BENTZ",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP KEVIN MULLIN",
         "items": 2,
         "total": 10000.0
       },
@@ -1817,12 +1532,127 @@
         "total": 10000.0
       },
       {
-        "recipient": "SEN JACKY ROSEN",
+        "recipient": "REP RICHARD D MCCORMICK",
         "items": 2,
         "total": 10000.0
       },
       {
-        "recipient": "BRIAN JACK",
+        "recipient": "REP MARC MOLINARO",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP SHRI THANEDAR",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP ANNA PAULINA LUNA",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JERRY L CARL JR",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP KAY GRANGER",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP ADDISON MCDOWELL",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "MIKE FLOOD",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MARIANNETTE MILLERMEEKS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP ANTHONY DESPOSITO",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP A DONALD MCEACHIN",
+        "items": 4,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP GREGORY W MEEKS",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JEFFERSON SHREVE",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN JOHN CORNYN III",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MIKE GALLAGHER",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JUAN CISCOMANI",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN KEVIN CRAMER",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JOHN JAMES",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JOHN DUARTE",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN KIRSTEN GILLIBRAND",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MAX MILLER",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP KATHY MANNING",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "LUZ RIVAS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "TIM MOORE",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP ERIC SORENSEN",
         "items": 2,
         "total": 10000.0
       },
@@ -1832,27 +1662,72 @@
         "total": 10000.0
       },
       {
-        "recipient": "REP FRANK LUCAS",
+        "recipient": "REP MICHAEL HARIDOPOLOS",
         "items": 2,
         "total": 10000.0
       },
       {
-        "recipient": "REP RICHARD HUDSON",
+        "recipient": "REP MARIA ELVIRA SALAZAR",
         "items": 2,
         "total": 10000.0
       },
       {
-        "recipient": "REP HARRIET HAGEMAN",
+        "recipient": "BRIAN JACK",
         "items": 2,
         "total": 10000.0
       },
       {
-        "recipient": "REP LORI TRAHAN",
+        "recipient": "REP CATHY MCMORRIS RODGERS",
         "items": 3,
         "total": 10000.0
       },
       {
-        "recipient": "REP MAX MILLER",
+        "recipient": "REP HAKEEM JEFFRIES",
+        "items": 4,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN BOB CASEY",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN MARSHA BLACKBURN",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN JOSH HAWLEY",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP DALE STRONG",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP TONY CARDENAS",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JIMMY PATRONIS JR",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MORGAN LUTTRELL",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP DALE W STRONG",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP VINCE FONG",
         "items": 2,
         "total": 10000.0
       },
@@ -1867,52 +1742,67 @@
         "total": 10000.0
       },
       {
-        "recipient": "REP BOB ONDER",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP VINCE FONG",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP DEREK SCHMIDT",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP KAY GRANGER",
+        "recipient": "REP NANCY PELOSI",
         "items": 3,
         "total": 10000.0
       },
       {
-        "recipient": "REP MARC MOLINARO",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "TIM MOORE",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "CRAIG GOLDMAN",
-        "items": 2,
-        "total": 10000.0
-      },
-      {
-        "recipient": "REP HAKEEM JEFFRIES",
-        "items": 4,
-        "total": 10000.0
-      },
-      {
-        "recipient": "MIKE FLOOD",
+        "recipient": "REP RICHARD NEAL",
         "items": 3,
         "total": 10000.0
       },
       {
-        "recipient": "REP SHERI BIGGS",
+        "recipient": "REP SARAH MCBRIDE",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN JACKY ROSEN",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP WILEY NICKEL",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP CARLOS A GIMENEZ",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP LIZZIE FLETCHER",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP ANDREA SALINAS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP RICHARD HUDSON",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP FRANK LUCAS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JEN KIGGANS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MICHAEL S KENNEDY",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP HARRIET HAGEMAN",
         "items": 2,
         "total": 10000.0
       },
@@ -1922,8 +1812,118 @@
         "total": 10000.0
       },
       {
+        "recipient": "CHUCK EDWARDS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JARED EVAN MOSKOWITZ",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP NANETTE DIAZ BARRAGAN",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP TIMOTHY M KENNEDY",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JIM BANKS",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP SHERI BIGGS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP CHRIS STEWART",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "SEN JON TESTER",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
         "recipient": "REP TOM OHALLERAN",
         "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MICHAEL BAUMGARTNER",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP SUSAN WILD",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP LORI TRAHAN",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP KEN BUCK",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MIKE FLOOD",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "JOHN MCGUIRE",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP APRIL MCCLAIN DELANEY",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP SCOTT DESJARLAIS",
+        "items": 3,
+        "total": 10000.0
+      },
+      {
+        "recipient": "STEVEN M WELLS",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP MAGGIE GOODLANDER",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "CRAIG GOLDMAN",
+        "items": 2,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JAMES E CLYBURN",
+        "items": 5,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP JAIME HERRERA BEUTLER",
+        "items": 4,
+        "total": 10000.0
+      },
+      {
+        "recipient": "REP BOB ONDER",
+        "items": 2,
         "total": 10000.0
       },
       {
@@ -1937,27 +1937,7 @@
         "total": 9000.0
       },
       {
-        "recipient": "REP DIANA DEGETTE",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
         "recipient": "REP GRACE F NAPOLITANO",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP LIZZIE PANNILL FLETCHER",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP LARRY BUCSHON",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP CINDY AXNE",
         "items": 2,
         "total": 7900.0
       },
@@ -1967,12 +1947,7 @@
         "total": 7900.0
       },
       {
-        "recipient": "REP TERESA LEGER FERNANDEZ",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP STEVE CHABOT",
+        "recipient": "REP DAN BISHOP",
         "items": 2,
         "total": 7900.0
       },
@@ -1982,52 +1957,12 @@
         "total": 7900.0
       },
       {
-        "recipient": "REP CHRIS H SMITH",
+        "recipient": "REP DIANA DEGETTE",
         "items": 2,
         "total": 7900.0
       },
       {
-        "recipient": "REP GREG PENCE",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP JACKIE WALORSKI",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "KEVIN MULLIN",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "DON DAVIS",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP DAN BISHOP",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP MATT ROSENDALE SR",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "REP MIKIE SHERRILL",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "MORGAN MCGARVEY",
-        "items": 2,
-        "total": 7900.0
-      },
-      {
-        "recipient": "JEFF JACKSON",
+        "recipient": "REP LARRY BUCSHON",
         "items": 2,
         "total": 7900.0
       },
@@ -2037,12 +1972,57 @@
         "total": 7900.0
       },
       {
+        "recipient": "REP CINDY AXNE",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP RALPH NORMAN JR",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP RICHARD HUDSON JR",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
         "recipient": "MARIANNETTE JANE MILLERMEEKS",
         "items": 2,
         "total": 7900.0
       },
       {
-        "recipient": "ROBERT GARCIA",
+        "recipient": "REP CHRIS H SMITH",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "MORGAN MCGARVEY",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP MATT ROSENDALE SR",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "DON DAVIS",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP LIZZIE PANNILL FLETCHER",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "KEVIN MULLIN",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP TERESA LEGER FERNANDEZ",
         "items": 2,
         "total": 7900.0
       },
@@ -2052,9 +2032,804 @@
         "total": 7900.0
       },
       {
+        "recipient": "REP JACKIE WALORSKI",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP JERRY NADLER",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP DEBORAH K ROSS",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "JEFF JACKSON",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "ROBERT GARCIA",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP MIKIE SHERRILL",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP YVETTE HERRELL",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP TROY NEHLS",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
         "recipient": "REP JEFF D DUNCAN",
         "items": 2,
         "total": 7900.0
+      },
+      {
+        "recipient": "REP STEVE CHABOT",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP GREG PENCE",
+        "items": 2,
+        "total": 7900.0
+      },
+      {
+        "recipient": "REP DUTCH RUPPERSBERGER III",
+        "items": 4,
+        "total": 7600.0
+      },
+      {
+        "recipient": "SEN MICHAEL BENNET",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN PATTY MURRAY",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN MIKE LEE",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "REP ELAINE LURIA",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN RON WYDEN",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "REP ROSA L DELAURO",
+        "items": 2,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN TAMMY DUCKWORTH",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN JOHN KENNEDY",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "SEN JAMES LANKFORD",
+        "items": 3,
+        "total": 7100.0
+      },
+      {
+        "recipient": "JOHN ANTHONY OLSZEWSKI JR",
+        "items": 2,
+        "total": 6000.0
+      },
+      {
+        "recipient": "REP PATRICK MCHENRY",
+        "items": 3,
+        "total": 6000.0
+      },
+      {
+        "recipient": "REP SUZANNE BONAMICI",
+        "items": 2,
+        "total": 6000.0
+      },
+      {
+        "recipient": "REP RYAN K ZINKE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "EMILY RANDALL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MARK KELLY",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "MORGAN JOE LUTTRELL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CORY BOOKER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "THOMAS H KEAN JR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN SHELLEY MOORE CAPITO",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP PETER MEIJER",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP ABRAHAM HAMADEH",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JOHN BOOZMAN",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP CHRIS DELUZIO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP SHOMARI C FIGURES",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP GEORGE S LATIMER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP TIM MOORE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP DAVID CICILLINE",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP ANTHONY P DESPOSITO",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP NELLIE POU",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP ROB BRESNAHAN JR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP LAURA A GILLEN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN ANGUS KING JR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "DANIEL HERNANDEZ",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MORGAN MCGARVEY",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "PATRICK RYAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "NATHANIEL QUENTIN MORAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP THOMAS SUOZZI",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP NIKKI BUDZINSKI",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP VALERIE FOUSHEE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP WESLEY BELL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN KATIE BRITT",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP RODNEY DAVIS",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP BRAD KNOTT",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP CORY MILLS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "LAURA FRIEDMAN",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP KWEISI MFUME",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "HERB CONAWAY MD",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN RON JOHNSON",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MARK MESSMER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN ADAM SCHIFF",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "GEORGE LATIMER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SARAH KELLY ELFRETH",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JAMES E RISCH",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN LINDSEY GRAHAM",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JEFF CRANK",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "RYAN EDWARD MACKENZIE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN RICHARD BLUMENTHAL",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "JENNIFER MCCLELLAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MAGGIE HASSAN",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP TONY WIED",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "GILBERT CISNEROS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP SEAN PATRICK MALONEY",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP DAVID TAYLOR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP DREW FERGUSON IV",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP LAUREL M LEE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JILL N TOKUDA",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JERRY MORAN",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MATT VAN EPPS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MARCO RUBIO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP PAT HARRIGAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN LISA MURKOWSKI",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CHUCK GRASSLEY",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JOHNNY OLSZEWSKI JR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "ERIC BURLISON",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP PATRICK HARRIGAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CINDY HYDESMITH",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "ADAM HOLLIER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP GILBERT R CISNEROS JR",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SUHAS SUBRAMANYAM",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MAX L MILLER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP SYLVESTER TURNER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "RILEY MOORE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SYDNEY KAMLAGER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN PETE RICKETTS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN SUSAN COLLINS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN ALEX PADILLA",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MIKE ROUNDS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "PAT HARRIGAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MIKE COLLINS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP ALEX MOONEY",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JOHN THUNE",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "KATIE BOYD BRITT",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN BOB MENENDEZ",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JOHN HOEVEN III",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP MARK E HARRIS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP RILEY M MOORE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP LUZ RIVAS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP LIZ CHENEY",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CATHERINE CORTEZ MASTO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JULIE FEDORCHAK",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CHRIS COONS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JOSH RILEY",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN TIM SCOTT",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN JOHN A BARRASSO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "MARK E HARRIS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN TODD C YOUNG",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP HARRIET M HAGEMAN",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN ROGER MARSHALL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP RANDY FINE",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MARK R WARNER",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP DANIEL CRENSHAW",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP DEREK KILMER",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "JULIE JOHNSON",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP RUBEN GALLEGO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN CHUCK SCHUMER",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP TROY E NEHLS",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP KEVIN MCCARTHY",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "MR WESLEY BELL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JERRY L CARL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "SEN MIKE CRAPO",
+        "items": 2,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP RICHARD E NEAL",
+        "items": 1,
+        "total": 5000.0
+      },
+      {
+        "recipient": "REP JOHN A OLSZEWSKI JR",
+        "items": 1,
+        "total": 4000.0
+      },
+      {
+        "recipient": "REP TED DEUTCH",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP TOM RICE JR",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP VERONICA ESCOBAR",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP MADELEINE DEAN",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP AL LAWSON",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP JAHANA HAYES",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP SAM GRAVES JR",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP DAVID TRONE",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "NICHOLAS VANCAMPEN TAYLOR",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "SEN BRITTANY LOUISE PETTERSEN",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP TOM MALINOWSKI",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "STEVEN IRWIN",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "WESLEY HUNT",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP KURT SCHRADER",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP CHRIS JACOBS",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP BOB GIBBS",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP ROSA DELAURO",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP STEVEN PALAZZO",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP ANTONIO DELGADO",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP CAROLYN B MALONEY",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP SALUD CARBAJAL",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP ELISSA SLOTKIN",
+        "items": 1,
+        "total": 2900.0
+      },
+      {
+        "recipient": "REP MARK E GREEN",
+        "items": 1,
+        "total": 2100.0
+      },
+      {
+        "recipient": "BRANDON GILL",
+        "items": 1,
+        "total": 1000.0
+      },
+      {
+        "recipient": "GRACE MENG",
+        "items": 1,
+        "total": 500.0
+      },
+      {
+        "recipient": "DREW TEITLEBAUM",
+        "items": 1,
+        "total": 50.0
       }
     ],
     "per_entity": [
@@ -2066,15 +2841,6 @@
     ],
     "sample": [
       {
-        "record_key": "cc8a5e3d-a03e-42d7-8de6-e84eece6cb4d",
-        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
-        "filer_type": "organization",
-        "contribution_type": "feca",
-        "amount": 15000,
-        "recipient": "Sen Dan Sullivan",
-        "date": "2024-07-29"
-      },
-      {
         "record_key": "7a696278-c67b-49a6-9372-1f35e271bed2",
         "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
         "filer_type": "organization",
@@ -2084,15 +2850,6 @@
         "date": "2023-02-27"
       },
       {
-        "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
-        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
-        "filer_type": "organization",
-        "contribution_type": "feca",
-        "amount": 15000,
-        "recipient": "NRCC",
-        "date": "2024-01-07"
-      },
-      {
         "record_key": "7a696278-c67b-49a6-9372-1f35e271bed2",
         "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
         "filer_type": "organization",
@@ -2102,13 +2859,13 @@
         "date": "2023-02-27"
       },
       {
-        "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
+        "record_key": "7a696278-c67b-49a6-9372-1f35e271bed2",
         "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
         "filer_type": "organization",
         "contribution_type": "feca",
         "amount": 15000,
-        "recipient": "DSCC",
-        "date": "2024-01-07"
+        "recipient": "Sen Dan Sullivan",
+        "date": "2023-02-27"
       },
       {
         "record_key": "7a696278-c67b-49a6-9372-1f35e271bed2",
@@ -2125,17 +2882,8 @@
         "filer_type": "organization",
         "contribution_type": "feca",
         "amount": 15000,
-        "recipient": "DCCC",
+        "recipient": "NRCC",
         "date": "2024-01-07"
-      },
-      {
-        "record_key": "7a696278-c67b-49a6-9372-1f35e271bed2",
-        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
-        "filer_type": "organization",
-        "contribution_type": "feca",
-        "amount": 15000,
-        "recipient": "Sen Dan Sullivan",
-        "date": "2023-02-27"
       },
       {
         "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
@@ -2152,9 +2900,37 @@
         "filer_type": "organization",
         "contribution_type": "feca",
         "amount": 15000,
+        "recipient": "DSCC",
+        "date": "2024-01-07"
+      },
+      {
+        "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
+        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 15000,
+        "recipient": "DCCC",
+        "date": "2024-01-07"
+      },
+      {
+        "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
+        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 15000,
         "recipient": "DCCC",
         "date": "2024-01-18"
+      },
+      {
+        "record_key": "01464a23-2609-4510-9111-81562b6b9e6a",
+        "registrant_name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE",
+        "filer_type": "organization",
+        "contribution_type": "feca",
+        "amount": 15000,
+        "recipient": "DSCC",
+        "date": "2024-01-18"
       }
-    ]
+    ],
+    "member_rollup": null
   }
 }

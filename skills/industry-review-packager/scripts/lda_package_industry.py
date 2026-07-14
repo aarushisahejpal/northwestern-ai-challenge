@@ -984,6 +984,7 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                 "trend": trend, "trendFilings": trend_filings, "scatter": scatter,
                 "keywords": keywords, "registrants": registrants, "press": press,
                 "pressReleases": press_releases, "caveats": sp["caveats"],
+                "findings": sp.get("findings", []),
                 "copy": sp.get("copy", {}),
                 "classes": classes["names"] if classes else None,
                 "classSlots": classes.get("slots") if classes else None}

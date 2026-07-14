@@ -57,6 +57,7 @@ crypto — is code-visible, so the issue-code lens is primary here.
 | `data/hc_ld203_member_variant_audit.csv` | **QA audit trail for the member merge**: every raw recipient string that rolled into each member row, per slice |
 | `data/hc_ld203_*.csv` | Disclosed giving: by org, recipients, by year |
 | `data/hc_record_samples_qa.csv` | Spot-check anchors with `show_record.py` keys |
+| `data/hc_player_filings.csv`, `hc_trend_filings.csv`, `hc_code_trend_filings.csv`, `hc_press_releases.csv`, `hc_bill_filings.csv`, `hc_giving_org_items.csv`, `hc_giving_recipient_items.csv` | **Raw-record indexes** behind every dashboard widget's click-through (each row links to the filing/contribution on lda.senate.gov); the dashboard embeds a capped sample (top 150 by $ per bucket) — these CSVs carry the full lists |
 
 ## How to QA a number
 

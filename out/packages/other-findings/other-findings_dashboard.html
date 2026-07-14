@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leads Not Yet in a Package</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--page); color: var(--ink-1);
+  padding: 28px 20px 60px; line-height: 1.45;
+}
+.viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+  --seq-250: #86b6ef; --seq-400: #3987e5; --seq-550: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  .viz-root {
+    --page: #0d0d0d; --surface-1: #1a1a19;
+    --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+    --grid: #2c2c2a; --baseline: #383835;
+    --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+    --s5: #9085e9; --s6: #e66767;
+    --deemph: #4a4a46;
+  }
+}
+:root[data-theme="light"] .viz-root {
+  --page: #f9f9f7; --surface-1: #fcfcfb;
+  --ink-1: #0b0b0b; --ink-2: #52514e; --ink-3: #898781;
+  --grid: #e1e0d9; --baseline: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --s1: #2a78d6; --s2: #1baf7a; --s3: #eda100; --s4: #008300;
+  --s5: #4a3aa7; --s6: #e34948;
+  --deemph: #c9c8c0;
+}
+:root[data-theme="dark"] .viz-root {
+  --page: #0d0d0d; --surface-1: #1a1a19;
+  --ink-1: #ffffff; --ink-2: #c3c2b7; --ink-3: #898781;
+  --grid: #2c2c2a; --baseline: #383835;
+  --border: rgba(255,255,255,0.10);
+  --s1: #3987e5; --s2: #199e70; --s3: #c98500; --s4: #008300;
+  --s5: #9085e9; --s6: #e66767;
+  --deemph: #4a4a46;
+}
+:root[data-theme="light"] body, :root[data-theme="dark"] body { background: var(--page); }
+
+.wrap { max-width: 1060px; margin: 0 auto; }
+header.page { margin-bottom: 22px; }
+header.page h1 { font-size: 24px; font-weight: 650; letter-spacing: -0.01em; }
+header.page .sub { color: var(--ink-2); margin-top: 6px; max-width: 78ch; font-size: 14px; }
+header.page .meta { color: var(--ink-3); margin-top: 6px; font-size: 12px; }
+.theme-toggle {
+  float: right; font: inherit; font-size: 12px; color: var(--ink-2);
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+  padding: 5px 10px; cursor: pointer;
+}
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 18px 0 8px; }
+.tile {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 14px 16px;
+}
+.tile .lbl { font-size: 12px; color: var(--ink-2); }
+.tile .val { font-size: 26px; font-weight: 600; margin-top: 3px; }
+.tile .note { font-size: 11.5px; color: var(--ink-3); margin-top: 4px; }
+.card {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 18px 12px; margin: 16px 0;
+}
+.card h2 { font-size: 15.5px; font-weight: 650; }
+.card .sub { font-size: 12.5px; color: var(--ink-2); margin: 3px 0 4px; max-width: 90ch; }
+.card .foot { font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 8px 0 2px; font-size: 12px; color: var(--ink-2); }
+.legend .key { display: inline-flex; align-items: center; gap: 6px; }
+.legend .sw-rect { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+.legend .sw-line { width: 16px; height: 3px; border-radius: 2px; display: inline-block; }
+.chart-box { position: relative; }
+.chart-box svg { display: block; width: 100%; height: auto; }
+svg text { font-family: inherit; }
+.ax { font-size: 11px; fill: var(--ink-3); }
+.ax-tab { font-variant-numeric: tabular-nums; }
+.gridline { stroke: var(--grid); stroke-width: 1; }
+.baseline { stroke: var(--baseline); stroke-width: 1; }
+.dlabel { font-size: 11px; fill: var(--ink-2); }
+.dlabel-strong { font-size: 11.5px; font-weight: 600; fill: var(--ink-1); }
+.blabel { font-size: 11px; pointer-events: none; }
+.crosshair { stroke: var(--baseline); stroke-width: 1; }
+.tt {
+  position: fixed; z-index: 40; pointer-events: none; display: none;
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13); padding: 9px 11px; font-size: 12px;
+  max-width: 320px;
+}
+.tt .tt-title { color: var(--ink-3); font-size: 11px; margin-bottom: 5px; }
+.tt .row { display: flex; align-items: center; gap: 7px; margin-top: 3px; }
+.tt .k { width: 14px; height: 3px; border-radius: 2px; flex: none; }
+.tt .v { font-weight: 650; font-variant-numeric: tabular-nums; }
+.tt .n { color: var(--ink-2); }
+details.tv { margin-top: 8px; }
+details.tv summary { font-size: 12px; color: var(--ink-2); cursor: pointer; }
+details.tv .scroll { overflow-x: auto; margin-top: 8px; }
+table.dt { border-collapse: collapse; font-size: 12px; min-width: 480px; }
+table.dt th, table.dt td { text-align: left; padding: 5px 12px 5px 0; border-bottom: 1px solid var(--grid); }
+table.dt td.num, table.dt th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.dt th { color: var(--ink-2); font-weight: 600; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 860px) { .two-col { grid-template-columns: 1fr; } }
+.caveats { font-size: 12.5px; color: var(--ink-2); }
+.caveats li { margin: 4px 0 4px 18px; }
+footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
+
+/* open-findings card (ledger leads touching this package, shown for human review) */
+.finding-item { padding: 9px 0; border-top: 1px solid var(--border); font-size: 13px; }
+.finding-item:first-of-type { border-top: none; padding-top: 0; }
+.finding-item strong { display: block; margin-bottom: 3px; }
+.finding-item .note { margin-top: 2px; }
+
+/* per-player raw-filings panel (crypto player map click-through) */
+.filings-panel {
+  font-size: 12.5px; color: var(--ink-2); margin: 10px 0 4px;
+  padding: 10px 12px; background: var(--page); border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.filings-panel strong { color: var(--ink-1); font-size: 13px; }
+.filings-scroll { max-height: 260px; overflow-y: auto; overflow-x: hidden; margin-top: 8px; }
+.filings-group { font-weight: 600; color: var(--ink-1); font-size: 12px; margin: 8px 0 2px; }
+.filings-group:first-child { margin-top: 0; }
+.filings-list { margin: 0; padding-left: 18px; }
+.filings-list li { margin: 1.5px 0; }
+.filings-list a { color: var(--ink-1); text-decoration: underline; text-underline-offset: 2px; }
+.filings-list a:hover { color: var(--ink-2); }
+.filings-panel .note { font-size: 11px; color: var(--ink-3); margin-top: 7px; }
+
+/* per-widget "more options" → query-info panel */
+.has-more { position: relative; }
+.more-btn {
+  position: absolute; top: 10px; right: 10px; width: 28px; height: 22px;
+  line-height: 1; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--surface-1); color: var(--ink-2); cursor: pointer;
+  opacity: 0; transition: opacity .12s; font-size: 14px; padding: 0; z-index: 20;
+}
+.has-more:hover .more-btn, .more-btn:focus-visible,
+.more-btn[aria-expanded="true"] { opacity: 1; }
+.more-menu {
+  position: absolute; top: 34px; right: 10px; z-index: 30;
+  background: var(--surface-1); border: 1px solid var(--border);
+  border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,.14); padding: 4px;
+}
+.more-item {
+  display: block; width: 100%; text-align: left; background: none; border: none;
+  padding: 6px 12px; font-size: 12.5px; color: var(--ink-1); cursor: pointer;
+  border-radius: 5px; white-space: nowrap;
+}
+.more-item:hover { background: var(--page); }
+.qmodal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 100;
+  display: flex; align-items: center; justify-content: center; padding: 26px;
+}
+.qmodal {
+  background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+  max-width: 940px; width: 100%; max-height: 86vh; display: flex; flex-direction: column;
+  box-shadow: 0 12px 44px rgba(0,0,0,.32); font-size: 12px; color: var(--ink-2);
+}
+.qmodal .qp-head { padding: 12px 16px; border-bottom: 1px solid var(--border); flex: none; }
+.qmodal-body { padding: 8px 16px 14px; overflow-y: auto; }
+.qmodal-foot {
+  padding: 9px 16px; border-top: 1px solid var(--border); flex: none;
+  font-size: 11.5px; color: var(--ink-3);
+}
+.qmodal-foot a { color: var(--ink-1); text-decoration: underline; text-underline-offset: 2px; }
+.qp-head { display: flex; justify-content: space-between; align-items: center; }
+.qp-head strong { color: var(--ink-1); font-size: 12.5px; }
+.qp-close { background: none; border: none; font-size: 17px; color: var(--ink-2); cursor: pointer; padding: 0 4px; }
+.qp-note { margin-top: 6px; font-size: 11.5px; color: var(--ink-3); }
+.qp-block-head {
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+  margin-top: 10px; font-weight: 600; font-size: 11.5px; color: var(--ink-1);
+}
+.qp-copy {
+  font-size: 11px; border: 1px solid var(--border); background: var(--surface-1);
+  border-radius: 5px; padding: 1px 8px; cursor: pointer; color: var(--ink-2); flex: none;
+}
+.qp-sql {
+  margin: 4px 0 0; padding: 8px 10px; background: var(--surface-1);
+  border: 1px solid var(--border); border-radius: 7px; max-height: 300px;
+  overflow-y: auto; white-space: pre-wrap; word-break: break-word;
+  font-size: 11px; line-height: 1.45; color: var(--ink-1);
+  font-family: ui-monospace, Consolas, monospace;
+}
+.kpis.has-more { padding-top: 2px; }
+
+/* quarter switcher (turnover beat report) */
+.seg { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 14px; }
+.seg button {
+  font: inherit; font-size: 12.5px; padding: 6px 16px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--surface-1);
+  color: var(--ink-2); cursor: pointer;
+}
+.seg button.active { color: var(--ink-1); border-color: var(--ink-3); font-weight: 650; }
+
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <button class="theme-toggle" id="themeToggle" type="button">Toggle light/dark</button>
+    <h1>Leads Not Yet in a Package</h1>
+    <div class="sub">Investigation-ledger leads that were triaged far enough to name an actor, a date, and a record ID, but sit outside the five shipped industry packages (crypto, AIPAC, healthcare, pardons, critical minerals) — a worklist, not a finding.</div>
+    <div class="meta">Generated 2026-07-13 · Source: Senate LDA filings 2022–2026 Q1 (senate-primary, amendment-deduped), LD-203 contribution reports, congressional press releases. Unverified research output for team review — every table row traces to records via the CSVs in <code>data/</code>.</div>
+  </header>
+  <main id="app"></main>
+  <footer class="page">Built from db/lda_full.duckdb · See README.md in this package for method, caveats, and how to QA any number here.</footer>
+</div>
+<script>
+/* Tiny self-contained chart lib — SVG, theme-aware via CSS vars, hover layer + table views. */
+"use strict";
+const NS = "http://www.w3.org/2000/svg";
+const SLOT = ["var(--s1)", "var(--s2)", "var(--s3)", "var(--s4)", "var(--s5)", "var(--s6)"];
+// per-slot in-mark label ink (yellow/aqua too light for white text)
+const SLOT_LABEL = ["#ffffff", "#08351f", "#3a2800", "#ffffff", "#ffffff", "#ffffff"];
+
+function el(tag, attrs, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs || {}) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function div(cls, parent, text) {
+  const d = document.createElement("div");
+  if (cls) d.className = cls;
+  if (text != null) d.textContent = text;
+  if (parent) parent.appendChild(d);
+  return d;
+}
+function fmtMoney(v) {
+  if (v == null || isNaN(v)) return "–";
+  const a = Math.abs(v), s = v < 0 ? "-" : "";
+  if (a >= 995e6) return s + "$" + (a / 1e9).toFixed(a >= 9.95e9 ? 0 : 1) + "B";
+  if (a >= 995e3) return s + "$" + (a / 1e6).toFixed(a >= 9.95e6 ? 0 : 1) + "M";
+  if (a >= 1e3) return s + "$" + Math.round(a / 1e3) + "K";
+  return s + "$" + Math.round(a);
+}
+function fmtNum(v) {
+  if (v == null || isNaN(v)) return "–";
+  return Number(v).toLocaleString("en-US");
+}
+function fmtPct(v) { return v == null ? "–" : v.toFixed(v < 10 ? 1 : 0) + "%"; }
+function niceTicks(max, n) {
+  if (max <= 0) return [0, 1];
+  const raw = max / n, mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => max / s <= n) || 10 * mag;
+  const ticks = [];
+  for (let v = 0; v <= max * 1.0001 + step * 0.999; v += step) { ticks.push(v); if (v >= max) break; }
+  return ticks;
+}
+
+/* singleton tooltip */
+let TT = null;
+function tt() {
+  if (!TT) { TT = div("tt", document.body); }
+  return TT;
+}
+function ttShow(x, y, titleText, rows) {
+  const t = tt();
+  t.innerHTML = "";
+  if (titleText) div("tt-title", t, titleText);
+  for (const r of rows) {
+    const row = div("row", t);
+    if (r.color) { const k = div("k", row); k.style.background = r.color; }
+    const v = document.createElement("span"); v.className = "v"; v.textContent = r.value; row.appendChild(v);
+    const n = document.createElement("span"); n.className = "n"; n.textContent = r.name; row.appendChild(n);
+  }
+  t.style.display = "block";
+  const bw = t.offsetWidth, bh = t.offsetHeight;
+  let px = x + 14, py = y + 12;
+  if (px + bw > innerWidth - 8) px = x - bw - 14;
+  if (py + bh > innerHeight - 8) py = y - bh - 12;
+  t.style.left = px + "px"; t.style.top = py + "px";
+}
+function ttHide() { if (TT) TT.style.display = "none"; }
+
+function legend(parent, items, kind) {
+  const lg = div("legend", parent);
+  for (const it of items) {
+    const k = div("key", lg);
+    const sw = div(kind === "line" ? "sw-line" : "sw-rect", k);
+    sw.style.background = it.color;
+    k.appendChild(document.createTextNode(it.name));
+  }
+  return lg;
+}
+
+function tableView(parent, cols, rows, fmts) {
+  const det = document.createElement("details"); det.className = "tv"; parent.appendChild(det);
+  const sum = document.createElement("summary"); sum.textContent = "Table view"; det.appendChild(sum);
+  const scroll = div("scroll", det);
+  const tb = document.createElement("table"); tb.className = "dt"; scroll.appendChild(tb);
+  const trh = tb.insertRow();
+  cols.forEach((c, i) => {
+    const th = document.createElement("th"); th.textContent = c;
+    if (fmts && fmts[i] !== "s") th.className = "num";
+    trh.appendChild(th);
+  });
+  for (const r of rows) {
+    const tr = tb.insertRow();
+    r.forEach((v, i) => {
+      const td = tr.insertCell();
+      const f = fmts ? fmts[i] : "s";
+      td.textContent = f === "$" ? fmtMoney(v) : f === "#" ? fmtNum(v) : f === "%" ? (v == null ? "–" : v + "%") : (v == null ? "–" : v);
+      if (f !== "s") td.className = "num";
+    });
+  }
+}
+
+function card(root, title, sub, foot) {
+  const c = div("card", root);
+  const h = document.createElement("h2"); h.textContent = title; c.appendChild(h);
+  if (sub) div("sub", c, sub);
+  const box = div("chart-box", c);
+  if (foot) { const f = div("foot", c, foot); c.appendChild(f); }
+  return { cardEl: c, box: box };
+}
+
+function statTiles(root, tiles) {
+  const k = div("kpis", root);
+  for (const t of tiles) {
+    const tile = div("tile", k);
+    div("lbl", tile, t.label);
+    div("val", tile, t.value);
+    if (t.note) div("note", tile, t.note);
+  }
+  return k;
+}
+
+/* ---- open-findings card: candidate leads from LEDGER.md touching this
+   package's data, shown at the bottom of every package dashboard so a human
+   reviewer sees what's still open without leaving the page. findings = [{id,
+   status, title, hypothesis, actors?, next?}] — copy is hand-curated from the
+   ledger row, not auto-derived (same convention as this page's KPI/caveat text). */
+function findingsCard(root, findings, sub) {
+  if (!findings || !findings.length) return;
+  const c = div("card", root);
+  const h = document.createElement("h2");
+  h.textContent = "Findings still open for human review";
+  c.appendChild(h);
+  div("sub", c, sub || "Candidate leads from the investigation ledger touching this package's data — unverified, for human triage before any use in a story.");
+  for (const f of findings) {
+    const item = div("finding-item", c);
+    const head = document.createElement("strong");
+    head.textContent = f.id + " · " + f.status + " — " + f.title;
+    item.appendChild(head);
+    div(null, item, f.hypothesis);
+    if (f.actors) div("note", item, "Named actors: " + f.actors);
+    if (f.next) div("note", item, "Next action: " + f.next);
+  }
+  div("foot", c, "Full history, evidence record IDs, and status changes: LEDGER.md in the repo root.");
+}
+
+/* ---- per-widget "more options" → query-info panel (debugging aid) ----
+   info = { title, note, blocks: [{label, text}] } — text is the ACTUAL SQL /
+   pipeline the widget's numbers came from (extracted from the build scripts). */
+function moreOptions(host, info) {
+  if (!host || !info) return;
+  host.classList.add("has-more");
+  const btn = document.createElement("button");
+  btn.className = "more-btn"; btn.type = "button"; btn.textContent = "⋯";
+  btn.title = "More options";
+  btn.setAttribute("aria-label", "More options");
+  btn.setAttribute("aria-expanded", "false");
+  host.appendChild(btn);
+  const menu = div("more-menu", host);
+  menu.style.display = "none";
+  const item = document.createElement("button");
+  item.type = "button"; item.className = "more-item";
+  item.textContent = "View query info";
+  menu.appendChild(item);
+  btn.addEventListener("click", ev => {
+    ev.stopPropagation();
+    const open = menu.style.display !== "none";
+    menu.style.display = open ? "none" : "block";
+    btn.setAttribute("aria-expanded", String(!open));
+  });
+  document.addEventListener("click", () => {
+    menu.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+  });
+  item.addEventListener("click", ev => {
+    ev.stopPropagation();
+    menu.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+    openQueryModal(info, btn);
+  });
+}
+
+function openQueryModal(info, returnFocus) {
+  const overlay = div("qmodal-overlay", document.body);
+  const modal = div("qmodal", overlay);
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", info.title || "Query info");
+  const head = div("qp-head", modal);
+  const t = document.createElement("strong");
+  t.textContent = info.title || "Query info"; head.appendChild(t);
+  const close = document.createElement("button");
+  close.type = "button"; close.className = "qp-close"; close.textContent = "×";
+  close.setAttribute("aria-label", "Close query info");
+  head.appendChild(close);
+  const body = div("qmodal-body", modal);
+  if (info.note) div("qp-note", body, info.note);
+  for (const b of (info.blocks || [])) {
+    const bh = div("qp-block-head", body);
+    const lbl = document.createElement("span");
+    lbl.textContent = b.label; bh.appendChild(lbl);
+    const pre = document.createElement("pre");
+    pre.className = "qp-sql"; pre.textContent = b.text;
+    const cp = document.createElement("button");
+    cp.type = "button"; cp.className = "qp-copy"; cp.textContent = "Copy";
+    cp.addEventListener("click", () => {
+      const done = () => { cp.textContent = "Copied"; setTimeout(() => { cp.textContent = "Copy"; }, 1200); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(b.text).then(done, () => {});
+      } else {
+        const r = document.createRange(); r.selectNodeContents(pre);
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+    });
+    bh.appendChild(cp);
+    body.appendChild(pre);
+  }
+  if (info.dict) {
+    const foot = div("qmodal-foot", modal);
+    foot.appendChild(document.createTextNode("Every table and column referenced here is defined in the data dictionary: "));
+    const a = document.createElement("a");
+    a.href = info.dict; a.textContent = info.dict;
+    foot.appendChild(a);
+    foot.appendChild(document.createTextNode(" (in this package, next to the dashboard)."));
+  }
+  const onKey = ev => { if (ev.key === "Escape") closeModal(); };
+  function closeModal() {
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+    if (returnFocus) returnFocus.focus();
+  }
+  close.addEventListener("click", closeModal);
+  overlay.addEventListener("click", ev => { if (ev.target === overlay) closeModal(); });
+  document.addEventListener("keydown", onKey);
+  close.focus();
+}
+
+/* ---- line panel: series share one x; crosshair + all-series tooltip ---- */
+function linePanel(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 240, mL = 46, mR = cfg.marginRight || 76, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const maxV = cfg.max || Math.max(...cfg.series.flatMap(s => s.values.filter(v => v != null))) * 1.08;
+  const ticks = niceTicks(maxV, 4);
+  const yMax = ticks[ticks.length - 1];
+  const X = i => mL + (n === 1 ? pw / 2 : (i * pw) / (n - 1));
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : cfg.fmt === "%" ? tv + "%" : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: X(i), y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  const placedLabels = [];
+  cfg.series.forEach((s, si) => {
+    const col = s.color || SLOT[si];
+    const pts = s.values.map((v, i) => (v == null ? null : [X(i), Y(v)]));
+    let d = "";
+    pts.forEach(p => { if (p) d += (d ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1); });
+    const path = el("path", { d, fill: "none", "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    path.style.stroke = col;
+    const last = pts.map((p, i) => (p ? i : -1)).filter(i => i >= 0).pop();
+    if (last != null) {
+      const ring = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 6 }, svg);
+      ring.style.fill = "var(--surface-1)";
+      const dot = el("circle", { cx: pts[last][0], cy: pts[last][1], r: 4 }, svg);
+      dot.style.fill = col;
+      const ly = pts[last][1] + 4;
+      // when end-labels collide, fall back to legend + tooltip (skip the label)
+      if (!placedLabels.some(p => Math.abs(p - ly) < 14)) {
+        const lb = el("text", { x: pts[last][0] + 10, y: ly, class: "dlabel-strong" }, svg);
+        lb.textContent = (cfg.endLabel === "name" ? s.name : (cfg.fmt === "$" ? fmtMoney(s.values[last]) : cfg.fmt === "%" ? s.values[last] + "%" : fmtNum(s.values[last])));
+        placedLabels.push(ly);
+      }
+    }
+  });
+  /* crosshair + tooltip (+ optional per-x click via cfg.onClick(i, xLabel)) */
+  const ch = el("line", { y1: mT, y2: mT + ph, class: "crosshair", visibility: "hidden" }, svg);
+  const hit = el("rect", { x: mL, y: mT, width: pw, height: ph, fill: "transparent" }, svg);
+  const idxAt = ev => {
+    const r = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - r.left) / r.width) * W;
+    let i = Math.round(((fx - mL) / pw) * (n - 1));
+    return Math.max(0, Math.min(n - 1, i));
+  };
+  hit.addEventListener("pointermove", ev => {
+    const i = idxAt(ev);
+    ch.setAttribute("x1", X(i)); ch.setAttribute("x2", X(i));
+    ch.setAttribute("visibility", "visible");
+    if (cfg.onClick) hit.style.cursor = "pointer";
+    ttShow(ev.clientX, ev.clientY, xs[i], cfg.series.map((s, si) => ({
+      color: s.color || SLOT[si],
+      value: s.values[i] == null ? "–" : cfg.fmt === "$" ? fmtMoney(s.values[i]) : cfg.fmt === "%" ? s.values[i] + "%" : fmtNum(s.values[i]),
+      name: s.name
+    })));
+  });
+  hit.addEventListener("pointerleave", () => { ch.setAttribute("visibility", "hidden"); ttHide(); });
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => cfg.onClick(idxAt(ev), xs[idxAt(ev)]));
+  }
+}
+
+/* ---- columns (single series or stacked) ---- */
+function columns(box, cfg) {
+  const W = 980, xs = cfg.x, n = xs.length;
+  const H = cfg.height || 250, mL = 46, mR = 14, mT = 14, mB = 30;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const series = cfg.series; // [{name,color,values}]
+  const totals = xs.map((_, i) => series.reduce((a, s) => a + (s.values[i] || 0), 0));
+  const ticks = niceTicks(Math.max(...totals) * 1.05, 4);
+  const yMax = ticks[ticks.length - 1];
+  const Y = v => mT + ph - (v / yMax) * ph;
+  const band = pw / n, bw = Math.min(24, band * 0.55);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  for (const tv of ticks) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.fmt === "$" ? fmtMoney(tv) : fmtNum(tv);
+  }
+  const step = Math.max(1, Math.ceil(n / 12));
+  xs.forEach((lab, i) => {
+    if (i % step !== 0 && i !== n - 1) return;
+    const t = el("text", { x: mL + band * i + band / 2, y: H - 8, "text-anchor": "middle", class: "ax" }, svg);
+    t.textContent = lab;
+  });
+  xs.forEach((lab, i) => {
+    const cx = mL + band * i + band / 2;
+    let acc = 0;
+    series.forEach((s, si) => {
+      const v = s.values[i] || 0;
+      if (v <= 0) { return; }
+      const y1 = Y(acc + v), y0 = Y(acc);
+      const hpx = Math.max(0, y0 - y1 - (si < series.length - 1 && acc + v < totals[i] ? 2 : 0)); // 2px surface gap
+      const isTop = acc + v >= totals[i] - 1e-9;
+      const rTop = isTop ? 4 : 0;
+      const x0 = cx - bw / 2;
+      const p = el("path", {
+        d: `M${x0} ${y0} L${x0} ${y1 + rTop} Q${x0} ${y1} ${x0 + rTop} ${y1} L${x0 + bw - rTop} ${y1} Q${x0 + bw} ${y1} ${x0 + bw} ${y1 + rTop} L${x0 + bw} ${y0} Z`
+      }, svg);
+      p.style.fill = s.color || SLOT[si];
+      acc += v;
+    });
+    const hit = el("rect", { x: mL + band * i, y: mT, width: band, height: ph, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = series.map((s, si) => ({
+        color: s.color || SLOT[si],
+        value: cfg.fmt === "$" ? fmtMoney(s.values[i]) : fmtNum(s.values[i]),
+        name: s.name
+      }));
+      if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
+      ttShow(ev.clientX, ev.clientY, lab, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(i, lab));
+  });
+}
+
+/* ---- horizontal bars ---- */
+function hbars(box, cfg) {
+  const items = cfg.items; // [{label, value, value2?, note?, color?}]
+  const W = cfg.width || 980, rowH = cfg.rowH || 30, mL = cfg.labelW || 300, mR = cfg.width ? 64 : 90, mT = 6, mB = 8;
+  const H = mT + rowH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.map(d => d.value)) * 1.02;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  items.forEach((d, i) => {
+    const y = mT + i * rowH + (rowH - Math.min(20, rowH - 8)) / 2;
+    const bh = Math.min(20, rowH - 8);
+    const w = Math.max(1.5, (d.value / maxV) * pw);
+    const p = el("path", {
+      d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z`
+    }, svg);
+    p.style.fill = d.color || cfg.color || SLOT[0];
+    const maxChars = Math.floor((mL - 14) / 6.4);
+    const lb = el("text", { x: mL - 10, y: y + bh / 2 + 4, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel-strong ax-tab" }, svg);
+    vl.textContent = cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value);
+    const hit = el("rect", { x: 0, y: mT + i * rowH, width: W, height: rowH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [{ color: d.color || cfg.color || SLOT[0], value: cfg.fmt === "$" ? fmtMoney(d.value) : cfg.fmt === "%" ? d.value + "%" : fmtNum(d.value), name: cfg.valueName || "value" }];
+      if (d.note) rows.push({ color: null, value: "", name: d.note });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(d, i));
+  });
+}
+
+/* ---- grouped horizontal bars (2 series) ---- */
+function groupedHBars(box, cfg) {
+  const items = cfg.items; // [{label, a, b}]
+  const W = cfg.width || 980, groupH = 44, mL = cfg.labelW || 300, mR = cfg.width ? 66 : 96, mT = 6, mB = 8;
+  const H = mT + groupH * items.length + mB;
+  const pw = W - mL - mR;
+  const maxV = Math.max(...items.flatMap(d => [d.a, d.b])) * 1.02;
+  const F = v => cfg.fmt === "#" ? fmtNum(v) : cfg.fmt === "%" ? fmtPct(v) : fmtMoney(v); // default "$" (existing pages unchanged)
+  const colA = cfg.aColor || SLOT[0], colB = cfg.bColor || SLOT[1];
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  el("line", { x1: mL, x2: mL, y1: mT, y2: H - mB, class: "baseline" }, svg);
+  const maxChars = Math.floor((mL - 14) / 6.4);
+  items.forEach((d, i) => {
+    const y0 = mT + i * groupH;
+    [["a", colA, cfg.aName, 4], ["b", colB, cfg.bName, 24]].forEach(([k, col, nm, dy]) => {
+      const v = d[k], bh = 14;
+      const w = Math.max(1.5, (v / maxV) * pw);
+      const y = y0 + dy;
+      const p = el("path", { d: `M${mL} ${y} L${mL + w - 4} ${y} Q${mL + w} ${y} ${mL + w} ${y + 4} L${mL + w} ${y + bh - 4} Q${mL + w} ${y + bh} ${mL + w - 4} ${y + bh} L${mL} ${y + bh} Z` }, svg);
+      p.style.fill = col;
+      const vl = el("text", { x: mL + w + 8, y: y + bh / 2 + 4, class: "dlabel ax-tab" }, svg);
+      vl.textContent = F(v);
+    });
+    const lb = el("text", { x: mL - 10, y: y0 + groupH / 2 + 2, "text-anchor": "end", class: "dlabel" }, svg);
+    lb.textContent = d.label.length > maxChars ? d.label.slice(0, maxChars - 1) + "…" : d.label;
+    const hit = el("rect", { x: 0, y: y0, width: W, height: groupH, fill: "transparent" }, svg);
+    hit.addEventListener("pointermove", ev => {
+      const rows = [
+        { color: colA, value: F(d.a), name: cfg.aName },
+        { color: colB, value: F(d.b), name: cfg.bName }
+      ];
+      // optional tooltip-only context row (no bar, no series color): a value the
+      // chart deliberately does not draw but must not hide (e.g. gated-out money)
+      if (cfg.cName) rows.push({ color: null, value: F(d.c || 0), name: cfg.cName });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
+      ttShow(ev.clientX, ev.clientY, d.label, rows);
+    });
+    hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(d, i));
+  });
+}
+
+/* ---- bubble pack (greedy spiral, collision-free) ---- */
+function bubblePack(box, cfg) {
+  const items = cfg.items.slice().sort((p, q) => q.r0 - p.r0); // r0 = raw size value
+  const W = 980, H = cfg.height || 430;
+  const maxV = Math.max(...items.map(d => d.r0));
+  const R = v => 6 + 52 * Math.sqrt(v / maxV);
+  const placed = [];
+  const cx0 = W / 2, cy0 = H / 2;
+  for (const d of items) {
+    const r = R(d.r0);
+    let ok = false, x = cx0, y = cy0;
+    for (let a = 0, sp = 0; sp < 5200; sp += 4) {
+      a = sp * 0.055;
+      const rad = sp * 0.115;
+      x = cx0 + rad * Math.cos(a) * 1.55;
+      y = cy0 + rad * Math.sin(a) * 0.8;
+      if (x - r < 6 || x + r > W - 6 || y - r < 6 || y + r > H - 6) continue;
+      ok = placed.every(p => {
+        const dx = p.x - x, dy = p.y - y;
+        return dx * dx + dy * dy >= (p.r + r + 2.5) * (p.r + r + 2.5);
+      });
+      if (ok) break;
+    }
+    if (ok) placed.push({ x, y, r, d });
+  }
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  const measure = el("text", { x: -1000, y: -1000, class: "blabel" }, svg);
+  for (const p of placed) {
+    const c = el("circle", { cx: p.x, cy: p.y, r: p.r }, svg);
+    c.style.fill = SLOT[p.d.slot];
+    c.style.stroke = "var(--surface-1)"; c.style.strokeWidth = "2";
+    // label only if it fits
+    measure.textContent = p.d.short || p.d.label;
+    const tw = measure.getComputedTextLength ? 0 : 0; // measured after attach below
+  }
+  // second pass for labels (needs layout)
+  requestAnimationFrame(() => {
+    for (const p of placed) {
+      const name = p.d.short || p.d.label;
+      measure.textContent = name;
+      let tw = 60;
+      try { tw = measure.getComputedTextLength(); } catch (e) {}
+      if (tw < p.r * 1.75 && p.r > 15) {
+        const t = el("text", { x: p.x, y: p.y + (p.r > 26 ? -2 : 4), "text-anchor": "middle", class: "blabel" }, svg);
+        t.textContent = name;
+        t.style.fill = SLOT_LABEL[p.d.slot];
+        if (p.r > 26) {
+          const t2 = el("text", { x: p.x, y: p.y + 13, "text-anchor": "middle", class: "blabel" }, svg);
+          t2.textContent = cfg.fmtSize === "$" ? fmtMoney(p.d.r0) : fmtNum(p.d.r0);
+          t2.style.fill = SLOT_LABEL[p.d.slot];
+          t2.style.opacity = "0.85";
+        }
+      }
+    }
+    measure.remove();
+  });
+  /* nearest-circle hover (+ optional click-through via cfg.onClick) */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  const nearest = ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    return bd < 14 ? best : null;
+  };
+  hit.addEventListener("pointermove", ev => {
+    const best = nearest(ev);
+    if (best) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+      if (cfg.onClick) hit.style.cursor = "pointer";
+    } else {
+      ttHide();
+      hit.style.cursor = "";
+    }
+  });
+  hit.addEventListener("pointerleave", ttHide);
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => {
+      const best = nearest(ev);
+      if (best) cfg.onClick(best.d);
+    });
+  }
+}
+
+/* ---- xy scatter: log-x option, sized dots, horizontal threshold rules ----
+   cfg: items [{label, short?, x, y, size, slot, extra?}] (x>0 required on log),
+        xFmt "$"|"#", yMax (default 100), yFmt "%", rules [{y, label}] recessive
+        dashed horizontals with right-margin band labels, labelTop (n of largest-x
+        dots to direct-label; plus largest-y dots), ttRows(d), onClick(d) */
+function scatterXY(box, cfg) {
+  const W = 980, H = cfg.height || 470, mL = 56, mR = 118, mT = 14, mB = 34;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const items = cfg.items.filter(d => d.x > 0 && d.y != null);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  if (!items.length) return;
+  const lo = Math.pow(10, Math.floor(Math.log10(Math.min(...items.map(d => d.x)))));
+  const hi = Math.pow(10, Math.ceil(Math.log10(Math.max(...items.map(d => d.x)))));
+  const X = v => mL + ((Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * pw;
+  const yMax = cfg.yMax || 100;
+  const Y = v => mT + ph - (Math.min(v, yMax) / yMax) * ph;
+  const maxS = Math.max(...items.map(d => d.size || 1));
+  const R = d => 4 + 9 * Math.sqrt((d.size || 1) / maxS);   // r >= 4 (8px marker floor)
+  // y gridlines + labels
+  for (const tv of [0, 25, 50, 75, 100].filter(v => v <= yMax)) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = tv + "%";
+  }
+  // x decade ticks
+  for (let v = lo; v <= hi * 1.0001; v *= 10) {
+    el("line", { x1: X(v), x2: X(v), y1: mT, y2: mT + ph, class: "gridline" }, svg);
+    const t = el("text", { x: X(v), y: H - 8, "text-anchor": "middle", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.xFmt === "#" ? fmtNum(v) : fmtMoney(v);
+  }
+  // threshold rules + right-margin band labels (recessive: dashed, axis ink);
+  // a label-only entry (noLine) names the band above the last rule
+  for (const r of (cfg.rules || [])) {
+    if (!r.noLine) {
+      const ln = el("line", { x1: mL, x2: W - mR, y1: Y(r.y), y2: Y(r.y),
+                              class: "gridline", "stroke-dasharray": "5 4" }, svg);
+      ln.style.strokeOpacity = "0.9";
+    }
+    if (r.label) {
+      const t = el("text", { x: W - mR + 8, y: Y(r.labelAt != null ? r.labelAt : r.y) + 4, class: "ax" }, svg);
+      t.textContent = r.label;
+    }
+  }
+  // dots (2px surface ring per mark spec), largest first so small dots stay hittable
+  const placed = [];
+  for (const d of items.slice().sort((p, q) => (q.size || 1) - (p.size || 1))) {
+    const x = X(d.x), y = Y(d.y), r = R(d);
+    const c = el("circle", { cx: x, cy: y, r: r }, svg);
+    c.style.fill = SLOT[d.slot];
+    c.style.stroke = "var(--surface-1)";
+    c.style.strokeWidth = "2";
+    placed.push({ x, y, r, d });
+  }
+  // selective direct labels: largest-x + largest-y + largest-size dots; on
+  // collision try one slot lower before skipping (ties like Amazon/AARP stack)
+  const nTop = cfg.labelTop || 12;
+  const want = new Set();
+  items.slice().sort((p, q) => q.x - p.x).slice(0, nTop).forEach(d => want.add(d));
+  items.slice().sort((p, q) => q.y - p.y).slice(0, 8).forEach(d => want.add(d));
+  items.slice().sort((p, q) => (q.size || 1) - (p.size || 1)).slice(0, 3).forEach(d => want.add(d));
+  const taken = [];
+  const collides = b => taken.some(t => Math.abs(t[1] - b[1]) < 12 &&
+                        !(t[0] + t[2] < b[0] - 4 || b[0] + b[2] < t[0] - 4));
+  for (const p of placed) {
+    if (!want.has(p.d)) continue;
+    const name = p.d.short || p.d.label;
+    let lx = p.x + p.r + 5, anchor = "start";
+    if (lx + name.length * 6.2 > W - mR) { lx = p.x - p.r - 5; anchor = "end"; }
+    let box_ = [anchor === "end" ? lx - name.length * 6.2 : lx, p.y, name.length * 6.2];
+    if (collides(box_)) {
+      box_ = [box_[0], p.y + 12, box_[2]];             // one slot lower
+      if (collides(box_) || box_[1] > mT + ph) continue;
+    }
+    const t = el("text", { x: lx, y: box_[1] + 4, "text-anchor": anchor, class: "dlabel" }, svg);
+    t.textContent = name;
+    taken.push(box_);
+  }
+  /* nearest-dot hover (+ optional click-through) — same pattern as bubblePack */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  const nearest = ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    return bd < 14 ? best : null;
+  };
+  hit.addEventListener("pointermove", ev => {
+    const best = nearest(ev);
+    if (best) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+      if (cfg.onClick) hit.style.cursor = "pointer";
+    } else {
+      ttHide();
+      hit.style.cursor = "";
+    }
+  });
+  hit.addEventListener("pointerleave", ttHide);
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => {
+      const best = nearest(ev);
+      if (best) cfg.onClick(best.d);
+    });
+  }
+}
+
+</script>
+<script>
+const DATA = {"kpis": [{"label": "Leads outside any package", "value": "6", "note": "L020, L022, L023, L025, L027, L028"}, {"label": "Still open/triaged", "value": "3", "note": "L020 TP-Link · L022 Sheffield · L023 Vantive"}, {"label": "Parked (cold, not dead)", "value": "2", "note": "L025 data-quality spike · L027 tariffs coupling"}, {"label": "Closed as a known story", "value": "1", "note": "L028 SECURE 2.0 — scooped by trade/news coverage"}], "findings": [{"id": "L020", "status": "triaged", "title": "TP-Link — a China-founded router maker facing a proposed US ban", "hypothesis": "TP-Link Systems Inc. ramps lobbying ~5x and fans out from one firm to three across 2024-2026 (Akin Gump → + Mercury Public Affairs → + Vernonburg Group), coinciding with the proposed router-ban legislative push.", "actors": "TP-Link Systems Inc.; Akin Gump; Mercury Public Affairs; Vernonburg Group", "next": "Confirm the router-ban legislative timeline; scan the press corpus for member statements on TP-Link/router security (say-vs-pay)."}, {"id": "L022", "status": "triaged", "title": "Scott Sheffield — a personal FTC-consent-order lobbying retainer", "hypothesis": "Scott Sheffield (Pioneer founder, named in the FTC/Exxon consent order) personally retains Brownstein Hyatt Farber Schreck to lobby 'Issues related to the FTC', starting exactly the quarter the FTC acted.", "actors": "Scott Sheffield (individual); Brownstein Hyatt Farber Schreck; Norman Brownstein; William Moschella", "next": "Confirm the FTC action date (May 2024) against the Q2-2024 filing start; editorial-sensitivity review (named individual)."}, {"id": "L023", "status": "triaged", "title": "Vantive — a Baxter spinoff's $2.5M White House Ballroom gift", "hypothesis": "Vantive (spun off from Baxter in 2025) writes $2.5M to the White House Ballroom Project while standing up a six-firm federal lobbying operation in its first independent year.", "actors": "Vantive US Healthcare LLC; Trust for the National Mall; Ballard; Checkmate; Akin Gump; Todd Strategy; Nickles Group; Porterfield Fettig & Sears", "next": "Editorial-sensitivity review (a sitting President's project); confirm the Baxter spin-off date; map what Vantive actually lobbied on (dialysis/ESRD payment policy?). Healthcare-ADJACENT (a dialysis spinoff) but found via a different lens (contribution fan-out, not the ALI issue-code lens) and never folded into the shipped healthcare package's roster or story."}, {"id": "L025", "status": "parked", "title": "MedSecurean / Indian Pharmaceutical Alliance — a 60x single-quarter income spike", "hypothesis": "A class of LD-2 single-quarter income overstatements the gap-lens misses: MedSecurean.com / Indian Pharmaceutical Alliance reports $900K in 2025-Q4 vs. a $15K baseline (60x) — looks like a data-quality artifact (misreport), not a confirmed real surge.", "actors": "MedSecurean.com; Indian Pharmaceutical Alliance; Robert K Weidner / RPLCC", "next": "Parked: needs per-record confirmation to separate a real surge from a misreport; low priority. Revisit if a say-vs-pay lead lands on one of these engagements, or if pursuing a standalone data-quality finding."}, {"id": "L027", "status": "parked", "title": "Trade/tariffs press-vs-money coupling", "hypothesis": "Press attention-share and lobbying-money share on TRD are both flat 2022-2024 then jump together in 2025 (the tightest positive coupling measured, r +0.88) — but this is the mechanically-obvious 2025 Trump-tariff story, not a novel angle.", "actors": "Cleo Fields; Richard J. Durbin; Jeanne Shaheen; Nippon Steel Corp.; Brown-Forman Corp.; Qualcomm Inc.", "next": "Parked: logged only to evidence the press/spend coupling deliverable, not pursued as novel. Revisit if a specific member loud on tariffs turns out to be paid-side coupled (donors/registrants), or a non-2025 trade coupling appears."}, {"id": "L028", "status": "parked", "title": "SECURE 2.0 say-vs-pay — closed as a known story", "hypothesis": "Heavy, specific retirement/annuity-industry lobbying (1,436 senate filings name it) vs. thin coverage in members' OWN press releases looked like a say-vs-pay gap — but an outside-context-scan (live web + date-gated GDELT) shows SECURE 2.0 was high news-salience and the industry-lobbying angle (annuities topping IRI's agenda) was contemporaneously reported. 'Near-silent' holds only for congressional member press releases, which is not itself news.", "actors": "Athene Holding (Brownstein Hyatt); HR Policy Association (Tributary LLP); American Benefits Council; FMR LLC/Fidelity; Chris Van Hollen", "next": "Closed as a known story unless a specific, unreported company-level ask surfaces. Adjacent but UNRELATED beat if picked up separately: Athene's 2024-25 pension-risk-transfer ERISA class actions (AT&T/Lockheed/Bristol Myers)."}], "entitiesChecked": [{"entity": "Korea Zinc Company, Ltd. (client, via Mercury/Ballard)", "verdict": "Set aside — largest emergent (E1) engagement in the 2026-07-06 sweep, but a well-publicised MBK/Young Poong takeover fight; mechanically top, not novel.", "records": "E1 top row; 12 filings 2024-2026", "date": "2026-07-06"}, {"entity": "Trump-Vance Inaugural Committee corporate donors (JBS, Robinhood, Occidental, NVIDIA, Uber, X, et al.)", "verdict": "Set aside — top LD-203 honoree-concentration (F1) cluster is widely-reported corporate inaugural giving; a known category, not a novel angle (crypto's slice of it is still cited inside the crypto package as context).", "records": "F1 rows ($1-5M each)", "date": "2026-07-06"}, {"entity": "IBEW / union LD-203 'N/A' honoree placeholders", "verdict": "Set aside — mechanical top of honoree concentration (a placeholder honoree field, not a real recipient).", "records": "F1 top row ($8M/N-A)", "date": "2026-07-06"}], "caveats": ["This page exists so a lead doesn't get lost just because it never grew into a full industry package — it is a worklist, not a finding.", "Named-actor rule applies here too: every row has a specific actor, date, and record ID, resolvable via show_record.py.", "'Parked' ≠ dead: a parked lead is promising but blocked or deprioritized, reconsidered at every triage checkpoint; only a revisit trigger firing (or a human call) moves it off this page.", "L023 (Vantive) is healthcare-adjacent and L025 (MedSecurean/Indian Pharmaceutical Alliance) is pharma-adjacent, but neither was folded into the shipped healthcare package — they were found by a different lens (contribution fan-out / single-quarter spike) than that package's ALI issue-code scope, and remain unverified standalone threads.", "Full detail, evidence record IDs, and status history for every row: LEDGER.md in the repo root."]};
+</script>
+<script>
+(function () {
+  const btn = document.getElementById("themeToggle");
+  btn.addEventListener("click", () => {
+    const r = document.documentElement;
+    const cur = r.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    r.setAttribute("data-theme", cur === "dark" ? "light" : "dark");
+  });
+})();
+/* other_findings_page.js — a single reference page for investigation-ledger
+   leads that don't fall inside any shipped industry package. Reuses the same
+   card/finding-item look as every package dashboard's "findings" section, but
+   this page IS the whole thing (no charts, no CSVs) — copy comes straight
+   from DATA (hand-curated from LEDGER.md, not auto-derived). */
+(function () {
+  const app = document.getElementById("app");
+  statTiles(app, DATA.kpis);
+
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2");
+    h.textContent = "Leads not covered by a package";
+    c.appendChild(h);
+    div("sub", c, "Each of these was investigated far enough to pass triage (a named actor, date, and record ID) but sits outside the five industry maps above — either a one-off lead in a field we haven't built a package for, or a thread the team parked or closed. Full history in LEDGER.md.");
+    for (const f of DATA.findings) {
+      const item = div("finding-item", c);
+      const head = document.createElement("strong");
+      head.textContent = f.id + " · " + f.status + " — " + f.title;
+      item.appendChild(head);
+      div(null, item, f.hypothesis);
+      if (f.actors) div("note", item, "Named actors: " + f.actors);
+      if (f.next) div("note", item, "Next action: " + f.next);
+    }
+  }
+
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2");
+    h.textContent = "Entities checked and set aside";
+    c.appendChild(h);
+    div("sub", c, "Sat at the top of a lens ranking but were judged already-obvious or non-novel — recorded so the leads above are shown to come from underneath them, not instead of looking at them.");
+    const cols = ["Entity", "Verdict", "Records examined", "Date"];
+    tableView(c, cols, DATA.entitiesChecked.map(e => [e.entity, e.verdict, e.records, e.date]),
+      ["s", "s", "s", "s"]);
+  }
+
+  {
+    const c = div("card", app);
+    const h = document.createElement("h2"); h.textContent = "How to read this"; c.appendChild(h);
+    const ul = document.createElement("ul"); ul.className = "caveats"; c.appendChild(ul);
+    DATA.caveats.forEach(t => { const li = document.createElement("li"); li.textContent = t; ul.appendChild(li); });
+  }
+})();
+
+</script>
+</body>
+</html>

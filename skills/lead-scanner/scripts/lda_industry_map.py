@@ -107,33 +107,38 @@ def norm_name(raw):
 # matcher semantics change, mirror them here.
 
 def build_matcher(facets):
-    """One alternation regex over every facet's phrases + phrase->tag lookup.
+    """One alternation regex over every facet's phrases + phrase->tags lookup.
     Longest phrases first so 'digital asset market structure' wins over
-    'digital asset' at the same position."""
-    kw_to_tag = {}
+    'digital asset' at the same position.
+
+    A phrase may map to MORE THAN ONE tag: a bill-scoped sub-facet nested
+    inside a broader industry (GENIUS Act inside CRYPTO) deliberately shares
+    a phrase with its parent facet, and the matched doc gets a row under each
+    (industry_lexicon.json _meta.discipline). This is additive — every facet
+    that predates a shared phrase keeps its own row set unchanged."""
+    kw_to_tags = {}
     for fac in facets:
         for kw in fac["phrases"]:
             canon = " ".join(kw.lower().split())
-            if canon in kw_to_tag and kw_to_tag[canon] != fac["tag"]:
-                raise ValueError(f"phrase {canon!r} maps to both "
-                                 f"{kw_to_tag[canon]} and {fac['tag']}")
-            kw_to_tag[canon] = fac["tag"]
-    alts = sorted(kw_to_tag, key=len, reverse=True)
+            tags = kw_to_tags.setdefault(canon, [])
+            if fac["tag"] not in tags:
+                tags.append(fac["tag"])
+    alts = sorted(kw_to_tags, key=len, reverse=True)
     body = "|".join(r"\s+".join(re.escape(t) for t in kw.split()) for kw in alts)
     pattern = re.compile(r"(?<![\w])(?:" + body + r")(?![\w])", re.I)
-    return pattern, kw_to_tag
+    return pattern, kw_to_tags
 
 
-def extract_tags(text, pattern, kw_to_tag):
+def extract_tags(text, pattern, kw_to_tags):
     if not text:
         return
     seen = set()
     for m in pattern.finditer(text):
         canon = " ".join(m.group(0).lower().split())
-        tag = kw_to_tag.get(canon)
-        if tag and (tag, canon) not in seen:
-            seen.add((tag, canon))
-            yield tag, canon
+        for tag in kw_to_tags.get(canon, ()):
+            if (tag, canon) not in seen:
+                seen.add((tag, canon))
+                yield tag, canon
 
 
 # --------------------------------------------------------------------- lexicon

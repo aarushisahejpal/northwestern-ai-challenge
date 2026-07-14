@@ -128,6 +128,16 @@
       "foot": "The share PEAKS in 2022-Q3 (1.49%) — the Inflation Reduction Act's passage quarter, when members touted the credits this field now lobbies on — then settles to a durable ~1% floor. Press counts are window-biased (the corpus starts 2022 and grows ~4× by 2025), so read the share line, not raw counts."
     }
   },
+  "findings": [
+    {
+      "id": "L024",
+      "status": "open",
+      "title": "BATT Coalition — an opaque coalition ramping fast, ultimate members undisclosed",
+      "hypothesis": "The Battery Advocacy for Technology Transformation (BATT) Coalition stands up ~$800K/yr of lobbying on tax/critical minerals from a zero base in mid-2024 without disclosing its ultimate members. This field map places BATT inside an 851-client field, 91% of it name-invisible (Ford, Rio Tinto, Edison Electric Institute, defense primes). SMI — BATT's own firm — is the field's top outside registrant (223 tagged filings / 29 clients), making its mineral-client stable the natural first canvass for who else buys BATT's asks. BATT files under two spellings (SMI + Cannon-Pearce, a resolver split); the similarly-named Battery Materials and Technology Coalition (via Venn Strategies, filing since 2022, $2.21M reported) is a DISTINCT earlier coalition in the same space — do not conflate the two.",
+      "actors": "BATT Coalition; Strategic Marketing Innovations (SMI); Cannon-Pearce (Matt Pearce); Battery Materials and Technology Coalition (distinct, via Venn Strategies)",
+      "next": "Canvass SMI's and Cannon-Pearce's other mineral-field clients (this package's registrant/co-lobby CSVs) for co-buyers of BATT's asks; establish the BMTC↔BATT relationship (two coalitions, one space); then the original next action — coalition site / FARA / press via outside-context-scan."
+    }
+  ],
   "caveats": [
     "Recall-first map: any client whose filing free-text names one of the 19 curated phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
     "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue.",

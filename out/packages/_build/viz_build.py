@@ -350,6 +350,20 @@ crypto_data = {
     "press": {"q": [r["quarter"] for r in press], "share": [num(r["crypto_share_pct"]) for r in press],
               "n": [int(r["crypto_releases"]) for r in press], "all": [int(r["all_releases"]) for r in press]},
     "queryInfo": None,  # filled below (extracted from the export scripts)
+    "findings": [
+        {"id": "L029", "status": "open", "title": "LD-203 giving map — committee-targeting concentration",
+         "hypothesis": "Disclosed LD-203 giving from the crypto roster concentrates on the members who write crypto rules — Sen. Cynthia Lummis, Rep. French Hill (House Financial Services chair), Rep. Tom Emmer, Sen. Pat Toomey — atop a ~$5.0M cluster to the Trump-Vance inaugural (Coinbase/Paradigm/Crypto.com/Kraken each ~$1M; Galaxy Digital $1.08M found on re-derivation).",
+         "actors": "Coinbase; Kraken/Payward; Paradigm; Crypto.com; Sen. Lummis; Rep. French Hill; Rep. Emmer; Sen. Toomey; Trump-Vance Inaugural Committee",
+         "next": "Separate the novel committee-targeting angle from the already-known inaugural-giving category (set aside in Entities checked); teammate triage of the pure-play slice."},
+        {"id": "L030", "status": "open", "title": "P4 player map — the name-invisible crypto lobby",
+         "hypothesis": "493 of 535 client-side crypto players (92%) carry no crypto term in their name — found only by what they say they lobby on: PayPal, Block, Robinhood, Visa, Mastercard, Fidelity/FMR, Citigroup, CME Group, American Bankers Assoc., Western Union.",
+         "actors": "Coinbase; Robinhood; PayPal; Visa; Mastercard; Fidelity/FMR; Citigroup",
+         "next": "Human-triage the recall-first player list (raise --min-docs / drop incidental mentions); separate the diversified-filer angle from the pure-play crypto lobby."},
+        {"id": "L031", "status": "open", "title": "FEC money-leg completion — Super-PAC dwarfs disclosed giving",
+         "hypothesis": "FEC-disclosed Super-PAC contributions (Fairshake network) dwarf the same players' LD-203 disclosed giving by 1-2 orders of magnitude: Coinbase $106.59M FEC vs $1.70M LD-203; Ripple $96.5M vs $0; a16z $94.5M vs $0; Jump Crypto $25M vs $0.",
+         "actors": "Coinbase; Ripple Labs; a16z/AH Capital Management; Jump Crypto; Fairshake / Defend American Jobs / Protect Progress Super PACs",
+         "next": "Human-triage the candidate FEC↔LDA entity matches (raise confidence to exact where resolvable); decide FEC-vs-LD-203 framing for a finding."},
+    ],
     "caveats": [
         "Recall-first map: any client whose filing free-text names one of 43 curated crypto phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
         "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue. The crypto activity share (crypto-tagged senate activity blocks ÷ all the client's senate activity blocks) is the intensity companion: it says how much of the filer's declared attention is crypto, never how its dollars split.",
@@ -508,6 +522,65 @@ def bill_hint(bill):
 top_bills = []
 for r in bills[:12]:
     top_bills.append({"bill": r["bill"], "n": int(r["aipac_filings"]), "hint": bill_hint(r["bill"])})
+
+# ---- underlying-record embeds (2026-07-12, same "see the actual filings"
+# pattern as crypto/pardons/healthcare; AIPAC's own volume is small — no caps
+# needed) ----
+ap_press_releases = {}
+for r in rd("aipac", "aipac_press_releases.csv"):
+    ap_press_releases.setdefault(r["quarter"], []).append(
+        [r["date"], r["member_name"], PARTY_L.get(r["party"], (r["party"] or "?")[:1]),
+         r["state"], (r["title"] or "")[:110], r["url"]])
+ap_quarter_filing = {q_label(r["filing_year"], r["filing_period"]): r["show_record_key"] for r in aq}
+
+ap_gov_entity_filings = {}
+for r in rd("aipac", "aipac_gov_entity_filings.csv"):
+    ap_gov_entity_filings.setdefault(r["entity_name"], []).append(
+        [r["filing_uuid"], f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}",
+         num(r["reported_amount"])])
+
+top_bill_codes = {b["bill"] for b in top_bills}
+ap_bill_filings = {}
+for r in rd("aipac", "aipac_bill_filings.csv"):
+    if r["bill"] not in top_bill_codes:
+        continue
+    ap_bill_filings.setdefault(r["bill"], []).append(
+        [r["filing_uuid"], f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}",
+         num(r["reported_amount"])])
+
+top_colobby_clients = {r["client"] for r in colob[:15]}
+ap_colobby_filings = {}
+for r in rd("aipac", "aipac_colobby_filings.csv"):
+    if r["client"] not in top_colobby_clients:
+        continue
+    ap_colobby_filings.setdefault(r["client"], []).append(
+        [r["filing_uuid"], r["bill"], tcase(r["registrant_name"]) or r["registrant_name"],
+         f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}", num(r["reported_amount"])])
+
+top_israel_players = {r["player"] for r in ispl if "AMERICAN ISRAEL PUBLIC AFFAIRS" not in r["player"].upper()}
+ap_israel_player_filings = {}
+for r in rd("aipac", "aipac_israel_player_filings.csv"):
+    if r["player"] not in top_israel_players:
+        continue
+    ap_israel_player_filings.setdefault(r["player"], []).append(
+        [r["filing_uuid"], f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}",
+         tcase(r["registrant_name"]) or r["registrant_name"], num(r["reported_amount"])])
+
+ap_lobbyist_filings = {}
+for r in rd("aipac", "aipac_lobbyist_filings.csv"):
+    key = tcase(r["first_name"] + " " + r["last_name"])
+    ap_lobbyist_filings.setdefault(key, []).append(
+        [r["filing_uuid"], f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}"])
+
+top_recip_names = {r["recipient"] for r in agrec[:15]}
+ap_giving_recip_items, ap_giving_year_items = {}, {}
+for r in rd("aipac", "aipac_giving_items.csv"):
+    row = [r["filing_uuid"], tcase(r["recipient_raw"]) or r["recipient_raw"], r["date"],
+           num(r["amount"]), r["contribution_type"], int(r["n_amendment_versions"])]
+    if r["recipient_display"] in top_recip_names:
+        ap_giving_recip_items.setdefault(r["recipient_display"], []).append(row)
+    ap_giving_year_items.setdefault(r["filing_year"], []).append(row)
+
 aipac_data = {
     "kpis": [
         {"label": "2025 lobbying spend (in-house)", "value": "$3.76M", "note": "+38% vs 2022; steady ~9%/yr climb"},
@@ -518,19 +591,37 @@ aipac_data = {
     "coupling": {"q": [r["quarter"] for r in coup], "amount": [num(r["aipac_reported_amount"]) for r in coup],
                  "share": [num(r["israel_share_pct"]) for r in coup], "rel": [int(r["israel_releases"]) for r in coup],
                  "all": [int(r["all_releases"]) for r in coup]},
+    "quarterFiling": ap_quarter_filing,
+    "pressReleases": ap_press_releases,
     "govEntities": [{"name": r["entity_name"], "n": int(r["mentions"])} for r in gov],
+    "govEntityFilings": ap_gov_entity_filings,
     "nBills": len(bills),
     "topBills": top_bills,
+    "billFilings": ap_bill_filings,
     "billsTable": [{"bill": r["bill"], "n": int(r["aipac_filings"]), "y0": r["first_year"], "y1": r["last_year"]} for r in bills[:60]],
-    "coLobby": [{"name": tcase(r["client"]), "bills": int(r["shared_distinctive_bills"]), "filings": int(float(r["filings_on_those_bills"]))} for r in colob[:15]],
-    "israelPlayers": [{"name": tcase(r["player"]), "n": int(r["israel_filings"]), "spend": num(r["total_all_issue_spend"])}
+    "coLobby": [{"name": tcase(r["client"]), "raw": r["client"], "bills": int(r["shared_distinctive_bills"]),
+                 "filings": int(float(r["filings_on_those_bills"]))} for r in colob[:15]],
+    "coLobbyFilings": ap_colobby_filings,
+    "israelPlayers": [{"name": tcase(r["player"]), "raw": r["player"], "n": int(r["israel_filings"]),
+                       "spend": num(r["total_all_issue_spend"])}
                       for r in ispl if "AMERICAN ISRAEL PUBLIC AFFAIRS" not in r["player"].upper()][:18],
+    "israelPlayerFilings": ap_israel_player_filings,
     "givingRecipients": [{"name": r["recipient"], "total": num(r["total"]), "items": int(r["items"])} for r in agrec[:15]],
+    "givingRecipientItems": ap_giving_recip_items,
     "givingByYear": [{"y": r["filing_year"], "total": num(r["total"])} for r in agy],
+    "givingYearItems": ap_giving_year_items,
     "givingTotal": 7652150,
     "partySplit": json.load(open(os.path.join(S, "aipac_party_split.json")))["psum"],
     "lobbyists": [{"name": tcase(r["first_name"] + " " + r["last_name"]), "filings": int(r["filings"]),
                    "years": f"{r['first_year']}–{r['last_year']}"} for r in lob],
+    "lobbyistFilings": ap_lobbyist_filings,
+    "queryInfo": None,  # filled below
+    "findings": [
+        {"id": "L032", "status": "open", "title": "AIPAC review package — ratchet budget vs. Oct-7 press spike",
+         "hypothesis": "AIPAC's lobbying budget is a planned ratchet insensitive to news shocks: Israel-topic share of member press releases jumps 2.6%→20.3% in 2023-Q4 (~8x, Oct-7) while AIPAC's own quarterly spend moves only +6.6% and never breaks its steady ~9%/yr climb. Disclosed LD-203 giving ($7.65M, 2022-25) is strikingly bipartisan; the co-lobby field on AIPAC's distinctive bills spans both camps at near-identical coverage (J Street 146 shared bills, FDD Action 146). The exploratory Israel-policy free-text scan flags non-obvious entries (Chevron — Eastern-Med gas leases; terror-victim litigation estates) alongside the expected advocacy orgs.",
+         "actors": "AIPAC; J Street; FDD Action; Chevron U.S.A.; Rep. Randy Weber; Rep. Joseph Morelle; Rep. Ritchie Torres",
+         "next": "Teammate triage of the synthesis package; FEC leg on AIPAC-affiliated Super-PAC spending (United Democracy Project) — same LD-203≠FEC boundary as crypto's Fairshake; promote the Israel-policy scan vocabulary to industry_lexicon.json before citing the field list in a story."},
+    ],
     "caveats": [
         "AIPAC self-files (in-house registrant): quarterly amounts are its own reported lobbying spend, not payments to outside firms. No outside-firm engagements appear for AIPAC in this window.",
         "'Co-lobbying a bill' means filing on the same bill — allies and opponents both appear; direction of advocacy is not in the disclosure data.",
@@ -540,6 +631,105 @@ aipac_data = {
         "Senate-primary, amendment-deduplicated; every table row traces to a filing UUID in the CSVs."
     ]
 }
+
+# ---- per-widget query info (debugging aid, matching the crypto/pardons dashboards) ----
+_exa = _read(os.path.join(REPO, "out", "packages", "aipac", "_build", "export_aipac.py"))
+_exau = _read(os.path.join(REPO, "out", "packages", "aipac", "_build", "export_aipac_underlying.py"))
+_ap_aipac = _grab(_exa, r'AIPAC = "(.*)"')
+_ap_israel_re = _grab(_exa, r'ISRAEL_RE = r"(.*)"')
+_ap_qord = _grab(_exa, r'QORD = "(.*)"')
+
+
+def _resolve_ap(sql):
+    return sql.replace("{AIPAC}", _ap_aipac).replace("{ISRAEL_RE}", _ap_israel_re).replace("{QORD}", _ap_qord)
+
+
+q_ap_quarterlies_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_quarterlies\.csv", f"""(.*?)"""\)'))
+q_ap_gov_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_gov_entities\.csv", f"""(.*?)"""\)'))
+q_ap_bills_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_bills\.csv", f"""(.*?)"""\)'))
+q_ap_colobby_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_bill_colobbyists\.csv", f"""(.*?)"""\)'))
+q_ap_israel_sql = _resolve_ap(_grab(_exa, r'wcsv\("israel_policy_players\.csv", f"""(.*?)"""\)'))
+q_ap_press_coupling_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_press_coupling\.csv", f"""(.*?)"""\)'))
+q_ap_lobbyists_sql = _resolve_ap(_grab(_exa, r'wcsv\("aipac_lobbyists\.csv", f"""(.*?)"""\)'))
+q_ap_press_sql = _resolve_ap(_grab(_exau, r'Q_PRESS = f"""(.*?)"""'))
+q_ap_gov_filings_sql = _resolve_ap(_grab(_exau, r'Q_GOV = f"""(.*?)"""'))
+q_ap_bill_filings_sql = _resolve_ap(_grab(_exau, r'Q_BILLS = f"""(.*?)"""'))
+q_ap_colobby_filings_sql = _resolve_ap(_grab(_exau, r'Q_COLOBBY = f"""(.*?)"""'))
+q_ap_israel_filings_sql = _resolve_ap(_grab(_exau, r'Q_ISRAEL = f"""(.*?)"""'))
+q_ap_lobbyist_filings_sql = _resolve_ap(_grab(_exau, r'Q_LOB = f"""(.*?)"""'))
+q_ap_items_sql = _grab(_exau, r'Q_ITEMS = """(.*?)"""')
+
+_APDB = ("DB: db/lda_full.duckdb (read-only). AIPAC = registrant_name ILIKE "
+         "'%AMERICAN ISRAEL PUBLIC AFFAIRS%' — a clean self-filer (registrant==client, "
+         "no amendments in window). Rebuild: lda-corpus-loader/build_db.py → "
+         "lda-entity-resolver/resolve_entities.py.")
+
+aipac_data["queryInfo"] = {
+    "kpis": _qi("Header stats — where each number comes from",
+        "$3.76M / 17 filings / bills count are AIPAC's own quarterly filings (data/"
+        "aipac_quarterlies.csv); $7.65M is the LD-203 giving total (data/aipac_ld203_recipients.csv, "
+        "exhaustive --top 999999 run). " + _APDB,
+        [("AIPAC quarterlies SQL · export_aipac.py → data/aipac_quarterlies.csv", q_ap_quarterlies_sql)]),
+    "coupling": _qi("Budget vs. press cycle — the queries behind it",
+        "Top panel = AIPAC's own reported quarterly amount (one filing per quarter — click links "
+        "straight to it). Bottom panel = share of ALL member press releases matching the Israel/Gaza "
+        "regex that quarter; click-through releases in data/aipac_press_releases.csv. " + _APDB,
+        [("SQL · export_aipac.py → data/aipac_press_coupling.csv", q_ap_press_coupling_sql),
+         ("raw-release index · export_aipac_underlying.py → data/aipac_press_releases.csv", q_ap_press_sql)]),
+    "govEntities": _qi("Who is lobbied — the query behind it",
+        "→ data/aipac_gov_entities.csv: senate_gov_entities mentions on AIPAC's own filings. "
+        "Click-through filings = data/aipac_gov_entity_filings.csv. " + _APDB,
+        [("SQL 1 — mentions · export_aipac.py → data/aipac_gov_entities.csv", q_ap_gov_sql),
+         ("SQL 2 — raw-filing index · export_aipac_underlying.py → data/aipac_gov_entity_filings.csv",
+          q_ap_gov_filings_sql)]),
+    "bills": _qi("Bills — the query behind it",
+        "→ data/aipac_bills.csv: bill_mentions on AIPAC's own filings, ranked by filing count. "
+        "Click-through filings = data/aipac_bill_filings.csv. " + _APDB,
+        [("SQL 1 — bills · export_aipac.py → data/aipac_bills.csv", q_ap_bills_sql),
+         ("SQL 2 — raw-filing index · export_aipac_underlying.py → data/aipac_bill_filings.csv",
+          q_ap_bill_filings_sql)]),
+    "coLobby": _qi("Co-lobbyists — the query behind it",
+        "→ data/aipac_bill_colobbyists.csv: other clients filing on AIPAC's DISTINCTIVE bills "
+        "(≤200 lobbying engagements corpus-wide, so mega-bills like the NDAA don't drown the "
+        "signal). Click-through filings = data/aipac_colobby_filings.csv (top 15 shown here). " + _APDB,
+        [("SQL 1 — co-lobbyists · export_aipac.py → data/aipac_bill_colobbyists.csv", q_ap_colobby_sql),
+         ("SQL 2 — raw-filing index · export_aipac_underlying.py → data/aipac_colobby_filings.csv",
+          q_ap_colobby_filings_sql)]),
+    "israelPlayers": _qi("The wider Israel-policy field — the query behind it",
+        "→ data/israel_policy_players.csv: EXPLORATORY whole-word regex scan over senate filing "
+        "free-text (not the curated lexicon pipeline) — ≥2 matching filings. Click-through filings "
+        "= data/aipac_israel_player_filings.csv (top 18 shown here). " + _APDB,
+        [("SQL 1 — players · export_aipac.py → data/israel_policy_players.csv", q_ap_israel_sql),
+         ("SQL 2 — raw-filing index · export_aipac_underlying.py → data/aipac_israel_player_filings.csv",
+          q_ap_israel_filings_sql)]),
+    "giving": _qi("LD-203 giving — how these numbers are produced",
+        "Produced by skills/lead-scanner/scripts/lda_ld203_giving.py \"american israel public "
+        "affairs committee\" --top 999999 --json (exhaustive recipient list — a --top 400 cut "
+        "silently drops long-tail recipients), then member-merged by enhance_giving.py (first-seen-"
+        "wins per normalized key — see giving_match.py's first_seen_display()). Item-level query "
+        "below buckets every de-duplicated item to BOTH its recipient display row and its filing "
+        "year, so both bars on this widget click through to the same underlying set. " + _APDB,
+        [("SQL — de-duped items · export_aipac_underlying.py → data/aipac_giving_items.csv", q_ap_items_sql)]),
+    "lobbyists": _qi("The in-house team — the query behind it",
+        "→ data/aipac_lobbyists.csv: senate_lobbyists rows on AIPAC's filings (one row per "
+        "filing×activity in the raw table — de-duped to one per filing here). Click-through "
+        "filings = data/aipac_lobbyist_filings.csv. " + _APDB,
+        [("SQL 1 — lobbyists · export_aipac.py → data/aipac_lobbyists.csv", q_ap_lobbyists_sql),
+         ("SQL 2 — raw-filing index · export_aipac_underlying.py → data/aipac_lobbyist_filings.csv",
+          q_ap_lobbyist_filings_sql)]),
+}
+_APCLICK = {
+    "coupling": "CLICK-THROUGH: click a quarter bar for its filing; click a point on the press line for that quarter's matching releases.",
+    "govEntities": "CLICK-THROUGH: click a bar to list AIPAC's filings naming that entity.",
+    "bills": "CLICK-THROUGH: click a bar to list AIPAC's filings naming that bill.",
+    "coLobby": "CLICK-THROUGH: click a bar to list that client's filings on the shared bills.",
+    "israelPlayers": "CLICK-THROUGH: click a bar to list that player's Israel-topic filings.",
+    "giving": "CLICK-THROUGH: click any bar (recipients or by-year) for the amendment-deduped LD-203 items behind it, each linking to the filed report on lda.senate.gov.",
+    "lobbyists": "CLICK-THROUGH: click a bar to list that lobbyist's filings.",
+    "kpis": "Click-throughs live on the widgets themselves.",
+}
+for _k, _s in _APCLICK.items():
+    aipac_data["queryInfo"][_k]["note"] = _s + " " + aipac_data["queryInfo"][_k]["note"]
 
 # ============================ HEALTHCARE ============================
 hpl = rd("healthcare", "hc_players.csv")
@@ -575,6 +765,82 @@ for r in hpl:
     if len(hplayers) >= 55: break
 HINTS = {"HR5376": "Inflation Reduction Act (drug pricing)", "HR3": "drug-price negotiation (117th)",
          "HR1": "2025 reconciliation (Medicaid changes)"}
+
+# ---- underlying-record embeds (2026-07-12, Rob's ask: every widget should let
+# the user see the actual underlying filings/records with links, same pattern
+# as the crypto/pardons dashboards) ----
+HC_CAP = 150  # healthcare's per-quarter/per-player volume is ~10x crypto's; cap
+              # embedded rows per bucket like crypto's scatter widget does (full
+              # lists always ship in the CSV — this bounds the HTML embed size)
+hpf_names = {p["name"] for p in hplayers}
+hc_player_filings_all = {}
+for r in rd("healthcare", "hc_player_filings.csv"):
+    if r["player"] not in hpf_names:
+        continue
+    label = f"{r['filing_year']} {PQ2.get(r['filing_period'], r['filing_period'])}"
+    hc_player_filings_all.setdefault(r["player"], []).append(
+        [r["filing_uuid"], label, tcase(r["registrant_name"]) or r["registrant_name"],
+         num(r["reported_amount"]), r["health_codes"]])
+hc_player_filings_total = {k: len(v) for k, v in hc_player_filings_all.items()}
+hc_player_filings = {}
+for name, lst in hc_player_filings_all.items():
+    lst.sort(key=lambda f: -(f[3] or 0))
+    hc_player_filings[name] = sorted(lst[:HC_CAP], key=lambda f: (f[1][:4], Q_ORDER.get(f[1][5:7], 9)))
+
+hc_trend_totals, hc_trend_filings = {}, {}
+for r in rd("healthcare", "hc_trend_filings.csv"):
+    q = q_label(r["filing_year"], r["filing_period"])
+    hc_trend_totals[q] = hc_trend_totals.get(q, 0) + 1
+    lst = hc_trend_filings.setdefault(q, [])
+    if len(lst) < HC_CAP:
+        lst.append([r["filing_uuid"], r["player"], tcase(r["registrant_name"]) or r["registrant_name"],
+                    num(r["reported_amount"]), r["health_codes"]])
+
+hc_code_trend_totals, hc_code_trend_filings = {}, {}  # quarter -> {code: [[uuid, player, reg, amt], ...]}
+for r in rd("healthcare", "hc_code_trend_filings.csv"):
+    q = q_label(r["filing_year"], r["filing_period"])
+    code = r["general_issue_code"]
+    hc_code_trend_totals[(q, code)] = hc_code_trend_totals.get((q, code), 0) + 1
+    e = hc_code_trend_filings.setdefault(q, {"HCR": [], "MMM": [], "PHA": [], "MED": []})
+    if code in e and len(e[code]) < HC_CAP:
+        e[code].append([r["filing_uuid"], r["player"],
+                        tcase(r["registrant_name"]) or r["registrant_name"], num(r["reported_amount"])])
+
+hc_press_totals, hc_press_releases = {}, {}
+for r in rd("healthcare", "hc_press_releases.csv"):
+    hc_press_totals[r["quarter"]] = hc_press_totals.get(r["quarter"], 0) + 1
+    lst = hc_press_releases.setdefault(r["quarter"], [])
+    if len(lst) < HC_CAP:
+        lst.append([r["date"], r["member_name"], PARTY_L.get(r["party"], (r["party"] or "?")[:1]),
+                    r["state"], (r["title"] or "")[:110], r["url"]])
+
+top_bill_names = {r["bill"] for r in hbl[:12]}
+hc_bill_totals, hc_bill_filings = {}, {}
+for r in rd("healthcare", "hc_bill_filings.csv"):
+    if r["bill"] not in top_bill_names:
+        continue
+    hc_bill_totals[r["bill"]] = hc_bill_totals.get(r["bill"], 0) + 1
+    lst = hc_bill_filings.setdefault(r["bill"], [])
+    if len(lst) < HC_CAP:
+        lst.append([r["filing_uuid"], r["player"], tcase(r["registrant_name"]) or r["registrant_name"],
+                    num(r["reported_amount"])])
+
+top_org_raw = {r["ld203_filer_org"] for r in hgo[:10]}
+hc_giving_org_items = {}
+for r in rd("healthcare", "hc_giving_org_items.csv"):
+    if r["ld203_filer_org"] not in top_org_raw:
+        continue
+    hc_giving_org_items.setdefault(r["ld203_filer_org"], []).append(
+        [r["filing_uuid"], tcase(r["recipient"]) or r["recipient"], r["date"], num(r["amount"]),
+         r["contribution_type"], int(r["n_amendment_versions"])])
+
+hc_giving_recipient_items = {}
+for r in rd("healthcare", "hc_giving_recipient_items.csv"):
+    e = hc_giving_recipient_items.setdefault(r["display_row"], {"health_focused": [], "mixed_diversified": []})
+    e[r["giver_slice"]].append(
+        [r["filing_uuid"], tcase(r["ld203_filer_org"]) or r["ld203_filer_org"], r["date"],
+         num(r["amount"]), r["contribution_type"], int(r["n_amendment_versions"])])
+
 hc_data = {
     "kpis": [
         {"label": "Health-coded filings per quarter", "value": "~4,000", "note": "stable 2022–24; 2025 peak 4,384 (+9%)"},
@@ -583,6 +849,18 @@ hc_data = {
         {"label": "Disclosed LD-203 giving (top-150 orgs)", "value": "$107.8M", "note": "2022–25; AHA is the top giver at $9.7M"},
     ],
     "players": hplayers,
+    "playerFilings": hc_player_filings,
+    "playerFilingsTotal": hc_player_filings_total,
+    "trendFilings": hc_trend_filings,
+    "trendFilingsTotal": hc_trend_totals,
+    "codeTrendFilings": hc_code_trend_filings,
+    "codeTrendFilingsTotal": {f"{q}|{c}": n for (q, c), n in hc_code_trend_totals.items()},
+    "pressReleases": hc_press_releases,
+    "pressReleasesTotal": hc_press_totals,
+    "billFilings": hc_bill_filings,
+    "billFilingsTotal": hc_bill_totals,
+    "givingOrgItems": hc_giving_org_items,
+    "givingRecipientItems": hc_giving_recipient_items,
     "trend": {"q": hq, "filings": [int(r["health_filings"]) for r in htr],
               "clients": [int(r["health_clients"]) for r in htr],
               "spend": [num(r["canonical_spend_hc_clients"]) for r in htr]},
@@ -592,11 +870,23 @@ hc_data = {
               "n": [int(r["health_releases"]) for r in hpr], "all": [int(r["all_releases"]) for r in hpr]},
     "topBills": [{"bill": r["bill"], "clients": int(r["clients"]), "filings": int(r["filings"]),
                   "hint": HINTS.get(r["bill"], "")} for r in hbl[:12]],
-    "givingOrgs": [{"name": tcase(r["ld203_filer_org"]), "total": num(r["disclosed_giving_total"]),
+    "givingOrgs": [{"name": tcase(r["ld203_filer_org"]), "raw": r["ld203_filer_org"],
+                    "total": num(r["disclosed_giving_total"]),
                     "focused": r["ld203_filer_org"].strip().upper() in hc_focused_set} for r in hgo[:10]],
     "givingTop": hgiv_top,
     "givingMembers": hgiv_members,
     "givingTotal": 107769783,
+    "queryInfo": None,  # filled below
+    "findings": [
+        {"id": "L033", "status": "open", "title": "Healthcare review package — installed base, not a surge industry",
+         "hypothesis": "The largest standing lobbying operation in the corpus is a stable installed base (~4,000 filings / ~2,950 clients every quarter 2022-24, 2025 peak +9% on the reconciliation Medicaid fight), not a breakout like crypto. Health press share sets a corpus record 28.8% of all member releases in 2025-Q4. Activity-level share (not filing-level, which is a self-filer artifact) separates pure-plays PhRMA (68.8%)/AHA (51%)/AHIP (71.6%) from side-desk giants AARP (23.4%)/Amazon (5.2%)/U.S. Chamber (5.4%). LD-203 giving of the top-150 health orgs is $107.8M 2022-25, AHA the top giver at $9.7M; HR1-2025 is the most crowded bill (792 distinct clients).",
+         "actors": "PhRMA; American Hospital Association; American Medical Association; AHIP; AARP; Altria",
+         "next": "Teammate triage of the synthesis package; candidate deep-dives: the 2025-Q4 28.8% press record vs. the flat filing base (extends L026), AHA's $9.7M giving map, the HR1-2025 crowd."},
+        {"id": "L026", "status": "triaged", "title": "Medicare/Medicaid say-vs-pay divergence",
+         "hypothesis": "Congressional press attention-share on MMM more than doubles in 2025 (2.4%→5.7% of tagged releases, Q2) during the reconciliation Medicaid-cut fight, while MMM lobbying-money share FALLS every year (9.09%→7.55% of Q2 spend, 2022→2025) — the loud press voices (Durbin, Jeffries, Warren, Clark, Luján) are entirely different actors from the steady paid healthcare-industry clients (American Health Care Assoc., American College of Clinical Pharmacy, Virginia Hospital & Healthcare Assoc.).",
+         "actors": "Richard J. Durbin; Hakeem Jeffries; Elizabeth Warren; American Health Care Association; American College of Clinical Pharmacy",
+         "next": "Deep-read a sample of the 2025-Q2 MMM press releases to confirm the message is anti-cut (not industry-aligned); determine whether the money-share decline is a real reallocation or a denominator effect; editorial framing of 'messaging vs. money.'"},
+    ],
     "caveats": [
         "Scope = filings whose activities carry ALI issue codes HCR (health), MMM (Medicare/Medicaid), PHA (pharmacy) or MED (medical research). Unlike crypto, healthcare is code-visible, so the issue-code lens is primary.",
         "Spend is each client's TOTAL canonical lobbying spend (all issues) in quarters where it filed on health — an upper-bound size signal, since filing-level disclosure cannot split dollars by issue.",
@@ -606,6 +896,106 @@ hc_data = {
         "Recipient names are lightly-normalized filing strings, not entity-resolved."
     ]
 }
+
+# ---- per-widget query info (debugging aid, matching the crypto/pardons dashboards) ----
+_exh = _read(os.path.join(REPO, "out", "packages", "healthcare", "_build", "export_healthcare.py"))
+_exhu = _read(os.path.join(REPO, "out", "packages", "healthcare", "_build", "export_healthcare_underlying.py"))
+_hc_codes = _grab(_exh, r'CODES = "(.*)"')
+_hc_filings_cte = _grab(_exh, r'HC_FILINGS = f"""\n(.*?)"""').replace("{CODES}", _hc_codes)
+_hc_qord = _grab(_exh, r'QORD = "(.*)"')
+
+
+def _resolve_hc(sql):
+    sql = sql.replace("{HC_FILINGS}", _hc_filings_cte).replace("{CODES}", _hc_codes)
+    return re.sub(r"\{QORD\.replace\('filing_period','([^']+)'\)\}",
+                  lambda m: _hc_qord.replace("filing_period", m.group(1)), sql)
+
+
+q_hc_players_sql = _resolve_hc(_grab(_exh, r'_, players = wcsv\("hc_players\.csv", f"""(.*?)"""\)'))
+q_hc_trend_sql = _resolve_hc(_grab(_exh, r'wcsv\("hc_quarterly_trend\.csv", f"""(.*?)"""\)'))
+q_hc_code_sql = _resolve_hc(_grab(_exh, r'wcsv\("hc_code_trend\.csv", f"""(.*?)"""\)'))
+q_hc_bills_sql = _resolve_hc(_grab(_exh, r'wcsv\("hc_bills\.csv", f"""(.*?)"""\)'))
+q_hc_press_sql = _resolve_hc(_grab(_exh, r'wcsv\("hc_press_coupling\.csv", f"""(.*?)"""\)'))
+q_hc_players_filings_sql = _resolve_hc(_grab(_exhu, r"Q_PLAYERS = f\"\"\"(.*?)\"\"\""))
+q_hc_trend_filings_sql = _resolve_hc(_grab(_exhu, r"Q_TREND = f\"\"\"(.*?)\"\"\""))
+q_hc_code_filings_sql = _resolve_hc(_grab(_exhu, r"Q_CODE = f\"\"\"(.*?)\"\"\""))
+q_hc_press_filings_sql = _resolve_hc(_grab(_exhu, r"Q_PRESS = f\"\"\"(.*?)\"\"\""))
+q_hc_bill_filings_sql = _resolve_hc(_grab(_exhu, r"Q_BILLS = f\"\"\"(.*?)\"\"\""))
+q_hc_org_items_sql = _grab(_exhu, r'Q_ORG_ITEMS = """(.*?)"""')
+q_hc_recip_items_sql = _grab(_exhu, r'Q_RECIP_ITEMS = """(.*?)"""')
+
+_HCDB = ("DB: db/lda_full.duckdb (read-only). Scope = senate_activities.general_issue_code IN "
+         "('HCR','MMM','PHA','MED') — no curated lexicon needed (healthcare is ALI-code-visible, "
+         "unlike crypto). Rebuild: lda-corpus-loader/build_db.py → lda-entity-resolver/resolve_entities.py.")
+
+hc_data["queryInfo"] = {
+    "kpis": _qi("Header stats — where each number comes from",
+        "~4,000 / $1.69B / 28.8% / $107.8M are the 2025 rows of the quarterly-trend and "
+        "press-coupling queries below plus the giving totals (data/hc_ld203_by_org.csv, top "
+        "150 roster). " + _HCDB,
+        [("quarterly-trend SQL · export_healthcare.py → data/hc_quarterly_trend.csv", q_hc_trend_sql)]),
+    "players": _qi("Player map — the queries behind it",
+        "Bubbles = data/hc_players.csv (SQL 1: health-coded senate filings resolved to client "
+        "entities; the acts CTE computes health-activity share on ACTIVITY rows, not filings — "
+        "a self-filer's single quarterly filing lists dozens of issues, so filing-level share "
+        "would read ~100% for every mega-filer). Click-through filing lists = "
+        "data/hc_player_filings.csv (SQL 2; one lda.senate.gov URL per filing_uuid). " + _HCDB,
+        [("SQL 1 — players · export_healthcare.py → data/hc_players.csv", q_hc_players_sql),
+         ("SQL 2 — raw-filing index · export_healthcare_underlying.py → data/hc_player_filings.csv",
+          q_hc_players_filings_sql)]),
+    "trend": _qi("Quarterly trend — the query behind it",
+        "→ data/hc_quarterly_trend.csv. Amendments deduped on (registrant_id, client_id, "
+        "filing_year, filing_period) keeping latest-by-posted; registrations excluded; spend via "
+        "v_client_canonical_spend. " + _HCDB,
+        [("SQL · export_healthcare.py → data/hc_quarterly_trend.csv", q_hc_trend_sql),
+         ("raw-filing index · export_healthcare_underlying.py → data/hc_trend_filings.csv",
+          q_hc_trend_filings_sql)]),
+    "codeTrend": _qi("Issue mix — the query behind it",
+        "→ data/hc_code_trend.csv: amendment-deduped filings joined to senate_activities, grouped "
+        "by (quarter, general_issue_code) — a filing carrying 2 of the 4 codes counts once in "
+        "EACH code's line. " + _HCDB,
+        [("SQL · export_healthcare.py → data/hc_code_trend.csv", q_hc_code_sql),
+         ("raw-filing index · export_healthcare_underlying.py → data/hc_code_trend_filings.csv",
+          q_hc_code_filings_sql)]),
+    "press": _qi("Press share — the query behind it",
+        "→ data/hc_press_coupling.csv: filings tagged via press_issue_mentions.issue_code IN "
+        "('HCR','MMM','PHA','MED'), share per quarter of ALL member releases. " + _HCDB,
+        [("SQL · export_healthcare.py → data/hc_press_coupling.csv", q_hc_press_sql),
+         ("raw-release index · export_healthcare_underlying.py → data/hc_press_releases.csv",
+          q_hc_press_filings_sql)]),
+    "bills": _qi("Bills — the query behind it",
+        "→ data/hc_bills.csv: bill_mentions joined to health-coded filings, ranked by distinct "
+        "clients lobbying each bill. " + _HCDB,
+        [("SQL · export_healthcare.py → data/hc_bills.csv", q_hc_bills_sql),
+         ("raw-filing index · export_healthcare_underlying.py → data/hc_bill_filings.csv",
+          q_hc_bill_filings_sql)]),
+    "giving": _qi("LD-203 giving — how these numbers are produced",
+        "Produced by skills/lead-scanner/scripts/lda_ld203_giving.py --json --top 999999 "
+        "(exhaustive recipient lists — a --top 400 cut silently drops long-tail recipients, the "
+        "same truncation trap already fixed once for crypto) against two rosters — "
+        "out/healthcare_roster_focused.txt (health-focused, ≥50% health activities) and "
+        "out/healthcare_roster_mixed.txt (mixed/diversified, <50%) — then member-merged by "
+        "enhance_giving.py the same way as crypto's giving split. Left bars (orgs) query the "
+        "top-150 roster directly, item-level via Q_ORG_ITEMS. Right bars (recipients/members) "
+        "bucket items to the exact display row enhance_giving.py's first-seen-wins merge picked "
+        "(a raw variant like 'DSCC' and 'Democratic Senatorial Campaign Committee' both roll up "
+        "into one displayed row — see giving_match.py's first_seen_display()). " + _HCDB,
+        [("SQL 1 — org items · export_healthcare_underlying.py → data/hc_giving_org_items.csv",
+          q_hc_org_items_sql),
+         ("SQL 2 — recipient/member items · export_healthcare_underlying.py → data/hc_giving_recipient_items.csv",
+          q_hc_recip_items_sql)]),
+}
+_HCLICK = {
+    "players": "CLICK-THROUGH: click a bubble to list its health-coded filings (full index: data/hc_player_filings.csv).",
+    "trend": "CLICK-THROUGH: click a quarter to list exactly the deduped filings it counts (data/hc_trend_filings.csv).",
+    "codeTrend": "CLICK-THROUGH: click a quarter to list the filings behind each code that quarter (data/hc_code_trend_filings.csv).",
+    "press": "CLICK-THROUGH: click a quarter to list the matching releases (data/hc_press_releases.csv).",
+    "bills": "CLICK-THROUGH: click a bar to list the filings naming that bill (data/hc_bill_filings.csv).",
+    "giving": "CLICK-THROUGH: click any bar for the amendment-deduped LD-203 items behind it, each linking to the filed report on lda.senate.gov.",
+    "kpis": "Click-throughs live on the widgets themselves.",
+}
+for _k, _s in _HCLICK.items():
+    hc_data["queryInfo"][_k]["note"] = _s + " " + hc_data["queryInfo"][_k]["note"]
 
 # ============================ PARDONS ============================
 ppl = rd("pardons", "pardons_players.csv")
@@ -687,6 +1077,20 @@ pardons_data = {
     "press": {"q": [r["quarter"] for r in ppr], "share": [num(r["pardon_share_pct"]) for r in ppr],
               "n": [int(r["pardon_releases"]) for r in ppr], "all": [int(r["all_releases"]) for r in ppr]},
     "queryInfo": None,  # filled below
+    "findings": [
+        {"id": "L034", "status": "open", "title": "Turnover-lens paid pardon-seeking market — termination-closure timing",
+         "hypothesis": "The P3 turnover tracker surfaces a paid pardon-seeking market closed out by termination filings: Roger Ver pays Drake Ventures (Roger Stone's firm) $600K + Sterling Green $70K; Torence Hatch (Boosie Badazz) pays J M Burkman & Associates $600K; Joseph Schwartz pays Burkman $960K + Merkava Strategies $100K. Outside-context-scan confirms the asks' outcomes are checkable against public record: Schwartz was PARDONED ~2025-11-21 (his termination follows by weeks); Ver was NOT pardoned (a $49.9M deferred-prosecution deal instead). The case list itself is scooped by NOTUS/WaPo/NBC coverage — the candidate-novel angle is the systematic termination-closure timing, not the market's existence.",
+         "actors": "Roger Ver; Torence Hatch (Boosie Badazz); Joseph Schwartz; J M Burkman & Associates; Drake Ventures LLC (Roger Stone)",
+         "next": "Hatch's outcome is still unresolved (sentencing was set for Jan-2026; his termination posted 2026-Q1 — pardoned, sentenced, or dropped?). Editorial/legal-sensitivity review still required (living persons). Frame any finding around termination-closure timing, not market existence."},
+        {"id": "L035", "status": "open", "title": "Pardons industry map — the paid seeker market, sized and field-mapped",
+         "hypothesis": "27 seeker engagements (after a same-day fix for registration-only tag credit) total $6.21M disclosed billings, 10 declared-terminated. 'Executive relief' resolves corpus-wide to exactly Binance Holdings + Changpeng Zhao + Fred Daibes (L021). Outside-context-scan confirms the beat is covered (NOTUS is effectively this map as a case list) — but coverage has NOT named several small-dollar engagements: Origin Property Group/Marco Bitran, Juno Empire/Jorge Ferrer, Alvarez, Belli, Camino, Healthicity, Magma Power, and Selim Zherka (LegiStorm trade-press only). No outlet has published the field-level quantification (37-code scatter, seeker-vs-advocacy split, termination-closure timing).",
+         "actors": "Changpeng Zhao; Binance Holdings; Fred Daibes; Selim Zherka; Marco Bitran; Jorge Ferrer; The Vogel Group; J M Burkman & Associates",
+         "next": "Teammate triage; outcome checks still pending for Bitran, Ferrer, Alvarez, Tierney, Patel, Pramaggiore, Scrushy, Hatch. Editorial/legal-sensitivity review required — living persons named throughout (same flag as L021/L034)."},
+        {"id": "L021", "status": "triaged", "title": "Fred Daibes — 'Executive relief' via an ex-Trump aide",
+         "hypothesis": "Fred Daibes (convicted in the Sen. Menendez bribery case) pays $1M to lobby for 'Executive relief' (clemency); the registered lobbyist is Keith Schiller, former Director of Oval Office Operations under Trump. Daibes is one of exactly three clients corpus-wide who use the 'executive relief' euphemism (with Binance/Zhao — see L035), so he sits directly in this package's player map.",
+         "actors": "Fred Daibes; Javelin Advisors LLC; Keith Schiller",
+         "next": "Editorial/legal-sensitivity review (living person, active clemency ask); verify Schiller's covered-position status; check the NULL-income quarters for continued engagement."},
+    ],
     "caveats": [
         "Recall boundary: only engagements whose filing free-text uses the 8-phrase pardon/clemency vocabulary appear. Engagements that never say the word are invisible — Roger Ver's Drake Ventures ($600K) and Sterling Green engagements (ledger L034) declare 'US government prosecution of Roger Ver' and are NOT on this map; the quarterly-turnover lens caught them instead. The two lenses are complements.",
         "Engagement dollars are the pair's full reported billing for quarters where the tagged language appears — filing-level disclosure cannot split dollars by issue (Binance's engagements also cover digital-asset lobbying). Several engagements report no income at all (self-reported data); the market total is a floor.",
@@ -777,7 +1181,7 @@ build("healthcare", "Healthcare Lobbying — State of the Industry",
       "", hc_data, "hc_page.js")
 build("pardons", "Presidential Pardons — the Lobbying Around Executive Clemency",
       "Two markets share one vocabulary: individuals paying lobbying firms to seek presidential pardons ('Executive relief'), and policy organizations lobbying on clemency itself — mapped from the filings' own free-text 2022–2026Q1.",
-      "", pardons_data, "pardons_page.js", gendate="2026-07-10")
+      "", pardons_data, "pardons_page.js", gendate="2026-07-13")
 
 # ============================ TURNOVER (P3 beat report) ============================
 # Guarded: only prepped/built when its data exists and it's requested (or no ONLY).
@@ -981,5 +1385,67 @@ if os.path.isdir(_tdir) and ((not ONLY) or ("turnover" in ONLY)):
           "turnover tracker. Terminations are the registrants' own termination filings, never inferred "
           "from silence. Pick the report quarter below; the newest quarter opens by default.",
           "", turnover_data, "turnover_page.js", gendate="2026-07-11")
+
+# ============================ OTHER FINDINGS (not in a package) ============================
+# 2026-07-13: leads from LEDGER.md that never became one of the five industry
+# packages above (crypto/aipac/healthcare/pardons/critical-minerals) — either a
+# one-off thread in a field with no package, or something the team parked/closed.
+other_findings_data = {
+    "kpis": [
+        {"label": "Leads outside any package", "value": "6", "note": "L020, L022, L023, L025, L027, L028"},
+        {"label": "Still open/triaged", "value": "3", "note": "L020 TP-Link · L022 Sheffield · L023 Vantive"},
+        {"label": "Parked (cold, not dead)", "value": "2", "note": "L025 data-quality spike · L027 tariffs coupling"},
+        {"label": "Closed as a known story", "value": "1", "note": "L028 SECURE 2.0 — scooped by trade/news coverage"},
+    ],
+    "findings": [
+        {"id": "L020", "status": "triaged", "title": "TP-Link — a China-founded router maker facing a proposed US ban",
+         "hypothesis": "TP-Link Systems Inc. ramps lobbying ~5x and fans out from one firm to three across 2024-2026 (Akin Gump → + Mercury Public Affairs → + Vernonburg Group), coinciding with the proposed router-ban legislative push.",
+         "actors": "TP-Link Systems Inc.; Akin Gump; Mercury Public Affairs; Vernonburg Group",
+         "next": "Confirm the router-ban legislative timeline; scan the press corpus for member statements on TP-Link/router security (say-vs-pay)."},
+        {"id": "L022", "status": "triaged", "title": "Scott Sheffield — a personal FTC-consent-order lobbying retainer",
+         "hypothesis": "Scott Sheffield (Pioneer founder, named in the FTC/Exxon consent order) personally retains Brownstein Hyatt Farber Schreck to lobby 'Issues related to the FTC', starting exactly the quarter the FTC acted.",
+         "actors": "Scott Sheffield (individual); Brownstein Hyatt Farber Schreck; Norman Brownstein; William Moschella",
+         "next": "Confirm the FTC action date (May 2024) against the Q2-2024 filing start; editorial-sensitivity review (named individual)."},
+        {"id": "L023", "status": "triaged", "title": "Vantive — a Baxter spinoff's $2.5M White House Ballroom gift",
+         "hypothesis": "Vantive (spun off from Baxter in 2025) writes $2.5M to the White House Ballroom Project while standing up a six-firm federal lobbying operation in its first independent year.",
+         "actors": "Vantive US Healthcare LLC; Trust for the National Mall; Ballard; Checkmate; Akin Gump; Todd Strategy; Nickles Group; Porterfield Fettig & Sears",
+         "next": "Editorial-sensitivity review (a sitting President's project); confirm the Baxter spin-off date; map what Vantive actually lobbied on (dialysis/ESRD payment policy?). Healthcare-ADJACENT (a dialysis spinoff) but found via a different lens (contribution fan-out, not the ALI issue-code lens) and never folded into the shipped healthcare package's roster or story."},
+        {"id": "L025", "status": "parked", "title": "MedSecurean / Indian Pharmaceutical Alliance — a 60x single-quarter income spike",
+         "hypothesis": "A class of LD-2 single-quarter income overstatements the gap-lens misses: MedSecurean.com / Indian Pharmaceutical Alliance reports $900K in 2025-Q4 vs. a $15K baseline (60x) — looks like a data-quality artifact (misreport), not a confirmed real surge.",
+         "actors": "MedSecurean.com; Indian Pharmaceutical Alliance; Robert K Weidner / RPLCC",
+         "next": "Parked: needs per-record confirmation to separate a real surge from a misreport; low priority. Revisit if a say-vs-pay lead lands on one of these engagements, or if pursuing a standalone data-quality finding."},
+        {"id": "L027", "status": "parked", "title": "Trade/tariffs press-vs-money coupling",
+         "hypothesis": "Press attention-share and lobbying-money share on TRD are both flat 2022-2024 then jump together in 2025 (the tightest positive coupling measured, r +0.88) — but this is the mechanically-obvious 2025 Trump-tariff story, not a novel angle.",
+         "actors": "Cleo Fields; Richard J. Durbin; Jeanne Shaheen; Nippon Steel Corp.; Brown-Forman Corp.; Qualcomm Inc.",
+         "next": "Parked: logged only to evidence the press/spend coupling deliverable, not pursued as novel. Revisit if a specific member loud on tariffs turns out to be paid-side coupled (donors/registrants), or a non-2025 trade coupling appears."},
+        {"id": "L028", "status": "parked", "title": "SECURE 2.0 say-vs-pay — closed as a known story",
+         "hypothesis": "Heavy, specific retirement/annuity-industry lobbying (1,436 senate filings name it) vs. thin coverage in members' OWN press releases looked like a say-vs-pay gap — but an outside-context-scan (live web + date-gated GDELT) shows SECURE 2.0 was high news-salience and the industry-lobbying angle (annuities topping IRI's agenda) was contemporaneously reported. 'Near-silent' holds only for congressional member press releases, which is not itself news.",
+         "actors": "Athene Holding (Brownstein Hyatt); HR Policy Association (Tributary LLP); American Benefits Council; FMR LLC/Fidelity; Chris Van Hollen",
+         "next": "Closed as a known story unless a specific, unreported company-level ask surfaces. Adjacent but UNRELATED beat if picked up separately: Athene's 2024-25 pension-risk-transfer ERISA class actions (AT&T/Lockheed/Bristol Myers)."},
+    ],
+    "entitiesChecked": [
+        {"entity": "Korea Zinc Company, Ltd. (client, via Mercury/Ballard)",
+         "verdict": "Set aside — largest emergent (E1) engagement in the 2026-07-06 sweep, but a well-publicised MBK/Young Poong takeover fight; mechanically top, not novel.",
+         "records": "E1 top row; 12 filings 2024-2026", "date": "2026-07-06"},
+        {"entity": "Trump-Vance Inaugural Committee corporate donors (JBS, Robinhood, Occidental, NVIDIA, Uber, X, et al.)",
+         "verdict": "Set aside — top LD-203 honoree-concentration (F1) cluster is widely-reported corporate inaugural giving; a known category, not a novel angle (crypto's slice of it is still cited inside the crypto package as context).",
+         "records": "F1 rows ($1-5M each)", "date": "2026-07-06"},
+        {"entity": "IBEW / union LD-203 'N/A' honoree placeholders",
+         "verdict": "Set aside — mechanical top of honoree concentration (a placeholder honoree field, not a real recipient).",
+         "records": "F1 top row ($8M/N-A)", "date": "2026-07-06"},
+    ],
+    "caveats": [
+        "This page exists so a lead doesn't get lost just because it never grew into a full industry package — it is a worklist, not a finding.",
+        "Named-actor rule applies here too: every row has a specific actor, date, and record ID, resolvable via show_record.py.",
+        "'Parked' ≠ dead: a parked lead is promising but blocked or deprioritized, reconsidered at every triage checkpoint; only a revisit trigger firing (or a human call) moves it off this page.",
+        "L023 (Vantive) is healthcare-adjacent and L025 (MedSecurean/Indian Pharmaceutical Alliance) is pharma-adjacent, but neither was folded into the shipped healthcare package — they were found by a different lens (contribution fan-out / single-quarter spike) than that package's ALI issue-code scope, and remain unverified standalone threads.",
+        "Full detail, evidence record IDs, and status history for every row: LEDGER.md in the repo root.",
+    ],
+}
+build("other-findings", "Leads Not Yet in a Package",
+      "Investigation-ledger leads that were triaged far enough to name an actor, a date, and a record ID, "
+      "but sit outside the five shipped industry packages (crypto, AIPAC, healthcare, pardons, critical "
+      "minerals) — a worklist, not a finding.",
+      "", other_findings_data, "other_findings_page.js", gendate="2026-07-13")
 
 print("done")

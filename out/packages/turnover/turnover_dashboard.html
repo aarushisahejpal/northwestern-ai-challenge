@@ -117,6 +117,12 @@ table.dt th { color: var(--ink-2); font-weight: 600; }
 .caveats li { margin: 4px 0 4px 18px; }
 footer.page { margin-top: 26px; font-size: 12px; color: var(--ink-3); }
 
+/* open-findings card (ledger leads touching this package, shown for human review) */
+.finding-item { padding: 9px 0; border-top: 1px solid var(--border); font-size: 13px; }
+.finding-item:first-of-type { border-top: none; padding-top: 0; }
+.finding-item strong { display: block; margin-bottom: 3px; }
+.finding-item .note { margin-top: 2px; }
+
 /* per-player raw-filings panel (crypto player map click-through) */
 .filings-panel {
   font-size: 12.5px; color: var(--ink-2); margin: 10px 0 4px;
@@ -334,6 +340,30 @@ function statTiles(root, tiles) {
   return k;
 }
 
+/* ---- open-findings card: candidate leads from LEDGER.md touching this
+   package's data, shown at the bottom of every package dashboard so a human
+   reviewer sees what's still open without leaving the page. findings = [{id,
+   status, title, hypothesis, actors?, next?}] — copy is hand-curated from the
+   ledger row, not auto-derived (same convention as this page's KPI/caveat text). */
+function findingsCard(root, findings, sub) {
+  if (!findings || !findings.length) return;
+  const c = div("card", root);
+  const h = document.createElement("h2");
+  h.textContent = "Findings still open for human review";
+  c.appendChild(h);
+  div("sub", c, sub || "Candidate leads from the investigation ledger touching this package's data — unverified, for human triage before any use in a story.");
+  for (const f of findings) {
+    const item = div("finding-item", c);
+    const head = document.createElement("strong");
+    head.textContent = f.id + " · " + f.status + " — " + f.title;
+    item.appendChild(head);
+    div(null, item, f.hypothesis);
+    if (f.actors) div("note", item, "Named actors: " + f.actors);
+    if (f.next) div("note", item, "Next action: " + f.next);
+  }
+  div("foot", c, "Full history, evidence record IDs, and status changes: LEDGER.md in the repo root.");
+}
+
 /* ---- per-widget "more options" → query-info panel (debugging aid) ----
    info = { title, note, blocks: [{label, text}] } — text is the ACTUAL SQL /
    pipeline the widget's numbers came from (extracted from the build scripts). */
@@ -546,9 +576,11 @@ function columns(box, cfg) {
         name: s.name
       }));
       if (series.length > 1) rows.push({ color: null, value: cfg.fmt === "$" ? fmtMoney(totals[i]) : fmtNum(totals[i]), name: "total" });
+      if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
       ttShow(ev.clientX, ev.clientY, lab, rows);
     });
     hit.addEventListener("pointerleave", ttHide);
+    if (cfg.onClick) hit.addEventListener("click", () => cfg.onClick(i, lab));
   });
 }
 
@@ -619,6 +651,9 @@ function groupedHBars(box, cfg) {
         { color: colA, value: F(d.a), name: cfg.aName },
         { color: colB, value: F(d.b), name: cfg.bName }
       ];
+      // optional tooltip-only context row (no bar, no series color): a value the
+      // chart deliberately does not draw but must not hide (e.g. gated-out money)
+      if (cfg.cName) rows.push({ color: null, value: F(d.c || 0), name: cfg.cName });
       if (cfg.onClick) { rows.push({ color: null, value: "click", name: "list the underlying records" }); hit.style.cursor = "pointer"; }
       ttShow(ev.clientX, ev.clientY, d.label, rows);
     });
@@ -685,6 +720,117 @@ function bubblePack(box, cfg) {
     measure.remove();
   });
   /* nearest-circle hover (+ optional click-through via cfg.onClick) */
+  const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
+  const nearest = ev => {
+    const rct = svg.getBoundingClientRect();
+    const fx = ((ev.clientX - rct.left) / rct.width) * W;
+    const fy = ((ev.clientY - rct.top) / rct.height) * H;
+    let best = null, bd = 1e9;
+    for (const p of placed) {
+      const dx = p.x - fx, dy = p.y - fy;
+      const dist = Math.sqrt(dx * dx + dy * dy) - p.r;
+      if (dist < bd) { bd = dist; best = p; }
+    }
+    return bd < 14 ? best : null;
+  };
+  hit.addEventListener("pointermove", ev => {
+    const best = nearest(ev);
+    if (best) {
+      ttShow(ev.clientX, ev.clientY, best.d.label, cfg.ttRows(best.d));
+      if (cfg.onClick) hit.style.cursor = "pointer";
+    } else {
+      ttHide();
+      hit.style.cursor = "";
+    }
+  });
+  hit.addEventListener("pointerleave", ttHide);
+  if (cfg.onClick) {
+    hit.addEventListener("click", ev => {
+      const best = nearest(ev);
+      if (best) cfg.onClick(best.d);
+    });
+  }
+}
+
+/* ---- xy scatter: log-x option, sized dots, horizontal threshold rules ----
+   cfg: items [{label, short?, x, y, size, slot, extra?}] (x>0 required on log),
+        xFmt "$"|"#", yMax (default 100), yFmt "%", rules [{y, label}] recessive
+        dashed horizontals with right-margin band labels, labelTop (n of largest-x
+        dots to direct-label; plus largest-y dots), ttRows(d), onClick(d) */
+function scatterXY(box, cfg) {
+  const W = 980, H = cfg.height || 470, mL = 56, mR = 118, mT = 14, mB = 34;
+  const pw = W - mL - mR, ph = H - mT - mB;
+  const items = cfg.items.filter(d => d.x > 0 && d.y != null);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img" }, null);
+  box.appendChild(svg);
+  if (!items.length) return;
+  const lo = Math.pow(10, Math.floor(Math.log10(Math.min(...items.map(d => d.x)))));
+  const hi = Math.pow(10, Math.ceil(Math.log10(Math.max(...items.map(d => d.x)))));
+  const X = v => mL + ((Math.log10(v) - Math.log10(lo)) / (Math.log10(hi) - Math.log10(lo))) * pw;
+  const yMax = cfg.yMax || 100;
+  const Y = v => mT + ph - (Math.min(v, yMax) / yMax) * ph;
+  const maxS = Math.max(...items.map(d => d.size || 1));
+  const R = d => 4 + 9 * Math.sqrt((d.size || 1) / maxS);   // r >= 4 (8px marker floor)
+  // y gridlines + labels
+  for (const tv of [0, 25, 50, 75, 100].filter(v => v <= yMax)) {
+    el("line", { x1: mL, x2: W - mR, y1: Y(tv), y2: Y(tv), class: tv === 0 ? "baseline" : "gridline" }, svg);
+    const t = el("text", { x: mL - 8, y: Y(tv) + 4, "text-anchor": "end", class: "ax ax-tab" }, svg);
+    t.textContent = tv + "%";
+  }
+  // x decade ticks
+  for (let v = lo; v <= hi * 1.0001; v *= 10) {
+    el("line", { x1: X(v), x2: X(v), y1: mT, y2: mT + ph, class: "gridline" }, svg);
+    const t = el("text", { x: X(v), y: H - 8, "text-anchor": "middle", class: "ax ax-tab" }, svg);
+    t.textContent = cfg.xFmt === "#" ? fmtNum(v) : fmtMoney(v);
+  }
+  // threshold rules + right-margin band labels (recessive: dashed, axis ink);
+  // a label-only entry (noLine) names the band above the last rule
+  for (const r of (cfg.rules || [])) {
+    if (!r.noLine) {
+      const ln = el("line", { x1: mL, x2: W - mR, y1: Y(r.y), y2: Y(r.y),
+                              class: "gridline", "stroke-dasharray": "5 4" }, svg);
+      ln.style.strokeOpacity = "0.9";
+    }
+    if (r.label) {
+      const t = el("text", { x: W - mR + 8, y: Y(r.labelAt != null ? r.labelAt : r.y) + 4, class: "ax" }, svg);
+      t.textContent = r.label;
+    }
+  }
+  // dots (2px surface ring per mark spec), largest first so small dots stay hittable
+  const placed = [];
+  for (const d of items.slice().sort((p, q) => (q.size || 1) - (p.size || 1))) {
+    const x = X(d.x), y = Y(d.y), r = R(d);
+    const c = el("circle", { cx: x, cy: y, r: r }, svg);
+    c.style.fill = SLOT[d.slot];
+    c.style.stroke = "var(--surface-1)";
+    c.style.strokeWidth = "2";
+    placed.push({ x, y, r, d });
+  }
+  // selective direct labels: largest-x + largest-y + largest-size dots; on
+  // collision try one slot lower before skipping (ties like Amazon/AARP stack)
+  const nTop = cfg.labelTop || 12;
+  const want = new Set();
+  items.slice().sort((p, q) => q.x - p.x).slice(0, nTop).forEach(d => want.add(d));
+  items.slice().sort((p, q) => q.y - p.y).slice(0, 8).forEach(d => want.add(d));
+  items.slice().sort((p, q) => (q.size || 1) - (p.size || 1)).slice(0, 3).forEach(d => want.add(d));
+  const taken = [];
+  const collides = b => taken.some(t => Math.abs(t[1] - b[1]) < 12 &&
+                        !(t[0] + t[2] < b[0] - 4 || b[0] + b[2] < t[0] - 4));
+  for (const p of placed) {
+    if (!want.has(p.d)) continue;
+    const name = p.d.short || p.d.label;
+    let lx = p.x + p.r + 5, anchor = "start";
+    if (lx + name.length * 6.2 > W - mR) { lx = p.x - p.r - 5; anchor = "end"; }
+    let box_ = [anchor === "end" ? lx - name.length * 6.2 : lx, p.y, name.length * 6.2];
+    if (collides(box_)) {
+      box_ = [box_[0], p.y + 12, box_[2]];             // one slot lower
+      if (collides(box_) || box_[1] > mT + ph) continue;
+    }
+    const t = el("text", { x: lx, y: box_[1] + 4, "text-anchor": anchor, class: "dlabel" }, svg);
+    t.textContent = name;
+    taken.push(box_);
+  }
+  /* nearest-dot hover (+ optional click-through) — same pattern as bubblePack */
   const hit = el("rect", { x: 0, y: 0, width: W, height: H, fill: "transparent" }, svg);
   const nearest = ev => {
     const rct = svg.getBoundingClientRect();
