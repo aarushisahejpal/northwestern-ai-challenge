@@ -503,40 +503,78 @@ class Sink:
 
 # ---------------------------------------------------------------- press
 
-def load_press(sink, data_root, years, months=None, max_records=None):
+def _parse_press_file(task):
+    """Parse one press JSONL into per-release entries. Module-level (picklable
+    args) so multiprocessing workers can run it; pr_id is NOT assigned here —
+    it is a global running counter, so the parent assigns it while consuming
+    results in file order, keeping ids identical to a sequential build.
+
+    Returns [(line_no, base_row_without_pr_id, bills, issues), ...].
+    """
+    path, rel = task
+    entries = []
+    with open(path, encoding="utf-8") as f:
+        for line_no, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            mem = rec.get("member") or {}
+            text = rec.get("text")
+            base = (rec.get("url"), rec.get("title"), rec.get("date"),
+                    rec.get("date_source"), rec.get("source"), rec.get("domain"),
+                    rec.get("scraper"), get_any(mem, "bioguide_id"),
+                    get_any(mem, "name"), get_any(mem, "party"),
+                    get_any(mem, "state"), get_any(mem, "chamber"),
+                    text, rel, line_no)
+            entries.append((line_no, base,
+                            list(extract_bills(text or "")),
+                            list(extract_issues(text or ""))))
+    return rel, entries
+
+
+def load_press(sink, data_root, years, months=None, max_records=None, workers=None):
     root = data_root / "congress_press"
     files = sorted(root.glob("*.jsonl")) + sorted(root.glob("*/*.jsonl"))
-    n = 0
+    tasks = []
     for path in files:
         m = re.match(r"(\d{4})-(\d{2})", path.stem)
         if not m or int(m.group(1)) not in years:
             continue
         if months and (int(m.group(1)), int(m.group(2))) not in months:
             continue
-        rel = path.relative_to(data_root).as_posix()
-        with open(path, encoding="utf-8") as f:
-            for line_no, line in enumerate(f, 1):
-                line = line.strip()
-                if not line:
-                    continue
-                rec = json.loads(line)
-                mem = rec.get("member") or {}
-                n += 1
-                key = f"{rel}:{line_no}"
-                sink.add("press_releases", (
-                    n, rec.get("url"), rec.get("title"), rec.get("date"),
-                    rec.get("date_source"), rec.get("source"), rec.get("domain"),
-                    rec.get("scraper"), get_any(mem, "bioguide_id"),
-                    get_any(mem, "name"), get_any(mem, "party"),
-                    get_any(mem, "state"), get_any(mem, "chamber"),
-                    rec.get("text"), rel, line_no))
-                for bill, raw in extract_bills(rec.get("text") or ""):
-                    sink.add("bill_mentions", ("press", key, bill, raw, rel))
-                for code, kw in extract_issues(rec.get("text") or ""):
-                    sink.add("press_issue_mentions", (n, code, kw, rel, line_no))
-                if max_records and n >= max_records:
-                    sink.flush()
-                    return n
+        tasks.append((str(path), path.relative_to(data_root).as_posix()))
+
+    if workers is None:
+        import os
+        workers = os.cpu_count() or 1
+    pool = None
+    if workers <= 1 or max_records:
+        # max_records (smoke mode) stays sequential: deterministic + stops early.
+        results = map(_parse_press_file, tasks)
+    else:
+        from multiprocessing import Pool
+        pool = Pool(workers)
+        # Ordered imap (one file per task) so the parent's pr_id counter walks
+        # the same file order as a sequential run.
+        results = pool.imap(_parse_press_file, tasks)
+
+    n = 0
+    for rel, entries in results:
+        for line_no, base, bills, issues in entries:
+            n += 1
+            key = f"{rel}:{line_no}"
+            sink.add("press_releases", (n, *base))
+            for bill, raw in bills:
+                sink.add("bill_mentions", ("press", key, bill, raw, rel))
+            for code, kw in issues:
+                sink.add("press_issue_mentions", (n, code, kw, rel, line_no))
+            if max_records and n >= max_records:
+                sink.flush()
+                return n
+    if pool:
+        pool.close()
+        pool.join()
     sink.flush()
     return n
 
@@ -831,7 +869,7 @@ def main():
     ap.add_argument("--max-records", type=int,
                     help="Cap per-dataset primary records (smoke/testing)")
     ap.add_argument("--workers", type=int,
-                    help="Parallel workers for House XML parsing "
+                    help="Parallel workers for press JSONL + House XML parsing "
                          "(default: cpu count; 1 = sequential)")
     args = ap.parse_args()
 
@@ -862,7 +900,8 @@ def main():
     sink = Sink(con)
     t0 = _time.time()
     print(f"Loading press releases ({sorted(years)}) ...")
-    n_press = load_press(sink, data_root, years, months, max_records)
+    n_press = load_press(sink, data_root, years, months, max_records,
+                         workers=args.workers)
     t1 = _time.time()
     print(f"  {n_press:,} releases in {t1 - t0:.1f}s")
     print("Loading Senate LDA ...")
