@@ -22,3 +22,6 @@ venv/
 # OS noise
 Thumbs.db
 .DS_Store
+
+# Local experiments (bake-offs, prototypes) — never submitted; may hold venvs/model caches
+scratch/
