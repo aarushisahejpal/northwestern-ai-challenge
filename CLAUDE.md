@@ -142,7 +142,7 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
   `nomic-ai/nomic-embed-text-v1.5`), map table preserving the raw-record pointers. Built in place by
   `embed_corpus.py`; queried by `lead-scanner`'s `lda_semantic_search.py` (`--query`/`--like`/
   `--compare-bm25`). Discovery-only, same posture as FTS — catches synonyms/paraphrase BM25 can't;
-  never cited by findings. Model bake-off preserved on branch `experiment/embedding-bakeoff`.
+  never cited by findings.
 
 ## Load-bearing conventions
 

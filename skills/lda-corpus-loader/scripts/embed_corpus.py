@@ -18,16 +18,12 @@ Role: DISCOVERY ONLY (same posture as the FTS/BM25 index this complements).
 Semantic neighbors propose vocabulary and leads; findings cite records via the
 deterministic keyword serving tables, never via embedding similarity.
 
-Model: nomic-ai/nomic-embed-text-v1.5 by default — ungated (no HF account
-needed), and what the production layer was built with (2026-07-14). The
-2026-07-14 bake-off (branch experiment/embedding-bakeoff) scored
-google/embeddinggemma-300m slightly higher (avg precision .825 vs nomic's
-.767) but it is HF license-gated; pass --model to use it. The model name is
-stamped on every row, so switching models is just a re-run.
+Model: nomic-ai/nomic-embed-text-v1.5 — what the production layer is built
+with (2026-07-14). The model name is stamped on every row, and --model swaps
+it: switching models is just a re-run.
 
 Requires (NOT in requirements.txt — semantic layer is optional, like tesseract):
-  pip install torch sentence-transformers  (+ accept the Gemma license on HF
-  and `hf auth login` if using the default model)
+  pip install torch sentence-transformers pyarrow
 
 Usage:
   python embed_corpus.py --db db/lda_full.duckdb                  # full (~2.7h GPU)
@@ -46,10 +42,9 @@ import numpy as np
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
-# Per-model encode settings, learned the hard way on a 4GB GTX 1650 Ti
-# (see scratch/embedding_bakeoff or branch experiment/embedding-bakeoff):
-# Gemma fp16 emits NaNs (Gemma3 activation overflow; Turing has no bf16), so
-# it runs fp32 with a small batch. Unlisted models get conservative defaults.
+# Per-model encode settings, tuned on a 4GB GTX 1650 Ti. Gemma fp16 emits
+# NaNs (Gemma3 activation overflow; Turing has no bf16), so it runs fp32 with
+# a small batch. Unlisted models get conservative defaults.
 MODEL_SETTINGS = {
     "google/embeddinggemma-300m": {"batch": 8, "dtype": "fp32",  # fp16 NaNs (no bf16 on Turing)
                                    "prompt_query": "query", "prompt_doc": "document"},
