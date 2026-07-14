@@ -1,509 +1,513 @@
-﻿player,entity_id,crypto_filings_senate,first_year,last_year,total_all_issue_spend,crypto_term_in_name,tier,crypto_activity_blocks,all_activity_blocks,crypto_activity_share_pct,crypto_share_band
-"Coinbase, Inc.",client:187781,126,2022,2026,15050000,no,core,201,212,94.8,dedicated
-"Block, Inc.",client:181404,85,2022,2026,8250000,no,core,162,229,70.7,dedicated
-"Foris DAX, Inc. d/b/a Crypto.com",client:45737,66,2022,2026,3650000,yes,core,103,107,96.3,dedicated
-"Ava Labs, Inc.",client:212542,64,2022,2026,2666000,no,core,154,154,100.0,dedicated
-"PayPal, Inc.",client:157625,63,2022,2026,7011311,no,core,92,374,24.6,engaged
-Crypto Council for Innovation,client:52259,62,2022,2026,3364000,yes,core,124,127,97.6,dedicated
-DeFi Education Fund,client:212719,60,2022,2026,3400000,yes,core,103,118,87.3,dedicated
-Visa Inc.,client:131374,57,2022,2026,39280000,no,core,60,577,10.4,engaged
-MASTERCARD WORLDWIDE,client:131182,54,2022,2026,20160000,no,core,54,93,58.1,dedicated
-Ripple Labs Inc.,client:151602,52,2022,2026,4790000,yes,core,99,99,100.0,dedicated
-Blockchain Association,client:200963,51,2022,2026,8220000,yes,core,158,186,84.9,dedicated
-Filecoin Foundation,client:53653,50,2022,2026,1830000,no,core,228,236,96.6,dedicated
-Coin Center,client:191139,49,2022,2026,3020000,yes,core,100,100,100.0,dedicated
-Paradigm Operations LP,client:54271,48,2023,2026,3220000,no,core,57,59,96.6,dedicated
-"CME Group, Inc.",client:113218,43,2022,2026,6690000,no,core,57,124,46.0,dedicated
-"Robinhood Markets, Inc.",client:206577,39,2022,2026,6490000,no,core,39,52,75.0,dedicated
-THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE),client:202106,39,2022,2026,2176650,no,core,76,84,90.5,dedicated
-"Anchor Labs, Inc.",client:203626,39,2022,2025,1620000,no,core,62,71,87.3,dedicated
-"Citigroup Washington, Inc.",client:160307,35,2022,2026,20940000,no,core,44,269,16.4,engaged
-National Venture Capital Association,client:128604,35,2022,2026,11089098,no,core,39,365,10.7,engaged
-A16Z CAPITAL MANAGEMENT LLC (F/K/A AH CAPITAL MANAGEMENT L.L.C.),client:54163,35,2023,2026,6900000,no,core,78,137,56.9,dedicated
-Futures Industry Association,client:121188,35,2022,2026,3874453,no,core,35,87,40.2,dedicated
-Chainalysis Inc.,client:207913,35,2022,2025,998000,no,core,89,89,100.0,dedicated
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,34,2022,2026,2460000,yes,core,92,95,96.8,dedicated
-"TD Bank, NA",client:195008,32,2022,2026,6400000,no,core,32,104,30.8,dedicated
-Securities Industry and Financial Markets Association (SIFMA),client:116316,31,2022,2026,32870000,no,core,53,340,15.6,engaged
-Dapper Labs Inc.,client:213175,31,2022,2026,1720000,no,core,30,54,55.6,dedicated
-Digital Currency Group,client:210121,30,2022,2026,3170000,yes,core,87,98,88.8,dedicated
-Stellar Development Foundation,client:207297,30,2022,2026,1700000,no,core,32,32,100.0,dedicated
-American Bankers Association,client:102650,29,2022,2026,34726000,no,core,36,621,5.8,engaged
-Fiserv,client:120225,29,2022,2026,3070000,no,core,33,134,24.6,engaged
-"Fidelity National Information Systems, Inc. and Subsidiaries",client:201436,27,2022,2025,4050000,no,core,25,77,32.5,dedicated
-NORTHERN TRUST CORPORATION,client:193597,26,2022,2026,1800000,no,core,26,78,33.3,dedicated
-"Meta Platforms, Inc.",client:105281,25,2022,2023,15021250,no,core,25,747,3.3,ambient
-Moody's Corporation,client:212702,25,2022,2026,2840000,no,core,25,126,19.8,engaged
-AICPA Association of International Certified Professional Accountants,client:192162,24,2022,2026,22669000,no,core,47,253,18.6,engaged
-"Paxos Trust Company, LLC",client:50986,24,2022,2026,1340000,no,core,22,22,100.0,dedicated
-WEB 3.0 TECHNOLOGIES FOUNDATION,client:52966,24,2022,2025,1130000,no,core,25,25,100.0,dedicated
-Electronic Payments Coalition,client:109921,23,2024,2026,24400000,no,core,23,146,15.8,engaged
-"BlackRock Funds Services Group, LLC",client:172555,23,2022,2026,10900000,no,core,28,328,8.5,engaged
-FMR LLC,client:101067,23,2022,2026,10510000,no,core,40,268,14.9,engaged
-Regions Financial Corporation,client:167106,23,2022,2026,7100000,no,core,23,84,27.4,dedicated
-"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,23,2022,2025,4711000,no,core,25,26,96.2,dedicated
-Western Union,client:109734,23,2022,2024,3449480,no,core,44,238,18.5,engaged
-PAYWARD INC D/B/A KRAKEN,client:45920,23,2022,2026,1370000,no,core,36,36,100.0,dedicated
-"Cornerstone Government Affairs obo Circle Internet Financial, Inc.",client:57791,23,2023,2026,,no,core,23,23,100.0,dedicated
-Accenture Federal Services LLC,client:103471,22,2022,2025,4130000,no,core,22,445,4.9,ambient
-Solana Policy Institute,client:65894,22,2025,2026,2370000,yes,core,37,42,88.1,dedicated
-Circle,client:212787,22,2022,2026,2150000,no,core,23,23,100.0,dedicated
-ConsenSys Software Inc.,client:211873,22,2022,2025,1047700,no,core,31,37,83.8,dedicated
-UNISWAP LABS,client:51758,22,2022,2026,640000,no,core,22,24,91.7,dedicated
-"CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",client:115381,21,2022,2026,20119746,no,core,21,157,13.4,engaged
-"Nasdaq, Inc.",client:105276,21,2022,2026,9535000,no,core,21,60,35.0,dedicated
-American Express Company,client:100904,21,2022,2026,6490000,no,core,21,110,19.1,engaged
-Americans for Financial Reform,client:202954,21,2022,2025,2330000,no,core,48,164,29.3,dedicated
-"UNIVERSAL NAVIGATION, INC. (D/B/A UNISWAP LABS)",client:52732,21,2022,2026,870000,no,core,19,19,100.0,dedicated
-Binance Holdings Limited,client:53862,20,2022,2026,2450000,no,core,20,23,87.0,dedicated
-Polygon Labs Services (Switzerland) AG,client:55284,20,2023,2025,770000,no,core,29,41,70.7,dedicated
-INDEPENDENT COMMUNITY BANKERS OF AMERICA,client:126309,19,2022,2026,19261826,no,core,36,122,29.5,dedicated
-Consumer Technology Association,client:100900,19,2023,2026,17420000,no,core,24,410,5.9,engaged
-"FORIS DAX, INC & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",client:50172,19,2022,2026,5990000,yes,core,19,19,100.0,dedicated
-Shopify,client:204893,19,2022,2026,3490000,no,core,22,284,7.7,engaged
-Public Citizen,client:140490,19,2022,2026,1376315,no,core,25,213,11.7,engaged
-"Hedera Hashgraph, LLC",client:211959,19,2022,2026,710000,no,core,43,43,100.0,dedicated
-"ATMOSPHERE I, LLC, FORMERLY IGNEIO, LLC",client:185900,19,2022,2026,660000,no,core,52,57,91.2,dedicated
-"GLOBAL TRADING SYSTEMS, LLC",client:202190,19,2022,2026,340000,no,core,19,19,100.0,dedicated
-Amazon.com Services LLC,client:158902,18,2022,2026,77570000,no,core,18,733,2.5,ambient
-American Association for Justice,client:104895,18,2022,2026,21830000,no,core,18,651,2.8,ambient
-Managed Funds Association,client:114613,18,2022,2026,20420000,no,core,21,194,10.8,engaged
-JPMorgan Chase Holdings LLC,client:163074,18,2022,2026,15330000,no,core,18,366,4.9,ambient
-WESTERN ALLIANCE BANCORPORATION,client:50800,18,2022,2026,2050000,no,core,17,17,100.0,dedicated
-"BAM Trading Services, Inc./Binance.US",client:211941,18,2022,2024,1425000,no,core,14,29,48.3,dedicated
-American Transaction Processors Coalition,client:178379,18,2022,2025,1400000,no,core,17,80,21.3,engaged
-GALAXY DIGITAL HOLDINGS LP,client:50770,18,2022,2026,1260000,no,core,17,21,81.0,dedicated
-Cedar Innovation Foundation,client:57728,18,2023,2026,850000,no,core,25,25,100.0,dedicated
-LMAX Group,client:52997,18,2022,2026,710000,no,core,33,33,100.0,dedicated
-AARP,client:102643,17,2022,2026,77050000,no,core,19,748,2.5,ambient
-Bank of America Corporation,client:134187,17,2022,2026,12280000,no,core,20,141,14.2,engaged
-STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES,client:172156,17,2022,2026,7600000,no,core,17,85,20.0,engaged
-Electronic Transactions Association,client:149027,17,2022,2025,6990000,no,core,35,116,30.2,dedicated
-"Cboe Global Markets, Inc.",client:155343,17,2022,2026,2910000,no,core,17,109,15.6,engaged
-Insured Retirement Institute,client:176111,17,2022,2026,2900000,no,core,42,86,48.8,dedicated
-Cross River Bank,client:202974,17,2022,2026,2316000,no,core,17,83,20.5,engaged
-VaultLink Inc.,client:211661,17,2022,2026,1530000,no,core,17,17,100.0,dedicated
-COMMUNITY BANKERS ASSOCIATION OF ILLINOIS,client:192301,17,2022,2026,1060000,no,core,105,119,88.2,dedicated
-CROWE LLP,client:200249,17,2022,2026,930000,no,core,28,60,46.7,dedicated
-"MARATHON DIGITAL HOLDINGS, INC.",client:213187,17,2022,2026,770000,no,core,40,45,88.9,dedicated
-"OZONE NETWORKS, INC. D/B/A OPENSEA",client:52072,17,2022,2026,660000,no,core,43,45,95.6,dedicated
-MICHIGAN CREDIT UNION LEAGUE,client:132774,17,2022,2026,430000,no,core,17,51,33.3,dedicated
-AngelList,client:177215,17,2022,2026,410000,no,core,17,24,70.8,dedicated
-Consumer Bankers Association,client:114369,16,2022,2026,16260000,no,core,16,123,13.0,engaged
-Morgan Stanley & Co. LLC,client:133644,16,2022,2026,16080000,no,core,16,171,9.4,engaged
-Financial Services Forum,client:101299,16,2022,2026,11208000,no,core,16,47,34.0,dedicated
-Leadership Conference on Civil and Human Rights,client:129233,16,2022,2025,7850000,no,core,16,237,6.8,engaged
-"GLOBAL PAYMENTS, INC.",client:171265,16,2022,2026,3580000,no,core,16,57,28.1,dedicated
-TAXBIT INC.,client:44931,16,2022,2025,1920000,no,core,27,39,69.2,dedicated
-BITCOIN ASSOCIATION FOR BSV,client:191373,16,2022,2026,1840000,yes,core,16,16,100.0,dedicated
-"LAW OFFICES OF MICHAEL JASON LEE, APLC (ON BEHALF OF TETHER OPERATIONS LIMITED)",client:45110,16,2022,2024,1440000,no,core,13,13,100.0,dedicated
-MoneyGram International Inc.,client:132974,16,2022,2026,1320000,no,core,16,46,34.8,dedicated
-Mastercard International Incorporated,client:143682,16,2022,2026,1100000,no,core,16,91,17.6,engaged
-"Tether Operations, S.A. de C.V.",client:64477,16,2025,2026,880000,no,core,19,19,100.0,dedicated
-FIDELITY INVESTMENTS,client:167102,16,2022,2025,560000,no,core,16,33,48.5,dedicated
-"ORCHID LABS, INC.",client:51252,16,2022,2026,510000,no,core,16,18,88.9,dedicated
-Wells Fargo & Company,client:134745,15,2022,2026,16290000,no,core,15,411,3.6,ambient
-HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,15,2022,2026,6500000,no,core,15,48,31.3,dedicated
-MELLON FINANCIAL SERVICES CORPORATION #1,client:132593,15,2022,2026,6370000,no,core,25,28,89.3,dedicated
-HUNTINGTON BANCSHARES INCORPORATED,client:169956,15,2022,2026,1913000,no,core,25,69,36.2,dedicated
-Credit Suisse Securities (USA) LLC,client:106761,15,2022,2023,1600000,no,core,22,50,44.0,dedicated
-AMERICAN SECURITIES ASSOCIATION,client:208145,15,2022,2026,1390000,no,core,15,80,18.8,engaged
-JARDEN ZINC PRODUCTS,client:185269,15,2022,2026,890000,no,core,15,17,88.2,dedicated
-Chamber of Progress,client:211714,15,2023,2026,875000,no,core,13,70,18.6,engaged
-DIGITAL ASSET (US) CORP,client:55431,15,2023,2026,410000,yes,core,14,14,100.0,dedicated
-"Sujitech, LLC",client:52860,15,2022,2026,40000,no,core,28,28,100.0,dedicated
-CHAMBER OF COMMERCE OF THE U.S.A.,client:146969,14,2022,2026,311610000,no,core,19,555,3.4,ambient
-MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY,client:106452,14,2023,2026,11790000,no,core,20,202,9.9,engaged
-Fifth Third Bancorp,client:175028,14,2022,2026,5412164,no,core,14,92,15.2,engaged
-"IEX Group, Inc.",client:208621,14,2022,2024,3980000,no,core,13,42,31.0,dedicated
-"Stripe, Inc.",client:187780,14,2022,2026,3145000,no,core,19,99,19.2,engaged
-"GRAYSCALE INVESTMENTS, LLC",client:54632,14,2023,2026,770000,no,core,13,13,100.0,dedicated
-COINFLIP,client:207878,14,2022,2026,720000,no,core,13,17,76.5,dedicated
-"FORIS DAX MARKETS, INC. DBA CRYPTO.COM",client:54090,14,2023,2026,670000,yes,core,14,16,87.5,dedicated
-Bank Policy Institute,client:106185,13,2022,2026,12000000,no,core,13,214,6.1,engaged
-Ernst & Young LLP,client:160225,13,2023,2026,9250000,no,core,14,155,9.0,engaged
-U.S. Bancorp,client:147171,13,2023,2026,6080000,no,core,13,152,8.6,engaged
-"FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",client:55667,13,2023,2026,3980000,no,core,12,13,92.3,dedicated
-NCR VOYIX CORPORATION (FKA NCR CORPORATION),client:112453,13,2022,2023,750000,no,core,13,83,15.7,engaged
-DYDX TRADING INC.,client:52040,13,2022,2025,690000,no,core,12,12,100.0,dedicated
-"CLEANSPARK, INC",client:61451,13,2024,2026,460000,no,core,29,44,65.9,dedicated
-Proof of Stake Alliance,client:137881,13,2022,2024,360000,no,core,18,18,100.0,dedicated
-BITWISE ASSET MANAGEMENT,client:212967,13,2022,2025,320000,no,core,13,13,100.0,dedicated
-INSTITUTE OF INTERNAL AUDITORS,client:55435,13,2023,2026,290000,no,core,12,36,33.3,dedicated
-NEW YORK STATE BAR ASSOCIATION,client:205228,13,2023,2026,210000,no,core,13,103,12.6,engaged
-COMMITTEE ON CAPITAL MARKETS REGULATION,client:127110,13,2023,2026,200000,no,core,26,38,68.4,dedicated
-ATOLLetc LLC,client:203797,13,2023,2026,,no,core,54,91,59.3,dedicated
-PwC US Group LLP,client:105291,12,2023,2026,18080000,no,core,12,172,7.0,engaged
-IBM,client:112795,12,2022,2024,2135000,no,core,12,95,12.6,engaged
-"BNP PARIBAS RCC, INC.",client:203029,12,2023,2025,1580000,no,core,13,59,22.0,engaged
-"West Realm Shires Services, Inc. d/b/a FTX US",client:213265,12,2022,2022,690000,no,core,15,15,100.0,dedicated
-Ledger SAS,client:54270,12,2023,2026,450000,no,core,16,16,100.0,dedicated
-FALCONX BRAVO INC.,client:57159,12,2023,2026,440000,no,core,11,11,100.0,dedicated
-Sorare SAS,client:53505,12,2022,2024,400000,no,core,36,36,100.0,dedicated
-"EXODUS MOVEMENT, INC.",client:212660,12,2022,2026,390000,no,core,13,13,100.0,dedicated
-Flexa Inc.,client:54217,12,2023,2025,390000,no,core,12,12,100.0,dedicated
-"NORTH ISLAND VENTURES, LLC",client:56799,12,2023,2026,380000,no,core,11,11,100.0,dedicated
-Paradigm,client:52493,12,2022,2023,370000,no,core,24,24,100.0,dedicated
-"COINREGTECH, LLC",client:201340,12,2022,2024,40000,no,core,12,12,100.0,dedicated
-SIEVAKO,client:52877,12,2022,2024,,no,core,29,29,100.0,dedicated
-National Football League,client:114996,11,2022,2026,6620000,no,core,13,342,3.8,ambient
-S&P Global,client:117721,11,2023,2026,6565000,no,core,12,186,6.5,engaged
-Mastercard,client:127087,11,2022,2026,3815000,no,core,11,119,9.2,engaged
-Humanity Forward,client:207921,11,2022,2022,1225500,no,core,19,131,14.5,engaged
-CF Secured LLC,client:58376,11,2023,2026,1210000,no,core,10,13,76.9,dedicated
-THE CLEARING HOUSE ASSOCIATION,client:206022,11,2022,2026,714000,no,core,11,34,32.4,dedicated
-"MAYER BROWN LLP OBO CIRCLE INTERNET FINANCIAL, INC.",client:57774,11,2023,2026,650000,no,core,13,13,100.0,dedicated
-GPD Holdings LLC d/b/a CoinFlip,client:64019,11,2025,2026,570000,no,core,9,9,100.0,dedicated
-NATIONAL TAXPAYERS UNION,client:134577,11,2022,2025,480000,no,core,11,330,3.3,ambient
-"TRM LABS, INC.",client:65365,11,2025,2026,293000,no,core,22,23,95.7,dedicated
-CHIA NETWORKS,client:212788,11,2022,2023,280000,no,core,11,11,100.0,dedicated
-Digital Energy Council,client:60832,11,2024,2026,140000,no,core,10,15,66.7,dedicated
-Americans for Prosperity,client:101301,10,2022,2025,6770000,no,core,14,413,3.4,ambient
-LONDON STOCK EXCHANGE GROUP,client:172571,10,2024,2026,3300000,no,core,10,41,24.4,engaged
-CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP,client:174857,10,2022,2025,1402000,no,core,11,123,8.9,engaged
-"SWIFT, INC.",client:172558,10,2022,2024,1020000,no,core,26,51,51.0,dedicated
-STANDARD CHARTERED BANK,client:203112,10,2025,2026,950000,no,core,12,13,92.3,dedicated
-JUMP CRYPTO HOLDINGS LLC,client:66674,10,2025,2026,810000,yes,core,12,12,100.0,dedicated
-THE INSTITUTE OF INTERNAL AUDITORS,client:201734,10,2023,2025,750000,no,core,25,63,39.7,dedicated
-MELLON FINANCIAL SERVICES CORPORTATION #1,client:54979,10,2023,2026,630000,no,core,10,36,27.8,dedicated
-Decentralization Research Center,client:63505,10,2025,2026,510000,no,core,8,13,61.5,dedicated
-GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION D.B.A GLOBAL DCA,client:211496,10,2022,2024,470000,yes,core,10,10,100.0,dedicated
-TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),client:51836,10,2023,2026,440000,no,core,10,121,8.3,engaged
-UNICOIN,client:66054,10,2025,2026,410000,no,core,8,8,100.0,dedicated
-BRALE INC.,client:52652,10,2022,2024,390000,no,core,9,9,100.0,dedicated
-TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.),client:61280,10,2024,2025,370000,yes,core,8,8,100.0,dedicated
-PROSUS GROUP N.V.,client:44513,10,2022,2024,360000,no,core,10,30,33.3,dedicated
-"Securitize, Inc.",client:56523,10,2023,2025,240000,no,core,9,9,100.0,dedicated
-"CHIA NETWORK, INC.",client:211958,10,2022,2024,140000,no,core,10,10,100.0,dedicated
-INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM),client:126409,9,2022,2023,20600000,no,core,9,163,5.5,engaged
-"Charles Schwab & Co., Inc.",client:143001,9,2022,2026,14720000,no,core,9,178,5.1,engaged
-TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T),client:167500,9,2022,2026,11765000,no,core,31,88,35.2,dedicated
-TECHNOLOGY NETWORK AKA TECHNET,client:164266,9,2023,2025,10050000,no,core,9,305,3.0,ambient
-National Association of Federally-Insured Credit Unions,client:134228,9,2022,2023,8530000,no,core,18,27,66.7,dedicated
-"SMBC AMERICAS HOLDINGS, INC.",client:59758,9,2024,2026,3720000,no,core,16,64,25.0,dedicated
-The PNC Financial Services Group,client:138290,9,2022,2026,3070000,no,core,9,76,11.8,engaged
-FDD ACTION,client:203727,9,2022,2025,2270000,no,core,9,107,8.4,engaged
-Bitdeer Technologies Group,client:67363,9,2025,2026,1220000,no,core,8,20,40.0,dedicated
-OKCOIN USA INC.,client:55442,9,2023,2025,720000,no,core,9,9,100.0,dedicated
-SmartContract Inc.,client:64706,9,2025,2026,585000,no,core,16,26,61.5,dedicated
-THE PAYMENT CHOICE COALITION,client:60925,9,2024,2026,440000,no,core,8,8,100.0,dedicated
-ECURRENCY,client:204105,9,2022,2024,400000,no,core,9,9,100.0,dedicated
-SOLANA FOUNDATION,client:56342,9,2023,2025,290000,yes,core,8,8,100.0,dedicated
-"WILLIAMS AND JENSEN, PLLC ON BEHALF OF RIPPLE LABS, INC.",client:208915,9,2022,2024,290000,yes,core,27,27,100.0,dedicated
-ATLAS CROSSING LLC O/B/O GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION,client:211518,9,2022,2024,180000,yes,core,9,9,100.0,dedicated
-GENRAE,client:52587,9,2022,2024,130000,no,core,16,16,100.0,dedicated
-SAGINT,client:67101,9,2025,2026,110000,no,core,13,13,100.0,dedicated
-Prometheum,client:54561,9,2023,2024,50000,no,core,8,11,72.7,dedicated
-GOVERNMENT BLOCKCHAIN ASSOCIATION,client:209998,9,2022,2024,,yes,core,10,11,90.9,dedicated
-Investment Company Institute,client:104395,8,2025,2026,21056510,no,core,9,413,2.2,ambient
-"Accenture, LLP",client:101282,8,2022,2022,9120000,no,core,12,352,3.4,ambient
-Association of National Advertisers,client:104888,8,2022,2025,7330000,no,core,15,127,11.8,engaged
-Alternative Investment Management Association,client:140247,8,2022,2026,3310000,no,core,8,34,23.5,engaged
-"VMware, Inc.",client:151835,8,2022,2023,3290000,no,core,8,185,4.3,ambient
-Visa U.S.A. Inc.,client:101000,8,2025,2026,2190000,no,core,9,88,10.2,engaged
-Worldpay,client:59668,8,2024,2026,880000,no,core,8,36,22.2,engaged
-BLOCKCHAINS INC.,client:213660,8,2022,2022,730000,yes,core,6,19,31.6,dedicated
-CRUSOE TECHNOLOGIES (FKA CRUSOE ENERGY),client:55294,8,2023,2024,570000,no,core,27,55,49.1,dedicated
-"MULTICOIN CAPITAL MANAGEMENT, LLC",client:61378,8,2024,2026,550000,no,core,7,7,100.0,dedicated
-U.S. CHAMBER OF COMMERCE - C_TEC AND CCMC,client:209505,8,2022,2023,530000,no,core,8,24,33.3,dedicated
-"Coinbase Global, Inc.",client:58422,8,2023,2025,510000,no,core,7,7,100.0,dedicated
-"BLOCKCHAIN (US), INC.",client:63460,8,2024,2026,480000,yes,core,14,14,100.0,dedicated
-Chamber of Digital Commerce,client:210973,8,2022,2023,390000,no,core,10,10,100.0,dedicated
-ANCHORAGE DIGITAL BANK,client:61052,8,2024,2025,370000,no,core,13,13,100.0,dedicated
-FIR TREE PARTNERS,client:213682,8,2022,2023,350000,no,core,7,7,100.0,dedicated
-MULTICOIN CAPITAL,client:61485,8,2024,2026,350000,no,core,7,7,100.0,dedicated
-WAVE DIGITAL ASSETS HOLDINGS LLC,client:63052,8,2024,2026,220000,yes,core,7,7,100.0,dedicated
-Celo Foundation,client:212861,8,2022,2022,208500,no,core,6,6,100.0,dedicated
-PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC,client:60988,8,2024,2026,140000,no,core,7,7,100.0,dedicated
-WISDOMTREE DIGITAL MANAGEMENT,client:64684,8,2025,2026,130000,no,core,16,18,88.9,dedicated
-"Nova Labs, Inc.",client:58202,8,2024,2025,111000,no,core,6,21,28.6,dedicated
-CHAMBER OF DIGITAL COMMERCE D/B/A THE DIGITAL CHAMBER,client:52882,8,2022,2026,50000,no,core,15,15,100.0,dedicated
-"SF OPERATIONS, INC",client:63914,8,2024,2025,45000,no,core,7,7,100.0,dedicated
-BILLMARI INC. / DBA BLACK BLOCKCHAIN SUMMIT,client:61285,8,2024,2026,,yes,core,7,7,100.0,dedicated
-LIBERLAND,client:56303,8,2023,2024,,no,core,12,27,44.4,dedicated
-GOLDMAN SACHS GROUP INC,client:163042,7,2025,2026,18060000,no,active,7,125,5.6,engaged
-OPTIONS CLEARING CORPORATION (OCC),client:163321,7,2023,2025,5720000,no,active,7,62,11.3,engaged
-American Land Title Association,client:103590,7,2022,2026,4987000,no,active,7,204,3.4,ambient
-CITIZENS FINANCIAL GROUP INC,client:178427,7,2022,2026,4070000,no,active,7,34,20.6,engaged
-HERITAGE ACTION FOR AMERICA,client:193525,7,2023,2025,2550000,no,active,7,278,2.5,ambient
-LIVE OAK BANK,client:185014,7,2024,2026,2505000,no,active,7,77,9.1,engaged
-CITADEL ENTERPRISE AMERICAS SERVICES LLC,client:51040,7,2022,2026,1700000,no,active,7,30,23.3,engaged
-"BROADRIDGE FINANCIAL SOLUTIONS, INC.",client:137796,7,2023,2024,1355000,no,active,7,33,21.2,engaged
-ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS (AICPA),client:205579,7,2022,2026,720000,no,active,7,23,30.4,dedicated
-Roger Ver,client:63927,7,2025,2025,670000,no,active,10,12,83.3,dedicated
-A16Z CAPITAL MANAGEMENT FKA ANDREESSEN HOROWITZ,client:63105,7,2024,2026,500000,no,active,6,6,100.0,dedicated
-ALGORAND INC.,client:187798,7,2022,2023,330000,no,active,14,14,100.0,dedicated
-CENTER FOR AMERICAN PROGRESS ACTION FUND,client:175013,7,2022,2026,320000,no,active,9,248,3.6,ambient
-"MYSTEN LABS, INC.",client:67096,7,2025,2026,290000,no,active,11,11,100.0,dedicated
-"ROCKWALLET, LLC",client:61664,7,2024,2025,290000,no,active,6,6,100.0,dedicated
-WHITE STAR CAPITAL USA INC.,client:66777,7,2025,2025,225000,no,active,7,28,25.0,dedicated
-"Metrika, Inc.",client:67406,7,2025,2026,53000,no,active,10,10,100.0,dedicated
-"Avalanche BVI, Inc.",client:64420,7,2025,2025,46000,no,active,12,12,100.0,dedicated
-CRYPTEX FINANCE,client:67899,7,2025,2026,,no,active,10,10,100.0,dedicated
-AMERICAN FEDERATION OF STATE COUNTY AND MUNICIPAL EMPLOYEES,client:103548,6,2024,2026,10600000,no,active,6,320,1.9,ambient
-Food Marketplace Inc.,client:120846,6,2022,2026,6540000,no,active,6,265,2.3,ambient
-American Benefits Council,client:104889,6,2022,2023,5367200,no,active,6,153,3.9,ambient
-Financial Industry Regulatory Authority,client:172525,6,2025,2026,2440000,no,active,6,68,8.8,engaged
-AMERICANS FOR TAX REFORM,client:103702,6,2023,2026,880000,no,active,7,134,5.2,engaged
-FALCONX INC.,client:63977,6,2025,2026,580000,no,active,5,5,100.0,dedicated
-"BLOCKRATIZE, INC.",client:66115,6,2025,2026,450000,no,active,5,5,100.0,dedicated
-ZERO HASH,client:61509,6,2024,2025,400000,no,active,5,5,100.0,dedicated
-"A16Z CAPITAL MANAGEMENT, L.L.C. (D/B/A ANDREESSEN HOROWITZ) FKA AH CAPITAL MGMT",client:65079,6,2025,2026,350000,no,active,15,15,100.0,dedicated
-"GEMINI TRUST COMPANY, LLC",client:213382,6,2022,2023,320000,no,active,6,6,100.0,dedicated
-STRATEGY (F/K/A MICROSTRATEGY INC.),client:64905,6,2025,2026,310000,no,active,5,7,71.4,dedicated
-MOONPAY USA LLC,client:66427,6,2025,2026,270000,no,active,7,7,100.0,dedicated
-BITCOIN DEPOT OPERATING LLC,client:65559,6,2025,2026,230000,yes,active,5,5,100.0,dedicated
-"BAKKT HOLDINGS, INC.",client:54192,6,2022,2023,212000,no,active,15,15,100.0,dedicated
-"BALCONY TECHNOLOGY GROUP, INC.",client:58683,6,2024,2025,130000,no,active,14,18,77.8,dedicated
-Satoshi Action Fund,client:65549,6,2025,2026,117500,no,active,12,13,92.3,dedicated
-TAYLOR ENGLISH DUMA LLP,client:213432,6,2022,2023,100000,no,active,5,5,100.0,dedicated
-VALID ENTRY,client:57545,6,2023,2024,30000,no,active,10,10,100.0,dedicated
-INDEPENDENT BANKERS ASSOCIATION OF TEXAS,client:63897,6,2025,2026,21000,no,active,5,6,83.3,dedicated
-"CAT LABS, INC",client:59586,6,2024,2026,20000,no,active,11,11,100.0,dedicated
-"LANEAXIS, INC.",client:51036,6,2022,2022,20000,no,active,8,8,100.0,dedicated
-Phinance.Gold,client:68151,6,2025,2025,,no,active,5,5,100.0,dedicated
-National Retail Federation,client:134533,5,2025,2026,39276000,no,active,5,542,0.9,ambient
-Bipartisan Policy Center Action,client:189530,5,2022,2023,11186298,no,active,10,542,1.8,ambient
-Retail Industry Leaders Association (RILA),client:126459,5,2022,2022,8970000,no,active,5,351,1.4,ambient
-KPMG LLP,client:128763,5,2025,2026,8860000,no,active,8,107,7.5,engaged
-International Franchise Association,client:154896,5,2024,2025,6150000,no,active,5,289,1.7,ambient
-KeyCorp,client:188831,5,2025,2026,4040000,no,active,5,79,6.3,engaged
-Barclays US GPF Inc.,client:195819,5,2022,2023,3260000,no,active,5,161,3.1,ambient
-UBS AMERICAS INC,client:170235,5,2025,2026,2450000,no,active,5,34,14.7,engaged
-"FEDERATED HERMES, INC. (FORMERLY KNOWN AS FEDERATED INVESTORS, INC.)",client:177995,5,2025,2026,2039593,no,active,5,23,21.7,engaged
-CALIFORNIA AND NEVADA CREDIT UNION LEAGUES,client:110901,5,2023,2026,1870000,no,active,6,142,4.2,ambient
-The Depository Trust & Clearing Corporation,client:206068,5,2025,2026,1710000,no,active,4,58,6.9,engaged
-"SoFi Technologies, Inc.",client:55991,5,2025,2026,1460000,no,active,4,20,20.0,engaged
-APPLIED DIGITAL,client:52215,5,2022,2023,800000,no,active,5,50,10.0,engaged
-TETHER OPERATIONS LIMITED,client:54177,5,2023,2023,600000,no,active,5,5,100.0,dedicated
-"CBOE BATS, LLC",client:56776,5,2023,2024,550000,no,active,5,8,62.5,dedicated
-COMMON CAUSE,client:114110,5,2025,2026,510000,no,active,5,51,9.8,engaged
-BITDEER,client:65204,5,2025,2026,500000,no,active,4,4,100.0,dedicated
-"PAYWARD, INC. DBA KRAKEN",client:67389,5,2025,2026,300000,no,active,4,4,100.0,dedicated
-"ORCHID GLOBAL, INC.",client:212196,5,2022,2023,300000,no,active,10,10,100.0,dedicated
-"FIGURE MARKETS, INC.",client:67117,5,2025,2026,270000,no,active,4,4,100.0,dedicated
-TECHNEST SOLUTIONS S.L.A. DBA FORTRIS,client:66518,5,2025,2025,270000,no,active,8,8,100.0,dedicated
-BLOCKDAEMON,client:65627,5,2025,2025,260000,no,active,4,4,100.0,dedicated
-SILVERGATE BANK,client:207682,5,2022,2023,210000,no,active,5,5,100.0,dedicated
-WINTERMUTE TRADING LTD.,client:68550,5,2025,2026,200000,no,active,8,8,100.0,dedicated
-PHANTOM,client:66970,5,2025,2026,190000,no,active,4,4,100.0,dedicated
-KILN USA INC,client:65058,5,2025,2026,185000,no,active,4,6,66.7,dedicated
-IOHK USA LLC,client:66143,5,2025,2026,162500,no,active,5,6,83.3,dedicated
-GREENIDGE GENERATION HOLDINGS INC.,client:44645,5,2022,2022,140000,no,active,4,4,100.0,dedicated
-NATIXIS NORTH AMERICA LLC,client:208990,5,2022,2026,140000,no,active,6,7,85.7,dedicated
-BITCOIN POLICY INSTITUTE,client:66948,5,2025,2026,140000,yes,active,8,8,100.0,dedicated
-"CROSSOVER MARKETS GROUP, INC",client:67982,5,2025,2026,120000,no,active,12,12,100.0,dedicated
-Kozolchyk National Law Center,client:209225,5,2022,2023,120000,no,active,5,6,83.3,dedicated
-Athena Bitcoin,client:58636,5,2024,2024,111500,yes,active,8,18,44.4,dedicated
-GARRISON FATHOM,client:67559,5,2025,2026,110000,no,active,8,9,88.9,dedicated
-"FREEDOMWORKS, INC.",client:113315,5,2022,2023,110000,no,active,5,45,11.1,engaged
-LEDGER,client:63457,5,2024,2025,102500,no,active,12,12,100.0,dedicated
-FIAT CHAIN HOLDINGS LLC,client:67048,5,2025,2026,100000,no,active,8,8,100.0,dedicated
-"TETHER HOLDINGS, S.A. DE C.V.(FORMERLY KNOWN AS TETHER OPERATIONS, S.A. DE C.V.)",client:64876,5,2025,2025,90000,no,active,4,4,100.0,dedicated
-Nest Services Limited (Binance),client:66906,5,2025,2025,90000,no,active,4,4,100.0,dedicated
-BPCE SA,client:211878,5,2022,2026,80000,no,active,5,5,100.0,dedicated
-BITMAIN DELAWARE HOLDING COMPANY INC,client:67100,5,2025,2026,80000,no,active,12,12,100.0,dedicated
-HELIUM FOUNDATAION (DECENTRALIZED WIRELESS FOUNDATION),client:63171,5,2024,2025,50000,no,active,5,10,50.0,dedicated
-"FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",client:67742,5,2025,2026,50000,yes,active,8,8,100.0,dedicated
-VIAMERICAS,client:66968,5,2025,2026,40000,no,active,8,8,100.0,dedicated
-DIGITAL SOVEREIGNTY ALLIANCE,client:65329,5,2025,2025,20000,no,active,2,12,16.7,engaged
-"Cornerstone Government Affairs obo Stripe, Inc.",client:61696,5,2025,2026,,no,active,10,14,71.4,dedicated
-PRIME TRUST LLC,client:52522,5,2022,2023,,no,active,4,4,100.0,dedicated
-"Veritaseum Inc.,",client:64358,5,2025,2026,,no,active,4,12,33.3,dedicated
-BCE CORPORATION PMC,client:57863,5,2023,2024,,no,active,5,12,41.7,dedicated
-Blockchain Domain Names LLC,client:54306,5,2023,2023,,yes,active,4,4,100.0,dedicated
-"Meta Platforms, Inc. and various subsidiaries",client:191116,4,2022,2022,96250000,no,active,4,206,1.9,ambient
-STATE OF LOC NATION GLOBAL PUBLIC BENEFIT CORPORATION,client:61287,4,2024,2025,80000000,no,active,13,91,14.3,engaged
-"American Airlines, Inc.",client:100462,4,2025,2026,20300000,no,active,4,499,0.8,ambient
-Equifax Inc.,client:101140,4,2025,2025,7210000,no,active,4,303,1.3,ambient
-"The Goldman Sachs Group, Inc.",client:179410,4,2025,2026,3140000,no,active,4,74,5.4,engaged
-Institute of International Bankers,client:113638,4,2025,2026,2557610,no,active,4,92,4.3,ambient
-"Pathward, N.A.",client:203311,4,2025,2026,2470000,no,active,4,53,7.5,engaged
-"H&R Block Management, LLC",client:162992,4,2025,2026,2390000,no,active,4,106,3.8,ambient
-INTERNATIONAL SWAPS & DERIVATIVES ASSOCIATION INC,client:126466,4,2025,2026,1869243,no,active,12,68,17.6,engaged
-"GENERAL CATALYST GROUP MANAGEMENT, LLC",client:61117,4,2025,2026,1760000,no,active,4,47,8.5,engaged
-M&T Bank Corporation,client:181403,4,2025,2026,1620000,no,active,4,42,9.5,engaged
-"CHRIS KISE & ASSOCIATES, P.A. ON BEHALF OF ROGER VER",client:68611,4,2025,2026,1500000,no,active,3,3,100.0,dedicated
-"NOTARIZE, INC. DBA PROOF.COM",client:207366,4,2025,2026,1250000,no,active,4,80,5.0,engaged
-TRUIST,client:184591,4,2025,2026,1020000,no,active,4,64,6.3,engaged
-COWEN GROUP,client:194104,4,2022,2022,1020000,no,active,4,18,22.2,engaged
-Defense Credit Union Council,client:194941,4,2025,2026,1010000,no,active,4,74,5.4,engaged
-"NASDAQ OMX GROUP (FORMERLY ""THE NASDAQ STOCK MARKET"")",client:140650,4,2025,2025,960000,no,active,4,37,10.8,engaged
-OTC MARKETS GROUP,client:55899,4,2023,2023,720000,no,active,3,12,25.0,dedicated
-GLEIF AMERICAS,client:207044,4,2025,2026,710000,no,active,4,17,23.5,engaged
-"Razom, Inc.",client:52065,4,2022,2022,420000,no,active,4,38,10.5,engaged
-META PLATFORMS INC (FORMERLY FACEBOOK INC AND VARIOUS SUBSIDIARIES,client:184332,4,2022,2022,405000,no,active,4,36,11.1,engaged
-FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:202988,4,2025,2026,340000,no,active,4,67,6.0,engaged
-BLOCK INC FORMERLY REPORTED AS SQUARE INC,client:205583,4,2023,2023,270000,no,active,12,40,30.0,dedicated
-AAVE LLC,client:213067,4,2022,2023,260000,no,active,4,13,30.8,dedicated
-AURADINE,client:68912,4,2025,2026,240000,no,active,3,3,100.0,dedicated
-"IOWNIT CAPITAL AND MARKETS, INC.",client:105317,4,2022,2022,210000,no,active,8,8,100.0,dedicated
-XAPO BANK LIMITED,client:68967,4,2025,2026,200000,no,active,6,6,100.0,dedicated
-CB Bancshares Corp,client:66575,4,2025,2026,190000,no,active,6,8,75.0,dedicated
-"PUDGY PENGUINS, INC.",client:69234,4,2025,2026,190000,no,active,3,3,100.0,dedicated
-"BAUGHMAN KROUP BOSSE PLLC ON BEHALF OF GEMINI SPACE STATION, INC.",client:69134,4,2025,2026,180000,no,active,3,3,100.0,dedicated
-MATONEE INC. (D/B/A APTOS LABS,client:65044,4,2025,2026,180000,no,active,3,7,42.9,dedicated
-U.S. PUBLIC INTEREST RESEARCH GROUP,client:146972,4,2022,2022,150000,no,active,4,75,5.3,engaged
-"BLACKROCK FUNDS SERVICES, LLC.",client:69898,4,2025,2026,140000,no,active,3,3,100.0,dedicated
-DEFI EUDCATION FUND,client:64795,4,2025,2025,135000,yes,active,3,5,60.0,dedicated
-FTX,client:51936,4,2022,2022,120000,no,active,9,9,100.0,dedicated
-"RAPOSA RESEARCH, INC.",client:56620,4,2023,2023,110000,no,active,3,3,100.0,dedicated
-OKBL USA HOLDING INC.,client:68418,4,2025,2026,100000,no,active,3,3,100.0,dedicated
-TIGER HILL PARTNERS ON BEHALF OF IEX GROUP,client:210102,4,2022,2022,91000,no,active,4,4,100.0,dedicated
-BAM TRADING SERVICES INC. DBA BINANCE.US,client:66327,4,2025,2026,90000,no,active,3,4,75.0,dedicated
-TECHNEST SOLUTIONS S.L.A. DBA FORTRIS ON BEHALF OF NEXUSONE CONSULTING,client:66542,4,2025,2025,90000,no,active,6,6,100.0,dedicated
-O.N.E. AMAZON,client:69193,4,2025,2026,85000,no,active,6,6,100.0,dedicated
-THOMPSON COBURN LP ON BEHALF OF MEDICI VENTURES,client:200340,4,2022,2022,80000,no,active,8,12,66.7,dedicated
-"MEDICI VENTURES, INC.",client:154518,4,2022,2022,80000,no,active,24,24,100.0,dedicated
-European Banking Federation - EBF,client:177043,4,2022,2024,73000,no,active,5,7,71.4,dedicated
-"BIT5IVE, LLC",client:211591,4,2022,2022,37500,no,active,8,10,80.0,dedicated
-"NETWORTH SERVICES, INC",client:136161,4,2022,2022,,no,active,4,48,8.3,engaged
-RAHUL SOOD,client:68835,4,2025,2026,,no,active,3,3,100.0,dedicated
-BLOCKCHAIN INTELLIGENCE GROUP,client:58573,4,2024,2024,,yes,active,3,3,100.0,dedicated
-Walmart Inc.,client:102066,3,2023,2024,31210000,no,active,3,787,0.4,ambient
-"Elevance Health, Inc.",client:108773,3,2022,2022,29940000,no,active,3,296,1.0,ambient
-Nareit,client:110082,3,2025,2026,19401000,no,active,3,194,1.5,ambient
-"H&R BLOCK MANAGEMENT, LLC, A SUBSIDIARY OF H&R BLOCK, INC.",client:122803,3,2022,2022,12830000,no,active,3,36,8.3,engaged
-Deloitte LLP,client:127069,3,2025,2026,7120000,no,active,3,240,1.3,ambient
-"Discover Financial Services, Inc.",client:133698,3,2022,2022,6910000,no,active,3,139,2.2,ambient
-AMERICAN FEDERATION OF TEACHERS,client:103549,3,2025,2026,6250000,no,active,5,295,1.7,ambient
-MUFG AMERICAS HOLDINGS CORPORATION,client:203340,3,2022,2023,4660000,no,active,3,30,10.0,engaged
-"Autodesk, Inc",client:156933,3,2022,2022,3650000,no,active,3,230,1.3,ambient
-INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS,client:126404,3,2025,2026,2263460,no,active,3,115,2.6,ambient
-"ESHARES, INC. D/B/A CARTA, INC.",client:210049,3,2022,2022,2210000,no,active,3,43,7.0,engaged
-CMFG LIFE INSURANCE COMPANY,client:170973,3,2025,2026,2210000,no,active,3,86,3.5,ambient
-Citadel Enterprise Americas LLC,client:212516,3,2025,2026,2110000,no,active,3,54,5.6,engaged
-KUCOIN,client:64167,3,2025,2025,2000000,no,active,2,2,100.0,dedicated
-University of Michigan,client:147158,3,2022,2022,1710000,no,active,3,248,1.2,ambient
-"THE MCENTEE GROUP, LLC",client:66651,3,2025,2025,1200000,no,active,2,2,100.0,dedicated
-"MIZUHO BANK, LTD.",client:202684,3,2025,2026,1030000,no,active,3,74,4.1,ambient
-New York Bankers Association,client:134668,3,2025,2026,818000,no,active,3,40,7.5,engaged
-CA STATE ASSEMBLY,client:135921,3,2025,2025,760000,no,active,3,42,7.1,engaged
-RIPPLE,client:203217,3,2025,2025,740000,yes,active,2,4,50.0,dedicated
-NCR Atleos,client:59115,3,2025,2026,690000,no,active,3,77,3.9,ambient
-"TD Bank, N.A.",client:53020,3,2025,2025,670000,no,active,3,47,6.4,engaged
-SMALL BUSINESS & ENTREPRENEURSHIP COUNCIL (SBE COUNCIL),client:144095,3,2025,2025,640000,no,active,3,17,17.6,engaged
-CERTIK,client:64169,3,2025,2025,600000,no,active,2,2,100.0,dedicated
-"Franklin Resources, Inc.",client:106675,3,2022,2023,580000,no,active,3,19,15.8,engaged
-AMERICAN FINTECH COUNCIL,client:184194,3,2025,2026,570000,no,active,3,37,8.1,engaged
-EMURGO GROUP PTE. LTD.,client:66377,3,2025,2025,416666,no,active,2,2,100.0,dedicated
-Job Creators Network,client:175625,3,2024,2024,321500,no,active,3,183,1.6,ambient
-"P STREET PROJECT, INC.",client:193732,3,2024,2025,290000,no,active,3,132,2.3,ambient
-"CITIZENS BANK, N.A.",client:205584,3,2025,2026,284000,no,active,3,34,8.8,engaged
-Sphere Labs,client:68739,3,2025,2026,215000,no,active,1,1,100.0,dedicated
-"DRW HOLDINGS, LLC",client:63975,3,2025,2025,210000,no,active,4,4,100.0,dedicated
-BINANCE HOLDING LIMITED,client:55573,3,2023,2023,200000,no,active,5,5,100.0,dedicated
-"HONEYCOMB DIGITAL INVESTMENTS, LLC",client:64170,3,2025,2025,200000,no,active,2,2,100.0,dedicated
-BULLISH US LLC,client:52723,3,2022,2022,180000,no,active,2,2,100.0,dedicated
-ONDO FINANCE INC.,client:70639,3,2025,2026,160000,no,active,2,4,50.0,dedicated
-CERTIFIED KERNEL TECH LLC,client:69601,3,2025,2026,150000,no,active,2,2,100.0,dedicated
-MODERN TREASURY CORP.,client:64400,3,2025,2025,120000,no,active,3,6,50.0,dedicated
-DEMOCRACY DEFENDERS ACTION,client:69225,3,2025,2026,120000,no,active,6,6,100.0,dedicated
-"INJECTIVE, LLC",client:69800,3,2025,2026,110000,no,active,5,5,100.0,dedicated
-MANTRA Ventures Limited,client:67600,3,2025,2025,100000,no,active,2,2,100.0,dedicated
-Swiss Bankers Association,client:131369,3,2024,2025,100000,no,active,3,3,100.0,dedicated
-SIMBA CHAIN,client:59268,3,2024,2025,92500,no,active,2,8,25.0,dedicated
-"FTI CONSULTING ON BEHALF OF TETHER OPERATIONS, S.A. DE C.V.",client:64931,3,2025,2025,60000,no,active,4,4,100.0,dedicated
-STANDARD CRYPTO,client:69878,3,2025,2026,50000,yes,active,2,2,100.0,dedicated
-NATIONAL COMMUNITY REINVESTMENT COALITION,client:197025,3,2023,2025,44137,no,active,4,55,7.3,engaged
-WYOMING DEPOSIT & TRANSFER CORP. DBA BANKWYSE,client:55513,3,2023,2023,40000,no,active,2,2,100.0,dedicated
-THE DIGITAL CHAMBER OF COMMERCE,client:194251,3,2022,2022,35000,no,active,6,6,100.0,dedicated
-"PLUME NETWORK, INC.",client:69417,3,2025,2025,30000,no,active,2,2,100.0,dedicated
-CORMINT DATA SYSTEMS,client:64714,3,2025,2025,30000,no,active,2,2,100.0,dedicated
-CHAINALYSIS GOVERNMENT SOLUTIONS,client:68491,3,2025,2025,28000,no,active,6,6,100.0,dedicated
-CONNECT STRATEGY LLC (ON BEHALF OF CRYPTEX FINANCE),client:67702,3,2025,2025,20000,no,active,2,2,100.0,dedicated
-"ANCHORAGE DIGITAL BANK, NA",client:57279,3,2023,2023,10000,no,active,2,2,100.0,dedicated
-"COMMUNITY BANK ADVISORY SERVICES, LLC",client:69380,3,2025,2025,,no,active,2,5,40.0,dedicated
-CENTER FOR FREEDOM AND PROSPERITY,client:160522,3,2024,2024,,no,active,3,95,3.2,ambient
-FEDERAL MONEY SERVICES BUSINESS ASSOCIATION INC.,client:67210,3,2025,2025,,no,active,2,2,100.0,dedicated
-American Council of Life Insurers,client:100935,2,2025,2026,19992028,no,peripheral,2,190,1.1,ambient
-National Restaurant Association,client:134538,2,2025,2025,13840000,no,peripheral,2,276,0.7,ambient
-"Prudential Financial, Inc.",client:105274,2,2025,2026,12604946,no,peripheral,2,358,0.6,ambient
-AFL-CIO,client:100404,2,2025,2025,11860000,no,peripheral,2,224,0.9,ambient
-TRANS UNION LLC,client:161956,2,2022,2022,9360000,no,peripheral,2,96,2.1,ambient
-"Invesco Holding Company (US), Inc.",client:202198,2,2025,2025,9180000,no,peripheral,2,100,2.0,ambient
-American Gaming Association,client:103559,2,2022,2022,8470000,no,peripheral,2,287,0.7,ambient
-National Association of Mutual Insurance Companies,client:134242,2,2022,2022,7944520,no,peripheral,2,378,0.5,ambient
-Southwest Airlines,client:140633,2,2025,2025,5480000,no,peripheral,2,228,0.9,ambient
-Idemia Identity & Security USA LLC,client:187802,2,2025,2026,3650000,no,peripheral,2,138,1.4,ambient
-"Santander Holdings USA, Inc.",client:199830,2,2025,2026,2820000,no,peripheral,2,78,2.6,ambient
-H&R Block,client:199176,2,2025,2026,1950000,no,peripheral,2,89,2.2,ambient
-University of Notre Dame,client:196468,2,2025,2025,1910000,no,peripheral,2,182,1.1,ambient
-THE AMERICAN COUNCIL OF LIFE INSURERS,client:184933,2,2025,2026,1730000,no,peripheral,2,85,2.4,ambient
-JP Morgan Chase Holdings,client:205309,2,2025,2025,1410000,no,peripheral,2,36,5.6,engaged
-DEUTSCHE BANK USA,client:127162,2,2024,2024,1320000,no,peripheral,2,53,3.8,ambient
-ADOBE SYSTEMS INC.,client:175590,2,2023,2023,1190000,no,peripheral,2,90,2.2,ambient
-CENTER FOR BIOLOGICAL DIVERSITY,client:201674,2,2025,2025,969903,no,peripheral,2,88,2.3,ambient
-"SidePrize LLC, d/b/a PrizePicks",client:59449,2,2026,2026,932000,no,peripheral,2,33,6.1,engaged
-INTERNATIONAL SWAPS AND DERIVATIVES ASSOCIATION,client:102170,2,2025,2026,850000,no,peripheral,2,58,3.4,ambient
-CLOUDFLARE,client:175596,2,2025,2026,680000,no,peripheral,2,72,2.8,ambient
-"VIA SCIENCE, INC.",client:64550,2,2025,2026,450000,no,peripheral,2,10,20.0,engaged
-"DEMAND PROGRESS ACTION, INC",client:199776,2,2025,2025,424000,no,peripheral,2,229,0.9,ambient
-"ATLAS POWER HOLDINGS, LLC",client:210303,2,2022,2022,290000,no,peripheral,2,13,15.4,engaged
-ELITE CATERING AND EVENT PROFESSIONALS,client:55000,2,2025,2025,240000,no,peripheral,2,33,6.1,engaged
-HIVE BLOCKCHAIN TECHNOLOGIES LTD,client:212367,2,2022,2022,134000,yes,peripheral,2,2,100.0,dedicated
-THE NORTH AMERICAN SECURITIES ADMINISTRATORS ASSOCIATION,client:188528,2,2024,2024,132000,no,peripheral,2,13,15.4,engaged
-THE DEFI EDUCATION FUND,client:213019,2,2022,2022,120000,yes,peripheral,2,2,100.0,dedicated
-AMERICAN CONSERVATIVE UNION,client:162029,2,2024,2024,100000,no,peripheral,2,25,8.0,engaged
-WAKEFERN FOOD CORP.,client:149085,2,2025,2025,90000,no,peripheral,2,60,3.3,ambient
-OFFCHAIN LABS INC,client:70356,2,2025,2025,90000,no,peripheral,1,1,100.0,dedicated
-BITCOIN DEPOT,client:70844,2,2026,2026,80000,yes,peripheral,2,2,100.0,dedicated
-ANCHORAGE DIGITAL,client:51260,2,2022,2022,60000,no,peripheral,2,2,100.0,dedicated
-THE FINTEX GROUP IN. (D/B/A LINGUARD LABS),client:71592,2,2026,2026,50000,no,peripheral,1,1,100.0,dedicated
-BLOCKFI,client:51807,2,2022,2022,40000,no,peripheral,1,1,100.0,dedicated
-"HIGH THROUGHPUT PRODUCTIONS, LLC (DBA BITBOY CRYPTO)",client:54855,2,2023,2023,30000,yes,peripheral,2,2,100.0,dedicated
-AMERICAN EXCHANGE COALITION (INFORMAL COALITION),client:71353,2,2026,2026,20000,no,peripheral,1,1,100.0,dedicated
-MOBILECOIN FOUNDATION,client:54540,2,2023,2023,15000,no,peripheral,2,6,33.3,dedicated
-"UNICOIN INC.UNICOIN, INC.",client:65176,2,2025,2025,10000,no,peripheral,1,1,100.0,dedicated
-ASSOCIATION OF DIGITAL ASSET MARKETS,client:52038,2,2022,2022,10000,yes,peripheral,4,4,100.0,dedicated
-COALITION ON HUMAN NEEDS,client:203430,2,2025,2025,,no,peripheral,4,263,1.5,ambient
-National Association of Realtors,client:101314,1,2022,2022,289260000,no,peripheral,1,415,0.2,ambient
-UPS (United Parcel Service),client:147131,1,2022,2022,31480000,no,peripheral,1,193,0.5,ambient
-NFIB (National Federation of Independent Business),client:134461,1,2025,2025,23808843,no,peripheral,1,58,1.7,ambient
-Capital One Financial Corporation,client:158512,1,2026,2026,15610000,no,peripheral,1,286,0.3,ambient
-National Association of Convenience Stores,client:134220,1,2025,2025,13090000,no,peripheral,1,430,0.2,ambient
-Lowe's Companies Inc.,client:100843,1,2025,2025,9700000,no,peripheral,1,239,0.4,ambient
-PACIFIC LIFE INSURANCE COMPANY,client:183411,1,2026,2026,6490000,no,peripheral,1,128,0.8,ambient
-New Venture Fund,client:112658,1,2024,2024,6103000,no,peripheral,1,229,0.4,ambient
-American Exploration & Production Council,client:205920,1,2025,2025,5260000,no,peripheral,4,158,2.5,ambient
-NATIONAL TREASURY EMPLOYEES UNION,client:134581,1,2026,2026,4977983,no,peripheral,1,68,1.5,ambient
-BUILDING AND CONSTRUCTION TRADES DEPT AFL-CIO,client:110731,1,2026,2026,4160000,no,peripheral,1,117,0.9,ambient
-"RBC CAPITAL MARKETS, LLC",client:195232,1,2026,2026,3070000,no,peripheral,1,73,1.4,ambient
-"Social Finance, Inc.",client:172569,1,2022,2022,1460000,no,peripheral,1,89,1.1,ambient
-INVESTMENT ADVISER ASSOCIATION (IAA),client:187840,1,2026,2026,1451206,no,peripheral,1,76,1.3,ambient
-HILLTOP HOLDINGS INC.,client:135937,1,2026,2026,1360000,no,peripheral,1,17,5.9,engaged
-ALLIANCE FOR RETIRED AMERICANS,client:163876,1,2026,2026,1355000,no,peripheral,1,152,0.7,ambient
-Earthjustice Action,client:55709,1,2025,2025,957474,no,peripheral,1,89,1.1,ambient
-REGIONS BANK,client:213285,1,2022,2022,720000,no,peripheral,1,17,5.9,engaged
-Grant Thornton LLP,client:207860,1,2023,2023,617500,no,peripheral,1,51,2.0,ambient
-RAMP BUSINESS CORPORATION,client:65270,1,2026,2026,360000,no,peripheral,1,10,10.0,engaged
-"CAMPAIGN LEGAL CENTER, INC.",client:178832,1,2023,2023,300000,no,peripheral,1,17,5.9,engaged
-CALIFORNIA/NEVADA CREDIT UNION LEAGUE,client:57607,1,2025,2025,190000,no,peripheral,1,10,10.0,engaged
-ALLIANCE DEFENDING FREEDOM,client:59048,1,2025,2025,190000,no,peripheral,1,50,2.0,ambient
-ELEVANTA,client:189392,1,2025,2025,180000,no,peripheral,1,55,1.8,ambient
-"BRANSTAD CHURCHILL GROUP (OBO BITMAIN DELAWARE HOLDING COMPANY, INC.)",client:66718,1,2025,2025,160000,no,peripheral,0,4,0.0,ambient
-ACT FOR AMERICA,client:190908,1,2023,2023,135000,no,peripheral,1,11,9.1,engaged
-LEAD BANK,client:65056,1,2025,2025,130000,no,peripheral,0,6,0.0,ambient
-Securities Investor Protection Corporation,client:145613,1,2025,2025,130000,no,peripheral,1,8,12.5,engaged
-"BLOCKCHAIN GAME PARTNERS, INC DBA GALA GAMES",client:65946,1,2025,2025,100000,yes,peripheral,1,1,100.0,dedicated
-GIFDA,client:65340,1,2025,2025,85400,no,peripheral,0,8,0.0,ambient
-THE BENNETT CONSULTING GROUP FKA THE BENNETT CONSULTING GROUP OBO CITY OF MOAB,client:69206,1,2026,2026,75000,no,peripheral,1,9,11.1,engaged
-THE BLOCKCHAIN ASSOCIATION,client:210903,1,2022,2022,60000,yes,peripheral,1,1,100.0,dedicated
-PARTICULA GROUP INC.,client:71968,1,2026,2026,50000,no,peripheral,1,1,100.0,dedicated
-RUMBLE INC,client:65526,1,2025,2025,40000,no,peripheral,0,6,0.0,ambient
-"VIVENNS, LLC",client:213159,1,2022,2022,40000,no,peripheral,1,1,100.0,dedicated
-SOLVE.CARE USA INC.,client:212444,1,2022,2022,20000,no,peripheral,2,2,100.0,dedicated
-THE ALLIANCE FOR INNOVATIVE REGULATION,client:208369,1,2022,2022,5000,no,peripheral,1,2,50.0,dedicated
-Crypterns,client:53770,1,2022,2022,,no,peripheral,4,4,100.0,dedicated
-AMERICAN BANKERS ASSOCIATION SECURITIES ASSOCIATION (ABASA),client:100020,1,2022,2022,,no,peripheral,1,1,100.0,dedicated
-DIGITAL CHAMBER OF COMMERCE,client:44928,1,2022,2022,,no,peripheral,0,18,0.0,ambient
-DEFI ANGELS LLC,client:211870,1,2022,2022,,yes,peripheral,2,2,100.0,dedicated
-SKY MAVIS,client:70139,1,2025,2025,,no,peripheral,,,,n/a (registrations only)
-Proleague.gg,client:213636,1,2022,2022,,no,peripheral,,,,n/a (registrations only)
-VOL. 1 VENTURES,client:53871,1,2023,2023,,no,peripheral,,,,n/a (registrations only)
-"FIGURE TECHNOLOGY SOLUTIONS, INC",client:71609,1,2026,2026,,no,peripheral,,,,n/a (registrations only)
-TRON DAO,client:70348,1,2025,2025,,no,peripheral,,,,n/a (registrations only)
-USIG DIGITAL,client:72471,1,2026,2026,,no,peripheral,,,,n/a (registrations only)
-THE FINTECH ACCORD,client:72211,1,2026,2026,,no,peripheral,,,,n/a (registrations only)
-CRYPTO WORLD,client:54767,1,2023,2023,,yes,peripheral,,,,n/a (registrations only)
-STEEL PERLOT,client:52508,1,2022,2022,,no,peripheral,,,,n/a (registrations only)
+﻿player,entity_id,crypto_filings_senate,crypto_activity_blocks,all_activity_blocks,crypto_activity_share_pct,crypto_share_band,first_year,last_year,total_all_issue_spend,crypto_term_in_name,tier
+"Coinbase, Inc.",client:187781,126,201,212,94.8,dedicated,2022,2026,15050000,no,core
+"Block, Inc.",client:181404,85,162,229,70.7,dedicated,2022,2026,8250000,no,core
+"Foris DAX, Inc. d/b/a Crypto.com",client:45737,66,103,107,96.3,dedicated,2022,2026,3650000,yes,core
+"Ava Labs, Inc.",client:212542,64,154,154,100.0,dedicated,2022,2026,2666000,no,core
+"PayPal, Inc.",client:157625,63,92,374,24.6,engaged,2022,2026,7011311,no,core
+Crypto Council for Innovation,client:52259,62,124,127,97.6,dedicated,2022,2026,3364000,yes,core
+DeFi Education Fund,client:212719,60,103,118,87.3,dedicated,2022,2026,3400000,yes,core
+Visa Inc.,client:131374,57,60,577,10.4,engaged,2022,2026,39280000,no,core
+MASTERCARD WORLDWIDE,client:131182,54,54,93,58.1,dedicated,2022,2026,20160000,no,core
+Ripple Labs Inc.,client:151602,52,99,99,100.0,dedicated,2022,2026,4790000,yes,core
+Blockchain Association,client:200963,51,158,186,84.9,dedicated,2022,2026,8220000,yes,core
+Filecoin Foundation,client:53653,50,228,236,96.6,dedicated,2022,2026,1830000,no,core
+Coin Center,client:191139,49,100,100,100.0,dedicated,2022,2026,3020000,yes,core
+Paradigm Operations LP,client:54271,48,57,59,96.6,dedicated,2023,2026,3220000,no,core
+"CME Group, Inc.",client:113218,43,57,124,46.0,dedicated,2022,2026,6690000,no,core
+"Robinhood Markets, Inc.",client:206577,39,39,52,75.0,dedicated,2022,2026,6490000,no,core
+THE DIGITAL CHAMBER (FORMERLY KNOWN AS CHAMBER OF DIGITAL COMMERCE),client:202106,39,76,84,90.5,dedicated,2022,2026,2176650,no,core
+Dapper Labs Inc.,client:213175,39,54,54,100.0,dedicated,2022,2026,1720000,no,core
+"Anchor Labs, Inc.",client:203626,39,62,71,87.3,dedicated,2022,2025,1620000,no,core
+"Citigroup Washington, Inc.",client:160307,35,44,269,16.4,engaged,2022,2026,20940000,no,core
+National Venture Capital Association,client:128604,35,39,365,10.7,engaged,2022,2026,11089098,no,core
+A16Z CAPITAL MANAGEMENT LLC (F/K/A AH CAPITAL MANAGEMENT L.L.C.),client:54163,35,78,137,56.9,dedicated,2023,2026,6900000,no,core
+Futures Industry Association,client:121188,35,35,87,40.2,dedicated,2022,2026,3874453,no,core
+Chainalysis Inc.,client:207913,35,89,89,100.0,dedicated,2022,2025,998000,no,core
+"RIOT PLATFORMS, INC.",client:45365,34,92,95,96.8,dedicated,2022,2026,2460000,no,core
+"TD Bank, NA",client:195008,32,32,104,30.8,dedicated,2022,2026,6400000,no,core
+Securities Industry and Financial Markets Association (SIFMA),client:116316,31,53,340,15.6,engaged,2022,2026,32870000,no,core
+Digital Currency Group,client:210121,30,87,98,88.8,dedicated,2022,2026,3170000,yes,core
+Stellar Development Foundation,client:207297,30,32,32,100.0,dedicated,2022,2026,1700000,no,core
+American Bankers Association,client:102650,29,36,621,5.8,engaged,2022,2026,34726000,no,core
+Fiserv,client:120225,29,33,134,24.6,engaged,2022,2026,3070000,no,core
+"Fidelity National Information Systems, Inc. and Subsidiaries",client:201436,27,25,77,32.5,dedicated,2022,2025,4050000,no,core
+NORTHERN TRUST CORPORATION,client:193597,26,26,78,33.3,dedicated,2022,2026,1800000,no,core
+"Meta Platforms, Inc.",client:105281,25,25,747,3.3,ambient,2022,2023,15021250,no,core
+Moody's Corporation,client:212702,25,25,126,19.8,engaged,2022,2026,2840000,no,core
+AICPA Association of International Certified Professional Accountants,client:192162,24,47,253,18.6,engaged,2022,2026,22669000,no,core
+"Paxos Trust Company, LLC",client:50986,24,22,22,100.0,dedicated,2022,2026,1340000,no,core
+WEB 3.0 TECHNOLOGIES FOUNDATION,client:52966,24,25,25,100.0,dedicated,2022,2025,1130000,no,core
+Electronic Payments Coalition,client:109921,23,23,146,15.8,engaged,2024,2026,24400000,no,core
+"BlackRock Funds Services Group, LLC",client:172555,23,28,328,8.5,engaged,2022,2026,10900000,no,core
+FMR LLC,client:101067,23,40,268,14.9,engaged,2022,2026,10510000,no,core
+Regions Financial Corporation,client:167106,23,23,84,27.4,dedicated,2022,2026,7100000,no,core
+"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,23,50,52,96.2,dedicated,2022,2025,4711000,no,core
+Western Union,client:109734,23,44,238,18.5,engaged,2022,2024,3449480,no,core
+PAYWARD INC D/B/A KRAKEN,client:45920,23,36,36,100.0,dedicated,2022,2026,1370000,no,core
+"Cornerstone Government Affairs obo Circle Internet Financial, Inc.",client:57791,23,23,23,100.0,dedicated,2023,2026,,no,core
+Accenture Federal Services LLC,client:103471,22,22,445,4.9,ambient,2022,2025,4130000,no,core
+Solana Policy Institute,client:65894,22,37,42,88.1,dedicated,2025,2026,2370000,yes,core
+Circle,client:212787,22,23,23,100.0,dedicated,2022,2026,2150000,no,core
+ConsenSys Software Inc.,client:211873,22,31,37,83.8,dedicated,2022,2025,1047700,no,core
+UNISWAP LABS,client:51758,22,22,24,91.7,dedicated,2022,2026,640000,no,core
+"CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",client:115381,21,21,157,13.4,engaged,2022,2026,20119746,no,core
+"Nasdaq, Inc.",client:105276,21,21,60,35.0,dedicated,2022,2026,9535000,no,core
+American Express Company,client:100904,21,21,110,19.1,engaged,2022,2026,6490000,no,core
+Americans for Financial Reform,client:202954,21,48,164,29.3,dedicated,2022,2025,2330000,no,core
+"UNIVERSAL NAVIGATION, INC. (D/B/A UNISWAP LABS)",client:52732,21,19,19,100.0,dedicated,2022,2026,870000,no,core
+Binance Holdings Limited,client:53862,20,20,23,87.0,dedicated,2022,2026,2450000,no,core
+Polygon Labs Services (Switzerland) AG,client:55284,20,29,41,70.7,dedicated,2023,2025,770000,no,core
+INDEPENDENT COMMUNITY BANKERS OF AMERICA,client:126309,19,36,122,29.5,dedicated,2022,2026,19261826,no,core
+Consumer Technology Association,client:100900,19,24,410,5.9,engaged,2023,2026,17420000,no,core
+National Football League,client:114996,19,21,342,6.1,engaged,2022,2026,6620000,no,core
+"FORIS DAX, INC & ITS AFFILIATED ENTITIES D/B/A CRYPTO.COM",client:50172,19,19,19,100.0,dedicated,2022,2026,5990000,yes,core
+Shopify,client:204893,19,22,284,7.7,engaged,2022,2026,3490000,no,core
+Public Citizen,client:140490,19,25,213,11.7,engaged,2022,2026,1376315,no,core
+"Hedera Hashgraph, LLC",client:211959,19,43,43,100.0,dedicated,2022,2026,710000,no,core
+"ATMOSPHERE I, LLC, FORMERLY IGNEIO, LLC",client:185900,19,52,57,91.2,dedicated,2022,2026,660000,no,core
+"GLOBAL TRADING SYSTEMS, LLC",client:202190,19,19,19,100.0,dedicated,2022,2026,340000,no,core
+Amazon.com Services LLC,client:158902,18,18,733,2.5,ambient,2022,2026,77570000,no,core
+American Association for Justice,client:104895,18,18,651,2.8,ambient,2022,2026,21830000,no,core
+Managed Funds Association,client:114613,18,21,194,10.8,engaged,2022,2026,20420000,no,core
+JPMorgan Chase Holdings LLC,client:163074,18,18,366,4.9,ambient,2022,2026,15330000,no,core
+WESTERN ALLIANCE BANCORPORATION,client:50800,18,17,17,100.0,dedicated,2022,2026,2050000,no,core
+"BAM Trading Services, Inc./Binance.US",client:211941,18,14,29,48.3,dedicated,2022,2024,1425000,no,core
+American Transaction Processors Coalition,client:178379,18,17,80,21.3,engaged,2022,2025,1400000,no,core
+GALAXY DIGITAL HOLDINGS LP,client:50770,18,17,21,81.0,dedicated,2022,2026,1260000,no,core
+Cedar Innovation Foundation,client:57728,18,25,25,100.0,dedicated,2023,2026,850000,no,core
+LMAX Group,client:52997,18,33,33,100.0,dedicated,2022,2026,710000,no,core
+AARP,client:102643,17,19,748,2.5,ambient,2022,2026,77050000,no,core
+Bank of America Corporation,client:134187,17,20,141,14.2,engaged,2022,2026,12280000,no,core
+STATE STREET BANK AND TRUST COMPANY AND ITS AFFILIATES,client:172156,17,17,85,20.0,engaged,2022,2026,7600000,no,core
+Electronic Transactions Association,client:149027,17,35,116,30.2,dedicated,2022,2025,6990000,no,core
+"Cboe Global Markets, Inc.",client:155343,17,17,109,15.6,engaged,2022,2026,2910000,no,core
+Insured Retirement Institute,client:176111,17,42,86,48.8,dedicated,2022,2026,2900000,no,core
+Cross River Bank,client:202974,17,17,83,20.5,engaged,2022,2026,2316000,no,core
+VaultLink Inc.,client:211661,17,17,17,100.0,dedicated,2022,2026,1530000,no,core
+COMMUNITY BANKERS ASSOCIATION OF ILLINOIS,client:192301,17,105,119,88.2,dedicated,2022,2026,1060000,no,core
+CROWE LLP,client:200249,17,28,60,46.7,dedicated,2022,2026,930000,no,core
+"MARATHON DIGITAL HOLDINGS, INC.",client:213187,17,40,45,88.9,dedicated,2022,2026,770000,no,core
+"OZONE NETWORKS, INC. D/B/A OPENSEA",client:52072,17,43,45,95.6,dedicated,2022,2026,660000,no,core
+MICHIGAN CREDIT UNION LEAGUE,client:132774,17,17,51,33.3,dedicated,2022,2026,430000,no,core
+AngelList,client:177215,17,17,24,70.8,dedicated,2022,2026,410000,no,core
+Consumer Bankers Association,client:114369,16,16,123,13.0,engaged,2022,2026,16260000,no,core
+Morgan Stanley & Co. LLC,client:133644,16,16,171,9.4,engaged,2022,2026,16080000,no,core
+Financial Services Forum,client:101299,16,16,47,34.0,dedicated,2022,2026,11208000,no,core
+Leadership Conference on Civil and Human Rights,client:129233,16,16,237,6.8,engaged,2022,2025,7850000,no,core
+"GLOBAL PAYMENTS, INC.",client:171265,16,16,57,28.1,dedicated,2022,2026,3580000,no,core
+TAXBIT INC.,client:44931,16,27,39,69.2,dedicated,2022,2025,1920000,no,core
+BITCOIN ASSOCIATION FOR BSV,client:191373,16,16,16,100.0,dedicated,2022,2026,1840000,yes,core
+"LAW OFFICES OF MICHAEL JASON LEE, APLC (ON BEHALF OF TETHER OPERATIONS LIMITED)",client:45110,16,13,13,100.0,dedicated,2022,2024,1440000,no,core
+MoneyGram International Inc.,client:132974,16,16,46,34.8,dedicated,2022,2026,1320000,no,core
+Mastercard International Incorporated,client:143682,16,16,91,17.6,engaged,2022,2026,1100000,no,core
+"Tether Operations, S.A. de C.V.",client:64477,16,19,19,100.0,dedicated,2025,2026,880000,no,core
+FIDELITY INVESTMENTS,client:167102,16,16,33,48.5,dedicated,2022,2025,560000,no,core
+"ORCHID LABS, INC.",client:51252,16,16,18,88.9,dedicated,2022,2026,510000,no,core
+Wells Fargo & Company,client:134745,15,15,411,3.6,ambient,2022,2026,16290000,no,core
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,15,15,48,31.3,dedicated,2022,2026,6500000,no,core
+MELLON FINANCIAL SERVICES CORPORATION #1,client:132593,15,25,28,89.3,dedicated,2022,2026,6370000,no,core
+HUNTINGTON BANCSHARES INCORPORATED,client:169956,15,25,69,36.2,dedicated,2022,2026,1913000,no,core
+Credit Suisse Securities (USA) LLC,client:106761,15,22,50,44.0,dedicated,2022,2023,1600000,no,core
+AMERICAN SECURITIES ASSOCIATION,client:208145,15,15,80,18.8,engaged,2022,2026,1390000,no,core
+JARDEN ZINC PRODUCTS,client:185269,15,15,17,88.2,dedicated,2022,2026,890000,no,core
+Chamber of Progress,client:211714,15,13,70,18.6,engaged,2023,2026,875000,no,core
+DIGITAL ASSET (US) CORP,client:55431,15,14,14,100.0,dedicated,2023,2026,410000,yes,core
+"Sujitech, LLC",client:52860,15,28,28,100.0,dedicated,2022,2026,40000,no,core
+CHAMBER OF COMMERCE OF THE U.S.A.,client:146969,14,19,555,3.4,ambient,2022,2026,311610000,no,core
+MASSACHUSETTS MUTUAL LIFE INSURANCE COMPANY,client:106452,14,20,202,9.9,engaged,2023,2026,11790000,no,core
+Fifth Third Bancorp,client:175028,14,14,92,15.2,engaged,2022,2026,5412164,no,core
+"IEX Group, Inc.",client:208621,14,13,42,31.0,dedicated,2022,2024,3980000,no,core
+"Stripe, Inc.",client:187780,14,19,99,19.2,engaged,2022,2026,3145000,no,core
+"GRAYSCALE INVESTMENTS, LLC",client:54632,14,13,13,100.0,dedicated,2023,2026,770000,no,core
+COINFLIP,client:207878,14,13,17,76.5,dedicated,2022,2026,720000,no,core
+"FORIS DAX MARKETS, INC. DBA CRYPTO.COM",client:54090,14,14,16,87.5,dedicated,2023,2026,670000,yes,core
+Bank Policy Institute,client:106185,13,13,214,6.1,engaged,2022,2026,12000000,no,core
+Ernst & Young LLP,client:160225,13,14,155,9.0,engaged,2023,2026,9250000,no,core
+U.S. Bancorp,client:147171,13,13,152,8.6,engaged,2023,2026,6080000,no,core
+"FRANKLIN RESOURCES, INC. (FRANKLIN TEMPLETON) AND AFFILIATES",client:55667,13,12,13,92.3,dedicated,2023,2026,3980000,no,core
+NCR VOYIX CORPORATION (FKA NCR CORPORATION),client:112453,13,13,83,15.7,engaged,2022,2023,750000,no,core
+DYDX TRADING INC.,client:52040,13,12,12,100.0,dedicated,2022,2025,690000,no,core
+"CLEANSPARK, INC",client:61451,13,29,44,65.9,dedicated,2024,2026,460000,no,core
+Proof of Stake Alliance,client:137881,13,18,18,100.0,dedicated,2022,2024,360000,no,core
+BITWISE ASSET MANAGEMENT,client:212967,13,13,13,100.0,dedicated,2022,2025,320000,no,core
+INSTITUTE OF INTERNAL AUDITORS,client:55435,13,12,36,33.3,dedicated,2023,2026,290000,no,core
+NEW YORK STATE BAR ASSOCIATION,client:205228,13,13,103,12.6,engaged,2023,2026,210000,no,core
+COMMITTEE ON CAPITAL MARKETS REGULATION,client:127110,13,26,38,68.4,dedicated,2023,2026,200000,no,core
+ATOLLetc LLC,client:203797,13,54,91,59.3,dedicated,2023,2026,,no,core
+PwC US Group LLP,client:105291,12,12,172,7.0,engaged,2023,2026,18080000,no,core
+IBM,client:112795,12,12,95,12.6,engaged,2022,2024,2135000,no,core
+"BNP PARIBAS RCC, INC.",client:203029,12,13,59,22.0,engaged,2023,2025,1580000,no,core
+"West Realm Shires Services, Inc. d/b/a FTX US",client:213265,12,15,15,100.0,dedicated,2022,2022,690000,no,core
+Ledger SAS,client:54270,12,16,16,100.0,dedicated,2023,2026,450000,no,core
+FALCONX BRAVO INC.,client:57159,12,11,11,100.0,dedicated,2023,2026,440000,no,core
+Sorare SAS,client:53505,12,36,36,100.0,dedicated,2022,2024,400000,no,core
+"EXODUS MOVEMENT, INC.",client:212660,12,13,13,100.0,dedicated,2022,2026,390000,no,core
+Flexa Inc.,client:54217,12,12,12,100.0,dedicated,2023,2025,390000,no,core
+"NORTH ISLAND VENTURES, LLC",client:56799,12,11,11,100.0,dedicated,2023,2026,380000,no,core
+Paradigm,client:52493,12,24,24,100.0,dedicated,2022,2023,370000,no,core
+"COINREGTECH, LLC",client:201340,12,12,12,100.0,dedicated,2022,2024,40000,no,core
+SIEVAKO,client:52877,12,29,29,100.0,dedicated,2022,2024,,no,core
+S&P Global,client:117721,11,12,186,6.5,engaged,2023,2026,6565000,no,core
+Mastercard,client:127087,11,11,119,9.2,engaged,2022,2026,3815000,no,core
+Humanity Forward,client:207921,11,19,131,14.5,engaged,2022,2022,1225500,no,core
+CF Secured LLC,client:58376,11,10,13,76.9,dedicated,2023,2026,1210000,no,core
+THE CLEARING HOUSE ASSOCIATION,client:206022,11,11,34,32.4,dedicated,2022,2026,714000,no,core
+"MAYER BROWN LLP OBO CIRCLE INTERNET FINANCIAL, INC.",client:57774,11,13,13,100.0,dedicated,2023,2026,650000,no,core
+GPD Holdings LLC d/b/a CoinFlip,client:64019,11,9,9,100.0,dedicated,2025,2026,570000,no,core
+NATIONAL TAXPAYERS UNION,client:134577,11,11,330,3.3,ambient,2022,2025,480000,no,core
+"TRM LABS, INC.",client:65365,11,22,23,95.7,dedicated,2025,2026,293000,no,core
+CHIA NETWORKS,client:212788,11,11,11,100.0,dedicated,2022,2023,280000,no,core
+Digital Energy Council,client:60832,11,10,15,66.7,dedicated,2024,2026,140000,no,core
+Americans for Prosperity,client:101301,10,14,413,3.4,ambient,2022,2025,6770000,no,core
+LONDON STOCK EXCHANGE GROUP,client:172571,10,10,41,24.4,engaged,2024,2026,3300000,no,core
+CENTER FOR RESPONSIBLE LENDING A SUPPORTING CORP OF CTR FOR COMMUNITY SELF-HELP,client:174857,10,11,123,8.9,engaged,2022,2025,1402000,no,core
+"SWIFT, INC.",client:172558,10,26,51,51.0,dedicated,2022,2024,1020000,no,core
+STANDARD CHARTERED BANK,client:203112,10,12,13,92.3,dedicated,2025,2026,950000,no,core
+JUMP CRYPTO HOLDINGS LLC,client:66674,10,12,12,100.0,dedicated,2025,2026,810000,yes,core
+THE INSTITUTE OF INTERNAL AUDITORS,client:201734,10,25,63,39.7,dedicated,2023,2025,750000,no,core
+MELLON FINANCIAL SERVICES CORPORTATION #1,client:54979,10,10,36,27.8,dedicated,2023,2026,630000,no,core
+"YUGA LABS, INC.",client:56614,10,9,9,100.0,dedicated,2023,2025,625000,no,core
+Decentralization Research Center,client:63505,10,8,13,61.5,dedicated,2025,2026,510000,no,core
+GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION D.B.A GLOBAL DCA,client:211496,10,10,10,100.0,dedicated,2022,2024,470000,yes,core
+TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),client:51836,10,10,121,8.3,engaged,2023,2026,440000,no,core
+UNICOIN,client:66054,10,8,8,100.0,dedicated,2025,2026,410000,no,core
+BRALE INC.,client:52652,10,9,9,100.0,dedicated,2022,2024,390000,no,core
+TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.),client:61280,10,8,8,100.0,dedicated,2024,2025,370000,yes,core
+PROSUS GROUP N.V.,client:44513,10,10,30,33.3,dedicated,2022,2024,360000,no,core
+"Securitize, Inc.",client:56523,10,9,9,100.0,dedicated,2023,2025,240000,no,core
+"CHIA NETWORK, INC.",client:211958,10,10,10,100.0,dedicated,2022,2024,140000,no,core
+INTERNATIONAL BUSINESS MACHINES CORPORATION (IBM),client:126409,9,9,163,5.5,engaged,2022,2023,20600000,no,core
+"Charles Schwab & Co., Inc.",client:143001,9,9,178,5.1,engaged,2022,2026,14720000,no,core
+TRUIST FINANCIAL CORPORATION (FORMERLY KNOWN AS BB&T),client:167500,9,31,88,35.2,dedicated,2022,2026,11765000,no,core
+TECHNOLOGY NETWORK AKA TECHNET,client:164266,9,9,305,3.0,ambient,2023,2025,10050000,no,core
+National Association of Federally-Insured Credit Unions,client:134228,9,18,27,66.7,dedicated,2022,2023,8530000,no,core
+"SMBC AMERICAS HOLDINGS, INC.",client:59758,9,16,64,25.0,dedicated,2024,2026,3720000,no,core
+The PNC Financial Services Group,client:138290,9,9,76,11.8,engaged,2022,2026,3070000,no,core
+FDD ACTION,client:203727,9,9,107,8.4,engaged,2022,2025,2270000,no,core
+Bitdeer Technologies Group,client:67363,9,8,20,40.0,dedicated,2025,2026,1220000,no,core
+OKCOIN USA INC.,client:55442,9,9,9,100.0,dedicated,2023,2025,720000,no,core
+SmartContract Inc.,client:64706,9,16,26,61.5,dedicated,2025,2026,585000,no,core
+THE PAYMENT CHOICE COALITION,client:60925,9,8,8,100.0,dedicated,2024,2026,440000,no,core
+ECURRENCY,client:204105,9,9,9,100.0,dedicated,2022,2024,400000,no,core
+SOLANA FOUNDATION,client:56342,9,8,8,100.0,dedicated,2023,2025,290000,yes,core
+"WILLIAMS AND JENSEN, PLLC ON BEHALF OF RIPPLE LABS, INC.",client:208915,9,27,27,100.0,dedicated,2022,2024,290000,yes,core
+ATLAS CROSSING LLC O/B/O GLOBAL DIGITAL ASSET & CRYPTOCURRENCY ASSOCIATION,client:211518,9,9,9,100.0,dedicated,2022,2024,180000,yes,core
+GENRAE,client:52587,9,16,16,100.0,dedicated,2022,2024,130000,no,core
+SAGINT,client:67101,9,13,13,100.0,dedicated,2025,2026,110000,no,core
+Prometheum,client:54561,9,8,11,72.7,dedicated,2023,2024,50000,no,core
+GOVERNMENT BLOCKCHAIN ASSOCIATION,client:209998,9,10,11,90.9,dedicated,2022,2024,,yes,core
+Investment Company Institute,client:104395,8,9,413,2.2,ambient,2025,2026,21056510,no,core
+"Accenture, LLP",client:101282,8,12,352,3.4,ambient,2022,2022,9120000,no,core
+Association of National Advertisers,client:104888,8,15,127,11.8,engaged,2022,2025,7330000,no,core
+Alternative Investment Management Association,client:140247,8,8,34,23.5,engaged,2022,2026,3310000,no,core
+"VMware, Inc.",client:151835,8,8,185,4.3,ambient,2022,2023,3290000,no,core
+Visa U.S.A. Inc.,client:101000,8,9,88,10.2,engaged,2025,2026,2190000,no,core
+Worldpay,client:59668,8,8,36,22.2,engaged,2024,2026,880000,no,core
+BLOCKCHAINS INC.,client:213660,8,6,19,31.6,dedicated,2022,2022,730000,yes,core
+CRUSOE TECHNOLOGIES (FKA CRUSOE ENERGY),client:55294,8,54,110,49.1,dedicated,2023,2024,570000,no,core
+"MULTICOIN CAPITAL MANAGEMENT, LLC",client:61378,8,7,7,100.0,dedicated,2024,2026,550000,no,core
+U.S. CHAMBER OF COMMERCE - C_TEC AND CCMC,client:209505,8,8,24,33.3,dedicated,2022,2023,530000,no,core
+"Coinbase Global, Inc.",client:58422,8,7,7,100.0,dedicated,2023,2025,510000,no,core
+"BLOCKCHAIN (US), INC.",client:63460,8,14,14,100.0,dedicated,2024,2026,480000,yes,core
+Chamber of Digital Commerce,client:210973,8,10,10,100.0,dedicated,2022,2023,390000,no,core
+ANCHORAGE DIGITAL BANK,client:61052,8,13,13,100.0,dedicated,2024,2025,370000,no,core
+FIR TREE PARTNERS,client:213682,8,7,7,100.0,dedicated,2022,2023,350000,no,core
+MULTICOIN CAPITAL,client:61485,8,7,7,100.0,dedicated,2024,2026,350000,no,core
+WAVE DIGITAL ASSETS HOLDINGS LLC,client:63052,8,7,7,100.0,dedicated,2024,2026,220000,yes,core
+Celo Foundation,client:212861,8,6,6,100.0,dedicated,2022,2022,208500,no,core
+PAYSAFE PAYMENT PROCESSING SOLUTIONS LLC,client:60988,8,7,7,100.0,dedicated,2024,2026,140000,no,core
+WISDOMTREE DIGITAL MANAGEMENT,client:64684,8,16,18,88.9,dedicated,2025,2026,130000,no,core
+"Nova Labs, Inc.",client:58202,8,6,21,28.6,dedicated,2024,2025,111000,no,core
+CHAMBER OF DIGITAL COMMERCE D/B/A THE DIGITAL CHAMBER,client:52882,8,15,15,100.0,dedicated,2022,2026,50000,no,core
+"SF OPERATIONS, INC",client:63914,8,7,7,100.0,dedicated,2024,2025,45000,no,core
+BILLMARI INC. / DBA BLACK BLOCKCHAIN SUMMIT,client:61285,8,7,7,100.0,dedicated,2024,2026,,yes,core
+LIBERLAND,client:56303,8,12,27,44.4,dedicated,2023,2024,,no,core
+GOLDMAN SACHS GROUP INC,client:163042,7,7,125,5.6,engaged,2025,2026,18060000,no,active
+OPTIONS CLEARING CORPORATION (OCC),client:163321,7,7,62,11.3,engaged,2023,2025,5720000,no,active
+American Land Title Association,client:103590,7,7,204,3.4,ambient,2022,2026,4987000,no,active
+CITIZENS FINANCIAL GROUP INC,client:178427,7,7,34,20.6,engaged,2022,2026,4070000,no,active
+HERITAGE ACTION FOR AMERICA,client:193525,7,7,278,2.5,ambient,2023,2025,2550000,no,active
+LIVE OAK BANK,client:185014,7,7,77,9.1,engaged,2024,2026,2505000,no,active
+CITADEL ENTERPRISE AMERICAS SERVICES LLC,client:51040,7,7,30,23.3,engaged,2022,2026,1700000,no,active
+"BROADRIDGE FINANCIAL SOLUTIONS, INC.",client:137796,7,7,33,21.2,engaged,2023,2024,1355000,no,active
+ASSOCIATION OF INTERNATIONAL CERTIFIED PROFESSIONAL ACCOUNTANTS (AICPA),client:205579,7,7,23,30.4,dedicated,2022,2026,720000,no,active
+Roger Ver,client:63927,7,10,12,83.3,dedicated,2025,2025,670000,no,active
+A16Z CAPITAL MANAGEMENT FKA ANDREESSEN HOROWITZ,client:63105,7,6,6,100.0,dedicated,2024,2026,500000,no,active
+ALGORAND INC.,client:187798,7,14,14,100.0,dedicated,2022,2023,330000,no,active
+CENTER FOR AMERICAN PROGRESS ACTION FUND,client:175013,7,9,248,3.6,ambient,2022,2026,320000,no,active
+"MYSTEN LABS, INC.",client:67096,7,11,11,100.0,dedicated,2025,2026,290000,no,active
+"ROCKWALLET, LLC",client:61664,7,6,6,100.0,dedicated,2024,2025,290000,no,active
+WHITE STAR CAPITAL USA INC.,client:66777,7,7,28,25.0,dedicated,2025,2025,225000,no,active
+"Metrika, Inc.",client:67406,7,10,10,100.0,dedicated,2025,2026,53000,no,active
+"Avalanche BVI, Inc.",client:64420,7,12,12,100.0,dedicated,2025,2025,46000,no,active
+CRYPTEX FINANCE,client:67899,7,10,10,100.0,dedicated,2025,2026,,no,active
+AMERICAN FEDERATION OF STATE COUNTY AND MUNICIPAL EMPLOYEES,client:103548,6,6,320,1.9,ambient,2024,2026,10600000,no,active
+Food Marketplace Inc.,client:120846,6,6,265,2.3,ambient,2022,2026,6540000,no,active
+American Benefits Council,client:104889,6,6,153,3.9,ambient,2022,2023,5367200,no,active
+Financial Industry Regulatory Authority,client:172525,6,6,68,8.8,engaged,2025,2026,2440000,no,active
+AMERICANS FOR TAX REFORM,client:103702,6,7,134,5.2,engaged,2023,2026,880000,no,active
+FALCONX INC.,client:63977,6,5,5,100.0,dedicated,2025,2026,580000,no,active
+"BLOCKRATIZE, INC.",client:66115,6,5,5,100.0,dedicated,2025,2026,450000,no,active
+ZERO HASH,client:61509,6,5,5,100.0,dedicated,2024,2025,400000,no,active
+"A16Z CAPITAL MANAGEMENT, L.L.C. (D/B/A ANDREESSEN HOROWITZ) FKA AH CAPITAL MGMT",client:65079,6,15,15,100.0,dedicated,2025,2026,350000,no,active
+"GEMINI TRUST COMPANY, LLC",client:213382,6,6,6,100.0,dedicated,2022,2023,320000,no,active
+STRATEGY (F/K/A MICROSTRATEGY INC.),client:64905,6,5,7,71.4,dedicated,2025,2026,310000,no,active
+MOONPAY USA LLC,client:66427,6,7,7,100.0,dedicated,2025,2026,270000,no,active
+BITCOIN DEPOT OPERATING LLC,client:65559,6,5,5,100.0,dedicated,2025,2026,230000,yes,active
+"BAKKT HOLDINGS, INC.",client:54192,6,15,15,100.0,dedicated,2022,2023,212000,no,active
+"BALCONY TECHNOLOGY GROUP, INC.",client:58683,6,14,18,77.8,dedicated,2024,2025,130000,no,active
+Satoshi Action Fund,client:65549,6,12,13,92.3,dedicated,2025,2026,117500,no,active
+TAYLOR ENGLISH DUMA LLP,client:213432,6,5,5,100.0,dedicated,2022,2023,100000,no,active
+VALID ENTRY,client:57545,6,10,10,100.0,dedicated,2023,2024,30000,no,active
+INDEPENDENT BANKERS ASSOCIATION OF TEXAS,client:63897,6,5,6,83.3,dedicated,2025,2026,21000,no,active
+"CAT LABS, INC",client:59586,6,11,11,100.0,dedicated,2024,2026,20000,no,active
+"LANEAXIS, INC.",client:51036,6,8,8,100.0,dedicated,2022,2022,20000,no,active
+Phinance.Gold,client:68151,6,5,5,100.0,dedicated,2025,2025,,no,active
+National Retail Federation,client:134533,5,5,542,0.9,ambient,2025,2026,39276000,no,active
+Bipartisan Policy Center Action,client:189530,5,10,542,1.8,ambient,2022,2023,11186298,no,active
+Retail Industry Leaders Association (RILA),client:126459,5,5,351,1.4,ambient,2022,2022,8970000,no,active
+KPMG LLP,client:128763,5,8,107,7.5,engaged,2025,2026,8860000,no,active
+International Franchise Association,client:154896,5,5,289,1.7,ambient,2024,2025,6150000,no,active
+KeyCorp,client:188831,5,5,79,6.3,engaged,2025,2026,4040000,no,active
+Barclays US GPF Inc.,client:195819,5,5,161,3.1,ambient,2022,2023,3260000,no,active
+UBS AMERICAS INC,client:170235,5,5,34,14.7,engaged,2025,2026,2450000,no,active
+"FEDERATED HERMES, INC. (FORMERLY KNOWN AS FEDERATED INVESTORS, INC.)",client:177995,5,5,23,21.7,engaged,2025,2026,2039593,no,active
+CALIFORNIA AND NEVADA CREDIT UNION LEAGUES,client:110901,5,6,142,4.2,ambient,2023,2026,1870000,no,active
+The Depository Trust & Clearing Corporation,client:206068,5,4,58,6.9,engaged,2025,2026,1710000,no,active
+"SoFi Technologies, Inc.",client:55991,5,4,20,20.0,engaged,2025,2026,1460000,no,active
+APPLIED DIGITAL,client:52215,5,5,50,10.0,engaged,2022,2023,800000,no,active
+TETHER OPERATIONS LIMITED,client:54177,5,5,5,100.0,dedicated,2023,2023,600000,no,active
+"CBOE BATS, LLC",client:56776,5,5,8,62.5,dedicated,2023,2024,550000,no,active
+COMMON CAUSE,client:114110,5,5,51,9.8,engaged,2025,2026,510000,no,active
+BITDEER,client:65204,5,4,4,100.0,dedicated,2025,2026,500000,no,active
+"ORCHID GLOBAL, INC.",client:212196,5,10,10,100.0,dedicated,2022,2023,300000,no,active
+"PAYWARD, INC. DBA KRAKEN",client:67389,5,4,4,100.0,dedicated,2025,2026,300000,no,active
+"FIGURE MARKETS, INC.",client:67117,5,4,4,100.0,dedicated,2025,2026,270000,no,active
+TECHNEST SOLUTIONS S.L.A. DBA FORTRIS,client:66518,5,8,8,100.0,dedicated,2025,2025,270000,no,active
+BLOCKDAEMON,client:65627,5,4,4,100.0,dedicated,2025,2025,260000,no,active
+SILVERGATE BANK,client:207682,5,5,5,100.0,dedicated,2022,2023,210000,no,active
+WINTERMUTE TRADING LTD.,client:68550,5,8,8,100.0,dedicated,2025,2026,200000,no,active
+PHANTOM,client:66970,5,4,4,100.0,dedicated,2025,2026,190000,no,active
+KILN USA INC,client:65058,5,4,6,66.7,dedicated,2025,2026,185000,no,active
+IOHK USA LLC,client:66143,5,5,6,83.3,dedicated,2025,2026,162500,no,active
+BITCOIN POLICY INSTITUTE,client:66948,5,8,8,100.0,dedicated,2025,2026,140000,yes,active
+GREENIDGE GENERATION HOLDINGS INC.,client:44645,5,4,4,100.0,dedicated,2022,2022,140000,no,active
+NATIXIS NORTH AMERICA LLC,client:208990,5,6,7,85.7,dedicated,2022,2026,140000,no,active
+"CROSSOVER MARKETS GROUP, INC",client:67982,5,12,12,100.0,dedicated,2025,2026,120000,no,active
+Kozolchyk National Law Center,client:209225,5,5,6,83.3,dedicated,2022,2023,120000,no,active
+Athena Bitcoin,client:58636,5,8,18,44.4,dedicated,2024,2024,111500,yes,active
+"FREEDOMWORKS, INC.",client:113315,5,5,45,11.1,engaged,2022,2023,110000,no,active
+GARRISON FATHOM,client:67559,5,8,9,88.9,dedicated,2025,2026,110000,no,active
+LEDGER,client:63457,5,12,12,100.0,dedicated,2024,2025,102500,no,active
+FIAT CHAIN HOLDINGS LLC,client:67048,5,8,8,100.0,dedicated,2025,2026,100000,no,active
+Nest Services Limited (Binance),client:66906,5,4,4,100.0,dedicated,2025,2025,90000,no,active
+"TETHER HOLDINGS, S.A. DE C.V.(FORMERLY KNOWN AS TETHER OPERATIONS, S.A. DE C.V.)",client:64876,5,4,4,100.0,dedicated,2025,2025,90000,no,active
+BITMAIN DELAWARE HOLDING COMPANY INC,client:67100,5,12,12,100.0,dedicated,2025,2026,80000,no,active
+BPCE SA,client:211878,5,5,5,100.0,dedicated,2022,2026,80000,no,active
+"FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",client:67742,5,8,8,100.0,dedicated,2025,2026,50000,yes,active
+HELIUM FOUNDATAION (DECENTRALIZED WIRELESS FOUNDATION),client:63171,5,5,10,50.0,dedicated,2024,2025,50000,no,active
+VIAMERICAS,client:66968,5,8,8,100.0,dedicated,2025,2026,40000,no,active
+DIGITAL SOVEREIGNTY ALLIANCE,client:65329,5,2,12,16.7,engaged,2025,2025,20000,no,active
+BCE CORPORATION PMC,client:57863,5,5,12,41.7,dedicated,2023,2024,,no,active
+Blockchain Domain Names LLC,client:54306,5,4,4,100.0,dedicated,2023,2023,,yes,active
+"Cornerstone Government Affairs obo Stripe, Inc.",client:61696,5,10,14,71.4,dedicated,2025,2026,,no,active
+PRIME TRUST LLC,client:52522,5,4,4,100.0,dedicated,2022,2023,,no,active
+"Veritaseum Inc.,",client:64358,5,4,12,33.3,dedicated,2025,2026,,no,active
+"Meta Platforms, Inc. and various subsidiaries",client:191116,4,4,206,1.9,ambient,2022,2022,96250000,no,active
+STATE OF LOC NATION GLOBAL PUBLIC BENEFIT CORPORATION,client:61287,4,13,91,14.3,engaged,2024,2025,80000000,no,active
+"American Airlines, Inc.",client:100462,4,4,499,0.8,ambient,2025,2026,20300000,no,active
+Equifax Inc.,client:101140,4,4,303,1.3,ambient,2025,2025,7210000,no,active
+"The Goldman Sachs Group, Inc.",client:179410,4,4,74,5.4,engaged,2025,2026,3140000,no,active
+Institute of International Bankers,client:113638,4,4,92,4.3,ambient,2025,2026,2557610,no,active
+"Pathward, N.A.",client:203311,4,4,53,7.5,engaged,2025,2026,2470000,no,active
+"H&R Block Management, LLC",client:162992,4,4,106,3.8,ambient,2025,2026,2390000,no,active
+INTERNATIONAL SWAPS & DERIVATIVES ASSOCIATION INC,client:126466,4,12,68,17.6,engaged,2025,2026,1869243,no,active
+"GENERAL CATALYST GROUP MANAGEMENT, LLC",client:61117,4,4,47,8.5,engaged,2025,2026,1760000,no,active
+M&T Bank Corporation,client:181403,4,4,42,9.5,engaged,2025,2026,1620000,no,active
+"CHRIS KISE & ASSOCIATES, P.A. ON BEHALF OF ROGER VER",client:68611,4,3,3,100.0,dedicated,2025,2026,1500000,no,active
+"NOTARIZE, INC. DBA PROOF.COM",client:207366,4,4,80,5.0,engaged,2025,2026,1250000,no,active
+COWEN GROUP,client:194104,4,4,18,22.2,engaged,2022,2022,1020000,no,active
+TRUIST,client:184591,4,4,64,6.3,engaged,2025,2026,1020000,no,active
+Defense Credit Union Council,client:194941,4,4,74,5.4,engaged,2025,2026,1010000,no,active
+"NASDAQ OMX GROUP (FORMERLY ""THE NASDAQ STOCK MARKET"")",client:140650,4,4,37,10.8,engaged,2025,2025,960000,no,active
+OTC MARKETS GROUP,client:55899,4,3,12,25.0,dedicated,2023,2023,720000,no,active
+GLEIF AMERICAS,client:207044,4,4,17,23.5,engaged,2025,2026,710000,no,active
+"Razom, Inc.",client:52065,4,4,38,10.5,engaged,2022,2022,420000,no,active
+META PLATFORMS INC (FORMERLY FACEBOOK INC AND VARIOUS SUBSIDIARIES,client:184332,4,4,36,11.1,engaged,2022,2022,405000,no,active
+FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:202988,4,4,67,6.0,engaged,2025,2026,340000,no,active
+BLOCK INC FORMERLY REPORTED AS SQUARE INC,client:205583,4,12,40,30.0,dedicated,2023,2023,270000,no,active
+AAVE LLC,client:213067,4,4,13,30.8,dedicated,2022,2023,260000,no,active
+AURADINE,client:68912,4,3,3,100.0,dedicated,2025,2026,240000,no,active
+"IOWNIT CAPITAL AND MARKETS, INC.",client:105317,4,8,8,100.0,dedicated,2022,2022,210000,no,active
+XAPO BANK LIMITED,client:68967,4,6,6,100.0,dedicated,2025,2026,200000,no,active
+CB Bancshares Corp,client:66575,4,6,8,75.0,dedicated,2025,2026,190000,no,active
+"PUDGY PENGUINS, INC.",client:69234,4,3,3,100.0,dedicated,2025,2026,190000,no,active
+"BAUGHMAN KROUP BOSSE PLLC ON BEHALF OF GEMINI SPACE STATION, INC.",client:69134,4,3,3,100.0,dedicated,2025,2026,180000,no,active
+MATONEE INC. (D/B/A APTOS LABS),client:65044,4,6,14,42.9,dedicated,2025,2026,180000,no,active
+U.S. PUBLIC INTEREST RESEARCH GROUP,client:146972,4,4,75,5.3,engaged,2022,2022,150000,no,active
+"BLACKROCK FUNDS SERVICES, LLC.",client:69898,4,3,3,100.0,dedicated,2025,2026,140000,no,active
+DEFI EUDCATION FUND,client:64795,4,3,5,60.0,dedicated,2025,2025,135000,yes,active
+FTX,client:51936,4,9,9,100.0,dedicated,2022,2022,120000,no,active
+"RAPOSA RESEARCH, INC.",client:56620,4,3,3,100.0,dedicated,2023,2023,110000,no,active
+OKBL USA HOLDING INC.,client:68418,4,3,3,100.0,dedicated,2025,2026,100000,no,active
+TIGER HILL PARTNERS ON BEHALF OF IEX GROUP,client:210102,4,4,4,100.0,dedicated,2022,2022,91000,no,active
+BAM TRADING SERVICES INC. DBA BINANCE.US,client:66327,4,3,4,75.0,dedicated,2025,2026,90000,no,active
+TECHNEST SOLUTIONS S.L.A. DBA FORTRIS ON BEHALF OF NEXUSONE CONSULTING,client:66542,4,6,6,100.0,dedicated,2025,2025,90000,no,active
+O.N.E. AMAZON,client:69193,4,6,6,100.0,dedicated,2025,2026,85000,no,active
+"MEDICI VENTURES, INC.",client:154518,4,24,24,100.0,dedicated,2022,2022,80000,no,active
+THOMPSON COBURN LP ON BEHALF OF MEDICI VENTURES,client:200340,4,8,12,66.7,dedicated,2022,2022,80000,no,active
+European Banking Federation - EBF,client:177043,4,5,7,71.4,dedicated,2022,2024,73000,no,active
+"BIT5IVE, LLC",client:211591,4,8,10,80.0,dedicated,2022,2022,37500,no,active
+MOBILECOIN FOUNDATION,client:54540,4,6,6,100.0,dedicated,2023,2023,15000,no,active
+BLOCKCHAIN INTELLIGENCE GROUP,client:58573,4,3,3,100.0,dedicated,2024,2024,,yes,active
+"NETWORTH SERVICES, INC",client:136161,4,4,48,8.3,engaged,2022,2022,,no,active
+RAHUL SOOD,client:68835,4,3,3,100.0,dedicated,2025,2026,,no,active
+Walmart Inc.,client:102066,3,3,787,0.4,ambient,2023,2024,31210000,no,active
+"Elevance Health, Inc.",client:108773,3,3,296,1.0,ambient,2022,2022,29940000,no,active
+Nareit,client:110082,3,3,194,1.5,ambient,2025,2026,19401000,no,active
+"H&R BLOCK MANAGEMENT, LLC, A SUBSIDIARY OF H&R BLOCK, INC.",client:122803,3,3,36,8.3,engaged,2022,2022,12830000,no,active
+Deloitte LLP,client:127069,3,3,240,1.3,ambient,2025,2026,7120000,no,active
+"Discover Financial Services, Inc.",client:133698,3,3,139,2.2,ambient,2022,2022,6910000,no,active
+AMERICAN FEDERATION OF TEACHERS,client:103549,3,5,295,1.7,ambient,2025,2026,6250000,no,active
+MUFG AMERICAS HOLDINGS CORPORATION,client:203340,3,3,30,10.0,engaged,2022,2023,4660000,no,active
+"Autodesk, Inc",client:156933,3,3,230,1.3,ambient,2022,2022,3650000,no,active
+INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS,client:126404,3,3,115,2.6,ambient,2025,2026,2263460,no,active
+CMFG LIFE INSURANCE COMPANY,client:170973,3,3,86,3.5,ambient,2025,2026,2210000,no,active
+"ESHARES, INC. D/B/A CARTA, INC.",client:210049,3,3,43,7.0,engaged,2022,2022,2210000,no,active
+Citadel Enterprise Americas LLC,client:212516,3,3,54,5.6,engaged,2025,2026,2110000,no,active
+KUCOIN,client:64167,3,2,2,100.0,dedicated,2025,2025,2000000,no,active
+University of Michigan,client:147158,3,3,248,1.2,ambient,2022,2022,1710000,no,active
+"THE MCENTEE GROUP, LLC",client:66651,3,2,2,100.0,dedicated,2025,2025,1200000,no,active
+"MIZUHO BANK, LTD.",client:202684,3,3,74,4.1,ambient,2025,2026,1030000,no,active
+New York Bankers Association,client:134668,3,3,40,7.5,engaged,2025,2026,818000,no,active
+CA STATE ASSEMBLY,client:135921,3,3,42,7.1,engaged,2025,2025,760000,no,active
+RIPPLE,client:203217,3,2,4,50.0,dedicated,2025,2025,740000,yes,active
+NCR Atleos,client:59115,3,3,77,3.9,ambient,2025,2026,690000,no,active
+"TD Bank, N.A.",client:53020,3,3,47,6.4,engaged,2025,2025,670000,no,active
+SMALL BUSINESS & ENTREPRENEURSHIP COUNCIL (SBE COUNCIL),client:144095,3,3,17,17.6,engaged,2025,2025,640000,no,active
+CERTIK,client:64169,3,2,2,100.0,dedicated,2025,2025,600000,no,active
+"Franklin Resources, Inc.",client:106675,3,3,19,15.8,engaged,2022,2023,580000,no,active
+AMERICAN FINTECH COUNCIL,client:184194,3,3,37,8.1,engaged,2025,2026,570000,no,active
+EMURGO GROUP PTE. LTD.,client:66377,3,2,2,100.0,dedicated,2025,2025,416666,no,active
+Job Creators Network,client:175625,3,3,183,1.6,ambient,2024,2024,321500,no,active
+"P STREET PROJECT, INC.",client:193732,3,3,132,2.3,ambient,2024,2025,290000,no,active
+"CITIZENS BANK, N.A.",client:205584,3,3,34,8.8,engaged,2025,2026,284000,no,active
+Sphere Labs,client:68739,3,1,1,100.0,dedicated,2025,2026,215000,no,active
+"DRW HOLDINGS, LLC",client:63975,3,4,4,100.0,dedicated,2025,2025,210000,no,active
+BINANCE HOLDING LIMITED,client:55573,3,5,5,100.0,dedicated,2023,2023,200000,no,active
+"HONEYCOMB DIGITAL INVESTMENTS, LLC",client:64170,3,2,2,100.0,dedicated,2025,2025,200000,no,active
+BULLISH US LLC,client:52723,3,2,2,100.0,dedicated,2022,2022,180000,no,active
+ONDO FINANCE INC.,client:70639,3,2,4,50.0,dedicated,2025,2026,160000,no,active
+CERTIFIED KERNEL TECH LLC,client:69601,3,2,2,100.0,dedicated,2025,2026,150000,no,active
+DEMOCRACY DEFENDERS ACTION,client:69225,3,6,6,100.0,dedicated,2025,2026,120000,no,active
+MODERN TREASURY CORP.,client:64400,3,3,6,50.0,dedicated,2025,2025,120000,no,active
+"INJECTIVE, LLC",client:69800,3,5,5,100.0,dedicated,2025,2026,110000,no,active
+MANTRA Ventures Limited,client:67600,3,2,2,100.0,dedicated,2025,2025,100000,no,active
+Swiss Bankers Association,client:131369,3,3,3,100.0,dedicated,2024,2025,100000,no,active
+SIMBA CHAIN,client:59268,3,2,8,25.0,dedicated,2024,2025,92500,no,active
+"FTI CONSULTING ON BEHALF OF TETHER OPERATIONS, S.A. DE C.V.",client:64931,3,4,4,100.0,dedicated,2025,2025,60000,no,active
+STANDARD CRYPTO,client:69878,3,2,2,100.0,dedicated,2025,2026,50000,yes,active
+NATIONAL COMMUNITY REINVESTMENT COALITION,client:197025,3,4,55,7.3,engaged,2023,2025,44137,no,active
+WYOMING DEPOSIT & TRANSFER CORP. DBA BANKWYSE,client:55513,3,2,2,100.0,dedicated,2023,2023,40000,no,active
+THE DIGITAL CHAMBER OF COMMERCE,client:194251,3,6,6,100.0,dedicated,2022,2022,35000,no,active
+CORMINT DATA SYSTEMS,client:64714,3,2,2,100.0,dedicated,2025,2025,30000,no,active
+"PLUME NETWORK, INC.",client:69417,3,2,2,100.0,dedicated,2025,2025,30000,no,active
+CHAINALYSIS GOVERNMENT SOLUTIONS,client:68491,3,6,6,100.0,dedicated,2025,2025,28000,no,active
+CONNECT STRATEGY LLC (ON BEHALF OF CRYPTEX FINANCE),client:67702,3,2,2,100.0,dedicated,2025,2025,20000,no,active
+"ANCHORAGE DIGITAL BANK, NA",client:57279,3,2,2,100.0,dedicated,2023,2023,10000,no,active
+CENTER FOR FREEDOM AND PROSPERITY,client:160522,3,3,95,3.2,ambient,2024,2024,,no,active
+"COMMUNITY BANK ADVISORY SERVICES, LLC",client:69380,3,2,5,40.0,dedicated,2025,2025,,no,active
+FEDERAL MONEY SERVICES BUSINESS ASSOCIATION INC.,client:67210,3,2,2,100.0,dedicated,2025,2025,,no,active
+American Council of Life Insurers,client:100935,2,2,190,1.1,ambient,2025,2026,19992028,no,peripheral
+National Restaurant Association,client:134538,2,2,276,0.7,ambient,2025,2025,13840000,no,peripheral
+"Prudential Financial, Inc.",client:105274,2,2,358,0.6,ambient,2025,2026,12604946,no,peripheral
+AFL-CIO,client:100404,2,2,224,0.9,ambient,2025,2025,11860000,no,peripheral
+TRANS UNION LLC,client:161956,2,2,96,2.1,ambient,2022,2022,9360000,no,peripheral
+"Invesco Holding Company (US), Inc.",client:202198,2,2,100,2.0,ambient,2025,2025,9180000,no,peripheral
+American Gaming Association,client:103559,2,2,287,0.7,ambient,2022,2022,8470000,no,peripheral
+National Association of Mutual Insurance Companies,client:134242,2,2,378,0.5,ambient,2022,2022,7944520,no,peripheral
+Southwest Airlines,client:140633,2,2,228,0.9,ambient,2025,2025,5480000,no,peripheral
+Idemia Identity & Security USA LLC,client:187802,2,2,138,1.4,ambient,2025,2026,3650000,no,peripheral
+"Santander Holdings USA, Inc.",client:199830,2,2,78,2.6,ambient,2025,2026,2820000,no,peripheral
+H&R Block,client:199176,2,2,89,2.2,ambient,2025,2026,1950000,no,peripheral
+University of Notre Dame,client:196468,2,2,182,1.1,ambient,2025,2025,1910000,no,peripheral
+THE AMERICAN COUNCIL OF LIFE INSURERS,client:184933,2,2,85,2.4,ambient,2025,2026,1730000,no,peripheral
+JP Morgan Chase Holdings,client:205309,2,2,36,5.6,engaged,2025,2025,1410000,no,peripheral
+DEUTSCHE BANK USA,client:127162,2,2,53,3.8,ambient,2024,2024,1320000,no,peripheral
+ADOBE SYSTEMS INC.,client:175590,2,2,90,2.2,ambient,2023,2023,1190000,no,peripheral
+CENTER FOR BIOLOGICAL DIVERSITY,client:201674,2,2,88,2.3,ambient,2025,2025,969903,no,peripheral
+"SidePrize LLC, d/b/a PrizePicks",client:59449,2,2,33,6.1,engaged,2026,2026,932000,no,peripheral
+INTERNATIONAL SWAPS AND DERIVATIVES ASSOCIATION,client:102170,2,2,58,3.4,ambient,2025,2026,850000,no,peripheral
+CLOUDFLARE,client:175596,2,2,72,2.8,ambient,2025,2026,680000,no,peripheral
+"VIA SCIENCE, INC.",client:64550,2,2,10,20.0,engaged,2025,2026,450000,no,peripheral
+"DEMAND PROGRESS ACTION, INC",client:199776,2,2,229,0.9,ambient,2025,2025,424000,no,peripheral
+"ATLAS POWER HOLDINGS, LLC",client:210303,2,2,13,15.4,engaged,2022,2022,290000,no,peripheral
+ELITE CATERING AND EVENT PROFESSIONALS,client:55000,2,2,33,6.1,engaged,2025,2025,240000,no,peripheral
+HIVE BLOCKCHAIN TECHNOLOGIES LTD,client:212367,2,2,2,100.0,dedicated,2022,2022,134000,yes,peripheral
+THE NORTH AMERICAN SECURITIES ADMINISTRATORS ASSOCIATION,client:188528,2,2,13,15.4,engaged,2024,2024,132000,no,peripheral
+THE DEFI EDUCATION FUND,client:213019,2,2,2,100.0,dedicated,2022,2022,120000,yes,peripheral
+AMERICAN CONSERVATIVE UNION,client:162029,2,2,25,8.0,engaged,2024,2024,100000,no,peripheral
+OFFCHAIN LABS INC,client:70356,2,1,1,100.0,dedicated,2025,2025,90000,no,peripheral
+WAKEFERN FOOD CORP.,client:149085,2,2,60,3.3,ambient,2025,2025,90000,no,peripheral
+BITCOIN DEPOT,client:70844,2,2,2,100.0,dedicated,2026,2026,80000,yes,peripheral
+ANCHORAGE DIGITAL,client:51260,2,2,2,100.0,dedicated,2022,2022,60000,no,peripheral
+THE FINTEX GROUP IN. (D/B/A LINGUARD LABS),client:71592,2,1,1,100.0,dedicated,2026,2026,50000,no,peripheral
+BLOCKFI,client:51807,2,1,1,100.0,dedicated,2022,2022,40000,no,peripheral
+"HIGH THROUGHPUT PRODUCTIONS, LLC (DBA BITBOY CRYPTO)",client:54855,2,2,2,100.0,dedicated,2023,2023,30000,yes,peripheral
+AMERICAN EXCHANGE COALITION (INFORMAL COALITION),client:71353,2,1,1,100.0,dedicated,2026,2026,20000,no,peripheral
+ASSOCIATION OF DIGITAL ASSET MARKETS,client:52038,2,4,4,100.0,dedicated,2022,2022,10000,yes,peripheral
+"UNICOIN INC.UNICOIN, INC.",client:65176,2,1,1,100.0,dedicated,2025,2025,10000,no,peripheral
+COALITION ON HUMAN NEEDS,client:203430,2,4,263,1.5,ambient,2025,2025,,no,peripheral
+Proleague.gg,client:213636,2,,,,n/a (registrations only),2022,2022,,no,peripheral
+National Association of Realtors,client:101314,1,1,415,0.2,ambient,2022,2022,289260000,no,peripheral
+UPS (United Parcel Service),client:147131,1,1,193,0.5,ambient,2022,2022,31480000,no,peripheral
+NFIB (National Federation of Independent Business),client:134461,1,1,58,1.7,ambient,2025,2025,23808843,no,peripheral
+Capital One Financial Corporation,client:158512,1,1,286,0.3,ambient,2026,2026,15610000,no,peripheral
+National Association of Convenience Stores,client:134220,1,1,430,0.2,ambient,2025,2025,13090000,no,peripheral
+Lowe's Companies Inc.,client:100843,1,1,239,0.4,ambient,2025,2025,9700000,no,peripheral
+PACIFIC LIFE INSURANCE COMPANY,client:183411,1,1,128,0.8,ambient,2026,2026,6490000,no,peripheral
+New Venture Fund,client:112658,1,1,229,0.4,ambient,2024,2024,6103000,no,peripheral
+American Exploration & Production Council,client:205920,1,4,158,2.5,ambient,2025,2025,5260000,no,peripheral
+NATIONAL TREASURY EMPLOYEES UNION,client:134581,1,1,68,1.5,ambient,2026,2026,4977983,no,peripheral
+BUILDING AND CONSTRUCTION TRADES DEPT AFL-CIO,client:110731,1,1,117,0.9,ambient,2026,2026,4160000,no,peripheral
+AMERICAN BAR ASSOCIATION,client:102654,1,1,263,0.4,ambient,2022,2022,3830000,no,peripheral
+"RBC CAPITAL MARKETS, LLC",client:195232,1,1,73,1.4,ambient,2026,2026,3070000,no,peripheral
+"Social Finance, Inc.",client:172569,1,1,89,1.1,ambient,2022,2022,1460000,no,peripheral
+INVESTMENT ADVISER ASSOCIATION (IAA),client:187840,1,1,76,1.3,ambient,2026,2026,1451206,no,peripheral
+HILLTOP HOLDINGS INC.,client:135937,1,1,17,5.9,engaged,2026,2026,1360000,no,peripheral
+ALLIANCE FOR RETIRED AMERICANS,client:163876,1,1,152,0.7,ambient,2026,2026,1355000,no,peripheral
+Earthjustice Action,client:55709,1,1,89,1.1,ambient,2025,2025,957474,no,peripheral
+REGIONS BANK,client:213285,1,1,17,5.9,engaged,2022,2022,720000,no,peripheral
+Grant Thornton LLP,client:207860,1,1,51,2.0,ambient,2023,2023,617500,no,peripheral
+RAMP BUSINESS CORPORATION,client:65270,1,1,10,10.0,engaged,2026,2026,360000,no,peripheral
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,1,1,60,1.7,ambient,2023,2023,340000,no,peripheral
+"CAMPAIGN LEGAL CENTER, INC.",client:178832,1,1,17,5.9,engaged,2023,2023,300000,no,peripheral
+ALLIANCE DEFENDING FREEDOM,client:59048,1,1,50,2.0,ambient,2025,2025,190000,no,peripheral
+CALIFORNIA/NEVADA CREDIT UNION LEAGUE,client:57607,1,1,10,10.0,engaged,2025,2025,190000,no,peripheral
+ELEVANTA,client:189392,1,1,55,1.8,ambient,2025,2025,180000,no,peripheral
+"BRANSTAD CHURCHILL GROUP (OBO BITMAIN DELAWARE HOLDING COMPANY, INC.)",client:66718,1,0,4,0.0,ambient,2025,2025,160000,no,peripheral
+ACT FOR AMERICA,client:190908,1,1,11,9.1,engaged,2023,2023,135000,no,peripheral
+LEAD BANK,client:65056,1,0,6,0.0,ambient,2025,2025,130000,no,peripheral
+Securities Investor Protection Corporation,client:145613,1,1,8,12.5,engaged,2025,2025,130000,no,peripheral
+"Pexeso, Inc.",client:212715,1,1,10,10.0,engaged,2023,2023,102000,no,peripheral
+"BLOCKCHAIN GAME PARTNERS, INC DBA GALA GAMES",client:65946,1,1,1,100.0,dedicated,2025,2025,100000,yes,peripheral
+GIFDA,client:65340,1,0,8,0.0,ambient,2025,2025,85400,no,peripheral
+THE BENNETT CONSULTING GROUP FKA THE BENNETT CONSULTING GROUP OBO CITY OF MOAB,client:69206,1,1,9,11.1,engaged,2026,2026,75000,no,peripheral
+THE BLOCKCHAIN ASSOCIATION,client:210903,1,1,1,100.0,dedicated,2022,2022,60000,yes,peripheral
+PARTICULA GROUP INC.,client:71968,1,1,1,100.0,dedicated,2026,2026,50000,no,peripheral
+RUMBLE INC,client:65526,1,0,6,0.0,ambient,2025,2025,40000,no,peripheral
+"VIVENNS, LLC",client:213159,1,1,1,100.0,dedicated,2022,2022,40000,no,peripheral
+SOLVE.CARE USA INC.,client:212444,1,2,2,100.0,dedicated,2022,2022,20000,no,peripheral
+THE ALLIANCE FOR INNOVATIVE REGULATION,client:208369,1,1,2,50.0,dedicated,2022,2022,5000,no,peripheral
+AMERICAN BANKERS ASSOCIATION SECURITIES ASSOCIATION (ABASA),client:100020,1,1,1,100.0,dedicated,2022,2022,,no,peripheral
+CRYPTO WORLD,client:54767,1,,,,n/a (registrations only),2023,2023,,yes,peripheral
+Crypterns,client:53770,1,4,4,100.0,dedicated,2022,2022,,no,peripheral
+DEFI ANGELS LLC,client:211870,1,2,2,100.0,dedicated,2022,2022,,yes,peripheral
+DIGITAL CHAMBER OF COMMERCE,client:44928,1,0,18,0.0,ambient,2022,2022,,no,peripheral
+"FIGURE TECHNOLOGY SOLUTIONS, INC",client:71609,1,,,,n/a (registrations only),2026,2026,,no,peripheral
+SKY MAVIS,client:70139,1,,,,n/a (registrations only),2025,2025,,no,peripheral
+STEEL PERLOT,client:52508,1,,,,n/a (registrations only),2022,2022,,no,peripheral
+THE FINTECH ACCORD,client:72211,1,,,,n/a (registrations only),2026,2026,,no,peripheral
+TRON DAO,client:70348,1,,,,n/a (registrations only),2025,2025,,no,peripheral
+USIG DIGITAL,client:72471,1,,,,n/a (registrations only),2026,2026,,no,peripheral
+VOL. 1 VENTURES,client:53871,1,,,,n/a (registrations only),2023,2023,,no,peripheral

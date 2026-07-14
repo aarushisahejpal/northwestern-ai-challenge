@@ -20,7 +20,9 @@ import re
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-REPO = r"c:\Users\rcalv\Projects\Northwestern Project\gain-investigation"
+# This file lives at <repo>/out/packages/crypto/_build/ — derive the repo
+# root from that instead of hardcoding one machine's checkout path.
+REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", ".."))
 DATA = os.path.join(REPO, "out", "packages", "crypto", "data")
 GATE_PCT = 5.0
 

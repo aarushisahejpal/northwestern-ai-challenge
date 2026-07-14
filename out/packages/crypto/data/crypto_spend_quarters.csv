@@ -146,6 +146,40 @@ ALLIANCE FOR RETIRED AMERICANS,client:163876,2025,fourth_quarter,True,90000,0,90
 ALLIANCE FOR RETIRED AMERICANS,client:163876,2025,second_quarter,True,80000,0,80000,in-house total (outside firms subsumed),1
 ALLIANCE FOR RETIRED AMERICANS,client:163876,2025,third_quarter,True,80000,0,80000,in-house total (outside firms subsumed),1
 ALLIANCE FOR RETIRED AMERICANS,client:163876,2026,first_quarter,True,95000,0,95000,in-house total (outside firms subsumed),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2022,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2022,fourth_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2022,second_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2022,third_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2023,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2023,fourth_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2023,second_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2023,third_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2024,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2024,fourth_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2024,second_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2024,third_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2025,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2025,fourth_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2025,second_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2025,third_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN ASSOCIATION OF INDEPENDENT MUSIC,client:204666,2026,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+AMERICAN BAR ASSOCIATION,client:102654,2022,first_quarter,True,220000,33000,220000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2022,fourth_quarter,True,230000,33250,230000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2022,second_quarter,True,220000,34000,220000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2022,third_quarter,True,180000,33250,180000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2023,first_quarter,True,180000,34875,180000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2023,fourth_quarter,True,240000,33875,240000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2023,second_quarter,True,230000,34875,230000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2023,third_quarter,True,200000,33875,200000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2024,first_quarter,True,230000,34875,230000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2024,fourth_quarter,True,240000,34125,240000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2024,second_quarter,True,260000,34875,260000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2024,third_quarter,True,210000,34124,210000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2025,first_quarter,True,260000,34875,260000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2025,fourth_quarter,True,220000,34875,220000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2025,second_quarter,True,280000,34875,280000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2025,third_quarter,True,180000,33750,180000,in-house total (outside firms subsumed),2
+AMERICAN BAR ASSOCIATION,client:102654,2026,first_quarter,True,250000,34875,250000,in-house total (outside firms subsumed),2
 AMERICAN CONSERVATIVE UNION,client:162029,2022,first_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
 AMERICAN CONSERVATIVE UNION,client:162029,2022,fourth_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
 AMERICAN CONSERVATIVE UNION,client:162029,2022,second_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
@@ -4052,8 +4086,8 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2024,fourth_quarter,True,296000,30000,296000,in-house total (outside firms subsumed),2
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2024,second_quarter,True,296000,0,296000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2024,third_quarter,True,296000,0,296000,in-house total (outside firms subsumed),1
-"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
+"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
@@ -4071,8 +4105,8 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
+"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD, INC. DBA KRAKEN",client:67389,2025,fourth_quarter,False,0,90000,90000,outside sum (no in-house filing),1
@@ -4168,6 +4202,11 @@ Paradigm Operations LP,client:54271,2026,first_quarter,True,230000,170000,230000
 "PayPal, Inc.",client:157625,2025,second_quarter,True,510000,229500,510000,in-house total (outside firms subsumed),7
 "PayPal, Inc.",client:157625,2025,third_quarter,True,570000,229500,570000,in-house total (outside firms subsumed),7
 "PayPal, Inc.",client:157625,2026,first_quarter,True,569000,199500,569000,in-house total (outside firms subsumed),6
+"Pexeso, Inc.",client:212715,2022,first_quarter,False,0,21000,21000,outside sum (no in-house filing),1
+"Pexeso, Inc.",client:212715,2022,fourth_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+"Pexeso, Inc.",client:212715,2022,second_quarter,False,0,21000,21000,outside sum (no in-house filing),1
+"Pexeso, Inc.",client:212715,2022,third_quarter,False,0,20000,20000,outside sum (no in-house filing),1
+"Pexeso, Inc.",client:212715,2023,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
 Polygon Labs Services (Switzerland) AG,client:55284,2023,first_quarter,False,0,40000,40000,outside sum (no in-house filing),2
 Polygon Labs Services (Switzerland) AG,client:55284,2023,fourth_quarter,False,0,60000,60000,outside sum (no in-house filing),1
 Polygon Labs Services (Switzerland) AG,client:55284,2023,second_quarter,False,0,90000,90000,outside sum (no in-house filing),2
@@ -4293,23 +4332,23 @@ REGIONS BANK,client:213285,2025,fourth_quarter,False,0,50000,50000,outside sum (
 REGIONS BANK,client:213285,2025,second_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 REGIONS BANK,client:213285,2025,third_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 REGIONS BANK,client:213285,2026,first_quarter,False,0,50000,50000,outside sum (no in-house filing),1
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2022,first_quarter,False,0,40000,40000,outside sum (no in-house filing),1
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2022,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2022,second_quarter,False,0,80000,80000,outside sum (no in-house filing),1
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2022,third_quarter,False,0,80000,80000,outside sum (no in-house filing),1
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2023,first_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2023,fourth_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2023,second_quarter,True,90000,80000,90000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2023,third_quarter,True,120000,80000,120000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2024,first_quarter,True,250000,80000,250000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2024,fourth_quarter,True,80000,80000,80000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2024,second_quarter,True,700000,80000,700000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2024,third_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2025,first_quarter,True,220000,80000,220000,in-house total (outside firms subsumed),3
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2025,fourth_quarter,True,50000,40000,50000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2025,second_quarter,True,90000,80000,90000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2025,third_quarter,True,110000,80000,110000,in-house total (outside firms subsumed),2
-"RIOT PLATFORMS, INC. (F/K/A RIOT BLOCKCHAIN, INC.)",client:45365,2026,first_quarter,True,80000,0,80000,in-house total (outside firms subsumed),1
+"RIOT PLATFORMS, INC.",client:45365,2022,first_quarter,False,0,40000,40000,outside sum (no in-house filing),1
+"RIOT PLATFORMS, INC.",client:45365,2022,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+"RIOT PLATFORMS, INC.",client:45365,2022,second_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+"RIOT PLATFORMS, INC.",client:45365,2022,third_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+"RIOT PLATFORMS, INC.",client:45365,2023,first_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2023,fourth_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2023,second_quarter,True,90000,80000,90000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2023,third_quarter,True,120000,80000,120000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2024,first_quarter,True,250000,80000,250000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2024,fourth_quarter,True,80000,80000,80000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2024,second_quarter,True,700000,80000,700000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2024,third_quarter,True,130000,80000,130000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2025,first_quarter,True,220000,80000,220000,in-house total (outside firms subsumed),3
+"RIOT PLATFORMS, INC.",client:45365,2025,fourth_quarter,True,50000,40000,50000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2025,second_quarter,True,90000,80000,90000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2025,third_quarter,True,110000,80000,110000,in-house total (outside firms subsumed),2
+"RIOT PLATFORMS, INC.",client:45365,2026,first_quarter,True,80000,0,80000,in-house total (outside firms subsumed),1
 RIPPLE,client:203217,2025,fourth_quarter,True,150000,0,150000,in-house total (outside firms subsumed),1
 RIPPLE,client:203217,2025,second_quarter,True,230000,0,230000,in-house total (outside firms subsumed),1
 RIPPLE,client:203217,2025,third_quarter,True,180000,0,180000,in-house total (outside firms subsumed),1
@@ -5366,6 +5405,15 @@ Worldpay,client:59668,2026,first_quarter,True,90000,30000,90000,in-house total (
 XAPO BANK LIMITED,client:68967,2025,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
 XAPO BANK LIMITED,client:68967,2025,third_quarter,False,0,40000,40000,outside sum (no in-house filing),1
 XAPO BANK LIMITED,client:68967,2026,first_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2023,fourth_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2023,second_quarter,False,0,50000,50000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2023,third_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2024,first_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2024,fourth_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2024,second_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2024,third_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2025,first_quarter,False,0,75000,75000,outside sum (no in-house filing),1
+"YUGA LABS, INC.",client:56614,2025,second_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 ZERO HASH,client:61509,2024,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
 ZERO HASH,client:61509,2024,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 ZERO HASH,client:61509,2025,first_quarter,False,0,110000,110000,outside sum (no in-house filing),1

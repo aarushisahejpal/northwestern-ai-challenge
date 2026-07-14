@@ -7,8 +7,10 @@ shipped HTML untouched)
 import csv, json, os, re, sys, urllib.parse
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-REPO = r"c:\Users\rcalv\Projects\Northwestern Project\gain-investigation"
 HERE = os.path.dirname(os.path.abspath(__file__))
+# This file lives at <repo>/out/packages/_build/ — derive the repo root from
+# that instead of hardcoding one machine's checkout path.
+REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 S = os.path.join(HERE, "inputs")   # durable copies of the 2026-07-08 tool JSONs
 # Shared viz templates live in the committed industry-review-packager skill as of
 # 2026-07-11 (one copy; this legacy builder and the skill's generator both read it).
