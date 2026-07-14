@@ -84,6 +84,8 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-entity-resolver/scripts/member_resolve.py "Emmer for Congress"  # resolve a filed person/committee string (+ --date --json)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
+.venv/Scripts/python skills/lda-corpus-loader/scripts/embed_corpus.py --db db/lda_full.duckdb  # build the semantic layer in place (optional deps: torch/sentence-transformers/pyarrow)
+.venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --query "..." [--compare-bm25] [--like <key>]  # semantic discovery search
 .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
 .venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py [2025Q4]  # quarterly turnover beat: terminations/hires/swaps/in-house (+ --json)
 .venv/Scripts/python queries/run_sweep.py db/lda_full.duckdb [BLOCK-PREFIX]
@@ -135,6 +137,12 @@ Key derived tables the loader materializes (both carry raw-record pointers; both
   table (mirror of `press_issue_mentions`, on the lobbying side). Built by `lda_industry_map.py --build-tags`;
   feeds the entity-resolved industry player list (P4). Discovery (FTS/keyness) proposes vocabulary;
   only curated keywords tag.
+- `lobbying_text_embeddings` (+ `lobbying_text_map`) — the **semantic** discovery surface: one vector
+  per distinct `lobbying_freetext` text (388K), model name stamped per row (2026-07-14 build:
+  `nomic-ai/nomic-embed-text-v1.5`), map table preserving the raw-record pointers. Built in place by
+  `embed_corpus.py`; queried by `lead-scanner`'s `lda_semantic_search.py` (`--query`/`--like`/
+  `--compare-bm25`). Discovery-only, same posture as FTS — catches synonyms/paraphrase BM25 can't;
+  never cited by findings. Model bake-off preserved on branch `experiment/embedding-bakeoff`.
 
 ## Load-bearing conventions
 
