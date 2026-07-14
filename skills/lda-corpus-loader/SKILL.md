@@ -68,7 +68,8 @@ In-place and re-runnable after a corpus rebuild (CREATE OR REPLACE; no resume �
 be the LAST run). Deps are optional (not in `requirements.txt`): `torch sentence-transformers
 pyarrow` (+`einops` for the nomic model). Device auto-detects cuda > mps > cpu; `--device`,
 `--batch`, `--dtype` override (defaults tuned on a 4GB GPU — raise `--batch` on bigger hardware,
-and the NaN guard aborts on a bad dtype). Model choice per the 2026-07-14 bake-off (branch
-`experiment/embedding-bakeoff`): default `google/embeddinggemma-300m` (best quality/time; HF
-license-gated), `nomic-ai/nomic-embed-text-v1.5` the ungated fallback — the 2026-07-14 production
-layer uses nomic. Query side: `lead-scanner`'s `lda_semantic_search.py`.
+and the NaN guard aborts on a bad dtype). Default model — and what the 2026-07-14 production
+layer was built with — is `nomic-ai/nomic-embed-text-v1.5` (ungated, no HF account needed). The
+2026-07-14 bake-off (branch `experiment/embedding-bakeoff`) scored `google/embeddinggemma-300m`
+slightly higher but it is HF license-gated; use `--model` to opt in. Query side: `lead-scanner`'s
+`lda_semantic_search.py`.

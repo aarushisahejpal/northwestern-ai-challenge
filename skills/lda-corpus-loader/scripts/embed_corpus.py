@@ -18,12 +18,12 @@ Role: DISCOVERY ONLY (same posture as the FTS/BM25 index this complements).
 Semantic neighbors propose vocabulary and leads; findings cite records via the
 deterministic keyword serving tables, never via embedding similarity.
 
-Model: google/embeddinggemma-300m by default — chose via the 2026-07-14
-bake-off (branch experiment/embedding-bakeoff): best weak-label retrieval
-quality per unit time on a 4GB GPU (avg precision .825 vs nomic .767 /
-bge-small .629). It is HF license-gated; --model nomic-ai/nomic-embed-text-v1.5
-is the ungated fallback (~93% of the quality). The model name is stamped on
-every row, so switching models is just a re-run.
+Model: nomic-ai/nomic-embed-text-v1.5 by default — ungated (no HF account
+needed), and what the production layer was built with (2026-07-14). The
+2026-07-14 bake-off (branch experiment/embedding-bakeoff) scored
+google/embeddinggemma-300m slightly higher (avg precision .825 vs nomic's
+.767) but it is HF license-gated; pass --model to use it. The model name is
+stamped on every row, so switching models is just a re-run.
 
 Requires (NOT in requirements.txt — semantic layer is optional, like tesseract):
   pip install torch sentence-transformers  (+ accept the Gemma license on HF
@@ -64,7 +64,7 @@ MODEL_SETTINGS = {
     "Qwen/Qwen3-Embedding-0.6B": {"batch": 16, "dtype": "fp16",
                                   "prompt_query": "query"},
 }
-DEFAULT_MODEL = "google/embeddinggemma-300m"
+DEFAULT_MODEL = "nomic-ai/nomic-embed-text-v1.5"
 
 
 def load_model(name, device=None, batch=None, dtype=None):
