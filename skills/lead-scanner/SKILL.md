@@ -1,6 +1,6 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every filing and press release touching it, each with a show_record.py-resolvable citation key. (3) A disclosed-giving map (LD-203) that, given a registrant entity or an industry roster, reports its disclosed political giving. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories, tags it with a curated vocabulary, and emits an entity-resolved player list that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness) that proposes new vocabulary for human triage. (5) An external campaign-finance enrichment (FEC/openFEC) that takes that roster and reports each player's contributions into an industry's Super-PAC network, reconciled against the disclosed-giving map. (6) A quarterly turnover tracker that diffs a quarter against the corpus — declared terminations, new engagements, firm swaps, in-house moves, and a firm churn scoreboard — the recurring beat report. Corpus-specific facts (table names, dedup rules, citation keys, mirror sources, the termination signal) come from `reference/corpus-profile.md`; industry/bill vocabulary from the versioned JSON lexicons beside the scripts; external-dataset traps from the `reference/` briefs. Use when generating or refreshing the lead pipeline, running a bill-level "who's been quietly lobbying this?" check, building the who / how-much / who-they-give-to map of an industry, or reporting a quarter's representation turnover.
+description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — run as scans that emit candidate lead rows with record IDs, never quoted record text. (2) A bill cross-check that, given a bill number OR a named alias ("Inflation Reduction Act", "Farm Bill"), returns every filing and press release touching it, each with a show_record.py-resolvable citation key. (3) A disclosed-giving map (LD-203) that, given a registrant entity or an industry roster, reports its disclosed political giving. (4) An industry map that finds an industry hidden in the lobbying free-text under many issue codes and vague categories, tags it with a curated vocabulary, and emits an entity-resolved player list that feeds the giving map and the canonical-spend view unchanged, plus a free-text discovery loop (FTS + keyness + semantic/embedding search) that proposes new vocabulary for human triage. (5) An external campaign-finance enrichment (FEC/openFEC) that takes that roster and reports each player's contributions into an industry's Super-PAC network, reconciled against the disclosed-giving map. (6) A quarterly turnover tracker that diffs a quarter against the corpus — declared terminations, new engagements, firm swaps, in-house moves, and a firm churn scoreboard — the recurring beat report. Corpus-specific facts (table names, dedup rules, citation keys, mirror sources, the termination signal) come from `reference/corpus-profile.md`; industry/bill vocabulary from the versioned JSON lexicons beside the scripts; external-dataset traps from the `reference/` briefs. Use when generating or refreshing the lead pipeline, running a bill-level "who's been quietly lobbying this?" check, building the who / how-much / who-they-give-to map of an industry, or reporting a quarter's representation turnover.
 model: inherit  # deliberate: the bill cross-check gets pulled into live investigation turns; an override would re-model the rest of the calling turn — run sweep sessions cheap via /model at session start
 ---
 
@@ -14,8 +14,9 @@ phrases hypotheses; output is record IDs + one-liners, never quoted record text.
    filing and press release that touches it, each with a citation key.
 3. **A disclosed-giving map** (`scripts/lda_ld203_giving.py`) — a registrant entity or roster → its
    disclosed political giving (totals, recipients, per-entity split).
-4. **An industry map** (`scripts/lda_industry_map.py` + `scripts/lda_freetext_discovery.py`) — find an
-   industry hidden in the free-text, tag it deterministically, emit an entity-resolved player list.
+4. **An industry map** (`scripts/lda_industry_map.py` + `scripts/lda_freetext_discovery.py` +
+   `scripts/lda_semantic_search.py`) — find an industry hidden in the free-text, tag it
+   deterministically, emit an entity-resolved player list.
 5. **An external campaign-finance enrichment** (`scripts/fec_enrich.py`) — take that roster and add
    the Super-PAC money leg from FEC/openFEC, reconciled against the disclosed-giving map.
 6. **A quarterly turnover tracker** (`scripts/lda_turnover.py`) — diff a quarter against the corpus:
@@ -171,6 +172,32 @@ Proposes vocabulary; never tags a finding. Reads `freetext_surface` + its FTS in
 - Discipline: a discovered term is a **candidate**, never auto-added. `--search` it, eyeball raw docs
   via `show_record.py`, then a **human** adds it to `industry_lexicon.json` with a source and bumps the
   version. Nothing in discovery writes to the DB or the lexicon.
+
+### Semantic discovery — `scripts/lda_semantic_search.py`
+
+The embedding-side complement to FTS/keyness, for what exact-form search structurally misses:
+synonyms and paraphrase ("pharmacy middlemen taking a cut of drug prices" finds the PBM filings;
+"restrictions on Chinese network equipment" finds RESTRICT-Act filings that never say "router").
+Reads the `lobbying_text_embeddings` layer `lda-corpus-loader`'s `embed_corpus.py` builds; same
+discipline as the rest of discovery — proposes, never tags.
+
+```bash
+.venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --query "pharmacy middlemen taking a cut of drug prices"
+.venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --query "..." --compare-bm25   # side-by-side vs FTS
+.venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --like <filing_uuid|house_id>  # neighbors of a filing
+```
+
+- `--query` embeds the question with the same model that embedded the corpus (read from the table;
+  needs the optional torch/sentence-transformers deps). `--like` averages a record's stored vectors —
+  **no model, no extra deps** — the cheap "who else lobbies on what this filing lobbies on" probe for
+  lead expansion. `--compare-bm25` prints the FTS top-k alongside for the same query.
+- Every hit shows cosine score, filing count, an example `show_record.py` key, and resolved senate
+  client names. Search is brute-force cosine in DuckDB — sub-second at 388K vectors, no index to
+  maintain.
+- **Caveats:** results are semantic *neighbors*, not matches — expect on-theme noise in the tail;
+  triage like any discovery output (eyeball raw docs, then curate keywords into the lexicon). Scores
+  are model-relative (don't compare across models/rebuilds). If the embeddings table is missing or
+  partial (`--limit` smoke run), the tool says so — rebuild with `embed_corpus.py`.
 
 ### Reading the output — caveats
 
