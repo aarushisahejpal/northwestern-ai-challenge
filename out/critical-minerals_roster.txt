@@ -2,25 +2,28 @@ Rio Tinto Services Inc.
 Edison Electric Institute
 Ford Motor Company
 General Motors Company
+Panasonic Corporation of North America
 Tesla Inc.
 American Honda Motor Co., Inc.
-Applied Materials, Inc.
+Cox Enterprises, Inc.
 MP Materials
+Applied Materials, Inc.
 NewRange Copper Nickel LLC
 CONSOLIDATED EDISON COMPANY OF NEW YORK INC
+The Mosaic Company
 NUTRIEN US LLC (Formerly Known as AGRIUM U.S. INC.) (a Nutrien Ltd subsidiary)
 National Grid USA
 Solar Energy Industries Association
 ZERO EMISSION TRANSPORTATION ASSOCIATION (ZETA)
 ESSENTIAL MINERALS ASSOCIATION (FKA INDUSTRIAL MINERALS ASSOCIATION-NORTH AMERI)
-Panasonic Corporation of North America
-The Mosaic Company
+National Mining Association
 University of Alaska
 Xcel Energy
 Rare Element Resources
 SolarEdge Technologies Inc.
 ATI, Inc.
 American Clean Power Association
+LG Electronics USA, Inc.
 Air Conditioning, Heating and Refrigeration Institute (AHRI)
 Alcoa Corporation
 Bipartisan Policy Center Action
@@ -34,21 +37,23 @@ Air Liquide USA LLC
 Alliance for Automotive Innovation
 Microsoft Corporation
 Portland General Electric
+SK Americas, Inc.
 SIEMENS ENERGY, INC.
 The Metals Company
 AMEREN SERVICES
 ARKEMA INC. AND ITS AFFILIATES (FKA ARKEMA INC.)
 Energizer Holdings, Inc.
+NanoGraf Corporation
 NextEra Energy, Inc.
 Siemens Corporation
 The Chemours Company
 WELLHEAD ELECTRIC COMPANY
 BPC ACTION (BIPARTISAN POLICY CENTER)
 Citizens for Responsible Energy Solutions
+Freeport-McMoRan Inc.
 Glencore Ltd.
 Iowa State University
 NORSK HYDRO USA, LLC
-National Mining Association
 SEMPRA
 Sila Nanotechnologies Inc.
 AESIR TECHNOLOGY
@@ -64,10 +69,8 @@ ENERGY EXPLORATION TECHNOLOGIES
 ENTEK Technology Holding, LLC
 Earthjustice Action
 Form Energy
-Freeport-McMoRan Inc.
 Howmet Aerospace, Inc. formally known as Arconic, Inc.
 Inventus Power
-LG Electronics USA, Inc.
 LITHION BATTERY, INC.
 NOVONIX ANODE MATERIALS LLC
 National Association of Manufacturers
@@ -96,6 +99,7 @@ NAVITAS SYSTEMS, LLC
 NEL HYDROGEN
 National Hydropower Association
 PHOENIX TAILINGS
+PUGET SOUND AGGREGATES, LLC
 SEIA
 SOUTHERN CALIFORNIA PUBLIC POWER AUTHORITY (SCPPA)
 SYENSQO USA LLC
@@ -109,7 +113,6 @@ AMERICAN ELECTRIC POWER COMPANY, INC. AND AFFILIATED CORPORATIONS
 AMSTERDAM GROUP PUBLIC RELATIONS (FOR TECHMET LIMITED)
 Berkshire Hathaway Energy
 COLORADO SPRINGS UTILITIES
-Cox Enterprises, Inc.
 EDP Renewables North America LLC
 ESS INC.
 IMPERIAL IRRIGATION DISTRICT
@@ -145,6 +148,3 @@ Toyota Motor North America, Inc.
 US Strategic Metals
 COALITION OF AIRLINE PILOTS ASSOCIATIONS
 CORNERSTONE GOVERNMENT AFFAIRS OBO 3 PROTON LITHIUM INC.
-COVE CAPITAL LLC
-Case Western Reserve University
-Century Aluminum
