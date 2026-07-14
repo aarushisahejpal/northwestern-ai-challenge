@@ -40,13 +40,13 @@ Scope = filings whose senate activities carry issue codes TRA, AVI, RRR, TRU, MA
 - Player 'total lobbying spend' is ALL-ISSUE canonical spend (v_client_canonical_spend) — a size signal, not transportation-specific dollars. Per-item filing dollars are a ranking signal only (filing-level attribution grain).
 - LD-203 giving is registrant-filed and organization-level, not attributable to transportation specifically for diversified filers, and is NOT FEC (no Super-PAC money here).
 - Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated on (registrant, client, year, filing_period), latest by posted; registrations excluded from dollar work.
-- No interactive dashboard in this release (see README notes) — a known limitation of the packager skill as shipped, not specific to this industry.
+- This dashboard has NO per-filing click-through (unlike the facet-lens or legacy bespoke crypto/healthcare dashboards) — this lens's exporter doesn't produce per-filing indices for players/trend/press. Every number is still reconciled at build time and fully explorable via the CSVs in data/ and show_record.py.
 
 ## How to QA a number
 
-1. No interactive dashboard ships in this release (data-only build). Every CSV row still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — resolvable via show_record.py.
+1. This package's dashboard has no per-filing click-through (data-only for the underlying records). Every CSV row still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — resolvable via show_record.py.
 2. Chart-vs-list reconciliation ran at build time and a mismatch fails the build (trend counts, per-player filing counts, press counts).
-3. The exact SQL behind each CSV is in this script's export functions (skills/industry-review-packager/scripts/lda_package_industry.py) — no dashboard means no embedded query-info viewer for this package.
+3. The SQL behind each widget is embedded in the dashboard (hover ⋯ → View query info) — it is the exact string the generator executed.
 
 ## Regenerate
 
@@ -57,4 +57,4 @@ python skills/industry-review-packager/scripts/lda_package_industry.py \
 
 This is unverified research output for a skill QA test, not a submission deliverable — a QA test of the industry-review-packager skill (commit 224122c) on a new industry, run 2026-07-13.
 
-No interactive dashboard ships in this release. The skill currently has two dashboard assemblies: a generic spec-driven page for the FACET lens, and a bespoke legacy assembly hardcoded to the crypto/healthcare packages. Neither can render an issue_codes-lens package like this one without code changes, so this package ships data-only (CSVs) via --skip-dashboard; see DECISIONS.md.
+This package's dashboard uses a NEW generic issue_codes-lens assembly (assemble_codes()/codes_page.js), added to the skill in this same session so any future codes-lens package gets a dashboard for free. It has no per-filing click-through: this lens's exporter doesn't produce the click-through indices (player_filings/trend_filings/press_releases) that back click-through elsewhere — every widget here is a reconciled aggregate chart plus a full table view instead.

@@ -15,9 +15,10 @@ python skills/industry-review-packager/scripts/lda_package_industry.py \
 
 Output at `out/packages/<id>/`: `data/*.csv` (every row carries a citation key —
 senate `filing_uuid`, press `src_file:src_line` — plus public lda.senate.gov URLs),
-an interactive dashboard (`<id>_dashboard.html`, light/dark, click-through to raw
-records, per-widget "View query info" showing the exact SQL executed), a README
-(generated only if none exists), and a dated zip.
+an interactive dashboard (`<id>_dashboard.html`, light/dark, per-widget "View
+query info" showing the exact SQL executed; facet-lens and legacy `viz_build`
+dashboards also click-through to raw records — see "Dashboards" below for the
+one lens that doesn't), a README (generated only if none exists), and a dated zip.
 
 Prerequisites: the built DuckDB (`lda-corpus-loader`), entity tables
 (`lda-entity-resolver`), and — for facet-lens packages — the serving table
@@ -29,7 +30,7 @@ marks this dependency.
 | lens | scope | example |
 |---|---|---|
 | `facet` | filings tagged in `lobbying_issue_mentions` for one curated `industry_lexicon.json` tag — for industries hidden in the free-text across many issue codes | crypto, pardons, critical-minerals |
-| `issue_codes` | filings whose senate activities carry the spec'd ALI codes — for code-visible industries | healthcare (HCR/MMM/PHA/MED) |
+| `issue_codes` | filings whose senate activities carry the spec'd ALI codes — for code-visible industries | healthcare (HCR/MMM/PHA/MED), transportation (TRA/AVI/RRR/TRU/MAR/ROD) |
 
 ## What the spec carries (human-owned) vs what the script does
 
@@ -79,13 +80,39 @@ a half-rendered page (that exact failure happened during this skill's build).
 
 ## Dashboards
 
-- `assembly: "facet"` — the generic `viz/facet_page.js`, fully driven by spec
-  copy. New packages use this.
+`build_dashboard()` dispatches on `lens.type` (not the spec's `assembly` field,
+which only opts OUT to the legacy path — see below): `facet` lens →
+`assemble_facet()` + `viz/facet_page.js`; `issue_codes` lens →
+`assemble_codes()` + `viz/codes_page.js`. Both are generic, spec-copy-driven,
+and reconciliation-safe; new packages of either lens get a working dashboard
+for free. `page_js` in the spec overrides the default file if a package wants
+a bespoke page (see `viz_build` below).
+
+- **facet lens** (`viz/facet_page.js`) — player bubble map (click-through),
+  optional engagements, quarterly trend (click-through), issue-code scatter,
+  vocabulary, registrant firms, optional top-spenders, optional LD-203 giving,
+  press share (click-through). Click-through is backed by this lens's own
+  per-filing indices (`player_filings`/`trend_filings`/`press_releases` CSVs).
+- **issue_codes lens** (`viz/codes_page.js`) — KPI tiles, player spend×activity-
+  share scatter (log-x spend, y = activity share, size = tagged filings; a
+  top-150-by-filings ∪ top-30-by-spend selection keeps the chart legible at
+  this lens's scale while the table view stays the full roster), quarterly
+  trend, per-code trend (one line per spec'd ALI code), registrant firms,
+  optional bills, press-coupling (share + canonical spend), optional LD-203
+  giving. **No per-filing click-through** — this lens's exporter (`run()`)
+  never produces the click-through indices the facet lens has, so every
+  widget here is a reconciled aggregate chart + a full table view only (the
+  same no-click-through precedent as the facet page's own registrants/
+  keywords/giving widgets). `write_readme()` is lens- and assembly-aware about
+  this (`has_click_through` — never claims click-through a dashboard doesn't
+  have).
 - `assembly: "viz_build"` — the legacy bespoke assemblies
   (`out/packages/_build/viz_build.py` + `viz/crypto_page.js` / `hc_page.js`),
-  kept for the crypto/healthcare dashboards' bespoke widgets. The shared
-  templates (`template.html`, `shared.css`, `lib.js`, all page JS) live in this
-  skill's `viz/` — the single copy both paths read.
+  kept for the crypto/healthcare dashboards' bespoke widgets (including
+  click-through backed by bespoke fresh DB queries at dashboard-build time,
+  beyond what the generic exporters produce). The shared templates
+  (`template.html`, `shared.css`, `lib.js`, all page JS) live in this skill's
+  `viz/` — every assembly path reads the same copies.
 
 ## Regeneration and regression
 

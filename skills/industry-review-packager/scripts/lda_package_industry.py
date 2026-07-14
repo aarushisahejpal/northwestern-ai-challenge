@@ -85,7 +85,9 @@ CODE_NAMES = {"FIN": "Financial institutions & securities", "BAN": "Banking", "T
     "LBR": "Labor", "ENV": "Environment & Superfund", "NAT": "Natural resources",
     "MIN": "Mining", "TRA": "Transportation", "AUT": "Automotive industry",
     "MAN": "Manufacturing", "AER": "Aerospace", "CHM": "Chemical industry",
-    "FUE": "Fuel, gas & oil", "UTI": "Utilities", "CLE": "Clean air & water"}
+    "FUE": "Fuel, gas & oil", "UTI": "Utilities", "CLE": "Clean air & water",
+    "AVI": "Aviation/Airlines/Airports", "RRR": "Railroads", "TRU": "Trucking/Shipping",
+    "MAR": "Marine/Maritime/Boating/Fisheries", "ROD": "Roads/Highway"}
 
 FIX = {"Pac": "PAC", "Llc": "LLC", "Llp": "LLP", "Usa": "USA", "Us": "U.S.", "Rep": "Rep.",
        "Sen": "Sen.", "Jr": "Jr.", "Dc": "DC", "Ii": "II", "Iii": "III", "Aha": "AHA",
@@ -906,7 +908,10 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                 self.fail(f"viz_build assembly failed: {r.stderr[-800:]}")
                 self.gate("dashboard assembly")
             return
-        data = self.assemble_facet()
+        if self.lens["type"] == "issue_codes":
+            data, default_page = self.assemble_codes(), "codes_page.js"
+        else:
+            data, default_page = self.assemble_facet(), "facet_page.js"
         tpl = (VIZ / "template.html").read_text(encoding="utf-8")
         html = (tpl.replace("__TITLE__", self.spec["title"])
                 .replace("__SUBTITLE__", self.spec["subtitle"])
@@ -915,7 +920,7 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                 .replace("__CSS__", (VIZ / "shared.css").read_text(encoding="utf-8"))
                 .replace("__LIB__", (VIZ / "lib.js").read_text(encoding="utf-8"))
                 .replace("__DATA__", json.dumps(data, ensure_ascii=False))
-                .replace("__PAGE__", (VIZ / self.spec.get("page_js", "facet_page.js"))
+                .replace("__PAGE__", (VIZ / self.spec.get("page_js", default_page))
                          .read_text(encoding="utf-8")))
         out = self.pkg_dir / f"{self.id}_dashboard.html"
         out.write_text(html, encoding="utf-8")
@@ -991,25 +996,101 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                  "cls": e[ecols["client_class"]],
                  "text": (e[ecols["declared_text_sample"]] or "")[:220], "uuid": e[8]}
                 for e in self.rows[ename]]
-        # giving widget (only when a slice is marked chart:true)
+        giving = self.giving_widget()
+        if giving:
+            data["giving"] = giving
+        data["queryInfo"] = self.query_info()
+        return data
+
+    def giving_widget(self):
+        """Shared giving-widget data (facet + issue_codes lens): the first
+        spec giving slice marked chart:true, or None. Same shape both lenses."""
         for sl in self.spec.get("giving", []):
             if not sl.get("chart"):
                 continue
             files = sl["files"]
-            data["giving"] = {
+            g = {
                 "orgs": [{"name": tcase(r[0]) or r[0], "total": r[1], "items": r[2]}
                          for r in self.rows.get(files["by_org"], [])[:12]],
                 "recipients": [{"name": r[0], "total": r[2], "items": r[1]}
                                for r in self.rows.get(files["recipients"], [])[:12]],
                 "total": (sl.get("_totals") or {}).get("total")}
             if files.get("member_rollup") and files["member_rollup"] in self.rows:
-                data["giving"]["members"] = [
+                g["members"] = [
                     {"name": ("Sen. " if m[2] == "Senate" else "Rep. ") + m[0] + " " + m[4],
                      "total": m[8], "direct": m[5], "campaign": m[6], "ldpac": m[7],
                      "jfc": m[9], "multi": m[10], "inferred": bool(m[13])}
                     for m in self.rows[files["member_rollup"]][:12]]
-            break
-        data["queryInfo"] = self.query_info()
+            return g
+        return None
+
+    def assemble_codes(self):
+        """Data assembly for the generic issue_codes-lens dashboard (codes_page.js).
+        Mirrors assemble_facet()'s shape where the underlying CSVs allow it, but
+        this lens's exporter (run()) never produces per-filing click-through
+        indices (player_filings/trend_filings/press_releases) the way the facet
+        lens or the legacy viz_build healthcare build do — so this page has NO
+        click-through, only reconciled aggregate charts + table views (the same
+        no-click-through precedent as the facet page's registrants/keywords/
+        giving widgets, which also lack it)."""
+        sp = self.spec
+        pcols = self.cols[f"{self.p}_players.csv"]
+        idx = {c: i for i, c in enumerate(pcols)}
+        shorts = {k.upper(): v for k, v in sp.get("copy", {}).get("shorts", {}).items()}
+        share_col = f"{self.tok}_activity_share_pct"
+        players = []
+        for r in self.rows[f"{self.p}_players.csv"]:
+            players.append({
+                "name": r[0], "short": shorten(tcase(r[0]) or r[0], shorts),
+                "filings": r[idx[f"{self.tok}_filings"]],
+                "sharePct": float(r[idx[share_col]]) if share_col in idx and r[idx[share_col]] is not None else None,
+                "spend": r[idx["total_all_issue_spend"]],
+                "y0": str(r[idx["first_year"]]), "y1": str(r[idx["last_year"]])})
+        # scatter selection: top-150-by-filings ∪ top-30-by-spend, so the chart
+        # stays legible at this lens's scale (thousands of players) while the
+        # table view below stays the FULL, unfiltered roster
+        by_filings = {p["name"] for p in sorted(players, key=lambda p: -p["filings"])[:150]}
+        by_spend = {p["name"] for p in sorted([p for p in players if p["spend"]], key=lambda p: -p["spend"])[:30]}
+        sel = by_filings | by_spend
+        for p in players:
+            p["inScatter"] = p["name"] in sel
+        trows = self.rows[f"{self.p}_quarterly_trend.csv"]
+        tcols_ = {c: i for i, c in enumerate(self.cols[f"{self.p}_quarterly_trend.csv"])}
+        scol = self.lens.get("spend_col", "canonical_spend_tagged_clients")
+        trend = {"q": [q_label(r[0], r[1]) for r in trows],
+                 "filings": [r[tcols_[f"{self.tok}_filings"]] for r in trows],
+                 "clients": [r[tcols_[f"{self.tok}_clients"]] for r in trows]}
+        if scol in tcols_:
+            trend["spend"] = [r[tcols_[scol]] for r in trows]
+        ct = {}
+        for r in self.rows.get(f"{self.p}_code_trend.csv", []):
+            ct.setdefault(q_label(r[0], r[1]), {})[r[2]] = r[3]
+        qs = trend["q"]
+        code_trend = {"q": qs, "series": [
+            {"code": c, "name": CODE_NAMES.get(c, c), "values": [ct.get(q, {}).get(c, 0) for q in qs]}
+            for c in self.codes]}
+        registrants = [{"name": tcase(r[0]) or r[0], "filings": r[1], "clients": r[2], "amt": r[3]}
+                       for r in self.rows[f"{self.p}_registrant_firms.csv"]]
+        bills = [{"bill": r[0], "clients": r[1], "filings": r[2], "y0": r[3], "y1": r[4]}
+                 for r in self.rows.get(f"{self.p}_bills.csv", [])]
+        prows = self.rows[f"{self.p}_press_coupling.csv"]
+        pcols2 = {c: i for i, c in enumerate(self.cols[f"{self.p}_press_coupling.csv"])}
+        tok_press = sp["press"].get("col_token", self.tok)
+        press = {"q": [r[0] for r in prows],
+                 "all": [r[pcols2["all_releases"]] for r in prows],
+                 "n": [r[pcols2[f"{tok_press}_releases"]] for r in prows],
+                 "share": [float(r[pcols2[f"{tok_press}_press_share_pct"]]) for r in prows]}
+        scol2 = self.lens.get("spend_col", f"canonical_spend_{self.p}_clients")
+        if scol2 in pcols2:
+            press["spend"] = [r[pcols2[scol2]] for r in prows]
+        data = {"kpis": sp["kpis"], "players": players, "trend": trend, "codeTrend": code_trend,
+                "registrants": registrants, "bills": bills, "press": press,
+                "caveats": sp["caveats"], "findings": sp.get("findings", []),
+                "copy": sp.get("copy", {})}
+        giving = self.giving_widget()
+        if giving:
+            data["giving"] = giving
+        data["queryInfo"] = self.query_info_codes()
         return data
 
     def query_info(self):
@@ -1064,16 +1145,71 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                 "termination from the DECLARED filing_type family ^[1-4](T|TY|@|@Y)$ — never inferred.",
                 f"{p}_engagements.csv")
         if self.spec.get("giving"):
-            out["giving"] = {"title": "LD-203 giving — how these numbers are produced",
-                             "note": ("Produced by a tool run, not one SQL: "
-                                      "skills/lead-scanner/scripts/lda_ld203_giving.py --json "
-                                      "--names-file <roster> (amendment-deduped on the full contribution "
-                                      "identity; member rollup via the P6 member_resolve layer — rollup, "
-                                      "never conflation; JFC/multi-honoree dollars stay shared/unallocated). "
-                                      "Citeable SQL blocks: queries/ld203_giving.sql G1a–G1d. LD-203 is "
-                                      "registrant-filed and is NOT FEC — say 'disclosed LD-203 giving', "
-                                      "never 'total'. ") + dbnote,
-                             "blocks": []}
+            out["giving"] = self._giving_query_info(dbnote)
+        return out
+
+    def _giving_query_info(self, dbnote):
+        return {"title": "LD-203 giving — how these numbers are produced",
+                "note": ("Produced by a tool run, not one SQL: "
+                         "skills/lead-scanner/scripts/lda_ld203_giving.py --json "
+                         "--names-file <roster> (amendment-deduped on the full contribution "
+                         "identity; member rollup via the P6 member_resolve layer — rollup, "
+                         "never conflation; JFC/multi-honoree dollars stay shared/unallocated). "
+                         "Citeable SQL blocks: queries/ld203_giving.sql G1a–G1d. LD-203 is "
+                         "registrant-filed and is NOT FEC — say 'disclosed LD-203 giving', "
+                         "never 'total'. ") + dbnote,
+                "blocks": []}
+
+    def query_info_codes(self):
+        """query_info() counterpart for the issue_codes-lens dashboard: cites
+        this lens's own CSVs (no player_filings/trend_filings/press_releases —
+        this lens's exporter never produces per-filing click-through indices,
+        so no widget here claims one)."""
+        dbnote = (f"DB: db/{self.db_path.name} (read-only). Rebuild: lda-corpus-loader/build_db.py → "
+                  f"lda-entity-resolver/resolve_entities.py. Generated by "
+                  f"skills/industry-review-packager/scripts/lda_package_industry.py specs/{self.id}.json "
+                  f"— the SQL shown is the exact string the generator executed.")
+
+        def qi(title, note, *names):
+            return {"title": title, "note": note + " " + dbnote,
+                    "blocks": [{"label": f"SQL → data/{n}", "text": self.sql_log[n]}
+                               for n in names if n in self.sql_log]}
+        p = self.p
+        out = {
+            "kpis": qi("Header stats — where each number comes from",
+                       "KPI values are human-written copy carried by the package spec; "
+                       "reconcile each against the named CSVs after a regeneration.",
+                       f"{p}_quarterly_trend.csv"),
+            "players": qi("Player map — the query behind it",
+                          "No per-filing click-through in this generic codes-lens page (unlike "
+                          "facet-lens or the legacy bespoke healthcare/crypto dashboards) — every "
+                          "player's tagged-filing count, activity share, and spend is exact and "
+                          f"reconciled at build time. Full roster: data/{p}_players.csv.",
+                          f"{p}_players.csv"),
+            "trend": qi("Quarterly trend — the query behind it",
+                        "Amendment-deduped on (registrant_id, client_id, filing_year, filing_period) "
+                        "latest-by-posted; registrations (R*) excluded.",
+                        f"{p}_quarterly_trend.csv"),
+            "codeTrend": qi("Per-code trend — the query behind it",
+                            "Tagged filings per quarter per ALI issue code (a filing naming more than "
+                            "one of the spec'd codes counts once per code, so code totals can exceed "
+                            "the trend chart's per-quarter filing count).",
+                            f"{p}_code_trend.csv"),
+            "registrants": qi("Registrant firms — the query behind it",
+                              "Outside firms only (registrant ≠ client), amendment-deduped; reported "
+                              "amounts are ranking signals.", f"{p}_registrant_firms.csv"),
+            "bills": qi("Bills — the query behind it",
+                        "Bills named in tagged filings' free-text, ranked by distinct clients.",
+                        f"{p}_bills.csv"),
+            "press": qi("Press coupling — the query behind it",
+                        "Share of ALL member press releases tagged (via press_issue_mentions, the "
+                        "curated ISSUE_KEYWORDS dict in build_db.py) to the spec'd codes, alongside "
+                        "canonical spend of tagged clients, by quarter. Some codes may have thin or "
+                        "no press vocabulary — check the package caveats.",
+                        f"{p}_press_coupling.csv"),
+        }
+        if self.spec.get("giving"):
+            out["giving"] = self._giving_query_info(dbnote)
         return out
 
     # ------------------------------------------------------------ readme
@@ -1109,9 +1245,17 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
         for c in self.spec["caveats"]:
             L.append(f"- {c}")
         has_dashboard = (self.pkg_dir / f"{self.id}_dashboard.html").exists()
+        # the generic issue_codes-lens dashboard (assemble_codes/codes_page.js) has NO
+        # per-filing click-through; facet-lens and legacy viz_build dashboards do.
+        has_click_through = has_dashboard and (self.spec.get("assembly") == "viz_build"
+                                                or self.lens["type"] == "facet")
         L += ["", "## How to QA a number", "", (
               "1. Every chart is click-through to the raw filings behind it; every filing links "
               "to its public record on lda.senate.gov; press rows carry `src_file:src_line` keys."
+              if has_click_through else
+              "1. This package's dashboard has no per-filing click-through (data-only for "
+              "the underlying records). Every CSV row still carries a citation key — senate "
+              "`filing_uuid`, press `src_file:src_line` — resolvable via show_record.py."
               if has_dashboard else
               "1. No interactive dashboard ships in this release (data-only build). Every CSV row "
               "still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — "

@@ -561,10 +561,12 @@ function scatterXY(box, cfg) {
   // selective direct labels: largest-x + largest-y + largest-size dots; on
   // collision try one slot lower before skipping (ties like Amazon/AARP stack)
   const nTop = cfg.labelTop || 12;
+  const nTopY = cfg.labelTopY != null ? cfg.labelTopY : 8;       // opt-in override for dense corners
+  const nTopSize = cfg.labelTopSize != null ? cfg.labelTopSize : 3;
   const want = new Set();
   items.slice().sort((p, q) => q.x - p.x).slice(0, nTop).forEach(d => want.add(d));
-  items.slice().sort((p, q) => q.y - p.y).slice(0, 8).forEach(d => want.add(d));
-  items.slice().sort((p, q) => (q.size || 1) - (p.size || 1)).slice(0, 3).forEach(d => want.add(d));
+  items.slice().sort((p, q) => q.y - p.y).slice(0, nTopY).forEach(d => want.add(d));
+  items.slice().sort((p, q) => (q.size || 1) - (p.size || 1)).slice(0, nTopSize).forEach(d => want.add(d));
   const taken = [];
   const collides = b => taken.some(t => Math.abs(t[1] - b[1]) < 12 &&
                         !(t[0] + t[2] < b[0] - 4 || b[0] + b[2] < t[0] - 4));
