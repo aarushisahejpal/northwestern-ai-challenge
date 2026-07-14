@@ -1028,6 +1028,15 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                     "docs": r[1], "pct": r[2]}
                    for r in self.rows[f"{self.p}_issue_code_scatter.csv"][:14]]
         keywords = [{"kw": r[0], "filings": r[1]} for r in self.rows[f"{self.p}_keywords.csv"]]
+        # Vocabulary transparency: the lexicon version + the terms considered
+        # and REJECTED (display_only) ship with the phrases, so the dashboard
+        # shows the map's full definition — including what was kept out.
+        lex_path = REPO / "skills" / "lead-scanner" / "scripts" / "industry_lexicon.json"
+        lex = json.loads(lex_path.read_text(encoding="utf-8"))
+        facet = next((f for f in lex["facets"] if f["tag"] == self.tag), {})
+        vocab_meta = {"version": lex["_meta"]["version"],
+                      "rejected": [{"term": k, "why": w}
+                                   for k, w in facet.get("display_only", {}).items()]}
         registrants = [{"name": tcase(r[0]) or r[0], "filings": r[1], "clients": r[2],
                         "amt": r[3]} for r in self.rows[f"{self.p}_registrant_firms.csv"]]
         prows = self.rows[f"{self.p}_press_quarterly.csv"]
@@ -1041,7 +1050,8 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                  (r[6] or "")[:110], r[7]])
         data = {"kpis": sp["kpis"], "players": players, "playerFilings": player_filings,
                 "trend": trend, "trendFilings": trend_filings, "scatter": scatter,
-                "keywords": keywords, "registrants": registrants, "press": press,
+                "keywords": keywords, "vocabMeta": vocab_meta,
+                "registrants": registrants, "press": press,
                 "pressReleases": press_releases, "caveats": sp["caveats"],
                 "findings": sp.get("findings", []),
                 "copy": sp.get("copy", {}),
