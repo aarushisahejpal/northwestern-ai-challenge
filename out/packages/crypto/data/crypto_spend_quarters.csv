@@ -4089,10 +4089,10 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
-"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
+"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
+"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2022,fourth_quarter,True,240000,0,240000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2023,first_quarter,True,296000,0,296000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2023,fourth_quarter,True,296000,0,296000,in-house total (outside firms subsumed),1
@@ -4105,8 +4105,8 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
+"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD, INC. DBA KRAKEN",client:67389,2025,fourth_quarter,False,0,90000,90000,outside sum (no in-house filing),1

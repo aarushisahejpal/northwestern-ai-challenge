@@ -126,6 +126,21 @@
       ["s", "$", "%", "s", "#", "s", "s"]);
   }
 
+  /* Vocabulary — what "crypto" means in every chart on this page */
+  if (DATA.vocab) {
+    const v = DATA.vocab;
+    const { box, cardEl } = card(app, "The vocabulary that defines this map",
+      "Curated lexicon v" + v.version + ": a filing is in this package when its senate free-text contains one of these " +
+      v.phrases.length + " whole-word phrases (serving table lobbying_issue_mentions, tag CRYPTO). Discovery tools (FTS, keyness, semantic search) only propose candidates; each phrase is triaged against raw filings before it tags anything. Bars: top 15 phrases by distinct senate filings; the full list is in the table and data/crypto_keywords.csv.",
+      "One filing can match several phrases, so counts overlap and never sum to the package total.");
+    moreOptions(cardEl, QI.vocab);
+    hbars(box, { items: v.phrases.slice(0, 15).map(p => ({ label: p.kw, value: p.n })), valueName: "distinct senate filings", fmt: "#" });
+    tableView(cardEl, ["Phrase", "Distinct senate filings"], v.phrases.map(p => [p.kw, p.n]), ["s", "#"]);
+    if (v.rejected && v.rejected.length)
+      div("note", cardEl, "Considered and REJECTED after collision checks (kept out of every count on this page): " +
+        v.rejected.map(r => r.term + " — " + r.why).join("  ·  "));
+  }
+
   /* Trend */
   {
     const { box, cardEl } = card(app, "2025 is the breakout year",
