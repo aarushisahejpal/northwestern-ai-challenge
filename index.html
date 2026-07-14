@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAIN Investigation — Review Packages</title>
+<link rel="stylesheet" href="skills/industry-review-packager/viz/shared.css">
+<style>
+  .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 18px; }
+  .pkg-card { display: block; text-decoration: none; color: inherit; }
+  .pkg-card h2 { font-size: 15px; }
+  .pkg-card .sub { min-height: 54px; }
+  .pkg-card:hover { border-color: var(--ink-3); }
+  .badge {
+    display: inline-block; font-size: 11px; color: var(--ink-3); border: 1px solid var(--border);
+    border-radius: 999px; padding: 2px 9px; margin-top: 10px;
+  }
+</style>
+</head>
+<body class="viz-root">
+<div class="wrap">
+  <header class="page">
+    <h1>GAIN Investigation — Review Packages</h1>
+    <p class="sub">
+      Congressional lobbying (Senate + House LDA) and press releases, 2022–2026 Q1 — who is paying
+      whom to shape policy. Each package below is a self-contained dashboard: data tiles, charts,
+      and click-through to the underlying CSVs and raw filing citations.
+    </p>
+    <p class="meta">
+      Status: unverified research output for team review — nothing here is a locked finding until
+      it passes <code>finding-verifier</code> and lands in <code>findings/</code>.
+      Source: <a href="https://github.com/aarushisahejpal/northwestern-ai-challenge">this repo</a>.
+    </p>
+  </header>
+
+  <div class="pkg-grid">
+
+    <a class="pkg-card card" href="out/packages/crypto/crypto_dashboard.html">
+      <h2>Crypto</h2>
+      <p class="sub">State of the industry: activity-share intensity, spend×share scatter, entity-resolved player roster.</p>
+      <span class="badge">out/packages/crypto</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/genius-act/genius-act_dashboard.html">
+      <h2>GENIUS Act</h2>
+      <p class="sub">Who lobbied the 2025 stablecoin regulatory bill (S.1582) — a bill-scoped slice of the crypto industry.</p>
+      <span class="badge">out/packages/genius-act</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/healthcare/healthcare_dashboard.html">
+      <h2>Healthcare</h2>
+      <p class="sub">State of the industry: PhRMA / AHIP / AARP giving shares, press-record coupling.</p>
+      <span class="badge">out/packages/healthcare</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/aipac/aipac_dashboard.html">
+      <h2>AIPAC</h2>
+      <p class="sub">AIPAC-adjacent lobbying and giving: bipartisan spend, co-lobby fields, press-spike coupling.</p>
+      <span class="badge">out/packages/aipac</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/critical-minerals/critical-minerals_dashboard.html">
+      <h2>Critical Minerals</h2>
+      <p class="sub">Rare earths and the battery-materials supply chain, mapped from the filings' own free text.</p>
+      <span class="badge">out/packages/critical-minerals</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/transportation/transportation_dashboard.html">
+      <h2>Transportation</h2>
+      <p class="sub">Airlines, rail, truckers and shippers, ports and maritime, road and highway infrastructure.</p>
+      <span class="badge">out/packages/transportation</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/pardons/pardons_dashboard.html">
+      <h2>Pardons</h2>
+      <p class="sub">The lobbying market around executive clemency, including paid pardon-seeking activity.</p>
+      <span class="badge">out/packages/pardons</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/turnover/turnover_dashboard.html">
+      <h2>Turnover</h2>
+      <p class="sub">Quarterly beat report: terminations, new engagements, lobbyist swaps, and in-house moves.</p>
+      <span class="badge">out/packages/turnover</span>
+    </a>
+
+    <a class="pkg-card card" href="out/packages/other-findings/other-findings_dashboard.html">
+      <h2>Other Findings</h2>
+      <p class="sub">Leads that didn't fit an industry-specific package.</p>
+      <span class="badge">out/packages/other-findings</span>
+    </a>
+
+  </div>
+
+  <footer class="page">
+    Built by re-runnable Agent Skills (<code>skills/</code>) over the LDA + congressional-press
+    corpus. See the repo <a href="README.md">README</a> for the full submission map.
+  </footer>
+</div>
+</body>
+</html>
