@@ -38,8 +38,10 @@ import ijson
 BATCH = 50000
 
 # Sanity report contains non-ASCII; Windows pipes default to cp1252.
+# line_buffering so phase progress reaches a redirected log as it happens
+# (block buffering otherwise holds every print until process exit).
 if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 # Data manual's published 2025 scale, used by the sanity report.
 MANUAL_2025 = {
