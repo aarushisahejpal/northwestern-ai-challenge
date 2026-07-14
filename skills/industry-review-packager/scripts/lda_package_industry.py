@@ -1108,14 +1108,23 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
         L += ["", "## Caveats that matter", ""]
         for c in self.spec["caveats"]:
             L.append(f"- {c}")
-        L += ["", "## How to QA a number", "",
+        has_dashboard = (self.pkg_dir / f"{self.id}_dashboard.html").exists()
+        L += ["", "## How to QA a number", "", (
               "1. Every chart is click-through to the raw filings behind it; every filing links "
-              "to its public record on lda.senate.gov; press rows carry `src_file:src_line` keys.",
+              "to its public record on lda.senate.gov; press rows carry `src_file:src_line` keys."
+              if has_dashboard else
+              "1. No interactive dashboard ships in this release (data-only build). Every CSV row "
+              "still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — "
+              "resolvable via show_record.py."),
               "2. Chart-vs-list reconciliation ran at build time and a mismatch fails the build "
               "(trend counts, per-player filing counts, press counts" +
-              (", spend sums" if self.spec.get("modules", {}).get("spend_quarters") else "") + ").",
+              (", spend sums" if self.spec.get("modules", {}).get("spend_quarters") else "") + ").", (
               "3. The SQL behind each widget is embedded in the dashboard (hover ⋯ → View query info) "
-              "— it is the exact string the generator executed.", "",
+              "— it is the exact string the generator executed."
+              if has_dashboard else
+              "3. The exact SQL behind each CSV is in this script's export functions "
+              "(skills/industry-review-packager/scripts/lda_package_industry.py) — no dashboard "
+              "means no embedded query-info viewer for this package."), "",
               "## Regenerate", "",
               "```", f"python skills/industry-review-packager/scripts/lda_package_industry.py \\",
               f"    skills/industry-review-packager/specs/{self.id}.json", "```", ""]
