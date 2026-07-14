@@ -1068,6 +1068,7 @@ pardons_data = {
               "filings": [int(r["pardons_filings"]) for r in ptr],
               "clients": [int(r["pardons_clients"]) for r in ptr]},
     "trendFilings": p_trend_filings,
+    "pressReleases": p_press_releases,
     "scatter": [{"code": r["issue_code"], "name": CODE_NAMES.get(r["issue_code"], ""),
                  "docs": int(r["pardons_docs"]), "pct": num(r["pct_of_pardons"])} for r in psc[:14]],
     "keywords": [{"kw": r["keyword"], "filings": int(r["filings"])} for r in pkw],

@@ -28,6 +28,7 @@ Scope = filings whose senate activities carry issue codes TRA, AVI, RRR, TRU, MA
 | data/trans_ld203_recipients.csv | 400 | Disclosed LD-203 giving by recipient (raw filed string). |
 | data/trans_players.csv | 3962 | Entity-resolved player map: tagged filings, activity-share (pure-play vs side-desk), first/last year, total all-issue canonical spend. |
 | data/trans_press_coupling.csv | 17 | Say-vs-pay: share of member press releases tagged to these 6 codes vs canonical spend of tagged clients, by quarter. See the caveat on thin press vocabulary for TRU/MAR. |
+| data/trans_press_releases.csv | 9570 | The individual tagged press releases behind trans_press_coupling.csv — one row per release, with its URL and src_file:src_line citation key; backs the press widget's per-quarter click-through. |
 | data/trans_quarterly_trend.csv | 17 | Quarterly tagged filings, distinct clients, and canonical spend of tagged clients, 2022-2026Q1. |
 | data/trans_record_samples_qa.csv | 25 | One largest-filing sample per client, for spot-checking against raw records via show_record.py. |
 | data/trans_registrant_firms.csv | 60 | Outside lobbying firms (registrant != client) ranked by tagged filings. |
@@ -40,11 +41,11 @@ Scope = filings whose senate activities carry issue codes TRA, AVI, RRR, TRU, MA
 - Player 'total lobbying spend' is ALL-ISSUE canonical spend (v_client_canonical_spend) — a size signal, not transportation-specific dollars. Per-item filing dollars are a ranking signal only (filing-level attribution grain).
 - LD-203 giving is registrant-filed and organization-level, not attributable to transportation specifically for diversified filers, and is NOT FEC (no Super-PAC money here).
 - Senate filings are primary; House versions of the same filings are never added on top (they are copies). Filings are amendment-deduplicated on (registrant, client, year, filing_period), latest by posted; registrations excluded from dollar work.
-- This dashboard has NO per-filing click-through (unlike the facet-lens or legacy bespoke crypto/healthcare dashboards) — this lens's exporter doesn't produce per-filing indices for players/trend/press. Every number is still reconciled at build time and fully explorable via the CSVs in data/ and show_record.py.
+- This dashboard has per-filing click-through on the press widget only (click a quarter to see the matching releases, with links) — this lens's exporter doesn't produce per-filing indices for players/trend the way the facet lens or legacy bespoke crypto/healthcare dashboards do. Every number is still reconciled at build time and fully explorable via the CSVs in data/ and show_record.py.
 
 ## How to QA a number
 
-1. This package's dashboard has no per-filing click-through (data-only for the underlying records). Every CSV row still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — resolvable via show_record.py.
+1. This package's dashboard's press-coupling widget clicks through to the individual matching releases (with links); the other widgets (players, trend, registrants) are reconciled aggregate charts + full table views only, without per-filing click-through. Every CSV row still carries a citation key — senate `filing_uuid`, press `src_file:src_line` — resolvable via show_record.py.
 2. Chart-vs-list reconciliation ran at build time and a mismatch fails the build (trend counts, per-player filing counts, press counts).
 3. The SQL behind each widget is embedded in the dashboard (hover ⋯ → View query info) — it is the exact string the generator executed.
 
@@ -57,4 +58,4 @@ python skills/industry-review-packager/scripts/lda_package_industry.py \
 
 This is unverified research output for a skill QA test, not a submission deliverable — a QA test of the industry-review-packager skill (commit 224122c) on a new industry, run 2026-07-13.
 
-This package's dashboard uses a NEW generic issue_codes-lens assembly (assemble_codes()/codes_page.js), added to the skill in this same session so any future codes-lens package gets a dashboard for free. It has no per-filing click-through: this lens's exporter doesn't produce the click-through indices (player_filings/trend_filings/press_releases) that back click-through elsewhere — every widget here is a reconciled aggregate chart plus a full table view instead.
+This package's dashboard uses a NEW generic issue_codes-lens assembly (assemble_codes()/codes_page.js), added to the skill in this same session so any future codes-lens package gets a dashboard for free. It has per-filing click-through on the press widget only (backed by x_press_releases_codes()): this lens's exporter doesn't produce the player_filings/trend_filings indices that back click-through elsewhere, so the players and trend widgets stay a reconciled aggregate chart plus a full table view instead.

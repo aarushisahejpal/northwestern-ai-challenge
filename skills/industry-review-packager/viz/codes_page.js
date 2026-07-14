@@ -5,17 +5,54 @@
    press-coupling (say vs pay), LD-203 giving (optional), caveats.
 
    Unlike the facet page (or the legacy bespoke healthcare/crypto builds), this
-   generic page has NO per-filing click-through: this lens's exporter never
-   produces the click-through indices (player_filings/trend_filings/press_releases)
-   that back facet-lens click-through, so every widget here is a reconciled
-   aggregate chart + table view only — same as the facet page's own registrants/
-   keywords/giving widgets, which also ship without click-through. */
+   generic page has per-filing click-through on ONLY the press widget: this
+   lens's exporter never produces the player_filings/trend_filings indices
+   that back facet-lens click-through elsewhere, so those widgets stay a
+   reconciled aggregate chart + table view only — same as the facet page's own
+   registrants/keywords/giving widgets, which also ship without click-through.
+   Press IS backed by a per-filing index (x_press_releases_codes()), so that
+   widget clicks through to the actual releases, same as the facet page. */
 (function () {
   const app = document.getElementById("app");
   const QI = DATA.queryInfo || {};
   const C = DATA.copy || {};
   const W = (k) => C[k] || {};   // per-widget card copy from the spec
   moreOptions(statTiles(app, DATA.kpis), QI.kpis);
+
+  function recPanel(cardEl, box, hint) {
+    const panel = div("filings-panel", null);
+    cardEl.insertBefore(panel, box.nextSibling);
+    panel.textContent = hint;
+    return {
+      show(title, note, groups) {
+        panel.textContent = "";
+        const h = document.createElement("strong");
+        h.textContent = title; panel.appendChild(h);
+        const scroll = div("filings-scroll", panel);
+        for (const [gname, items] of groups) {
+          if (!items.length) continue;
+          if (gname) div("filings-group", scroll, gname);
+          const ul = document.createElement("ul");
+          ul.className = "filings-list";
+          for (const it of items) {
+            const li = document.createElement("li");
+            if (it.href) {
+              const a = document.createElement("a");
+              a.href = it.href; a.target = "_blank"; a.rel = "noopener";
+              a.textContent = it.text;
+              li.appendChild(a);
+            } else {
+              li.appendChild(document.createTextNode(it.text));
+            }
+            if (it.tail) li.appendChild(document.createTextNode(it.tail));
+            ul.appendChild(li);
+          }
+          scroll.appendChild(ul);
+        }
+        if (note) div("note", panel, note);
+      }
+    };
+  }
 
   /* Players — spend × activity-share scatter (log-x spend, y = share of the
      client's own senate activity tagged to this industry's codes). Size =
@@ -127,13 +164,23 @@
   {
     const w = W("press");
     const { box, cardEl } = card(app, w.title || "The say side — member press releases",
-      w.sub || "Share of ALL member press releases tagged to this industry's issue codes, by quarter.",
+      w.sub || "Share of ALL member press releases tagged to this industry's issue codes, by quarter. Click a quarter to list the releases.",
       w.foot || "");
     moreOptions(cardEl, QI.press);
+    const pPanel = recPanel(cardEl, box,
+      "Click a quarter to list its matching member press releases (with links).");
     linePanel(box, {
       x: DATA.press.q, fmt: "%",
       series: [{ name: "Share of member releases", values: DATA.press.share, color: SLOT[5] }],
-      height: 210
+      height: 210,
+      onClick: (i, q) => {
+        const rows = (DATA.pressReleases && DATA.pressReleases[q]) || [];
+        pPanel.show(q + " — " + rows.length + " matching member releases",
+          "Tagged via press_issue_mentions (the curated ISSUE_KEYWORDS dict in build_db.py); offline list carries src_file:src_line citation keys.",
+          [["", rows.map(r => ({ href: r[5] || undefined,
+            text: r[0] + " · " + (r[1] || "(member unknown)") + (r[2] ? " (" + r[2] + (r[3] ? "-" + r[3] : "") + ")" : ""),
+            tail: " — " + (r[4] || "") }))]]);
+      }
     });
     tableView(cardEl, DATA.press.spend ? ["Quarter", "Tagged releases", "All releases", "Share %", "Canonical spend of tagged clients"]
                                         : ["Quarter", "Tagged releases", "All releases", "Share %"],

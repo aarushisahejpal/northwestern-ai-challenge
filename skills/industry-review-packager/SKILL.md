@@ -99,13 +99,16 @@ a bespoke page (see `viz_build` below).
   this lens's scale while the table view stays the full roster), quarterly
   trend, per-code trend (one line per spec'd ALI code), registrant firms,
   optional bills, press-coupling (share + canonical spend), optional LD-203
-  giving. **No per-filing click-through** — this lens's exporter (`run()`)
-  never produces the click-through indices the facet lens has, so every
-  widget here is a reconciled aggregate chart + a full table view only (the
-  same no-click-through precedent as the facet page's own registrants/
-  keywords/giving widgets). `write_readme()` is lens- and assembly-aware about
-  this (`has_click_through` — never claims click-through a dashboard doesn't
-  have).
+  giving. **No per-filing click-through, except press** — this lens's
+  exporter (`run()`) never produces the `player_filings`/`trend_filings`
+  indices the facet lens has, so those widgets stay a reconciled aggregate
+  chart + a full table view only (the same no-click-through precedent as the
+  facet page's own registrants/keywords/giving widgets). Press IS backed by a
+  per-filing index (`x_press_releases_codes()` → `{p}_press_releases.csv`),
+  so the press-coupling chart clicks through to the actual releases, same as
+  the facet lens. `write_readme()` is lens- and assembly-aware about this
+  (`has_click_through` / `has_press_click_through` — never claims
+  click-through a dashboard doesn't have).
 - `assembly: "viz_build"` — the legacy bespoke assemblies
   (`out/packages/_build/viz_build.py` + `viz/crypto_page.js` / `hc_page.js`),
   kept for the crypto/healthcare dashboards' bespoke widgets (including

@@ -731,6 +731,37 @@ FROM prq LEFT JOIN spendq s USING (quarter)
 ORDER BY prq.quarter"""
         self.sql_csv(f"{self.p}_press_coupling.csv", q)
 
+    def x_press_releases_codes(self):
+        """issue_codes-lens counterpart to the facet lens's x_press_releases():
+        the individual releases behind the press-coupling chart, so the
+        dashboard can click through a quarter to the actual releases (same
+        pattern as the facet lens and the legacy viz_build dashboards)."""
+        tok = self.spec["press"].get("col_token", self.tok)
+        q = f"""
+WITH tagged AS (
+  SELECT DISTINCT m.pr_id FROM press_issue_mentions m WHERE m.issue_code IN {self.codes_sql})
+SELECT (substr(p.date,1,4) || '-Q' || CAST(ceil(CAST(substr(p.date,6,2) AS INT)/3.0) AS INT)) AS quarter,
+       p.date, p.member_name, p.party, p.state, p.chamber, p.title, p.url,
+       p.src_file, p.src_line
+FROM press_releases p JOIN tagged t ON t.pr_id = p.pr_id
+WHERE p.date >= '2022-01-01'
+ORDER BY p.date, p.src_file, p.src_line"""
+        rows = self.con.execute(q).fetchall()
+        name = f"{self.p}_press_releases.csv"
+        self.wcsv(name, ["quarter", "date", "member_name", "party", "state", "chamber",
+                         "title", "url", "src_file", "src_line"], rows, sql=q)
+        perq = {}
+        for r in rows:
+            perq[r[0]] = perq.get(r[0], 0) + 1
+        pcols = self.cols[f"{self.p}_press_coupling.csv"]
+        nidx = pcols.index(f"{tok}_releases")
+        qidx = pcols.index("quarter")
+        for pr in self.rows[f"{self.p}_press_coupling.csv"]:
+            want, got = pr[nidx], perq.get(pr[qidx], 0)
+            if want != got:
+                self.fail(f"press: {pr[qidx]} chart={want} releases={got}")
+        self.gate("press reconciliation")
+
     # ------------------------------------------------------------- roster
     def x_roster(self):
         cfg = self.spec.get("roster")
@@ -1028,12 +1059,14 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
     def assemble_codes(self):
         """Data assembly for the generic issue_codes-lens dashboard (codes_page.js).
         Mirrors assemble_facet()'s shape where the underlying CSVs allow it, but
-        this lens's exporter (run()) never produces per-filing click-through
-        indices (player_filings/trend_filings/press_releases) the way the facet
-        lens or the legacy viz_build healthcare build do — so this page has NO
-        click-through, only reconciled aggregate charts + table views (the same
-        no-click-through precedent as the facet page's registrants/keywords/
-        giving widgets, which also lack it)."""
+        this lens's exporter (run()) never produces most of the per-filing
+        click-through indices (player_filings/trend_filings) the way the facet
+        lens or the legacy viz_build healthcare build do — so those widgets stay
+        reconciled aggregate charts + table views only (the same no-click-through
+        precedent as the facet page's registrants/keywords/giving widgets, which
+        also lack it). Press IS an exception: x_press_releases_codes() produces
+        a per-filing index the same way the facet lens's press widget does, so
+        the press-coupling chart clicks through to the actual releases."""
         sp = self.spec
         pcols = self.cols[f"{self.p}_players.csv"]
         idx = {c: i for i, c in enumerate(pcols)}
@@ -1084,8 +1117,15 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
         scol2 = self.lens.get("spend_col", f"canonical_spend_{self.p}_clients")
         if scol2 in pcols2:
             press["spend"] = [r[pcols2[scol2]] for r in prows]
+        PARTY_L = {"Democrat": "D", "Republican": "R", "Independent": "I"}
+        press_releases = {}
+        for r in self.rows.get(f"{self.p}_press_releases.csv", []):
+            press_releases.setdefault(r[0], []).append(
+                [r[1], r[2], PARTY_L.get(r[3], (r[3] or "?")[:1]), r[4],
+                 (r[6] or "")[:110], r[7]])
         data = {"kpis": sp["kpis"], "players": players, "trend": trend, "codeTrend": code_trend,
                 "registrants": registrants, "bills": bills, "press": press,
+                "pressReleases": press_releases,
                 "caveats": sp["caveats"], "findings": sp.get("findings", []),
                 "copy": sp.get("copy", {})}
         giving = self.giving_widget()
@@ -1163,9 +1203,11 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
 
     def query_info_codes(self):
         """query_info() counterpart for the issue_codes-lens dashboard: cites
-        this lens's own CSVs (no player_filings/trend_filings/press_releases —
-        this lens's exporter never produces per-filing click-through indices,
-        so no widget here claims one)."""
+        this lens's own CSVs (no player_filings/trend_filings — this lens's
+        exporter never produces those per-filing click-through indices, so
+        those widgets claim none). Press is the exception: press_releases IS
+        produced here (x_press_releases_codes()), so the press widget clicks
+        through same as the facet lens."""
         dbnote = (f"DB: db/{self.db_path.name} (read-only). Rebuild: lda-corpus-loader/build_db.py → "
                   f"lda-entity-resolver/resolve_entities.py. Generated by "
                   f"skills/industry-review-packager/scripts/lda_package_industry.py specs/{self.id}.json "
@@ -1203,11 +1245,13 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                         "Bills named in tagged filings' free-text, ranked by distinct clients.",
                         f"{p}_bills.csv"),
             "press": qi("Press coupling — the query behind it",
-                        "Share of ALL member press releases tagged (via press_issue_mentions, the "
-                        "curated ISSUE_KEYWORDS dict in build_db.py) to the spec'd codes, alongside "
-                        "canonical spend of tagged clients, by quarter. Some codes may have thin or "
-                        "no press vocabulary — check the package caveats.",
-                        f"{p}_press_coupling.csv"),
+                        f"CLICK-THROUGH: click a quarter to list the matching releases "
+                        f"(data/{p}_press_releases.csv, src_file:src_line citation keys — counts "
+                        "reconciled at build time). Share of ALL member press releases tagged (via "
+                        "press_issue_mentions, the curated ISSUE_KEYWORDS dict in build_db.py) to "
+                        "the spec'd codes, alongside canonical spend of tagged clients, by quarter. "
+                        "Some codes may have thin or no press vocabulary — check the package caveats.",
+                        f"{p}_press_coupling.csv", f"{p}_press_releases.csv"),
         }
         if self.spec.get("giving"):
             out["giving"] = self._giving_query_info(dbnote)
@@ -1246,14 +1290,22 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
         for c in self.spec["caveats"]:
             L.append(f"- {c}")
         has_dashboard = (self.pkg_dir / f"{self.id}_dashboard.html").exists()
-        # the generic issue_codes-lens dashboard (assemble_codes/codes_page.js) has NO
-        # per-filing click-through; facet-lens and legacy viz_build dashboards do.
+        # the generic issue_codes-lens dashboard (assemble_codes/codes_page.js) has full
+        # click-through only on its press widget (x_press_releases_codes()); facet-lens
+        # and legacy viz_build dashboards click through on every widget that has one.
         has_click_through = has_dashboard and (self.spec.get("assembly") == "viz_build"
                                                 or self.lens["type"] == "facet")
+        has_press_click_through = has_dashboard and self.lens["type"] == "issue_codes"
         L += ["", "## How to QA a number", "", (
               "1. Every chart is click-through to the raw filings behind it; every filing links "
               "to its public record on lda.senate.gov; press rows carry `src_file:src_line` keys."
               if has_click_through else
+              "1. This package's dashboard's press-coupling widget clicks through to the "
+              "individual matching releases (with links); the other widgets (players, trend, "
+              "registrants) are reconciled aggregate charts + full table views only, without "
+              "per-filing click-through. Every CSV row still carries a citation key — senate "
+              "`filing_uuid`, press `src_file:src_line` — resolvable via show_record.py."
+              if has_press_click_through else
               "1. This package's dashboard has no per-filing click-through (data-only for "
               "the underlying records). Every CSV row still carries a citation key — senate "
               "`filing_uuid`, press `src_file:src_line` — resolvable via show_record.py."
@@ -1375,6 +1427,7 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
             if m.get("bills"):
                 self.x_bills()
             self.x_press_coupling()
+            self.x_press_releases_codes()
             self.x_samples()
         self.x_roster()
         if not self.args.skip_giving:
