@@ -1,9 +1,5 @@
 # GAIN Agentic Investigation Challenge — Submission
 
-> **Status: SKELETON.** This README is the submission map required by the challenge. Sections below
-> match the six required elements verbatim; they are filled in as the work happens, not reconstructed
-> at the deadline.
-
 ## What this is
 
 An agentic investigation of congressional lobbying filings (Senate + House LDA) and congressional
