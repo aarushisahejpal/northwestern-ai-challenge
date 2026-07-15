@@ -80,7 +80,15 @@ get_local_senate_filings <- function(years,
     }
     parsed
   }
-  raw <- dplyr::bind_rows(purrr::map(years, load_year))
+  # Mechanical fix (no method change): id-like columns parse as integer in most
+  # years but character in 2024's JSON, which breaks bind_rows() on multi-year
+  # calls. Harmonize them to character before combining.
+  harmonize_id_types <- function(df) {
+    if (is.null(df)) return(NULL)
+    for (cl in names(df)[grepl("(^|\\.|_)id$", names(df))]) df[[cl]] <- as.character(df[[cl]])
+    df
+  }
+  raw <- dplyr::bind_rows(lapply(purrr::map(years, load_year), harmonize_id_types))
   if (nrow(raw) == 0) {
     stop("No filings loaded for years: ", paste(years, collapse = ", "))
   }
@@ -160,6 +168,13 @@ get_local_senate_filings <- function(years,
   }
 
   filtered <- filtered |> dplyr::select(-.activities_text)
+
+  # Mechanical fix (no method change): when the filters match zero filings,
+  # hoist() on the empty frame never creates the issue-code columns and the
+  # unnest below errors. Return the empty (0-row) result cleanly instead.
+  if (nrow(filtered) == 0) {
+    return(filtered |> dplyr::select(-lobbying_activities))
+  }
 
   # --- 4. same hoist -> unnest -> pivot_wider pipeline get_filings() uses --
   data_to_work_with <- filtered |>
