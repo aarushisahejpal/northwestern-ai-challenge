@@ -30,16 +30,21 @@ Data layout under `data/` follows the challenge's data manual (`congress_press/`
 | `skills/dataset-primer/` | Orients on an unfamiliar dataset before building against it: a bounded five-axis web scan (authoritative docs, tribal-knowledge gotchas, tooling, derived datasets, access mechanics) against a fixed nine-category data-quality checklist → a tiered, task-tailored reference brief cached in `reference/`. General-purpose research aid; sibling to outside-context-scan | Protocol in `SKILL.md`; uses WebSearch/WebFetch directly, no custom script. Example output: `reference/fec-campaign-finance.md` |
 | `skills/lobbying-quarterly-filings/` | R port of the [lobbyR](https://github.com/Lobbying-DisclosuRe/lobbyr) package running entirely against the local `data/senate/` corpus (no API key, no network): loads Senate quarterly filings with keyword/client/registrant/period/amount filters, then `flag_dupes()` and `flag_client_registrant_conflict()` remove double-counting before any spend totals; top-spenders-over-time and by-ALI-issue-code rollups; Shiny explorer at repo root (`dashboard_app.R`) | In R: `source("skills/lobbying-quarterly-filings/scripts/local_senate_filings.R"); source(".../lobbyr_clean.R")` then `get_local_senate_filings(years = 2022:2026, issues = "...")` piped through `flag_dupes()` and `flag_client_registrant_conflict()`. Dashboard: `shiny::runApp("dashboard_app.R")` from repo root. See its `SKILL.md` |
 
-**How the pieces fit together.** One corpus, three complementary layers: the DuckDB
-pipeline (`lda-corpus-loader` → `lda-entity-resolver` → `lead-scanner`) is the canonical
-citation-first path from raw filings to leads; the semantic layer (`embed_corpus.py` /
-`lda_semantic_search.py`) is a discovery surface that proposes vocabulary for the audited
-lexicon, never a citation source; and `lobbying-quarterly-filings` is an independent R
-implementation of the same spend-hygiene method — its `flag_dupes()` /
-`flag_client_registrant_conflict()` are the prior art that `lda-entity-resolver`'s
-canonical-spend view reimplements in SQL (amendment dedup, in-house/outside rollup;
-credited in that skill's SKILL.md), so any headline spend total can be cross-checked
-across two codebases that share no code.
+**How the pieces fit together.** Everything runs on the same corpus, and the parts back
+each other up. Two full analysis pipelines were built independently: a SQL one
+(`lda-corpus-loader` → `lda-entity-resolver` → `lead-scanner`), which loads all three
+datasets into a database and runs the lead scans, and an R one
+(`lobbying-quarterly-filings`), which loads the Senate filings directly and produces
+cleaned spend totals. Both apply the same core discipline — throw out amendments,
+duplicates, and double-counted filings before adding up any dollars (the R functions
+`flag_dupes()` / `flag_client_registrant_conflict()` came first; the SQL canonical-spend
+view arrives at the same rules independently and credits them in its SKILL.md). Because
+the two share no code, any headline number can be computed both ways as a built-in
+fact-check — when they agree, that's two independent confirmations; when they differ, the
+difference traces to a specific filing and a documented judgment call. On top of both sits
+the semantic search layer (`embed_corpus.py` / `lda_semantic_search.py`), which finds
+filings that keyword lists miss — it proposes new search terms for human vetting, but
+findings always cite the deterministic keyword-and-record chain, never a similarity score.
 
 ## 2. Which findings each skill supports
 
