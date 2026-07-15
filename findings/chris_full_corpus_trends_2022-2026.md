@@ -1,8 +1,8 @@
 # Finding: Full-corpus Senate lobbying trends, 2022–2026 Q1 (ported from Chris Cioffi's findings report)
 
-**Status:** author-verified (every figure checked against raw filings by the author, per the
-report's own methodology notes) — NOT yet through this repo's `finding-verifier` fresh-agent
-protocol; treat as a verified-by-author finding pending a lock decision.
+**Status:** author-verified AND fresh-agent verified — **PASS, 8/8 claims** (2026-07-14,
+finding-verifier protocol; verification block appended at the end of this file, including
+three hedges to carry when citing). Awaiting human lock decision in DECISIONS.md.
 **Author:** Chris Cioffi. Ported verbatim from `ChrisCioffi/agentic_investigation`
 `skills/lobbying-issue-theme-clustering/FINDINGS.md` (sections reproduced unchanged; only this
 provenance header added).
@@ -257,3 +257,46 @@ refreshed -- this section focused on total-dollar new entrants; cross-referencin
 findings above used for the TAX-only slice) across the full 79-issue corpus is a natural
 next step once a similar per-issue-per-client breadth table is built for all years, not just
 one quarter.
+
+---
+
+# Verification block (finding-verifier protocol, 2026-07-14)
+
+**Verdict: PASS — 8/8 claims verified.** Fresh agent, no drafting-session context, re-derived
+each claim against `db/lda_full.duckdb` + raw corpus with 4 record spot-checks via
+`show_record.py`. Full verdict table below; three hedges to carry when citing this finding:
+
+1. **"First appearance" framing (AI clients):** Anthropic, OpenAI, and a16z all first appear
+   as lobbying clients in **2023**, ramping to ~$3M-scale by 2025. Accurate framing: "absent
+   in 2022, ramping from 2023" — not "first appears in 2025." (2025 self-filed totals verified
+   to the dollar: Anthropic $3.12M exact, OpenAI $2.99M exact, a16z $3.53M vs claimed $3.48M.)
+2. **Snapshot vintage (conservative bias):** the report's pipeline snapshot predates
+   late-posted Q4-2025 filings. Current DB: Continental Strategy 2025 = **$26.0M / 349
+   filings** (claim: $20.8M / 318 — reproduces exactly at a 2026-01-19/20 posting cutoff);
+   Tariff FY2025 = **$218.9M** (claim: $206.5M). The claims *understate* both trends.
+3. **LOC Nation field label:** the exact $20,000,000 per quarter (Q2/Q3/Q4 2025 — confirmed)
+   sits in the **income** field (registrant fee), not `expenses`; the pipeline's
+   `coalesce(expenses, income)` convention makes the amounts correct as stated.
+
+Corroboration found beyond the claims: SAP America's anomalous Q2-2022 $130.09M filing
+(`8753c1ce-20ee-403f-8fe5-de2264487a9a`) was **amended one day later to $640K**
+(2A, posted 2022-07-21) — strong evidence of a data-entry error, supporting the report's
+single-quarter-artifact reading.
+
+| Claim | Verdict | Verifier numbers | Note |
+|---|---|---|---|
+| C1 Anthropic $0→$3.12M | verified | 2022: $0; 2025 self-filed $3.12M (exact) | first-appearance hedge (2023) |
+| C2 OpenAI $0→$2.99M | verified | 2022: $0; 2025 self-filed $2.99M (exact) | first-appearance hedge (2023) |
+| C3 a16z $0→$3.48M | verified | 2022: $0; 2025 self-filed $3.53M (Δ1.4%) | self-filed since 2023 |
+| C4 Tariff surge, no taper | verified | FY22 $68.2M → FY25 $218.9M (+221%); Q1 avg $17.1M → $42.3M → $60.3M | Δ≤6%; 2026 climb confirmed |
+| C5 SAP single-quarter artifact | verified | Q2-2022 raw $130.09M; 2025 $3.62M | next-day amendment to $640K strengthens |
+| C6 Continental Strategy growth | verified | 2022 $0.40M/11 → 2025 $26.03M/349 | stale-snapshot caveat; claim understates |
+| C7 LOC Nation $20M ×3 | verified | Q2=Q3=Q4 2025 exactly $20,000,000 | field is income, not expenses |
+| C8 Business Roundtable name mismatch | verified | mismatch in 100% of self-filed filings, 2022–2026 | — |
+
+Spot-checked records: `8753c1ce-20ee-403f-8fe5-de2264487a9a` (SAP Q2-2022),
+`f77a4908-5b4f-41d6-a9c7-acc85dee6946` (LOC Nation Q4-2025),
+`ba2fc44f-6b7a-42c0-abc8-a833ef824d69` (Anthropic Q3-2025),
+`86980775-2940-4b00-a39d-c6624db22a0f` (Business Roundtable Q1-2022).
+
+Lock decision: pending human sign-off in `DECISIONS.md` (per protocol step 6).
