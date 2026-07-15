@@ -25,3 +25,6 @@ Thumbs.db
 
 # Local experiments (bake-offs, prototypes) — never submitted; may hold venvs/model caches
 scratch/
+
+# R skill loader cache (mirrors ChrisCioffi/agentic_investigation .gitignore)
+skills/*/.cache/
