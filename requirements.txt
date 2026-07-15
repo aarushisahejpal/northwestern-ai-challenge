@@ -14,3 +14,6 @@ spacy
 pymupdf==1.28.0
 pytesseract==0.3.13
 pillow==12.3.0
+# The semantic (embedding) layer is opt-in and has its own pinned deps (torch,
+# sentence-transformers, ...) — install ONLY if running embed_corpus.py /
+# lda_semantic_search.py:  pip install -r requirements-embed.txt

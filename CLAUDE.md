@@ -84,7 +84,7 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-entity-resolver/scripts/member_resolve.py "Emmer for Congress"  # resolve a filed person/committee string (+ --date --json)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
-.venv/Scripts/python skills/lda-corpus-loader/scripts/embed_corpus.py --db db/lda_full.duckdb  # build the semantic layer in place (optional deps: torch/sentence-transformers/pyarrow)
+.venv/Scripts/python skills/lda-corpus-loader/scripts/embed_corpus.py --db db/lda_full.duckdb  # build the semantic layer in place (optional deps: pip install -r requirements-embed.txt)
 .venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --query "..." [--compare-bm25] [--like <key>]  # semantic discovery search
 .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
 .venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py [2025Q4]  # quarterly turnover beat: terminations/hires/swaps/in-house (+ --json)
