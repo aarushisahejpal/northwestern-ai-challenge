@@ -238,7 +238,34 @@ class Packager:
         acts = ""
         act_cols = ""
         act_join = ""
-        if self.spec.get("modules", {}).get("activity_share"):
+        if self.spec.get("modules", {}).get("activity_share") and self.lens["type"] == "facet":
+            # Facet flavor of the activity-share metric (crypto, 2026-07-11
+            # semantics): share of a client's senate free-text activity BLOCKS
+            # that carry the facet tag. Same blocks-not-filings rationale as the
+            # codes flavor below; numerator is the curated-lexicon tag. LEFT
+            # JOIN so registration-only players band as 'n/a', not vanish.
+            share = f"100.0*a.{self.tok}_activity_blocks/a.all_activity_blocks"
+            acts = f""",
+acts AS (
+  SELECT coalesce(e.entity_id,'unresolved:'||sf.client_name) AS entity_id,
+         count(*) AS all_activity_blocks,
+         count(t.record_key) AS {self.tok}_activity_blocks
+  FROM senate_filings sf
+  JOIN lobbying_freetext lf ON lf.record_key=sf.filing_uuid AND lf.dataset='senate'
+  {ALIAS_JOIN}
+  LEFT JOIN (SELECT DISTINCT record_key, sub_index FROM lobbying_issue_mentions
+             WHERE tag='{self.tag}' AND dataset='senate') t
+         ON t.record_key=lf.record_key AND t.sub_index=lf.sub_index
+  WHERE sf.client_name IS NOT NULL AND sf.filing_type NOT LIKE 'R%'
+  GROUP BY 1)"""
+            act_cols = (f"\n       a.{self.tok}_activity_blocks, a.all_activity_blocks,\n"
+                        f"       round({share},1) AS {self.tok}_activity_share_pct,\n"
+                        f"       CASE WHEN a.all_activity_blocks IS NULL THEN 'n/a (registrations only)'\n"
+                        f"            WHEN {share} >= 25 THEN 'dedicated'\n"
+                        f"            WHEN {share} >= 5 THEN 'engaged'\n"
+                        f"            ELSE 'ambient' END AS {self.tok}_share_band,")
+            act_join = "\nLEFT JOIN acts a USING (entity_id)"
+        elif self.spec.get("modules", {}).get("activity_share"):
             # activity-level share (the healthcare species split): a self-filer's
             # single quarterly lists dozens of codes, so share is computed on
             # ACTIVITY rows, never filings. Alias join via the §4-safe DISTINCT.
@@ -287,7 +314,8 @@ spend AS (
 SELECT p.player, p.entity_id, p.{fcol},{act_cols}
        p.first_year, p.last_year, s.total_all_issue_spend{extra_cols}
 FROM players p{act_join} LEFT JOIN spend s ON s.client_entity_id=p.entity_id
-ORDER BY {"s.total_all_issue_spend DESC NULLS LAST, p.player" if self.spec.get("modules", {}).get("activity_share")
+ORDER BY {"s.total_all_issue_spend DESC NULLS LAST, p.player"
+          if self.spec.get("modules", {}).get("activity_share") and self.lens["type"] != "facet"
           else f"p.{fcol} DESC, s.total_all_issue_spend DESC NULLS LAST, p.player"}
 {f"LIMIT {int(limit)}" if limit else ""}"""
         name = f"{self.p}_players.csv"
@@ -1000,6 +1028,15 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                     "docs": r[1], "pct": r[2]}
                    for r in self.rows[f"{self.p}_issue_code_scatter.csv"][:14]]
         keywords = [{"kw": r[0], "filings": r[1]} for r in self.rows[f"{self.p}_keywords.csv"]]
+        # Vocabulary transparency: the lexicon version + the terms considered
+        # and REJECTED (display_only) ship with the phrases, so the dashboard
+        # shows the map's full definition — including what was kept out.
+        lex_path = REPO / "skills" / "lead-scanner" / "scripts" / "industry_lexicon.json"
+        lex = json.loads(lex_path.read_text(encoding="utf-8"))
+        facet = next((f for f in lex["facets"] if f["tag"] == self.tag), {})
+        vocab_meta = {"version": lex["_meta"]["version"],
+                      "rejected": [{"term": k, "why": w}
+                                   for k, w in facet.get("display_only", {}).items()]}
         registrants = [{"name": tcase(r[0]) or r[0], "filings": r[1], "clients": r[2],
                         "amt": r[3]} for r in self.rows[f"{self.p}_registrant_firms.csv"]]
         prows = self.rows[f"{self.p}_press_quarterly.csv"]
@@ -1013,7 +1050,8 @@ GROUP BY 1 ORDER BY n DESC, player LIMIT {int(top)}"""
                  (r[6] or "")[:110], r[7]])
         data = {"kpis": sp["kpis"], "players": players, "playerFilings": player_filings,
                 "trend": trend, "trendFilings": trend_filings, "scatter": scatter,
-                "keywords": keywords, "registrants": registrants, "press": press,
+                "keywords": keywords, "vocabMeta": vocab_meta,
+                "registrants": registrants, "press": press,
                 "pressReleases": press_releases, "caveats": sp["caveats"],
                 "findings": sp.get("findings", []),
                 "copy": sp.get("copy", {}),

@@ -38,8 +38,10 @@ import ijson
 BATCH = 50000
 
 # Sanity report contains non-ASCII; Windows pipes default to cp1252.
+# line_buffering so phase progress reaches a redirected log as it happens
+# (block buffering otherwise holds every print until process exit).
 if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
 
 # Data manual's published 2025 scale, used by the sanity report.
 MANUAL_2025 = {
@@ -503,40 +505,78 @@ class Sink:
 
 # ---------------------------------------------------------------- press
 
-def load_press(sink, data_root, years, months=None, max_records=None):
+def _parse_press_file(task):
+    """Parse one press JSONL into per-release entries. Module-level (picklable
+    args) so multiprocessing workers can run it; pr_id is NOT assigned here —
+    it is a global running counter, so the parent assigns it while consuming
+    results in file order, keeping ids identical to a sequential build.
+
+    Returns [(line_no, base_row_without_pr_id, bills, issues), ...].
+    """
+    path, rel = task
+    entries = []
+    with open(path, encoding="utf-8") as f:
+        for line_no, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
+                continue
+            rec = json.loads(line)
+            mem = rec.get("member") or {}
+            text = rec.get("text")
+            base = (rec.get("url"), rec.get("title"), rec.get("date"),
+                    rec.get("date_source"), rec.get("source"), rec.get("domain"),
+                    rec.get("scraper"), get_any(mem, "bioguide_id"),
+                    get_any(mem, "name"), get_any(mem, "party"),
+                    get_any(mem, "state"), get_any(mem, "chamber"),
+                    text, rel, line_no)
+            entries.append((line_no, base,
+                            list(extract_bills(text or "")),
+                            list(extract_issues(text or ""))))
+    return rel, entries
+
+
+def load_press(sink, data_root, years, months=None, max_records=None, workers=None):
     root = data_root / "congress_press"
     files = sorted(root.glob("*.jsonl")) + sorted(root.glob("*/*.jsonl"))
-    n = 0
+    tasks = []
     for path in files:
         m = re.match(r"(\d{4})-(\d{2})", path.stem)
         if not m or int(m.group(1)) not in years:
             continue
         if months and (int(m.group(1)), int(m.group(2))) not in months:
             continue
-        rel = path.relative_to(data_root).as_posix()
-        with open(path, encoding="utf-8") as f:
-            for line_no, line in enumerate(f, 1):
-                line = line.strip()
-                if not line:
-                    continue
-                rec = json.loads(line)
-                mem = rec.get("member") or {}
-                n += 1
-                key = f"{rel}:{line_no}"
-                sink.add("press_releases", (
-                    n, rec.get("url"), rec.get("title"), rec.get("date"),
-                    rec.get("date_source"), rec.get("source"), rec.get("domain"),
-                    rec.get("scraper"), get_any(mem, "bioguide_id"),
-                    get_any(mem, "name"), get_any(mem, "party"),
-                    get_any(mem, "state"), get_any(mem, "chamber"),
-                    rec.get("text"), rel, line_no))
-                for bill, raw in extract_bills(rec.get("text") or ""):
-                    sink.add("bill_mentions", ("press", key, bill, raw, rel))
-                for code, kw in extract_issues(rec.get("text") or ""):
-                    sink.add("press_issue_mentions", (n, code, kw, rel, line_no))
-                if max_records and n >= max_records:
-                    sink.flush()
-                    return n
+        tasks.append((str(path), path.relative_to(data_root).as_posix()))
+
+    if workers is None:
+        import os
+        workers = os.cpu_count() or 1
+    pool = None
+    if workers <= 1 or max_records:
+        # max_records (smoke mode) stays sequential: deterministic + stops early.
+        results = map(_parse_press_file, tasks)
+    else:
+        from multiprocessing import Pool
+        pool = Pool(workers)
+        # Ordered imap (one file per task) so the parent's pr_id counter walks
+        # the same file order as a sequential run.
+        results = pool.imap(_parse_press_file, tasks)
+
+    n = 0
+    for rel, entries in results:
+        for line_no, base, bills, issues in entries:
+            n += 1
+            key = f"{rel}:{line_no}"
+            sink.add("press_releases", (n, *base))
+            for bill, raw in bills:
+                sink.add("bill_mentions", ("press", key, bill, raw, rel))
+            for code, kw in issues:
+                sink.add("press_issue_mentions", (n, code, kw, rel, line_no))
+            if max_records and n >= max_records:
+                sink.flush()
+                return n
+    if pool:
+        pool.close()
+        pool.join()
     sink.flush()
     return n
 
@@ -647,11 +687,83 @@ def _ft(root, *names):
     return None
 
 
-def load_house(sink, data_root, years, periods=None, max_records=None):
+def _parse_house_file(task):
+    """Parse one House XML into [(table, row), ...] rows. Module-level (and fed
+    only picklable args) so multiprocessing workers can run it; all DuckDB
+    writes stay in the parent process via Sink.
+
+    Returns (rows, None) on success, (None, "file: error") on a parse failure.
+    """
+    xml_path, rel, year, period = task
+    try:
+        tree = ET.parse(xml_path)
+    except ET.ParseError as e:
+        return None, f"{Path(xml_path).name}: {e}"
+    root = tree.getroot()
+    _strip_ns(root)
+    fid = Path(xml_path).stem
+    form = "LD1" if root.tag.endswith("1") else "LD2"
+    rows = []
+
+    def add_lobbyists(parent, ali_index):
+        for lob in parent.iter("lobbyist"):
+            first = _ft(lob, "lobbyistFirstName", "firstName", "first_name")
+            last = _ft(lob, "lobbyistLastName", "lastName", "last_name")
+            if not (first or last):
+                continue  # forms pad with empty <lobbyist> slots
+            rows.append(("house_lobbyists", (
+                fid, ali_index, first, last,
+                _ft(lob, "coveredPosition", "covered_position"),
+                _ft(lob, "lobbyistNew", "new"), rel)))
+
+    all_desc = []
+    ali_infos = root.findall(".//alis/ali_info")
+    if ali_infos:
+        # Quarterly (LD2) schema, verified against real 2026-Q1 files.
+        for ai, ali in enumerate(ali_infos):
+            descs = [d.text.strip() for d in ali.iter("description")
+                     if d.text and d.text.strip()]
+            desc = "\n".join(descs) or None
+            if desc:
+                all_desc.append(desc)
+            rows.append(("house_alis", (
+                fid, ai, _ft(ali, "issueAreaCode", "ali_Code"), desc,
+                _ft(ali, "federal_agencies", "federalAgencies"), rel)))
+            add_lobbyists(ali, ai)
+    else:
+        # Registration (LD1) / older layout per the data manual: flat
+        # ali_Code list, lobbyists at document level. Verify when a
+        # Registrations_XML directory lands.
+        for ai, ali in enumerate(root.iter("ali_Code")):
+            if ali.text and ali.text.strip():
+                rows.append(("house_alis", (fid, ai, ali.text.strip(),
+                                            None, None, rel)))
+        descs = [d.text.strip() for d in root.findall(".//specific_issues//description")
+                 if d.text and d.text.strip()]
+        descs += [el.text.strip() for el in root.findall(".//specific_issues")
+                  if el.text and el.text.strip()]
+        all_desc.extend(descs)
+        add_lobbyists(root, None)
+
+    spec = "\n".join(all_desc) or None
+    rows.append(("house_filings", (
+        fid, form, _ft(root, "organizationName", "organizationname"),
+        _ft(root, "clientName", "clientname"),
+        _ft(root, "senateID", "senateId", "senateid"),
+        _ft(root, "houseID", "houseId", "houseid"),
+        year, period, to_num(_ft(root, "income")),
+        to_num(_ft(root, "expenses")), spec, rel)))
+    for bill, raw in extract_bills(spec or ""):
+        rows.append(("bill_mentions", ("house", fid, bill, raw, rel)))
+    return rows, None
+
+
+def load_house(sink, data_root, years, periods=None, max_records=None, workers=None):
     house = data_root / "house"
     n, errors = 0, []
     if not house.exists():
         return n, errors
+    tasks = []
     for d in sorted(house.iterdir()):
         m = DIR_RE.match(d.name) if d.is_dir() else None
         if not m or int(m.group(1)) not in years:
@@ -659,72 +771,33 @@ def load_house(sink, data_root, years, periods=None, max_records=None):
         year, period = int(m.group(1)), PERIOD[m.group(2)]
         if periods and period not in periods:
             continue
-        for xml_path in sorted(d.glob("*.xml")):
-            try:
-                tree = ET.parse(xml_path)
-            except ET.ParseError as e:
-                errors.append(f"{xml_path.name}: {e}")
-                continue
-            root = tree.getroot()
-            _strip_ns(root)
-            fid = xml_path.stem
-            rel = xml_path.relative_to(data_root).as_posix()
-            form = "LD1" if root.tag.endswith("1") else "LD2"
+        tasks.extend((str(p), p.relative_to(data_root).as_posix(), year, period)
+                     for p in sorted(d.glob("*.xml")))
 
-            def add_lobbyists(parent, ali_index):
-                for lob in parent.iter("lobbyist"):
-                    first = _ft(lob, "lobbyistFirstName", "firstName", "first_name")
-                    last = _ft(lob, "lobbyistLastName", "lastName", "last_name")
-                    if not (first or last):
-                        continue  # forms pad with empty <lobbyist> slots
-                    sink.add("house_lobbyists", (
-                        fid, ali_index, first, last,
-                        _ft(lob, "coveredPosition", "covered_position"),
-                        _ft(lob, "lobbyistNew", "new"), rel))
+    if workers is None:
+        import os
+        workers = os.cpu_count() or 1
+    # max_records (smoke mode) keeps the deterministic sequential order so a
+    # capped run always loads the same files.
+    if workers <= 1 or max_records:
+        results = map(_parse_house_file, tasks)
+    else:
+        from multiprocessing import Pool
+        pool = Pool(workers)
+        results = pool.imap_unordered(_parse_house_file, tasks, chunksize=64)
 
-            all_desc = []
-            ali_infos = root.findall(".//alis/ali_info")
-            if ali_infos:
-                # Quarterly (LD2) schema, verified against real 2026-Q1 files.
-                for ai, ali in enumerate(ali_infos):
-                    descs = [d.text.strip() for d in ali.iter("description")
-                             if d.text and d.text.strip()]
-                    desc = "\n".join(descs) or None
-                    if desc:
-                        all_desc.append(desc)
-                    sink.add("house_alis", (
-                        fid, ai, _ft(ali, "issueAreaCode", "ali_Code"), desc,
-                        _ft(ali, "federal_agencies", "federalAgencies"), rel))
-                    add_lobbyists(ali, ai)
-            else:
-                # Registration (LD1) / older layout per the data manual: flat
-                # ali_Code list, lobbyists at document level. Verify when a
-                # Registrations_XML directory lands.
-                for ai, ali in enumerate(root.iter("ali_Code")):
-                    if ali.text and ali.text.strip():
-                        sink.add("house_alis", (fid, ai, ali.text.strip(),
-                                                None, None, rel))
-                descs = [d.text.strip() for d in root.findall(".//specific_issues//description")
-                         if d.text and d.text.strip()]
-                descs += [el.text.strip() for el in root.findall(".//specific_issues")
-                          if el.text and el.text.strip()]
-                all_desc.extend(descs)
-                add_lobbyists(root, None)
-
-            spec = "\n".join(all_desc) or None
-            sink.add("house_filings", (
-                fid, form, _ft(root, "organizationName", "organizationname"),
-                _ft(root, "clientName", "clientname"),
-                _ft(root, "senateID", "senateId", "senateid"),
-                _ft(root, "houseID", "houseId", "houseid"),
-                year, period, to_num(_ft(root, "income")),
-                to_num(_ft(root, "expenses")), spec, rel))
-            for bill, raw in extract_bills(spec or ""):
-                sink.add("bill_mentions", ("house", fid, bill, raw, rel))
-            n += 1
-            if max_records and n >= max_records:
-                sink.flush()
-                return n, errors
+    for rows, err in results:
+        if err:
+            errors.append(err)
+            continue
+        for table, row in rows:
+            sink.add(table, row)
+        n += 1
+        if max_records and n >= max_records:
+            break
+    if workers > 1 and not max_records:
+        pool.close()
+        pool.join()
     sink.flush()
     return n, errors
 
@@ -797,6 +870,9 @@ def main():
                     help="Smoke mode: one quarter of press+house, capped Senate records")
     ap.add_argument("--max-records", type=int,
                     help="Cap per-dataset primary records (smoke/testing)")
+    ap.add_argument("--workers", type=int,
+                    help="Parallel workers for press JSONL + House XML parsing "
+                         "(default: cpu count; 1 = sequential)")
     args = ap.parse_args()
 
     data_root = args.data_root
@@ -826,7 +902,8 @@ def main():
     sink = Sink(con)
     t0 = _time.time()
     print(f"Loading press releases ({sorted(years)}) ...")
-    n_press = load_press(sink, data_root, years, months, max_records)
+    n_press = load_press(sink, data_root, years, months, max_records,
+                         workers=args.workers)
     t1 = _time.time()
     print(f"  {n_press:,} releases in {t1 - t0:.1f}s")
     print("Loading Senate LDA ...")
@@ -834,7 +911,8 @@ def main():
     t2 = _time.time()
     print(f"  {n_sen:,} filings in {t2 - t1:.1f}s")
     print("Loading House LDA ...")
-    n_house, house_errors = load_house(sink, data_root, years, periods, max_records)
+    n_house, house_errors = load_house(sink, data_root, years, periods, max_records,
+                                       workers=args.workers)
     t3 = _time.time()
     print(f"  {n_house:,} filings ({len(house_errors)} parse errors) in {t3 - t2:.1f}s")
 

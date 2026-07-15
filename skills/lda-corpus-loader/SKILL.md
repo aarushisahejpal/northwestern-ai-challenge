@@ -21,6 +21,7 @@ python scripts/build_db.py --data-root <path> --sample 2025-Q1  # smoke mode (mi
 python scripts/show_record.py <citation-key>                 # print any raw record
 python scripts/backfill_press_issues.py --db <db>            # (re)tag press_issue_mentions in place
 python scripts/add_lobbying_freetext.py --db <db>            # build lobbying_freetext + FTS in place
+python scripts/embed_corpus.py --db <db>                     # build the semantic (embedding) layer in place
 ```
 
 Citation keys: Senate `filing_uuid`, House XML filename (filing ID), press release `src_file:src_line`.
@@ -48,3 +49,25 @@ search layer for it (also rebuildable in place with `add_lobbying_freetext.py`, 
   `stemmer='none'`, so it is a **discovery** aid only — the cited *serving* layer stays the
   deterministic keyword tagger `lead-scanner` builds on top (`lobbying_issue_mentions`, from a
   versioned vocabulary). The split keeps findings auditable while vocabulary discovery scales.
+
+## Semantic (embedding) layer — `scripts/embed_corpus.py`
+
+The second discovery surface over the same free-text, closing BM25's structural gaps: exact-form
+matching (`stemmer='none'` means `crypto` ≠ `cryptocurrency`) and zero synonym reach ("pharmacy
+middlemen" never matches "pharmacy benefit managers"). Same posture as FTS — **discovery only**;
+findings cite the deterministic keyword chain, never embedding similarity.
+
+- **`lobbying_text_embeddings`** — one row per *distinct* `lobbying_freetext.txt` (identical
+  activity descriptions are refiled quarterly; ~1.5M rows dedup to ~388K texts): `md5(txt)`,
+  the embedding model name (stamped per row — switching models is a re-run), dim, and a
+  `FLOAT[dim]` vector.
+- **`lobbying_text_map`** — `doc_id → txt_hash`, joining every vector back to `lobbying_freetext`
+  rows and their `record_key`/src pointers, preserving the raw-record invariant.
+
+In-place and re-runnable after a corpus rebuild (CREATE OR REPLACE; no resume — the FULL run must
+be the LAST run). Deps are optional (not in `requirements.txt`): `torch sentence-transformers
+pyarrow` (+`einops` for the nomic model). Device auto-detects cuda > mps > cpu; `--device`,
+`--batch`, `--dtype` override (defaults tuned on a 4GB GPU — raise `--batch` on bigger hardware,
+and the NaN guard aborts on a bad dtype). The model is `nomic-ai/nomic-embed-text-v1.5`
+(the 2026-07-14 production layer; stamped on every row, swappable via `--model` + a re-run).
+Query side: `lead-scanner`'s `lda_semantic_search.py`.

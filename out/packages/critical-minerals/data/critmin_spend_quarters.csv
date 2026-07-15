@@ -4679,23 +4679,23 @@ LEAP MANUFACTURING,client:61868,2024,fourth_quarter,False,0,30000,30000,outside 
 LEAP MANUFACTURING,client:61868,2025,first_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 LEAP MANUFACTURING,client:61868,2025,second_quarter,False,0,40000,40000,outside sum (no in-house filing),1
 LEAP MANUFACTURING,client:61868,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
-LEEWARD RENEWABLE ENERGY,client:210205,2022,first_quarter,False,0,30000,30000,outside sum (no in-house filing),1
-LEEWARD RENEWABLE ENERGY,client:210205,2022,fourth_quarter,False,0,40000,40000,outside sum (no in-house filing),2
-LEEWARD RENEWABLE ENERGY,client:210205,2022,second_quarter,False,0,30000,30000,outside sum (no in-house filing),1
-LEEWARD RENEWABLE ENERGY,client:210205,2022,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
-LEEWARD RENEWABLE ENERGY,client:210205,2023,first_quarter,True,70000,40000,70000,in-house total (outside firms subsumed),3
-LEEWARD RENEWABLE ENERGY,client:210205,2023,fourth_quarter,True,100000,40000,100000,in-house total (outside firms subsumed),3
-LEEWARD RENEWABLE ENERGY,client:210205,2023,second_quarter,True,70000,40000,70000,in-house total (outside firms subsumed),3
-LEEWARD RENEWABLE ENERGY,client:210205,2023,third_quarter,True,90000,40000,90000,in-house total (outside firms subsumed),3
-LEEWARD RENEWABLE ENERGY,client:210205,2024,first_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2024,fourth_quarter,True,60000,30000,60000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2024,second_quarter,True,80000,30000,80000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2024,third_quarter,True,60000,30000,60000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2025,first_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2025,fourth_quarter,True,510000,30000,510000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2025,second_quarter,True,100000,30000,100000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2025,third_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
-LEEWARD RENEWABLE ENERGY,client:210205,2026,first_quarter,True,170000,30000,170000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2022,first_quarter,False,0,30000,30000,outside sum (no in-house filing),1
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2022,fourth_quarter,False,0,40000,40000,outside sum (no in-house filing),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2022,second_quarter,False,0,30000,30000,outside sum (no in-house filing),1
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2022,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2023,first_quarter,True,70000,40000,70000,in-house total (outside firms subsumed),3
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2023,fourth_quarter,True,100000,40000,100000,in-house total (outside firms subsumed),3
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2023,second_quarter,True,70000,40000,70000,in-house total (outside firms subsumed),3
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2023,third_quarter,True,90000,40000,90000,in-house total (outside firms subsumed),3
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2024,first_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2024,fourth_quarter,True,60000,30000,60000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2024,second_quarter,True,80000,30000,80000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2024,third_quarter,True,60000,30000,60000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2025,first_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2025,fourth_quarter,True,510000,30000,510000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2025,second_quarter,True,100000,30000,100000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2025,third_quarter,True,110000,30000,110000,in-house total (outside firms subsumed),2
+"LEEWARD RENEWABLE ENERGY, LLC",client:210205,2026,first_quarter,True,170000,30000,170000,in-house total (outside firms subsumed),2
 "LG ELECTRONICS U.S.A., INC.",client:57980,2023,fourth_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
 "LG ELECTRONICS U.S.A., INC.",client:57980,2024,first_quarter,True,150000,0,150000,in-house total (outside firms subsumed),1
 "LG ELECTRONICS U.S.A., INC.",client:57980,2024,fourth_quarter,True,390000,20000,390000,in-house total (outside firms subsumed),2
@@ -5958,23 +5958,23 @@ OCEAN MINERALS LLC,client:189586,2022,first_quarter,False,0,30000,30000,outside 
 OCEAN MINERALS LLC,client:189586,2022,second_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 OCEAN MINERALS LLC,client:189586,2022,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 OLD WEST MINING & MINERALS,client:69953,2025,fourth_quarter,False,0,10000,10000,outside sum (no in-house filing),1
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2022,first_quarter,True,61900,20000,61900,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2022,fourth_quarter,True,28636,20000,28636,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2022,second_quarter,True,30110,20000,30110,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2022,third_quarter,True,29559,20000,29559,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2023,first_quarter,True,60109,20000,60109,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2023,fourth_quarter,True,31163,20000,31163,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2023,second_quarter,True,32441,20000,32441,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2023,third_quarter,True,27192,20000,27192,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2024,first_quarter,True,62660,20000,62660,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2024,fourth_quarter,True,42232,20000,42232,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2024,second_quarter,True,42145,20000,42145,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2024,third_quarter,True,35135,20000,35135,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2025,first_quarter,True,76048,20000,76048,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2025,fourth_quarter,True,50090,20000,50090,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2025,second_quarter,True,42405,20000,42405,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2025,third_quarter,True,44585,20000,44585,in-house total (outside firms subsumed),2
-OMAHA PUBLIC POWER DISTRICT (OPPD),client:188236,2026,first_quarter,True,76712,20000,76712,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2022,first_quarter,True,61900,20000,61900,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2022,fourth_quarter,True,28636,20000,28636,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2022,second_quarter,True,30110,20000,30110,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2022,third_quarter,True,29559,20000,29559,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2023,first_quarter,True,60109,20000,60109,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2023,fourth_quarter,True,31163,20000,31163,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2023,second_quarter,True,32441,20000,32441,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2023,third_quarter,True,27192,20000,27192,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2024,first_quarter,True,62660,20000,62660,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2024,fourth_quarter,True,42232,20000,42232,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2024,second_quarter,True,42145,20000,42145,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2024,third_quarter,True,35135,20000,35135,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2025,first_quarter,True,76048,20000,76048,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2025,fourth_quarter,True,50090,20000,50090,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2025,second_quarter,True,42405,20000,42405,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2025,third_quarter,True,44585,20000,44585,in-house total (outside firms subsumed),2
+OMAHA PUBLIC POWER DISTRICT,client:188236,2026,first_quarter,True,76712,20000,76712,in-house total (outside firms subsumed),2
 "ONEENERGY, INC.",client:65294,2025,first_quarter,False,0,20000,20000,outside sum (no in-house filing),1
 "ONEENERGY, INC.",client:65294,2025,second_quarter,False,0,20000,20000,outside sum (no in-house filing),1
 OUR NEXT ENERGY,client:210439,2022,first_quarter,False,0,45000,45000,outside sum (no in-house filing),1

@@ -7,8 +7,10 @@ shipped HTML untouched)
 import csv, json, os, re, sys, urllib.parse
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-REPO = r"c:\Users\rcalv\Projects\Northwestern Project\gain-investigation"
 HERE = os.path.dirname(os.path.abspath(__file__))
+# This file lives at <repo>/out/packages/_build/ — derive the repo root from
+# that instead of hardcoding one machine's checkout path.
+REPO = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 S = os.path.join(HERE, "inputs")   # durable copies of the 2026-07-08 tool JSONs
 # Shared viz templates live in the committed industry-review-packager skill as of
 # 2026-07-11 (one copy; this legacy builder and the skill's generator both read it).
@@ -317,6 +319,9 @@ for r in fecr:
         "conf": r["match_confidence"], "committees": r["committees"],
         "tids": r["sample_transaction_ids"],
         "links": [[c, _fec_base + urllib.parse.quote(c)] for c in conts]}
+_lex = json.loads(open(os.path.join(REPO, "skills", "lead-scanner", "scripts", "industry_lexicon.json"), encoding="utf-8").read())
+_cfacet = next(f for f in _lex["facets"] if f["tag"] == "CRYPTO")
+vocab_rows = [{"kw": r["keyword"], "n": int(r["filings"])} for r in rd("crypto", "crypto_keywords.csv")]
 crypto_data = {
     "kpis": [
         {"label": "Client orgs lobbying on crypto, 2025-Q4", "value": "287", "note": "vs 177 in 2024-Q4 (+62%)"},
@@ -324,6 +329,8 @@ crypto_data = {
         {"label": "Top-4 players' Super-PAC money (FEC)", "value": "$322.6M", "note": "vs $1.7M in disclosed LD-203 — different regimes"},
     ],
     "players": top_players,
+    "vocab": {"version": _lex["_meta"]["version"], "phrases": vocab_rows,
+              "rejected": [{"term": k, "why": w} for k, w in _cfacet.get("display_only", {}).items()]},
     "playerFilings": player_filings,
     "trendFilings": trend_filings,
     "scatterFilings": scatter_filings,
@@ -365,7 +372,7 @@ crypto_data = {
          "next": "Human-triage the candidate FEC↔LDA entity matches (raise confidence to exact where resolvable); decide FEC-vs-LD-203 framing for a finding."},
     ],
     "caveats": [
-        "Recall-first map: any client whose filing free-text names one of 43 curated crypto phrases is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
+        "Recall-first map: any client whose filing free-text names one of " + str(len(_cfacet["phrases"])) + " curated crypto phrases (lexicon v" + _lex["_meta"]["version"] + ") is included; incidental one-off mentions sit in the peripheral tier by design. A story names specific players from the CSVs, never 'the whole list.'",
         "Spend figures are each player's TOTAL federal lobbying spend across all issues (canonical, double-count-corrected) — a size signal. Filing-level disclosure cannot split dollars by issue. The crypto activity share (crypto-tagged senate activity blocks ÷ all the client's senate activity blocks) is the intensity companion: it says how much of the filer's declared attention is crypto, never how its dollars split.",
         "The ≥5% activity-share gate (diversified money list, giving split) is an EDITORIAL cut, chosen to track the healthcare package's precedent (the U.S. Chamber reads 5.4% health there and was classed a side-desk, not a player). The 15 gated-out ambient givers and their $38.8M stay in every CSV, the giving tooltip/click-through, and the table views — excluded from crypto-titled charts, never from the data.",
         "Share is computed per resolved entity: known resolver-split families (Mastercard ×3 entities at 58/18/9%, Visa ×2, a16z, Kraken/Payward) each carry their own share; the spend bars combine families, the map plots entities. Per-variant rows are in data/crypto_players.csv.",
@@ -411,6 +418,9 @@ def _qi(title, note, blocks=()):
             "blocks": [{"label": l, "text": t} for l, t in blocks]}
 
 crypto_data["queryInfo"] = {
+    "vocab": {"title": "Vocabulary — where the phrase list and counts come from",
+              "note": "The phrase list IS skills/lead-scanner/scripts/industry_lexicon.json (CRYPTO facet; versioned, with rejected terms recorded in display_only). Counts come from the serving table that lda_industry_map.py --build-tags materializes from it.",
+              "sql": "SELECT keyword, count(DISTINCT record_key) AS filings\nFROM lobbying_issue_mentions\nWHERE tag='CRYPTO' AND dataset='senate'\nGROUP BY keyword ORDER BY filings DESC"},
     "kpis": _qi("Header stats — where each number comes from",
         "287 / 391 = the 2025-Q4 row (vs 2024-Q4) of the quarterly-trend query below "
         "(→ data/crypto_quarterly_trend.csv). $322.6M = sum of the top-4 rows of "

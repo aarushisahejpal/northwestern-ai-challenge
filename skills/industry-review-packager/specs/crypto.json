@@ -4,7 +4,7 @@
   "title": "Crypto Lobbying — State of the Industry",
   "subtitle": "Who lobbies Washington on crypto, how fast it grew, where it hides in the disclosure forms, and who the industry gives money to.",
   "extra_sources": " and openFEC (cached raw responses)",
-  "gendate": "2026-07-09",
+  "gendate": "2026-07-14",
   "lens": {
     "type": "facet",
     "tag": "CRYPTO",
@@ -24,6 +24,7 @@
     }
   },
   "modules": {
+    "activity_share": true,
     "trend_spend": true,
     "spend_quarters": true,
     "scatter_filings": true,
