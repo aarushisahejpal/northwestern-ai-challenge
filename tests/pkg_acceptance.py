@@ -109,7 +109,7 @@ def test_critical_minerals():
 
 # ---------------------------------------------------------------- test 2
 def test_lexicon_guard():
-    print("\n== 2. lexicon v1.2 guard — CRYPTO/PARDONS slices frozen")
+    print("\n== 2. lexicon v1.4 guard — CRYPTO/PARDONS slices frozen")
     try:
         import duckdb
     except ImportError:
@@ -120,7 +120,9 @@ def test_lexicon_guard():
         print("  [skip] db/lda_full.duckdb not present")
         return
     con = duckdb.connect(str(db), read_only=True)
-    for tag, want_rows, want_filings in (("CRYPTO", 30922, 9768), ("PARDONS", 576, 366)):
+    # CRYPTO frozen at lexicon v1.4 (PR #4): the 9,768 v1.2 filings + 61
+    # NFT-phrase additions = 9,829; rows verified against a from-scratch build.
+    for tag, want_rows, want_filings in (("CRYPTO", 31379, 9829), ("PARDONS", 576, 366)):
         n, f = con.execute(
             "SELECT count(*), count(DISTINCT record_key) FROM lobbying_issue_mentions "
             "WHERE tag=?", [tag]).fetchone()
