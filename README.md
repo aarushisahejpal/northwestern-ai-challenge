@@ -51,7 +51,7 @@ _Filled in as findings lock. See `findings/` (one file per locked finding)._
 
 | Finding | Skills used | Trace files |
 |---|---|---|
-| — | — | — |
+| `findings/L010_pipe_materials_war.md` — DIPRA's Q1-2026 spend spike pushing iron-pipe materials provisions (independently verified 2026-07-06, fresh-agent PASS; awaiting lock) | `lda-corpus-loader` (DB build + `show_record.py` citations), `lead-scanner` (L010 SQL lenses, `queries/l010_pipe_war.sql`), `finding-verifier` (two fresh-agent passes), `investigation-ledger` (lead L010, descends from L004) | `traces/2026-07-05_deep-dive_L004-L003.jsonl` (lead development; see `traces/INDEX.md`) |
 
 ## 3. Where the relevant traces are
 
@@ -88,4 +88,4 @@ _Any finding whose `Legal flag:` field is not "none" is listed here for the eval
 
 | Finding | Flag | Provision |
 |---|---|---|
-| — | — | — |
+| `findings/L010_pipe_materials_war.md` | none | — |
