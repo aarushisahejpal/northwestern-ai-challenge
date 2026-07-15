@@ -77,11 +77,11 @@ person or organization named in the findings, or "none known against the entitie
 
 | Team member | Statement |
 |---|---|
-| Rob Calvey | _Pending — "none known against the entities named" or specifics._ |
-| Chris Cioffi | Reports on congressional lobbying disclosures professionally; authored the lobbyR package adapted in `skills/lobbying-quarterly-filings/`. _Statement pending his own wording — entities-named check to confirm._ |
-| Dhrumil Mehta | _Pending — "none known against the entities named" or specifics._ |
-| Aarushi Sahejpal | Contributed to the open-source lobbyR R package (github.com/Lobbying-DisclosuRe/lobbyr), which `skills/lobbying-quarterly-filings/` adapts. No known connections to any registrant, client, or member named in the findings. |
-| Eiman Siddiqui | _Pending — "none known against the entities named" or specifics._ |
+| Rob Calvey | _Pending._ |
+| Chris Cioffi | _Pending._ |
+| Dhrumil Mehta | _Pending._ |
+| Aarushi Sahejpal | _Pending._ |
+| Eiman Siddiqui | _Pending._ |
 
 ## 6. Possible legal violations flagged
 
