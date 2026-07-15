@@ -99,7 +99,9 @@ from the source systems, valid regardless of which DB below they were queried th
 **Corpus versions** (all built the same way, differing only by `--years`; see
 `skills/lda-corpus-loader/scripts/build_db.py`):
 - `db/lda_full.duckdb` — 2022–2026, all years. **Canonical/primary as of 2026-07-06.**
-  Start new investigative work here.
+  Start new investigative work here. Prebuilt copy (semantic layer included, so no
+  local build or embedding run needed):
+  https://dhrumil-public.s3.us-west-2.amazonaws.com/gain-investigation/lda_full.duckdb
 - `db/lda_pilot.duckdb` — 2025 + 2026-Q1 only. Kept solely to reproduce
   `findings/L010_pipe_materials_war.md`'s citations exactly as verified; not for new work.
 - `db/lda_2026.duckdb` — 2026-Q1 only. Superseded by both of the above; safe to delete
