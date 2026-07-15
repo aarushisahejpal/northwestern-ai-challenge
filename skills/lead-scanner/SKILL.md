@@ -1,6 +1,6 @@
 ---
 name: lead-scanner
-description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — emitting candidate leads as record IDs. (2) A bill cross-check: bill number or named alias → every filing and press release touching it, cited. (3) A disclosed-giving map (LD-203) for an entity or industry roster. (4) An industry map: finds an industry hidden in the free-text, tags it from a curated versioned lexicon, emits an entity-resolved player roster; an FTS/keyness/semantic loop proposes new vocabulary for human triage. (5) FEC/openFEC Super-PAC enrichment of that roster, reconciled against LD-203. (6) A quarterly turnover tracker — declared terminations, new engagements, firm swaps, in-house moves, churn. Use when generating or refreshing the lead pipeline, running a bill-level lobbying check, mapping an industry's who/how-much/who-they-give-to, or reporting a quarter's turnover.
+description: SQL-first tools for turning a lobbying/disclosure corpus into leads. (1) A lens library — say-vs-pay, revolving door, spend anomalies, cross-chamber discrepancies, contribution flows, foreign influence, disclosure gaps — emitting candidate leads as record IDs. (2) A bill cross-check: bill number or named alias → every filing and press release touching it, cited. (3) A disclosed-giving map (LD-203) for an entity, industry roster, or a member of Congress (Graham, AOC) — who gives to them, by industry. (4) An industry map: finds an industry hidden in the free-text, tags it from a curated versioned lexicon, emits an entity-resolved player roster; an FTS/keyness/semantic loop proposes new vocabulary for human triage. (5) FEC/openFEC Super-PAC enrichment of that roster, reconciled against LD-203. (6) A quarterly turnover tracker — declared terminations, new engagements, firm swaps, in-house moves, churn. Use when generating/refreshing leads, a bill check, an industry or member money map, or a turnover report.
 model: inherit  # deliberate: the bill cross-check gets pulled into live investigation turns; an override would re-model the rest of the calling turn — run sweep sessions cheap via /model at session start
 ---
 
@@ -16,7 +16,8 @@ phrases hypotheses; output is record IDs + one-liners, never quoted record text.
    disclosed political giving (totals, recipients, per-entity split).
 4. **An industry map** (`scripts/lda_industry_map.py` + `scripts/lda_freetext_discovery.py` +
    `scripts/lda_semantic_search.py`) — find an industry hidden in the free-text, tag it
-   deterministically, emit an entity-resolved player list.
+   deterministically, emit an entity-resolved player list; `scripts/lda_member_map.py` runs the
+   mirror query — given a member of Congress, which industries give to them.
 5. **An external campaign-finance enrichment** (`scripts/fec_enrich.py`) — take that roster and add
    the Super-PAC money leg from FEC/openFEC, reconciled against the disclosed-giving map.
 6. **A quarterly turnover tracker** (`scripts/lda_turnover.py`) — diff a quarter against the corpus:
@@ -210,6 +211,39 @@ discipline as the rest of discovery — proposes, never tags.
 - **Entity resolution is the ceiling** (profile §4) — a documented limitation, not a silent gap.
 - **Serving stays deterministic + cited.** FTS/keyness only *discover*; findings cite the
   `lobbying_issue_mentions` keyword→exact-word→record chain. Citeable form: `queries/p4_industry_map.sql`.
+
+### Member map (the mirror direction) — `scripts/lda_member_map.py`
+
+**The problem it solves.** The industry map goes facet → players → who they give to. Sometimes the
+question runs the other way: given a **member of Congress**, who gives to them, and what industries
+are those givers in? `lda_member_map.py` answers that — resolve a name ("Lindsey Graham", "AOC") to a
+member, scan every LD-203 giver corpus-wide (not a pre-built roster) whose recipient string resolves to
+that member (`member_resolve.py`, the same P6 layer `lda_ld203_giving.py`'s member rollup uses), then
+tag each giver with `industry_lexicon.json` facets.
+
+```bash
+.venv/Scripts/python skills/lead-scanner/scripts/lda_member_map.py "Lindsey Graham"
+.venv/Scripts/python skills/lead-scanner/scripts/lda_member_map.py "AOC" --facet crypto
+```
+
+- **The attribution rule this enforces.** A giver is tagged with a facet only if it also appears on the
+  **client** side of a tagged filing — an in-house registrant or trade association that is itself an
+  industry player. An outside multi-client firm that merely files disclosures naming a tagged client is
+  never attributed to that client's industry (its PAC giving reflects its whole book of business); such
+  firms surface in an "also files for" context note, never in a facet's giver list. Same self-
+  representation boundary `lda_industry_map.py`'s roster already applies in the forward direction.
+- Bridges the giver (LD-203 registrant) side to the tagged (client) side by **normalized name**, not
+  `entity_id` — a real company's registrant-role and client-role entities are resolved separately
+  (profile §4's "known ceiling"), so name-level `norm_key` is the only bridge between the two roles.
+- Ambiguous member names (same-surname pairs) are **reported, never guessed** — the tool exits with the
+  candidate list and asks for a more specific query, same discipline as `member_resolve.py`.
+- A small CLI-only shorthand table (`AOC` → `Ocasio-Cortez`) rewrites the query before resolution — it
+  is **not** `member_aliases.json`, which curates evidence-sourced AS-FILED spellings observed in LD-203
+  data. Add to `member_aliases.json` only when a real filed string fails to resolve.
+- Useful flags: `--facet ID`, `--type`, `--since`, `--top`, `--limit`, `--json`.
+- Citeable aggregate form: none committed yet — add `queries/p4b_member_map.sql` after a real run,
+  following the `ld203_giving.sql` / `p4_industry_map.sql` pattern (swap in the resolved member's
+  matched LD-203 recipient strings from a `--json` run; don't re-derive the resolution by SQL).
 
 ## External campaign-finance enrichment — `scripts/fec_enrich.py`
 
