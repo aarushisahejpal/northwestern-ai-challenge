@@ -90,7 +90,15 @@ flag_dupes <- function(cleaned_dataframe_from_previous_function, find_duplicates
   }
   clean_attempt <- function(dataframe_with_flagged_dupes) {
     dataframe_with_flagged_dupes |>
-      dplyr::filter(!registration_or_termination) |>
+      # Team decision 2026-07-15 (Chris Cioffi): a termination filing's reported
+      # income COUNTS toward spend totals — it is often the only record of the
+      # final quarter's activity (e.g. Yuga Labs / Bracewell, Q2 2025, $50K,
+      # where no regular Q2 report exists). Only registrations are dropped here
+      # (they carry no dollar amounts). The per-period dedup just below still
+      # keeps exactly one filing per registrant-client-quarter, so a termination
+      # can never double-count against a regular report for the same period.
+      # See DECISIONS.md, 2026-07-15.
+      dplyr::filter(!stringr::str_detect(filing_type, stringr::regex("RR$", ignore_case = TRUE))) |>
       dplyr::mutate(dt_posted = as.POSIXct(dt_posted)) |>
       dplyr::group_by(registrant.name, client.name, filing_year, filing_period) |>
       dplyr::arrange(dplyr::desc(dt_posted)) |>
