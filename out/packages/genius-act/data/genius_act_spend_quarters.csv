@@ -29,6 +29,23 @@ AFL-CIO,client:100404,2025,fourth_quarter,True,760000,0,760000,in-house total (o
 AFL-CIO,client:100404,2025,second_quarter,True,1020000,0,1020000,in-house total (outside firms subsumed),1
 AFL-CIO,client:100404,2025,third_quarter,True,860000,0,860000,in-house total (outside firms subsumed),1
 AFL-CIO,client:100404,2026,first_quarter,True,880000,0,880000,in-house total (outside firms subsumed),1
+AICPA Association of International Certified Professional Accountants,client:192162,2022,first_quarter,True,1310000,140000,1310000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2022,fourth_quarter,True,1340000,140000,1340000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2022,second_quarter,True,1300000,140000,1300000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2022,third_quarter,True,1300000,140000,1300000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2023,first_quarter,True,1330000,140000,1330000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2023,fourth_quarter,True,1270000,140000,1270000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2023,second_quarter,True,1330000,140000,1330000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2023,third_quarter,True,1200000,140000,1200000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2024,first_quarter,True,1350000,140000,1350000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2024,fourth_quarter,True,1300000,140000,1300000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2024,second_quarter,True,1330000,140000,1330000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2024,third_quarter,True,1300000,140000,1300000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2025,first_quarter,True,1340000,140000,1340000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2025,fourth_quarter,True,1449000,140000,1449000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2025,second_quarter,True,1400000,140000,1400000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2025,third_quarter,True,1320000,140000,1320000,in-house total (outside firms subsumed),4
+AICPA Association of International Certified Professional Accountants,client:192162,2026,first_quarter,True,1500000,140000,1500000,in-house total (outside firms subsumed),4
 ALLIANCE DEFENDING FREEDOM,client:59048,2024,first_quarter,True,20000,0,20000,in-house total (outside firms subsumed),1
 ALLIANCE DEFENDING FREEDOM,client:59048,2024,fourth_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
 ALLIANCE DEFENDING FREEDOM,client:59048,2024,second_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
@@ -579,6 +596,23 @@ CONNECT STRATEGY LLC (ON BEHALF OF CRYPTEX FINANCE),client:67702,2025,third_quar
 "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",client:115381,2025,second_quarter,True,1170000,50000,1170000,in-house total (outside firms subsumed),2
 "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",client:115381,2025,third_quarter,True,1070000,50000,1070000,in-house total (outside firms subsumed),2
 "CREDIT UNION NATIONAL ASSOCIATION, INC. DBA AMERICA'S CREDIT UNIONS",client:115381,2026,first_quarter,True,1130000,50000,1130000,in-house total (outside firms subsumed),2
+CROWE LLP,client:200249,2022,first_quarter,True,40000,0,40000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2022,fourth_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2022,second_quarter,True,40000,0,40000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2022,third_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2023,first_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2023,fourth_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2023,second_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2023,third_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2024,first_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2024,fourth_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2024,second_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2024,third_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2025,first_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2025,fourth_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2025,second_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2025,third_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+CROWE LLP,client:200249,2026,first_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
 Chainalysis Inc.,client:207913,2022,first_quarter,False,0,80000,80000,outside sum (no in-house filing),3
 Chainalysis Inc.,client:207913,2022,fourth_quarter,False,0,110000,110000,outside sum (no in-house filing),3
 Chainalysis Inc.,client:207913,2022,second_quarter,False,0,130000,130000,outside sum (no in-house filing),3
@@ -883,6 +917,23 @@ FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:2029
 FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:202988,2025,second_quarter,True,40000,0,40000,in-house total (outside firms subsumed),1
 FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:202988,2025,third_quarter,True,20000,0,20000,in-house total (outside firms subsumed),1
 FACT COALITION (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVERNMENT),client:202988,2026,first_quarter,True,20000,0,20000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2022,first_quarter,True,40000,0,40000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2022,fourth_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2022,second_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2022,third_quarter,True,40000,0,40000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2023,first_quarter,True,80000,0,80000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2023,fourth_quarter,True,170000,0,170000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2023,second_quarter,True,70000,0,70000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2023,third_quarter,True,90000,0,90000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2024,first_quarter,True,160000,0,160000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2024,fourth_quarter,True,140000,0,140000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2024,second_quarter,True,170000,0,170000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2024,third_quarter,True,160000,0,160000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2025,first_quarter,True,150000,0,150000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2025,fourth_quarter,True,290000,0,290000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2025,second_quarter,True,170000,0,170000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2025,third_quarter,True,170000,0,170000,in-house total (outside firms subsumed),1
+FDD ACTION,client:203727,2026,first_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
 "FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",client:67742,2025,fourth_quarter,False,0,10000,10000,outside sum (no in-house filing),1
 "FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",client:67742,2025,second_quarter,False,0,10000,10000,outside sum (no in-house filing),1
 "FEDERAL HALL POLICY ADVISORS, LLC ON BEHALF OF SOLANA POLICY INSTITUTE",client:67742,2025,third_quarter,False,0,10000,10000,outside sum (no in-house filing),1
@@ -1117,6 +1168,23 @@ GOWEST CREDIT UNION ASSOCIATION,client:64406,2026,first_quarter,True,90000,0,900
 "H&R Block Management, LLC",client:162992,2025,second_quarter,False,0,110000,110000,outside sum (no in-house filing),2
 "H&R Block Management, LLC",client:162992,2025,third_quarter,False,0,110000,110000,outside sum (no in-house filing),2
 "H&R Block Management, LLC",client:162992,2026,first_quarter,False,0,110000,110000,outside sum (no in-house filing),2
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2022,first_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2022,fourth_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2022,second_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2022,third_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2023,first_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2023,fourth_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2023,second_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2023,third_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2024,first_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2024,fourth_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2024,second_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2024,third_quarter,True,440000,0,440000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2025,first_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2025,fourth_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2025,second_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2025,third_quarter,True,270000,0,270000,in-house total (outside firms subsumed),1
+HSBC TECHNOLOGY AND SERVICES USA INC.,client:125823,2026,first_quarter,True,310000,0,310000,in-house total (outside firms subsumed),1
 HUNTINGTON BANCSHARES INCORPORATED,client:169956,2022,first_quarter,True,80000,20000,80000,in-house total (outside firms subsumed),2
 HUNTINGTON BANCSHARES INCORPORATED,client:169956,2022,fourth_quarter,True,70000,20000,70000,in-house total (outside firms subsumed),2
 HUNTINGTON BANCSHARES INCORPORATED,client:169956,2022,second_quarter,True,70000,20000,70000,in-house total (outside firms subsumed),2
@@ -1363,6 +1431,23 @@ LMAX Group,client:52997,2025,fourth_quarter,False,0,50000,50000,outside sum (no 
 LMAX Group,client:52997,2025,second_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 LMAX Group,client:52997,2025,third_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 LMAX Group,client:52997,2026,first_quarter,False,0,50000,50000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2022,first_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2022,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2022,second_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2022,third_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2023,first_quarter,False,0,80000,80000,outside sum (no in-house filing),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2023,fourth_quarter,True,210000,0,210000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2023,second_quarter,True,190000,0,190000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2023,third_quarter,True,150000,0,150000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2024,first_quarter,True,210000,0,210000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2024,fourth_quarter,True,220000,0,220000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2024,second_quarter,True,250000,0,250000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2024,third_quarter,True,200000,0,200000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2025,first_quarter,True,300000,0,300000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2025,fourth_quarter,True,230000,0,230000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2025,second_quarter,True,360000,0,360000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2025,third_quarter,True,260000,0,260000,in-house total (outside firms subsumed),1
+LONDON STOCK EXCHANGE GROUP,client:172571,2026,first_quarter,True,320000,0,320000,in-house total (outside firms subsumed),1
 Lowe's Companies Inc.,client:100843,2022,first_quarter,True,480000,60000,480000,in-house total (outside firms subsumed),3
 Lowe's Companies Inc.,client:100843,2022,fourth_quarter,True,370000,100000,370000,in-house total (outside firms subsumed),4
 Lowe's Companies Inc.,client:100843,2022,second_quarter,True,590000,60000,590000,in-house total (outside firms subsumed),3
@@ -1538,6 +1623,15 @@ NORTHERN TRUST CORPORATION,client:193597,2025,fourth_quarter,True,170000,50000,1
 NORTHERN TRUST CORPORATION,client:193597,2025,second_quarter,True,90000,50000,90000,in-house total (outside firms subsumed),2
 NORTHERN TRUST CORPORATION,client:193597,2025,third_quarter,True,80000,50000,80000,in-house total (outside firms subsumed),2
 NORTHERN TRUST CORPORATION,client:193597,2026,first_quarter,True,150000,50000,150000,in-house total (outside firms subsumed),2
+National Association of College Stores,client:189093,2022,second_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
+National Association of College Stores,client:189093,2023,fourth_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
+National Association of College Stores,client:189093,2023,third_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
+National Association of College Stores,client:189093,2024,first_quarter,True,260000,10000,260000,in-house total (outside firms subsumed),2
+National Association of College Stores,client:189093,2024,fourth_quarter,True,60000,50000,60000,in-house total (outside firms subsumed),2
+National Association of College Stores,client:189093,2024,second_quarter,True,80000,30000,80000,in-house total (outside firms subsumed),2
+National Association of College Stores,client:189093,2024,third_quarter,True,60000,30000,60000,in-house total (outside firms subsumed),2
+National Association of College Stores,client:189093,2025,first_quarter,True,60000,0,60000,in-house total (outside firms subsumed),1
+National Association of College Stores,client:189093,2025,second_quarter,True,10000,0,10000,in-house total (outside firms subsumed),1
 National Association of Convenience Stores,client:134220,2022,first_quarter,True,770000,67500,770000,in-house total (outside firms subsumed),3
 National Association of Convenience Stores,client:134220,2022,fourth_quarter,True,770000,97500,770000,in-house total (outside firms subsumed),3
 National Association of Convenience Stores,client:134220,2022,second_quarter,True,770000,97500,770000,in-house total (outside firms subsumed),3
@@ -1668,8 +1762,8 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
+"PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 "PAYWARD INC. (FORMERLY KNOWN AS PAYWARD INTERACTIVE, INC. D/B/A KRAKEN)",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2022,fourth_quarter,True,240000,0,240000,in-house total (outside firms subsumed),1
@@ -1684,10 +1778,10 @@ PAYWARD INC D/B/A KRAKEN,client:45920,2026,first_quarter,False,0,80000,80000,out
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,True,460000,0,460000,in-house total (outside firms subsumed),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,first_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,fourth_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
-"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
+"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,second_quarter,False,0,90000,90000,outside sum (no in-house filing),1
 "PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
+"PAYWARD INTERACTIVE, INC. D/B/A KRAKEN",client:53527,2025,third_quarter,True,465000,0,465000,in-house total (outside firms subsumed),1
 "PUDGY PENGUINS, INC.",client:69234,2025,fourth_quarter,False,0,80000,80000,outside sum (no in-house filing),1
 "PUDGY PENGUINS, INC.",client:69234,2025,third_quarter,False,0,30000,30000,outside sum (no in-house filing),1
 "PUDGY PENGUINS, INC.",client:69234,2026,first_quarter,False,0,80000,80000,outside sum (no in-house filing),1
@@ -1834,6 +1928,23 @@ RIPPLE,client:203217,2026,first_quarter,True,180000,0,180000,in-house total (out
 "ROCKWALLET, LLC",client:61664,2025,second_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 "ROCKWALLET, LLC",client:61664,2025,third_quarter,False,0,50000,50000,outside sum (no in-house filing),1
 "ROCKWALLET, LLC",client:61664,2026,first_quarter,False,0,50000,50000,outside sum (no in-house filing),1
+Ripple Labs Inc.,client:151602,2022,first_quarter,False,0,240000,240000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2022,fourth_quarter,False,0,240000,240000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2022,second_quarter,False,0,240000,240000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2022,third_quarter,False,0,240000,240000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2023,first_quarter,False,0,210000,210000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2023,fourth_quarter,False,0,190000,190000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2023,second_quarter,False,0,190000,190000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2023,third_quarter,False,0,190000,190000,outside sum (no in-house filing),2
+Ripple Labs Inc.,client:151602,2024,first_quarter,False,0,190000,190000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2024,fourth_quarter,False,0,280000,280000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2024,second_quarter,False,0,210000,210000,outside sum (no in-house filing),3
+Ripple Labs Inc.,client:151602,2024,third_quarter,False,0,190000,190000,outside sum (no in-house filing),3
+Ripple Labs Inc.,client:151602,2025,first_quarter,False,0,400000,400000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2025,fourth_quarter,False,0,450000,450000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2025,second_quarter,False,0,440000,440000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2025,third_quarter,False,0,440000,440000,outside sum (no in-house filing),4
+Ripple Labs Inc.,client:151602,2026,first_quarter,False,0,450000,450000,outside sum (no in-house filing),4
 S&P Global,client:117721,2022,first_quarter,True,100000,355000,355000,outside sum (in-house filing under-reported),7
 S&P Global,client:117721,2022,fourth_quarter,True,250000,315000,315000,outside sum (in-house filing under-reported),6
 S&P Global,client:117721,2022,second_quarter,True,260000,315000,315000,outside sum (in-house filing under-reported),6
@@ -1999,6 +2110,11 @@ TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),
 TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),client:51836,2025,second_quarter,True,50000,0,50000,in-house total (outside firms subsumed),1
 TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),client:51836,2025,third_quarter,True,30000,0,30000,in-house total (outside firms subsumed),1
 TRANSPARENCY INTERNATIONAL U.S. (A PROJECT OF THE FUND FOR CONSTITUTIONAL GOVT),client:51836,2026,first_quarter,True,20000,0,20000,in-house total (outside firms subsumed),1
+TREA SENIOR CITIZENS LEAGUE,client:146716,2025,first_quarter,True,5000,0,5000,in-house total (outside firms subsumed),1
+TREA SENIOR CITIZENS LEAGUE,client:146716,2025,fourth_quarter,True,5000,0,5000,in-house total (outside firms subsumed),1
+TREA SENIOR CITIZENS LEAGUE,client:146716,2025,second_quarter,True,5000,0,5000,in-house total (outside firms subsumed),1
+TREA SENIOR CITIZENS LEAGUE,client:146716,2025,third_quarter,True,5000,0,5000,in-house total (outside firms subsumed),1
+TREA SENIOR CITIZENS LEAGUE,client:146716,2026,first_quarter,True,5000,0,5000,in-house total (outside firms subsumed),1
 TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.),client:61280,2024,fourth_quarter,False,0,110000,110000,outside sum (no in-house filing),2
 TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.),client:61280,2024,third_quarter,False,0,40000,40000,outside sum (no in-house filing),1
 TRON BLOCKCHAIN AND DAO (AS SUPPORTED BY TRON TECH LIMITED AND RAINCO PTE LTD.),client:61280,2025,first_quarter,False,0,100000,100000,outside sum (no in-house filing),2
