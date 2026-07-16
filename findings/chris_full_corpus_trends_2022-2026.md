@@ -72,7 +72,7 @@ counts its full dollar amount toward each of the 3).
 
 **Updated from an earlier pass of this report** (which had 317,089 cleaned filings) after
 fixing a real bug in `flag_client_registrant_conflict()`'s entity matching -- see the TAX
-section's "double-counting trap" finding above and `references/data_quality_notes.md` for the
+section's "double-counting trap" finding above and `references/data_quality_notes.md` *[in this repo: `skills/lobbying-quarterly-filings/references/data_quality_notes.md`]* for the
 full root-cause trace. The fix catches **13,269 additional double-counting rows corpus-wide**
 that the original punctuation/case-only name matching silently missed -- this was never
 unique to Business Roundtable. All figures below reflect the corrected, 303,820-filing
