@@ -1,9 +1,7 @@
 # Findings Report
 
-The submission's two locked findings, combined verbatim below (identical to the files in
-`findings/`). Both passed independent fresh-agent verification before lock (`DECISIONS.md`,
-2026-07-15). Every citation key resolves to a raw record via
-`python skills/lda-corpus-loader/scripts/show_record.py <key> --db db/lda_full.duckdb --data-root data/`.
+_Any citation key below resolves to its raw source record via
+`python skills/lda-corpus-loader/scripts/show_record.py <key> --db db/lda_full.duckdb --data-root data/`._
 
 ---
 
