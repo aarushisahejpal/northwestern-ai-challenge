@@ -254,7 +254,7 @@ durable scale-up of one firm's book of business, not a one-quarter fluke.
 in its very first year in the data?** Worth a follow-up pull the next time this dataset is
 refreshed -- this section focused on total-dollar new entrants; cross-referencing "new since
 2022" clients against breadth-of-issue-area (the same lens the Business Roundtable/Altria
-findings above used for the TAX-only slice) across the full 79-issue corpus is a natural
+findings above used for the TAX-only slice *[porter's note: the Altria breadth finding lives in the original report's TAX section, not ported here]*) across the full 79-issue corpus is a natural
 next step once a similar per-issue-per-client breadth table is built for all years, not just
 one quarter.
 
