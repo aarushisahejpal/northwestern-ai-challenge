@@ -1,6 +1,6 @@
 # Finding: The pipe-materials war — DIPRA's Q1 2026 spending spike
 
-**Status:** independently verified, PASS (2026-07-06, second fresh-agent pass) — awaiting human lock decision (not yet logged in DECISIONS.md)
+**Status:** independently verified, PASS (2026-07-06, second fresh-agent pass) — LOCKED as a submitted finding (team sign-off, DECISIONS.md 2026-07-15)
 **Lead:** L010 (descends from L004)
 **Legal flag:** none
 **Date drafted:** 2026-07-05

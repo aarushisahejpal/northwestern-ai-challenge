@@ -2,7 +2,7 @@
 
 **Status:** author-verified AND fresh-agent verified — **PASS, 8/8 claims** (2026-07-14,
 finding-verifier protocol; verification block appended at the end of this file, including
-three hedges to carry when citing). Awaiting human lock decision in DECISIONS.md.
+three hedges to carry when citing). LOCKED as a submitted finding (team sign-off, DECISIONS.md 2026-07-15).
 **Author:** Chris Cioffi. Ported verbatim from `ChrisCioffi/agentic_investigation`
 `skills/lobbying-issue-theme-clustering/FINDINGS.md` (sections reproduced unchanged; only this
 provenance header added).
@@ -43,14 +43,14 @@ Colorado, Arizona, American Turkish, Small Business Roundtable) are correctly le
 -- re-running the fixed function against the full multi-year corpus (see the next section)
 caught 13,269 additional double-counting rows corpus-wide that the original logic had
 silently missed. Full root-cause trace and validation methodology in
-`references/data_quality_notes.md`.
+`references/data_quality_notes.md` *[in this repo: `skills/lobbying-quarterly-filings/references/data_quality_notes.md`]*.
 
 ---
 
 ## Full-corpus lobbying trends, 2022-2026 (Q1)
 
 **Data**: Every Senate quarterly filing on disk, all years and all 79 lobbying issue areas
-(ALI codes) present in the corpus -- not a single-issue slice like the TAX section above.
+(ALI codes) present in the corpus -- not a single-issue slice like the TAX section above. *[porter's note: refers to the original report's TAX-quarter section, which is not part of this submission; only its double-counting-trap subsection is reproduced above — see the provenance header]*
 2022, 2023, 2024: full years. 2025: full year. **2026: Q1 only** (the most recent quarter on
 disk as of this report) -- every 2026 figure below is a single-quarter number, never
 compared to a full-year figure without saying so explicitly.
@@ -59,8 +59,8 @@ compared to a full-year figure without saying so explicitly.
 FALSE)` for y in 2022:2026 (bounds `pivot_wider()` cardinality per year rather than one
 5-year combined pivot), id-like columns coerced to `character` before `bind_rows()` (some
 years encode `client.client_id` etc. as integer, others as character), then cleaned via the
-same `flag_dupes()` + `flag_client_registrant_conflict()` pipeline as the TAX section. **418,098
-raw filings -> 303,820 after cleaning.** Filings/distinct clients by year: 2022 (67,805 /
+same `flag_dupes()` + `flag_client_registrant_conflict()` pipeline as the TAX section.*[porter's note: same cleaning pipeline as reproduced in the trap subsection above]* **418,098
+raw filings -> 303,820 after cleaning.** *[porter's note: these figures were computed under the pipeline's pre-2026-07-15 rule, which dropped ALL termination filings; per the team decision logged in DECISIONS.md (2026-07-15), termination-filing income now counts when it is the quarter's only record, so a re-run with the current pipeline yields slightly HIGHER totals — the figures here are conservative]* Filings/distinct clients by year: 2022 (67,805 /
 17,847), 2023 (69,352 / 18,255), 2024 (71,136 / 18,630), 2025 (77,894 / 20,900), 2026 Q1-only
 (17,633 / 16,461). Issue-level columns were identified by matching against the actual ALI
 code lookup (`list_ali_codes()`), not a hand-maintained exclusion list -- an early version of

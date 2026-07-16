@@ -8,6 +8,9 @@ Skills plus verified findings.
 
 ## Quick start (evaluators)
 
+Requires **Python 3.10+** (pinned deps verified on 3.12 — `duckdb==1.5.4` has no wheels for
+older Pythons). Commands below use `python`; on macOS/Linux substitute `python3`.
+
 ```bash
 pip install -r requirements.txt
 python skills/lda-corpus-loader/scripts/build_db.py --data-root data/ --sample 2025-Q1   # smoke mode
@@ -75,8 +78,8 @@ _Filled in as findings lock. See `findings/` (one file per locked finding)._
 
 | Finding | Skills used | Trace files |
 |---|---|---|
-| `findings/L010_pipe_materials_war.md` — DIPRA's Q1-2026 spend spike pushing iron-pipe materials provisions (independently verified 2026-07-06, fresh-agent PASS; awaiting lock) | `lda-corpus-loader` (DB build + `show_record.py` citations), `lead-scanner` (L010 SQL lenses, `queries/l010_pipe_war.sql`), `finding-verifier` (two fresh-agent passes), `investigation-ledger` (lead L010, descends from L004) | `traces/2026-07-05_deep-dive_L004-L003.jsonl` (lead development; see `traces/INDEX.md`) |
-| `findings/chris_full_corpus_trends_2022-2026.md` — full-corpus trends: AI's arrival on K Street (Anthropic/OpenAI/a16z $0→$3M each), tariff lobbying +215% and still climbing, Continental Strategy +6,600% (verified), the SAP America single-quarter outlier catch, the Business Roundtable double-counting trap (author-verified + fresh-agent PASS 8/8, 2026-07-14; hedges in the verification block) | `lobbying-quarterly-filings` (per-year loads + `flag_dupes()` + `flag_client_registrant_conflict()` + `normalize_entity_name()`; fix trace in its `references/data_quality_notes.md`) | authored in `ChrisCioffi/agentic_investigation` (session logs there predate this repo); LOC-Nation anomaly independently corroborated by leads L025/L027 (`traces/INDEX.md`) |
+| `findings/L010_pipe_materials_war.md` — DIPRA's Q1-2026 spend spike pushing iron-pipe materials provisions (independently verified 2026-07-06, fresh-agent PASS; locked 2026-07-15) | `lda-corpus-loader` (DB build + `show_record.py` citations), `lead-scanner` (L010 SQL lenses, `queries/l010_pipe_war.sql`), `finding-verifier` (two fresh-agent passes), `investigation-ledger` (lead L010, descends from L004) | `traces/2026-07-05_deep-dive_L004-L003.jsonl` (lead development; see `traces/INDEX.md`) |
+| `findings/chris_full_corpus_trends_2022-2026.md` — full-corpus trends: AI's arrival on K Street (Anthropic/OpenAI/a16z $0→$3M each), tariff lobbying +215% and still climbing, Continental Strategy +6,600% (verified), the SAP America single-quarter outlier catch, the Business Roundtable double-counting trap (author-verified + fresh-agent PASS 8/8, 2026-07-14; hedges in the verification block; locked 2026-07-15) | `lobbying-quarterly-filings` (per-year loads + `flag_dupes()` + `flag_client_registrant_conflict()` + `normalize_entity_name()`; fix trace in its `references/data_quality_notes.md`) | authored in `ChrisCioffi/agentic_investigation` (session logs there predate this repo); LOC-Nation anomaly independently corroborated by leads L025/L027 (`traces/INDEX.md`) |
 
 ## 3. Where the relevant traces are
 
