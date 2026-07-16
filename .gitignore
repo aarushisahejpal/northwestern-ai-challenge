@@ -28,3 +28,8 @@ scratch/
 
 # R skill loader cache (mirrors ChrisCioffi/agentic_investigation .gitignore)
 skills/*/.cache/
+
+# local build artifacts
+build_full.log
+data
+db/
