@@ -1,6 +1,39 @@
 # Findings Report
 
-_Any citation key below resolves to its raw source record via
+## The findings in brief
+
+**1. The pipe-materials war — DIPRA's Q1 2026 spending spike.** In Q1 2026 the Ductile
+Iron Pipe Research Association nearly doubled its recent-quarter lobbying spend
+($315K/quarter 2025 average → $540K) to push "materials provisions" and "domestic
+sourcing" language favoring iron pipe into five FY26 appropriations bills, a TSCA
+reauthorization, and the NDAA — deploying former U.S. Rep. Martha Roby as a named
+lobbyist — while the visible plastic/copper-pipe opposition spent a fraction of that,
+and the only public trace of the fight is an unrelated grant announcement. Every dollar
+figure cites a filing resolvable in one command; the finding explicitly bounds what it
+does not claim (no causation, no undocumented membership assertions).
+*Why it matters: a concrete, dated case of a materials industry writing its preference
+into must-pass bills with no public counter-narrative.*
+
+**2. Full-corpus Senate lobbying trends, 2022–2026 Q1** (authored by Chris Cioffi;
+fresh-agent verified 8/8). Generative-AI firms arrive as a K Street client class
+(Anthropic, OpenAI, a16z: $0 in 2022 → ~$3M each by 2025); tariff lobbying grows +215%
+and — unlike the 2025 tax-bill issues — keeps climbing into 2026; Continental Strategy
+grows ~65x on a real, verified client roster; a headline-sized "SAP America spending
+collapse" is exposed as a single $130M data-entry quarter (amended to $640K one day
+later); and a suspiciously exact $20,000,000-per-quarter filer is flagged —
+independently corroborated by this repo's own pipeline (leads L025/L027).
+*Why it matters: dated markers of new influence industries, a live trade-policy surge,
+and two data-integrity catches anyone citing this corpus needs to know.*
+
+**How these were checked.** Both findings passed independent fresh-agent verification
+before lock (protocol: `skills/finding-verifier/SKILL.md`; locks in `DECISIONS.md`,
+2026-07-15). The submission's two pipelines (SQL and R) share no code but compute the
+same spend discipline; where they diverged ($50K on one termination filing), the
+divergence was traced to the single filing, ruled on by the team's domain expert, and
+both pipelines now agree to the dollar.
+
+_Below: the two finding documents in full, verbatim — claims, citations, caveats, and
+verification transcripts. Any citation key resolves via
 `python skills/lda-corpus-loader/scripts/show_record.py <key> --db db/lda_full.duckdb --data-root data/`._
 
 ---
