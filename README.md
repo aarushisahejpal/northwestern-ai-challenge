@@ -69,6 +69,11 @@ _Filled in as findings lock. See `findings/` (one file per locked finding)._
 `traces/rendered/` — HTML renderings for fast review.
 Human-judgment moments are logged in `DECISIONS.md` and cross-referenced from the index.
 
+Scope: transcripts are exported in full for the **submitted findings** and the decision log;
+sessions that produced supporting review packages (dashboards under `out/packages/`, not
+submitted as findings) are documented descriptively in `traces/INDEX.md` and marked
+"not exported" rather than shipped as transcripts.
+
 ## 4. Outside data used
 
 _Disclosed as used. Candidates: Congress.gov (bills/votes/committees), FEC (campaign finance),
