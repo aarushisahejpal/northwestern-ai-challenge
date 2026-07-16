@@ -89,11 +89,15 @@ person or organization named in the findings, or "none known against the entitie
 
 | Team member | Statement |
 |---|---|
-| Rob Calvey | _Pending._ |
-| Chris Cioffi | _Pending._ |
-| Dhrumil Mehta | _Pending._ |
-| Aarushi Sahejpal | _Pending._ |
-| Eiman Siddiqui | _Pending._ |
+| Rob Calvey | None known against the entities named in the findings. |
+| Chris Cioffi | None known against the entities named in the findings. |
+| Dhrumil Mehta | None known against the entities named in the findings. |
+| Aarushi Sahejpal | None known against the entities named in the findings. |
+| Eiman Siddiqui | None known against the entities named in the findings. |
+
+(Tool lineage, disclosed separately in §1: the `lobbying-quarterly-filings` skill adapts the
+open-source lobbyR package, authored by Chris Cioffi with contributions from Aarushi Sahejpal.
+lobbyR is a data-access tool; it is not connected to any entity named in the findings.)
 
 ## 6. Possible legal violations flagged
 
