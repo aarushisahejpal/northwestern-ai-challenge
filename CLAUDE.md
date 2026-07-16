@@ -84,7 +84,7 @@ python -m venv .venv && .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python skills/lda-entity-resolver/scripts/member_resolve.py "Emmer for Congress"  # resolve a filed person/committee string (+ --date --json)
 .venv/Scripts/python skills/lda-corpus-loader/scripts/backfill_press_issues.py --db db/lda_full.duckdb  # (re)build press_issue_mentions in place
 .venv/Scripts/python skills/lda-corpus-loader/scripts/add_lobbying_freetext.py --db db/lda_full.duckdb  # build lobbying_freetext + FTS in place
-.venv/Scripts/python skills/lda-corpus-loader/scripts/embed_corpus.py --db db/lda_full.duckdb  # build the semantic layer in place (optional deps: torch/sentence-transformers/pyarrow)
+.venv/Scripts/python skills/lda-corpus-loader/scripts/embed_corpus.py --db db/lda_full.duckdb  # build the semantic layer in place (optional deps: pip install -r requirements-embed.txt)
 .venv/Scripts/python skills/lead-scanner/scripts/lda_semantic_search.py --query "..." [--compare-bm25] [--like <key>]  # semantic discovery search
 .venv/Scripts/python skills/lead-scanner/scripts/lda_industry_map.py --build-tags  # (re)build lobbying_issue_mentions from industry_lexicon.json
 .venv/Scripts/python skills/lead-scanner/scripts/lda_turnover.py [2025Q4]  # quarterly turnover beat: terminations/hires/swaps/in-house (+ --json)
@@ -99,7 +99,9 @@ from the source systems, valid regardless of which DB below they were queried th
 **Corpus versions** (all built the same way, differing only by `--years`; see
 `skills/lda-corpus-loader/scripts/build_db.py`):
 - `db/lda_full.duckdb` — 2022–2026, all years. **Canonical/primary as of 2026-07-06.**
-  Start new investigative work here.
+  Start new investigative work here. Prebuilt copy (semantic layer included, so no
+  local build or embedding run needed):
+  https://dhrumil-public.s3.us-west-2.amazonaws.com/gain-investigation/lda_full.duckdb
 - `db/lda_pilot.duckdb` — 2025 + 2026-Q1 only. Kept solely to reproduce
   `findings/L010_pipe_materials_war.md`'s citations exactly as verified; not for new work.
 - `db/lda_2026.duckdb` — 2026-Q1 only. Superseded by both of the above; safe to delete

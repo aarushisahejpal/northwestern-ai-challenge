@@ -16,6 +16,13 @@ python skills/lda-corpus-loader/scripts/show_record.py <citation-key>           
 
 Data layout under `data/` follows the challenge's data manual (`congress_press/`, `senate/`, `house/`).
 
+To skip the build entirely (including the GPU-heavy embedding step), download the prebuilt
+full-corpus database — semantic layer included — and save it as `db/lda_full.duckdb`:
+
+```bash
+curl -o db/lda_full.duckdb https://dhrumil-public.s3.us-west-2.amazonaws.com/gain-investigation/lda_full.duckdb
+```
+
 ## 1. Included skills
 
 | Skill | What it does | How to run |

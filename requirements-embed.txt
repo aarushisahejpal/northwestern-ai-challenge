@@ -1,0 +1,16 @@
+# Optional deps for the semantic (embedding) layer ONLY — skip unless you are
+# running skills/lda-corpus-loader/scripts/embed_corpus.py (and its query side,
+# skills/lead-scanner/scripts/lda_semantic_search.py). Everything else in the
+# pipeline runs on requirements.txt alone.
+#   pip install -r requirements-embed.txt
+# Don't want to build embeddings at all? A prebuilt db/lda_full.duckdb with the
+# semantic layer already embedded is downloadable:
+#   https://dhrumil-public.s3.us-west-2.amazonaws.com/gain-investigation/lda_full.duckdb
+# Pinned versions — verified working 2026-07-15 on Python 3.14.3 (macOS, MPS);
+# full 388K-text corpus embedded in ~15 min.
+torch==2.13.0
+sentence-transformers==5.6.0
+pyarrow==25.0.0
+# einops is required by the nomic-ai/nomic-embed-text-v1.5 model's remote code
+# (transformers raises ImportError at model load without it).
+einops==0.8.2

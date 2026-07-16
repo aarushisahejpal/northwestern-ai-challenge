@@ -65,8 +65,12 @@ findings cite the deterministic keyword chain, never embedding similarity.
   rows and their `record_key`/src pointers, preserving the raw-record invariant.
 
 In-place and re-runnable after a corpus rebuild (CREATE OR REPLACE; no resume — the FULL run must
-be the LAST run). Deps are optional (not in `requirements.txt`): `torch sentence-transformers
-pyarrow` (+`einops` for the nomic model). Device auto-detects cuda > mps > cpu; `--device`,
+be the LAST run). Deps are optional (not in `requirements.txt`): install the pinned set with
+`pip install -r requirements-embed.txt` (repo root) — `torch sentence-transformers pyarrow`
+(+`einops` for the nomic model). To skip building embeddings entirely, download the prebuilt
+full DB (semantic layer included) as `db/lda_full.duckdb` from
+https://dhrumil-public.s3.us-west-2.amazonaws.com/gain-investigation/lda_full.duckdb .
+Device auto-detects cuda > mps > cpu; `--device`,
 `--batch`, `--dtype` override (defaults tuned on a 4GB GPU — raise `--batch` on bigger hardware,
 and the NaN guard aborts on a bad dtype). The model is `nomic-ai/nomic-embed-text-v1.5`
 (the 2026-07-14 production layer; stamped on every row, swappable via `--model` + a re-run).
